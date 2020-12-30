@@ -1,15 +1,10 @@
 using FlowR.Hubs;
-using FlowR.Services;
+using FlowR.Library;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace FlowR
 {
@@ -17,7 +12,7 @@ namespace FlowR
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;            
+            Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -27,7 +22,7 @@ namespace FlowR
         {
             services.AddRazorPages();
             services.AddSignalR();
-            services.AddSingleton<ApplicationService>();
+            services.AddSingleton<FlowRService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,7 +49,7 @@ namespace FlowR
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
-                endpoints.MapHub<Hubs.FlowRHub>("/flowr");
+                endpoints.MapHub<FlowRHub>("/flowr");
             });
         }
     }

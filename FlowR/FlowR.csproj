@@ -13,4 +13,8 @@
     <PackageReference Include="System.Collections.Concurrent" Version="4.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FlowR.Library\FlowR.Library.csproj" />
+  </ItemGroup>
+
 </Project>
