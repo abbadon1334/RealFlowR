@@ -1,29 +1,30 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.SignalR;
+using FlowR.Library.Client;
 
 namespace FlowR.Library
 {
     public class FlowRService
     {
-        private readonly Dictionary<string, ClientApplication> applications = new();
+        private readonly Dictionary<string, Application> _applications = new();
         
-        public ClientApplication get(string uid)
+        public Application Get(string uid)
         {
-            return applications[uid];
+            return _applications[uid];
         }
 
-        public ClientApplication add(string uid, IClientProxy client)
+        public Application Add(string uid, IClientProxy client)
         {
-            var application = new ClientApplication(uid, client);
+            var application = new Application(uid, client);
 
-            applications.Add(uid, application);
+            _applications.Add(uid, application);
 
             return application;
         }
 
-        public bool remove(string uid)
+        public bool Remove(string uid)
         {
-            return applications.Remove(uid);
+            return _applications.Remove(uid);
         }
     }
 }

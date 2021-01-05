@@ -18,19 +18,19 @@ namespace FlowR.Hubs
 
         public void ClientEventTriggered(string message)
         {
-            _applicationFlowRService.get(Context.ConnectionId).OnClientEventTriggered($"{Context.ConnectionId} : {message}");
+            _applicationFlowRService.Get(Context.ConnectionId).OnClientEventTriggered(message);
         }
         
         public override async Task OnConnectedAsync()
         {
             await base.OnConnectedAsync();
-            _applicationFlowRService.add(Context.ConnectionId, Clients.Caller);
+            _applicationFlowRService.Add(Context.ConnectionId, Clients.Caller);
         }
 
         public override async Task OnDisconnectedAsync(Exception e)
         {
             await base.OnDisconnectedAsync(e);
-            _applicationFlowRService.remove(Context.ConnectionId);
+            _applicationFlowRService.Remove(Context.ConnectionId);
         }
     }
 }

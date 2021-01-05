@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowR", "FlowR\FlowR.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowR.Library", "FlowR.Library\FlowR.Library.csproj", "{8A3AB81B-928E-4BFC-9517-20AD4ED859F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowR.Tests", "FlowR.Tests\FlowR.Tests.csproj", "{40D7C5AD-3712-4169-B799-36AADECEA460}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8A3AB81B-928E-4BFC-9517-20AD4ED859F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A3AB81B-928E-4BFC-9517-20AD4ED859F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A3AB81B-928E-4BFC-9517-20AD4ED859F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40D7C5AD-3712-4169-B799-36AADECEA460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40D7C5AD-3712-4169-B799-36AADECEA460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40D7C5AD-3712-4169-B799-36AADECEA460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40D7C5AD-3712-4169-B799-36AADECEA460}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
