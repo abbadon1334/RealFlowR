@@ -25,13 +25,15 @@ namespace FlowR.Tests
             var child = new Div();
             child.SetAttribute("nameA", "testA");
             child.SetAttribute("nameB", "testB");
+            child.SetAttribute("nameC", "testC");
+            child.RemoveAttribute("nameB");
             child.SetText("testText");
             _owner.Add(child);
             
             var MessageJson = Factory.MessageCreate(child).ToJson();
             
             Assert.AreEqual(
-                "{\"Action\":0,\"OwnerUuid\":\"00000000-0000-0000-0000-000000000000\",\"TagName\":\"div\",\"Attributes\":{\"nameA\":\"testA\",\"nameB\":\"testB\"},\"Text\":\"testText\"}",
+                "{\"Action\":0,\"OwnerUuid\":\"00000000-0000-0000-0000-000000000000\",\"TagName\":\"div\",\"Attributes\":{\"nameA\":\"testA\",\"nameC\":\"testC\"},\"Text\":\"testText\"}",
                 MessageJson
             );
         }
