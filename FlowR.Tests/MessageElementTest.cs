@@ -17,15 +17,22 @@ namespace FlowR.Tests
         [SetUp]
         public void Setup()
         {
-            _owner.Add(new Div());
         }
 
         [Test]
         public void TestFunctional()
         {
+            var child = new Div();
+            child.SetAttribute("nameA", "testA");
+            child.SetAttribute("nameB", "testB");
+            child.SetText("testText");
+            _owner.Add(child);
+            
+            var MessageJson = Factory.MessageCreate(child).ToJson();
+            
             Assert.AreEqual(
-                "",
-                Factory.MessageCreate(_owner).ToJson()
+                "{\"Action\":0,\"OwnerUuid\":\"00000000-0000-0000-0000-000000000000\",\"TagName\":\"div\",\"Attributes\":{\"nameA\":\"testA\",\"nameB\":\"testB\"},\"Text\":\"testText\"}",
+                MessageJson
             );
         }
     }
