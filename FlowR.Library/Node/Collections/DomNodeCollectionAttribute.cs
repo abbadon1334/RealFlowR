@@ -1,24 +1,24 @@
 using System;
 using System.Collections.Generic;
 
-namespace FlowR.Library.Node
+namespace FlowR.Library.Node.Collections
 {
-    public class DomNodeAttributes : DomNodeCollection<DomNodeAttribute>
+    public class DomNodeCollectionAttribute : DomNodeCollection<DomNodeAttribute>
     {
+        public DomNodeCollectionAttribute(DomNode owner) : base(owner)
+        {
+        }
+
         public event EventHandler AttributeAdded;
         public event EventHandler AttributeChanged;
         public event EventHandler AttributeRemoved;
-        
-        public DomNodeAttributes(DomNode owner) : base(owner)
-        {
-        }
 
         public DomNodeAttribute AddAttribute(string name)
         {
             var attr = new DomNodeAttribute(this, name, AttributeChanged);
 
             Set(name, attr);
-            AttributeAdded?.Invoke(attr , EventArgs.Empty);
+            AttributeAdded?.Invoke(attr, new AddEventArgs {Name = name});
 
             return attr;
         }
@@ -42,7 +42,7 @@ namespace FlowR.Library.Node
         {
             var attr = Get(name);
             Unset(name);
-            AttributeRemoved?.Invoke(attr , EventArgs.Empty);
+            AttributeRemoved?.Invoke(attr, new RemoveEventArgs {Name = name});
         }
 
         public Dictionary<string, string> ToDictionary()
@@ -53,7 +53,7 @@ namespace FlowR.Library.Node
             return dict;
         }
 
-        protected virtual void OnAttributeChanged(OnChangeEventArgs e)
+        protected virtual void OnAttributeChanged(ChangeEventArgs e)
         {
             AttributeChanged?.Invoke(this, e);
         }

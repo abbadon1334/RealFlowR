@@ -1,40 +1,41 @@
-
 using System;
-using System.ComponentModel;
 using System.Timers;
 
 namespace FlowR.Library.Client
 {
     public class ApplicationTimer
     {
-        private string _name;
-        private int _delay;
-        private Timer _timer;
+        private readonly EventHandler _callback;
+        private readonly int _delay;
         private readonly bool _infinite;
+        private Timer _timer;
 
-        public ApplicationTimer(int delay, bool infinite = true)
+        public ApplicationTimer(int delay, EventHandler callback, bool infinite = false)
         {
             _delay = delay;
-            _name = Guid.NewGuid().ToString();
+            _callback = callback;
             _infinite = infinite;
         }
 
-        public void Start() {
-            _timer = new System.Timers.Timer(2000);
-            _timer.Elapsed += OnTimer;
+        public void Start()
+        {
+            _timer = new Timer(_delay);
+            _timer.Elapsed += (o, args) =>
+            {
+                _callback((Timer) o, args);
+
+                if (!_infinite) ((Timer) o).Stop();
+            };
             _timer.AutoReset = _infinite ? true : false;
             _timer.Enabled = true;
-        }
-
-        private void OnTimer(object sender, ElapsedEventArgs e)
-        {
-            
         }
 
         public void Stop()
         {
             _timer.Stop();
-            _timer.Dispose();
+            OnStop?.Invoke(this, EventArgs.Empty);
         }
+
+        public event EventHandler OnStop;
     }
 }

@@ -2,13 +2,19 @@ using System;
 
 namespace FlowR.Library.Node
 {
-    public class DomNodeUuid
+    public class DomNodeUuid : DomNodeInitialize
     {
-        private Guid _uuid = new();
+        private Guid _uuid;
+        protected string Uuid = "";
 
         public virtual string GetUuid()
         {
-            return _uuid.ToString();
+            return Uuid == string.Empty ? _uuid.ToString() : Uuid;
+        }
+
+        public void SetUuid(string uuid)
+        {
+            Uuid = uuid;
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
 using FlowR.Library;
+using FlowR.Library.Client.Message;
 using Microsoft.AspNetCore.SignalR;
 
 namespace FlowR.Hubs
@@ -18,9 +18,11 @@ namespace FlowR.Hubs
 
         public void ClientEventTriggered(string message)
         {
-            _applicationFlowRService.Get(Context.ConnectionId).OnClientEventTriggered(message);
+            _applicationFlowRService.Get(Context.ConnectionId).OnClientEventTriggered(
+                MessageEvent.FromJson(message)
+            );
         }
-        
+
         public override async Task OnConnectedAsync()
         {
             await base.OnConnectedAsync();

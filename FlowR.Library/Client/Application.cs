@@ -1,45 +1,80 @@
 using System;
-using System.Globalization;
-using System.Reflection.Metadata.Ecma335;
-using System.Timers;
+using FlowR.Library.Client.Message;
+using FlowR.Library.Client.Tags;
+using FlowR.Library.Node;
 using Microsoft.AspNetCore.SignalR;
 
 namespace FlowR.Library.Client
 {
     public class Application
     {
-        /// <summary>
-        /// UUID of the Context.ConnectionId.
-        /// </summary>
-        public string ConnectionId { get; }
+        private readonly ApplicationRegistry _registry = new();
+        private readonly ApplicationTimers _timers = new();
+
+        protected readonly Root RootElement;
 
         /// <summary>
-        /// SignalR Client reference
+        ///     Element ID of the master container for the application
         /// </summary>
-        public IClientProxy Client { get; }
-
-        /// <summary>
-        /// Element ID of the master container for the application 
-        /// </summary>
-        private string RootElementId = "flow-root";
+        protected readonly string RootElementId = "flow-root";
 
         public Application(string connectionId, IClientProxy client)
         {
             ConnectionId = connectionId;
             Client = client;
+            RootElement = new Root(RootElementId);
+            _registry.RegisterComponent(RootElement);
 
             //NotifyClient(new ApplicationEvent(OnInit))
             client.SendAsync("OnInit", RootElementId);
         }
 
-        public void OnTimer(Object source, ElapsedEventArgs e)
+        /// <summary>
+        ///     UUID of the Context.ConnectionId.
+        /// </summary>
+        public string ConnectionId { get; }
+
+        /// <summary>
+        ///     SignalR Client reference
+        /// </summary>
+        public IClientProxy Client { get; }
+
+        public void RegisterComponent(DomNode node)
         {
-            //Client.SendAsync("OnTimer", "From server Timer " + counter).GetAwaiter().GetResult();
+            _registry.RegisterComponent(node);
         }
 
-        public async void OnClientEventTriggered(string s)
+        public DomNode GetRegisterComponent(string uuid)
         {
-            await Client.SendAsync("OnTest", s);
+            return _registry.Get(uuid);
+        }
+
+        public void UnregisterComponent(DomNode node)
+        {
+            _registry.UnregisterComponent(node);
+        }
+
+        public void OnClientEventTriggered(MessageEvent message)
+        {
+            GetRegisterComponent(message.Uuid).OnClientEventTriggered(
+                message.EventName,
+                new MessageEventArgs() {Data = message.EventArgs}
+            );
+        }
+
+        public void AddTimer(ApplicationTimer timer)
+        {
+            _timers.Add(timer);
+        }
+
+        public void AddTimer(int delay, EventHandler callback, bool infinite = true)
+        {
+            _timers.AddTimer(delay, callback, infinite);
+        }
+
+        public void Remove(ApplicationTimer timer)
+        {
+            _timers.Remove(timer);
         }
     }
 }

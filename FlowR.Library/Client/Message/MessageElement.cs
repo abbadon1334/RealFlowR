@@ -1,5 +1,3 @@
-using System.Net.WebSockets;
-
 namespace FlowR.Library.Client.Message
 {
     public enum MessageElementAction
@@ -8,7 +6,10 @@ namespace FlowR.Library.Client.Message
         SetAttribute,
         RemoveAttribute,
         Remove,
+        AddListener,
+        RemoveListener
     }
-    
-    public class MessageElement : Message {}
+
+    public class MessageElement : Message
+    {}
 }

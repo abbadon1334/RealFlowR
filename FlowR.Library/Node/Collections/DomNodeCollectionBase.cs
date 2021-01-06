@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace FlowR.Library.Node
+namespace FlowR.Library.Node.Collections
 {
     public abstract class DomNodeCollection<T> : DomNodeOwner
     {

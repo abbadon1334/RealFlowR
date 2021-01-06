@@ -1,15 +1,16 @@
 using System;
+using FlowR.Library.Node.Collections;
 
 namespace FlowR.Library.Node
 {
     public class DomNodeAttribute
     {
-        private readonly string _name;
-        private readonly DomNodeAttributes _collection;
-        private string _value = String.Empty;
+        private readonly DomNodeCollectionAttribute _collection;
         private readonly EventHandler _collectionOnChange;
+        private readonly string _name;
+        private string _value = string.Empty;
 
-        public DomNodeAttribute(DomNodeAttributes collection, string name, EventHandler onChange)
+        public DomNodeAttribute(DomNodeCollectionAttribute collection, string name, EventHandler onChange)
         {
             _name = name;
             _collection = collection;
@@ -18,8 +19,8 @@ namespace FlowR.Library.Node
 
         public void Set(string value)
         {
-            OnChangeEventArgs args = new OnChangeEventArgs();
-            args.Name = this._name;
+            var args = new ChangeEventArgs();
+            args.Name = _name;
             args.OldValue = _value;
             args.Value = value;
             _value = value;
@@ -32,20 +33,20 @@ namespace FlowR.Library.Node
         }
     }
 
-    public class OnCreatedEventArgs : EventArgs
+    public class AddEventArgs : EventArgs
     {
         public string Name;
     }
 
-    public class OnRemoveEventArgs : EventArgs
+    public class RemoveEventArgs : EventArgs
     {
         public string Name;
     }
 
-    public class OnChangeEventArgs : EventArgs
+    public class ChangeEventArgs : EventArgs
     {
         public string Name;
-        public string Value;
         public string OldValue;
+        public string Value;
     }
 }
