@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Threading.Tasks;
 using FlowR.Library;
+using FlowR.Library.Client;
 using FlowR.Library.Client.Message;
 using Microsoft.AspNetCore.SignalR;
 
 namespace FlowR.Hubs
 {
     // ReSharper disable once ClassNeverInstantiated.Global
-    public class FlowRHub : Hub
+    public class FlowRHub<T> : Hub where T : Application
     {
-        private readonly FlowRService _applicationFlowRService;
+        private readonly FlowRService<T> _applicationFlowRService;
 
-        public FlowRHub(FlowRService applicationFlowRService)
+        public FlowRHub(FlowRService<T> applicationFlowRService)
         {
             _applicationFlowRService = applicationFlowRService;
         }

@@ -4,6 +4,6 @@ namespace FlowR.Library.Client.Tags
 {
     public class Div : DomNode
     {
-        protected new string TagName = "div";
+        protected override string TagName { get => "div"; }
     }
 }

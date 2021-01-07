@@ -8,11 +8,11 @@ namespace FlowR.Library.Client.Message
         public static MessageElement MessageCreate(DomNode node)
         {
             var message = new MessageElement();
-            message.SetProperty("Action", MessageElementAction.Create);
-            message.SetProperty("OwnerUuid", node.GetOwner().GetUuid());
-            message.SetProperty("TagName", node.GetTagName());
-            message.SetProperty("Attributes", node.GetAttributeDictionary());
-            message.SetProperty("Text", node.GetText());
+            message.Method = MessageElementAction.CreateElement.ToString();
+            message.AddArgument("OwnerUuid", node.GetOwner().GetUuid());
+            message.AddArgument("TagName", node.GetTagName());
+            message.AddArgument("Attributes", node.GetAttributeDictionary());
+            message.AddArgument("Text", node.GetText());
 
             return message;
         }
@@ -20,10 +20,10 @@ namespace FlowR.Library.Client.Message
         public static MessageElement MessageSetAttribute(DomNode node, string name, string value)
         {
             var message = new MessageElement();
-            message.SetProperty("Action", MessageElementAction.SetAttribute);
-            message.SetProperty("Uuid", node.GetUuid());
-            message.SetProperty("Name", name);
-            message.SetProperty("Value", value);
+            message.Method = MessageElementAction.SetAttribute.ToString();
+            message.AddArgument("Uuid", node.GetUuid());
+            message.AddArgument("Name", name);
+            message.AddArgument("Value", value);
 
             return message;
         }
@@ -31,9 +31,9 @@ namespace FlowR.Library.Client.Message
         public static MessageElement MessageRemoveAttribute(DomNode node, string name)
         {
             var message = new MessageElement();
-            message.SetProperty("Action", MessageElementAction.RemoveAttribute);
-            message.SetProperty("Uuid", node.GetUuid());
-            message.SetProperty("Name", name);
+            message.Method = MessageElementAction.RemoveAttribute.ToString();
+            message.AddArgument("Uuid", node.GetUuid());
+            message.AddArgument("Name", name);
 
             return message;
         }
@@ -41,28 +41,28 @@ namespace FlowR.Library.Client.Message
         public static MessageElement MessageRemove(DomNode node)
         {
             var message = new MessageElement();
-            message.SetProperty("Action", MessageElementAction.Remove);
-            message.SetProperty("Uuid", node.GetUuid());
+            message.Method = MessageElementAction.Remove.ToString();
+            message.AddArgument("Uuid", node.GetUuid());
 
             return message;
         }
 
-        public static MessageElement MessageAddListener(DomNode node, string eventName)
+        public static MessageElement MessageStartListenEvent(DomNode node, string eventName)
         {
             var message = new MessageElement();
-            message.SetProperty("Action", MessageElementAction.AddListener);
-            message.SetProperty("Uuid", node.GetUuid());
-            message.SetProperty("Name", eventName);
+            message.Method = MessageElementAction.StartListenEvent.ToString();
+            message.AddArgument("Uuid", node.GetUuid());
+            message.AddArgument("Name", eventName);
 
             return message;
         }
 
-        public static MessageElement MessageRemoveListener(DomNode node, string eventName)
+        public static MessageElement MessageStopListenEvent(DomNode node, string eventName)
         {
             var message = new MessageElement();
-            message.SetProperty("Action", MessageElementAction.RemoveListener);
-            message.SetProperty("Uuid", node.GetUuid());
-            message.SetProperty("Name", eventName);
+            message.Method = MessageElementAction.StopListenEvent.ToString();
+            message.AddArgument("Uuid", node.GetUuid());
+            message.AddArgument("Name", eventName);
 
             return message;
         }

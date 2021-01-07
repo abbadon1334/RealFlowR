@@ -23,10 +23,19 @@ namespace FlowR.Library.Client
             ConnectionId = connectionId;
             Client = client;
             RootElement = new Root(RootElementId);
+            RootElement.SetApplication(this);
+            RootElement.Init();
             _registry.RegisterComponent(RootElement);
 
             //NotifyClient(new ApplicationEvent(OnInit))
             client.SendAsync("OnInit", RootElementId);
+
+            OnStart(RootElement);
+        }
+
+        protected virtual void OnStart(Root rootElement)
+        {
+            throw new Exception("You need to override Application::OnStart");
         }
 
         /// <summary>

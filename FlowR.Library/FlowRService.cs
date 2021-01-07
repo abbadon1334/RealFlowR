@@ -1,21 +1,23 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using FlowR.Library.Client;
+using FlowR.Library.Node;
 using Microsoft.AspNetCore.SignalR;
 
 namespace FlowR.Library
 {
-    public class FlowRService
+    public class FlowRService<T> where T : Application
     {
-        private readonly Dictionary<string, Application> _applications = new();
+        private readonly Dictionary<string, T> _applications = new();
 
-        public Application Get(string uid)
+        public T Get(string uid)
         {
             return _applications[uid];
         }
 
-        public Application Add(string uid, IClientProxy client)
+        public T Add(string uid, IClientProxy client)
         {
-            var application = new Application(uid, client);
+            T application = (T) Activator.CreateInstance(typeof(T), uid, client);
 
             _applications.Add(uid, application);
 

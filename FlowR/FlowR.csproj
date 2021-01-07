@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FlowR.Library\FlowR.Library.csproj" />
+    <ProjectReference Include="..\FlowR.Sample\FlowR.Sample.csproj" />
   </ItemGroup>
 
   <ItemGroup>

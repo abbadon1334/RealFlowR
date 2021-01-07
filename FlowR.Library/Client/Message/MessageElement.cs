@@ -2,12 +2,12 @@ namespace FlowR.Library.Client.Message
 {
     public enum MessageElementAction
     {
-        Create,
+        CreateElement,
         SetAttribute,
         RemoveAttribute,
         Remove,
-        AddListener,
-        RemoveListener
+        StartListenEvent,
+        StopListenEvent
     }
 
     public class MessageElement : Message

@@ -4,15 +4,21 @@ namespace FlowR.Library.Node
 {
     public class DomNodeUuid : DomNodeInitialize
     {
-        private Guid _uuid;
-        protected string Uuid = "";
+        protected string Uuid = string.Empty;
 
-        public virtual string GetUuid()
+        public string GetUuid()
         {
-            return Uuid == string.Empty ? _uuid.ToString() : Uuid;
+            if (Uuid != string.Empty)
+            {
+                return Uuid;
+            }
+            
+            SetUuid(Guid.NewGuid().ToString());
+
+            return GetUuid();
         }
 
-        public void SetUuid(string uuid)
+        public virtual void SetUuid(string uuid)
         {
             Uuid = uuid;
         }

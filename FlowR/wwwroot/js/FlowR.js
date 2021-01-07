@@ -6,13 +6,13 @@ var FlowR = /** @class */ (function () {
         this.connection.on("CallWindowMethod", this.CallWindowMethod);
         this.connection.on("CallDocumentMethod", this.CallDocumentMethod);
         this.connection.on("CreateElement", this.CreateElement);
-        this.connection.on("DestroyElement", this.DestroyElement);
-        this.connection.on("setAttribute", this.setAttribute);
-        this.connection.on("removeAttribute", this.removeAttribute);
-        this.connection.on("startListenEvent", this.startListenEvent);
-        this.connection.on("stopListenEvent", this.stopListenEvent);
-        this.connection.on("OnTimer", this.OnTimer);
+        this.connection.on("RemoveElement", this.RemoveElement);
+        this.connection.on("SetAttribute", this.SetAttribute);
+        this.connection.on("RemoveAttribute", this.RemoveAttribute);
+        this.connection.on("StartListenEvent", this.StartListenEvent);
+        this.connection.on("StopListenEvent", this.StopListenEvent);
     }
+    FlowR.prototype.GetConnection = function () { return this.connection; };
     FlowR.prototype.TryConnect = function () {
         this.connection.start().then(function () {
             console.log('connected');
@@ -25,10 +25,11 @@ var FlowR = /** @class */ (function () {
     FlowR.prototype.OnDisconnect = function () {
         console.log('disconnect');
     };
-    FlowR.prototype.OnTimer = function (timer, data) {
-        if (data === void 0) { data = []; }
-        console.log('OnTimerEnd', timer, data);
-    };
+    /*
+        OnTimer(timer: string, data = []) {
+            console.log('OnTimerEnd', timer, data);
+        }
+    */
     FlowR.prototype.CallWindowMethod = function (method, args) {
         console.log('CallWindowMethod', 'window', method, args);
         window[method].apply(null, args);
@@ -47,23 +48,23 @@ var FlowR = /** @class */ (function () {
         el.innerText = text;
         document.getElementById(parent_id).appendChild(el);
     };
-    FlowR.prototype.DestroyElement = function (uuid) {
+    FlowR.prototype.RemoveElement = function (uuid) {
         console.log('DestroyElement', uuid);
         document.getElementById(uuid).remove();
     };
-    FlowR.prototype.setAttribute = function (uuid, name, value) {
+    FlowR.prototype.SetAttribute = function (uuid, name, value) {
         console.log('setAttribute', uuid, name, value);
         document.getElementById(uuid).setAttribute(name, value);
     };
-    FlowR.prototype.removeAttribute = function (uuid, name) {
+    FlowR.prototype.RemoveAttribute = function (uuid, name) {
         console.log('removeAttribute', uuid, name);
         document.getElementById(uuid).removeAttribute(name);
     };
-    FlowR.prototype.startListenEvent = function (uuid, event_name) {
+    FlowR.prototype.StartListenEvent = function (uuid, event_name) {
         var _this = this;
         console.log('startListenEvent', uuid, event_name);
         document.getElementById(uuid).addEventListener(event_name, function (event) {
-            _this.connection.invoke("ClientEventTriggered", [
+            _this.GetConnection().invoke("ClientEventTriggered", [
                 uuid,
                 event_name,
                 event.target
@@ -73,7 +74,7 @@ var FlowR = /** @class */ (function () {
             });
         });
     };
-    FlowR.prototype.stopListenEvent = function (uuid, event_name) {
+    FlowR.prototype.StopListenEvent = function (uuid, event_name) {
     };
     return FlowR;
 }());

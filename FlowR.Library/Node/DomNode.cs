@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
 using FlowR.Library.Client.Message;
 using FlowR.Library.Node.Collections;
 using Microsoft.AspNetCore.SignalR;
@@ -11,7 +13,7 @@ namespace FlowR.Library.Node
         private readonly DomNodeCollectionAttribute _attributes;
         private readonly DomNodeCollectionDomNode _children;
         private readonly DomNodeCollectionEvent _events;
-        protected string TagName = "div";
+        protected abstract string TagName { get; }
 
         public DomNode()
         {
@@ -26,29 +28,43 @@ namespace FlowR.Library.Node
 
             _events = new DomNodeCollectionEvent(this);
             _events.StartEventListen += (o, args) =>
-                SendMessage(Factory.MessageAddListener(this, ((ListenerEventArgs) args).Name));
+                SendMessage(Factory.MessageStartListenEvent(this, ((ListenerEventArgs) args).Name));
             _events.StopEventListen += (o, args) =>
-                SendMessage(Factory.MessageAddListener(this, ((ListenerEventArgs) args).Name));
+                SendMessage(Factory.MessageStartListenEvent(this, ((ListenerEventArgs) args).Name));
         }
 
         private void OnChildrenRemoved(object sender, EventArgs e)
         {
-            SendMessage(Factory.MessageCreate(this));
+            SendMessage(Factory.MessageRemove((DomNode) sender));
         }
 
         private void OnChildrenAdd(object sender, EventArgs e)
         {
-            SendMessage(Factory.MessageRemove(this));
+            SendMessage(Factory.MessageCreate((DomNode) sender));
         }
 
         public string GetTagName()
         {
             return TagName;
         }
-
+        
         public void SetAttribute(string name, string value)
         {
             _attributes.SetAttribute(name, value);
+        }
+        
+        public bool HasAttribute(string name)
+        {
+            return _attributes.HasAttribute(name);
+        }
+
+        public override void SetUuid(string uuid)
+        {
+            base.SetUuid(uuid);
+            if (!this.HasAttribute("id"))
+            {
+                this.SetAttribute("id", uuid);
+            }
         }
 
         public void RemoveAttribute(string name)
@@ -90,12 +106,12 @@ namespace FlowR.Library.Node
 
         // events
 
-        public void On(string eventName, DomNodeEvent handler)
+        public void On(string eventName, EventHandler handler)
         {
             _events.On(eventName, handler);
         }
 
-        public void Off(string eventName, DomNodeEvent handler)
+        public void Off(string eventName, EventHandler handler)
         {
             _events.Off(eventName, handler);
         }
@@ -107,7 +123,31 @@ namespace FlowR.Library.Node
 
         protected void SendMessage(Message message)
         {
-            if (IsInitialized()) GetApplication().Client.SendAsync(message.ToJson());
+            if (IsInitialized())
+            {
+                var args = message.Arguments.Values.ToArray();
+
+                switch (args.Length)
+                {
+                    case 0:
+                        GetApplication().Client.SendAsync(message.Method);
+                        return;
+                    case 1:
+                        GetApplication().Client.SendAsync(message.Method, args[0]);
+                        return;
+                    case 2:
+                        GetApplication().Client.SendAsync(message.Method, args[0], args[1]);
+                        return;
+                    case 3:
+                        GetApplication().Client.SendAsync(message.Method, args[0], args[1], args[2]);
+                        return;
+                    case 4:
+                        GetApplication().Client.SendAsync(message.Method, args[0], args[1], args[2], args[3]);
+                        return;
+                }
+                
+                throw new Exception("Message Arguments Array to long");
+            }
         }
     }
 }

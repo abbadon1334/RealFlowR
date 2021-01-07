@@ -6,16 +6,17 @@ namespace FlowR.Library.Client.Message
 {
     public abstract class Message
     {
-        private readonly Dictionary<string, object> _dictionary = new();
+        public string Method { get; set; }
+        public readonly Dictionary<string,object> Arguments = new();
 
-        public void SetProperty(string name, object value)
+        public void AddArgument(string name, object value)
         {
-            _dictionary[name] = value;
+            Arguments[name] = value;
         }
 
         public virtual string ToJson()
         {
-            return JsonSerializer.Serialize(_dictionary);
+            return JsonSerializer.Serialize(this);
         }
     }
 }

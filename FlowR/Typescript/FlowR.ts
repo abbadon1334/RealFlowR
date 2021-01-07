@@ -3,8 +3,8 @@ interface HubConnection {
 
 class FlowR {
 
-    private connection;
-    private rootId: string;
+    protected connection;
+    protected rootId: string;
 
     constructor(conn: HubConnection) {
 
@@ -17,15 +17,13 @@ class FlowR {
         this.connection.on("CallDocumentMethod", this.CallDocumentMethod);
 
         this.connection.on("CreateElement", this.CreateElement);
-        this.connection.on("DestroyElement", this.DestroyElement);
+        this.connection.on("RemoveElement", this.RemoveElement);
 
-        this.connection.on("setAttribute", this.setAttribute);
-        this.connection.on("removeAttribute", this.removeAttribute);
+        this.connection.on("SetAttribute", this.SetAttribute);
+        this.connection.on("RemoveAttribute", this.RemoveAttribute);
 
-        this.connection.on("startListenEvent", this.startListenEvent);
-        this.connection.on("stopListenEvent", this.stopListenEvent);
-
-        this.connection.on("OnTimer", this.OnTimer);
+        this.connection.on("StartListenEvent", this.StartListenEvent);
+        this.connection.on("StopListenEvent", this.StopListenEvent);
     }
 
     TryConnect() {
@@ -42,11 +40,7 @@ class FlowR {
     OnDisconnect() {
         console.log('disconnect');
     }
-
-    OnTimer(timer: string, data = []) {
-        console.log('OnTimerEnd', timer, data);
-    }
-
+    
     CallWindowMethod(method: string, args: string[]) {
         console.log('CallWindowMethod', 'window', method, args);
         window[method].apply(null, args);
@@ -72,44 +66,45 @@ class FlowR {
         document.getElementById(parent_id).appendChild(el);
     }
 
-    DestroyElement(uuid: string) {
+    RemoveElement(uuid: string) {
 
         console.log('DestroyElement', uuid);
 
         document.getElementById(uuid).remove();
     }
 
-    setAttribute(uuid: string, name: string, value: string) {
+    SetAttribute(uuid: string, name: string, value: string) {
 
         console.log('setAttribute', uuid, name, value);
 
         document.getElementById(uuid).setAttribute(name, value);
     }
 
-    removeAttribute(uuid: string, name: string) {
+    RemoveAttribute(uuid: string, name: string) {
 
         console.log('removeAttribute', uuid, name);
 
         document.getElementById(uuid).removeAttribute(name);
     }
 
-    startListenEvent(uuid: string, event_name: string) {
+    StartListenEvent(uuid: string, event_name: string) {
 
         console.log('startListenEvent', uuid, event_name);
-
+        
         document.getElementById(uuid).addEventListener(event_name, (event) => {
-            this.connection.invoke("ClientEventTriggered", [
-                uuid,
-                event_name,
-                event.target
-            ])
+                this.connection.invoke("ClientEventTriggered", [
+                    uuid,
+                    event_name,
+                    event.target
+                ])
                 .catch(function (err) {
                     return console.error(err.toString());
                 });
-        });
+            }
+        );
     }
 
-    stopListenEvent(uuid: string, event_name: string) {
+    StopListenEvent(uuid: string, event_name: string) {
 
     }
 }

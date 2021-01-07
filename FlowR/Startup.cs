@@ -1,5 +1,6 @@
 using FlowR.Hubs;
 using FlowR.Library;
+using FlowR.Sample;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -22,7 +23,7 @@ namespace FlowR
         {
             services.AddRazorPages();
             services.AddSignalR();
-            services.AddSingleton<FlowRService>();
+            services.AddSingleton<FlowRService<Application>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +50,7 @@ namespace FlowR
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
-                endpoints.MapHub<FlowRHub>("/flowr");
+                endpoints.MapHub<FlowRHub<Application>>("/flowr");
             });
         }
     }
