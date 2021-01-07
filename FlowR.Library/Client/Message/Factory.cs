@@ -1,4 +1,3 @@
-using System.Text.Json;
 using FlowR.Library.Node;
 
 namespace FlowR.Library.Client.Message
@@ -66,7 +65,7 @@ namespace FlowR.Library.Client.Message
 
             return message;
         }
-        
+
         public static MessageElement MessageSetText(DomNode node, string text)
         {
             var message = new MessageElement();

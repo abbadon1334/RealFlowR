@@ -1,9 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var signalr_1 = require("../wwwroot/js/signalr/dist/browser/signalr");
 var FlowR = /** @class */ (function () {
-    function FlowR(uri_path) {
-        this.connection = new signalr_1.signalR.HubConnectionBuilder().withUrl(uri_path).build();
+    /** @ts-ignore*/
+    function FlowR(signalR, uri_path) {
+        /** @ts-ignore */
+        this.connection = new signalR.HubConnectionBuilder()
+            .withUrl(uri_path)
+            //.withAutomaticReconnect()
+            .configureLogging(signalR.LogLevel.Debug)
+            .build();
         this.connection.on("OnInit", this.OnInit);
         this.connection.on("OnDisconnect", this.OnDisconnect);
         this.connection.on("CreateElement", this.CreateElement);
@@ -13,17 +16,9 @@ var FlowR = /** @class */ (function () {
         this.connection.on("StartListenEvent", this.StartListenEvent);
         this.connection.on("StopListenEvent", this.StopListenEvent);
         this.connection.on("SetText", this.SetText);
-        this.connection.start().then(function () {
-            console.log('connected');
-        }).catch(function (err) {
-            console.error(err.toString());
-        });
     }
     FlowR.prototype.TryConnect = function () {
-        return;
-        this.connection.start().then(function () {
-            console.log('connected');
-        }).catch(function (err) {
+        this.connection.start().catch(function (err) {
             console.error(err.toString());
         });
     };
@@ -58,19 +53,16 @@ var FlowR = /** @class */ (function () {
     };
     FlowR.prototype.StartListenEvent = function (uuid, event_name) {
         console.log('startListenEvent', uuid, event_name);
-        document.getElementById(uuid).addEventListener(event_name, function (event) {
-            try {
-                console.log(this.connection);
-                this.connection.invoke("ClientEventTriggered", [
-                    uuid,
-                    event_name,
-                    event.target
-                ]);
-            }
-            catch (err) {
+        document.getElementById(uuid).addEventListener(event_name, (function (event) {
+            console.log(this.connection);
+            this.connection.invoke("ClientEventTriggered", [
+                uuid,
+                event_name,
+                event.target
+            ]).catch(function (err) {
                 return console.error(err.toString());
-            }
-        }.bind(this), false);
+            });
+        }).bind(this, false));
     };
     FlowR.prototype.StopListenEvent = function (uuid, event_name) {
     };

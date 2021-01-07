@@ -12,7 +12,7 @@ namespace FlowR.Library.Node
             {
                 return Uuid;
             }
-            
+
             SetUuid(Guid.NewGuid().ToString());
 
             return GetUuid();

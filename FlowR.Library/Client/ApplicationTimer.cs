@@ -22,9 +22,9 @@ namespace FlowR.Library.Client
             _timer = new Timer(_delay);
             _timer.Elapsed += (o, args) =>
             {
-                _callback((Timer) o, args);
+                _callback((Timer)o, args);
 
-                if (!_infinite) ((Timer) o).Stop();
+                if (!_infinite) ((Timer)o).Stop();
             };
             _timer.AutoReset = _infinite ? true : false;
             _timer.Enabled = true;

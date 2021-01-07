@@ -18,7 +18,7 @@ namespace FlowR.Library.Node.Collections
             var attr = new DomNodeAttribute(this, name, AttributeChanged);
 
             Set(name, attr);
-            AttributeAdded?.Invoke(attr, new AddEventArgs {Name = name});
+            AttributeAdded?.Invoke(attr, new AddEventArgs { Name = name });
 
             return attr;
         }
@@ -42,7 +42,7 @@ namespace FlowR.Library.Node.Collections
         {
             var attr = Get(name);
             Unset(name);
-            AttributeRemoved?.Invoke(attr, new RemoveEventArgs {Name = name});
+            AttributeRemoved?.Invoke(attr, new RemoveEventArgs { Name = name });
         }
 
         public Dictionary<string, string> ToDictionary()

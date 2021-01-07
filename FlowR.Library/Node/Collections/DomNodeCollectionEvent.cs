@@ -16,7 +16,7 @@ namespace FlowR.Library.Node.Collections
         {
             if (!Exists(eventName))
             {
-                StartEventListen?.Invoke(GetOwner(), new ListenerEventArgs {Name = eventName});
+                StartEventListen?.Invoke(GetOwner(), new ListenerEventArgs { Name = eventName });
                 Set(eventName, new List<EventHandler>());
             }
 
@@ -26,7 +26,7 @@ namespace FlowR.Library.Node.Collections
         public void Off(string eventName, EventHandler handler)
         {
             Get(eventName).Remove(handler);
-            StopEventListen?.Invoke(GetOwner(), new ListenerEventArgs {Name = eventName});
+            StopEventListen?.Invoke(GetOwner(), new ListenerEventArgs { Name = eventName });
         }
 
         public void OnClientEventTriggered(string eventName, EventArgs eventArgs)

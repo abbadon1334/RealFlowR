@@ -1,10 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
 using FlowR.Library.Client.Message;
 using FlowR.Library.Node.Collections;
 using Microsoft.AspNetCore.SignalR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace FlowR.Library.Node
 {
@@ -28,19 +27,19 @@ namespace FlowR.Library.Node
 
             _events = new DomNodeCollectionEvent(this);
             _events.StartEventListen += (o, args) =>
-                SendMessage(Factory.MessageStartListenEvent(this, ((ListenerEventArgs) args).Name));
+                SendMessage(Factory.MessageStartListenEvent(this, ((ListenerEventArgs)args).Name));
             _events.StopEventListen += (o, args) =>
-                SendMessage(Factory.MessageStartListenEvent(this, ((ListenerEventArgs) args).Name));
+                SendMessage(Factory.MessageStartListenEvent(this, ((ListenerEventArgs)args).Name));
         }
 
         private void OnChildrenRemoved(object sender, EventArgs e)
         {
-            SendMessage(Factory.MessageRemove((DomNode) sender));
+            SendMessage(Factory.MessageRemove((DomNode)sender));
         }
 
         private void OnChildrenAdd(object sender, EventArgs e)
         {
-            SendMessage(Factory.MessageCreate((DomNode) sender));
+            SendMessage(Factory.MessageCreate((DomNode)sender));
         }
 
         public string GetTagName()
@@ -57,10 +56,10 @@ namespace FlowR.Library.Node
         public DomNode SetAttribute(string name, string value)
         {
             _attributes.SetAttribute(name, value);
-            
+
             return this;
         }
-        
+
         public bool HasAttribute(string name)
         {
             return _attributes.HasAttribute(name);
@@ -153,7 +152,7 @@ namespace FlowR.Library.Node
                         GetApplication().Client.SendAsync(message.Method, args[0], args[1], args[2], args[3]);
                         return;
                 }
-                
+
                 throw new Exception("Message Arguments Array to long");
             }
         }

@@ -9,6 +9,6 @@
     "mapRoot": "wwwroot/js"
   },
   "include": [
-    "Typescript/**/*"
+    "Typescript/*"
   ]
 }

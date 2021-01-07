@@ -1,9 +1,9 @@
-﻿using System;
-using System.Threading.Tasks;
-using FlowR.Library;
+﻿using FlowR.Library;
 using FlowR.Library.Client;
 using FlowR.Library.Client.Message;
 using Microsoft.AspNetCore.SignalR;
+using System;
+using System.Threading.Tasks;
 
 namespace FlowR.Hubs
 {

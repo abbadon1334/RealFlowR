@@ -1,7 +1,6 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
-using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace FlowR.Library.Client.Message
 {
@@ -9,7 +8,7 @@ namespace FlowR.Library.Client.Message
     {
         public string Uuid;
         public string EventName;
-        public readonly Dictionary<string,string> EventArgs = new();
+        public readonly Dictionary<string, string> EventArgs = new();
 
         public static MessageEvent FromJson(string json)
         {
@@ -24,6 +23,6 @@ namespace FlowR.Library.Client.Message
 
     public class MessageEventArgs : EventArgs
     {
-        public Dictionary<string,string> Data = new();
+        public Dictionary<string, string> Data = new();
     }
 }

@@ -1,8 +1,8 @@
-using System;
 using FlowR.Library.Client.Message;
 using FlowR.Library.Client.Tags;
 using FlowR.Library.Node;
 using Microsoft.AspNetCore.SignalR;
+using System;
 
 namespace FlowR.Library.Client
 {
@@ -67,7 +67,7 @@ namespace FlowR.Library.Client
         {
             GetRegisterComponent(message.Uuid).OnClientEventTriggered(
                 message.EventName,
-                new MessageEventArgs() {Data = message.EventArgs}
+                new MessageEventArgs() { Data = message.EventArgs }
             );
         }
 

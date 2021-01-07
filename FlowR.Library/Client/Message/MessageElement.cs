@@ -12,5 +12,5 @@ namespace FlowR.Library.Client.Message
     }
 
     public class MessageElement : Message
-    {}
+    { }
 }

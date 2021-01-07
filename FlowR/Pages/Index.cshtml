@@ -8,6 +8,5 @@
 <script src="~/js/FlowR.js"></script>
 
 <script type="application/javascript">
-var FlowR = new FlowR("/flowr");
-    FlowR.TryConnect();
+(new FlowR(signalR, "/flowr")).TryConnect(); // remove all refs. PD
 </script>

@@ -1,14 +1,20 @@
 
 class FlowR {
 
-    // @ts-ignore
+    /** @ts-ignore */
     public connection : HubConnection;
     protected rootId: string;
 
-    constructor(uri_path: string) {
+    /** @ts-ignore*/
+    constructor(signalR:signalR, uri_path: string) {
 
-        // @ts-ignore
-        this.connection = new signalR.HubConnectionBuilder().withUrl(uri_path).build();
+        /** @ts-ignore */
+        this.connection = new signalR.HubConnectionBuilder()
+            .withUrl(uri_path)
+            //.withAutomaticReconnect()
+            .configureLogging(signalR.LogLevel.Debug)
+            .build();
+
 
         this.connection.on("OnInit", this.OnInit);
         this.connection.on("OnDisconnect", this.OnDisconnect);
@@ -26,9 +32,7 @@ class FlowR {
     }
 
     TryConnect() {
-        this.connection.start().then(() => {
-            console.log('connected');
-        }).catch(err => {
+        this.connection.start().catch(err => {
             console.error(err.toString())
         });
     }
@@ -82,20 +86,19 @@ class FlowR {
 
         console.log('startListenEvent', uuid, event_name);
         
-        document.getElementById(uuid).addEventListener(event_name, function (event) {
-            try {
-                
-                console.log(this.connection);
-                
-                this.connection.invoke("ClientEventTriggered", [ // @todo solve connection.invoke is not a function
-                    uuid,
-                    event_name,
-                    event.target
-                ]);
-            } catch (err) {
+        document.getElementById(uuid).addEventListener(event_name, (function (event) {
+
+            console.log(this.connection);
+
+            this.connection.invoke("ClientEventTriggered", [
+                uuid,
+                event_name,
+                event.target
+            ]).catch(err => {
                 return console.error(err.toString());
-            }
-        }.bind(this), false);
+            });
+
+        }).bind(this,false));
     }
 
     StopListenEvent(uuid: string, event_name: string) {

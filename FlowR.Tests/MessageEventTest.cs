@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Text.Json;
 using FlowR.Library.Client.Message;
 using NUnit.Framework;
 using NUnit.Framework.Internal;
-using JsonSerializer = Newtonsoft.Json.JsonSerializer;
 
 namespace FlowR.Tests
 {
@@ -23,10 +19,10 @@ namespace FlowR.Tests
                 Uuid = "testUuid",
                 EventName = "eventName"
             };
-            
+
             message.EventArgs.Add("testName", "valueTest");
 
-            string serialized = 
+            string serialized =
                 "{\"Uuid\":\"testUuid\",\"EventName\":\"eventName\",\"EventArgs\":{\"testName\":\"valueTest\"}}";
 
             Assert.AreEqual(
@@ -35,10 +31,10 @@ namespace FlowR.Tests
             );
 
             MessageEvent deserialized = MessageEvent.FromJson(serialized);
-            
-            Assert.AreEqual(message.Uuid,deserialized.Uuid);
-            Assert.AreEqual(message.EventName,deserialized.EventName);
-            Assert.AreEqual(message.EventArgs,deserialized.EventArgs);
+
+            Assert.AreEqual(message.Uuid, deserialized.Uuid);
+            Assert.AreEqual(message.EventName, deserialized.EventName);
+            Assert.AreEqual(message.EventArgs, deserialized.EventArgs);
         }
     }
 }
