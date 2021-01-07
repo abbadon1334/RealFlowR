@@ -2,7 +2,7 @@
 class FlowR {
 
     /** @ts-ignore */
-    public connection : HubConnection;
+    public connection: HubConnection;
     protected rootId: string;
 
     /** @ts-ignore*/
@@ -12,23 +12,27 @@ class FlowR {
         this.connection = new signalR.HubConnectionBuilder()
             .withUrl(uri_path)
             //.withAutomaticReconnect()
-            .configureLogging(signalR.LogLevel.Debug)
+            //.configureLogging(signalR.LogLevel.Debug)
             .build();
 
 
         this.connection.on("OnInit", this.OnInit);
-        this.connection.on("OnDisconnect", this.OnDisconnect);
+        this.connection.on("OnDisconnect", this.OnDisconnect.bind(this));
 
-        this.connection.on("CreateElement", this.CreateElement);
-        this.connection.on("RemoveElement", this.RemoveElement);
+        this.connection.on("CreateElement", this.CreateElement.bind(this));
+        this.connection.on("RemoveElement", this.RemoveElement.bind(this));
 
-        this.connection.on("SetAttribute", this.SetAttribute);
-        this.connection.on("RemoveAttribute", this.RemoveAttribute);
+        this.connection.on("SetAttribute", this.SetAttribute.bind(this));
+        this.connection.on("RemoveAttribute", this.RemoveAttribute.bind(this));
 
-        this.connection.on("StartListenEvent", this.StartListenEvent);
-        this.connection.on("StopListenEvent", this.StopListenEvent);
+        this.connection.on("StartListenEvent", this.StartListenEvent.bind(this));
+        this.connection.on("StopListenEvent", this.StopListenEvent.bind(this));
 
-        this.connection.on("SetText", this.SetText);
+        this.connection.on("SetText", this.SetText.bind(this));
+    }
+
+    GetConnection() {
+        return this.connection;
     }
 
     TryConnect() {
@@ -85,20 +89,15 @@ class FlowR {
     StartListenEvent(uuid: string, event_name: string) {
 
         console.log('startListenEvent', uuid, event_name);
-        
-        document.getElementById(uuid).addEventListener(event_name, (function (event) {
+        var handler = (event, uuid, event_name) => {
 
-            console.log(this.connection);
-
-            this.connection.invoke("ClientEventTriggered", [
-                uuid,
-                event_name,
-                event.target
-            ]).catch(err => {
+            /** @ts-ignore */
+            this.connection.invoke("ClientEventTriggered", JSON.stringify({ Uuid: uuid, EventName: event_name, EventArgs: { /*event: event*/ } })).catch(err => {
                 return console.error(err.toString());
             });
+        };
 
-        }).bind(this,false));
+        document.getElementById(uuid).addEventListener(event_name, handler.bind(this, event, uuid, event_name));
     }
 
     StopListenEvent(uuid: string, event_name: string) {

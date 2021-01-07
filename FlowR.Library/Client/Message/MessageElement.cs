@@ -3,9 +3,9 @@ namespace FlowR.Library.Client.Message
     public enum MessageElementAction
     {
         CreateElement,
+        RemoveElement,
         SetAttribute,
         RemoveAttribute,
-        Remove,
         StartListenEvent,
         StopListenEvent,
         SetText

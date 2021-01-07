@@ -32,6 +32,21 @@ namespace FlowR.Library.Node.Collections
             return _collection[name];
         }
 
+        public int Count()
+        {
+            return _collection.Count();
+        }
+
+        public T GetFirst()
+        {
+            return _collection.First().Value;
+        }
+
+        public T GetLast()
+        {
+            return _collection.Last().Value;
+        }
+
         protected KeyValuePair<string, T>[] ToArray()
         {
             return _collection.ToArray();

@@ -42,15 +42,32 @@ namespace FlowR.Library.Node
             SendMessage(Factory.MessageCreate((DomNode)sender));
         }
 
+        public int GetChildrenCount()
+        {
+            return _children.Count();
+        }
+
+        public DomNode GetFirstChild()
+        {
+            return _children.GetFirst();
+        }
+
+        public DomNode GetLastChild()
+        {
+            return _children.GetLast();
+        }
+
         public string GetTagName()
         {
             return TagName;
         }
 
-        public override void SetText(string text)
+        public override DomNode SetText(string text)
         {
             base.SetText(text);
             SendMessage(Factory.MessageSetText(this, text));
+
+            return this;
         }
 
         public DomNode SetAttribute(string name, string value)

@@ -40,7 +40,7 @@ namespace FlowR.Library.Client.Message
         public static MessageElement MessageRemove(DomNode node)
         {
             var message = new MessageElement();
-            message.Method = MessageElementAction.Remove.ToString();
+            message.Method = MessageElementAction.RemoveElement.ToString();
             message.AddArgument("Uuid", node.GetUuid());
 
             return message;

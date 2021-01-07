@@ -33,9 +33,9 @@ namespace FlowR.Library.Node.Collections
             node.SetApplication(null);
             Unset(node.GetUuid());
 
-            ChildRemoved?.Invoke(node, EventArgs.Empty);
-
             GetOwner().GetApplication().UnregisterComponent(node);
+
+            ChildRemoved?.Invoke(node, EventArgs.Empty);
         }
     }
 }

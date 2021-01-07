@@ -9,9 +9,11 @@ namespace FlowR.Library.Node
             return _text;
         }
 
-        public virtual void SetText(string text)
+        public virtual DomNodeText SetText(string text)
         {
             _text = text;
+
+            return this;
         }
     }
 }
