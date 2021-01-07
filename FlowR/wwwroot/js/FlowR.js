@@ -45,6 +45,7 @@ var FlowR = /** @class */ (function () {
         this.connection.on("RemoveAttribute", this.RemoveAttribute);
         this.connection.on("StartListenEvent", this.StartListenEvent);
         this.connection.on("StopListenEvent", this.StopListenEvent);
+        this.connection.on("SetText", this.SetText);
     }
     FlowR.prototype.TryConnect = function () {
         this.connection.start().then(function () {
@@ -89,7 +90,7 @@ var FlowR = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, this.connection.invoke("ClientEventTriggered", [
+                        return [4 /*yield*/, this.connection.send("ClientEventTriggered", [
                                 uuid,
                                 event_name,
                                 event.target
@@ -106,6 +107,9 @@ var FlowR = /** @class */ (function () {
         }); });
     };
     FlowR.prototype.StopListenEvent = function (uuid, event_name) {
+    };
+    FlowR.prototype.SetText = function (uuid, text) {
+        document.getElementById(uuid).innerHTML = text;
     };
     return FlowR;
 }());

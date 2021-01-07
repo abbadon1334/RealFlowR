@@ -16,8 +16,10 @@ namespace FlowR.Sample
         {
             var el = new Button();
                 el.SetAttribute("class", "button");
+                el.SetText("Button");
                 
                 RootElement.Add(el);
+                
                 el.On("click", delegate(object sender, EventArgs args)
                 {
                     el.SetAttribute("class", $"danger{(new Random()).Next(0,100).ToString()}");

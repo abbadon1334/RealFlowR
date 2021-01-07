@@ -19,6 +19,8 @@ class FlowR {
 
         this.connection.on("StartListenEvent", this.StartListenEvent);
         this.connection.on("StopListenEvent", this.StopListenEvent);
+
+        this.connection.on("SetText", this.SetText);
     }
 
     TryConnect() {
@@ -78,7 +80,7 @@ class FlowR {
         
         document.getElementById(uuid).addEventListener(event_name, async (event) => {
             try {
-                await this.connection.invoke("ClientEventTriggered", [ // connection.invoke is not a function
+                await this.connection.invoke("ClientEventTriggered", [ // @todo solve connection.invoke is not a function
                     uuid,
                     event_name,
                     event.target
@@ -91,5 +93,9 @@ class FlowR {
 
     StopListenEvent(uuid: string, event_name: string) {
 
+    }
+
+    SetText(uuid: string, text: string) {
+        document.getElementById(uuid).innerHTML = text;
     }
 }

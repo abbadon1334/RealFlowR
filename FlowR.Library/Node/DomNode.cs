@@ -123,7 +123,7 @@ namespace FlowR.Library.Node
 
         protected void SendMessage(Message message)
         {
-            if (IsInitialized())
+            if (IsInitialized() && null != GetApplication())
             {
                 var args = message.Arguments.Values.ToArray();
 
