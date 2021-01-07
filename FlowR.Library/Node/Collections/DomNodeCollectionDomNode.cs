@@ -11,7 +11,7 @@ namespace FlowR.Library.Node.Collections
         public event EventHandler ChildAdded;
         public event EventHandler ChildRemoved;
 
-        public void Add(DomNode node)
+        public DomNode Add(DomNode node)
         {
             node.SetApplication(GetOwner().GetApplication());
             node.SetOwner(GetOwner());
@@ -23,6 +23,8 @@ namespace FlowR.Library.Node.Collections
             node.Init();
 
             ChildAdded?.Invoke(node, EventArgs.Empty);
+
+            return node;
         }
 
         public void Remove(DomNode node)

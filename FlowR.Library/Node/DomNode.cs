@@ -47,10 +47,18 @@ namespace FlowR.Library.Node
         {
             return TagName;
         }
-        
-        public void SetAttribute(string name, string value)
+
+        public override void SetText(string text)
+        {
+            base.SetText(text);
+            SendMessage(Factory.MessageSetText(this, text));
+        }
+
+        public DomNode SetAttribute(string name, string value)
         {
             _attributes.SetAttribute(name, value);
+            
+            return this;
         }
         
         public bool HasAttribute(string name)
@@ -92,11 +100,11 @@ namespace FlowR.Library.Node
             SendMessage(Factory.MessageSetAttribute(this, e.Name, string.Empty));
         }
 
-        public void Add(DomNode node)
+        public DomNode Add(DomNode node)
         {
             if (!IsInitialized()) throw new Exception("Cannot add Child, Node must be initialized first");
 
-            _children.Add(node);
+            return _children.Add(node);
         }
 
         public void Remove(DomNode node)

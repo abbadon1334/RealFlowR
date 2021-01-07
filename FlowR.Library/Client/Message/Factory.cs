@@ -66,5 +66,15 @@ namespace FlowR.Library.Client.Message
 
             return message;
         }
+        
+        public static MessageElement MessageSetText(DomNode node, string text)
+        {
+            var message = new MessageElement();
+            message.Method = MessageElementAction.SetText.ToString();
+            message.AddArgument("Uuid", node.GetUuid());
+            message.AddArgument("Value", text);
+
+            return message;
+        }
     }
 }

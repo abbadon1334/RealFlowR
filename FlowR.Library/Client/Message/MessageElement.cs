@@ -7,7 +7,8 @@ namespace FlowR.Library.Client.Message
         RemoveAttribute,
         Remove,
         StartListenEvent,
-        StopListenEvent
+        StopListenEvent,
+        SetText
     }
 
     public class MessageElement : Message
