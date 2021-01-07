@@ -1,13 +1,15 @@
 
 class FlowR {
 
-    public connection : any;
+    // @ts-ignore
+    public connection : HubConnection;
     protected rootId: string;
 
-    constructor(conn: any) {
+    constructor(uri_path: string) {
 
-        this.connection = conn;
-        
+        // @ts-ignore
+        this.connection = new signalR.HubConnectionBuilder().withUrl(uri_path).build();
+
         this.connection.on("OnInit", this.OnInit);
         this.connection.on("OnDisconnect", this.OnDisconnect);
 
@@ -26,7 +28,9 @@ class FlowR {
     TryConnect() {
         this.connection.start().then(() => {
             console.log('connected');
-        }).catch(err => console.error(err.toString()));
+        }).catch(err => {
+            console.error(err.toString())
+        });
     }
 
     OnInit(rootId: string) {
@@ -78,9 +82,12 @@ class FlowR {
 
         console.log('startListenEvent', uuid, event_name);
         
-        document.getElementById(uuid).addEventListener(event_name, async (event) => {
+        document.getElementById(uuid).addEventListener(event_name, function (event) {
             try {
-                await this.connection.invoke("ClientEventTriggered", [ // @todo solve connection.invoke is not a function
+                
+                console.log(this.connection);
+                
+                this.connection.invoke("ClientEventTriggered", [ // @todo solve connection.invoke is not a function
                     uuid,
                     event_name,
                     event.target
@@ -88,7 +95,7 @@ class FlowR {
             } catch (err) {
                 return console.error(err.toString());
             }
-        });
+        }.bind(this), false);
     }
 
     StopListenEvent(uuid: string, event_name: string) {

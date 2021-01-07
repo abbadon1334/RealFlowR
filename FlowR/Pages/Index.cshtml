@@ -8,7 +8,6 @@
 <script src="~/js/FlowR.js"></script>
 
 <script type="application/javascript">
-var connection = new signalR.HubConnectionBuilder().withUrl("/flowr").build();
-var FlowR = new FlowR(connection);
+var FlowR = new FlowR("/flowr");
     FlowR.TryConnect();
 </script>
