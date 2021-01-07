@@ -1,20 +1,15 @@
-interface HubConnection {
-} // @todo find TS type signalr 
 
 class FlowR {
 
-    protected connection;
+    public connection : any;
     protected rootId: string;
 
-    constructor(conn: HubConnection) {
+    constructor(conn: any) {
 
         this.connection = conn;
-
+        
         this.connection.on("OnInit", this.OnInit);
         this.connection.on("OnDisconnect", this.OnDisconnect);
-
-        this.connection.on("CallWindowMethod", this.CallWindowMethod);
-        this.connection.on("CallDocumentMethod", this.CallDocumentMethod);
 
         this.connection.on("CreateElement", this.CreateElement);
         this.connection.on("RemoveElement", this.RemoveElement);
@@ -41,16 +36,6 @@ class FlowR {
         console.log('disconnect');
     }
     
-    CallWindowMethod(method: string, args: string[]) {
-        console.log('CallWindowMethod', 'window', method, args);
-        window[method].apply(null, args);
-    }
-
-    CallDocumentMethod(method: string, args: string[]) {
-        console.log('CallDocumentMethod', method, args);
-        document[method].apply(null, args);
-    }
-
     CreateElement(parent_id: string, tag_name: string, attributes = [], text: string) {
 
         console.log('CreateElement', parent_id, tag_name, attributes, text);
@@ -91,17 +76,17 @@ class FlowR {
 
         console.log('startListenEvent', uuid, event_name);
         
-        document.getElementById(uuid).addEventListener(event_name, (event) => {
-                this.connection.invoke("ClientEventTriggered", [
+        document.getElementById(uuid).addEventListener(event_name, async (event) => {
+            try {
+                await this.connection.invoke("ClientEventTriggered", [ // connection.invoke is not a function
                     uuid,
                     event_name,
                     event.target
-                ])
-                .catch(function (err) {
-                    return console.error(err.toString());
-                });
+                ]);
+            } catch (err) {
+                return console.error(err.toString());
             }
-        );
+        });
     }
 
     StopListenEvent(uuid: string, event_name: string) {
