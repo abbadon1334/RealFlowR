@@ -4,6 +4,9 @@ namespace FlowR.Library.Client.Tags
 {
     public class Button : DomNode
     {
-        protected override string TagName { get => "button"; }
+        protected override string TagName
+        {
+            get => "button";
+        }
     }
 }

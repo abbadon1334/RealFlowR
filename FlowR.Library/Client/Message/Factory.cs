@@ -75,5 +75,38 @@ namespace FlowR.Library.Client.Message
 
             return message;
         }
+
+        public static Message MessageSetProperty(DomNode node, string name, string value)
+        {
+            var message = new MessageElement();
+            message.Method = MessageElementAction.SetProperty.ToString();
+            message.AddArgument("Uuid", node.GetUuid());
+            message.AddArgument("Name", name);
+            message.AddArgument("Value", value);
+
+            return message;
+        }
+        
+        public static Message MessageCallMethod(DomNode node, string name, params string[] args)
+        {
+            var message = new MessageElement();
+            message.Method = MessageElementAction.CallMethod.ToString();
+            message.AddArgument("Uuid", node.GetUuid());
+            message.AddArgument("Name", name);
+            message.AddArgument("Arguments", args);
+
+            return message;
+        }
+
+        public static Message MessageGetProperty(DomNode node, string name)
+        {
+            
+            var message = new MessageElement();
+            message.Method = MessageElementAction.GetProperty.ToString();
+            message.AddArgument("Uuid", node.GetUuid());
+            message.AddArgument("Name", name);
+
+            return message;
+        }
     }
 }

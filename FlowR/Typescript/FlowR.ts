@@ -16,7 +16,7 @@ class FlowR {
             .build();
 
 
-        this.connection.on("OnInit", this.OnInit);
+        this.connection.on("OnInit", this.OnInit.bind(this));
         this.connection.on("OnDisconnect", this.OnDisconnect.bind(this));
 
         this.connection.on("CreateElement", this.CreateElement.bind(this));
@@ -29,10 +29,11 @@ class FlowR {
         this.connection.on("StopListenEvent", this.StopListenEvent.bind(this));
 
         this.connection.on("SetText", this.SetText.bind(this));
-    }
 
-    GetConnection() {
-        return this.connection;
+        this.connection.on("SetProperty", this.SetProperty.bind(this));
+        this.connection.on("GetProperty", this.GetProperty.bind(this));
+        
+        this.connection.on("CallElementMethod", this.CallElementMethod.bind(this));
     }
 
     TryConnect() {
@@ -106,5 +107,19 @@ class FlowR {
 
     SetText(uuid: string, text: string) {
         document.getElementById(uuid).innerHTML = text;
+    }
+
+    SetProperty(uuid: string, property_path: string, value : string) {
+        // @todo change no eval
+        eval('document.getElementById(uuid).'+property_path+'='+value);
+    }
+    
+    GetProperty(uuid: string, property_path: string) : any {
+        // @todo change no eval
+        return eval('document.getElementById(uuid).'+property_path);
+    }
+    
+    CallElementMethod(uuid:string, method : string, ...args) {
+        return document.getElementById(uuid)[method](...args);
     }
 }

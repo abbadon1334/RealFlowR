@@ -8,9 +8,14 @@ namespace FlowR.Library.Client.Message
         RemoveAttribute,
         StartListenEvent,
         StopListenEvent,
-        SetText
+        SetText,
+        SetProperty,
+        CallMethod,
+        GetProperty,
+        MessageWithResponse
     }
 
     public class MessageElement : Message
-    { }
+    {
+    }
 }

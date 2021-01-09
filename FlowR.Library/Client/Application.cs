@@ -67,7 +67,7 @@ namespace FlowR.Library.Client
         {
             GetRegisterComponent(message.Uuid).OnClientEventTriggered(
                 message.EventName,
-                new MessageEventArgs() { Data = message.EventArgs }
+                new MessageEventArgs() {Data = message.EventArgs}
             );
         }
 

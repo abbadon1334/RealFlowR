@@ -16,7 +16,7 @@ namespace FlowR.Library
 
         public T Add(string uid, IClientProxy client)
         {
-            T application = (T)Activator.CreateInstance(typeof(T), uid, client);
+            T application = (T) Activator.CreateInstance(typeof(T), uid, client);
 
             _applications.Add(uid, application);
 

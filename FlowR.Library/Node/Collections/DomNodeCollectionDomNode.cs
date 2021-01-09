@@ -8,9 +8,6 @@ namespace FlowR.Library.Node.Collections
         {
         }
 
-        public event EventHandler ChildAdded;
-        public event EventHandler ChildRemoved;
-
         public DomNode Add(DomNode node)
         {
             node.SetApplication(GetOwner().GetApplication());
@@ -19,10 +16,7 @@ namespace FlowR.Library.Node.Collections
             Set(node.GetUuid(), node);
 
             node.GetApplication().RegisterComponent(node);
-
             node.Init();
-
-            ChildAdded?.Invoke(node, EventArgs.Empty);
 
             return node;
         }
@@ -34,8 +28,6 @@ namespace FlowR.Library.Node.Collections
             Unset(node.GetUuid());
 
             GetOwner().GetApplication().UnregisterComponent(node);
-
-            ChildRemoved?.Invoke(node, EventArgs.Empty);
         }
     }
 }
