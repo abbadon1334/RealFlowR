@@ -1,11 +1,8 @@
-using FlowR.Library.Client.Message;
-using FlowR.Library.Node.Collections;
-using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
+using FlowR.Library.Client.Message;
+using FlowR.Library.Node.Collections;
 
 namespace FlowR.Library.Node
 {
@@ -16,13 +13,15 @@ namespace FlowR.Library.Node
         private DomNodeCollectionEvent _events;
         private DomNodeCollectionProperty _properties;
 
-        public DomNode()
+        protected DomNode()
         {
             SetupAttributes();
             SetupChildren();
             SetupEvents();
             SetupProperties();
         }
+
+        protected abstract string TagName { get; }
 
         private void SetupProperties()
         {
@@ -36,27 +35,27 @@ namespace FlowR.Library.Node
 
         public void SetProperty(string name, string value)
         {
-            this._properties.SetProperty(name, value);
+            _properties.SetProperty(name, value);
         }
 
         public async Task<string> GetProperty(string path)
         {
-            MessageWithResponse message = Factory.MessageGetProperty(this, path);
+            var message = Factory.MessageGetProperty(this, path);
             return await GetApplication().SendMessageWaitResponse(message);
         }
-
-        protected abstract string TagName { get; }
 
         private void SetupEvents()
         {
             _events = new DomNodeCollectionEvent(this);
             _events.AfterAdded += (o, args) =>
             {
-                SendMessage(Factory.MessageStartListenEvent(this, ((CollectionAddedEventArgs<List<EventHandler>>) args).Name));
+                SendMessage(Factory.MessageStartListenEvent(this,
+                    ((CollectionAddedEventArgs<List<EventHandler>>) args).Name));
             };
             _events.AfterRemoved += (o, args) =>
             {
-                SendMessage(Factory.MessageStopListenEvent(this, ((CollectionAddedEventArgs<List<EventHandler>>) args).Name));
+                SendMessage(Factory.MessageStopListenEvent(this,
+                    ((CollectionAddedEventArgs<List<EventHandler>>) args).Name));
             };
         }
 
@@ -72,7 +71,7 @@ namespace FlowR.Library.Node
                 SendMessage(Factory.MessageRemove(((CollectionRemovedEventArgs<DomNode>) args).Value));
             };
         }
-        
+
         private void SetupAttributes()
         {
             _attributes = new DomNodeCollectionAttribute(this);
@@ -104,10 +103,7 @@ namespace FlowR.Library.Node
         public override void SetUuid(string uuid)
         {
             base.SetUuid(uuid);
-            if (!this.HasAttribute("id"))
-            {
-                this.SetAttribute("id", uuid);
-            }
+            if (!HasAttribute("id")) SetAttribute("id", uuid);
         }
 
         public void On(string eventName, EventHandler handler)
@@ -127,10 +123,7 @@ namespace FlowR.Library.Node
 
         protected void SendMessage(Message message)
         {
-            if (IsInitialized() && null != GetApplication())
-            {
-                GetApplication().SendMessage(message);
-            }
+            if (IsInitialized() && null != GetApplication()) GetApplication().SendMessage(message);
         }
 
         public int GetChildrenCount()

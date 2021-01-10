@@ -11,10 +11,7 @@ namespace FlowR.Library.Node.Collections
 
         public void On(string eventName, EventHandler handler)
         {
-            if (!Exists(eventName))
-            {
-                Set(eventName, new List<EventHandler>());
-            }
+            if (!Exists(eventName)) Set(eventName, new List<EventHandler>());
 
             Get(eventName).Add(handler);
         }

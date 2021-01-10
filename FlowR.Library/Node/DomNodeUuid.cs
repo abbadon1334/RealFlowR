@@ -8,10 +8,7 @@ namespace FlowR.Library.Node
 
         public string GetUuid()
         {
-            if (Uuid != string.Empty)
-            {
-                return Uuid;
-            }
+            if (Uuid != string.Empty) return Uuid;
 
             SetUuid(Guid.NewGuid().ToString());
 

@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace FlowR.Library.Node.Collections
 {
     public class DomNodeCollectionProperty : DomNodeCollection<string>

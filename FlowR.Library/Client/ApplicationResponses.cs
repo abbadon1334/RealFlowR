@@ -7,9 +7,9 @@ namespace FlowR.Library.Client
 {
     public class ApplicationResponses
     {
-        private readonly ConcurrentDictionary<string, MessageWithResponse> _pending = new();
         private readonly ConcurrentDictionary<string, string> _completed = new();
-        
+        private readonly ConcurrentDictionary<string, MessageWithResponse> _pending = new();
+
         public async Task<string> WaitResponse(Application app, MessageWithResponse message, int timeoutSeconds = 10)
         {
             _pending.TryAdd(message.GetUuid(), message);
@@ -19,11 +19,9 @@ namespace FlowR.Library.Client
 
             return await Task.Run(() =>
             {
-                string response = "";
-                
-                while (!_completed.TryGetValue(message.GetUuid(), out response)) {
-                    Task.Delay(150, answerCancel.Token);
-                }
+                var response = "";
+
+                while (!_completed.TryGetValue(message.GetUuid(), out response)) Task.Delay(150, answerCancel.Token);
 
                 return response;
             }, answerCancel.Token);
@@ -31,7 +29,7 @@ namespace FlowR.Library.Client
 
         public void SetResponse(MessageWithResponse message)
         {
-            if (_pending.TryGetValue(message.GetUuid(), out MessageWithResponse storedMessage))
+            if (_pending.TryGetValue(message.GetUuid(), out var storedMessage))
             {
                 storedMessage.SetResponse(message.GetResponse());
                 _pending.TryRemove(message.GetUuid(), out _);

@@ -1,5 +1,3 @@
-using System;
-
 namespace FlowR.Library.Node.Collections
 {
     public class DomNodeCollectionDomNode : DomNodeCollection<DomNode>

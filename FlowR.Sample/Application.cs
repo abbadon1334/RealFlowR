@@ -1,8 +1,5 @@
-
 using FlowR.Library.Client.Tags;
 using Microsoft.AspNetCore.SignalR;
-using System;
-using System.Xml.Xsl;
 
 namespace FlowR.Sample
 {
@@ -43,54 +40,52 @@ namespace FlowR.Sample
                 .Add(new Button())
                 .SetAttribute("class", "btn btn-danger")
                 .SetText("Button Remove All");
-            
+
             var buttonTestResponse = cardBody
                 .Add(new Button())
                 .SetAttribute("class", "btn btn-success")
-                .SetText("SET-GET Label From server");
-                
+                .SetText(
+                    "client click -> server ask client innerHTML -> client return innerHtml -> server add a point to innerHTML");
+
 
             var testContainer = RootElement
                 .Add(new Div())
                 .SetAttribute("class", "card");
 
-            buttonAdd1000.On("click", delegate (object sender, EventArgs args)
+            buttonAdd1000.On("click", delegate
             {
                 buttonAdd1000.SetProperty("value", "test");
-                for(int x = 0; x < 1000; x++)
+                for (var x = 0; x < 1000; x++)
                 {
-                    int count = testContainer.GetChildrenCount();
+                    var count = testContainer.GetChildrenCount();
                     testContainer.Add(new Div())
                         .SetAttribute("class", "display-5 pb-3 mb-3 border-bottom")
                         .SetText($"Number {count}");
                     cardHeader.SetText($"Children {count}");
                 }
+
                 /*
                 el.SetAttribute("class", $"danger{(new Random()).Next(0, 100).ToString()}");
                 cardText.SetText($"random {(new Random()).Next(0, 100).ToString()}");
                 */
             });
 
-            buttonRemove.On("click", async delegate (object sender, EventArgs args)
+            buttonRemove.On("click", delegate
             {
-                var value = await buttonAdd1000.GetProperty("value");
-                    /*
-                while (testContainer.GetChildrenCount() != 0) {
-
+                while (testContainer.GetChildrenCount() != 0)
+                {
                     testContainer.Remove(testContainer.GetLastChild());
 
-                    int count = testContainer.GetChildrenCount();
+                    var count = testContainer.GetChildrenCount();
                     cardHeader.SetText($"Children {count}");
                 }
-                */
             });
-            
-            buttonTestResponse.On("click", async delegate (object sender, EventArgs args)
+
+            buttonTestResponse.On("click", async delegate
             {
                 var label = await buttonTestResponse.GetProperty("innerHTML");
                 buttonTestResponse.SetProperty("innerHTML", $"{label}."); // add a point for every call
             });
-
         }
     }
 }

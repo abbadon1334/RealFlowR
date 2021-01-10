@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace FlowR.Library.Node.Collections
 {
     public class DomNodeCollectionAttribute : DomNodeCollection<string>

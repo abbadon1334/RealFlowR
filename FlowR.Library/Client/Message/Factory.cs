@@ -86,7 +86,7 @@ namespace FlowR.Library.Client.Message
 
             return message;
         }
-        
+
         public static Message MessageCallMethod(DomNode node, string name, params string[] args)
         {
             var message = new MessageElement();
@@ -98,19 +98,16 @@ namespace FlowR.Library.Client.Message
             return message;
         }
 
-        public static MessageWithResponse MessageGetProperty(DomNode node, string name, MessageWithResponseCallback callback = null)
+        public static MessageWithResponse MessageGetProperty(DomNode node, string name,
+            MessageWithResponseCallback callback = null)
         {
-            
             var message = new MessageWithResponse();
             message.Method = MessageElementAction.GetProperty.ToString();
             message.AddArgument("MessageUuid", message.GetUuid());
             message.AddArgument("Uuid", node.GetUuid());
             message.AddArgument("Name", name);
-            
-            if (null != callback)
-            {
-                message.SetCallback(callback);
-            }
+
+            if (null != callback) message.SetCallback(callback);
 
             return message;
         }

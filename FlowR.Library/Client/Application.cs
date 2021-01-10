@@ -1,19 +1,17 @@
+using System;
+using System.Threading.Tasks;
+using FlowR.Library.Client.Message;
 using FlowR.Library.Client.Tags;
 using FlowR.Library.Node;
 using Microsoft.AspNetCore.SignalR;
-using System;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using FlowR.Library.Client.Message;
 
 namespace FlowR.Library.Client
 {
     public class Application
     {
         private readonly ApplicationRegistry _registry = new();
-        private readonly ApplicationTimers _timers = new();
         private readonly ApplicationResponses _responses = new();
+        private readonly ApplicationTimers _timers = new();
 
         protected readonly Root RootElement;
 
@@ -37,11 +35,6 @@ namespace FlowR.Library.Client
             OnStart(RootElement);
         }
 
-        protected virtual void OnStart(Root rootElement)
-        {
-            throw new Exception("You need to override Application::OnStart");
-        }
-
         /// <summary>
         ///     UUID of the Context.ConnectionId.
         /// </summary>
@@ -51,6 +44,11 @@ namespace FlowR.Library.Client
         ///     SignalR Client reference
         /// </summary>
         public IClientProxy Client { get; }
+
+        protected virtual void OnStart(Root rootElement)
+        {
+            throw new Exception("You need to override Application::OnStart");
+        }
 
         public void RegisterComponent(DomNode node)
         {
@@ -71,7 +69,7 @@ namespace FlowR.Library.Client
         {
             GetRegisterComponent(message.Uuid).OnClientEventTriggered(
                 message.EventName,
-                new MessageEventArgs() {Data = message.EventArgs}
+                new MessageEventArgs {Data = message.EventArgs}
             );
         }
 
@@ -89,7 +87,7 @@ namespace FlowR.Library.Client
         {
             _timers.Remove(timer);
         }
-        
+
         public Task SendMessage(Message.Message message)
         {
             var args = message.GetArgumentValues();
@@ -102,25 +100,24 @@ namespace FlowR.Library.Client
                     return Client.SendAsync(message.Method, args[0]);
                 case 2:
                     return Client.SendAsync(message.Method, args[0], args[1]);
-                    
+
                 case 3:
                     return Client.SendAsync(message.Method, args[0], args[1], args[2]);
-                    
+
                 case 4:
                     return Client.SendAsync(message.Method, args[0], args[1], args[2], args[3]);
-                    
+
                 case 5:
                     return Client.SendAsync(message.Method, args[0], args[1], args[2], args[3], args[4]);
-                    
+
                 case 6:
                     return Client.SendAsync(message.Method, args[0], args[1], args[2], args[3], args[4], args[5]);
-                    
             }
 
             throw new Exception("Message Arguments Array to long");
         }
-        
-        public async Task<string> SendMessageWaitResponse(Message.MessageWithResponse message)
+
+        public async Task<string> SendMessageWaitResponse(MessageWithResponse message)
         {
             return await _responses.WaitResponse(this, message);
         }

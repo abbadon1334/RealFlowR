@@ -6,16 +6,16 @@ namespace FlowR.Library.Node.Collections
 {
     public abstract class DomNodeCollection<T> : DomNodeOwner
     {
-        protected readonly Dictionary<string, T> Collection = new Dictionary<string, T>();
+        protected readonly Dictionary<string, T> Collection = new();
+
+        public EventHandler AfterAdded;
+        public EventHandler AfterChanged;
+        public EventHandler AfterRemoved;
 
         public EventHandler BeforeAdded;
         public EventHandler BeforeChanged;
         public EventHandler BeforeRemoved;
 
-        public EventHandler AfterAdded;
-        public EventHandler AfterChanged;
-        public EventHandler AfterRemoved;
-        
         protected DomNodeCollection(DomNode owner)
         {
             SetOwner(owner);
@@ -23,40 +23,34 @@ namespace FlowR.Library.Node.Collections
 
         protected void Set(string name, T value)
         {
-            T oldValue = value; 
-            bool exists = Exists(name);
-            
+            var oldValue = value;
+            var exists = Exists(name);
+
             if (!exists)
-            {
-                BeforeAdded?.Invoke(GetOwner(), new CollectionAddedEventArgs<T>()
+                BeforeAdded?.Invoke(GetOwner(), new CollectionAddedEventArgs<T>
                 {
                     Name = name,
                     Value = value
                 });
-            }
-            
+
             if (!exists)
-            {
-                BeforeChanged?.Invoke(GetOwner(), new CollectionChangedEventArgs<T>()
+                BeforeChanged?.Invoke(GetOwner(), new CollectionChangedEventArgs<T>
                 {
                     Name = name,
                     Value = value,
                     OldValue = oldValue
                 });
-            }
-            
+
             Collection[name] = value;
-            
+
             if (!exists)
-            {
-                AfterAdded?.Invoke(GetOwner(), new CollectionAddedEventArgs<T>()
+                AfterAdded?.Invoke(GetOwner(), new CollectionAddedEventArgs<T>
                 {
                     Name = name,
                     Value = value
                 });
-            }
-            
-            AfterChanged?.Invoke(GetOwner(), new CollectionChangedEventArgs<T>()
+
+            AfterChanged?.Invoke(GetOwner(), new CollectionChangedEventArgs<T>
             {
                 Name = name,
                 Value = value,
@@ -66,17 +60,17 @@ namespace FlowR.Library.Node.Collections
 
         protected void Unset(string name)
         {
-            T el = Get(name);
-            
-            BeforeRemoved?.Invoke(GetOwner(), new CollectionRemovedEventArgs<T>()
+            var el = Get(name);
+
+            BeforeRemoved?.Invoke(GetOwner(), new CollectionRemovedEventArgs<T>
             {
                 Name = name,
                 Value = el
             });
-            
+
             Collection.Remove(name);
-            
-            AfterRemoved?.Invoke(GetOwner(), new CollectionRemovedEventArgs<T>()
+
+            AfterRemoved?.Invoke(GetOwner(), new CollectionRemovedEventArgs<T>
             {
                 Name = name,
                 Value = el
@@ -112,20 +106,20 @@ namespace FlowR.Library.Node.Collections
         {
             return Collection.ToArray();
         }
-        
+
         public Dictionary<string, T> ToDictionary()
         {
             return Collection;
         }
     }
-    
+
     public class CollectionAddedEventArgs<T> : EventArgs
     {
         public string Name;
         public T Value;
     }
 
-    class CollectionRemovedEventArgs<T> : CollectionAddedEventArgs<T>
+    internal class CollectionRemovedEventArgs<T> : CollectionAddedEventArgs<T>
     {
     }
 

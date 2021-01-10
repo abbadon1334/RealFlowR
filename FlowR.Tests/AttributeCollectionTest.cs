@@ -1,7 +1,7 @@
+using System.Collections.Generic;
 using FlowR.Library.Client.Tags;
 using FlowR.Library.Node.Collections;
 using NUnit.Framework;
-using System.Collections.Generic;
 
 namespace FlowR.Tests
 {
@@ -27,7 +27,7 @@ namespace FlowR.Tests
             _collectionAttribute.RemoveAttribute("test2");
 
             Assert.AreEqual(
-                new Dictionary<string, string> { { "test", "value" } },
+                new Dictionary<string, string> {{"test", "value"}},
                 _collectionAttribute.ToDictionary()
             );
         }
