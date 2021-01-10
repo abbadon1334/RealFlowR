@@ -1,16 +1,27 @@
 namespace FlowR.Library.Client.Message
 {
-    public enum MessageElementAction
+    public class MessageElement : Message
     {
-        CreateElement,
-        RemoveElement,
-        SetAttribute,
-        RemoveAttribute,
-        StartListenEvent,
-        StopListenEvent,
-        SetText
+        public enum MethodName
+        {
+            CreateElement,
+            RemoveElement,
+            SetAttribute,
+            RemoveAttribute,
+            StartListenEvent,
+            StopListenEvent,
+            SetText,
+            SetProperty,
+            CallMethod
+        }
     }
 
-    public class MessageElement : Message
-    { }
+    public class MessageElementWithResponse : MessageWithResponse
+    {
+        public enum MethodName
+        {
+            GetProperty,
+            CallMethodGetResponse
+        }
+    }
 }

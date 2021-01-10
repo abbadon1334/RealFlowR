@@ -1,60 +1,91 @@
-using FlowR.Library.Client.Message;
-using FlowR.Library.Node.Collections;
-using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
+using FlowR.Library.Client;
+using FlowR.Library.Client.Message;
+using FlowR.Library.Node.Collections;
 
 namespace FlowR.Library.Node
 {
     public abstract class DomNode : DomNodeApplication
     {
-        private readonly DomNodeCollectionAttribute _attributes;
-        private readonly DomNodeCollectionDomNode _children;
-        private readonly DomNodeCollectionEvent _events;
+        private DomNodeCollectionAttribute _attributes;
+        private DomNodeCollectionDomNode _children;
+        private DomNodeCollectionEvent _events;
+        private DomNodeCollectionProperty _properties;
+
+        protected DomNode()
+        {
+            SetupAttributes();
+            SetupChildren();
+            SetupEvents();
+            SetupProperties();
+        }
+
         protected abstract string TagName { get; }
 
-        public DomNode()
+        private void SetupProperties()
+        {
+            _properties = new DomNodeCollectionProperty(this);
+            _properties.AfterChanged += (o, args) =>
+            {
+                var prop = (CollectionChangedEventArgs<string>) args;
+                SendMessage(Factory.MessageSetProperty(this, prop.Name, prop.Value));
+            };
+        }
+
+        public void SetProperty(string name, string value)
+        {
+            _properties.SetProperty(name, value);
+        }
+        
+        public async Task<string> GetProperty(string path)
+        {
+            var message = Factory.MessageGetProperty(this, path);
+            return await GetApplication().SendMessageWaitResponse(message);
+        }
+
+        private void SetupEvents()
+        {
+            _events = new DomNodeCollectionEvent(this);
+            _events.AfterAdded += (o, args) =>
+            {
+                SendMessage(Factory.MessageStartListenEvent(this,
+                    ((CollectionAddedEventArgs<List<EventHandler>>) args).Name));
+            };
+            _events.AfterRemoved += (o, args) =>
+            {
+                SendMessage(Factory.MessageStopListenEvent(this,
+                    ((CollectionAddedEventArgs<List<EventHandler>>) args).Name));
+            };
+        }
+
+        private void SetupChildren()
+        {
+            _children = new DomNodeCollectionDomNode(this);
+            _children.AfterAdded += (o, args) =>
+            {
+                SendMessage(Factory.MessageCreate(((CollectionAddedEventArgs<DomNode>) args).Value));
+            };
+            _children.AfterRemoved += (o, args) =>
+            {
+                SendMessage(Factory.MessageRemove(((CollectionRemovedEventArgs<DomNode>) args).Value));
+            };
+        }
+
+        private void SetupAttributes()
         {
             _attributes = new DomNodeCollectionAttribute(this);
-            _attributes.AttributeAdded += (o, args) => OnAttributeAdded(o as Attribute, args as AddEventArgs);
-            _attributes.AttributeChanged += (o, args) => OnAttributeChanged(o as Attribute, args as ChangeEventArgs);
-            _attributes.AttributeRemoved += (o, args) => OnAttributeRemoved(o as Attribute, args as RemoveEventArgs);
-
-            _children = new DomNodeCollectionDomNode(this);
-            _children.ChildAdded += OnChildrenAdd;
-            _children.ChildRemoved += OnChildrenRemoved;
-
-            _events = new DomNodeCollectionEvent(this);
-            _events.StartEventListen += (o, args) =>
-                SendMessage(Factory.MessageStartListenEvent(this, ((ListenerEventArgs)args).Name));
-            _events.StopEventListen += (o, args) =>
-                SendMessage(Factory.MessageStartListenEvent(this, ((ListenerEventArgs)args).Name));
-        }
-
-        private void OnChildrenRemoved(object sender, EventArgs e)
-        {
-            SendMessage(Factory.MessageRemove((DomNode)sender));
-        }
-
-        private void OnChildrenAdd(object sender, EventArgs e)
-        {
-            SendMessage(Factory.MessageCreate((DomNode)sender));
-        }
-
-        public int GetChildrenCount()
-        {
-            return _children.Count();
-        }
-
-        public DomNode GetFirstChild()
-        {
-            return _children.GetFirst();
-        }
-
-        public DomNode GetLastChild()
-        {
-            return _children.GetLast();
+            _attributes.AfterChanged += (o, args) =>
+            {
+                var attr = (CollectionChangedEventArgs<string>) args;
+                SendMessage(Factory.MessageSetAttribute(this, attr.Name, attr.Value));
+            };
+            _attributes.AfterRemoved += (o, args) =>
+            {
+                var attr = (CollectionAddedEventArgs<string>) args;
+                SendMessage(Factory.MessageRemoveAttribute(this, attr.Name));
+            };
         }
 
         public string GetTagName()
@@ -70,65 +101,11 @@ namespace FlowR.Library.Node
             return this;
         }
 
-        public DomNode SetAttribute(string name, string value)
-        {
-            _attributes.SetAttribute(name, value);
-
-            return this;
-        }
-
-        public bool HasAttribute(string name)
-        {
-            return _attributes.HasAttribute(name);
-        }
-
         public override void SetUuid(string uuid)
         {
             base.SetUuid(uuid);
-            if (!this.HasAttribute("id"))
-            {
-                this.SetAttribute("id", uuid);
-            }
+            if (!HasAttribute("id")) SetAttribute("id", uuid);
         }
-
-        public void RemoveAttribute(string name)
-        {
-            _attributes.RemoveAttribute(name);
-        }
-
-        public Dictionary<string, string> GetAttributeDictionary()
-        {
-            return _attributes.ToDictionary();
-        }
-
-        private void OnAttributeRemoved(Attribute o, RemoveEventArgs e)
-        {
-            SendMessage(Factory.MessageRemoveAttribute(this, e.Name));
-        }
-
-        private void OnAttributeChanged(Attribute o, ChangeEventArgs e)
-        {
-            SendMessage(Factory.MessageSetAttribute(this, e.Name, e.Value));
-        }
-
-        private void OnAttributeAdded(Attribute o, AddEventArgs e)
-        {
-            SendMessage(Factory.MessageSetAttribute(this, e.Name, string.Empty));
-        }
-
-        public DomNode Add(DomNode node)
-        {
-            if (!IsInitialized()) throw new Exception("Cannot add Child, Node must be initialized first");
-
-            return _children.Add(node);
-        }
-
-        public void Remove(DomNode node)
-        {
-            _children.Remove(node);
-        }
-
-        // events
 
         public void On(string eventName, EventHandler handler)
         {
@@ -147,31 +124,67 @@ namespace FlowR.Library.Node
 
         protected void SendMessage(Message message)
         {
-            if (IsInitialized() && null != GetApplication())
-            {
-                var args = message.Arguments.Values.ToArray();
+            if (IsInitialized() && null != GetApplication()) GetApplication().SendMessage(message);
+        }
 
-                switch (args.Length)
-                {
-                    case 0:
-                        GetApplication().Client.SendAsync(message.Method);
-                        return;
-                    case 1:
-                        GetApplication().Client.SendAsync(message.Method, args[0]);
-                        return;
-                    case 2:
-                        GetApplication().Client.SendAsync(message.Method, args[0], args[1]);
-                        return;
-                    case 3:
-                        GetApplication().Client.SendAsync(message.Method, args[0], args[1], args[2]);
-                        return;
-                    case 4:
-                        GetApplication().Client.SendAsync(message.Method, args[0], args[1], args[2], args[3]);
-                        return;
-                }
+        public int GetChildrenCount()
+        {
+            return _children.Count();
+        }
 
-                throw new Exception("Message Arguments Array to long");
-            }
+        public DomNode GetFirstChild()
+        {
+            return _children.GetFirst();
+        }
+
+        public DomNode GetLastChild()
+        {
+            return _children.GetLast();
+        }
+
+        public DomNode Add(DomNode node)
+        {
+            if (!IsInitialized()) throw new Exception("Cannot add Child, Node must be initialized first");
+
+            return _children.Add(node);
+        }
+
+        public void Remove(DomNode node)
+        {
+            _children.Remove(node);
+        }
+
+        public DomNode SetAttribute(string name, string value)
+        {
+            _attributes.SetAttribute(name, value);
+
+            return this;
+        }
+
+        public bool HasAttribute(string name)
+        {
+            return _attributes.HasAttribute(name);
+        }
+
+        public void RemoveAttribute(string name)
+        {
+            _attributes.RemoveAttribute(name);
+        }
+
+        public Dictionary<string, string> GetAttributeDictionary()
+        {
+            return _attributes.ToDictionary();
+        }
+        
+        public void CallClientMethod(string methodName, params string[] arguments)
+        {
+            SendMessage(Factory.MessageGlobalMethodCall(methodName, arguments));
+        }
+        
+        public async Task<string> CallClientMethodWaitResponse(string methodName, params string[] arguments)
+        {
+            var message = Factory.MessageGlobalMethodCallWaitResponse(methodName, arguments);
+            return await GetApplication().SendMessageWaitResponse(message);
         }
     }
 }
