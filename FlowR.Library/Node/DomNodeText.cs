@@ -1,6 +1,6 @@
 namespace FlowR.Library.Node
 {
-    public class DomNodeText : DomNodeUuid
+    public class DomNodeText : DomNodeInitialize
     {
         private string _text = string.Empty;
 

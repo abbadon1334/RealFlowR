@@ -7,7 +7,7 @@ namespace FlowR.Library.Client.Message
         public static MessageElement MessageCreate(DomNode node)
         {
             var message = new MessageElement();
-            message.Method = MessageElementAction.CreateElement.ToString();
+            message.Method = MessageElement.MethodName.CreateElement.ToString();
             message.AddArgument("OwnerUuid", node.GetOwner().GetUuid());
             message.AddArgument("TagName", node.GetTagName());
             message.AddArgument("Attributes", node.GetAttributeDictionary());
@@ -19,7 +19,7 @@ namespace FlowR.Library.Client.Message
         public static MessageElement MessageSetAttribute(DomNode node, string name, string value)
         {
             var message = new MessageElement();
-            message.Method = MessageElementAction.SetAttribute.ToString();
+            message.Method = MessageElement.MethodName.SetAttribute.ToString();
             message.AddArgument("Uuid", node.GetUuid());
             message.AddArgument("Name", name);
             message.AddArgument("Value", value);
@@ -30,7 +30,7 @@ namespace FlowR.Library.Client.Message
         public static MessageElement MessageRemoveAttribute(DomNode node, string name)
         {
             var message = new MessageElement();
-            message.Method = MessageElementAction.RemoveAttribute.ToString();
+            message.Method = MessageElement.MethodName.RemoveAttribute.ToString();
             message.AddArgument("Uuid", node.GetUuid());
             message.AddArgument("Name", name);
 
@@ -40,7 +40,7 @@ namespace FlowR.Library.Client.Message
         public static MessageElement MessageRemove(DomNode node)
         {
             var message = new MessageElement();
-            message.Method = MessageElementAction.RemoveElement.ToString();
+            message.Method = MessageElement.MethodName.RemoveElement.ToString();
             message.AddArgument("Uuid", node.GetUuid());
 
             return message;
@@ -49,7 +49,7 @@ namespace FlowR.Library.Client.Message
         public static MessageElement MessageStartListenEvent(DomNode node, string eventName)
         {
             var message = new MessageElement();
-            message.Method = MessageElementAction.StartListenEvent.ToString();
+            message.Method = MessageElement.MethodName.StartListenEvent.ToString();
             message.AddArgument("Uuid", node.GetUuid());
             message.AddArgument("Name", eventName);
 
@@ -59,7 +59,7 @@ namespace FlowR.Library.Client.Message
         public static MessageElement MessageStopListenEvent(DomNode node, string eventName)
         {
             var message = new MessageElement();
-            message.Method = MessageElementAction.StopListenEvent.ToString();
+            message.Method = MessageElement.MethodName.StopListenEvent.ToString();
             message.AddArgument("Uuid", node.GetUuid());
             message.AddArgument("Name", eventName);
 
@@ -69,7 +69,7 @@ namespace FlowR.Library.Client.Message
         public static MessageElement MessageSetText(DomNode node, string text)
         {
             var message = new MessageElement();
-            message.Method = MessageElementAction.SetText.ToString();
+            message.Method = MessageElement.MethodName.SetText.ToString();
             message.AddArgument("Uuid", node.GetUuid());
             message.AddArgument("Value", text);
 
@@ -79,7 +79,7 @@ namespace FlowR.Library.Client.Message
         public static Message MessageSetProperty(DomNode node, string name, string value)
         {
             var message = new MessageElement();
-            message.Method = MessageElementAction.SetProperty.ToString();
+            message.Method = MessageElement.MethodName.SetProperty.ToString();
             message.AddArgument("Uuid", node.GetUuid());
             message.AddArgument("Name", name);
             message.AddArgument("Value", value);
@@ -90,7 +90,7 @@ namespace FlowR.Library.Client.Message
         public static Message MessageCallMethod(DomNode node, string name, params string[] args)
         {
             var message = new MessageElement();
-            message.Method = MessageElementAction.CallMethod.ToString();
+            message.Method = MessageElement.MethodName.CallMethod.ToString();
             message.AddArgument("Uuid", node.GetUuid());
             message.AddArgument("Name", name);
             message.AddArgument("Arguments", args);
@@ -102,12 +102,58 @@ namespace FlowR.Library.Client.Message
             MessageWithResponseCallback callback = null)
         {
             var message = new MessageWithResponse();
-            message.Method = MessageElementAction.GetProperty.ToString();
+            message.Method = MessageElementWithResponse.MethodName.GetProperty.ToString();
             message.AddArgument("MessageUuid", message.GetUuid());
             message.AddArgument("Uuid", node.GetUuid());
             message.AddArgument("Name", name);
 
             if (null != callback) message.SetCallback(callback);
+
+            return message;
+        }
+
+        public static Message MessageMethodCall(DomNode node, string name, string[] arguments)
+        {
+            var message = new MessageElement();
+            message.Method = MessageElement.MethodName.CallMethod.ToString();
+            message.AddArgument("MessageUuid", message.GetUuid());
+            message.AddArgument("Uuid", node.GetUuid());
+            message.AddArgument("Name", name);
+            message.AddArgument("Arguments", arguments);
+
+            return message;
+        }
+        
+        public static MessageWithResponse MessageMethodCallWaitResponse(DomNode node, string name, string[] arguments)
+        {
+            var message = new MessageElementWithResponse();
+            message.Method = MessageElementWithResponse.MethodName.CallMethodGetResponse.ToString();
+            message.AddArgument("MessageUuid", message.GetUuid());
+            message.AddArgument("Uuid", node.GetUuid());
+            message.AddArgument("Name", name);
+            message.AddArgument("Arguments", arguments);
+
+            return message;
+        }
+        
+        public static Message MessageGlobalMethodCall(string name, string[] arguments)
+        {
+            var message = new MessageGlobal();
+            message.Method = MessageGlobal.MethodName.CallGlobalMethod.ToString();
+            message.AddArgument("MessageUuid", message.GetUuid());
+            message.AddArgument("Name", name);
+            message.AddArgument("Arguments", arguments);
+
+            return message;
+        }
+        
+        public static MessageWithResponse MessageGlobalMethodCallWaitResponse(string name, string[] arguments)
+        {
+            var message = new MessageGlobalWithResponse();
+            message.Method = MessageGlobalWithResponse.MethodName.CallGlobalMethodGetResponse.ToString();
+            message.AddArgument("MessageUuid", message.GetUuid());
+            message.AddArgument("Name", name);
+            message.AddArgument("Arguments", arguments);
 
             return message;
         }

@@ -2,7 +2,7 @@ using System;
 
 namespace FlowR.Library.Node
 {
-    public class DomNodeUuid : DomNodeInitialize
+    public class DomNodeUuid
     {
         protected string Uuid = string.Empty;
 

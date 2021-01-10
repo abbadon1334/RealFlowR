@@ -126,5 +126,16 @@ namespace FlowR.Library.Client
         {
             _responses.SetResponse(message);
         }
+
+        public void CallGlobalMethod(string methodName, params string[] arguments)
+        {
+            SendMessage(Factory.MessageGlobalMethodCall(methodName, arguments));
+        }
+        
+        public async Task<string> CallGlobalMethodWaitResponse(string methodName, params string[] arguments)
+        {
+            var message = Factory.MessageGlobalMethodCallWaitResponse(methodName, arguments);
+            return await _responses.WaitResponse(this, message);
+        }
     }
 }

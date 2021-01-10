@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace FlowR.Library.Client.Message
 {
-    public class MessageWithResponse : MessageElement
+    public class MessageWithResponse : Message
     {
         private MessageWithResponseCallback _callback;
 

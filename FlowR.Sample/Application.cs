@@ -1,3 +1,5 @@
+using System;
+using System.Timers;
 using FlowR.Library.Client.Tags;
 using Microsoft.AspNetCore.SignalR;
 
@@ -17,10 +19,20 @@ namespace FlowR.Sample
                 .Add(new Div())
                 .SetAttribute("class", "card");
 
+            var cardHeaderTime = container
+                .Add(new Div())
+                .SetAttribute("class", "card-header")
+                .SetText("Server Time");
+            
+            AddTimer(1, (sender, args) =>
+            {
+                cardHeaderTime.SetText($"Server Time :{DateTime.Now.ToString("O")}");
+            });
+            
             var cardHeader = container
                 .Add(new Div())
                 .SetAttribute("class", "card-header")
-                .SetText("Test Events"); // @todo align fluid methods
+                .SetText("Right");
 
             var cardBody = container
                 .Add(new Div())
@@ -84,7 +96,7 @@ namespace FlowR.Sample
             buttonTestResponse.On("click", async delegate
             {
                 var label = await buttonTestResponse.GetProperty("innerHTML");
-                buttonTestResponse.SetProperty("innerHTML", $"{label}."); // add a point for every call
+                buttonTestResponse.SetProperty("innerHTML", $"{label}."); // add a point as an example of the workflow on every call
             });
         }
     }

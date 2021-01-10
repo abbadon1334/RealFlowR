@@ -32,8 +32,12 @@ class FlowR {
 
         this.connection.on("SetProperty", this.SetProperty.bind(this));
         this.connection.on("GetProperty", this.GetProperty.bind(this));
-        
-        this.connection.on("CallElementMethod", this.CallElementMethod.bind(this));
+
+        this.connection.on("CallElementMethod", this.CallMethod.bind(this));
+        this.connection.on("CallElementMethodGetResponse", this.CallMethodGetResponse.bind(this));
+
+        this.connection.on("CallGlobalMethod", this.CallGlobalMethod.bind(this));
+        this.connection.on("CallGlobalMethodGetResponse", this.CallGlobalMethodGetResponse.bind(this));
     }
 
     TryConnect() {
@@ -131,7 +135,43 @@ class FlowR {
         }
     }
     
-    CallElementMethod(uuid:string, method : string, ...args) {
+    CallMethod(uuid:string, method : string, ...args) {
         return document.getElementById(uuid)[method](...args);
+    }
+
+    CallMethodGetResponse(message_uuid: string, uuid:string, method : string, ...args) {
+        try {
+            var response = this.CallMethod(uuid, method, ...args);
+
+            /** @ts-ignore */
+            this.connection.invoke(
+                "ClientMessageResponse",
+                JSON.stringify({Uuid: message_uuid,Response: response})
+            ).catch(err => {
+                return console.error(err.toString());
+            });
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    CallGlobalMethod(method : string, ...args) {
+        return eval("window."+method)(...args);
+    }
+
+    CallGlobalMethodGetResponse(message_uuid: string, method : string, ...args) {
+        try {
+            var response = this.CallGlobalMethod(method, ...args);
+
+            /** @ts-ignore */
+            this.connection.invoke(
+                "ClientMessageResponse",
+                JSON.stringify({Uuid: message_uuid,Response: response})
+            ).catch(err => {
+                return console.error(err.toString());
+            });
+        } catch (e) {
+            console.log(e);
+        }
     }
 }

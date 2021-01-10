@@ -2,7 +2,7 @@ using System;
 
 namespace FlowR.Library.Node
 {
-    public class DomNodeInitialize
+    public class DomNodeInitialize : DomNodeUuid
     {
         private bool _initialized;
 
