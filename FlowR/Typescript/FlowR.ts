@@ -111,12 +111,24 @@ class FlowR {
 
     SetProperty(uuid: string, property_path: string, value : string) {
         // @todo change no eval
-        eval('document.getElementById(uuid).'+property_path+'='+value);
+        eval('document.getElementById("'+uuid+'").'+property_path+'="'+value+'"');
     }
     
-    GetProperty(uuid: string, property_path: string) : any {
-        // @todo change no eval
-        return eval('document.getElementById(uuid).'+property_path);
+    GetProperty(message_uuid: string, uuid: string, property_path: string) : any {
+        try {
+            // @todo change no eval
+            var response = eval('document.getElementById("'+uuid+'").'+property_path+'');
+    
+            /** @ts-ignore */
+            this.connection.invoke(
+                "ClientMessageResponse",
+                JSON.stringify({Uuid: message_uuid,Response: response})
+            ).catch(err => {
+                return console.error(err.toString());
+            });
+        } catch (e) {
+            console.log(e);
+        }
     }
     
     CallElementMethod(uuid:string, method : string, ...args) {

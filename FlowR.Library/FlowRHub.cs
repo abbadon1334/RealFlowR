@@ -5,12 +5,14 @@ using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Threading.Tasks;
 
-namespace FlowR.Hubs
+namespace FlowR
 {
     // ReSharper disable once ClassNeverInstantiated.Global
     public class FlowRHub<T> : Hub where T : Application
     {
         private readonly FlowRService<T> _applicationFlowRService;
+        
+        public string ConnectionId() => Context.ConnectionId;
 
         public FlowRHub(FlowRService<T> applicationFlowRService)
         {
@@ -19,21 +21,28 @@ namespace FlowR.Hubs
 
         public void ClientEventTriggered(string message)
         {
-            _applicationFlowRService.Get(Context.ConnectionId).OnClientEventTriggered(
+            _applicationFlowRService.Get(ConnectionId()).OnClientEventTriggered(
                 MessageEvent.FromJson(message)
+            );
+        }
+
+        public void ClientMessageResponse(string message)
+        {
+            _applicationFlowRService.Get(ConnectionId()).OnWaitingMessageResponse(
+                MessageWithResponse.FromJson(message)
             );
         }
 
         public override async Task OnConnectedAsync()
         {
             await base.OnConnectedAsync();
-            _applicationFlowRService.Add(Context.ConnectionId, Clients.Caller);
+            _applicationFlowRService.Add(ConnectionId(), Clients.Caller);
         }
 
         public override async Task OnDisconnectedAsync(Exception e)
         {
             await base.OnDisconnectedAsync(e);
-            _applicationFlowRService.Remove(Context.ConnectionId);
+            _applicationFlowRService.Remove(ConnectionId());
         }
     }
 }

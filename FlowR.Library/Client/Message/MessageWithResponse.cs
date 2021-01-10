@@ -1,24 +1,41 @@
 using System;
 using System.Diagnostics;
 using Microsoft.AspNetCore.SignalR;
+using Newtonsoft.Json;
 
 namespace FlowR.Library.Client.Message
 {
     public class MessageWithResponse : MessageElement
     {
         private MessageWithResponseCallback _callback;
-        private string _uuid;
+        
+        public string Response;
 
-        public MessageWithResponse(MessageWithResponseCallback callback)
+        private bool _complete = false;
+        
+        public void SetCallback(MessageWithResponseCallback callback) => _callback = callback;
+        
+        public void SetResponse(string response)
         {
-            this._uuid = Guid.NewGuid().ToString();
-            this.Method = MessageElementAction.MessageWithResponse.ToString();
-            this._callback = callback;
+            Response = response;
+            _complete = true;
+            _callback?.Invoke(response);
         }
 
-        public void processResponse()
+        public string GetResponse()
         {
-            
+            return Response;
+        }
+        
+        public static MessageWithResponse FromJson(string json)
+        {
+            MessageWithResponse msg = JsonConvert.DeserializeObject<MessageWithResponse>(json);
+            return msg;
+        }
+
+        public bool IsComplete()
+        {
+            return _complete;
         }
     }
 

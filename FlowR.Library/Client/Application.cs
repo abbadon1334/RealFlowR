@@ -1,8 +1,11 @@
-using FlowR.Library.Client.Message;
 using FlowR.Library.Client.Tags;
 using FlowR.Library.Node;
 using Microsoft.AspNetCore.SignalR;
 using System;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using FlowR.Library.Client.Message;
 
 namespace FlowR.Library.Client
 {
@@ -10,6 +13,7 @@ namespace FlowR.Library.Client
     {
         private readonly ApplicationRegistry _registry = new();
         private readonly ApplicationTimers _timers = new();
+        private readonly ApplicationResponses _responses = new();
 
         protected readonly Root RootElement;
 
@@ -84,6 +88,46 @@ namespace FlowR.Library.Client
         public void Remove(ApplicationTimer timer)
         {
             _timers.Remove(timer);
+        }
+        
+        public Task SendMessage(Message.Message message)
+        {
+            var args = message.GetArgumentValues();
+
+            switch (args.Length)
+            {
+                case 0:
+                    return Client.SendAsync(message.Method);
+                case 1:
+                    return Client.SendAsync(message.Method, args[0]);
+                case 2:
+                    return Client.SendAsync(message.Method, args[0], args[1]);
+                    
+                case 3:
+                    return Client.SendAsync(message.Method, args[0], args[1], args[2]);
+                    
+                case 4:
+                    return Client.SendAsync(message.Method, args[0], args[1], args[2], args[3]);
+                    
+                case 5:
+                    return Client.SendAsync(message.Method, args[0], args[1], args[2], args[3], args[4]);
+                    
+                case 6:
+                    return Client.SendAsync(message.Method, args[0], args[1], args[2], args[3], args[4], args[5]);
+                    
+            }
+
+            throw new Exception("Message Arguments Array to long");
+        }
+        
+        public async Task<string> SendMessageWaitResponse(Message.MessageWithResponse message)
+        {
+            return await _responses.WaitResponse(this, message);
+        }
+
+        public void OnWaitingMessageResponse(MessageWithResponse message)
+        {
+            _responses.SetResponse(message);
         }
     }
 }

@@ -2,6 +2,7 @@
 using FlowR.Library.Client.Tags;
 using Microsoft.AspNetCore.SignalR;
 using System;
+using System.Xml.Xsl;
 
 namespace FlowR.Sample
 {
@@ -15,7 +16,6 @@ namespace FlowR.Sample
 
         protected override void OnStart(Root rootElement)
         {
-
             var container = RootElement
                 .Add(new Div())
                 .SetAttribute("class", "card");
@@ -43,6 +43,12 @@ namespace FlowR.Sample
                 .Add(new Button())
                 .SetAttribute("class", "btn btn-danger")
                 .SetText("Button Remove All");
+            
+            var buttonTestResponse = cardBody
+                .Add(new Button())
+                .SetAttribute("class", "btn btn-success")
+                .SetText("SET-GET Label From server");
+                
 
             var testContainer = RootElement
                 .Add(new Div())
@@ -50,6 +56,7 @@ namespace FlowR.Sample
 
             buttonAdd1000.On("click", delegate (object sender, EventArgs args)
             {
+                buttonAdd1000.SetProperty("value", "test");
                 for(int x = 0; x < 1000; x++)
                 {
                     int count = testContainer.GetChildrenCount();
@@ -64,8 +71,10 @@ namespace FlowR.Sample
                 */
             });
 
-            buttonRemove.On("click", delegate (object sender, EventArgs args)
+            buttonRemove.On("click", async delegate (object sender, EventArgs args)
             {
+                var value = await buttonAdd1000.GetProperty("value");
+                    /*
                 while (testContainer.GetChildrenCount() != 0) {
 
                     testContainer.Remove(testContainer.GetLastChild());
@@ -73,6 +82,13 @@ namespace FlowR.Sample
                     int count = testContainer.GetChildrenCount();
                     cardHeader.SetText($"Children {count}");
                 }
+                */
+            });
+            
+            buttonTestResponse.On("click", async delegate (object sender, EventArgs args)
+            {
+                var label = await buttonTestResponse.GetProperty("innerHTML");
+                buttonTestResponse.SetProperty("innerHTML", $"{label}."); // add a point for every call
             });
 
         }

@@ -98,13 +98,19 @@ namespace FlowR.Library.Client.Message
             return message;
         }
 
-        public static Message MessageGetProperty(DomNode node, string name)
+        public static MessageWithResponse MessageGetProperty(DomNode node, string name, MessageWithResponseCallback callback = null)
         {
             
-            var message = new MessageElement();
+            var message = new MessageWithResponse();
             message.Method = MessageElementAction.GetProperty.ToString();
+            message.AddArgument("MessageUuid", message.GetUuid());
             message.AddArgument("Uuid", node.GetUuid());
             message.AddArgument("Name", name);
+            
+            if (null != callback)
+            {
+                message.SetCallback(callback);
+            }
 
             return message;
         }

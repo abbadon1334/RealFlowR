@@ -39,10 +39,10 @@ namespace FlowR.Library.Node
             this._properties.SetProperty(name, value);
         }
 
-        public async Task GetProperty(string name)
+        public async Task<string> GetProperty(string path)
         {
-            Message msg = Factory.MessageGetProperty(this, name);
-            return await GetApplication().Client.SendAsync(Factory.MessageGetProperty(this, name));
+            MessageWithResponse message = Factory.MessageGetProperty(this, path);
+            return await GetApplication().SendMessageWaitResponse(message);
         }
 
         protected abstract string TagName { get; }
@@ -129,34 +129,7 @@ namespace FlowR.Library.Node
         {
             if (IsInitialized() && null != GetApplication())
             {
-                var args = message.Arguments.Values.ToArray();
-
-                switch (args.Length)
-                {
-                    case 0:
-                        GetApplication().Client.SendAsync(message.Method);
-                        return;
-                    case 1:
-                        GetApplication().Client.SendAsync(message.Method, args[0]);
-                        return;
-                    case 2:
-                        GetApplication().Client.SendAsync(message.Method, args[0], args[1]);
-                        return;
-                    case 3:
-                        GetApplication().Client.SendAsync(message.Method, args[0], args[1], args[2]);
-                        return;
-                    case 4:
-                        GetApplication().Client.SendAsync(message.Method, args[0], args[1], args[2], args[3]);
-                        return;
-                    case 5:
-                        GetApplication().Client.SendAsync(message.Method, args[0], args[1], args[2], args[3], args[4]);
-                        return;
-                    case 6:
-                        GetApplication().Client.SendAsync(message.Method, args[0], args[1], args[2], args[3], args[4], args[5]);
-                        return;
-                }
-
-                throw new Exception("Message Arguments Array to long");
+                GetApplication().SendMessage(message);
             }
         }
 

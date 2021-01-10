@@ -9,7 +9,11 @@ namespace FlowR.Library.Client
 
         public void Add(ApplicationTimer timer)
         {
-            timer.OnStop += (sender, args) => _timers.Remove(sender as ApplicationTimer);
+            timer.OnStop += (sender, args) =>
+            {
+                _timers.Remove(sender as ApplicationTimer);
+            };
+            
             _timers.Add(timer);
             timer.Start();
         }
