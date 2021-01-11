@@ -27,9 +27,9 @@ namespace FlowR.Library.Client
             RootElement = new Root(RootElementId);
             RootElement.SetApplication(this);
             RootElement.Init();
+            
             _registry.RegisterComponent(RootElement);
 
-            //NotifyClient(new ApplicationEvent(OnInit))
             client.SendAsync("OnInit", RootElementId);
 
             OnStart(RootElement);
