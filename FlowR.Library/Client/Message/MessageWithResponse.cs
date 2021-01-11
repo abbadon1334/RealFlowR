@@ -6,9 +6,7 @@ namespace FlowR.Library.Client.Message
     {
         private MessageWithResponseCallback _callback;
 
-        private bool _complete;
-
-        public string Response;
+        private string _response;
 
         public void SetCallback(MessageWithResponseCallback callback)
         {
@@ -17,25 +15,19 @@ namespace FlowR.Library.Client.Message
 
         public void SetResponse(string response)
         {
-            Response = response;
-            _complete = true;
+            _response = response;
             _callback?.Invoke(response);
         }
 
         public string GetResponse()
         {
-            return Response;
+            return _response;
         }
 
         public static MessageWithResponse FromJson(string json)
         {
             var msg = JsonConvert.DeserializeObject<MessageWithResponse>(json);
             return msg;
-        }
-
-        public bool IsComplete()
-        {
-            return _complete;
         }
     }
 

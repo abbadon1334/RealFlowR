@@ -14,13 +14,11 @@ namespace FlowR.Library
             return _applications[uid];
         }
 
-        public T Add(string uid, IClientProxy client)
+        public void Add(string uid, IClientProxy client)
         {
             var application = (T) Activator.CreateInstance(typeof(T), uid, client);
 
             _applications.Add(uid, application);
-
-            return application;
         }
 
         public bool Remove(string uid)

@@ -6,10 +6,10 @@ namespace FlowR.Library.Client.Message
 {
     public abstract class Message
     {
-        public Dictionary<string, object> Arguments = new();
+        private readonly Dictionary<string, object> Arguments = new();
         public string Uuid;
 
-        public Message()
+        protected Message()
         {
             Uuid = Guid.NewGuid().ToString();
         }

@@ -6,7 +6,7 @@ namespace FlowR.Library.Node.Collections
 {
     public abstract class DomNodeCollection<T> : DomNodeOwner
     {
-        protected readonly Dictionary<string, T> Collection = new();
+        private readonly Dictionary<string, T> _collection = new();
 
         public EventHandler AfterAdded;
         public EventHandler AfterChanged;
@@ -41,7 +41,7 @@ namespace FlowR.Library.Node.Collections
                     OldValue = oldValue
                 });
 
-            Collection[name] = value;
+            _collection[name] = value;
 
             if (!exists)
                 AfterAdded?.Invoke(GetOwner(), new CollectionAddedEventArgs<T>
@@ -68,7 +68,7 @@ namespace FlowR.Library.Node.Collections
                 Value = el
             });
 
-            Collection.Remove(name);
+            _collection.Remove(name);
 
             AfterRemoved?.Invoke(GetOwner(), new CollectionRemovedEventArgs<T>
             {
@@ -79,37 +79,32 @@ namespace FlowR.Library.Node.Collections
 
         protected bool Exists(string name)
         {
-            return Collection.ContainsKey(name);
+            return _collection.ContainsKey(name);
         }
 
         protected T Get(string name)
         {
-            return Collection[name];
+            return _collection[name];
         }
 
         public int Count()
         {
-            return Collection.Count();
+            return _collection.Count();
         }
 
         public T GetFirst()
         {
-            return Collection.First().Value;
+            return _collection.First().Value;
         }
 
         public T GetLast()
         {
-            return Collection.Last().Value;
-        }
-
-        protected KeyValuePair<string, T>[] ToArray()
-        {
-            return Collection.ToArray();
+            return _collection.Last().Value;
         }
 
         public Dictionary<string, T> ToDictionary()
         {
-            return Collection;
+            return _collection;
         }
     }
 
