@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.SignalR;
 
 namespace FlowR.Library.Client
 {
-    public class Application
+    public abstract class Application
     {
         private readonly ApplicationRegistry _registry = new();
         private readonly ApplicationResponses _responses = new();
@@ -20,7 +20,7 @@ namespace FlowR.Library.Client
         /// </summary>
         protected readonly string RootElementId = "flow-root";
 
-        public Application(string connectionId, IClientProxy client)
+        protected Application(string connectionId, IClientProxy client)
         {
             ConnectionId = connectionId;
             Client = client;
@@ -38,12 +38,12 @@ namespace FlowR.Library.Client
         /// <summary>
         ///     UUID of the Context.ConnectionId.
         /// </summary>
-        public string ConnectionId { get; }
+        private string ConnectionId { get; }
 
         /// <summary>
         ///     SignalR Client reference
         /// </summary>
-        public IClientProxy Client { get; }
+        private IClientProxy Client { get; }
 
         protected virtual void OnStart(Root rootElement)
         {
@@ -55,7 +55,7 @@ namespace FlowR.Library.Client
             _registry.RegisterComponent(node);
         }
 
-        public DomNode GetRegisterComponent(string uuid)
+        private DomNode GetRegisterComponent(string uuid)
         {
             return _registry.Get(uuid);
         }
@@ -73,11 +73,6 @@ namespace FlowR.Library.Client
             );
         }
 
-        public void AddTimer(ApplicationTimer timer)
-        {
-            _timers.Add(timer);
-        }
-
         public void AddTimer(int delay, EventHandler callback, bool infinite = true)
         {
             _timers.AddTimer(delay, callback, infinite);
@@ -92,29 +87,17 @@ namespace FlowR.Library.Client
         {
             var args = message.GetArgumentValues();
 
-            switch (args.Length)
+            return args.Length switch
             {
-                case 0:
-                    return Client.SendAsync(message.Method);
-                case 1:
-                    return Client.SendAsync(message.Method, args[0]);
-                case 2:
-                    return Client.SendAsync(message.Method, args[0], args[1]);
-
-                case 3:
-                    return Client.SendAsync(message.Method, args[0], args[1], args[2]);
-
-                case 4:
-                    return Client.SendAsync(message.Method, args[0], args[1], args[2], args[3]);
-
-                case 5:
-                    return Client.SendAsync(message.Method, args[0], args[1], args[2], args[3], args[4]);
-
-                case 6:
-                    return Client.SendAsync(message.Method, args[0], args[1], args[2], args[3], args[4], args[5]);
-            }
-
-            throw new Exception("Message Arguments Array to long");
+                0 => Client.SendAsync(message.Method),
+                1 => Client.SendAsync(message.Method, args[0]),
+                2 => Client.SendAsync(message.Method, args[0], args[1]),
+                3 => Client.SendAsync(message.Method, args[0], args[1], args[2]),
+                4 => Client.SendAsync(message.Method, args[0], args[1], args[2], args[3]),
+                5 => Client.SendAsync(message.Method, args[0], args[1], args[2], args[3], args[4]),
+                6 => Client.SendAsync(message.Method, args[0], args[1], args[2], args[3], args[4], args[5]),
+                _ => throw new Exception("Message Arguments Array to long")
+            };
         }
 
         public async Task<string> SendMessageWaitResponse(MessageWithResponse message)
@@ -131,7 +114,7 @@ namespace FlowR.Library.Client
         {
             SendMessage(Factory.MessageGlobalMethodCall(methodName, arguments));
         }
-        
+
         public async Task<string> CallGlobalMethodWaitResponse(string methodName, params string[] arguments)
         {
             var message = Factory.MessageGlobalMethodCallWaitResponse(methodName, arguments);

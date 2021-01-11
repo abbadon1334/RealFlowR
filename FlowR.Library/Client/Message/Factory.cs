@@ -123,7 +123,7 @@ namespace FlowR.Library.Client.Message
 
             return message;
         }
-        
+
         public static MessageWithResponse MessageMethodCallWaitResponse(DomNode node, string name, string[] arguments)
         {
             var message = new MessageElementWithResponse();
@@ -135,7 +135,7 @@ namespace FlowR.Library.Client.Message
 
             return message;
         }
-        
+
         public static Message MessageGlobalMethodCall(string name, string[] arguments)
         {
             var message = new MessageGlobal();
@@ -146,7 +146,7 @@ namespace FlowR.Library.Client.Message
 
             return message;
         }
-        
+
         public static MessageWithResponse MessageGlobalMethodCallWaitResponse(string name, string[] arguments)
         {
             var message = new MessageGlobalWithResponse();

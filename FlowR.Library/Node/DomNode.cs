@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using FlowR.Library.Client;
 using FlowR.Library.Client.Message;
 using FlowR.Library.Node.Collections;
 
@@ -38,7 +37,7 @@ namespace FlowR.Library.Node
         {
             _properties.SetProperty(name, value);
         }
-        
+
         public async Task<string> GetProperty(string path)
         {
             var message = Factory.MessageGetProperty(this, path);
@@ -122,7 +121,7 @@ namespace FlowR.Library.Node
             _events.OnClientEventTriggered(eventName, eventArgs);
         }
 
-        protected void SendMessage(Message message)
+        private void SendMessage(Message message)
         {
             if (IsInitialized() && null != GetApplication()) GetApplication().SendMessage(message);
         }
@@ -175,12 +174,12 @@ namespace FlowR.Library.Node
         {
             return _attributes.ToDictionary();
         }
-        
+
         public void CallClientMethod(string methodName, params string[] arguments)
         {
             SendMessage(Factory.MessageGlobalMethodCall(methodName, arguments));
         }
-        
+
         public async Task<string> CallClientMethodWaitResponse(string methodName, params string[] arguments)
         {
             var message = Factory.MessageGlobalMethodCallWaitResponse(methodName, arguments);

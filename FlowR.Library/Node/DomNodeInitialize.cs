@@ -13,7 +13,7 @@ namespace FlowR.Library.Node
             _initialized = true;
         }
 
-        public bool IsInitialized()
+        protected bool IsInitialized()
         {
             return _initialized;
         }

@@ -26,7 +26,7 @@ namespace FlowR.Library.Client
 
                 if (!_infinite) ((Timer) o).Stop();
             };
-            _timer.AutoReset = _infinite ? true : false;
+            _timer.AutoReset = _infinite;
             _timer.Enabled = true;
         }
 

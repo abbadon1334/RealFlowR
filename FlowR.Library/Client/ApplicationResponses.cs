@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,12 +11,12 @@ namespace FlowR.Library.Client
         private readonly ConcurrentDictionary<string, string> _completed = new();
         private readonly ConcurrentDictionary<string, MessageWithResponse> _pending = new();
 
-        public async Task<string> WaitResponse(Application app, MessageWithResponse message, int timeoutSeconds = 10)
+        public async Task<string> WaitResponse(Application app, MessageWithResponse message, int timeoutSeconds = 2)
         {
             _pending.TryAdd(message.GetUuid(), message);
             await app.SendMessage(message);
             var answerCancel = new CancellationTokenSource();
-            answerCancel.CancelAfter(2 * 1000);
+            answerCancel.CancelAfter(TimeSpan.FromSeconds(timeoutSeconds));
 
             return await Task.Run(() =>
             {
@@ -29,13 +30,12 @@ namespace FlowR.Library.Client
 
         public void SetResponse(MessageWithResponse message)
         {
-            if (_pending.TryGetValue(message.GetUuid(), out var storedMessage))
-            {
-                storedMessage.SetResponse(message.GetResponse());
-                _pending.TryRemove(message.GetUuid(), out _);
+            if (!_pending.TryGetValue(message.GetUuid(), out var storedMessage)) return;
 
-                _completed.TryAdd(message.GetUuid(), storedMessage.GetResponse());
-            }
+            storedMessage.SetResponse(message.GetResponse());
+            _pending.TryRemove(message.GetUuid(), out _);
+
+            _completed.TryAdd(message.GetUuid(), storedMessage.GetResponse());
         }
     }
 }
