@@ -30,12 +30,9 @@ namespace FlowR.Sample
                 .SetAttribute("class", "card-header")
                 .SetText("Server Time");
 
-            AddTimer(1,
-                (sender, args) =>
-                {
-                    cardHeaderTime.SetText(
-                        $"ApplicationTimer which update Text every (1ms) with server Time : {DateTime.Now:O}");
-                });
+            AddTimer(1 /* 1 millisec to see maximum speed */,(sender, args) =>{
+                cardHeaderTime.SetText($"ApplicationTimer which update Text every (1ms) with server Time : {DateTime.Now:O}");
+            });
 
             var cardHeader = container
                 .Add(new Div())
@@ -64,7 +61,6 @@ namespace FlowR.Sample
                 .SetAttribute("class", "btn btn-success")
                 .SetText(
                     "2 way communication Test");
-
 
             var testContainer = RootElement
                 .Add(new Div())
