@@ -22,7 +22,10 @@ namespace FlowR.Library.Client
             {
                 var response = "";
 
-                while (!_completed.TryGetValue(message.GetUuid(), out response)) Task.Delay(150, answerCancel.Token);
+                while (!_completed.TryGetValue(message.GetUuid(), out response))
+                {
+                    Task.Delay(10, answerCancel.Token);
+                }
 
                 return response;
             }, answerCancel.Token);

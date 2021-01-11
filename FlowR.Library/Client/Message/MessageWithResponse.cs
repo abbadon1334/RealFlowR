@@ -6,7 +6,7 @@ namespace FlowR.Library.Client.Message
     {
         private MessageWithResponseCallback _callback;
 
-        private string _response;
+        public string Response;
 
         public void SetCallback(MessageWithResponseCallback callback)
         {
@@ -15,13 +15,13 @@ namespace FlowR.Library.Client.Message
 
         public void SetResponse(string response)
         {
-            _response = response;
+            Response = response;
             _callback?.Invoke(response);
         }
 
         public string GetResponse()
         {
-            return _response;
+            return Response;
         }
 
         public static MessageWithResponse FromJson(string json)
