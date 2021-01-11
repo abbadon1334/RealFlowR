@@ -6,6 +6,10 @@ namespace FlowR.Library.Node
     {
         private string _uuid = string.Empty;
 
+        /// <summary>
+        /// Get the UUID Of the Node.
+        /// </summary>
+        /// <returns></returns>
         public string GetUuid()
         {
             if (_uuid != string.Empty) return _uuid;
@@ -14,10 +18,20 @@ namespace FlowR.Library.Node
 
             return GetUuid();
         }
-
+        /// <summary>
+        /// Set UUID for the Node.
+        /// </summary>
+        /// <param name="uuid"></param>
+        /// <exception cref="Exception"></exception>
         public virtual void SetUuid(string uuid)
         {
-            _uuid = uuid;
+            if (_uuid == string.Empty)
+            {
+                _uuid = uuid;
+                return;
+            }
+            
+            throw new Exception($"Element Uuid is not empty (actual : '{_uuid}'))");
         }
     }
 }

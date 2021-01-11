@@ -21,6 +21,9 @@ namespace FlowR.Library.Node
             SetupProperties();
         }
 
+        /// <summary>
+        /// TagName of the Node : any HTML valid tag name is permitted.
+        /// </summary>
         protected abstract string TagName { get; }
 
         private void SetupProperties()
@@ -33,16 +36,6 @@ namespace FlowR.Library.Node
             };
         }
 
-        public void SetProperty(string name, string value)
-        {
-            _properties.SetProperty(name, value);
-        }
-
-        public async Task<string> GetProperty(string path)
-        {
-            var message = Factory.MessageGetProperty(this, path);
-            return await GetApplication().SendMessageWaitResponse(message);
-        }
 
         private void SetupEvents()
         {
@@ -87,11 +80,38 @@ namespace FlowR.Library.Node
             };
         }
 
+        /// <summary>
+        /// Set Node property on client side.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="value"></param>
+        public void SetProperty(string name, string value)
+        {
+            _properties.SetProperty(name, value);
+        }
+
+        /// <summary>
+        /// Get Node property from client.
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public async Task<string> GetProperty(string path)
+        {
+            var message = Factory.MessageGetProperty(this, path);
+            return await GetApplication().SendMessageWaitResponse(message);
+        }
+        
+        /// <summary>
+        /// Get TagName of the Node.
+        /// </summary>
+        /// <returns></returns>
         public string GetTagName()
         {
             return TagName;
         }
 
+        
+        /// <inheritdoc/>
         public override DomNode SetText(string text)
         {
             base.SetText(text);
@@ -100,47 +120,87 @@ namespace FlowR.Library.Node
             return this;
         }
 
+        /// <inheritdoc/>
         public override void SetUuid(string uuid)
         {
             base.SetUuid(uuid);
             if (!HasAttribute("id")) SetAttribute("id", uuid);
         }
 
+        /// <summary>
+        /// Start Listen for specified eventName.
+        /// </summary>
+        /// <param name="eventName"></param>
+        /// <param name="handler"></param>
         public void On(string eventName, EventHandler handler)
         {
             _events.On(eventName, handler);
         }
 
+        /// <summary>
+        /// Stop Listen for specified eventName.
+        /// </summary>
+        /// <param name="eventName"></param>
+        /// <param name="handler"></param>
         public void Off(string eventName, EventHandler handler)
         {
             _events.Off(eventName, handler);
         }
 
+        /// <summary>
+        /// Handle incoming Node Event fired from client.
+        /// </summary>
+        /// <remarks>Never use this. This is called from application on incoming events</remarks>
+        /// <param name="eventName"></param>
+        /// <param name="eventArgs"></param>
         public void OnClientEventTriggered(string eventName, MessageEventArgs eventArgs)
         {
+            // @todo find a way to lower the visibility 
             _events.OnClientEventTriggered(eventName, eventArgs);
         }
 
+        /// <summary>
+        /// Send a message to client side
+        /// </summary>
+        /// <param name="message"></param>
         private void SendMessage(Message message)
         {
             if (IsInitialized() && null != GetApplication()) GetApplication().SendMessage(message);
         }
 
+        /// <summary>
+        /// Return count of children node attached.
+        /// </summary>
+        /// <returns></returns>
         public int GetChildrenCount()
         {
             return _children.Count();
         }
 
+        /// <summary>
+        /// Get first child node from attached children.
+        /// </summary>
+        /// <returns></returns>
         public DomNode GetFirstChild()
         {
             return _children.GetFirst();
         }
 
+        /// <summary>
+        /// Get last child node from attached children.
+        /// </summary>
+        /// <returns></returns>
         public DomNode GetLastChild()
         {
             return _children.GetLast();
         }
 
+        /// <summary>
+        /// Attach a node to children.
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public DomNode Add(DomNode node)
         {
             if (!IsInitialized()) throw new Exception("Cannot add Child, Node must be initialized first");
@@ -148,11 +208,21 @@ namespace FlowR.Library.Node
             return _children.Add(node);
         }
 
+        /// <summary>
+        /// Remove children from node children.
+        /// </summary>
+        /// <param name="node"></param>
         public void Remove(DomNode node)
         {
             _children.Remove(node);
         }
 
+        /// <summary>
+        /// Set Attribute of the node.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public DomNode SetAttribute(string name, string value)
         {
             _attributes.SetAttribute(name, value);
@@ -160,26 +230,50 @@ namespace FlowR.Library.Node
             return this;
         }
 
+        /// <summary>
+        /// Return if Attribute already exists.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public bool HasAttribute(string name)
         {
             return _attributes.HasAttribute(name);
         }
 
+        /// <summary>
+        /// Remove an Attribute.
+        /// </summary>
+        /// <param name="name"></param>
         public void RemoveAttribute(string name)
         {
             _attributes.RemoveAttribute(name);
         }
 
+        /// <summary>
+        /// Return Attributes as Dictionary.
+        /// </summary>
+        /// <returns></returns>
         public Dictionary<string, string> GetAttributeDictionary()
         {
             return _attributes.ToDictionary();
         }
 
+        /// <summary>
+        /// Call a method on client side on this node with arguments, don't wait for response.
+        /// </summary>
+        /// <param name="methodName"></param>
+        /// <param name="arguments"></param>
         public void CallClientMethod(string methodName, params string[] arguments)
         {
             SendMessage(Factory.MessageGlobalMethodCall(methodName, arguments));
         }
 
+        /// <summary>
+        /// Return Response after Call a method on client side on this node with arguments.
+        /// </summary>
+        /// <param name="methodName"></param>
+        /// <param name="arguments"></param>
+        /// <returns></returns>
         public async Task<string> CallClientMethodWaitResponse(string methodName, params string[] arguments)
         {
             var message = Factory.MessageGlobalMethodCallWaitResponse(methodName, arguments);
