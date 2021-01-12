@@ -3,27 +3,34 @@ using System.Timers;
 
 namespace FlowR.Library.Client
 {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationTimer' visibile pubblicamente
+
+    /// <summary>
+    /// Application timer class.
+    /// </summary>
     public class ApplicationTimer
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationTimer' visibile pubblicamente
     {
         private readonly EventHandler _callback;
         private readonly int _delay;
         private readonly bool _infinite;
         private Timer _timer;
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationTimer.ApplicationTimer(int, EventHandler, bool)' visibile pubblicamente
+        /// <summary>
+        /// ApplicationTimer
+        /// </summary>
+        /// <param name="delay">timeout to trigger Callback</param>
+        /// <param name="callback">Callback to be triggered</param>
+        /// <param name="infinite">Timeout = false, Interval = true</param>
         public ApplicationTimer(int delay, EventHandler callback, bool infinite = false)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationTimer.ApplicationTimer(int, EventHandler, bool)' visibile pubblicamente
         {
             _delay = delay;
             _callback = callback;
             _infinite = infinite;
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationTimer.Start()' visibile pubblicamente
+        /// <summary>
+        /// Start the Timer.
+        /// </summary>
         public void Start()
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationTimer.Start()' visibile pubblicamente
         {
             _timer = new Timer(_delay);
             _timer.Elapsed += (o, args) =>
@@ -35,17 +42,19 @@ namespace FlowR.Library.Client
             _timer.AutoReset = _infinite;
             _timer.Enabled = true;
         }
-
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationTimer.Stop()' visibile pubblicamente
+        
+        /// <summary>
+        /// Stop the Timer
+        /// </summary>
         public void Stop()
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationTimer.Stop()' visibile pubblicamente
         {
             _timer.Stop();
             OnStop?.Invoke(this, EventArgs.Empty);
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationTimer.OnStop' visibile pubblicamente
+        /// <summary>
+        /// Event handler for stop event.
+        /// </summary>
         public event EventHandler OnStop;
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationTimer.OnStop' visibile pubblicamente
     }
 }

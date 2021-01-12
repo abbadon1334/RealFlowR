@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace FlowR.Library
 {
-    // ReSharper disable once ClassNeverInstantiated.Global
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'FlowRHub<T>' visibile pubblicamente
+    /// <summary>
+    /// FlowR Hub Service 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class FlowRHub<T> : Hub where T : Application
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'FlowRHub<T>' visibile pubblicamente
     {
         private readonly FlowRService<T> _applicationFlowRService;
+        
         /// <summary>
         /// Constructor.
         /// </summary>

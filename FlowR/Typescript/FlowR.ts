@@ -31,7 +31,10 @@ class FlowR {
         this.connection.on("SetText", this.SetText.bind(this));
 
         this.connection.on("SetProperty", this.SetProperty.bind(this));
+        this.connection.on("SetGlobalProperty", this.SetGlobalProperty.bind(this));
+        
         this.connection.on("GetProperty", this.GetProperty.bind(this));
+        this.connection.on("GetGlobalProperty", this.GetGlobalProperty.bind(this));
 
         this.connection.on("CallElementMethod", this.CallMethod.bind(this));
         this.connection.on("CallElementMethodGetResponse", this.CallMethodGetResponse.bind(this));
@@ -173,5 +176,27 @@ class FlowR {
         } catch (e) {
             console.log(e);
         }
+    }
+
+    GetGlobalProperty(message_uuid: string, property_path: string) : any {
+        try {
+            // @todo change no eval
+            var response = eval(property_path);
+
+            /** @ts-ignore */
+            this.connection.invoke(
+                "ClientMessageResponse",
+                JSON.stringify({Uuid: message_uuid,Response: response})
+            ).catch(err => {
+                return console.error(err.toString());
+            });
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    SetGlobalProperty(uuid: string, property_path: string, value : string) {
+        // @todo change no eval
+        eval(property_path+'="'+value+'"');
     }
 }

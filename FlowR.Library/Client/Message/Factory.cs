@@ -187,5 +187,27 @@ namespace FlowR.Library.Client.Message
 
             return message;
         }
+        
+#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Factory.MessageGlobalMethodCallWaitResponse(string, string[])' visibile pubblicamente
+        public static MessageWithResponse MessageGlobalGetPropertyWaitResponse(string name)
+#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Factory.MessageGlobalMethodCallWaitResponse(string, string[])' visibile pubblicamente
+        {
+                var message = new MessageGlobalWithResponse();
+                message.Method = MessageGlobalWithResponse.MethodName.GetGlobalProperty.ToString();
+                message.AddArgument("MessageUuid", message.GetUuid());
+                message.AddArgument("Name", name);
+
+                return message;
+        }
+
+        public static Message MessageSetGlobalProperty(string path, string value)
+        {
+                var message = new MessageGlobal();
+                message.Method = MessageGlobal.MethodName.SetProperty.ToString();
+                message.AddArgument("Name", path);
+                message.AddArgument("Value", value);
+
+                return message;
+        }
     }
 }

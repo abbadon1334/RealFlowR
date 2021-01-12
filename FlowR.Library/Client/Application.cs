@@ -7,42 +7,50 @@ using System.Threading.Tasks;
 
 namespace FlowR.Library.Client
 {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Application' visibile pubblicamente
+    /// <summary>
+    /// Application container class.
+    /// </summary>
     public abstract class Application
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Application' visibile pubblicamente
     {
         private readonly ApplicationRegistry _registry = new();
         private readonly ApplicationResponses _responses = new();
         private readonly ApplicationTimers _timers = new();
-
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Application.RootElement' visibile pubblicamente
+        
+        /// <summary>
+        /// Root element of the Application.
+        /// The composition tree that draw client UI starts from here.
+        /// </summary>
         protected readonly Root RootElement;
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Application.RootElement' visibile pubblicamente
 
         /// <summary>
-        ///     Element ID of the master container for the application
+        /// Element ID of the master container for the application
         /// </summary>
         protected readonly string RootElementId = "flow-root";
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Application.Application(string, IClientProxy)' visibile pubblicamente
+        /// <summary>
+        /// this will be called from the FlowRHub Service 
+        /// </summary>
+        /// <param name="connectionId">connectionId from Hub</param>
+        /// <param name="client">SignalR client from Hub</param>
         protected Application(string connectionId, IClientProxy client)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Application.Application(string, IClientProxy)' visibile pubblicamente
         {
             ConnectionId = connectionId;
             Client = client;
+            
+            // Prepare the root element 
             RootElement = new Root(RootElementId);
             RootElement.SetApplication(this);
             RootElement.Init();
 
+            // register component
             _registry.RegisterComponent(RootElement);
 
+            // send async message to client, indicating the id of the starting HTMLElement
             client.SendAsync("OnInit", RootElementId);
-
-            OnStart(RootElement);
         }
 
         /// <summary>
-        ///     UUID of the Context.ConnectionId.
+        /// UUID of the Context.ConnectionId.
         /// </summary>
         private string ConnectionId { get; }
 
@@ -50,60 +58,79 @@ namespace FlowR.Library.Client
         ///     SignalR Client reference
         /// </summary>
         private IClientProxy Client { get; }
-
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Application.OnStart(Root)' visibile pubblicamente
-        protected virtual void OnStart(Root rootElement)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Application.OnStart(Root)' visibile pubblicamente
-        {
-            throw new Exception("You need to override Application::OnStart");
-        }
-
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Application.RegisterComponent(DomNode)' visibile pubblicamente
+        
+        /// <summary>
+        /// [internal use] Add Node to registry.
+        /// Internally called after add to parent Node, usually there is no need to be called. 
+        /// </summary>
+        /// <param name="node"></param>
         public void RegisterComponent(DomNode node)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Application.RegisterComponent(DomNode)' visibile pubblicamente
         {
+            // @todo find a way to lower visibility of internal calls 
             _registry.RegisterComponent(node);
         }
 
+        /// <summary>
+        /// Internally called, is private and must remain.
+        /// </summary>
+        /// <param name="uuid"></param>
+        /// <returns></returns>
         private DomNode GetRegisterComponent(string uuid)
         {
+            // @todo find a way to lower visibility of internal calls 
             return _registry.Get(uuid);
         }
-
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Application.UnregisterComponent(DomNode)' visibile pubblicamente
+        
+        /// <summary>
+        /// [internal use] Remove Node from registry.
+        /// Internally called after removed from parent Node, usually there is no need to be called. 
+        /// </summary>
+        /// <param name="node"></param>
         public void UnregisterComponent(DomNode node)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Application.UnregisterComponent(DomNode)' visibile pubblicamente
         {
             _registry.UnregisterComponent(node);
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Application.OnClientEventTriggered(MessageEvent)' visibile pubblicamente
+        /// <summary>
+        /// [internal use] Called from FlowR Hub when a client event is triggered.
+        /// </summary>
+        /// <param name="message"></param>
         public void OnClientEventTriggered(MessageEvent message)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Application.OnClientEventTriggered(MessageEvent)' visibile pubblicamente
         {
+            // @todo find a way to lower visibility of internal calls
+            
             GetRegisterComponent(message.Uuid).OnClientEventTriggered(
                 message.EventName,
                 new MessageEventArgs { Data = message.EventArgs }
             );
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Application.AddTimer(int, EventHandler, bool)' visibile pubblicamente
+        /// <summary>
+        /// Add a Timer with a callback 
+        /// </summary>
+        /// <param name="delay">delay in millisec</param>
+        /// <param name="callback">The Callback</param>
+        /// <param name="infinite">is a timeout or an interval</param>
+        /// <remarks>Timer will be passed as first argument of every callback call, so you can stop it anytime</remarks>
         public void AddTimer(int delay, EventHandler callback, bool infinite = true)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Application.AddTimer(int, EventHandler, bool)' visibile pubblicamente
         {
             _timers.AddTimer(delay, callback, infinite);
         }
-
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Application.Remove(ApplicationTimer)' visibile pubblicamente
-        public void Remove(ApplicationTimer timer)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Application.Remove(ApplicationTimer)' visibile pubblicamente
+        
+        /// <summary>
+        /// Remove a Timer. 
+        /// </summary>
+        /// <param name="timer"></param>
+        public void CancelTimer(ApplicationTimer timer)
         {
             _timers.Remove(timer);
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Application.SendMessage(Message)' visibile pubblicamente
+        /// <summary>
+        /// Send a message to SignalR Client, don't wait for response
+        /// </summary>
+        /// <param name="message"></param>
         public Task SendMessage(Message.Message message)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Application.SendMessage(Message)' visibile pubblicamente
         {
             var args = message.GetArgumentValues();
 
@@ -120,33 +147,66 @@ namespace FlowR.Library.Client
             };
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Application.SendMessageWaitResponse(MessageWithResponse)' visibile pubblicamente
+        /// <summary>
+        /// Send a message to SignalR Client and wait for response
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
         public async Task<string> SendMessageWaitResponse(MessageWithResponse message)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Application.SendMessageWaitResponse(MessageWithResponse)' visibile pubblicamente
         {
+            // @todo add parameter here to define timeout of waiting for response, in place of MessageResponse
             return await _responses.WaitResponse(this, message);
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Application.OnWaitingMessageResponse(MessageWithResponse)' visibile pubblicamente
+        /// <summary>
+        /// [internal use] Called from SignalR Client when a new response arrive.
+        /// </summary>
+        /// <param name="message"></param>
         public void OnWaitingMessageResponse(MessageWithResponse message)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Application.OnWaitingMessageResponse(MessageWithResponse)' visibile pubblicamente
         {
             _responses.SetResponse(message);
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Application.CallGlobalMethod(string, params string[])' visibile pubblicamente
+        /// <summary>
+        /// Call a global JS method, don't wait for response.
+        /// </summary>
+        /// <example>from a DomNode : GetApplication().CallGlobalMethod('alert',['this is an alert']);</example>
+        /// <param name="methodName"></param>
+        /// <param name="arguments"></param>
         public void CallGlobalMethod(string methodName, params string[] arguments)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Application.CallGlobalMethod(string, params string[])' visibile pubblicamente
         {
             SendMessage(Factory.MessageGlobalMethodCall(methodName, arguments));
         }
-
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Application.CallGlobalMethodWaitResponse(string, params string[])' visibile pubblicamente
+        
+        /// <summary>
+        /// Call a global JS method and wait for response
+        /// </summary>
+        /// <param name="methodName">window method or complete traversed path like document.location.reload </param>
+        /// <param name="arguments"></param>
         public async Task<string> CallGlobalMethodWaitResponse(string methodName, params string[] arguments)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Application.CallGlobalMethodWaitResponse(string, params string[])' visibile pubblicamente
         {
             var message = Factory.MessageGlobalMethodCallWaitResponse(methodName, arguments);
             return await _responses.WaitResponse(this, message);
+        }
+        
+        /// <summary>
+        /// Get a global JS property and wait for response
+        /// </summary>
+        /// <param name="path">window method or complete traversed path like document.location.reload </param>
+        public async Task<string> GetGlobalProperty(string path)
+        {
+            var message = Factory.MessageGlobalGetPropertyWaitResponse(path);
+            return await _responses.WaitResponse(this, message);
+        }
+        
+        /// <summary>
+        /// Set a global JS property and wait for response
+        /// </summary>
+        /// <param name="path">window property or complete traversed path like document.body.scrollHeight </param>
+        /// <param name="value"></param>
+        public void SetGlobalProperty(string path, string value)
+        {
+            SendMessage(Factory.MessageSetGlobalProperty(path, value));
         }
     }
 }

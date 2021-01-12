@@ -11,6 +11,8 @@ namespace FlowR.Library.Client.Message
 #pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobal.MethodName.CallGlobalMethod' visibile pubblicamente
             CallGlobalMethod
 #pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobal.MethodName.CallGlobalMethod' visibile pubblicamente
+            ,
+            SetProperty
         }
     }
 
@@ -23,7 +25,8 @@ namespace FlowR.Library.Client.Message
 #pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobalWithResponse.MethodName' visibile pubblicamente
         {
 #pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobalWithResponse.MethodName.CallGlobalMethodGetResponse' visibile pubblicamente
-            CallGlobalMethodGetResponse
+            CallGlobalMethodGetResponse,
+            GetGlobalProperty
 #pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobalWithResponse.MethodName.CallGlobalMethodGetResponse' visibile pubblicamente
         }
     }

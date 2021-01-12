@@ -6,16 +6,22 @@ using System.Threading.Tasks;
 
 namespace FlowR.Library.Client
 {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationResponses' visibile pubblicamente
+    /// <summary>
+    /// Logicv class for Message Responses
+    /// </summary>
     public class ApplicationResponses
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationResponses' visibile pubblicamente
     {
         private readonly ConcurrentDictionary<string, string> _completed = new();
         private readonly ConcurrentDictionary<string, MessageWithResponse> _pending = new();
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationResponses.WaitResponse(Application, MessageWithResponse, int)' visibile pubblicamente
+        /// <summary>
+        /// [internal use] Send and wait for a response
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="message"></param>
+        /// <param name="timeoutSeconds"></param>
+        /// <returns></returns>
         public async Task<string> WaitResponse(Application app, MessageWithResponse message, int timeoutSeconds = 2)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationResponses.WaitResponse(Application, MessageWithResponse, int)' visibile pubblicamente
         {
             _pending.TryAdd(message.GetUuid(), message);
             await app.SendMessage(message);
@@ -28,16 +34,22 @@ namespace FlowR.Library.Client
 
                 while (!_completed.TryGetValue(message.GetUuid(), out response))
                 {
-                    Task.Delay(10, answerCancel.Token);
+                    // remove completed
+                    _completed.TryRemove(message.GetUuid(), out _);
+                    // @todo if hit the timeout _completed remain an extra item, can be moved after the while or... ?
+                    
+                    Task.Delay(2, answerCancel.Token);
                 }
 
                 return response;
             }, answerCancel.Token);
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationResponses.SetResponse(MessageWithResponse)' visibile pubblicamente
+        /// <summary>
+        /// [internal use] Process response from client
+        /// </summary>
+        /// <param name="message"></param>
         public void SetResponse(MessageWithResponse message)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationResponses.SetResponse(MessageWithResponse)' visibile pubblicamente
         {
             if (!_pending.TryGetValue(message.GetUuid(), out var storedMessage)) return;
 

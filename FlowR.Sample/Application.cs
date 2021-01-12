@@ -6,15 +6,11 @@ namespace FlowR.Sample
     public class Application : Library.Client.Application
     {
         protected int Counter = 0;
-        protected Div RightColumn;
+        protected readonly Div RightColumn;
 
         public Application(string connectionId, IClientProxy client) : base(connectionId, client)
         {
-        }
-
-        protected override void OnStart(Root rootElement)
-        {
-            var masterContainer = rootElement.Add(new Div()).SetAttribute("class", "container-fluid");
+            var masterContainer = RootElement.Add(new Div()).SetAttribute("class", "container-fluid");
             var containerRow = masterContainer.Add(new Div()).SetAttribute("class", "row");
 
             var leftColumn = containerRow.Add(new Div()).SetAttribute("class", "col");
