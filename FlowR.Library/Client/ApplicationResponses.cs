@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace FlowR.Library.Client
 {
+#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationResponses' visibile pubblicamente
     public class ApplicationResponses
+#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationResponses' visibile pubblicamente
     {
         private readonly ConcurrentDictionary<string, string> _completed = new();
         private readonly ConcurrentDictionary<string, MessageWithResponse> _pending = new();
 
+#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationResponses.WaitResponse(Application, MessageWithResponse, int)' visibile pubblicamente
         public async Task<string> WaitResponse(Application app, MessageWithResponse message, int timeoutSeconds = 2)
+#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationResponses.WaitResponse(Application, MessageWithResponse, int)' visibile pubblicamente
         {
             _pending.TryAdd(message.GetUuid(), message);
             await app.SendMessage(message);
@@ -31,7 +35,9 @@ namespace FlowR.Library.Client
             }, answerCancel.Token);
         }
 
+#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationResponses.SetResponse(MessageWithResponse)' visibile pubblicamente
         public void SetResponse(MessageWithResponse message)
+#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'ApplicationResponses.SetResponse(MessageWithResponse)' visibile pubblicamente
         {
             if (!_pending.TryGetValue(message.GetUuid(), out var storedMessage)) return;
 

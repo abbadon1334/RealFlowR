@@ -2,7 +2,9 @@ using System;
 
 namespace FlowR.Library.Node
 {
+#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeUuid' visibile pubblicamente
     public class DomNodeUuid
+#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeUuid' visibile pubblicamente
     {
         private string _uuid = string.Empty;
 

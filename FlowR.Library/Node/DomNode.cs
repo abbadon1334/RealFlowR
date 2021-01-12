@@ -6,14 +6,18 @@ using System.Threading.Tasks;
 
 namespace FlowR.Library.Node
 {
+#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNode' visibile pubblicamente
     public abstract class DomNode : DomNodeApplication
+#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNode' visibile pubblicamente
     {
         private DomNodeCollectionAttribute _attributes;
         private DomNodeCollectionDomNode _children;
         private DomNodeCollectionEvent _events;
         private DomNodeCollectionProperty _properties;
 
+#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNode.DomNode()' visibile pubblicamente
         protected DomNode()
+#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNode.DomNode()' visibile pubblicamente
         {
             SetupAttributes();
             SetupChildren();

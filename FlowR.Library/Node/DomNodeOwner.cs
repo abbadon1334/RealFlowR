@@ -1,6 +1,8 @@
 namespace FlowR.Library.Node
 {
+#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeOwner' visibile pubblicamente
     public class DomNodeOwner : DomNodeText
+#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeOwner' visibile pubblicamente
     {
         private DomNode _owner;
 
