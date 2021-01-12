@@ -1,10 +1,12 @@
 namespace FlowR.Library.Client.Message
 {
 #pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobal' visibile pubblicamente
+    /// <summary>
+    /// Global message
+    /// </summary>
     public class MessageGlobal : Message
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobal' visibile pubblicamente
     {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobal.MethodName' visibile pubblicamente
+        /// <inheritdoc cref="Message.Method"/>>
         public enum MethodName
 #pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobal.MethodName' visibile pubblicamente
         {

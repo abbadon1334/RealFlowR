@@ -1,57 +1,71 @@
 namespace FlowR.Library.Client.Message
 {
 #pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement' visibile pubblicamente
+    /// <summary>
+    /// Message for Clientside Nodes
+    /// </summary>
     public class MessageElement : Message
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement' visibile pubblicamente
     {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName' visibile pubblicamente
+        /// <summary>
+        /// Name of the method to be called on client side signalr
+        /// </summary>
         public enum MethodName
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName' visibile pubblicamente
         {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.CreateElement' visibile pubblicamente
+            /// <summary>
+            /// Create a new Element
+            /// </summary>
             CreateElement,
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.CreateElement' visibile pubblicamente
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.RemoveElement' visibile pubblicamente
+            /// <summary>
+            /// Remove an Element
+            /// </summary>
             RemoveElement,
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.RemoveElement' visibile pubblicamente
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.SetAttribute' visibile pubblicamente
+            /// <summary>
+            /// Element Set Attribute
+            /// </summary>
             SetAttribute,
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.SetAttribute' visibile pubblicamente
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.RemoveAttribute' visibile pubblicamente
+            /// <summary>
+            /// Element Remover Attribute
+            /// </summary>
             RemoveAttribute,
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.RemoveAttribute' visibile pubblicamente
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.StartListenEvent' visibile pubblicamente
+            /// <summary>
+            /// Start listen for an EventName
+            /// </summary>
             StartListenEvent,
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.StartListenEvent' visibile pubblicamente
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.StopListenEvent' visibile pubblicamente
+            /// <summary>
+            /// Stop listen for an EventName
+            /// </summary>
             StopListenEvent,
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.StopListenEvent' visibile pubblicamente
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.SetText' visibile pubblicamente
+            /// <summary>
+            /// Set Element Text
+            /// </summary>
             SetText,
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.SetText' visibile pubblicamente
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.SetProperty' visibile pubblicamente
+            /// <summary>
+            /// Element Set Property
+            /// </summary>
             SetProperty,
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.SetProperty' visibile pubblicamente
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.CallMethod' visibile pubblicamente
+            /// <summary>
+            /// Element Call Method
+            /// </summary>
             CallMethod
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement.MethodName.CallMethod' visibile pubblicamente
         }
     }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElementWithResponse' visibile pubblicamente
+    /// <summary>
+    /// Message waiting Response for Clientside Nodes
+    /// </summary>
     public class MessageElementWithResponse : MessageWithResponse
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageElementWithResponse' visibile pubblicamente
     {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElementWithResponse.MethodName' visibile pubblicamente
+        /// <inheritdoc cref="Message.Method"/>>
         public enum MethodName
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageElementWithResponse.MethodName' visibile pubblicamente
         {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElementWithResponse.MethodName.GetProperty' visibile pubblicamente
+            /// <summary>
+            /// Get Property from Element
+            /// </summary>
             GetProperty,
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageElementWithResponse.MethodName.GetProperty' visibile pubblicamente
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElementWithResponse.MethodName.CallMethodGetResponse' visibile pubblicamente
+            /// <summary>
+            /// Call method and wait for response 
+            /// </summary>
             CallMethodGetResponse
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageElementWithResponse.MethodName.CallMethodGetResponse' visibile pubblicamente
         }
     }
 }

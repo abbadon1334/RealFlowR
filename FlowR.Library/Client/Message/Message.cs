@@ -4,43 +4,52 @@ using System.Linq;
 
 namespace FlowR.Library.Client.Message
 {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Message' visibile pubblicamente
+    /// <summary>
+    /// Base message Class
+    /// </summary>
     public abstract class Message
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Message' visibile pubblicamente
     {
         private readonly Dictionary<string, object> Arguments = new();
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Message.Uuid' visibile pubblicamente
+        /// <summary>
+        /// Message Uuid
+        /// </summary>
         public string Uuid;
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Message.Uuid' visibile pubblicamente
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Message.Message()' visibile pubblicamente
+        /// <summary>
+        /// Constructor
+        /// </summary>
         protected Message()
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Message.Message()' visibile pubblicamente
         {
+            // Generate Uuid
             Uuid = Guid.NewGuid().ToString();
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Message.Method' visibile pubblicamente
+        /// <summary>
+        /// Message Method name @todo i think is better to be changed in Action
+        /// </summary>
         public string Method { get; set; }
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Message.Method' visibile pubblicamente
+        
+        /// <summary>
+        /// Get the Uuid of the message.
+        /// </summary>
+        /// <returns></returns>
+        public string GetUuid() => Uuid;
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Message.GetUuid()' visibile pubblicamente
-        public string GetUuid()
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Message.GetUuid()' visibile pubblicamente
-        {
-            return Uuid;
-        }
-
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Message.AddArgument(string, object)' visibile pubblicamente
+        /// <summary>
+        /// Add Argument to Argument list for the message.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="value"></param>
         public void AddArgument(string name, object value)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Message.AddArgument(string, object)' visibile pubblicamente
         {
             Arguments[name] = value;
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'Message.GetArgumentValues()' visibile pubblicamente
+        /// <summary>
+        /// Get Arguments as array
+        /// </summary>
+        /// <returns></returns>
         public object[] GetArgumentValues()
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Message.GetArgumentValues()' visibile pubblicamente
         {
             return Arguments.Values.ToArray();
         }
