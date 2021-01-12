@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowR", "FlowR\FlowR.csproj", "{698B3D24-8928-49EC-A5F3-99D8016DF397}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlowR", "FlowR\FlowR.csproj", "{698B3D24-8928-49EC-A5F3-99D8016DF397}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowR.Library", "FlowR.Library\FlowR.Library.csproj", "{8A3AB81B-928E-4BFC-9517-20AD4ED859F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlowR.Library", "FlowR.Library\FlowR.Library.csproj", "{8A3AB81B-928E-4BFC-9517-20AD4ED859F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowR.Sample", "FlowR.Sample\FlowR.Sample.csproj", "{8DB81BF3-1702-486E-AAB7-A39515723BCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlowR.Sample", "FlowR.Sample\FlowR.Sample.csproj", "{8DB81BF3-1702-486E-AAB7-A39515723BCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
