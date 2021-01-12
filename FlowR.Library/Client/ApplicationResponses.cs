@@ -1,8 +1,8 @@
+using FlowR.Library.Client.Message;
 using System;
 using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
-using FlowR.Library.Client.Message;
 
 namespace FlowR.Library.Client
 {

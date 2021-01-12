@@ -13,7 +13,7 @@ namespace FlowR.Library
 
         public FlowRHub(FlowRService<T> applicationFlowRService)
         {
-            _applicationFlowRService = applicationFlowRService;
+                        _applicationFlowRService = applicationFlowRService;
         }
 
         public string ConnectionId()

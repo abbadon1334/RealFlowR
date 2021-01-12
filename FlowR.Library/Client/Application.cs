@@ -1,9 +1,9 @@
-using System;
-using System.Threading.Tasks;
 using FlowR.Library.Client.Message;
 using FlowR.Library.Client.Tags;
 using FlowR.Library.Node;
 using Microsoft.AspNetCore.SignalR;
+using System;
+using System.Threading.Tasks;
 
 namespace FlowR.Library.Client
 {
@@ -27,7 +27,7 @@ namespace FlowR.Library.Client
             RootElement = new Root(RootElementId);
             RootElement.SetApplication(this);
             RootElement.Init();
-            
+
             _registry.RegisterComponent(RootElement);
 
             client.SendAsync("OnInit", RootElementId);
@@ -69,7 +69,7 @@ namespace FlowR.Library.Client
         {
             GetRegisterComponent(message.Uuid).OnClientEventTriggered(
                 message.EventName,
-                new MessageEventArgs {Data = message.EventArgs}
+                new MessageEventArgs { Data = message.EventArgs }
             );
         }
 

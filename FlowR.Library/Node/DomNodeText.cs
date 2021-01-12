@@ -13,11 +13,11 @@ namespace FlowR.Library.Node
 
         public virtual DomNodeText SetText(string text)
         {
-            if (IsInitialized() && ((DomNode) this).GetChildrenCount() > 0)
+            if (IsInitialized() && ((DomNode)this).GetChildrenCount() > 0)
             {
                 throw new Exception("@todo SetText destroy the innerHtml, need to find an alternative way to replace Text in nodes, can be a hidden comment before and after (ex. : <!--TXTStart-->text<!--TXTEnd-->)");
             }
-            
+
             _text = text;
 
             return this;

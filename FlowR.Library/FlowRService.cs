@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using FlowR.Library.Client;
+﻿using FlowR.Library.Client;
 using Microsoft.AspNetCore.SignalR;
+using System;
+using System.Collections.Generic;
 
 namespace FlowR.Library
 {
@@ -16,7 +16,7 @@ namespace FlowR.Library
 
         public void Add(string uid, IClientProxy client)
         {
-            var application = (T) Activator.CreateInstance(typeof(T), uid, client);
+            var application = (T)Activator.CreateInstance(typeof(T), uid, client);
 
             _applications.Add(uid, application);
         }

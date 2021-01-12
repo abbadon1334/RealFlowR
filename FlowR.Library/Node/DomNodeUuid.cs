@@ -30,7 +30,7 @@ namespace FlowR.Library.Node
                 _uuid = uuid;
                 return;
             }
-            
+
             throw new Exception($"Element Uuid is not empty (actual : '{_uuid}'))");
         }
     }
