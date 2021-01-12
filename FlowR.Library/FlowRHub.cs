@@ -10,10 +10,13 @@ namespace FlowR.Library
     public class FlowRHub<T> : Hub where T : Application
     {
         private readonly FlowRService<T> _applicationFlowRService;
-
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="applicationFlowRService"></param>
         public FlowRHub(FlowRService<T> applicationFlowRService)
         {
-                        _applicationFlowRService = applicationFlowRService;
+            _applicationFlowRService = applicationFlowRService;
         }
 
         public string ConnectionId()
