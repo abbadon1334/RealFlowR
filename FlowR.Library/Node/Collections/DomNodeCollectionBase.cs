@@ -98,24 +98,15 @@ namespace FlowR.Library.Node.Collections
         ///     Remove an item in collection
         /// </summary>
         /// <param name="name"></param>
-        /// <param name="value"></param>
         protected void Unset(string name)
         {
-            var el = Get(name);
+            var value = Get(name);
 
-            BeforeRemoved?.Invoke(GetOwner(), new CollectionRemovedEventArgs<T>
-            {
-                Name = name,
-                Value = el
-            });
+            BeforeRemoved?.Invoke(GetOwner(), new CollectionRemovedEventArgs<T> {Name = name, Value = value});
 
             _collection.Remove(name);
 
-            AfterRemoved?.Invoke(GetOwner(), new CollectionRemovedEventArgs<T>
-            {
-                Name = name,
-                Value = el
-            });
+            AfterRemoved?.Invoke(GetOwner(), new CollectionRemovedEventArgs<T> {Name = name, Value = value});
         }
 
         /// <summary>
