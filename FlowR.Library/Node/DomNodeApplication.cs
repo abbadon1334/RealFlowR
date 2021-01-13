@@ -16,7 +16,7 @@ namespace FlowR.Library.Node
         /// <exception cref="Exception">Cannot be set multiple times</exception>
         public void SetApplication(Application application)
         {
-            if (_application != null) throw new Exception("Application already defined");
+            //if (_application != null) throw new Exception("Application already defined");
 
             _application = application;
         }

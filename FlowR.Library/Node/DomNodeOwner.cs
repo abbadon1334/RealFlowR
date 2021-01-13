@@ -26,7 +26,7 @@ namespace FlowR.Library.Node
         public void SetOwner(DomNode owner)
         {
             // @todo find a way to lower visibility
-            AssertOwnerIsNull();
+            //AssertOwnerIsNull();
             _owner = owner;
         }
 

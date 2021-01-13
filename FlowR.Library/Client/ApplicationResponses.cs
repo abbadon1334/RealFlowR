@@ -35,8 +35,9 @@ namespace FlowR.Library.Client
                 while (!_completed.TryGetValue(message.GetUuid(), out response))
                 {
                     // remove completed
-                    _completed.TryRemove(message.GetUuid(), out _);
-                    // @todo if hit the timeout _completed remain an extra item, can be moved after the while or... ?
+                    //_completed.TryRemove(message.GetUuid(), out _);
+                    // @todo if hit the timeout _completed remain an extra item, how to remove it
+                    // bad solution but give the idea, a pruning routine which remove completed, but who knows if they are already used? a flag ?
 
                     Task.Delay(2, answerCancel.Token);
                 }
