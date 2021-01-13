@@ -4,7 +4,7 @@ namespace FlowR.Library.Client.Message
     /// <summary>
     /// Message for Clientside Nodes
     /// </summary>
-    public class MessageElement : Message
+    public  class MessageElement : Message
     {
         /// <summary>
         /// Name of the method to be called on client side signalr
@@ -53,7 +53,7 @@ namespace FlowR.Library.Client.Message
     /// <summary>
     /// Message waiting Response for Clientside Nodes
     /// </summary>
-    public class MessageElementWithResponse : MessageWithResponse
+    public  class MessageElementWithResponse : MessageWithResponse
     {
         /// <inheritdoc cref="Message.Method"/>>
         public enum MethodName

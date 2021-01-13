@@ -1,32 +1,30 @@
 namespace FlowR.Library.Node.Collections
 {
 #pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionAttribute' visibile pubblicamente
+    /// <summary>
+    /// Collection Attribute class that filter to only essential method 
+    /// </summary>
     public class DomNodeCollectionAttribute : DomNodeCollection<string>
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionAttribute' visibile pubblicamente
     {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionAttribute.DomNodeCollectionAttribute(DomNode)' visibile pubblicamente
+        /// <inheritdoc/>
         public DomNodeCollectionAttribute(DomNode owner) : base(owner)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionAttribute.DomNodeCollectionAttribute(DomNode)' visibile pubblicamente
         {
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionAttribute.SetAttribute(string, string)' visibile pubblicamente
+        /// <inheritdoc cref="DomNodeCollection{T}.Set"/>summary>
         public void SetAttribute(string name, string value)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionAttribute.SetAttribute(string, string)' visibile pubblicamente
         {
             Set(name, value);
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionAttribute.HasAttribute(string)' visibile pubblicamente
+        /// <inheritdoc cref="DomNodeCollection{T}.Exists"/>summary>
         public bool HasAttribute(string name)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionAttribute.HasAttribute(string)' visibile pubblicamente
         {
             return Exists(name);
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionAttribute.RemoveAttribute(string)' visibile pubblicamente
+        /// <inheritdoc cref="DomNodeCollection{T}.Unset"/>summary>
         public void RemoveAttribute(string name)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionAttribute.RemoveAttribute(string)' visibile pubblicamente
         {
             Unset(name);
         }

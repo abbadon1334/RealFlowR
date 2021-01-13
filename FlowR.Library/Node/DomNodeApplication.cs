@@ -1,23 +1,34 @@
+using System;
 using FlowR.Library.Client;
 
 namespace FlowR.Library.Node
 {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeApplication' visibile pubblicamente
-    public class DomNodeApplication : DomNodeOwner
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeApplication' visibile pubblicamente
+    /// <summary>
+    /// Manage Application
+    /// </summary>
+    public abstract class DomNodeApplication : DomNodeOwner
     {
         private Application _application;
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeApplication.SetApplication(Application)' visibile pubblicamente
+        /// <summary>
+        /// Set the Application
+        /// </summary>
+        /// <exception cref="Exception">Cannot be set multiple times</exception>
         public void SetApplication(Application application)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeApplication.SetApplication(Application)' visibile pubblicamente
         {
+            if (_application != null)
+            {
+                throw new Exception("Application already defined");
+            }
+            
             _application = application;
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeApplication.GetApplication()' visibile pubblicamente
+        /// <summary>
+        /// Get the Application
+        /// </summary>
+        /// <returns></returns>
         public Application GetApplication()
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeApplication.GetApplication()' visibile pubblicamente
         {
             return _application;
         }

@@ -3,35 +3,33 @@ using System.Collections.Generic;
 
 namespace FlowR.Library.Node.Collections
 {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionEvent' visibile pubblicamente
+    /// <summary>
+    /// Collection Events class that filter to only essential method 
+    /// </summary>
     public class DomNodeCollectionEvent : DomNodeCollection<List<EventHandler>>
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionEvent' visibile pubblicamente
     {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionEvent.DomNodeCollectionEvent(DomNode)' visibile pubblicamente
+        
+        /// <inheritdoc/>summary>
         public DomNodeCollectionEvent(DomNode owner) : base(owner)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionEvent.DomNodeCollectionEvent(DomNode)' visibile pubblicamente
         {
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionEvent.On(string, EventHandler)' visibile pubblicamente
+        /// <inheritdoc cref="DomNode.On"/>summary>
         public void On(string eventName, EventHandler handler)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionEvent.On(string, EventHandler)' visibile pubblicamente
         {
             if (!Exists(eventName)) Set(eventName, new List<EventHandler>());
 
             Get(eventName).Add(handler);
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionEvent.Off(string, EventHandler)' visibile pubblicamente
+        /// <inheritdoc cref="DomNode.Off"/>summary>
         public void Off(string eventName, EventHandler handler)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionEvent.Off(string, EventHandler)' visibile pubblicamente
         {
             Get(eventName).Remove(handler);
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionEvent.OnClientEventTriggered(string, EventArgs)' visibile pubblicamente
+        /// <inheritdoc cref="DomNode.OnClientEventTriggered"/>
         public void OnClientEventTriggered(string eventName, EventArgs eventArgs)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionEvent.OnClientEventTriggered(string, EventArgs)' visibile pubblicamente
         {
             Get(eventName).ForEach(observerDelegate => observerDelegate.Invoke(GetOwner(), eventArgs));
         }

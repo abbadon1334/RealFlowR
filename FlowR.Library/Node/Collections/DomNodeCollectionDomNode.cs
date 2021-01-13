@@ -1,18 +1,22 @@
 namespace FlowR.Library.Node.Collections
 {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionDomNode' visibile pubblicamente
+    /// <summary>
+    /// DomNode children Collection that filter to only essential method 
+    /// </summary>
     public class DomNodeCollectionDomNode : DomNodeCollection<DomNode>
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionDomNode' visibile pubblicamente
     {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionDomNode.DomNodeCollectionDomNode(DomNode)' visibile pubblicamente
+        /// <inheritdoc/>
         public DomNodeCollectionDomNode(DomNode owner) : base(owner)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionDomNode.DomNodeCollectionDomNode(DomNode)' visibile pubblicamente
         {
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionDomNode.Add(DomNode)' visibile pubblicamente
+        /// <summary>
+        /// Add DomNode to collection.
+        /// </summary>
+        /// <remarks>Here happens the composition between child and parent elements</remarks>
+        /// <param name="node"></param>
+        /// <returns></returns>
         public DomNode Add(DomNode node)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionDomNode.Add(DomNode)' visibile pubblicamente
         {
             node.SetApplication(GetOwner().GetApplication());
             node.SetOwner(GetOwner());
@@ -25,9 +29,8 @@ namespace FlowR.Library.Node.Collections
             return node;
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionDomNode.Remove(DomNode)' visibile pubblicamente
+        /// <inheritdoc cref="DomNodeCollection{T}.Unset"/>summary>
         public void Remove(DomNode node)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionDomNode.Remove(DomNode)' visibile pubblicamente
         {
             node.SetOwner(null);
             node.SetApplication(null);

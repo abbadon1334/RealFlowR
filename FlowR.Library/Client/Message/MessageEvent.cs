@@ -4,31 +4,41 @@ using System.Collections.Generic;
 
 namespace FlowR.Library.Client.Message
 {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageEvent' visibile pubblicamente
-    public class MessageEvent : Message
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageEvent' visibile pubblicamente
-    {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageEvent.EventArgs' visibile pubblicamente
-        public readonly Dictionary<string, string> EventArgs = new();
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageEvent.EventArgs' visibile pubblicamente
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageEvent.EventName' visibile pubblicamente
-        public string EventName;
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageEvent.EventName' visibile pubblicamente
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageEvent.FromJson(string)' visibile pubblicamente
+    /// <summary>
+    /// Message Event sent from client 
+    /// </summary>
+    public  class MessageEvent : Message
+    {
+        /// <summary>
+        /// Event arguments
+        /// </summary>
+        public readonly Dictionary<string, string> EventArgs = new();
+        
+        /// <summary>
+        /// Name of the Event
+        /// </summary>
+        public string EventName;
+
+        /// <summary>
+        /// Convert JSON to MessageEvent
+        /// </summary>
+        /// <param name="json"></param>
+        /// <returns></returns>
         public static MessageEvent FromJson(string json)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageEvent.FromJson(string)' visibile pubblicamente
         {
             return JsonConvert.DeserializeObject<MessageEvent>(json);
         }
     }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageEventArgs' visibile pubblicamente
+    /// <summary>
+    /// Message EventArguments
+    /// </summary>
     public class MessageEventArgs : EventArgs
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageEventArgs' visibile pubblicamente
     {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageEventArgs.Data' visibile pubblicamente
+        /// <summary>
+        /// Argument Dictionary Store
+        /// </summary>
         public Dictionary<string, string> Data = new();
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageEventArgs.Data' visibile pubblicamente
     }
 }

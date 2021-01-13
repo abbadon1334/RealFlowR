@@ -1,35 +1,37 @@
 namespace FlowR.Library.Client.Message
 {
 #pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobal' visibile pubblicamente
-    /// <summary>
-    /// Global message
-    /// </summary>
+    /// <inheritdoc />
     public class MessageGlobal : Message
     {
         /// <inheritdoc cref="Message.Method"/>>
         public enum MethodName
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobal.MethodName' visibile pubblicamente
         {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobal.MethodName.CallGlobalMethod' visibile pubblicamente
-            CallGlobalMethod
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobal.MethodName.CallGlobalMethod' visibile pubblicamente
-            ,
+            /// <summary>
+            /// Call Global Method
+            /// </summary>
+            CallGlobalMethod,
+            /// <summary>
+            /// Set Property
+            /// </summary>
             SetProperty
         }
     }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobalWithResponse' visibile pubblicamente
+    /// <inheritdoc/>
     public class MessageGlobalWithResponse : MessageWithResponse
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobalWithResponse' visibile pubblicamente
     {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobalWithResponse.MethodName' visibile pubblicamente
+        /// <inheritdoc cref="Message.Method"/> />
         public enum MethodName
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobalWithResponse.MethodName' visibile pubblicamente
         {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobalWithResponse.MethodName.CallGlobalMethodGetResponse' visibile pubblicamente
+            /// <summary>
+            /// Call a Global method and wait for response  
+            /// </summary>
             CallGlobalMethodGetResponse,
+            /// <summary>
+            /// Call a Global method and wait for response 
+            /// </summary>
             GetGlobalProperty
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'MessageGlobalWithResponse.MethodName.CallGlobalMethodGetResponse' visibile pubblicamente
         }
     }
 }

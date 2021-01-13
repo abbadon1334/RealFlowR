@@ -10,36 +10,52 @@ namespace FlowR.Library.Node.Collections
     {
         private readonly Dictionary<string, T> _collection = new();
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.AfterAdded' visibile pubblicamente
-        public EventHandler AfterAdded;
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.AfterAdded' visibile pubblicamente
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.AfterChanged' visibile pubblicamente
-        public EventHandler AfterChanged;
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.AfterChanged' visibile pubblicamente
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.AfterRemoved' visibile pubblicamente
-        public EventHandler AfterRemoved;
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.AfterRemoved' visibile pubblicamente
-
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.BeforeAdded' visibile pubblicamente
+        /// <summary>
+        /// Fire Before add to collection 
+        /// </summary>
         public EventHandler BeforeAdded;
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.BeforeAdded' visibile pubblicamente
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.BeforeChanged' visibile pubblicamente
-        public EventHandler BeforeChanged;
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.BeforeChanged' visibile pubblicamente
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.BeforeRemoved' visibile pubblicamente
-        public EventHandler BeforeRemoved;
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.BeforeRemoved' visibile pubblicamente
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.DomNodeCollection(DomNode)' visibile pubblicamente
+        
+        /// <summary>
+        /// Fire before a change in collection
+        /// </summary>
+        public EventHandler BeforeChanged;
+
+        /// <summary>
+        /// Fire before remove from collection
+        /// </summary>
+        public EventHandler BeforeRemoved;
+
+        /// <summary>
+        /// Fire after add to collection
+        /// </summary>
+        public EventHandler AfterAdded;
+        
+        /// <summary>
+        /// Fire after a change in collection
+        /// </summary>
+        public EventHandler AfterChanged;
+
+        /// <summary>
+        /// Fire after remove from collection
+        /// </summary>
+        public EventHandler AfterRemoved;
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="owner">The DomNode owner of the collection</param>
         protected DomNodeCollection(DomNode owner)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.DomNodeCollection(DomNode)' visibile pubblicamente
         {
             SetOwner(owner);
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.Set(string, T)' visibile pubblicamente
+        /// <summary>
+        /// Set an item in collection
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="value"></param>
         protected void Set(string name, T value)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.Set(string, T)' visibile pubblicamente
         {
             var oldValue = value;
             var exists = Exists(name);
@@ -76,9 +92,12 @@ namespace FlowR.Library.Node.Collections
             });
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.Unset(string)' visibile pubblicamente
+        /// <summary>
+        /// Remove an item in collection
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="value"></param>
         protected void Unset(string name)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.Unset(string)' visibile pubblicamente
         {
             var el = Get(name);
 
@@ -97,71 +116,98 @@ namespace FlowR.Library.Node.Collections
             });
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.Exists(string)' visibile pubblicamente
+        /// <summary>
+        /// Return if an item is present in collection
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         protected bool Exists(string name)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.Exists(string)' visibile pubblicamente
         {
             return _collection.ContainsKey(name);
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.Get(string)' visibile pubblicamente
+        /// <summary>
+        /// Return an item from collection
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         protected T Get(string name)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.Get(string)' visibile pubblicamente
         {
             return _collection[name];
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.Count()' visibile pubblicamente
+        /// <summary>
+        /// Return collection length
+        /// </summary>
+        /// <returns></returns>
         public int Count()
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.Count()' visibile pubblicamente
         {
             return _collection.Count();
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.GetFirst()' visibile pubblicamente
+        /// <summary>
+        /// Return first item of collection
+        /// </summary>
+        /// <returns></returns>
         public T GetFirst()
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.GetFirst()' visibile pubblicamente
         {
             return _collection.First().Value;
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.GetLast()' visibile pubblicamente
+        /// <summary>
+        /// Return last item of collection
+        /// </summary>
+        /// <returns></returns>
         public T GetLast()
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.GetLast()' visibile pubblicamente
         {
             return _collection.Last().Value;
         }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.ToDictionary()' visibile pubblicamente
+        /// <summary>
+        /// Return Collection
+        /// </summary>
+        /// <returns></returns>
         public Dictionary<string, T> ToDictionary()
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>.ToDictionary()' visibile pubblicamente
         {
+            // @todo return clone to break reference
+            
             return _collection;
         }
     }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'CollectionAddedEventArgs<T>' visibile pubblicamente
+    /// <summary>
+    /// Base EventArgs for event Add
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class CollectionAddedEventArgs<T> : EventArgs
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'CollectionAddedEventArgs<T>' visibile pubblicamente
     {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'CollectionAddedEventArgs<T>.Name' visibile pubblicamente
+        /// <summary>
+        /// Event Name
+        /// </summary>
         public string Name;
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'CollectionAddedEventArgs<T>.Name' visibile pubblicamente
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'CollectionAddedEventArgs<T>.Value' visibile pubblicamente
+        /// <summary>
+        /// Item Add
+        /// </summary>
         public T Value;
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'CollectionAddedEventArgs<T>.Value' visibile pubblicamente
     }
 
+    /// <summary>
+    /// Base EventArgs for event Remove
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     internal class CollectionRemovedEventArgs<T> : CollectionAddedEventArgs<T>
     {
     }
 
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'CollectionChangedEventArgs<T>' visibile pubblicamente
+    /// <summary>
+    /// Base EventArgs for event changed
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class CollectionChangedEventArgs<T> : CollectionAddedEventArgs<T>
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'CollectionChangedEventArgs<T>' visibile pubblicamente
     {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'CollectionChangedEventArgs<T>.OldValue' visibile pubblicamente
+        /// <summary>
+        /// Item value before change @todo this is probably not correct for object due to referencing
+        /// </summary>
         public T OldValue;
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'CollectionChangedEventArgs<T>.OldValue' visibile pubblicamente
     }
 }

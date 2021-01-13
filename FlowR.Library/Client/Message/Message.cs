@@ -5,7 +5,7 @@ using System.Linq;
 namespace FlowR.Library.Client.Message
 {
     /// <summary>
-    /// Base message Class
+    /// Message Class
     /// </summary>
     public abstract class Message
     {

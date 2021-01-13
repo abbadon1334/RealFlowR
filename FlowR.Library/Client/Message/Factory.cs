@@ -258,7 +258,6 @@ namespace FlowR.Library.Client.Message
         /// <param name="name"></param>
         /// <returns></returns>
         public static MessageWithResponse MessageGlobalGetPropertyWaitResponse(string name)
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'Factory.MessageGlobalMethodCallWaitResponse(string, string[])' visibile pubblicamente
         {
             var message = new MessageGlobalWithResponse();
             message.Method = MessageGlobalWithResponse.MethodName.GetGlobalProperty.ToString();
