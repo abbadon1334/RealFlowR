@@ -2,13 +2,21 @@ using FlowR.Library.Node;
 
 namespace FlowR.Library.Client.Tags
 {
+    /// <summary>
+    /// Special internal Tag as root of the composite tree
+    /// </summary>
     public class Root : DomNode
     {
+        /// <summary>
+        /// [internal use]
+        /// </summary>
+        /// <param name="rootId"></param>
         public Root(string rootId)
         {
             SetUuid(rootId);
         }
 
-        protected override string TagName => "div";
+        /// <inheritdoc cref="DomNode.TagName"/>
+        protected override string TagName => "body";
     }
 }

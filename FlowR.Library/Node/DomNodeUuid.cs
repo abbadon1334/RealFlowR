@@ -2,7 +2,10 @@ using System;
 
 namespace FlowR.Library.Node
 {
-    public class DomNodeUuid
+    /// <summary>
+    /// Manage Identifier
+    /// </summary>
+    public abstract class DomNodeUuid
     {
         private string _uuid = string.Empty;
 
@@ -30,7 +33,7 @@ namespace FlowR.Library.Node
                 _uuid = uuid;
                 return;
             }
-            
+
             throw new Exception($"Element Uuid is not empty (actual : '{_uuid}'))");
         }
     }

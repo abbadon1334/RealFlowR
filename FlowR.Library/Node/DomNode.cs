@@ -1,11 +1,14 @@
+using FlowR.Library.Client.Message;
+using FlowR.Library.Node.Collections;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using FlowR.Library.Client.Message;
-using FlowR.Library.Node.Collections;
 
 namespace FlowR.Library.Node
 {
+    /// <summary>
+    /// DomNode base class
+    /// </summary>
     public abstract class DomNode : DomNodeApplication
     {
         private DomNodeCollectionAttribute _attributes;
@@ -13,6 +16,9 @@ namespace FlowR.Library.Node
         private DomNodeCollectionEvent _events;
         private DomNodeCollectionProperty _properties;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         protected DomNode()
         {
             SetupAttributes();
@@ -31,7 +37,7 @@ namespace FlowR.Library.Node
             _properties = new DomNodeCollectionProperty(this);
             _properties.AfterChanged += (o, args) =>
             {
-                var prop = (CollectionChangedEventArgs<string>) args;
+                var prop = (CollectionChangedEventArgs<string>)args;
                 SendMessage(Factory.MessageSetProperty(this, prop.Name, prop.Value));
             };
         }
@@ -43,12 +49,12 @@ namespace FlowR.Library.Node
             _events.AfterAdded += (o, args) =>
             {
                 SendMessage(Factory.MessageStartListenEvent(this,
-                    ((CollectionAddedEventArgs<List<EventHandler>>) args).Name));
+                    ((CollectionAddedEventArgs<List<EventHandler>>)args).Name));
             };
             _events.AfterRemoved += (o, args) =>
             {
                 SendMessage(Factory.MessageStopListenEvent(this,
-                    ((CollectionAddedEventArgs<List<EventHandler>>) args).Name));
+                    ((CollectionAddedEventArgs<List<EventHandler>>)args).Name));
             };
         }
 
@@ -57,11 +63,11 @@ namespace FlowR.Library.Node
             _children = new DomNodeCollectionDomNode(this);
             _children.AfterAdded += (o, args) =>
             {
-                SendMessage(Factory.MessageCreate(((CollectionAddedEventArgs<DomNode>) args).Value));
+                SendMessage(Factory.MessageCreate(((CollectionAddedEventArgs<DomNode>)args).Value));
             };
             _children.AfterRemoved += (o, args) =>
             {
-                SendMessage(Factory.MessageRemove(((CollectionRemovedEventArgs<DomNode>) args).Value));
+                SendMessage(Factory.MessageRemove(((CollectionRemovedEventArgs<DomNode>)args).Value));
             };
         }
 
@@ -70,12 +76,12 @@ namespace FlowR.Library.Node
             _attributes = new DomNodeCollectionAttribute(this);
             _attributes.AfterChanged += (o, args) =>
             {
-                var attr = (CollectionChangedEventArgs<string>) args;
+                var attr = (CollectionChangedEventArgs<string>)args;
                 SendMessage(Factory.MessageSetAttribute(this, attr.Name, attr.Value));
             };
             _attributes.AfterRemoved += (o, args) =>
             {
-                var attr = (CollectionAddedEventArgs<string>) args;
+                var attr = (CollectionAddedEventArgs<string>)args;
                 SendMessage(Factory.MessageRemoveAttribute(this, attr.Name));
             };
         }
@@ -100,7 +106,7 @@ namespace FlowR.Library.Node
             var message = Factory.MessageGetProperty(this, path);
             return await GetApplication().SendMessageWaitResponse(message);
         }
-        
+
         /// <summary>
         /// Get TagName of the Node.
         /// </summary>
@@ -110,7 +116,7 @@ namespace FlowR.Library.Node
             return TagName;
         }
 
-        
+
         /// <inheritdoc/>
         public override DomNode SetText(string text)
         {

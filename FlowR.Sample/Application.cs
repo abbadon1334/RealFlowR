@@ -1,5 +1,3 @@
-using System;
-using System.Net;
 using FlowR.Library.Client.Tags;
 using Microsoft.AspNetCore.SignalR;
 
@@ -8,15 +6,11 @@ namespace FlowR.Sample
     public class Application : Library.Client.Application
     {
         protected int Counter = 0;
-        protected Div RightColumn;
+        protected readonly Div RightColumn;
 
         public Application(string connectionId, IClientProxy client) : base(connectionId, client)
         {
-        }
-
-        protected override void OnStart(Root rootElement)
-        {
-            var masterContainer = rootElement.Add(new Div()).SetAttribute("class", "container-fluid");
+            var masterContainer = RootElement.Add(new Div()).SetAttribute("class", "container-fluid");
             var containerRow = masterContainer.Add(new Div()).SetAttribute("class", "row");
 
             var leftColumn = containerRow.Add(new Div()).SetAttribute("class", "col");
@@ -31,9 +25,9 @@ namespace FlowR.Sample
                 .SetAttribute("class", "card-header")
                 .SetText("Server Time");
 
-//            AddTimer(1 /* 1 millisec to see maximum speed */,(sender, args) =>{
-//                cardHeaderTime.SetText($"ApplicationTimer which update Text every (1ms) with server Time : {DateTime.Now:O}");
-//            });
+            //            AddTimer(1 /* 1 millisec to see maximum speed */,(sender, args) =>{
+            //                cardHeaderTime.SetText($"ApplicationTimer which update Text every (1ms) with server Time : {DateTime.Now:O}");
+            //            });
 
             var cardHeader = container
                 .Add(new Div())
@@ -127,9 +121,9 @@ namespace FlowR.Sample
                              " JS property `innerHTML` with the same label adding a point at the end");
 
                 var label = await buttonTestResponse.GetProperty("innerHTML");
-                
+
                 // add a point as an example of the workflow on every call
-                buttonTestResponse.SetProperty("innerHTML",$"{label}.");
+                buttonTestResponse.SetProperty("innerHTML", $"{label}.");
             });
         }
 

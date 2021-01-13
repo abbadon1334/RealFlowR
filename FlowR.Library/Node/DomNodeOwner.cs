@@ -1,6 +1,11 @@
+using System;
+
 namespace FlowR.Library.Node
 {
-    public class DomNodeOwner : DomNodeText
+    /// <summary>
+    /// Manage Owner aka DomNode parent
+    /// </summary>
+    public abstract class DomNodeOwner : DomNodeText
     {
         private DomNode _owner;
 
@@ -14,13 +19,23 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Set Parent Node
+        /// [internal use] Set Parent Node
         /// </summary>
         /// <remarks>Usually this is called internally after initialize</remarks>
         /// <param name="owner"></param>
         public void SetOwner(DomNode owner)
         {
+            // @todo find a way to lower visibility
+            AssertOwnerIsNull();
             _owner = owner;
+        }
+
+        private void AssertOwnerIsNull()
+        {
+            if (_owner != null)
+            {
+                throw new Exception("Owner already set");
+            }
         }
     }
 }
