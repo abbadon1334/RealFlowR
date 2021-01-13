@@ -3,14 +3,14 @@ using System;
 namespace FlowR.Library.Node
 {
     /// <summary>
-    /// Manage DomNode Text 
+    ///     Manage DomNode Text
     /// </summary>
     public abstract class DomNodeText : DomNodeInitialize
     {
         private string _text = string.Empty;
 
         /// <summary>
-        /// Return DomNode Text 
+        ///     Return DomNode Text
         /// </summary>
         /// <returns></returns>
         public string GetText()
@@ -19,17 +19,16 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Set Node Text 
+        ///     Set Node Text
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
         public virtual DomNodeText SetText(string text)
         {
-            if (IsInitialized() && ((DomNode)this).GetChildrenCount() > 0)
-            {
-                throw new Exception("@todo SetText destroy the innerHtml, need to find an alternative way to replace Text in nodes, can be a hidden comment before and after (ex. : <!--TXTStart-->text<!--TXTEnd-->)");
-            }
+            if (IsInitialized() && ((DomNode) this).GetChildrenCount() > 0)
+                throw new Exception(
+                    "@todo SetText destroy the innerHtml, need to find an alternative way to replace Text in nodes, can be a hidden comment before and after (ex. : <!--TXTStart-->text<!--TXTEnd-->)");
 
             _text = text;
 

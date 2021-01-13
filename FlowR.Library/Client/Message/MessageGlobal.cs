@@ -4,32 +4,36 @@ namespace FlowR.Library.Client.Message
     /// <inheritdoc />
     public class MessageGlobal : Message
     {
-        /// <inheritdoc cref="Message.Method"/>>
+        /// <inheritdoc cref="Message.Method" />
+        /// >
         public enum MethodName
         {
             /// <summary>
-            /// Call Global Method
+            ///     Call Global Method
             /// </summary>
             CallGlobalMethod,
+
             /// <summary>
-            /// Set Property
+            ///     Set Property
             /// </summary>
             SetProperty
         }
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc />
     public class MessageGlobalWithResponse : MessageWithResponse
     {
-        /// <inheritdoc cref="Message.Method"/> />
+        /// <inheritdoc cref="Message.Method" />
+        /// />
         public enum MethodName
         {
             /// <summary>
-            /// Call a Global method and wait for response  
+            ///     Call a Global method and wait for response
             /// </summary>
             CallGlobalMethodGetResponse,
+
             /// <summary>
-            /// Call a Global method and wait for response 
+            ///     Call a Global method and wait for response
             /// </summary>
             GetGlobalProperty
         }

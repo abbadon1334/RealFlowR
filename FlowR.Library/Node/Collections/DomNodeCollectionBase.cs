@@ -4,45 +4,47 @@ using System.Linq;
 
 namespace FlowR.Library.Node.Collections
 {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>' visibile pubblicamente
+    /// <summary>
+    ///     Base Observable collection with Owner
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public abstract class DomNodeCollection<T> : DomNodeOwner
-#pragma warning restore CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollection<T>' visibile pubblicamente
     {
         private readonly Dictionary<string, T> _collection = new();
 
         /// <summary>
-        /// Fire Before add to collection 
-        /// </summary>
-        public EventHandler BeforeAdded;
-
-        
-        /// <summary>
-        /// Fire before a change in collection
-        /// </summary>
-        public EventHandler BeforeChanged;
-
-        /// <summary>
-        /// Fire before remove from collection
-        /// </summary>
-        public EventHandler BeforeRemoved;
-
-        /// <summary>
-        /// Fire after add to collection
+        ///     Fire after add to collection
         /// </summary>
         public EventHandler AfterAdded;
-        
+
         /// <summary>
-        /// Fire after a change in collection
+        ///     Fire after a change in collection
         /// </summary>
         public EventHandler AfterChanged;
 
         /// <summary>
-        /// Fire after remove from collection
+        ///     Fire after remove from collection
         /// </summary>
         public EventHandler AfterRemoved;
 
         /// <summary>
-        /// Constructor
+        ///     Fire Before add to collection
+        /// </summary>
+        public EventHandler BeforeAdded;
+
+
+        /// <summary>
+        ///     Fire before a change in collection
+        /// </summary>
+        public EventHandler BeforeChanged;
+
+        /// <summary>
+        ///     Fire before remove from collection
+        /// </summary>
+        public EventHandler BeforeRemoved;
+
+        /// <summary>
+        ///     Constructor
         /// </summary>
         /// <param name="owner">The DomNode owner of the collection</param>
         protected DomNodeCollection(DomNode owner)
@@ -51,7 +53,7 @@ namespace FlowR.Library.Node.Collections
         }
 
         /// <summary>
-        /// Set an item in collection
+        ///     Set an item in collection
         /// </summary>
         /// <param name="name"></param>
         /// <param name="value"></param>
@@ -93,7 +95,7 @@ namespace FlowR.Library.Node.Collections
         }
 
         /// <summary>
-        /// Remove an item in collection
+        ///     Remove an item in collection
         /// </summary>
         /// <param name="name"></param>
         /// <param name="value"></param>
@@ -117,7 +119,7 @@ namespace FlowR.Library.Node.Collections
         }
 
         /// <summary>
-        /// Return if an item is present in collection
+        ///     Return if an item is present in collection
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
@@ -127,7 +129,7 @@ namespace FlowR.Library.Node.Collections
         }
 
         /// <summary>
-        /// Return an item from collection
+        ///     Return an item from collection
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
@@ -137,7 +139,7 @@ namespace FlowR.Library.Node.Collections
         }
 
         /// <summary>
-        /// Return collection length
+        ///     Return collection length
         /// </summary>
         /// <returns></returns>
         public int Count()
@@ -146,7 +148,7 @@ namespace FlowR.Library.Node.Collections
         }
 
         /// <summary>
-        /// Return first item of collection
+        ///     Return first item of collection
         /// </summary>
         /// <returns></returns>
         public T GetFirst()
@@ -155,7 +157,7 @@ namespace FlowR.Library.Node.Collections
         }
 
         /// <summary>
-        /// Return last item of collection
+        ///     Return last item of collection
         /// </summary>
         /// <returns></returns>
         public T GetLast()
@@ -164,35 +166,36 @@ namespace FlowR.Library.Node.Collections
         }
 
         /// <summary>
-        /// Return Collection
+        ///     Return Collection
         /// </summary>
         /// <returns></returns>
         public Dictionary<string, T> ToDictionary()
         {
             // @todo return clone to break reference
-            
+
             return _collection;
         }
     }
 
     /// <summary>
-    /// Base EventArgs for event Add
+    ///     Base EventArgs for event Add
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class CollectionAddedEventArgs<T> : EventArgs
     {
         /// <summary>
-        /// Event Name
+        ///     Event Name
         /// </summary>
         public string Name;
+
         /// <summary>
-        /// Item Add
+        ///     Item Add
         /// </summary>
         public T Value;
     }
 
     /// <summary>
-    /// Base EventArgs for event Remove
+    ///     Base EventArgs for event Remove
     /// </summary>
     /// <typeparam name="T"></typeparam>
     internal class CollectionRemovedEventArgs<T> : CollectionAddedEventArgs<T>
@@ -200,13 +203,13 @@ namespace FlowR.Library.Node.Collections
     }
 
     /// <summary>
-    /// Base EventArgs for event changed
+    ///     Base EventArgs for event changed
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class CollectionChangedEventArgs<T> : CollectionAddedEventArgs<T>
     {
         /// <summary>
-        /// Item value before change @todo this is probably not correct for object due to referencing
+        ///     Item value before change @todo this is probably not correct for object due to referencing
         /// </summary>
         public T OldValue;
     }

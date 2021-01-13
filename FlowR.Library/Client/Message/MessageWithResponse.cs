@@ -5,13 +5,14 @@ namespace FlowR.Library.Client.Message
     public class MessageWithResponse : Message
     {
         private MessageWithResponseCallback _callback;
+
         /// <summary>
-        /// When completed store response here  
+        ///     When completed store response here
         /// </summary>
         public string Response;
 
         /// <summary>
-        /// Set the Callback that will be triggered when response arrive 
+        ///     Set the Callback that will be triggered when response arrive
         /// </summary>
         /// <param name="callback"></param>
         public void SetCallback(MessageWithResponseCallback callback)
@@ -20,7 +21,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Set the response
+        ///     Set the response
         /// </summary>
         /// <param name="response"></param>
         public void SetResponse(string response)
@@ -30,7 +31,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Get The Response
+        ///     Get The Response
         /// </summary>
         /// <returns></returns>
         public string GetResponse()
@@ -39,7 +40,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Convert from JSON
+        ///     Convert from JSON
         /// </summary>
         /// <param name="json"></param>
         /// <returns></returns>

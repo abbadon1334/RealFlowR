@@ -1,34 +1,34 @@
+using System;
+using System.Threading.Tasks;
 using FlowR.Library.Client.Message;
 using FlowR.Library.Client.Tags;
 using FlowR.Library.Node;
 using Microsoft.AspNetCore.SignalR;
-using System;
-using System.Threading.Tasks;
 
 namespace FlowR.Library.Client
 {
     /// <summary>
-    /// Application container class.
+    ///     Application container class.
     /// </summary>
     public abstract class Application
     {
         private readonly ApplicationRegistry _registry = new();
         private readonly ApplicationResponses _responses = new();
         private readonly ApplicationTimers _timers = new();
-        
+
         /// <summary>
-        /// Root element of the Application.
-        /// The composition tree that draw client UI starts from here.
+        ///     Root element of the Application.
+        ///     The composition tree that draw client UI starts from here.
         /// </summary>
         protected readonly Root RootElement;
 
         /// <summary>
-        /// Element ID of the master container for the application
+        ///     Element ID of the master container for the application
         /// </summary>
         protected readonly string RootElementId = "flow-root";
 
         /// <summary>
-        /// this will be called from the FlowRHub Service 
+        ///     this will be called from the FlowRHub Service
         /// </summary>
         /// <param name="connectionId">connectionId from Hub</param>
         /// <param name="client">SignalR client from Hub</param>
@@ -36,7 +36,7 @@ namespace FlowR.Library.Client
         {
             ConnectionId = connectionId;
             Client = client;
-            
+
             // Prepare the root element 
             RootElement = new Root(RootElementId);
             RootElement.SetApplication(this);
@@ -50,7 +50,7 @@ namespace FlowR.Library.Client
         }
 
         /// <summary>
-        /// UUID of the Context.ConnectionId.
+        ///     UUID of the Context.ConnectionId.
         /// </summary>
         private string ConnectionId { get; }
 
@@ -58,10 +58,10 @@ namespace FlowR.Library.Client
         ///     SignalR Client reference
         /// </summary>
         private IClientProxy Client { get; }
-        
+
         /// <summary>
-        /// [internal use] Add Node to registry.
-        /// Internally called after add to parent Node, usually there is no need to be called. 
+        ///     [internal use] Add Node to registry.
+        ///     Internally called after add to parent Node, usually there is no need to be called.
         /// </summary>
         /// <param name="node"></param>
         public void RegisterComponent(DomNode node)
@@ -71,7 +71,7 @@ namespace FlowR.Library.Client
         }
 
         /// <summary>
-        /// Internally called, is private and must remain.
+        ///     Internally called, is private and must remain.
         /// </summary>
         /// <param name="uuid"></param>
         /// <returns></returns>
@@ -80,10 +80,10 @@ namespace FlowR.Library.Client
             // @todo find a way to lower visibility of internal calls 
             return _registry.Get(uuid);
         }
-        
+
         /// <summary>
-        /// [internal use] Remove Node from registry.
-        /// Internally called after removed from parent Node, usually there is no need to be called. 
+        ///     [internal use] Remove Node from registry.
+        ///     Internally called after removed from parent Node, usually there is no need to be called.
         /// </summary>
         /// <param name="node"></param>
         public void UnregisterComponent(DomNode node)
@@ -92,21 +92,21 @@ namespace FlowR.Library.Client
         }
 
         /// <summary>
-        /// [internal use] Called from FlowR Hub when a client event is triggered.
+        ///     [internal use] Called from FlowR Hub when a client event is triggered.
         /// </summary>
         /// <param name="message"></param>
         public void OnClientEventTriggered(MessageEvent message)
         {
             // @todo find a way to lower visibility of internal calls
-            
+
             GetRegisterComponent(message.Uuid).OnClientEventTriggered(
                 message.EventName,
-                new MessageEventArgs { Data = message.EventArgs }
+                new MessageEventArgs {Data = message.EventArgs}
             );
         }
 
         /// <summary>
-        /// Add a Timer with a callback 
+        ///     Add a Timer with a callback
         /// </summary>
         /// <param name="delay">delay in millisec</param>
         /// <param name="callback">The Callback</param>
@@ -116,9 +116,9 @@ namespace FlowR.Library.Client
         {
             _timers.AddTimer(delay, callback, infinite);
         }
-        
+
         /// <summary>
-        /// Remove a Timer. 
+        ///     Remove a Timer.
         /// </summary>
         /// <param name="timer"></param>
         public void CancelTimer(ApplicationTimer timer)
@@ -127,7 +127,7 @@ namespace FlowR.Library.Client
         }
 
         /// <summary>
-        /// Send a message to SignalR Client, don't wait for response
+        ///     Send a message to SignalR Client, don't wait for response
         /// </summary>
         /// <param name="message"></param>
         public Task SendMessage(Message.Message message)
@@ -148,7 +148,7 @@ namespace FlowR.Library.Client
         }
 
         /// <summary>
-        /// Send a message to SignalR Client and wait for response
+        ///     Send a message to SignalR Client and wait for response
         /// </summary>
         /// <param name="message"></param>
         /// <returns></returns>
@@ -159,7 +159,7 @@ namespace FlowR.Library.Client
         }
 
         /// <summary>
-        /// [internal use] Called from SignalR Client when a new response arrive.
+        ///     [internal use] Called from SignalR Client when a new response arrive.
         /// </summary>
         /// <param name="message"></param>
         public void OnWaitingMessageResponse(MessageWithResponse message)
@@ -168,7 +168,7 @@ namespace FlowR.Library.Client
         }
 
         /// <summary>
-        /// Call a global JS method, don't wait for response.
+        ///     Call a global JS method, don't wait for response.
         /// </summary>
         /// <example>from a DomNode : GetApplication().CallGlobalMethod('alert',['this is an alert']);</example>
         /// <param name="methodName"></param>
@@ -177,9 +177,9 @@ namespace FlowR.Library.Client
         {
             SendMessage(Factory.MessageGlobalMethodCall(methodName, arguments));
         }
-        
+
         /// <summary>
-        /// Call a global JS method and wait for response
+        ///     Call a global JS method and wait for response
         /// </summary>
         /// <param name="methodName">window method or complete traversed path like document.location.reload </param>
         /// <param name="arguments"></param>
@@ -188,9 +188,9 @@ namespace FlowR.Library.Client
             var message = Factory.MessageGlobalMethodCallWaitResponse(methodName, arguments);
             return await _responses.WaitResponse(this, message);
         }
-        
+
         /// <summary>
-        /// Get a global JS property and wait for response
+        ///     Get a global JS property and wait for response
         /// </summary>
         /// <param name="path">window method or complete traversed path like document.location.reload </param>
         public async Task<string> GetGlobalProperty(string path)
@@ -198,9 +198,9 @@ namespace FlowR.Library.Client
             var message = Factory.MessageGlobalGetPropertyWaitResponse(path);
             return await _responses.WaitResponse(this, message);
         }
-        
+
         /// <summary>
-        /// Set a global JS property and wait for response
+        ///     Set a global JS property and wait for response
         /// </summary>
         /// <param name="path">window property or complete traversed path like document.body.scrollHeight </param>
         /// <param name="value"></param>

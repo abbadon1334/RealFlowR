@@ -1,13 +1,13 @@
-using FlowR.Library.Client.Message;
-using FlowR.Library.Node.Collections;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using FlowR.Library.Client.Message;
+using FlowR.Library.Node.Collections;
 
 namespace FlowR.Library.Node
 {
     /// <summary>
-    /// DomNode base class
+    ///     DomNode base class
     /// </summary>
     public abstract class DomNode : DomNodeApplication
     {
@@ -17,7 +17,7 @@ namespace FlowR.Library.Node
         private DomNodeCollectionProperty _properties;
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         protected DomNode()
         {
@@ -28,7 +28,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// TagName of the Node : any HTML valid tag name is permitted.
+        ///     TagName of the Node : any HTML valid tag name is permitted.
         /// </summary>
         protected abstract string TagName { get; }
 
@@ -37,7 +37,7 @@ namespace FlowR.Library.Node
             _properties = new DomNodeCollectionProperty(this);
             _properties.AfterChanged += (o, args) =>
             {
-                var prop = (CollectionChangedEventArgs<string>)args;
+                var prop = (CollectionChangedEventArgs<string>) args;
                 SendMessage(Factory.MessageSetProperty(this, prop.Name, prop.Value));
             };
         }
@@ -49,12 +49,12 @@ namespace FlowR.Library.Node
             _events.AfterAdded += (o, args) =>
             {
                 SendMessage(Factory.MessageStartListenEvent(this,
-                    ((CollectionAddedEventArgs<List<EventHandler>>)args).Name));
+                    ((CollectionAddedEventArgs<List<EventHandler>>) args).Name));
             };
             _events.AfterRemoved += (o, args) =>
             {
                 SendMessage(Factory.MessageStopListenEvent(this,
-                    ((CollectionAddedEventArgs<List<EventHandler>>)args).Name));
+                    ((CollectionAddedEventArgs<List<EventHandler>>) args).Name));
             };
         }
 
@@ -63,11 +63,11 @@ namespace FlowR.Library.Node
             _children = new DomNodeCollectionDomNode(this);
             _children.AfterAdded += (o, args) =>
             {
-                SendMessage(Factory.MessageCreate(((CollectionAddedEventArgs<DomNode>)args).Value));
+                SendMessage(Factory.MessageCreate(((CollectionAddedEventArgs<DomNode>) args).Value));
             };
             _children.AfterRemoved += (o, args) =>
             {
-                SendMessage(Factory.MessageRemove(((CollectionRemovedEventArgs<DomNode>)args).Value));
+                SendMessage(Factory.MessageRemove(((CollectionRemovedEventArgs<DomNode>) args).Value));
             };
         }
 
@@ -76,18 +76,18 @@ namespace FlowR.Library.Node
             _attributes = new DomNodeCollectionAttribute(this);
             _attributes.AfterChanged += (o, args) =>
             {
-                var attr = (CollectionChangedEventArgs<string>)args;
+                var attr = (CollectionChangedEventArgs<string>) args;
                 SendMessage(Factory.MessageSetAttribute(this, attr.Name, attr.Value));
             };
             _attributes.AfterRemoved += (o, args) =>
             {
-                var attr = (CollectionAddedEventArgs<string>)args;
+                var attr = (CollectionAddedEventArgs<string>) args;
                 SendMessage(Factory.MessageRemoveAttribute(this, attr.Name));
             };
         }
 
         /// <summary>
-        /// Set Node property on client side.
+        ///     Set Node property on client side.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="value"></param>
@@ -97,7 +97,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Get Node property from client.
+        ///     Get Node property from client.
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
@@ -108,7 +108,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Get TagName of the Node.
+        ///     Get TagName of the Node.
         /// </summary>
         /// <returns></returns>
         public string GetTagName()
@@ -117,7 +117,7 @@ namespace FlowR.Library.Node
         }
 
 
-        /// <inheritdoc/>
+        /// <inheritdoc />
         public override DomNode SetText(string text)
         {
             base.SetText(text);
@@ -126,7 +126,7 @@ namespace FlowR.Library.Node
             return this;
         }
 
-        /// <inheritdoc/>
+        /// <inheritdoc />
         public override void SetUuid(string uuid)
         {
             base.SetUuid(uuid);
@@ -134,7 +134,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Start Listen for specified eventName.
+        ///     Start Listen for specified eventName.
         /// </summary>
         /// <param name="eventName"></param>
         /// <param name="handler"></param>
@@ -144,7 +144,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Stop Listen for specified eventName.
+        ///     Stop Listen for specified eventName.
         /// </summary>
         /// <param name="eventName"></param>
         /// <param name="handler"></param>
@@ -154,7 +154,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Handle incoming Node Event fired from client.
+        ///     Handle incoming Node Event fired from client.
         /// </summary>
         /// <remarks>Never use this. This is called from application on incoming events</remarks>
         /// <param name="eventName"></param>
@@ -166,7 +166,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Send a message to client side
+        ///     Send a message to client side
         /// </summary>
         /// <param name="message"></param>
         private void SendMessage(Message message)
@@ -175,7 +175,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Return count of children node attached.
+        ///     Return count of children node attached.
         /// </summary>
         /// <returns></returns>
         public int GetChildrenCount()
@@ -184,7 +184,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Get first child node from attached children.
+        ///     Get first child node from attached children.
         /// </summary>
         /// <returns></returns>
         public DomNode GetFirstChild()
@@ -193,7 +193,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Get last child node from attached children.
+        ///     Get last child node from attached children.
         /// </summary>
         /// <returns></returns>
         public DomNode GetLastChild()
@@ -202,7 +202,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Attach a node to children.
+        ///     Attach a node to children.
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
@@ -215,7 +215,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Remove children from node children.
+        ///     Remove children from node children.
         /// </summary>
         /// <param name="node"></param>
         public void Remove(DomNode node)
@@ -224,7 +224,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Set Attribute of the node.
+        ///     Set Attribute of the node.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="value"></param>
@@ -237,7 +237,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Return if Attribute already exists.
+        ///     Return if Attribute already exists.
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
@@ -247,7 +247,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Remove an Attribute.
+        ///     Remove an Attribute.
         /// </summary>
         /// <param name="name"></param>
         public void RemoveAttribute(string name)
@@ -256,7 +256,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Return Attributes as Dictionary.
+        ///     Return Attributes as Dictionary.
         /// </summary>
         /// <returns></returns>
         public Dictionary<string, string> GetAttributeDictionary()
@@ -265,7 +265,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Call a method on client side on this node with arguments, don't wait for response.
+        ///     Call a method on client side on this node with arguments, don't wait for response.
         /// </summary>
         /// <param name="methodName"></param>
         /// <param name="arguments"></param>
@@ -275,7 +275,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Return Response after Call a method on client side on this node with arguments.
+        ///     Return Response after Call a method on client side on this node with arguments.
         /// </summary>
         /// <param name="methodName"></param>
         /// <param name="arguments"></param>

@@ -3,9 +3,8 @@ using System.Timers;
 
 namespace FlowR.Library.Client
 {
-
     /// <summary>
-    /// Application timer class.
+    ///     Application timer class.
     /// </summary>
     public class ApplicationTimer
     {
@@ -15,7 +14,7 @@ namespace FlowR.Library.Client
         private Timer _timer;
 
         /// <summary>
-        /// ApplicationTimer
+        ///     ApplicationTimer
         /// </summary>
         /// <param name="delay">timeout to trigger Callback</param>
         /// <param name="callback">Callback to be triggered</param>
@@ -28,23 +27,23 @@ namespace FlowR.Library.Client
         }
 
         /// <summary>
-        /// Start the Timer.
+        ///     Start the Timer.
         /// </summary>
         public void Start()
         {
             _timer = new Timer(_delay);
             _timer.Elapsed += (o, args) =>
             {
-                _callback((Timer)o, args);
+                _callback((Timer) o, args);
 
-                if (!_infinite) ((Timer)o).Stop();
+                if (!_infinite) ((Timer) o).Stop();
             };
             _timer.AutoReset = _infinite;
             _timer.Enabled = true;
         }
-        
+
         /// <summary>
-        /// Stop the Timer
+        ///     Stop the Timer
         /// </summary>
         public void Stop()
         {
@@ -53,7 +52,7 @@ namespace FlowR.Library.Client
         }
 
         /// <summary>
-        /// Event handler for stop event.
+        ///     Event handler for stop event.
         /// </summary>
         public event EventHandler OnStop;
     }

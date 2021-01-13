@@ -1,27 +1,26 @@
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace FlowR.Library.Client.Message
 {
-
     /// <summary>
-    /// Message Event sent from client 
+    ///     Message Event sent from client
     /// </summary>
-    public  class MessageEvent : Message
+    public class MessageEvent : Message
     {
         /// <summary>
-        /// Event arguments
+        ///     Event arguments
         /// </summary>
         public readonly Dictionary<string, string> EventArgs = new();
-        
+
         /// <summary>
-        /// Name of the Event
+        ///     Name of the Event
         /// </summary>
         public string EventName;
 
         /// <summary>
-        /// Convert JSON to MessageEvent
+        ///     Convert JSON to MessageEvent
         /// </summary>
         /// <param name="json"></param>
         /// <returns></returns>
@@ -32,12 +31,12 @@ namespace FlowR.Library.Client.Message
     }
 
     /// <summary>
-    /// Message EventArguments
+    ///     Message EventArguments
     /// </summary>
     public class MessageEventArgs : EventArgs
     {
         /// <summary>
-        /// Argument Dictionary Store
+        ///     Argument Dictionary Store
         /// </summary>
         public Dictionary<string, string> Data = new();
     }

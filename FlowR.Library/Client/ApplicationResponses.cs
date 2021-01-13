@@ -1,13 +1,13 @@
-using FlowR.Library.Client.Message;
 using System;
 using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
+using FlowR.Library.Client.Message;
 
 namespace FlowR.Library.Client
 {
     /// <summary>
-    /// Logicv class for Message Responses
+    ///     Logicv class for Message Responses
     /// </summary>
     public class ApplicationResponses
     {
@@ -15,7 +15,7 @@ namespace FlowR.Library.Client
         private readonly ConcurrentDictionary<string, MessageWithResponse> _pending = new();
 
         /// <summary>
-        /// [internal use] Send and wait for a response
+        ///     [internal use] Send and wait for a response
         /// </summary>
         /// <param name="app"></param>
         /// <param name="message"></param>
@@ -37,7 +37,7 @@ namespace FlowR.Library.Client
                     // remove completed
                     _completed.TryRemove(message.GetUuid(), out _);
                     // @todo if hit the timeout _completed remain an extra item, can be moved after the while or... ?
-                    
+
                     Task.Delay(2, answerCancel.Token);
                 }
 
@@ -46,7 +46,7 @@ namespace FlowR.Library.Client
         }
 
         /// <summary>
-        /// [internal use] Process response from client
+        ///     [internal use] Process response from client
         /// </summary>
         /// <param name="message"></param>
         public void SetResponse(MessageWithResponse message)

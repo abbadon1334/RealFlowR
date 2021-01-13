@@ -2,68 +2,78 @@ namespace FlowR.Library.Client.Message
 {
 #pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement' visibile pubblicamente
     /// <summary>
-    /// Message for Clientside Nodes
+    ///     Message for Clientside Nodes
     /// </summary>
-    public  class MessageElement : Message
+    public class MessageElement : Message
     {
         /// <summary>
-        /// Name of the method to be called on client side signalr
+        ///     Name of the method to be called on client side signalr
         /// </summary>
         public enum MethodName
         {
             /// <summary>
-            /// Create a new Element
+            ///     Create a new Element
             /// </summary>
             CreateElement,
+
             /// <summary>
-            /// Remove an Element
+            ///     Remove an Element
             /// </summary>
             RemoveElement,
+
             /// <summary>
-            /// Element Set Attribute
+            ///     Element Set Attribute
             /// </summary>
             SetAttribute,
+
             /// <summary>
-            /// Element Remover Attribute
+            ///     Element Remover Attribute
             /// </summary>
             RemoveAttribute,
+
             /// <summary>
-            /// Start listen for an EventName
+            ///     Start listen for an EventName
             /// </summary>
             StartListenEvent,
+
             /// <summary>
-            /// Stop listen for an EventName
+            ///     Stop listen for an EventName
             /// </summary>
             StopListenEvent,
+
             /// <summary>
-            /// Set Element Text
+            ///     Set Element Text
             /// </summary>
             SetText,
+
             /// <summary>
-            /// Element Set Property
+            ///     Element Set Property
             /// </summary>
             SetProperty,
+
             /// <summary>
-            /// Element Call Method
+            ///     Element Call Method
             /// </summary>
             CallMethod
         }
     }
 
     /// <summary>
-    /// Message waiting Response for Clientside Nodes
+    ///     Message waiting Response for Clientside Nodes
     /// </summary>
-    public  class MessageElementWithResponse : MessageWithResponse
+    public class MessageElementWithResponse : MessageWithResponse
     {
-        /// <inheritdoc cref="Message.Method"/>>
+        /// <inheritdoc cref="Message.Method" />
+        /// >
         public enum MethodName
         {
             /// <summary>
-            /// Get Property from Element
+            ///     Get Property from Element
             /// </summary>
             GetProperty,
+
             /// <summary>
-            /// Call method and wait for response 
+            ///     Call method and wait for response
             /// </summary>
             CallMethodGetResponse
         }

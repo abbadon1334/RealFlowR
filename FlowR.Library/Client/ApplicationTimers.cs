@@ -4,14 +4,14 @@ using System.Collections.Generic;
 namespace FlowR.Library.Client
 {
     /// <summary>
-    /// Manage Application Timers
+    ///     Manage Application Timers
     /// </summary>
     public class ApplicationTimers
     {
         private readonly List<ApplicationTimer> _timers = new();
 
         /// <summary>
-        /// Add Timer
+        ///     Add Timer
         /// </summary>
         /// <param name="timer"></param>
         public void Add(ApplicationTimer timer)
@@ -23,7 +23,7 @@ namespace FlowR.Library.Client
         }
 
         /// <summary>
-        /// Add Timer.
+        ///     Add Timer.
         /// </summary>
         /// <param name="delay"></param>
         /// <param name="callback"></param>
@@ -35,7 +35,7 @@ namespace FlowR.Library.Client
         }
 
         /// <summary>
-        /// Remove Timer.
+        ///     Remove Timer.
         /// </summary>
         /// <param name="timer"></param>
         public void Remove(ApplicationTimer timer)

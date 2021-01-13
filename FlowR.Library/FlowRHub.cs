@@ -1,21 +1,21 @@
-﻿using FlowR.Library.Client;
+﻿using System;
+using System.Threading.Tasks;
+using FlowR.Library.Client;
 using FlowR.Library.Client.Message;
 using Microsoft.AspNetCore.SignalR;
-using System;
-using System.Threading.Tasks;
 
 namespace FlowR.Library
 {
     /// <summary>
-    /// FlowR Hub Service 
+    ///     FlowR Hub Service
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class FlowRHub<T> : Hub where T : Application
     {
         private readonly FlowRService<T> _applicationFlowRService;
-        
+
         /// <summary>
-        /// Constructor.
+        ///     Constructor.
         /// </summary>
         /// <param name="applicationFlowRService"></param>
         public FlowRHub(FlowRService<T> applicationFlowRService)
@@ -24,9 +24,9 @@ namespace FlowR.Library
         }
 
         /// <summary>
-        /// Called from client whenever an event fires on a Node which are listen for that specific event.
+        ///     Called from client whenever an event fires on a Node which are listen for that specific event.
         /// </summary>
-        /// <see cref="Node.DomNode.On(string, EventHandler)"/>
+        /// <see cref="Node.DomNode.On(string, EventHandler)" />
         /// <param name="message"></param>
         public void ClientEventTriggered(string message)
         {
@@ -36,10 +36,10 @@ namespace FlowR.Library
         }
 
         /// <summary>
-        /// Called from client when a previous message request a response 
+        ///     Called from client when a previous message request a response
         /// </summary>
-        /// <see cref="Node.DomNode.CallClientMethodWaitResponse(string, string[])"/>
-        /// <see cref="Application.CallGlobalMethodWaitResponse(string, string[])"/>
+        /// <see cref="Node.DomNode.CallClientMethodWaitResponse(string, string[])" />
+        /// <see cref="Application.CallGlobalMethodWaitResponse(string, string[])" />
         /// <param name="message"></param>
         public void ClientMessageResponse(string message)
         {
@@ -48,14 +48,14 @@ namespace FlowR.Library
             );
         }
 
-        /// <inheritdoc/>
+        /// <inheritdoc />
         public override async Task OnConnectedAsync()
         {
             await base.OnConnectedAsync();
             _applicationFlowRService.Add(Context.ConnectionId, Clients.Caller);
         }
 
-        /// <inheritdoc/>
+        /// <inheritdoc />
         public override async Task OnDisconnectedAsync(Exception e)
         {
             await base.OnDisconnectedAsync(e);

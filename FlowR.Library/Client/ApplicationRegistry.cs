@@ -1,17 +1,17 @@
-using FlowR.Library.Node;
 using System.Collections.Generic;
+using FlowR.Library.Node;
 
 namespace FlowR.Library.Client
 {
     /// <summary>
-    /// Application DomNode registry, used to fast access uuid->DomNode
+    ///     Application DomNode registry, used to fast access uuid->DomNode
     /// </summary>
     public class ApplicationRegistry
     {
         private readonly Dictionary<string, DomNode> _registerComponents = new();
 
         /// <summary>
-        /// Add to Registry
+        ///     Add to Registry
         /// </summary>
         /// <param name="node"></param>
         public void RegisterComponent(DomNode node)
@@ -20,7 +20,7 @@ namespace FlowR.Library.Client
         }
 
         /// <summary>
-        /// Remove from Registry
+        ///     Remove from Registry
         /// </summary>
         /// <param name="node"></param>
         public void UnregisterComponent(DomNode node)
@@ -29,7 +29,7 @@ namespace FlowR.Library.Client
         }
 
         /// <summary>
-        /// Get a DomNode from registry
+        ///     Get a DomNode from registry
         /// </summary>
         /// <param name="uuid"></param>
         /// <returns></returns>

@@ -5,8 +5,8 @@ namespace FlowR.Sample
 {
     public class Application : Library.Client.Application
     {
-        protected int Counter = 0;
         protected readonly Div RightColumn;
+        protected int Counter = 0;
 
         public Application(string connectionId, IClientProxy client) : base(connectionId, client)
         {

@@ -3,14 +3,14 @@ using System;
 namespace FlowR.Library.Node
 {
     /// <summary>
-    /// Manage Identifier
+    ///     Manage Identifier
     /// </summary>
     public abstract class DomNodeUuid
     {
         private string _uuid = string.Empty;
 
         /// <summary>
-        /// Get the UUID Of the Node.
+        ///     Get the UUID Of the Node.
         /// </summary>
         /// <returns></returns>
         public string GetUuid()
@@ -21,8 +21,9 @@ namespace FlowR.Library.Node
 
             return GetUuid();
         }
+
         /// <summary>
-        /// Set UUID for the Node.
+        ///     Set UUID for the Node.
         /// </summary>
         /// <param name="uuid"></param>
         /// <exception cref="Exception"></exception>

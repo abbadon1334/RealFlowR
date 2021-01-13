@@ -3,12 +3,12 @@ using FlowR.Library.Node;
 namespace FlowR.Library.Client.Message
 {
     /// <summary>
-    /// Message factory class 
+    ///     Message factory class
     /// </summary>
     public static class Factory
     {
         /// <summary>
-        /// Return MessageElement  
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
@@ -26,7 +26,7 @@ namespace FlowR.Library.Client.Message
 
 
         /// <summary>
-        /// Return MessageElement  
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -44,7 +44,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Return MessageElement  
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -60,7 +60,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Return MessageElement  
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
@@ -74,7 +74,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Return MessageElement  
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="eventName"></param>
@@ -90,7 +90,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Return MessageElement  
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="eventName"></param>
@@ -106,7 +106,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Return MessageElement  
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="text"></param>
@@ -122,7 +122,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Return MessageElement  
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -140,7 +140,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Return MessageElement  
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -158,7 +158,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Return MessageElement  
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -179,7 +179,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Return MessageElement  
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -198,7 +198,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Return MessageElement  
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -217,7 +217,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Return MessageElement  
+        ///     Return MessageElement
         /// </summary>
         /// <param name="name"></param>
         /// <param name="arguments"></param>
@@ -235,7 +235,7 @@ namespace FlowR.Library.Client.Message
 
 
         /// <summary>
-        /// Return MessageElement  
+        ///     Return MessageElement
         /// </summary>
         /// <param name="name"></param>
         /// <param name="arguments"></param>
@@ -253,7 +253,7 @@ namespace FlowR.Library.Client.Message
 
 
         /// <summary>
-        /// Return MessageElement  
+        ///     Return MessageElement
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
@@ -268,7 +268,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Return MessageElement  
+        ///     Return MessageElement
         /// </summary>
         /// <param name="path"></param>
         /// <param name="value"></param>
