@@ -12,7 +12,12 @@ namespace FlowR.Library.Client.Message
         /// When completed store response here
         /// </summary>
         public string Response;
-
+        
+        /// <inheritdoc/>
+        public MessageWithResponse() : base()
+        {
+            AddArgument("MessageUuid", GetUuid());
+        }
         /// <summary>
         /// Set the response
         /// </summary>

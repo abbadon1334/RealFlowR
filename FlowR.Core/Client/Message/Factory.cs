@@ -167,7 +167,6 @@ namespace FlowR.Library.Client.Message
         {
             var message = new MessageElementWithResponse();
             message.Action = MessageElementWithResponse.MessageActions.GetProperty;
-            message.AddArgument("MessageUuid", message.GetUuid());
             message.AddArgument("Uuid", node.Uuid);
             message.AddArgument("Name", name);
 
@@ -185,7 +184,6 @@ namespace FlowR.Library.Client.Message
         {
             var message = new MessageElement();
             message.Action = MessageElement.MessageActions.CallMethod;
-            message.AddArgument("MessageUuid", message.GetUuid());
             message.AddArgument("Uuid", node.Uuid);
             message.AddArgument("Name", name);
             message.AddArgument("Arguments", arguments);
@@ -204,7 +202,6 @@ namespace FlowR.Library.Client.Message
         {
             var message = new MessageElementWithResponse();
             message.Action = MessageElementWithResponse.MessageActions.CallMethodGetResponse;
-            message.AddArgument("MessageUuid", message.GetUuid());
             message.AddArgument("Uuid", node.Uuid);
             message.AddArgument("Name", name);
             message.AddArgument("Arguments", arguments);
@@ -222,7 +219,6 @@ namespace FlowR.Library.Client.Message
         {
             var message = new MessageGlobal();
             message.Action = MessageGlobal.MessageActions.CallGlobalMethod;
-            message.AddArgument("MessageUuid", message.GetUuid());
             message.AddArgument("Name", name);
             message.AddArgument("Arguments", arguments);
 
@@ -240,7 +236,6 @@ namespace FlowR.Library.Client.Message
         {
             var message = new MessageGlobalWithResponse();
             message.Action = MessageGlobalWithResponse.MessageActions.CallGlobalMethodGetResponse;
-            message.AddArgument("MessageUuid", message.GetUuid());
             message.AddArgument("Name", name);
             message.AddArgument("Arguments", arguments);
 
@@ -257,7 +252,6 @@ namespace FlowR.Library.Client.Message
         {
             var message = new MessageGlobalWithResponse();
             message.Action = MessageGlobalWithResponse.MessageActions.GetGlobalProperty;
-            message.AddArgument("MessageUuid", message.GetUuid());
             message.AddArgument("Name", name);
 
             return message;
