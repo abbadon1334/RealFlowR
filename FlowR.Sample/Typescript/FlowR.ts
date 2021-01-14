@@ -1,4 +1,3 @@
-
 class FlowR {
 
     /** @ts-ignore */
@@ -6,7 +5,7 @@ class FlowR {
     protected rootId: string;
 
     /** @ts-ignore*/
-    constructor(signalR:signalR, uri_path: string) {
+    constructor(signalR: signalR, uri_path: string) {
 
         /** @ts-ignore */
         this.connection = new signalR.HubConnectionBuilder()
@@ -32,7 +31,7 @@ class FlowR {
 
         this.connection.on("SetProperty", this.SetProperty.bind(this));
         this.connection.on("SetGlobalProperty", this.SetGlobalProperty.bind(this));
-        
+
         this.connection.on("GetProperty", this.GetProperty.bind(this));
         this.connection.on("GetGlobalProperty", this.GetGlobalProperty.bind(this));
 
@@ -57,7 +56,7 @@ class FlowR {
     OnDisconnect() {
         console.log('disconnect');
     }
-    
+
     CreateElement(parent_id: string, tag_name: string, attributes = [], text: string) {
 
         console.log('CreateElement', parent_id, tag_name, attributes, text);
@@ -101,9 +100,9 @@ class FlowR {
             /** @ts-ignore */
             this.connection.invoke(
                 "ClientEventTriggered",
-                JSON.stringify({ Uuid: uuid, EventName: event_name, EventArgs: { /*event: event*/ } })
+                JSON.stringify({Uuid: uuid, EventName: event_name, EventArgs: { /*event: event*/}})
             ).catch(err => {
-                return console.error(err.toString());
+                    return console.error(err.toString());
             });
         };
 
@@ -118,17 +117,16 @@ class FlowR {
         document.getElementById(uuid).innerHTML = text;
     }
 
-    SetProperty(uuid: string, property_path: string, value : string) {
-        // @todo change no eval
-        eval('document.getElementById("'+uuid+'").'+property_path+'="'+value+'"');
+    SetProperty(uuid: string, property_path: string, value: string) {
+
+        FlowR.ObjectPathBuilder(document.getElementById(uuid), property_path).Set(value);
     }
-    
-    GetProperty(message_uuid: string, uuid: string, property_path: string) : any {
+
+    GetProperty(message_uuid: string, uuid: string, property_path: string): any {
         try {
-            // @todo change no eval
             this.Invoke(
                 message_uuid,
-                eval('document.getElementById("'+uuid+'").'+property_path+'')
+                FlowR.ObjectPathBuilder(document.getElementById(uuid), property_path).Get()
             );
         } catch (e) {
             console.log(e);
@@ -136,17 +134,24 @@ class FlowR {
     }
 
     private Invoke(message_uuid: string, response) {
-        this.connection.invoke("ClientMessageResponse", JSON.stringify({Uuid: message_uuid, Response: response})
+        
+        this.connection.invoke(
+            "ClientMessageResponse",
+            JSON.stringify({Uuid: message_uuid, Response: response})
         ).catch(err => {
             return console.error(err.toString());
         });
     }
 
-    CallMethod(uuid:string, method : string, ...args) {
-        return document.getElementById(uuid)[method](...args);
+    CallMethod(uuid: string, method: string, ...args) {
+        try {
+            FlowR.ObjectPathBuilder(document.getElementById(uuid), method).Call(...args);
+        } catch (e) {
+            console.log(e);
+        }
     }
 
-    CallMethodGetResponse(message_uuid: string, uuid:string, method : string, ...args) {
+    CallMethodGetResponse(message_uuid: string, uuid: string, method: string, ...args) {
         try {
             this.Invoke(
                 message_uuid,
@@ -157,35 +162,106 @@ class FlowR {
         }
     }
 
-    CallGlobalMethod(method : string, ...args) {
-        return eval("window."+method)(...args);
-    }
-
-    CallGlobalMethodGetResponse(message_uuid: string, method : string, ...args) {
+    CallGlobalMethod(method: string, ...args) {
         try {
-            this.Invoke(
-                message_uuid,
-                this.CallGlobalMethod(method, ...args)
-            );
+            FlowR.ObjectPathBuilder(window, method).Call(...args)
         } catch (e) {
             console.log(e);
         }
     }
 
-    GetGlobalProperty(message_uuid: string, property_path: string) : any {
+    CallGlobalMethodGetResponse(message_uuid: string, path: string, ...args) {
         try {
-
-            this.Invoke(
-                message_uuid,
-                eval(property_path)
-            );
+            this.Invoke( message_uuid, FlowR.ObjectPathBuilder(window, path).Call(...args));
         } catch (e) {
             console.log(e);
         }
     }
 
-    SetGlobalProperty(uuid: string, property_path: string, value : string) {
-        // @todo change no eval
-        eval(property_path+'="'+value+'"');
+    GetGlobalProperty(message_uuid: string, property_path: string): any {
+        try {
+            this.Invoke(message_uuid, FlowR.ObjectPathBuilder(window, property_path).Get());
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    SetGlobalProperty(property_path: string, value: string) {
+        try {
+            FlowR.ObjectPathBuilder(window, property_path).Set(value);
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    public static AssertNotEmpty(str:string) {
+        FlowR.AssertNotUndefinedNotNull(str);
+        if (typeof(str) === "string" && str.length === 0) {
+            throw "Not a string or Empty";
+        }
+    }
+
+    public static AssertIsObject(obj) {
+        if (typeof (obj) !== "object") {
+            throw "Not an object";
+        }
+    }
+
+    public static AssertIsFunction(obj) {
+        if (typeof (obj) !== "function") {
+            throw "Not an object";
+        }
+    }
+
+    public static AssertNotUndefinedNotNull(obj) {
+        if (obj === undefined || obj === null) {
+            throw "Undefined or null";
+        }
+    }
+
+    public static ObjectPathBuilder(obj: object, path: string) {
+
+        // validate obj
+        FlowR.AssertIsObject(obj);
+        
+        // validate path
+        FlowR.AssertNotEmpty(path);
+
+        // split the string by separator
+        let path_chunks: string[] = path.split('.');
+
+        // traverse object
+        // stop before last
+        while (path_chunks.length > 1) {
+            obj = obj[path_chunks.shift()];
+            FlowR.AssertIsObject(obj);
+        }
+
+        // get last path
+        // !!! value attribution - without last chunk - will replace the left side var
+        let last_path_chunk: string = path_chunks[0];
+        
+        // check if last chunk is consistent
+        FlowR.AssertNotEmpty(last_path_chunk);
+
+        return {
+            Set(value): void {
+                // don't check for undefined or null
+                // it will set it and retrieve later, can be a feature :D 
+                obj[last_path_chunk] = value;
+            },
+            Get(): object {
+                // don't check for undefined or null
+                // let it return undefined @todo check if is ok or return an empty string
+                return obj[last_path_chunk];
+            },
+            Call(...args) {
+                // if undefined will throw exception better check before call
+                FlowR.AssertNotUndefinedNotNull(obj[last_path_chunk]);
+                // if not a function will throw a error
+                FlowR.AssertIsFunction(obj[last_path_chunk]);
+                return obj[last_path_chunk](...args);
+            }
+        }
     }
 }
