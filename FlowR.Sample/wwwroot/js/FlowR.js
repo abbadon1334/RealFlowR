@@ -165,17 +165,17 @@ class FlowR {
         FlowR.AssertNotEmpty(path);
         // split the string by separator
         let path_chunks = path.split('.');
-        // traverse object
-        // stop before last
-        while (path_chunks.length > 1) {
-            obj = obj[path_chunks.shift()];
-            FlowR.AssertIsObject(obj);
-        }
         // get last path
         // !!! value attribution - without last chunk - will replace the left side var
-        let last_path_chunk = path_chunks[0];
+        let last_path_chunk = path_chunks.pop();
         // check if last chunk is consistent
         FlowR.AssertNotEmpty(last_path_chunk);
+        let chunk;
+        // traverse object
+        while (chunk = path_chunks.shift()) {
+            obj = obj[chunk];
+            FlowR.AssertIsObject(obj);
+        }
         return {
             Set(value) {
                 // don't check for undefined or null
@@ -184,7 +184,7 @@ class FlowR {
             },
             Get() {
                 // don't check for undefined or null
-                // let it return undefined @todo check if is ok
+                // let it return null | undefined | "" | string @todo che if this is a correct behaviour
                 return obj[last_path_chunk];
             },
             Call(...args) {
