@@ -6,7 +6,7 @@
 Direct communication between SignalR and the DOM via JS to interact with UI.
 
 The main goal is to create a full framework that allows real time interaction
-using only server side C# __without touching HTML or JS__.
+using only server side .NET 5 __without touching HTML or JS__.
 
 ### v1.0
 
