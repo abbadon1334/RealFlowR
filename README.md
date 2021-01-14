@@ -1,4 +1,5 @@
-## RealFlowR
+## RealFlowR 
+[![Maintainability](https://api.codeclimate.com/v1/badges/b0dccaa467a682b7d5d2/maintainability)](https://codeclimate.com/github/abbadon1334/RealFlowR/maintainability)
 
 ### A low code library for RealTime UI
 
@@ -22,8 +23,4 @@ using only server side C# __without touching HTML or JS__.
 - [ ] Add Bootstrap5
 - [ ] Add Bootstrap elements
 
-Did you like the idea? Contribute are always welcome.  
-
----
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/b0dccaa467a682b7d5d2/maintainability)](https://codeclimate.com/github/abbadon1334/RealFlowR/maintainability)
+Did you like the idea? Contribute are always welcome.
