@@ -60,13 +60,13 @@ class FlowR {
     }
     StartListenEvent(uuid, event_name) {
         console.log('startListenEvent', uuid, event_name);
-        var handler = (event, uuid, event_name) => {
+        var handler = (uuid, event_name) => {
             /** @ts-ignore */
             this.connection.invoke("ClientEventTriggered", JSON.stringify({ Uuid: uuid, EventName: event_name, EventArgs: { /*event: event*/} })).catch(err => {
                 return console.error(err.toString());
             });
         };
-        document.getElementById(uuid).addEventListener(event_name, handler.bind(this, event, uuid, event_name));
+        document.getElementById(uuid).addEventListener(event_name, handler.bind(this, uuid, event_name));
     }
     StopListenEvent(uuid, event_name) {
     }
@@ -80,26 +80,23 @@ class FlowR {
     GetProperty(message_uuid, uuid, property_path) {
         try {
             // @todo change no eval
-            var response = eval('document.getElementById("' + uuid + '").' + property_path + '');
-            /** @ts-ignore */
-            this.connection.invoke("ClientMessageResponse", JSON.stringify({ Uuid: message_uuid, Response: response })).catch(err => {
-                return console.error(err.toString());
-            });
+            this.Invoke(message_uuid, eval('document.getElementById("' + uuid + '").' + property_path + ''));
         }
         catch (e) {
             console.log(e);
         }
+    }
+    Invoke(message_uuid, response) {
+        this.connection.invoke("ClientMessageResponse", JSON.stringify({ Uuid: message_uuid, Response: response })).catch(err => {
+            return console.error(err.toString());
+        });
     }
     CallMethod(uuid, method, ...args) {
         return document.getElementById(uuid)[method](...args);
     }
     CallMethodGetResponse(message_uuid, uuid, method, ...args) {
         try {
-            var response = this.CallMethod(uuid, method, ...args);
-            /** @ts-ignore */
-            this.connection.invoke("ClientMessageResponse", JSON.stringify({ Uuid: message_uuid, Response: response })).catch(err => {
-                return console.error(err.toString());
-            });
+            this.Invoke(message_uuid, this.CallMethod(uuid, method, ...args));
         }
         catch (e) {
             console.log(e);
@@ -110,11 +107,7 @@ class FlowR {
     }
     CallGlobalMethodGetResponse(message_uuid, method, ...args) {
         try {
-            var response = this.CallGlobalMethod(method, ...args);
-            /** @ts-ignore */
-            this.connection.invoke("ClientMessageResponse", JSON.stringify({ Uuid: message_uuid, Response: response })).catch(err => {
-                return console.error(err.toString());
-            });
+            this.Invoke(message_uuid, this.CallGlobalMethod(method, ...args));
         }
         catch (e) {
             console.log(e);
@@ -122,12 +115,7 @@ class FlowR {
     }
     GetGlobalProperty(message_uuid, property_path) {
         try {
-            // @todo change no eval
-            var response = eval(property_path);
-            /** @ts-ignore */
-            this.connection.invoke("ClientMessageResponse", JSON.stringify({ Uuid: message_uuid, Response: response })).catch(err => {
-                return console.error(err.toString());
-            });
+            this.Invoke(message_uuid, eval(property_path));
         }
         catch (e) {
             console.log(e);
