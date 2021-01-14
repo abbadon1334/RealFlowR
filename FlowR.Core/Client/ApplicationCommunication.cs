@@ -6,14 +6,14 @@ using Microsoft.AspNetCore.SignalR;
 namespace FlowR.Library.Client
 {
     /// <summary>
-    /// Manage Communication
+    ///     Manage Communication
     /// </summary>
     public class ApplicationCommunication
     {
-        private Application _application;
         private readonly ApplicationResponses _responses = new();
+        private readonly Application _application;
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="application"></param>
         /// <param name="client"></param>
@@ -23,7 +23,7 @@ namespace FlowR.Library.Client
             _application = application;
         }
         /// <summary>
-        /// SignalR Client reference
+        ///     SignalR Client reference
         /// </summary>
         private IClientProxy Client { get; }
         /// <summary>
@@ -32,7 +32,7 @@ namespace FlowR.Library.Client
         /// <param name="message"></param>
         public Task SendMessage(IMessage message)
         {
-            string method = message.GetRequestedAction();
+            var method = message.GetRequestedAction();
             var args = message.GetArgumentValues();
 
             return args.Length switch

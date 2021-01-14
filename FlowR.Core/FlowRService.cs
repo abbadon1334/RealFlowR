@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.SignalR;
 namespace FlowR.Library
 {
     /// <summary>
-    /// Singleton service
+    ///     Singleton service
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class FlowRService<T> where T : Application
@@ -14,7 +14,7 @@ namespace FlowR.Library
         private readonly Dictionary<string, T> _applications = new();
 
         /// <summary>
-        /// Get application from application registry
+        ///     Get application from application registry
         /// </summary>
         /// <param name="uid"></param>
         /// <returns></returns>
@@ -24,19 +24,19 @@ namespace FlowR.Library
         }
 
         /// <summary>
-        /// Add Application to Registry
+        ///     Add Application to Registry
         /// </summary>
         /// <param name="uid"></param>
         /// <param name="client"></param>
         public void Add(string uid, IClientProxy client)
         {
-            var application = (T) Activator.CreateInstance(typeof(T), uid, client);
+            var application = (T)Activator.CreateInstance(typeof(T), uid, client);
 
             _applications.Add(uid, application);
         }
 
         /// <summary>
-        /// Remove Application from registry
+        ///     Remove Application from registry
         /// </summary>
         /// <param name="uid"></param>
         /// <returns></returns>

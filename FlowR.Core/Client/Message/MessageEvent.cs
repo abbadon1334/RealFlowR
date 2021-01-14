@@ -10,19 +10,19 @@ namespace FlowR.Library.Client.Message
     public class MessageEvent : Message
     {
         // {"Uuid":"33db7762-0f15-4991-b264-7c3cc2e617b7","EventName":"click","EventArgs":{}}
-        
+
         /// <summary>
-        /// Event arguments
+        ///     Event arguments
         /// </summary>
         public readonly Dictionary<string, string> EventArgs = new();
 
         /// <summary>
-        /// Name of the Event
+        ///     Name of the Event
         /// </summary>
         public string EventName { get; set; }
-        
+
         /// <summary>
-        /// Convert JSON to MessageEvent
+        ///     Convert JSON to MessageEvent
         /// </summary>
         /// <param name="json"></param>
         /// <returns></returns>

@@ -1,16 +1,12 @@
-using System;
+using FlowR.Library.Node;
 
 namespace FlowR.Library.Client.Message
 {
     /// <summary>
-    /// Message for Clientside Nodes
+    ///     Message for Clientside Nodes
     /// </summary>
     public class MessageElement : Message
     {
-        /// <summary>
-        /// Requested Action
-        /// </summary>
-        public MessageActions Action { get; set; }
         /// <summary>
         ///     Name of the method to be called on client side signalr
         /// </summary>
@@ -61,6 +57,16 @@ namespace FlowR.Library.Client.Message
             /// </summary>
             CallMethod
         }
+
+        /// <inheritdoc />
+        public MessageElement(DomNode node)
+        {
+            if (node != null) AddArgument("Uuid", node.Uuid);
+        }
+        /// <summary>
+        ///     Requested Action
+        /// </summary>
+        public MessageActions Action { get; set; }
 
         /// <inheritdoc />
         public override string GetRequestedAction()

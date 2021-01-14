@@ -42,7 +42,7 @@ namespace FlowR.Library
         /// <see cref="ApplicationCommunication.CallGlobalMethodWaitResponse(string, string[])" />
         /// <param name="message"></param>
         public void ClientMessageResponse(string message)
-        {   
+        {
             _applicationFlowRService.Get(Context.ConnectionId).Communication.OnWaitingMessageResponse(
                 MessageResponse.FromJson(message)
             );

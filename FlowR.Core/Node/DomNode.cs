@@ -12,51 +12,18 @@ namespace FlowR.Library.Node
     /// </summary>
     public abstract class DomNode
     {
+
+        /// <summary>
+        ///     TagName of the Node : any HTML valid tag name is permitted.
+        /// </summary>
+        public readonly string TagName = "div";
         private DomNodeCollectionAttribute _attributes;
         private DomNodeCollectionDomNode _children;
         private DomNodeCollectionEvent _events;
         private DomNodeCollectionProperty _properties;
 
-        /// <summary>
-        /// The Client Application.
-        /// </summary>
-        public Application Application { get; set; }
-        
-        /// <summary>
-        /// DomNode parent
-        /// </summary>
-        public DomNode Owner { get; set; }
-        
         private string _uuid = string.Empty;
-        /// <summary>
-        /// Unique identifier of the Node
-        /// </summary>
-        /// <exception cref="Exception"></exception>
-        public string Uuid
-        {
-            get {
-                if (_uuid == string.Empty)
-                {
-                    Uuid = Guid.NewGuid().ToString();
-                }
-                return _uuid;
-            }
-            set
-            {
-                if(_uuid != string.Empty)
-                {
-                    throw new Exception($"Element Uuid is not empty (actual : '{_uuid}'))");
-                }
-                _uuid = value;
-                if (!HasAttribute("id")) SetAttribute("id", value);
-            }
-        }
-        
-        /// <summary>
-        /// TagName of the Node : any HTML valid tag name is permitted.
-        /// </summary>
-        public readonly string TagName = "div";
-        
+
         /// <summary>
         ///     Constructor
         /// </summary>
@@ -68,14 +35,43 @@ namespace FlowR.Library.Node
             SetupProperties();
         }
 
+        /// <summary>
+        ///     The Client Application.
+        /// </summary>
+        public Application Application { get; set; }
+
+        /// <summary>
+        ///     DomNode parent
+        /// </summary>
+        public DomNode Owner { get; set; }
+        /// <summary>
+        ///     Unique identifier of the Node
+        /// </summary>
+        /// <exception cref="Exception"></exception>
+        public string Uuid
+        {
+            get
+            {
+                if (_uuid == string.Empty) Uuid = Guid.NewGuid().ToString();
+                return _uuid;
+            }
+            set
+            {
+                if (_uuid != string.Empty) throw new Exception($"Element Uuid is not empty (actual : '{_uuid}'))");
+
+                _uuid = value;
+                if (!HasAttribute("id")) SetAttribute("id", value);
+            }
+        }
+
         #region Setup
-        
+
         private void SetupProperties()
         {
             _properties = new DomNodeCollectionProperty(this);
             _properties.AfterChanged += (o, args) =>
             {
-                var prop = (CollectionChangedEventArgs<string>) args;
+                var prop = (CollectionChangedEventArgs<string>)args;
                 SendMessage(Factory.MessageSetProperty(this, prop.Name, prop.Value));
             };
         }
@@ -86,12 +82,12 @@ namespace FlowR.Library.Node
             _events.AfterAdded += (o, args) =>
             {
                 SendMessage(Factory.MessageStartListenEvent(this,
-                    ((CollectionAddedEventArgs<List<EventHandler>>) args).Name));
+                    ((CollectionAddedEventArgs<List<EventHandler>>)args).Name));
             };
             _events.AfterRemoved += (o, args) =>
             {
                 SendMessage(Factory.MessageStopListenEvent(this,
-                    ((CollectionAddedEventArgs<List<EventHandler>>) args).Name));
+                    ((CollectionAddedEventArgs<List<EventHandler>>)args).Name));
             };
         }
 
@@ -100,11 +96,11 @@ namespace FlowR.Library.Node
             _children = new DomNodeCollectionDomNode(this);
             _children.AfterAdded += (o, args) =>
             {
-                SendMessage(Factory.MessageCreate(((CollectionAddedEventArgs<DomNode>) args).Value));
+                SendMessage(Factory.MessageCreate(((CollectionAddedEventArgs<DomNode>)args).Value));
             };
             _children.AfterRemoved += (o, args) =>
             {
-                SendMessage(Factory.MessageRemove(((CollectionRemovedEventArgs<DomNode>) args).Value));
+                SendMessage(Factory.MessageRemove(((CollectionRemovedEventArgs<DomNode>)args).Value));
             };
         }
 
@@ -113,12 +109,12 @@ namespace FlowR.Library.Node
             _attributes = new DomNodeCollectionAttribute(this);
             _attributes.AfterChanged += (o, args) =>
             {
-                var attr = (CollectionChangedEventArgs<string>) args;
+                var attr = (CollectionChangedEventArgs<string>)args;
                 SendMessage(Factory.MessageSetAttribute(this, attr.Name, attr.Value));
             };
             _attributes.AfterRemoved += (o, args) =>
             {
-                var attr = (CollectionAddedEventArgs<string>) args;
+                var attr = (CollectionAddedEventArgs<string>)args;
                 SendMessage(Factory.MessageRemoveAttribute(this, attr.Name));
             };
         }
@@ -128,7 +124,7 @@ namespace FlowR.Library.Node
         #region Property
 
         /// <summary>
-        /// Set Node property on client side.
+        ///     Set Node property on client side.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="value"></param>
@@ -147,13 +143,13 @@ namespace FlowR.Library.Node
             var message = Factory.MessageGetProperty(this, path);
             return await Application.Communication.SendMessageWaitResponse(message);
         }
-        
+
         #endregion
 
         #region Event Listen
-        
+
         /// <summary>
-        /// Start Listen for specified eventName.
+        ///     Start Listen for specified eventName.
         /// </summary>
         /// <param name="eventName"></param>
         /// <param name="handler"></param>
@@ -163,7 +159,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Stop Listen for specified eventName.
+        ///     Stop Listen for specified eventName.
         /// </summary>
         /// <param name="eventName"></param>
         /// <param name="handler"></param>
@@ -173,7 +169,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Handle incoming Node Event fired from client.
+        ///     Handle incoming Node Event fired from client.
         /// </summary>
         /// <remarks>Never use this. This is called from application on incoming events</remarks>
         /// <param name="eventName"></param>
@@ -183,26 +179,24 @@ namespace FlowR.Library.Node
             // @todo find a way to lower the visibility 
             _events.OnClientEventTriggered(eventName, eventArgs);
         }
+
         #endregion
 
         #region Message
 
         /// <summary>
-        /// Send a message to client side
+        ///     Send a message to client side
         /// </summary>
         /// <param name="message"></param>
         private void SendMessage(IMessage message)
         {
-            if (!IsInitialized())
-            {
-                return;
-            }
-            
+            if (!IsInitialized()) return;
+
             Application?.Communication.SendMessage(message);
         }
 
         /// <summary>
-        /// Call a method on client side on this node with arguments, don't wait for response.
+        ///     Call a method on client side on this node with arguments, don't wait for response.
         /// </summary>
         /// <param name="methodName"></param>
         /// <param name="arguments"></param>
@@ -212,7 +206,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Return Response after call a method on client side on this node with arguments.
+        ///     Return Response after call a method on client side on this node with arguments.
         /// </summary>
         /// <param name="methodName"></param>
         /// <param name="arguments"></param>
@@ -226,9 +220,9 @@ namespace FlowR.Library.Node
         #endregion
 
         #region Children
-        
+
         /// <summary>
-        /// Return count of children node attached.
+        ///     Return count of children node attached.
         /// </summary>
         /// <returns></returns>
         public int GetChildrenCount()
@@ -237,7 +231,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Get first child node from attached children.
+        ///     Get first child node from attached children.
         /// </summary>
         /// <returns></returns>
         public DomNode GetFirstChild()
@@ -280,7 +274,6 @@ namespace FlowR.Library.Node
 
         #region Attributes
 
-        
         /// <summary>
         ///     Set Attribute of the node.
         /// </summary>
@@ -305,7 +298,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Remove an Attribute.
+        ///     Remove an Attribute.
         /// </summary>
         /// <param name="name"></param>
         public void RemoveAttribute(string name)
@@ -314,7 +307,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        /// Return Attributes as Dictionary.
+        ///     Return Attributes as Dictionary.
         /// </summary>
         /// <returns></returns>
         public Dictionary<string, string> GetAttributeDictionary()
@@ -326,23 +319,23 @@ namespace FlowR.Library.Node
 
         #region initialization
 
-        
         private bool _initialized;
-        
+
         /// <summary>
-        /// Starting point of every component.
-        /// Will be called after attach to Parent.
-        /// This is the method you are looking for if you want to make a component
+        ///     Starting point of every component.
+        ///     Will be called after attach to Parent.
+        ///     This is the method you are looking for if you want to make a component
         /// </summary>
         /// <exception cref="Exception">Cannot be called multiple times</exception>
         public virtual void Init()
         {
             if (IsInitialized()) throw new Exception("Already initialized");
+
             _initialized = true;
         }
-        
+
         /// <summary>
-        /// Return if the DomNode is initialized.
+        ///     Return if the DomNode is initialized.
         /// </summary>
         /// <returns></returns>
         protected bool IsInitialized()
@@ -353,22 +346,23 @@ namespace FlowR.Library.Node
         #endregion
 
         #region Text
-        
+
         private string _text = string.Empty;
         /// <summary>
-        /// Content Text of the element 
+        ///     Content Text of the element
         /// </summary>
         public string Text
         {
             get => _text;
-            set {
+            set
+            {
                 _text = value;
                 SendMessage(Factory.MessageSetText(this, _text));
             }
         }
-        
+
         /// <summary>
-        /// Fluent Set Text
+        ///     Fluent Set Text
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
@@ -376,10 +370,11 @@ namespace FlowR.Library.Node
         public DomNode SetText(string text)
         {
             Text = text;
-            
+
             return this;
         }
 
         #endregion
+
     }
 }
