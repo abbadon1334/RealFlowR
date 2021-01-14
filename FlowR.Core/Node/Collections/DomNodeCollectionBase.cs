@@ -11,11 +11,6 @@ namespace FlowR.Library.Node.Collections
     public abstract class DomNodeCollection<T>
     {
         private readonly Dictionary<string, T> _collection = new();
-        
-        /// <summary>
-        /// DomNode parent
-        /// </summary>
-        public DomNode Owner { get; set; }
 
         /// <summary>
         ///     Fire after add to collection
@@ -58,6 +53,11 @@ namespace FlowR.Library.Node.Collections
         }
 
         /// <summary>
+        ///     DomNode parent
+        /// </summary>
+        public DomNode Owner { get; set; }
+
+        /// <summary>
         ///     Set an item in collection
         /// </summary>
         /// <param name="name"></param>
@@ -75,11 +75,8 @@ namespace FlowR.Library.Node.Collections
         }
         private void FireBeforeEvents(string name, T value, T oldValue, bool exists)
         {
-            if (!exists)
-            {
-                return;
-            }
-            
+            if (!exists) return;
+
             BeforeAdded?.Invoke(Owner, new CollectionAddedEventArgs<T>
             {
                 Name = name,
@@ -97,14 +94,12 @@ namespace FlowR.Library.Node.Collections
         private void FireAfterEvents(string name, T value, T oldValue, bool exists)
         {
             if (!exists)
-            {
                 AfterAdded?.Invoke(Owner, new CollectionAddedEventArgs<T>
                 {
                     Name = name,
                     Value = value
                 });
-            }
-            
+
             AfterChanged?.Invoke(Owner, new CollectionChangedEventArgs<T>
             {
                 Name = name,
@@ -121,11 +116,11 @@ namespace FlowR.Library.Node.Collections
         {
             var value = Get(name);
 
-            BeforeRemoved?.Invoke(Owner, new CollectionRemovedEventArgs<T> {Name = name, Value = value});
+            BeforeRemoved?.Invoke(Owner, new CollectionRemovedEventArgs<T> { Name = name, Value = value });
 
             _collection.Remove(name);
 
-            AfterRemoved?.Invoke(Owner, new CollectionRemovedEventArgs<T> {Name = name, Value = value});
+            AfterRemoved?.Invoke(Owner, new CollectionRemovedEventArgs<T> { Name = name, Value = value });
         }
 
         /// <summary>
@@ -219,7 +214,7 @@ namespace FlowR.Library.Node.Collections
     public class CollectionChangedEventArgs<T> : CollectionAddedEventArgs<T>
     {
         /// <summary>
-        /// Item value before change @todo this is probably not correct for object due to referencing
+        ///     Item value before change @todo this is probably not correct for object due to referencing
         /// </summary>
         public T OldValue;
     }

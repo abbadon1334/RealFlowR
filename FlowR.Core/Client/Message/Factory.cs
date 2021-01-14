@@ -14,10 +14,7 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageCreate(DomNode node)
         {
-            var message = new MessageElement(null)
-            {
-                Action = MessageElement.MessageActions.CreateElement
-            };
+            var message = GetMessageElement(null, MessageElement.MessageActions.CreateElement);
             message.AddArgument("OwnerUuid", node.Owner.Uuid);
             message.AddArgument("TagName", node.TagName);
             message.AddArgument("Attributes", node.GetAttributeDictionary());
@@ -36,10 +33,7 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageSetAttribute(DomNode node, string name, string value)
         {
-            var message = new MessageElement(node)
-            {
-                Action = MessageElement.MessageActions.SetAttribute
-            };
+            var message = GetMessageElement(node, MessageElement.MessageActions.SetAttribute);
             message.AddArgument("Name", name);
             message.AddArgument("Value", value);
 
@@ -54,10 +48,7 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageRemoveAttribute(DomNode node, string name)
         {
-            var message = new MessageElement(node)
-            {
-                Action = MessageElement.MessageActions.RemoveAttribute
-            };
+            var message = GetMessageElement(node, MessageElement.MessageActions.RemoveAttribute);
             message.AddArgument("Name", name);
 
             return message;
@@ -70,10 +61,7 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageRemove(DomNode node)
         {
-            var message = new MessageElement(node)
-            {
-                Action = MessageElement.MessageActions.RemoveElement
-            };
+            var message = GetMessageElement(node, MessageElement.MessageActions.RemoveElement);
 
             return message;
         }
@@ -86,10 +74,7 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageStartListenEvent(DomNode node, string eventName)
         {
-            var message = new MessageElement(node)
-            {
-                Action = MessageElement.MessageActions.StartListenEvent
-            };
+            var message = GetMessageElement(node, MessageElement.MessageActions.StartListenEvent);
             message.AddArgument("Name", eventName);
 
             return message;
@@ -103,10 +88,7 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageStopListenEvent(DomNode node, string eventName)
         {
-            var message = new MessageElement(node)
-            {
-                Action = MessageElement.MessageActions.StopListenEvent
-            };
+            var message = GetMessageElement(node, MessageElement.MessageActions.StopListenEvent);
             message.AddArgument("Name", eventName);
 
             return message;
@@ -120,10 +102,7 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageSetText(DomNode node, string text)
         {
-            var message = new MessageElement(node)
-            {
-                Action = MessageElement.MessageActions.SetText
-            };
+            var message = GetMessageElement(node, MessageElement.MessageActions.SetText);
             message.AddArgument("Value", text);
 
             return message;
@@ -138,8 +117,7 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageSetProperty(DomNode node, string name, string value)
         {
-            var message = new MessageElement(node);
-            message.Action = MessageElement.MessageActions.SetProperty;
+            var message = GetMessageElement(node, MessageElement.MessageActions.SetProperty);
             message.AddArgument("Name", name);
             message.AddArgument("Value", value);
 
@@ -155,10 +133,7 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageCallMethod(DomNode node, string name, params string[] args)
         {
-            var message = new MessageElement(node)
-            {
-                Action = MessageElement.MessageActions.CallMethod
-            };
+            var message = GetMessageElement(node, MessageElement.MessageActions.CallMethod);
             message.AddArgument("Name", name);
             message.AddArgument("Arguments", args);
 
@@ -166,24 +141,21 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
         /// <returns></returns>
         public static IMessageResponse MessageGetProperty(DomNode node, string name)
         {
-            var message = new MessageElementWithResponse(node)
-            {
-                Action = MessageElementWithResponse.MessageActions.GetProperty
-            };
+            var message = GetMessageElementWithResponse(node, MessageElementWithResponse.MessageActions.GetProperty);
             message.AddArgument("Name", name);
 
             return message;
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -191,10 +163,7 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageMethodCall(DomNode node, string name, string[] arguments)
         {
-            var message = new MessageElement(node)
-            {
-                Action = MessageElement.MessageActions.CallMethod
-            };
+            var message = GetMessageElement(node, MessageElement.MessageActions.CallMethod);
             message.AddArgument("Name", name);
             message.AddArgument("Arguments", arguments);
 
@@ -202,7 +171,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -210,76 +179,92 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessageResponse MessageMethodCallWaitResponse(DomNode node, string name, string[] arguments)
         {
-            var message = new MessageElementWithResponse(node)
-            {
-                Action = MessageElementWithResponse.MessageActions.CallMethodGetResponse
-            };
+            var message = GetMessageElementWithResponse(node, MessageElementWithResponse.MessageActions.CallMethodGetResponse);
             message.AddArgument("Name", name);
             message.AddArgument("Arguments", arguments);
 
             return message;
         }
+        private static MessageElementWithResponse GetMessageElementWithResponse(DomNode node, MessageElementWithResponse.MessageActions action)
+        {
+            var message = new MessageElementWithResponse(node)
+            {
+                Action = action
+            };
+            return message;
+        }
+
+        private static MessageElement GetMessageElement(DomNode node, MessageElement.MessageActions action)
+        {
+            var message = new MessageElement(node)
+            {
+                Action = action
+            };
+            return message;
+        }
+
+        private static MessageGlobal GetMessageGlobal(MessageGlobal.MessageActions action, string name, string[] arguments = null)
+        {
+            var message = new MessageGlobal(name, arguments)
+            {
+                Action = action
+            };
+
+            return message;
+        }
+
+        private static MessageGlobalWithResponse GetMessageGlobalWithResponse(MessageGlobalWithResponse.MessageActions action, string name, string[] arguments = null)
+        {
+            var message = new MessageGlobalWithResponse(name, arguments)
+            {
+                Action = action
+            };
+
+            return message;
+        }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="name"></param>
         /// <param name="arguments"></param>
         /// <returns></returns>
         public static IMessage MessageGlobalMethodCall(string name, string[] arguments)
         {
-            var message = new MessageGlobal(name, arguments)
-            {
-                Action = MessageGlobal.MessageActions.CallGlobalMethod
-            };
-
-            return message;
+            return GetMessageGlobal(MessageGlobal.MessageActions.CallGlobalMethod, name, arguments);
         }
 
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="name"></param>
         /// <param name="arguments"></param>
         /// <returns></returns>
         public static IMessageResponse MessageGlobalMethodCallWaitResponse(string name, string[] arguments)
         {
-            var message = new MessageGlobalWithResponse(name, arguments)
-            {
-                Action = MessageGlobalWithResponse.MessageActions.CallGlobalMethodGetResponse
-            };
-
-            return message;
+            return GetMessageGlobalWithResponse(MessageGlobalWithResponse.MessageActions.CallGlobalMethodGetResponse, name, arguments);
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
         public static IMessageResponse MessageGlobalGetPropertyWaitResponse(string name)
         {
-            var message = new MessageGlobalWithResponse(name)
-            {
-                Action = MessageGlobalWithResponse.MessageActions.GetGlobalProperty
-            };
-
-            return message;
+            return GetMessageGlobalWithResponse(MessageGlobalWithResponse.MessageActions.GetGlobalProperty, name);
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="path"></param>
         /// <param name="value"></param>
         /// <returns></returns>
         public static IMessage MessageSetGlobalProperty(string path, string value)
         {
-            var message = new MessageGlobal(path)
-            {
-                Action = MessageGlobal.MessageActions.SetProperty
-            };
+            var message = GetMessageGlobal(MessageGlobal.MessageActions.SetProperty, path);
             message.AddArgument("Value", value);
 
             return message;

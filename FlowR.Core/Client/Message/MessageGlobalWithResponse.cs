@@ -3,23 +3,9 @@ namespace FlowR.Library.Client.Message
     /// <inheritdoc />
     public class MessageGlobalWithResponse : MessageResponse
     {
-        /// <inheritdoc />
-        public MessageGlobalWithResponse(string name, string[] arguments = null) : base()
-        {
-            AddArgument("Name", name);
-            if (arguments != null)
-            {
-                AddArgument("Arguments", arguments);
-            }
-        }
 
         /// <summary>
-        /// Requested Action
-        /// </summary>
-        public MessageActions Action { get; set; }
-        
-        /// <summary>
-        /// Possible Actions
+        ///     Possible Actions
         /// </summary>
         public enum MessageActions
         {
@@ -33,6 +19,18 @@ namespace FlowR.Library.Client.Message
             /// </summary>
             GetGlobalProperty
         }
+
+        /// <inheritdoc />
+        public MessageGlobalWithResponse(string name, string[] arguments = null)
+        {
+            AddArgument("Name", name);
+            if (arguments != null) AddArgument("Arguments", arguments);
+        }
+
+        /// <summary>
+        ///     Requested Action
+        /// </summary>
+        public MessageActions Action { get; set; }
 
         /// <inheritdoc />
         public override string GetRequestedAction()

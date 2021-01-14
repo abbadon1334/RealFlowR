@@ -1,25 +1,15 @@
-using System;
 using FlowR.Library.Node;
 
 namespace FlowR.Library.Client.Message
 {
     /// <summary>
-    /// Message waiting Response for Clientside Nodes
+    ///     Message waiting Response for Clientside Nodes
     /// </summary>
     public class MessageElementWithResponse : MessageResponse
     {
-        /// <inheritdoc />
-        public MessageElementWithResponse(DomNode node)
-        {
-            AddArgument("Uuid", node.Uuid);
-        }
-        /// <summary>
-        /// Requested Action
-        /// </summary>
-        public MessageActions Action { get; set; }
 
         /// <summary>
-        /// Possible Actions
+        ///     Possible Actions
         /// </summary>
         public enum MessageActions
         {
@@ -33,6 +23,16 @@ namespace FlowR.Library.Client.Message
             /// </summary>
             CallMethodGetResponse
         }
+
+        /// <inheritdoc />
+        public MessageElementWithResponse(DomNode node)
+        {
+            AddArgument("Uuid", node.Uuid);
+        }
+        /// <summary>
+        ///     Requested Action
+        /// </summary>
+        public MessageActions Action { get; set; }
 
         /// <inheritdoc />
         public override string GetRequestedAction()

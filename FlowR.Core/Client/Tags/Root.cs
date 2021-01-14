@@ -7,6 +7,9 @@ namespace FlowR.Library.Client.Tags
     /// </summary>
     public class Root : DomNode
     {
+
+        /// <inheritdoc cref="DomNode.TagName" />
+        public new readonly string TagName = "body";
         /// <summary>
         ///     [internal use]
         /// </summary>
@@ -15,8 +18,5 @@ namespace FlowR.Library.Client.Tags
         {
             Uuid = rootId;
         }
-
-        /// <inheritdoc cref="DomNode.TagName" />
-        public new readonly string TagName = "body";
     }
 }

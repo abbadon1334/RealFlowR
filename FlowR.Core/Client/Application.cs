@@ -1,5 +1,4 @@
 using System;
-using System.Threading.Tasks;
 using FlowR.Library.Client.Message;
 using FlowR.Library.Client.Tags;
 using FlowR.Library.Node;
@@ -16,32 +15,25 @@ namespace FlowR.Library.Client
         private readonly ApplicationTimers _timers = new();
 
         /// <summary>
-        /// Root element of the Application.
-        /// The composition tree that draw client UI starts from here.
+        ///     Root element of the Application.
+        ///     The composition tree that draw client UI starts from here.
         /// </summary>
         protected readonly Root RootElement;
 
         /// <summary>
-        /// Element ID of the master container for the application
+        ///     Element ID of the master container for the application
         /// </summary>
         protected readonly string RootElementId = "flow-root";
-        private readonly ApplicationCommunication _communication;
-        
-        /// <inheritdoc cref="ApplicationCommunication"/>
-        public ApplicationCommunication Communication
-        {
-            get { return _communication; }
-        }
 
         /// <summary>
-        /// this will be called from the FlowRHub Service
+        ///     this will be called from the FlowRHub Service
         /// </summary>
         /// <param name="connectionId">connectionId from Hub</param>
         /// <param name="client">SignalR client from Hub</param>
         protected Application(string connectionId, IClientProxy client)
         {
             ConnectionId = connectionId;
-            _communication = new ApplicationCommunication(this, client);
+            Communication = new ApplicationCommunication(this, client);
 
             // Prepare the root element 
             RootElement = new Root(RootElementId);
@@ -55,14 +47,17 @@ namespace FlowR.Library.Client
             client.SendAsync("OnInit", RootElementId);
         }
 
+        /// <inheritdoc cref="ApplicationCommunication" />
+        public ApplicationCommunication Communication { get; }
+
         /// <summary>
-        /// UUID of the Context.ConnectionId.
+        ///     UUID of the Context.ConnectionId.
         /// </summary>
         private string ConnectionId { get; }
 
         /// <summary>
-        /// [internal use] Add Node to registry.
-        /// Internally called after add to parent Node, usually there is no need to be called.
+        ///     [internal use] Add Node to registry.
+        ///     Internally called after add to parent Node, usually there is no need to be called.
         /// </summary>
         /// <param name="node"></param>
         public void RegisterComponent(DomNode node)
@@ -124,7 +119,7 @@ namespace FlowR.Library.Client
         /// <param name="timer"></param>
         public void CancelTimer(ApplicationTimer timer)
         {
-           _timers.Remove(timer);
+            _timers.Remove(timer);
         }
     }
 }
