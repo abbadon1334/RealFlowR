@@ -64,9 +64,9 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        ///     TagName of the Node : any HTML valid tag name is permitted.
+        /// TagName of the Node : any HTML valid tag name is permitted.
         /// </summary>
-        protected abstract string TagName { get; }
+        public readonly string TagName = "div";
 
         private void SetupProperties()
         {
@@ -140,15 +140,6 @@ namespace FlowR.Library.Node
         {
             var message = Factory.MessageGetProperty(this, path);
             return await Application.Communication.SendMessageWaitResponse(message);
-        }
-
-        /// <summary>
-        /// Get TagName of the Node.
-        /// </summary>
-        /// <returns></returns>
-        public string GetTagName()
-        {
-            return TagName;
         }
 
         /// <summary>

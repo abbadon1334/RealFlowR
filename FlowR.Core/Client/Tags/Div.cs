@@ -8,6 +8,6 @@ namespace FlowR.Library.Client.Tags
     public class Div : DomNode
     {
         /// <inheritdoc cref="DomNode.TagName" />
-        protected override string TagName => "div";
+        public new readonly string TagName = "div";
     }
 }

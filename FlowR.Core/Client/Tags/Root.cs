@@ -17,6 +17,6 @@ namespace FlowR.Library.Client.Tags
         }
 
         /// <inheritdoc cref="DomNode.TagName" />
-        protected override string TagName => "body";
+        public new readonly string TagName = "body";
     }
 }

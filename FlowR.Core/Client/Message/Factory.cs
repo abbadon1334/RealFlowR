@@ -17,7 +17,7 @@ namespace FlowR.Library.Client.Message
             var message = new MessageElement();
             message.Method = MessageElement.MethodName.CreateElement.ToString();
             message.AddArgument("OwnerUuid", node.Owner.Uuid);
-            message.AddArgument("TagName", node.GetTagName());
+            message.AddArgument("TagName", node.TagName);
             message.AddArgument("Attributes", node.GetAttributeDictionary());
             message.AddArgument("Text", node.Text);
 

@@ -8,6 +8,6 @@ namespace FlowR.Library.Client.Tags
     public class Button : DomNode
     {
         /// <inheritdoc cref="DomNode.TagName" />
-        protected override string TagName => "button";
+        public new readonly string TagName = "button";
     }
 }

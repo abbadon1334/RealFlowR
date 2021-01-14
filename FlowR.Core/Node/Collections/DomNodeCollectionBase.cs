@@ -64,33 +64,47 @@ namespace FlowR.Library.Node.Collections
         /// <param name="value"></param>
         protected void Set(string name, T value)
         {
-            var oldValue = value;
             var exists = Exists(name);
+            var oldValue = value;
 
-            if (!exists)
-                BeforeAdded?.Invoke(Owner, new CollectionAddedEventArgs<T>
-                {
-                    Name = name,
-                    Value = value
-                });
-
-            if (!exists)
-                BeforeChanged?.Invoke(Owner, new CollectionChangedEventArgs<T>
-                {
-                    Name = name,
-                    Value = value,
-                    OldValue = oldValue
-                });
+            FireBeforeEvents(name, value, oldValue, exists);
 
             _collection[name] = value;
 
+            FireAfterEvents(name, value, oldValue, exists);
+        }
+        private void FireBeforeEvents(string name, T value, T oldValue, bool exists)
+        {
             if (!exists)
+            {
+                return;
+            }
+            
+            BeforeAdded?.Invoke(Owner, new CollectionAddedEventArgs<T>
+            {
+                Name = name,
+                Value = value
+            });
+
+            BeforeChanged?.Invoke(Owner, new CollectionChangedEventArgs<T>
+            {
+                Name = name,
+                Value = value,
+                OldValue = oldValue
+            });
+        }
+
+        private void FireAfterEvents(string name, T value, T oldValue, bool exists)
+        {
+            if (!exists)
+            {
                 AfterAdded?.Invoke(Owner, new CollectionAddedEventArgs<T>
                 {
                     Name = name,
                     Value = value
                 });
-
+            }
+            
             AfterChanged?.Invoke(Owner, new CollectionChangedEventArgs<T>
             {
                 Name = name,
