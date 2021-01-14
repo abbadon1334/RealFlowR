@@ -2,6 +2,8 @@ using FlowR.Library.Node;
 
 namespace FlowR.Library.Client.Message
 {
+    // @todo 4 type of message one single factory, is better to move it directly in classes as static factory with different initialization 
+    
     /// <summary>
     ///     Message factory class
     /// </summary>
