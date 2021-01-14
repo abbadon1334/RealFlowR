@@ -30,8 +30,9 @@ namespace FlowR.Library
         /// <param name="message"></param>
         public void ClientEventTriggered(string message)
         {
-            var decodedMessage = MessageEvent.FromJson(message);
-            _applicationFlowRService.Get(Context.ConnectionId).OnClientEventTriggered(decodedMessage);
+            _applicationFlowRService.Get(Context.ConnectionId).OnClientEventTriggered(
+                MessageEvent.FromJson(message)
+            );
         }
 
         /// <summary>
@@ -41,11 +42,9 @@ namespace FlowR.Library
         /// <see cref="ApplicationCommunication.CallGlobalMethodWaitResponse(string, string[])" />
         /// <param name="message"></param>
         public void ClientMessageResponse(string message)
-        {
-            var decodedMessage = MessageResponse.FromJson(message);
-            
+        {   
             _applicationFlowRService.Get(Context.ConnectionId).Communication.OnWaitingMessageResponse(
-                decodedMessage
+                MessageResponse.FromJson(message)
             );
         }
 
