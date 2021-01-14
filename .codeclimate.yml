@@ -2,3 +2,4 @@ version: "2"
 exclude_patterns:
   - "**/wwwroot/lib/"
   - "**/wwwroot/js/signalr/"
+  - "**/wwwroot/js/FlowR.js"
