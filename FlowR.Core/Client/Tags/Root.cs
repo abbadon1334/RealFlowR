@@ -13,7 +13,7 @@ namespace FlowR.Library.Client.Tags
         /// <param name="rootId"></param>
         public Root(string rootId)
         {
-            SetUuid(rootId);
+            Uuid = rootId;
         }
 
         /// <inheritdoc cref="DomNode.TagName" />

@@ -18,12 +18,12 @@ namespace FlowR.Library.Node.Collections
         /// <returns></returns>
         public DomNode Add(DomNode node)
         {
-            node.SetApplication(GetOwner().GetApplication());
-            node.SetOwner(GetOwner());
+            node.Application = Owner.Application;
+            node.Owner = Owner;
 
-            Set(node.GetUuid(), node);
+            Set(node.Uuid, node);
 
-            node.GetApplication().RegisterComponent(node);
+            node.Application.RegisterComponent(node);
             node.Init();
 
             return node;
@@ -33,11 +33,11 @@ namespace FlowR.Library.Node.Collections
         /// summary>
         public void Remove(DomNode node)
         {
-            node.SetOwner(null);
-            node.SetApplication(null);
-            Unset(node.GetUuid());
+            node.Owner = null;
+            node.Application = null;
+            Unset(node.Uuid);
 
-            GetOwner().GetApplication().UnregisterComponent(node);
+            Owner.Application.UnregisterComponent(node);
         }
     }
 }

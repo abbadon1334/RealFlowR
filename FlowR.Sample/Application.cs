@@ -2,7 +2,7 @@ using System;
 using FlowR.Library.Client.Tags;
 using Microsoft.AspNetCore.SignalR;
 
-namespace FlowR.Sample
+namespace FlowR
 {
     public class Application : Library.Client.Application
     {
@@ -27,7 +27,7 @@ namespace FlowR.Sample
                 .SetText("Server Time");
 
             AddTimer(1 /* 1 millisec to see maximum speed */,(sender, args) =>{
-                cardHeaderTime.SetText($"ApplicationTimer which update Text every (1ms) with server Time : {DateTime.Now:O}");
+            //    cardHeaderTime.SetText($"ApplicationTimer which update Text every (1ms) with server Time : {DateTime.Now:O}");
             });
 
             var cardHeader = container
@@ -67,8 +67,8 @@ namespace FlowR.Sample
                 ClearLogActions();
                 AddLogAction("button Add1000 clicked on client");
                 AddLogAction("JS Client : notify server that a click event happen on DomNode with UID : " +
-                             buttonAdd1000.GetUuid());
-                AddLogAction("SRV : search DomNode registry for UID : " + buttonAdd1000.GetUuid());
+                             buttonAdd1000.Uuid);
+                AddLogAction("SRV : search DomNode registry for UID : " + buttonAdd1000.Uuid);
                 AddLogAction("SRV : trigger defined callback on click");
                 AddLogAction(
                     "SRV : which will fire 1000 create event on client side and for every call update the children count");
@@ -93,8 +93,8 @@ namespace FlowR.Sample
                 ClearLogActions();
                 AddLogAction("button Remove clicked on client");
                 AddLogAction("JS Client : notify server that a click event happen on DomNode with UID : " +
-                             buttonRemove.GetUuid());
-                AddLogAction("SRV : search DomNode registry for UID : " + buttonRemove.GetUuid());
+                             buttonRemove.Uuid);
+                AddLogAction("SRV : search DomNode registry for UID : " + buttonRemove.Uuid);
                 AddLogAction("SRV : trigger defined callback on click");
                 AddLogAction(
                     "SRV : which will fire 1000 remove child event on client side and for every call update the children count");
@@ -113,12 +113,12 @@ namespace FlowR.Sample
                 ClearLogActions();
                 AddLogAction("button Add1000 clicked on client");
                 AddLogAction("JS Client : notify server that a click event happen on DomNode with UID : " +
-                             buttonTestResponse.GetUuid());
-                AddLogAction("SRV : search DomNode registry for UID : " + buttonTestResponse.GetUuid());
+                             buttonTestResponse.Uuid);
+                AddLogAction("SRV : search DomNode registry for UID : " + buttonTestResponse.Uuid);
                 AddLogAction("SRV : trigger defined callback on click");
                 AddLogAction("SRV : Ask client for JS property `innerHTML`");
                 AddLogAction("JS : Response with `innerHTML` value");
-                AddLogAction("SRV : Set client " + buttonTestResponse.GetUuid() +
+                AddLogAction("SRV : Set client " + buttonTestResponse.Uuid +
                              " JS property `innerHTML` with the same label adding a point at the end");
 
                 var label = await buttonTestResponse.GetProperty("innerHTML");
@@ -135,7 +135,7 @@ namespace FlowR.Sample
 
         private void AddLogAction(string log)
         {
-            RightColumn.SetText(RightColumn.GetText() + log + "<br/>");
+            RightColumn.Text += log + "<br/>";
         }
     }
 }

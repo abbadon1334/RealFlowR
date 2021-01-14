@@ -33,7 +33,7 @@ namespace FlowR.Library.Node.Collections
         /// <inheritdoc cref="DomNode.OnClientEventTriggered" />
         public void OnClientEventTriggered(string eventName, EventArgs eventArgs)
         {
-            Get(eventName).ForEach(observerDelegate => observerDelegate.Invoke(GetOwner(), eventArgs));
+            Get(eventName).ForEach(observerDelegate => observerDelegate.Invoke(Owner, eventArgs));
         }
     }
 }

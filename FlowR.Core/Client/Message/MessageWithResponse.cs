@@ -2,23 +2,15 @@ using Newtonsoft.Json;
 
 namespace FlowR.Library.Client.Message
 {
+    /// <summary>
+    /// Message for waiting response
+    /// </summary>
     public class MessageWithResponse : Message
     {
-        private MessageWithResponseCallback _callback;
-
         /// <summary>
         ///     When completed store response here
         /// </summary>
         public string Response;
-
-        /// <summary>
-        ///     Set the Callback that will be triggered when response arrive
-        /// </summary>
-        /// <param name="callback"></param>
-        public void SetCallback(MessageWithResponseCallback callback)
-        {
-            _callback = callback;
-        }
 
         /// <summary>
         ///     Set the response
@@ -27,7 +19,6 @@ namespace FlowR.Library.Client.Message
         public void SetResponse(string response)
         {
             Response = response;
-            _callback?.Invoke(response);
         }
 
         /// <summary>
@@ -50,6 +41,4 @@ namespace FlowR.Library.Client.Message
             return msg;
         }
     }
-
-    public delegate void MessageWithResponseCallback(string response);
 }

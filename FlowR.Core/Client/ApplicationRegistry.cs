@@ -16,7 +16,7 @@ namespace FlowR.Library.Client
         /// <param name="node"></param>
         public void RegisterComponent(DomNode node)
         {
-            _registerComponents[node.GetUuid()] = node;
+            _registerComponents[node.Uuid] = node;
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace FlowR.Library.Client
         /// <param name="node"></param>
         public void UnregisterComponent(DomNode node)
         {
-            _registerComponents.Remove(node.GetUuid());
+            _registerComponents.Remove(node.Uuid);
         }
 
         /// <summary>

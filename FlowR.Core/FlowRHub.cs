@@ -39,11 +39,11 @@ namespace FlowR.Library
         ///     Called from client when a previous message request a response
         /// </summary>
         /// <see cref="Node.DomNode.CallClientMethodWaitResponse(string, string[])" />
-        /// <see cref="Application.CallGlobalMethodWaitResponse(string, string[])" />
+        /// <see cref="ApplicationCommunication.CallGlobalMethodWaitResponse(string, string[])" />
         /// <param name="message"></param>
         public void ClientMessageResponse(string message)
         {
-            _applicationFlowRService.Get(Context.ConnectionId).OnWaitingMessageResponse(
+            _applicationFlowRService.Get(Context.ConnectionId).Communication.OnWaitingMessageResponse(
                 MessageWithResponse.FromJson(message)
             );
         }

@@ -1,5 +1,4 @@
 using FlowR.Library;
-using FlowR.Sample;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

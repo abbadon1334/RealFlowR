@@ -24,7 +24,7 @@ namespace FlowR.Library.Client
         public async Task<string> WaitResponse(Application app, MessageWithResponse message, int timeoutSeconds = 2)
         {
             _pending.TryAdd(message.GetUuid(), message);
-            await app.SendMessage(message);
+            await app.Communication.SendMessage(message);
             var answerCancel = new CancellationTokenSource();
             answerCancel.CancelAfter(TimeSpan.FromSeconds(timeoutSeconds));
 
