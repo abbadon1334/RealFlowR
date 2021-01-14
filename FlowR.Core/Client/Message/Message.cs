@@ -1,15 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace FlowR.Library.Client.Message
 {
     /// <summary>
     ///     Message Class
     /// </summary>
-    public abstract class Message
+    public abstract class Message : IMessage
     {
-        private readonly Dictionary<string, object> Arguments = new();
+        private readonly Dictionary<string, object> _arguments = new();
 
         /// <summary>
         ///     Message Uuid
@@ -24,11 +26,6 @@ namespace FlowR.Library.Client.Message
             // Generate Uuid
             Uuid = Guid.NewGuid().ToString();
         }
-
-        /// <summary>
-        ///     Message Method name @todo i think is better to be changed in Action
-        /// </summary>
-        public string Method { get; set; }
 
         /// <summary>
         ///     Get the Uuid of the message.
@@ -46,16 +43,22 @@ namespace FlowR.Library.Client.Message
         /// <param name="value"></param>
         public void AddArgument(string name, object value)
         {
-            Arguments[name] = value;
+            _arguments[name] = value;
         }
 
+        /// <summary>
+        /// Get Action as string
+        /// </summary>
+        /// <returns></returns>
+        public abstract string GetRequestedAction();
+        
         /// <summary>
         ///     Get Arguments as array
         /// </summary>
         /// <returns></returns>
         public object[] GetArgumentValues()
         {
-            return Arguments.Values.ToArray();
+            return _arguments.Values.ToArray();
         }
     }
 }

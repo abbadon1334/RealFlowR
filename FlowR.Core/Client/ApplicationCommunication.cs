@@ -32,17 +32,18 @@ namespace FlowR.Library.Client
         /// <param name="message"></param>
         public Task SendMessage(Message.Message message)
         {
+            string method = message.GetRequestedAction();
             var args = message.GetArgumentValues();
 
             return args.Length switch
             {
-                0 => Client.SendAsync(message.Method),
-                1 => Client.SendAsync(message.Method, args[0]),
-                2 => Client.SendAsync(message.Method, args[0], args[1]),
-                3 => Client.SendAsync(message.Method, args[0], args[1], args[2]),
-                4 => Client.SendAsync(message.Method, args[0], args[1], args[2], args[3]),
-                5 => Client.SendAsync(message.Method, args[0], args[1], args[2], args[3], args[4]),
-                6 => Client.SendAsync(message.Method, args[0], args[1], args[2], args[3], args[4], args[5]),
+                0 => Client.SendAsync(method),
+                1 => Client.SendAsync(method, args[0]),
+                2 => Client.SendAsync(method, args[0], args[1]),
+                3 => Client.SendAsync(method, args[0], args[1], args[2]),
+                4 => Client.SendAsync(method, args[0], args[1], args[2], args[3]),
+                5 => Client.SendAsync(method, args[0], args[1], args[2], args[3], args[4]),
+                6 => Client.SendAsync(method, args[0], args[1], args[2], args[3], args[4], args[5]),
                 _ => throw new Exception("Message Arguments Array to long")
             };
         }

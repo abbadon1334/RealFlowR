@@ -9,6 +9,11 @@ namespace FlowR.Library.Client.Message
     /// </summary>
     public class MessageEvent : Message
     {
+        
+        /// <summary>
+        /// Possible Actions
+        /// </summary>
+        public enum MessageEventActions { }
         /// <summary>
         ///     Event arguments
         /// </summary>
@@ -27,6 +32,15 @@ namespace FlowR.Library.Client.Message
         public static MessageEvent FromJson(string json)
         {
             return JsonConvert.DeserializeObject<MessageEvent>(json);
+        }
+        
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <returns></returns>
+        public override string GetRequestedAction()
+        {
+            throw new Exception("Event don't have an Action"); // @todo remove this no need
         }
     }
 

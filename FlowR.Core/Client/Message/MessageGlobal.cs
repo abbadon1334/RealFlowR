@@ -4,9 +4,15 @@ namespace FlowR.Library.Client.Message
     /// <inheritdoc />
     public class MessageGlobal : Message
     {
-        /// <inheritdoc cref="Message.Method" />
-        /// >
-        public enum MethodName
+        /// <summary>
+        /// Requested Action
+        /// </summary>
+        public MessageGlobal.MessageActions Action { get; set; }
+        
+        /// <summary>
+        /// Possible Actions
+        /// </summary>
+        public enum MessageActions
         {
             /// <summary>
             ///     Call Global Method
@@ -18,14 +24,26 @@ namespace FlowR.Library.Client.Message
             /// </summary>
             SetProperty
         }
+
+        public override string GetRequestedAction()
+        {
+            return Action.ToString();
+        }
     }
 
     /// <inheritdoc />
     public class MessageGlobalWithResponse : MessageWithResponse
     {
-        /// <inheritdoc cref="Message.Method" />
-        /// />
-        public enum MethodName
+        
+        /// <summary>
+        /// Requested Action
+        /// </summary>
+        public MessageGlobalWithResponse.MessageActions Action { get; set; }
+        
+        /// <summary>
+        /// Possible Actions
+        /// </summary>
+        public enum MessageActions
         {
             /// <summary>
             ///     Call a Global method and wait for response
@@ -36,6 +54,11 @@ namespace FlowR.Library.Client.Message
             ///     Call a Global method and wait for response
             /// </summary>
             GetGlobalProperty
+        }
+
+        public override string GetRequestedAction()
+        {
+            return Action.ToString();
         }
     }
 }

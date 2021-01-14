@@ -1,3 +1,5 @@
+using System;
+
 namespace FlowR.Library.Client.Message
 {
 #pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement' visibile pubblicamente
@@ -7,9 +9,13 @@ namespace FlowR.Library.Client.Message
     public class MessageElement : Message
     {
         /// <summary>
+        /// Requested Action
+        /// </summary>
+        public MessageActions Action { get; set; }
+        /// <summary>
         ///     Name of the method to be called on client side signalr
         /// </summary>
-        public enum MethodName
+        public enum MessageActions
         {
             /// <summary>
             ///     Create a new Element
@@ -56,6 +62,11 @@ namespace FlowR.Library.Client.Message
             /// </summary>
             CallMethod
         }
+
+        public override string GetRequestedAction()
+        {
+            return Action.ToString();
+        }
     }
 
     /// <summary>
@@ -63,9 +74,15 @@ namespace FlowR.Library.Client.Message
     /// </summary>
     public class MessageElementWithResponse : MessageWithResponse
     {
-        /// <inheritdoc cref="Message.Method" />
-        /// >
-        public enum MethodName
+        /// <summary>
+        /// Requested Action
+        /// </summary>
+        public MessageElementWithResponse.MessageActions Action { get; set; }
+
+        /// <summary>
+        /// Possible Actions
+        /// </summary>
+        public enum MessageActions
         {
             /// <summary>
             ///     Get Property from Element
@@ -76,6 +93,11 @@ namespace FlowR.Library.Client.Message
             ///     Call method and wait for response
             /// </summary>
             CallMethodGetResponse
+        }
+
+        public override string GetRequestedAction()
+        {
+            return Action.ToString();
         }
     }
 }

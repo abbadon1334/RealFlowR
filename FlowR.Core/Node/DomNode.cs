@@ -53,6 +53,11 @@ namespace FlowR.Library.Node
         }
         
         /// <summary>
+        /// TagName of the Node : any HTML valid tag name is permitted.
+        /// </summary>
+        public readonly string TagName = "div";
+        
+        /// <summary>
         ///     Constructor
         /// </summary>
         protected DomNode()
@@ -63,11 +68,8 @@ namespace FlowR.Library.Node
             SetupProperties();
         }
 
-        /// <summary>
-        /// TagName of the Node : any HTML valid tag name is permitted.
-        /// </summary>
-        public readonly string TagName = "div";
-
+        #region Setup
+        
         private void SetupProperties()
         {
             _properties = new DomNodeCollectionProperty(this);
@@ -121,8 +123,12 @@ namespace FlowR.Library.Node
             };
         }
 
+        #endregion
+
+        #region Property
+
         /// <summary>
-        ///     Set Node property on client side.
+        /// Set Node property on client side.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="value"></param>
@@ -141,9 +147,13 @@ namespace FlowR.Library.Node
             var message = Factory.MessageGetProperty(this, path);
             return await Application.Communication.SendMessageWaitResponse(message);
         }
+        
+        #endregion
 
+        #region Event Listen
+        
         /// <summary>
-        ///     Start Listen for specified eventName.
+        /// Start Listen for specified eventName.
         /// </summary>
         /// <param name="eventName"></param>
         /// <param name="handler"></param>
@@ -153,7 +163,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        ///     Stop Listen for specified eventName.
+        /// Stop Listen for specified eventName.
         /// </summary>
         /// <param name="eventName"></param>
         /// <param name="handler"></param>
@@ -163,7 +173,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        ///     Handle incoming Node Event fired from client.
+        /// Handle incoming Node Event fired from client.
         /// </summary>
         /// <remarks>Never use this. This is called from application on incoming events</remarks>
         /// <param name="eventName"></param>
@@ -173,6 +183,9 @@ namespace FlowR.Library.Node
             // @todo find a way to lower the visibility 
             _events.OnClientEventTriggered(eventName, eventArgs);
         }
+        #endregion
+
+        #region Message
 
         /// <summary>
         /// Send a message to client side
@@ -189,7 +202,33 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        ///     Return count of children node attached.
+        /// Call a method on client side on this node with arguments, don't wait for response.
+        /// </summary>
+        /// <param name="methodName"></param>
+        /// <param name="arguments"></param>
+        public void CallClientMethod(string methodName, params string[] arguments)
+        {
+            SendMessage(Factory.MessageGlobalMethodCall(methodName, arguments));
+        }
+
+        /// <summary>
+        /// Return Response after call a method on client side on this node with arguments.
+        /// </summary>
+        /// <param name="methodName"></param>
+        /// <param name="arguments"></param>
+        /// <returns></returns>
+        public async Task<string> CallClientMethodWaitResponse(string methodName, params string[] arguments)
+        {
+            var message = Factory.MessageGlobalMethodCallWaitResponse(methodName, arguments);
+            return await Application.Communication.SendMessageWaitResponse(message);
+        }
+
+        #endregion
+
+        #region Children
+        
+        /// <summary>
+        /// Return count of children node attached.
         /// </summary>
         /// <returns></returns>
         public int GetChildrenCount()
@@ -198,7 +237,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        ///     Get first child node from attached children.
+        /// Get first child node from attached children.
         /// </summary>
         /// <returns></returns>
         public DomNode GetFirstChild()
@@ -237,6 +276,11 @@ namespace FlowR.Library.Node
             _children.Remove(node);
         }
 
+        #endregion
+
+        #region Attributes
+
+        
         /// <summary>
         ///     Set Attribute of the node.
         /// </summary>
@@ -261,7 +305,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        ///     Remove an Attribute.
+        /// Remove an Attribute.
         /// </summary>
         /// <param name="name"></param>
         public void RemoveAttribute(string name)
@@ -270,7 +314,7 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
-        ///     Return Attributes as Dictionary.
+        /// Return Attributes as Dictionary.
         /// </summary>
         /// <returns></returns>
         public Dictionary<string, string> GetAttributeDictionary()
@@ -278,27 +322,10 @@ namespace FlowR.Library.Node
             return _attributes.ToDictionary();
         }
 
-        /// <summary>
-        ///     Call a method on client side on this node with arguments, don't wait for response.
-        /// </summary>
-        /// <param name="methodName"></param>
-        /// <param name="arguments"></param>
-        public void CallClientMethod(string methodName, params string[] arguments)
-        {
-            SendMessage(Factory.MessageGlobalMethodCall(methodName, arguments));
-        }
+        #endregion
 
-        /// <summary>
-        /// Return Response after call a method on client side on this node with arguments.
-        /// </summary>
-        /// <param name="methodName"></param>
-        /// <param name="arguments"></param>
-        /// <returns></returns>
-        public async Task<string> CallClientMethodWaitResponse(string methodName, params string[] arguments)
-        {
-            var message = Factory.MessageGlobalMethodCallWaitResponse(methodName, arguments);
-            return await Application.Communication.SendMessageWaitResponse(message);
-        }
+        #region initialization
+
         
         private bool _initialized;
         
@@ -323,6 +350,10 @@ namespace FlowR.Library.Node
             return _initialized;
         }
 
+        #endregion
+
+        #region Text
+        
         private string _text = string.Empty;
         /// <summary>
         /// Content Text of the element 
@@ -348,5 +379,7 @@ namespace FlowR.Library.Node
             
             return this;
         }
+
+        #endregion
     }
 }

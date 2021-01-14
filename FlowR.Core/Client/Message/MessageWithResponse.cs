@@ -1,3 +1,4 @@
+using System;
 using Newtonsoft.Json;
 
 namespace FlowR.Library.Client.Message
@@ -8,12 +9,12 @@ namespace FlowR.Library.Client.Message
     public class MessageWithResponse : Message
     {
         /// <summary>
-        ///     When completed store response here
+        /// When completed store response here
         /// </summary>
         public string Response;
 
         /// <summary>
-        ///     Set the response
+        /// Set the response
         /// </summary>
         /// <param name="response"></param>
         public void SetResponse(string response)
@@ -22,23 +23,31 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        ///     Get The Response
+        /// Get The Response
         /// </summary>
         /// <returns></returns>
         public string GetResponse()
         {
             return Response;
         }
-
+        
         /// <summary>
-        ///     Convert from JSON
+        /// Convert from JSON
         /// </summary>
         /// <param name="json"></param>
         /// <returns></returns>
         public static MessageWithResponse FromJson(string json)
         {
-            var msg = JsonConvert.DeserializeObject<MessageWithResponse>(json);
-            return msg;
+            return JsonConvert.DeserializeObject<MessageWithResponse>(json);
+        }
+        
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <returns></returns>
+        public override string GetRequestedAction()
+        {
+            throw new Exception("Event don't have an Action"); // @todo remove this no need
         }
     }
 }

@@ -43,8 +43,10 @@ namespace FlowR.Library
         /// <param name="message"></param>
         public void ClientMessageResponse(string message)
         {
+            var decodedMessage = MessageWithResponse.FromJson(message);
+            
             _applicationFlowRService.Get(Context.ConnectionId).Communication.OnWaitingMessageResponse(
-                MessageWithResponse.FromJson(message)
+                decodedMessage
             );
         }
 
