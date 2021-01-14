@@ -158,7 +158,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        ///     Return MessageElement
+        /// Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -174,7 +174,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        ///     Return MessageElement
+        /// Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -192,7 +192,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        ///     Return MessageElement
+        /// Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -210,16 +210,15 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        ///     Return MessageElement
+        /// Return MessageElement
         /// </summary>
         /// <param name="name"></param>
         /// <param name="arguments"></param>
         /// <returns></returns>
         public static Message MessageGlobalMethodCall(string name, string[] arguments)
         {
-            var message = new MessageGlobal();
+            var message = new MessageGlobal(name);
             message.Action = MessageGlobal.MessageActions.CallGlobalMethod;
-            message.AddArgument("Name", name);
             message.AddArgument("Arguments", arguments);
 
             return message;
@@ -227,47 +226,43 @@ namespace FlowR.Library.Client.Message
 
 
         /// <summary>
-        ///     Return MessageElement
+        /// Return MessageElement
         /// </summary>
         /// <param name="name"></param>
         /// <param name="arguments"></param>
         /// <returns></returns>
         public static MessageWithResponse MessageGlobalMethodCallWaitResponse(string name, string[] arguments)
         {
-            var message = new MessageGlobalWithResponse();
+            var message = new MessageGlobalWithResponse(name);
             message.Action = MessageGlobalWithResponse.MessageActions.CallGlobalMethodGetResponse;
-            message.AddArgument("Name", name);
             message.AddArgument("Arguments", arguments);
 
             return message;
         }
 
-
         /// <summary>
-        ///     Return MessageElement
+        /// Return MessageElement
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
         public static MessageWithResponse MessageGlobalGetPropertyWaitResponse(string name)
         {
-            var message = new MessageGlobalWithResponse();
+            var message = new MessageGlobalWithResponse(name);
             message.Action = MessageGlobalWithResponse.MessageActions.GetGlobalProperty;
-            message.AddArgument("Name", name);
 
             return message;
         }
 
         /// <summary>
-        ///     Return MessageElement
+        /// Return MessageElement
         /// </summary>
         /// <param name="path"></param>
         /// <param name="value"></param>
         /// <returns></returns>
         public static Message MessageSetGlobalProperty(string path, string value)
         {
-            var message = new MessageGlobal();
+            var message = new MessageGlobal(path);
             message.Action = MessageGlobal.MessageActions.SetProperty;
-            message.AddArgument("Name", path);
             message.AddArgument("Value", value);
 
             return message;

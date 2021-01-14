@@ -4,6 +4,10 @@ namespace FlowR.Library.Client.Message
     /// <inheritdoc />
     public class MessageGlobal : Message
     {
+        public MessageGlobal(string name) : base()
+        {
+            AddArgument("Name", name);
+        }
         /// <summary>
         /// Requested Action
         /// </summary>
@@ -34,7 +38,11 @@ namespace FlowR.Library.Client.Message
     /// <inheritdoc />
     public class MessageGlobalWithResponse : MessageWithResponse
     {
-        
+        public MessageGlobalWithResponse(string name) : base()
+        {
+            AddArgument("Name", name);
+        }
+
         /// <summary>
         /// Requested Action
         /// </summary>
