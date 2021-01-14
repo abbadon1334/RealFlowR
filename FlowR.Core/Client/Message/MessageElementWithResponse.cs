@@ -1,4 +1,5 @@
 using System;
+using FlowR.Library.Node;
 
 namespace FlowR.Library.Client.Message
 {
@@ -7,6 +8,11 @@ namespace FlowR.Library.Client.Message
     /// </summary>
     public class MessageElementWithResponse : MessageResponse
     {
+        /// <inheritdoc />
+        public MessageElementWithResponse(DomNode node)
+        {
+            AddArgument("Uuid", node.Uuid);
+        }
         /// <summary>
         /// Requested Action
         /// </summary>

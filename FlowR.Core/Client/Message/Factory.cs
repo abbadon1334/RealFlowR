@@ -14,7 +14,7 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageCreate(DomNode node)
         {
-            var message = new MessageElement();
+            var message = new MessageElement(null);
             message.Action = MessageElement.MessageActions.CreateElement;
             message.AddArgument("OwnerUuid", node.Owner.Uuid);
             message.AddArgument("TagName", node.TagName);
@@ -34,9 +34,8 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageSetAttribute(DomNode node, string name, string value)
         {
-            var message = new MessageElement();
+            var message = new MessageElement(node);
             message.Action = MessageElement.MessageActions.SetAttribute;
-            message.AddArgument("Uuid", node.Uuid);
             message.AddArgument("Name", name);
             message.AddArgument("Value", value);
 
@@ -51,9 +50,8 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageRemoveAttribute(DomNode node, string name)
         {
-            var message = new MessageElement();
+            var message = new MessageElement(node);
             message.Action = MessageElement.MessageActions.RemoveAttribute;
-            message.AddArgument("Uuid", node.Uuid);
             message.AddArgument("Name", name);
 
             return message;
@@ -66,9 +64,8 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageRemove(DomNode node)
         {
-            var message = new MessageElement();
+            var message = new MessageElement(node);
             message.Action = MessageElement.MessageActions.RemoveElement;
-            message.AddArgument("Uuid", node.Uuid);
 
             return message;
         }
@@ -81,9 +78,8 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageStartListenEvent(DomNode node, string eventName)
         {
-            var message = new MessageElement();
+            var message = new MessageElement(node);
             message.Action = MessageElement.MessageActions.StartListenEvent;
-            message.AddArgument("Uuid", node.Uuid);
             message.AddArgument("Name", eventName);
 
             return message;
@@ -97,9 +93,8 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageStopListenEvent(DomNode node, string eventName)
         {
-            var message = new MessageElement();
+            var message = new MessageElement(node);
             message.Action = MessageElement.MessageActions.StopListenEvent;
-            message.AddArgument("Uuid", node.Uuid);
             message.AddArgument("Name", eventName);
 
             return message;
@@ -113,9 +108,8 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageSetText(DomNode node, string text)
         {
-            var message = new MessageElement();
+            var message = new MessageElement(node);
             message.Action = MessageElement.MessageActions.SetText;
-            message.AddArgument("Uuid", node.Uuid);
             message.AddArgument("Value", text);
 
             return message;
@@ -130,9 +124,8 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageSetProperty(DomNode node, string name, string value)
         {
-            var message = new MessageElement();
+            var message = new MessageElement(node);
             message.Action = MessageElement.MessageActions.SetProperty;
-            message.AddArgument("Uuid", node.Uuid);
             message.AddArgument("Name", name);
             message.AddArgument("Value", value);
 
@@ -148,9 +141,8 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageCallMethod(DomNode node, string name, params string[] args)
         {
-            var message = new MessageElement();
+            var message = new MessageElement(node);
             message.Action = MessageElement.MessageActions.CallMethod;
-            message.AddArgument("Uuid", node.Uuid);
             message.AddArgument("Name", name);
             message.AddArgument("Arguments", args);
 
@@ -165,9 +157,8 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessageResponse MessageGetProperty(DomNode node, string name)
         {
-            var message = new MessageElementWithResponse();
+            var message = new MessageElementWithResponse(node);
             message.Action = MessageElementWithResponse.MessageActions.GetProperty;
-            message.AddArgument("Uuid", node.Uuid);
             message.AddArgument("Name", name);
 
             return message;
@@ -182,9 +173,8 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessage MessageMethodCall(DomNode node, string name, string[] arguments)
         {
-            var message = new MessageElement();
+            var message = new MessageElement(node);
             message.Action = MessageElement.MessageActions.CallMethod;
-            message.AddArgument("Uuid", node.Uuid);
             message.AddArgument("Name", name);
             message.AddArgument("Arguments", arguments);
 
@@ -200,9 +190,8 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static IMessageResponse MessageMethodCallWaitResponse(DomNode node, string name, string[] arguments)
         {
-            var message = new MessageElementWithResponse();
+            var message = new MessageElementWithResponse(node);
             message.Action = MessageElementWithResponse.MessageActions.CallMethodGetResponse;
-            message.AddArgument("Uuid", node.Uuid);
             message.AddArgument("Name", name);
             message.AddArgument("Arguments", arguments);
 
