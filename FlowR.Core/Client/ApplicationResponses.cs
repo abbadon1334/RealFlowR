@@ -12,7 +12,7 @@ namespace FlowR.Library.Client
     public class ApplicationResponses
     {
         private readonly ConcurrentDictionary<string, string> _completed = new();
-        private readonly ConcurrentDictionary<string, MessageWithResponse> _pending = new();
+        private readonly ConcurrentDictionary<string, IMessageResponse> _pending = new();
 
         /// <summary>
         ///     [internal use] Send and wait for a response
@@ -21,7 +21,7 @@ namespace FlowR.Library.Client
         /// <param name="message"></param>
         /// <param name="timeoutSeconds"></param>
         /// <returns></returns>
-        public async Task<string> WaitResponse(Application app, MessageWithResponse message, int timeoutSeconds = 2)
+        public async Task<string> WaitResponse(Application app, IMessageResponse message, int timeoutSeconds = 2)
         {
             _pending.TryAdd(message.GetUuid(), message);
             await app.Communication.SendMessage(message);
@@ -50,7 +50,7 @@ namespace FlowR.Library.Client
         ///     [internal use] Process response from client
         /// </summary>
         /// <param name="message"></param>
-        public void SetResponse(MessageWithResponse message)
+        public void SetResponse(IMessageResponse message)
         {
             if (!_pending.TryGetValue(message.GetUuid(), out var storedMessage)) return;
 

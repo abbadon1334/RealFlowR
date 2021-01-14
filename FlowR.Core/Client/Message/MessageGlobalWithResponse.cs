@@ -1,12 +1,10 @@
 namespace FlowR.Library.Client.Message
 {
-    /// <summary>
-    /// Global Messages
-    /// </summary>
-    public class MessageGlobal : Message
+    /// <inheritdoc />
+    public class MessageGlobalWithResponse : MessageResponse
     {
-        /// <inheritdoc/>
-        public MessageGlobal(string name, string[] arguments = null)
+        /// <inheritdoc />
+        public MessageGlobalWithResponse(string name, string[] arguments = null) : base()
         {
             AddArgument("Name", name);
             if (arguments != null)
@@ -14,6 +12,7 @@ namespace FlowR.Library.Client.Message
                 AddArgument("Arguments", arguments);
             }
         }
+
         /// <summary>
         /// Requested Action
         /// </summary>
@@ -25,14 +24,14 @@ namespace FlowR.Library.Client.Message
         public enum MessageActions
         {
             /// <summary>
-            ///     Call Global Method
+            ///     Call a Global method and wait for response
             /// </summary>
-            CallGlobalMethod,
+            CallGlobalMethodGetResponse,
 
             /// <summary>
-            ///     Set Property
+            ///     Call a Global method and wait for response
             /// </summary>
-            SetProperty
+            GetGlobalProperty
         }
 
         /// <inheritdoc />

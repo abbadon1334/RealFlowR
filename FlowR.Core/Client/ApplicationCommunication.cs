@@ -30,7 +30,7 @@ namespace FlowR.Library.Client
         ///     Send a message to SignalR Client, don't wait for response
         /// </summary>
         /// <param name="message"></param>
-        public Task SendMessage(Message.Message message)
+        public Task SendMessage(IMessage message)
         {
             string method = message.GetRequestedAction();
             var args = message.GetArgumentValues();
@@ -52,7 +52,7 @@ namespace FlowR.Library.Client
         /// </summary>
         /// <param name="message"></param>
         /// <returns></returns>
-        public async Task<string> SendMessageWaitResponse(MessageWithResponse message)
+        public async Task<string> SendMessageWaitResponse(IMessageResponse message)
         {
             // @todo add parameter here to define timeout of waiting for response, in place of MessageResponse
             return await _responses.WaitResponse(_application, message);
@@ -61,7 +61,7 @@ namespace FlowR.Library.Client
         ///     [internal use] Called from SignalR Client when a new response arrive.
         /// </summary>
         /// <param name="message"></param>
-        public void OnWaitingMessageResponse(MessageWithResponse message)
+        public void OnWaitingMessageResponse(IMessageResponse message)
         {
             _responses.SetResponse(message);
         }
