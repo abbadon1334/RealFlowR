@@ -1,38 +1,31 @@
+using System;
+
 namespace FlowR.Library.Client.Message
 {
     /// <summary>
-    /// Global Messages
+    /// Message waiting Response for Clientside Nodes
     /// </summary>
-    public class MessageGlobal : Message
+    public class MessageElementWithResponse : MessageResponse
     {
-        /// <inheritdoc/>
-        public MessageGlobal(string name, string[] arguments = null)
-        {
-            AddArgument("Name", name);
-            if (arguments != null)
-            {
-                AddArgument("Arguments", arguments);
-            }
-        }
         /// <summary>
         /// Requested Action
         /// </summary>
         public MessageActions Action { get; set; }
-        
+
         /// <summary>
         /// Possible Actions
         /// </summary>
         public enum MessageActions
         {
             /// <summary>
-            ///     Call Global Method
+            ///     Get Property from Element
             /// </summary>
-            CallGlobalMethod,
+            GetProperty,
 
             /// <summary>
-            ///     Set Property
+            ///     Call method and wait for response
             /// </summary>
-            SetProperty
+            CallMethodGetResponse
         }
 
         /// <inheritdoc />

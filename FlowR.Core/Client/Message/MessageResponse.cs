@@ -1,12 +1,16 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 
 namespace FlowR.Library.Client.Message
 {
     /// <summary>
-    /// Message for waiting response
+    /// Message with response
     /// </summary>
-    public class MessageWithResponse : Message
+    public class MessageResponse : Message, IMessageResponse
     {
         /// <summary>
         /// When completed store response here
@@ -14,23 +18,18 @@ namespace FlowR.Library.Client.Message
         public string Response;
         
         /// <inheritdoc/>
-        public MessageWithResponse() : base()
+        public MessageResponse() : base()
         {
             AddArgument("MessageUuid", GetUuid());
         }
-        /// <summary>
-        /// Set the response
-        /// </summary>
-        /// <param name="response"></param>
+        
+        /// <inheritdoc/>
         public void SetResponse(string response)
         {
             Response = response;
         }
-
-        /// <summary>
-        /// Get The Response
-        /// </summary>
-        /// <returns></returns>
+        
+        /// <inheritdoc/>
         public string GetResponse()
         {
             return Response;
@@ -41,18 +40,14 @@ namespace FlowR.Library.Client.Message
         /// </summary>
         /// <param name="json"></param>
         /// <returns></returns>
-        public static MessageWithResponse FromJson(string json)
+        public static MessageResponse FromJson(string json)
         {
-            return JsonConvert.DeserializeObject<MessageWithResponse>(json);
+            return JsonConvert.DeserializeObject<MessageResponse>(json);
         }
-        
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <returns></returns>
+        /// <inheritdoc />
         public override string GetRequestedAction()
         {
-            throw new Exception("Event don't have an Action"); // @todo remove this no need
+            throw new NotImplementedException();
         }
     }
 }

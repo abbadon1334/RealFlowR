@@ -2,9 +2,8 @@ using System;
 
 namespace FlowR.Library.Client.Message
 {
-#pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'MessageElement' visibile pubblicamente
     /// <summary>
-    ///     Message for Clientside Nodes
+    /// Message for Clientside Nodes
     /// </summary>
     public class MessageElement : Message
     {
@@ -63,38 +62,7 @@ namespace FlowR.Library.Client.Message
             CallMethod
         }
 
-        public override string GetRequestedAction()
-        {
-            return Action.ToString();
-        }
-    }
-
-    /// <summary>
-    ///     Message waiting Response for Clientside Nodes
-    /// </summary>
-    public class MessageElementWithResponse : MessageWithResponse
-    {
-        /// <summary>
-        /// Requested Action
-        /// </summary>
-        public MessageElementWithResponse.MessageActions Action { get; set; }
-
-        /// <summary>
-        /// Possible Actions
-        /// </summary>
-        public enum MessageActions
-        {
-            /// <summary>
-            ///     Get Property from Element
-            /// </summary>
-            GetProperty,
-
-            /// <summary>
-            ///     Call method and wait for response
-            /// </summary>
-            CallMethodGetResponse
-        }
-
+        /// <inheritdoc />
         public override string GetRequestedAction()
         {
             return Action.ToString();

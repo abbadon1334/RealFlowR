@@ -30,9 +30,8 @@ namespace FlowR.Library
         /// <param name="message"></param>
         public void ClientEventTriggered(string message)
         {
-            _applicationFlowRService.Get(Context.ConnectionId).OnClientEventTriggered(
-                MessageEvent.FromJson(message)
-            );
+            var decodedMessage = MessageEvent.FromJson(message);
+            _applicationFlowRService.Get(Context.ConnectionId).OnClientEventTriggered(decodedMessage);
         }
 
         /// <summary>
@@ -43,7 +42,7 @@ namespace FlowR.Library
         /// <param name="message"></param>
         public void ClientMessageResponse(string message)
         {
-            var decodedMessage = MessageWithResponse.FromJson(message);
+            var decodedMessage = MessageResponse.FromJson(message);
             
             _applicationFlowRService.Get(Context.ConnectionId).Communication.OnWaitingMessageResponse(
                 decodedMessage

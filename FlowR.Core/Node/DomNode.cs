@@ -191,7 +191,7 @@ namespace FlowR.Library.Node
         /// Send a message to client side
         /// </summary>
         /// <param name="message"></param>
-        private void SendMessage(Message message)
+        private void SendMessage(IMessage message)
         {
             if (!IsInitialized())
             {

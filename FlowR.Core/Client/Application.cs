@@ -100,7 +100,7 @@ namespace FlowR.Library.Client
         {
             // @todo find a way to lower visibility of internal calls
 
-            GetRegisterComponent(message.Uuid).OnClientEventTriggered(
+            GetRegisterComponent(message.GetUuid()).OnClientEventTriggered(
                 message.EventName,
                 new MessageEventArgs { Data = message.EventArgs }
             );

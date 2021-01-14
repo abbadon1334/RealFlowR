@@ -14,12 +14,12 @@ namespace FlowR.Library.Client.Message
         private readonly Dictionary<string, object> _arguments = new();
 
         /// <summary>
-        ///     Message Uuid
+        /// Message Uuid
         /// </summary>
         public string Uuid;
 
         /// <summary>
-        ///     Constructor
+        /// Constructor
         /// </summary>
         protected Message()
         {
@@ -28,7 +28,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        ///     Get the Uuid of the message.
+        /// Get the Uuid of the message.
         /// </summary>
         /// <returns></returns>
         public string GetUuid()
@@ -37,7 +37,7 @@ namespace FlowR.Library.Client.Message
         }
 
         /// <summary>
-        ///     Add Argument to Argument list for the message.
+        /// Add Argument to Argument list for the message.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="value"></param>
@@ -53,7 +53,7 @@ namespace FlowR.Library.Client.Message
         public abstract string GetRequestedAction();
         
         /// <summary>
-        ///     Get Arguments as array
+        /// Get Arguments as array
         /// </summary>
         /// <returns></returns>
         public object[] GetArgumentValues()
