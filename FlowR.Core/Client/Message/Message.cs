@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 
 namespace FlowR.Library.Client.Message
 {
@@ -14,6 +15,7 @@ namespace FlowR.Library.Client.Message
         /// <summary>
         ///     Message Uuid
         /// </summary>
+        [JsonInclude]
         public string Uuid;
 
         /// <summary>

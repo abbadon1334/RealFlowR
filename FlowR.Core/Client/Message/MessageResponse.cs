@@ -1,5 +1,6 @@
 using System;
-using Newtonsoft.Json;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace FlowR.Library.Client.Message
 {
@@ -11,6 +12,7 @@ namespace FlowR.Library.Client.Message
         /// <summary>
         ///     When completed store response here
         /// </summary>
+        [JsonInclude]
         public string Response;
 
         /// <inheritdoc />
@@ -43,7 +45,7 @@ namespace FlowR.Library.Client.Message
         /// <returns></returns>
         public static MessageResponse FromJson(string json)
         {
-            return JsonConvert.DeserializeObject<MessageResponse>(json);
+            return JsonSerializer.Deserialize<MessageResponse>(json);
         }
     }
 }
