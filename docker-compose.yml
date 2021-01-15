@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  flowr:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: flowr
+    ports:
+      - "80:80"
+      - "443:443"
