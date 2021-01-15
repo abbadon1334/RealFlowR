@@ -376,5 +376,31 @@ namespace FlowR.Library.Node
 
         #endregion
 
+        #region Value
+
+        private string _value = string.Empty;
+        /// <summary>
+        /// Value 
+        /// </summary>
+        public string Value
+        {
+            get => _value;
+            set {
+                _value = value;
+                SetProperty("value", value);
+            }
+        }
+
+        /// <summary>
+        /// Called to retrieve the actual client value.
+        /// Ex. On form submit. 
+        /// </summary>
+        /// <returns></returns>
+        public virtual async Task Collect()
+        {
+            _value = await GetProperty("value");
+        }
+
+        #endregion
     }
 }
