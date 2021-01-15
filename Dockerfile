@@ -12,6 +12,9 @@ RUN dotnet restore
 COPY . .
  
 WORKDIR /src/FlowR.Sample
+
+RUN ls
+
 RUN dotnet build -c release --no-restore
 
 FROM build AS publish
