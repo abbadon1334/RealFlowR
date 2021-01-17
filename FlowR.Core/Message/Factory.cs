@@ -4,7 +4,7 @@ using System.Linq;
 namespace FlowR.Core.Message
 {
     // @todo 4 type of message one single factory, is better to move it directly in classes as static factory with different initialization 
-    
+
     /// <summary>
     ///     Message factory class
     /// </summary>
@@ -17,11 +17,14 @@ namespace FlowR.Core.Message
         /// <returns></returns>
         public static IMessage MessageCreate(Node node)
         {
-            var message = GetMessageElement(null, MessageElement.MessageActions.CreateElement);
-            message.AddArgument(node.Owner.Uuid);
-            message.AddArgument(node.TagName);
-            message.AddArgument(node.GetAttributeDictionary());
-            message.AddArgument(node.Text);
+            var message = GetMessageElement(
+                null,
+                MessageElement.MessageActions.CreateElement,
+                node.Owner.Uuid,
+                node.TagName,
+                node.GetAttributeDictionary() as object,
+                node.Text
+            );
 
             return message;
         }
@@ -36,11 +39,7 @@ namespace FlowR.Core.Message
         /// <returns></returns>
         public static IMessage MessageSetAttribute(Node node, string name, string value)
         {
-            var message = GetMessageElement(node, MessageElement.MessageActions.SetAttribute);
-            message.AddArgument(name);
-            message.AddArgument(value);
-
-            return message;
+            return GetMessageElement(node, MessageElement.MessageActions.SetAttribute, name, value);
         }
 
         /// <summary>
@@ -51,10 +50,7 @@ namespace FlowR.Core.Message
         /// <returns></returns>
         public static IMessage MessageRemoveAttribute(Node node, string name)
         {
-            var message = GetMessageElement(node, MessageElement.MessageActions.RemoveAttribute);
-            message.AddArgument(name);
-
-            return message;
+            return GetMessageElement(node, MessageElement.MessageActions.RemoveAttribute, name);
         }
 
         /// <summary>
@@ -64,9 +60,7 @@ namespace FlowR.Core.Message
         /// <returns></returns>
         public static IMessage MessageRemove(Node node)
         {
-            var message = GetMessageElement(node, MessageElement.MessageActions.RemoveElement);
-
-            return message;
+            return GetMessageElement(node, MessageElement.MessageActions.RemoveElement);
         }
 
         /// <summary>
@@ -77,10 +71,7 @@ namespace FlowR.Core.Message
         /// <returns></returns>
         public static IMessage MessageStartListenEvent(Node node, string eventName)
         {
-            var message = GetMessageElement(node, MessageElement.MessageActions.StartListenEvent);
-            message.AddArgument(eventName);
-
-            return message;
+            return GetMessageElement(node, MessageElement.MessageActions.StartListenEvent, eventName);
         }
 
         /// <summary>
@@ -91,10 +82,7 @@ namespace FlowR.Core.Message
         /// <returns></returns>
         public static IMessage MessageStopListenEvent(Node node, string eventName)
         {
-            var message = GetMessageElement(node, MessageElement.MessageActions.StopListenEvent);
-            message.AddArgument(eventName);
-
-            return message;
+            return GetMessageElement(node, MessageElement.MessageActions.StopListenEvent, eventName);
         }
 
         /// <summary>
@@ -105,10 +93,7 @@ namespace FlowR.Core.Message
         /// <returns></returns>
         public static IMessage MessageSetText(Node node, string text)
         {
-            var message = GetMessageElement(node, MessageElement.MessageActions.SetText);
-            message.AddArgument(text);
-
-            return message;
+            return GetMessageElement(node, MessageElement.MessageActions.SetText, text);
         }
 
         /// <summary>
@@ -120,11 +105,7 @@ namespace FlowR.Core.Message
         /// <returns></returns>
         public static IMessage MessageSetProperty(Node node, string name, string value)
         {
-            var message = GetMessageElement(node, MessageElement.MessageActions.SetProperty);
-            message.AddArgument(name);
-            message.AddArgument(value);
-
-            return message;
+            return GetMessageElement(node, MessageElement.MessageActions.SetProperty, name, value);
         }
 
         /// <summary>
@@ -136,11 +117,7 @@ namespace FlowR.Core.Message
         /// <returns></returns>
         public static IMessage MessageCallMethod(Node node, string name, params string[] args)
         {
-            var message = GetMessageElement(node, MessageElement.MessageActions.CallMethod);
-            message.AddArgument(name);
-            message.AddArgument(args);
-
-            return message;
+            return GetMessageElement(node, MessageElement.MessageActions.CallMethod, name, args);
         }
 
         /// <summary>
@@ -152,11 +129,7 @@ namespace FlowR.Core.Message
         /// <returns></returns>
         public static IMessage MessageAddMethod(Node node, string name, string jsStatement)
         {
-            var message = GetMessageElement(node, MessageElement.MessageActions.AddMethod);
-            message.AddArgument(name);
-            message.AddArgument(jsStatement);
-
-            return message;
+            return GetMessageElement(node, MessageElement.MessageActions.AddMethod, name, jsStatement);
         }
 
         /// <summary>
@@ -167,10 +140,7 @@ namespace FlowR.Core.Message
         /// <returns></returns>
         public static IMessageResponse MessageGetProperty(Node node, string name)
         {
-            var message = GetMessageElementWithResponse(node, MessageElementWithResponse.MessageActions.GetProperty);
-            message.AddArgument(name);
-
-            return message;
+            return GetMessageElementWithResponse(node, MessageElementWithResponse.MessageActions.GetProperty, name);
         }
 
         /// <summary>
@@ -182,11 +152,7 @@ namespace FlowR.Core.Message
         /// <returns></returns>
         public static IMessage MessageMethodCall(Node node, string name, string[] arguments)
         {
-            var message = GetMessageElement(node, MessageElement.MessageActions.CallMethod);
-            message.AddArgument(name);
-            message.AddArgument(arguments);
-
-            return message;
+            return GetMessageElement(node, MessageElement.MessageActions.CallMethod, name, arguments);
         }
 
         /// <summary>
@@ -198,27 +164,29 @@ namespace FlowR.Core.Message
         /// <returns></returns>
         public static IMessageResponse MessageMethodCallWaitResponse(Node node, string name, string[] arguments)
         {
-            var message = GetMessageElementWithResponse(node, MessageElementWithResponse.MessageActions.CallMethodGetResponse);
-            message.AddArgument(name);
-            message.AddArgument(arguments);
-
-            return message;
+            return GetMessageElementWithResponse(node, MessageElementWithResponse.MessageActions.CallMethodGetResponse, name, arguments);
         }
-        private static MessageElementWithResponse GetMessageElementWithResponse(Node node, MessageElementWithResponse.MessageActions action)
+        private static MessageElementWithResponse GetMessageElementWithResponse(Node node, MessageElementWithResponse.MessageActions action, params object[] values)
         {
             var message = new MessageElementWithResponse(node)
             {
                 Action = action
             };
+
+            message.AddArgument(values);
+
             return message;
         }
 
-        private static MessageElement GetMessageElement(Node node, MessageElement.MessageActions action)
+        private static MessageElement GetMessageElement(Node node, MessageElement.MessageActions action, params object[] values)
         {
             var message = new MessageElement(node)
             {
                 Action = action
             };
+
+            message.AddArgument(values);
+
             return message;
         }
 

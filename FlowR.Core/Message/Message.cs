@@ -54,10 +54,13 @@ namespace FlowR.Core.Message
         /// <summary>
         ///     Add Argument to Argument list for the message.
         /// </summary>
-        /// <param name="value"></param>
-        public void AddArgument(object value)
+        /// <param name="values"></param>
+        public void AddArgument(params object[] values)
         {
-            _arguments.Add(value);
+            foreach (var value in values)
+            {
+                _arguments.Add(value);   
+            }
         }
     }
 }
