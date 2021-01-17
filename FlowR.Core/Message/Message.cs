@@ -54,29 +54,8 @@ namespace FlowR.Core.Message
         /// <summary>
         ///     Add Argument to Argument list for the message.
         /// </summary>
-        /// <param name="name"></param>
         /// <param name="value"></param>
-        public void AddArgument(string value)
-        {
-            _arguments.Add(value);
-        }
-        
-        /// <summary>
-        ///     Add Argument to Argument list for the message.
-        /// </summary>
-        /// <param name="name"></param>
-        /// <param name="value"></param>
-        public void AddArgument(string[] value)
-        {
-            _arguments.Add(value);
-        }
-        
-        /// <summary>
-        ///     Add Argument to Argument list for the message.
-        /// </summary>
-        /// <param name="name"></param>
-        /// <param name="value"></param>
-        public void AddArgument(Dictionary<string,string> value)
+        public void AddArgument(object value)
         {
             _arguments.Add(value);
         }
