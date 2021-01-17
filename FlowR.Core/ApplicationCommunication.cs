@@ -1,9 +1,9 @@
 using System;
 using System.Threading.Tasks;
-using FlowR.Library.Client.Message;
+using FlowR.Core.Message;
 using Microsoft.AspNetCore.SignalR;
 
-namespace FlowR.Library.Client
+namespace FlowR.Core
 {
     /// <summary>
     ///     Manage Communication

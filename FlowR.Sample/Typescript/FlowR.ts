@@ -40,6 +40,8 @@ class FlowR {
 
         this.connection.on("CallGlobalMethod", this.CallGlobalMethod.bind(this));
         this.connection.on("CallGlobalMethodGetResponse", this.CallGlobalMethodGetResponse.bind(this));
+
+        this.connection.on("AddMethod", this.AddMethod.bind(this));
     }
 
     TryConnect() {
@@ -118,7 +120,6 @@ class FlowR {
     }
 
     SetProperty(uuid: string, property_path: string, value: string) {
-
         FlowR.ObjectPathBuilder(document.getElementById(uuid), property_path).Set(value);
     }
 
@@ -192,6 +193,11 @@ class FlowR {
         } catch (e) {
             console.log(e);
         }
+    }
+
+    AddMethod(uuid:string, name:string, statement:string) {
+        var obj = document.getElementById(uuid);
+            obj[name] = new Function("return " + statement)();
     }
 
     public static AssertNotEmpty(str:string) {

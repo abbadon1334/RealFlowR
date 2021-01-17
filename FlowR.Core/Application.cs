@@ -1,10 +1,8 @@
 using System;
-using FlowR.Library.Client.Message;
-using FlowR.Library.Client.Tags;
-using FlowR.Library.Node;
+using FlowR.Core.Message;
 using Microsoft.AspNetCore.SignalR;
 
-namespace FlowR.Library.Client
+namespace FlowR.Core
 {
     /// <summary>
     ///     Application container class.
@@ -18,7 +16,7 @@ namespace FlowR.Library.Client
         ///     Root element of the Application.
         ///     The composition tree that draw client UI starts from here.
         /// </summary>
-        protected readonly Root RootElement;
+        protected readonly NodeApplicationRoot RootElement;
 
         /// <summary>
         ///     Element ID of the master container for the application
@@ -36,7 +34,7 @@ namespace FlowR.Library.Client
             Communication = new ApplicationCommunication(this, client);
 
             // Prepare the root element 
-            RootElement = new Root(RootElementId);
+            RootElement = new NodeApplicationRoot(RootElementId);
             RootElement.Application = this;
             RootElement.Init();
 
@@ -60,7 +58,7 @@ namespace FlowR.Library.Client
         ///     Internally called after add to parent Node, usually there is no need to be called.
         /// </summary>
         /// <param name="node"></param>
-        public void RegisterComponent(DomNode node)
+        public void RegisterComponent(Node node)
         {
             // @todo find a way to lower visibility of internal calls 
             _registry.RegisterComponent(node);
@@ -71,7 +69,7 @@ namespace FlowR.Library.Client
         /// </summary>
         /// <param name="uuid"></param>
         /// <returns></returns>
-        private DomNode GetRegisterComponent(string uuid)
+        private Node GetRegisterComponent(string uuid)
         {
             // @todo find a way to lower visibility of internal calls 
             return _registry.Get(uuid);
@@ -82,7 +80,7 @@ namespace FlowR.Library.Client
         ///     Internally called after removed from parent Node, usually there is no need to be called.
         /// </summary>
         /// <param name="node"></param>
-        public void UnregisterComponent(DomNode node)
+        public void UnregisterComponent(Node node)
         {
             _registry.UnregisterComponent(node);
         }
@@ -119,7 +117,7 @@ namespace FlowR.Library.Client
         /// <param name="timer"></param>
         public void CancelTimer(ApplicationTimer timer)
         {
-            _timers.Remove(timer);
+            _timers.Remove(timer); 
         }
     }
 }

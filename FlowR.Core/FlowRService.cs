@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using FlowR.Library.Client;
 using Microsoft.AspNetCore.SignalR;
 
-namespace FlowR.Library
+namespace FlowR.Core
 {
     /// <summary>
     ///     Singleton service

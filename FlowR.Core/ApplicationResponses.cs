@@ -2,9 +2,9 @@ using System;
 using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
-using FlowR.Library.Client.Message;
+using FlowR.Core.Message;
 
-namespace FlowR.Library.Client
+namespace FlowR.Core
 {
     /// <summary>
     ///     Logicv class for Message Responses

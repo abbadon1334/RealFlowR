@@ -1,10 +1,10 @@
-namespace FlowR.Library.Node.Collections
+namespace FlowR.Core
 {
 #pragma warning disable CS1591 // Manca il commento XML per il tipo o il membro 'DomNodeCollectionProperty' visibile pubblicamente
-    public class DomNodeCollectionProperty : DomNodeCollection<string>
+    public class NodeCollectionProperty : NodeCollection<string>
     {
         /// <inheritdoc />
-        public DomNodeCollectionProperty(DomNode owner) : base(owner)
+        public NodeCollectionProperty(Node owner) : base(owner)
         {
         }
 

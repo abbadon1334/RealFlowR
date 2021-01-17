@@ -1,11 +1,7 @@
-using FlowR.Library.Node;
-
-namespace FlowR.Library.Client.Message
+namespace FlowR.Core.Message
 {
-    /// <summary>
-    ///     Message waiting Response for Clientside Nodes
-    /// </summary>
-    public class MessageElementWithResponse : MessageResponse
+    /// <inheritdoc />
+    public class MessageGlobalWithResponse : MessageResponse
     {
 
         /// <summary>
@@ -14,21 +10,23 @@ namespace FlowR.Library.Client.Message
         public enum MessageActions
         {
             /// <summary>
-            ///     Get Property from Element
+            ///     Call a Global method and wait for response
             /// </summary>
-            GetProperty,
+            CallGlobalMethodGetResponse,
 
             /// <summary>
-            ///     Call method and wait for response
+            ///     Call a Global method and wait for response
             /// </summary>
-            CallMethodGetResponse
+            GetGlobalProperty
         }
 
         /// <inheritdoc />
-        public MessageElementWithResponse(DomNode node)
+        public MessageGlobalWithResponse(string name, string[] arguments = null)
         {
-            AddArgument("Uuid", node.Uuid);
+            AddArgument("Name", name);
+            if (arguments != null) AddArgument("Arguments", arguments);
         }
+
         /// <summary>
         ///     Requested Action
         /// </summary>

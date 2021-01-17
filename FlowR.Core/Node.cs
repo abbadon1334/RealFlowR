@@ -1,33 +1,34 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using FlowR.Library.Client;
-using FlowR.Library.Client.Message;
-using FlowR.Library.Node.Collections;
+using FlowR.Core.Message;
 
-namespace FlowR.Library.Node
+namespace FlowR.Core
 {
     /// <summary>
     ///     DomNode base class
     /// </summary>
-    public abstract class DomNode
+    public abstract class Node
     {
-
         /// <summary>
         ///     TagName of the Node : any HTML valid tag name is permitted.
         /// </summary>
         public readonly string TagName = "div";
-        private DomNodeCollectionAttribute _attributes;
-        private DomNodeCollectionDomNode _children;
-        private DomNodeCollectionEvent _events;
-        private DomNodeCollectionProperty _properties;
+        
+        private NodeCollectionAttribute _attributes;
+        
+        private NodeCollectionNode _children;
+        
+        private NodeCollectionEvent _events;
+        
+        private NodeCollectionProperty _properties;
 
         private string _uuid = string.Empty;
 
         /// <summary>
         ///     Constructor
         /// </summary>
-        protected DomNode()
+        protected Node()
         {
             SetupAttributes();
             SetupChildren();
@@ -43,7 +44,8 @@ namespace FlowR.Library.Node
         /// <summary>
         ///     DomNode parent
         /// </summary>
-        public DomNode Owner { get; set; }
+        public Node Owner { get; set; }
+        
         /// <summary>
         ///     Unique identifier of the Node
         /// </summary>
@@ -68,7 +70,7 @@ namespace FlowR.Library.Node
 
         private void SetupProperties()
         {
-            _properties = new DomNodeCollectionProperty(this);
+            _properties = new NodeCollectionProperty(this);
             _properties.AfterChanged += (o, args) =>
             {
                 var prop = (CollectionChangedEventArgs<string>)args;
@@ -78,7 +80,7 @@ namespace FlowR.Library.Node
 
         private void SetupEvents()
         {
-            _events = new DomNodeCollectionEvent(this);
+            _events = new NodeCollectionEvent(this);
             _events.AfterAdded += (o, args) =>
             {
                 SendMessage(Factory.MessageStartListenEvent(this,
@@ -93,20 +95,20 @@ namespace FlowR.Library.Node
 
         private void SetupChildren()
         {
-            _children = new DomNodeCollectionDomNode(this);
+            _children = new NodeCollectionNode(this);
             _children.AfterAdded += (o, args) =>
             {
-                SendMessage(Factory.MessageCreate(((CollectionAddedEventArgs<DomNode>)args).Value));
+                SendMessage(Factory.MessageCreate(((CollectionAddedEventArgs<Node>)args).Value));
             };
             _children.AfterRemoved += (o, args) =>
             {
-                SendMessage(Factory.MessageRemove(((CollectionRemovedEventArgs<DomNode>)args).Value));
+                SendMessage(Factory.MessageRemove(((CollectionRemovedEventArgs<Node>)args).Value));
             };
         }
 
         private void SetupAttributes()
         {
-            _attributes = new DomNodeCollectionAttribute(this);
+            _attributes = new NodeCollectionAttribute(this);
             _attributes.AfterChanged += (o, args) =>
             {
                 var attr = (CollectionChangedEventArgs<string>)args;
@@ -196,6 +198,17 @@ namespace FlowR.Library.Node
         }
 
         /// <summary>
+        ///     Add a method to the node, don't wait for response.
+        ///     Later can be called via CallClientMethod and CallClientMethodWaitResponse
+        /// </summary>
+        /// <param name="methodName"></param>
+        /// <param name="jsStatement"></param>
+        public void AddClientJavascriptMethod(string methodName, string jsStatement)
+        {
+            SendMessage(Factory.MessageAddMethod(this, methodName, jsStatement));
+        }
+        
+        /// <summary>
         ///     Call a method on client side on this node with arguments, don't wait for response.
         /// </summary>
         /// <param name="methodName"></param>
@@ -234,7 +247,7 @@ namespace FlowR.Library.Node
         ///     Get first child node from attached children.
         /// </summary>
         /// <returns></returns>
-        public DomNode GetFirstChild()
+        public Node GetFirstChild()
         {
             return _children.GetFirst();
         }
@@ -243,7 +256,7 @@ namespace FlowR.Library.Node
         ///     Get last child node from attached children.
         /// </summary>
         /// <returns></returns>
-        public DomNode GetLastChild()
+        public Node GetLastChild()
         {
             return _children.GetLast();
         }
@@ -254,7 +267,7 @@ namespace FlowR.Library.Node
         /// <param name="node"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public DomNode Add(DomNode node)
+        protected Node Add(Node node)
         {
             if (!IsInitialized()) throw new Exception("Cannot add Child, Node must be initialized first");
 
@@ -265,9 +278,18 @@ namespace FlowR.Library.Node
         ///     Remove children from node children.
         /// </summary>
         /// <param name="node"></param>
-        public void Remove(DomNode node)
+        public void Remove(Node node)
         {
             _children.Remove(node);
+        }
+
+        /// <summary>
+        ///     Attach a node to children.
+        /// </summary>
+        /// <returns></returns>
+        public T Add<T>() where T : Node, new()
+        {
+            return _children.Add(new T()) as T;
         }
 
         #endregion
@@ -280,7 +302,7 @@ namespace FlowR.Library.Node
         /// <param name="name"></param>
         /// <param name="value"></param>
         /// <returns></returns>
-        public DomNode SetAttribute(string name, string value)
+        public Node SetAttribute(string name, string value)
         {
             _attributes.SetAttribute(name, value);
 
@@ -367,7 +389,7 @@ namespace FlowR.Library.Node
         /// <param name="text"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public DomNode SetText(string text)
+        public Node SetText(string text)
         {
             Text = text;
 
@@ -385,22 +407,22 @@ namespace FlowR.Library.Node
         public string Value
         {
             get => _value;
-            set {
+            set
+            {
                 _value = value;
                 SetProperty("value", value);
             }
         }
+        #endregion
 
         /// <summary>
-        /// Called to retrieve the actual client value.
-        /// Ex. On form submit. 
+        ///     Request from Form on submit
         /// </summary>
+        /// <param name="path"></param>
         /// <returns></returns>
-        public virtual async Task Collect()
+        public virtual async Task<string> Collect(string path = "value")
         {
-            _value = await GetProperty("value");
+            return await GetProperty(path);
         }
-
-        #endregion
     }
 }

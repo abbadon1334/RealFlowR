@@ -1,4 +1,4 @@
-namespace FlowR.Library.Client.Message
+namespace FlowR.Core.Message
 {
     /// <summary>
     ///     Interface for message communications

@@ -1,7 +1,9 @@
-namespace FlowR.Library.Client.Message
+namespace FlowR.Core.Message
 {
-    /// <inheritdoc />
-    public class MessageGlobalWithResponse : MessageResponse
+    /// <summary>
+    ///     Global Messages
+    /// </summary>
+    public class MessageGlobal : Message
     {
 
         /// <summary>
@@ -10,23 +12,22 @@ namespace FlowR.Library.Client.Message
         public enum MessageActions
         {
             /// <summary>
-            ///     Call a Global method and wait for response
+            ///     Call Global Method
             /// </summary>
-            CallGlobalMethodGetResponse,
+            CallGlobalMethod,
 
             /// <summary>
-            ///     Call a Global method and wait for response
+            ///     Set Property
             /// </summary>
-            GetGlobalProperty
+            SetProperty
         }
 
         /// <inheritdoc />
-        public MessageGlobalWithResponse(string name, string[] arguments = null)
+        public MessageGlobal(string name, string[] arguments = null)
         {
             AddArgument("Name", name);
             if (arguments != null) AddArgument("Arguments", arguments);
         }
-
         /// <summary>
         ///     Requested Action
         /// </summary>

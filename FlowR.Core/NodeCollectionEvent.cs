@@ -1,20 +1,20 @@
 using System;
 using System.Collections.Generic;
 
-namespace FlowR.Library.Node.Collections
+namespace FlowR.Core
 {
     /// <summary>
     ///     Collection Events class that filter to only essential method
     /// </summary>
-    public class DomNodeCollectionEvent : DomNodeCollection<List<EventHandler>>
+    public class NodeCollectionEvent : NodeCollection<List<EventHandler>>
     {
         /// <inheritdoc />
         /// summary>
-        public DomNodeCollectionEvent(DomNode owner) : base(owner)
+        public NodeCollectionEvent(Node owner) : base(owner)
         {
         }
 
-        /// <inheritdoc cref="DomNode.On" />
+        /// <inheritdoc cref="Node.On" />
         /// summary>
         public void On(string eventName, EventHandler handler)
         {
@@ -23,14 +23,14 @@ namespace FlowR.Library.Node.Collections
             Get(eventName).Add(handler);
         }
 
-        /// <inheritdoc cref="DomNode.Off" />
+        /// <inheritdoc cref="Node.Off" />
         /// summary>
         public void Off(string eventName, EventHandler handler)
         {
             Get(eventName).Remove(handler);
         }
 
-        /// <inheritdoc cref="DomNode.OnClientEventTriggered" />
+        /// <inheritdoc cref="Node.OnClientEventTriggered" />
         public void OnClientEventTriggered(string eventName, EventArgs eventArgs)
         {
             Get(eventName).ForEach(observerDelegate => observerDelegate.Invoke(Owner, eventArgs));

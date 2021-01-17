@@ -1,6 +1,4 @@
-using FlowR.Library.Node;
-
-namespace FlowR.Library.Client.Message
+namespace FlowR.Core.Message
 {
     /// <summary>
     ///     Message for Clientside Nodes
@@ -55,11 +53,16 @@ namespace FlowR.Library.Client.Message
             /// <summary>
             ///     Element Call Method
             /// </summary>
-            CallMethod
+            CallMethod,
+
+            /// <summary>
+            ///     Add a custom method to an Element
+            /// </summary>
+            AddMethod
         }
 
         /// <inheritdoc />
-        public MessageElement(DomNode node)
+        public MessageElement(Node node)
         {
             if (node != null) AddArgument("Uuid", node.Uuid);
         }

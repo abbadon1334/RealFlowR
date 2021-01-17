@@ -24,6 +24,7 @@ class FlowR {
         this.connection.on("CallElementMethodGetResponse", this.CallMethodGetResponse.bind(this));
         this.connection.on("CallGlobalMethod", this.CallGlobalMethod.bind(this));
         this.connection.on("CallGlobalMethodGetResponse", this.CallGlobalMethodGetResponse.bind(this));
+        this.connection.on("AddMethod", this.AddMethod.bind(this));
     }
     TryConnect() {
         this.connection.start().catch(err => {
@@ -136,6 +137,10 @@ class FlowR {
         catch (e) {
             console.log(e);
         }
+    }
+    AddMethod(uuid, name, statement) {
+        var obj = document.getElementById(uuid);
+        obj[name] = new Function("return " + statement)();
     }
     static AssertNotEmpty(str) {
         FlowR.AssertNotUndefinedNotNull(str);

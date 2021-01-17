@@ -1,7 +1,6 @@
+using FlowR.Core;
 
-using FlowR.Library.Node;
-
-namespace FlowR.Library.Client.Tags
+namespace FlowR.UI
 {
     /// <summary>
     /// Tag Form
@@ -16,8 +15,9 @@ namespace FlowR.Library.Client.Tags
     /// to retrieve the actual value
     /// @todo add a loading or something during this type of operations 
     /// </example>
-    public class Form : DomNode
+    public class Form : Node
     {
-
+        /// <inheritdoc cref="Node.TagName" />
+        public new readonly string TagName = "form";
     }
 }

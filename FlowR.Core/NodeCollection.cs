@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace FlowR.Library.Node.Collections
+namespace FlowR.Core
 {
     /// <summary>
     ///     Base Observable collection with Owner
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class DomNodeCollection<T>
+    public abstract class NodeCollection<T>
     {
         private readonly Dictionary<string, T> _collection = new();
 
@@ -47,7 +47,7 @@ namespace FlowR.Library.Node.Collections
         ///     Constructor
         /// </summary>
         /// <param name="owner">The DomNode owner of the collection</param>
-        protected DomNodeCollection(DomNode owner)
+        protected NodeCollection(Node owner)
         {
             Owner = owner;
         }
@@ -55,7 +55,7 @@ namespace FlowR.Library.Node.Collections
         /// <summary>
         ///     DomNode parent
         /// </summary>
-        public DomNode Owner { get; set; }
+        public Node Owner { get; set; }
 
         /// <summary>
         ///     Set an item in collection

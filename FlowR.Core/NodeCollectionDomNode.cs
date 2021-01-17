@@ -1,12 +1,12 @@
-namespace FlowR.Library.Node.Collections
+namespace FlowR.Core
 {
     /// <summary>
     ///     DomNode children Collection that filter to only essential method
     /// </summary>
-    public class DomNodeCollectionDomNode : DomNodeCollection<DomNode>
+    public class NodeCollectionNode : NodeCollection<Node>
     {
         /// <inheritdoc />
-        public DomNodeCollectionDomNode(DomNode owner) : base(owner)
+        public NodeCollectionNode(Node owner) : base(owner)
         {
         }
 
@@ -16,7 +16,7 @@ namespace FlowR.Library.Node.Collections
         /// <remarks>Here happens the composition between child and parent elements</remarks>
         /// <param name="node"></param>
         /// <returns></returns>
-        public DomNode Add(DomNode node)
+        public Node Add(Node node)
         {
             node.Application = Owner.Application;
             node.Owner = Owner;
@@ -29,9 +29,9 @@ namespace FlowR.Library.Node.Collections
             return node;
         }
 
-        /// <inheritdoc cref="DomNodeCollection{T}.Unset" />
+        /// <inheritdoc cref="NodeCollection{T}.Unset" />
         /// summary>
-        public void Remove(DomNode node)
+        public void Remove(Node node)
         {
             node.Owner = null;
             node.Application = null;

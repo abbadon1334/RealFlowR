@@ -1,9 +1,9 @@
-namespace FlowR.Library.Client.Message
+namespace FlowR.Core.Message
 {
     /// <summary>
-    ///     Global Messages
+    ///     Message waiting Response for Clientside Nodes
     /// </summary>
-    public class MessageGlobal : Message
+    public class MessageElementWithResponse : MessageResponse
     {
 
         /// <summary>
@@ -12,21 +12,20 @@ namespace FlowR.Library.Client.Message
         public enum MessageActions
         {
             /// <summary>
-            ///     Call Global Method
+            ///     Get Property from Element
             /// </summary>
-            CallGlobalMethod,
+            GetProperty,
 
             /// <summary>
-            ///     Set Property
+            ///     Call method and wait for response
             /// </summary>
-            SetProperty
+            CallMethodGetResponse
         }
 
         /// <inheritdoc />
-        public MessageGlobal(string name, string[] arguments = null)
+        public MessageElementWithResponse(Node node)
         {
-            AddArgument("Name", name);
-            if (arguments != null) AddArgument("Arguments", arguments);
+            AddArgument("Uuid", node.Uuid);
         }
         /// <summary>
         ///     Requested Action

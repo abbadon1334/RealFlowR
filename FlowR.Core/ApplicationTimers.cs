@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace FlowR.Library.Client
+namespace FlowR.Core
 {
     /// <summary>
     ///     Manage Application Timers

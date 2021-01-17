@@ -4,7 +4,7 @@
 		<TargetFramework>net5.0</TargetFramework>
 		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<RootNamespace>FlowR.Library</RootNamespace>
+		<RootNamespace>FlowR.Core</RootNamespace>
     </PropertyGroup>
 	
     <ItemGroup>
