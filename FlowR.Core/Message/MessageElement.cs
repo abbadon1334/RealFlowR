@@ -64,7 +64,7 @@ namespace FlowR.Core.Message
         /// <inheritdoc />
         public MessageElement(Node node)
         {
-            if (node != null) AddArgument("Uuid", node.Uuid);
+            if (node != null) AddArgument(node.Uuid);
         }
         /// <summary>
         ///     Requested Action

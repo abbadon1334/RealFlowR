@@ -25,8 +25,8 @@ namespace FlowR.Core.Message
         /// <inheritdoc />
         public MessageGlobal(string name, string[] arguments = null)
         {
-            AddArgument("Name", name);
-            if (arguments != null) AddArgument("Arguments", arguments);
+            AddArgument(name);
+            if (arguments != null) AddArgument(arguments);
         }
         /// <summary>
         ///     Requested Action

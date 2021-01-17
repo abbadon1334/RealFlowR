@@ -10,7 +10,7 @@ namespace FlowR.Core.Message
     /// </summary>
     public abstract class Message : IMessage
     {
-        private readonly Dictionary<string, object> _arguments = new();
+        private readonly List<object> _arguments = new();
 
         /// <summary>
         ///     Message Uuid
@@ -48,7 +48,7 @@ namespace FlowR.Core.Message
         /// <returns></returns>
         public object[] GetArgumentValues()
         {
-            return _arguments.Values.ToArray();
+            return _arguments.ToArray();
         }
 
         /// <summary>
@@ -56,9 +56,29 @@ namespace FlowR.Core.Message
         /// </summary>
         /// <param name="name"></param>
         /// <param name="value"></param>
-        public void AddArgument(string name, object value)
+        public void AddArgument(string value)
         {
-            _arguments[name] = value;
+            _arguments.Add(value);
+        }
+        
+        /// <summary>
+        ///     Add Argument to Argument list for the message.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="value"></param>
+        public void AddArgument(string[] value)
+        {
+            _arguments.Add(value);
+        }
+        
+        /// <summary>
+        ///     Add Argument to Argument list for the message.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="value"></param>
+        public void AddArgument(Dictionary<string,string> value)
+        {
+            _arguments.Add(value);
         }
     }
 }

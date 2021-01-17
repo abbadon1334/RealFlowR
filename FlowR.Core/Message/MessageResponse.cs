@@ -18,7 +18,7 @@ namespace FlowR.Core.Message
         /// <inheritdoc />
         public MessageResponse()
         {
-            AddArgument("MessageUuid", GetUuid());
+            AddArgument(GetUuid());
         }
 
         /// <inheritdoc />

@@ -25,7 +25,7 @@ namespace FlowR.Core.Message
         /// <inheritdoc />
         public MessageElementWithResponse(Node node)
         {
-            AddArgument("Uuid", node.Uuid);
+            AddArgument(node.Uuid);
         }
         /// <summary>
         ///     Requested Action
