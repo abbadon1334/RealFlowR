@@ -15,13 +15,11 @@ namespace FlowR.Core.Message
         /// <summary>
         ///     Event arguments
         /// </summary>
-        [JsonInclude]
-        public readonly Dictionary<string, string> EventArgs = new();
+        [JsonInclude] public readonly Dictionary<string, string> EventArgs = new();
 
         /// <summary>
         ///     Name of the Event
         /// </summary>
-        /// 
         [JsonInclude]
         public string EventName { get; set; }
 

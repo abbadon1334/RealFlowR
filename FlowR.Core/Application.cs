@@ -117,7 +117,7 @@ namespace FlowR.Core
         /// <param name="timer"></param>
         public void CancelTimer(ApplicationTimer timer)
         {
-            _timers.Remove(timer); 
+            _timers.Remove(timer);
         }
     }
 }

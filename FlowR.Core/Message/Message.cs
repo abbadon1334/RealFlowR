@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text.Json.Serialization;
 
 namespace FlowR.Core.Message
@@ -15,8 +14,7 @@ namespace FlowR.Core.Message
         /// <summary>
         ///     Message Uuid
         /// </summary>
-        [JsonInclude]
-        public string Uuid;
+        [JsonInclude] public string Uuid;
 
         /// <summary>
         ///     Constructor
@@ -57,10 +55,7 @@ namespace FlowR.Core.Message
         /// <param name="values"></param>
         public void AddArgument(params object[] values)
         {
-            foreach (var value in values)
-            {
-                _arguments.Add(value);   
-            }
+            foreach (var value in values) _arguments.Add(value);
         }
     }
 }

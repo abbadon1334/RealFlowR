@@ -12,8 +12,7 @@ namespace FlowR.Core.Message
         /// <summary>
         ///     When completed store response here
         /// </summary>
-        [JsonInclude]
-        public string Response;
+        [JsonInclude] public string Response;
 
         /// <inheritdoc />
         public MessageResponse()

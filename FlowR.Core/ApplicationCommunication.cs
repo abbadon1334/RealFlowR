@@ -10,8 +10,8 @@ namespace FlowR.Core
     /// </summary>
     public class ApplicationCommunication
     {
-        private readonly ApplicationResponses _responses = new();
         private readonly Application _application;
+        private readonly ApplicationResponses _responses = new();
         /// <summary>
         ///     Constructor
         /// </summary>

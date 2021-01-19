@@ -10,17 +10,13 @@ namespace FlowR.Core
     /// </summary>
     public abstract class Node
     {
-        /// <summary>
-        ///     TagName of the Node : any HTML valid tag name is permitted.
-        /// </summary>
-        public abstract string TagName { get; }
-        
+
         private NodeCollectionAttribute _attributes;
-        
+
         private NodeCollectionNode _children;
-        
+
         private NodeCollectionEvent _events;
-        
+
         private NodeCollectionProperty _properties;
 
         private string _uuid = string.Empty;
@@ -35,6 +31,10 @@ namespace FlowR.Core
             SetupEvents();
             SetupProperties();
         }
+        /// <summary>
+        ///     TagName of the Node : any HTML valid tag name is permitted.
+        /// </summary>
+        public abstract string TagName { get; }
 
         /// <summary>
         ///     The Client Application.
@@ -45,7 +45,7 @@ namespace FlowR.Core
         ///     DomNode parent
         /// </summary>
         public Node Owner { get; set; }
-        
+
         /// <summary>
         ///     Unique identifier of the Node
         /// </summary>
@@ -207,7 +207,7 @@ namespace FlowR.Core
         {
             SendMessage(Factory.MessageAddMethod(this, methodName, jsStatement));
         }
-        
+
         /// <summary>
         ///     Call a method on client side on this node with arguments, don't wait for response.
         /// </summary>
@@ -287,32 +287,31 @@ namespace FlowR.Core
         ///     Attach a node to children.
         /// </summary>
         /// <returns></returns>
-        public TNode Add<TNode>(params KeyValuePair<string,string>[] attributes)
+        public TNode Add<TNode>(params KeyValuePair<string, string>[] attributes)
             where TNode : ComponentElement<TNode>
             , new()
         {
-            TNode cmp = new TNode();
+            var cmp = new TNode();
             cmp.SetAttributes(attributes);
             Add(cmp);
-        
+
             return cmp;
         }
-        
+
         /// <summary>
         ///     Attach a node to children.
         /// </summary>
         /// <returns></returns>
-        public TNode Add<TNode>(string name, params KeyValuePair<string,string>[] attributes)
+        public TNode Add<TNode>(string name, params KeyValuePair<string, string>[] attributes)
             where TNode : ComponentControl<TNode>, IComponentControl
             , new()
         {
-            
-            TNode cmp = new TNode();
+            var cmp = new TNode();
             cmp.SetControlName(name);
             cmp.SetAttributes(attributes);
-            
+
             Add(cmp);
-            
+
             return cmp;
         }
 
@@ -426,7 +425,7 @@ namespace FlowR.Core
 
         private string _value = string.Empty;
         /// <summary>
-        /// Value 
+        ///     Value
         /// </summary>
         public string Value
         {
@@ -437,6 +436,8 @@ namespace FlowR.Core
                 _SetProperty("value", value);
             }
         }
+
         #endregion
+
     }
 }

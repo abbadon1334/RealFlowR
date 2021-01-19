@@ -9,7 +9,7 @@ namespace FlowR.UI.Controls
     public class Input : ComponentControl<Input>, IComponentControl
     {
         /// <inheritdoc cref="Node.TagName" />
-        public override string TagName  => "input";
+        public override string TagName => "input";
 
         /// <summary>
         ///     Request from Form on submit

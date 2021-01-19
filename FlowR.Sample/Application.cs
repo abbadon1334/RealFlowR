@@ -1,6 +1,4 @@
-using System;
-using System.Security.Cryptography;
-using FlowR.Core;
+using System.Linq;
 using FlowR.UI;
 using FlowR.UI.Controls;
 using Microsoft.AspNetCore.SignalR;
@@ -14,29 +12,25 @@ namespace FlowR
 
         public Application(string connectionId, IClientProxy client) : base(connectionId, client)
         {
-            
             var containerRow = RootElement.Add<Div>()
                 .SetAttribute("class", "container-fluid")
-                    .Add<Div>()
-                    .SetAttribute("class", "row");
-            
+                .Add<Div>()
+                .SetAttribute("class", "row");
+
             var leftColumn = containerRow.Add<Div>()
                 .SetAttribute("class", "col");
-            
-            var form = leftColumn.Add<Form>();
-            
-            Input input = form.Add<Input>("fldTest");
-            
-                Button frmSubmit = form.Add<Button>().SetText("Submit");
 
-                form.OnSubmit((values) =>
-                {
-                    form.Application.Communication.CallGlobalMethod("console.log", values.ToString());
-                }, new IComponentControl[]
-                {
-                    input
-                });
-            
+            var form = leftColumn.Add<Form>();
+
+            var input = form.Add<Input>("fldTest");
+
+            var frmSubmit = form.Add<Button>().SetText("Submit");
+
+            form.OnSubmit(values =>
+            {
+                form.Application.Communication.CallGlobalMethod("alert", values.ToArray().ToString());
+            }, input);
+
             RightColumn = containerRow.Add<Div>();
             RightColumn.SetAttribute("class", "col");
 

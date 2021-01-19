@@ -13,14 +13,23 @@ namespace FlowR.Core
 
         /// <inheritdoc cref="NodeCollection{T}.Set" />
         /// summary>
-        public void SetAttribute(string name, string value) => Set(name, value);
+        public void SetAttribute(string name, string value)
+        {
+            Set(name, value);
+        }
 
         /// <inheritdoc cref="NodeCollection{T}.Exists" />
         /// summary>
-        public bool HasAttribute(string name) => Exists(name);
+        public bool HasAttribute(string name)
+        {
+            return Exists(name);
+        }
 
         /// <inheritdoc cref="NodeCollection{T}.Unset" />
         /// summary>
-        public void RemoveAttribute(string name) => Unset(name);
+        public void RemoveAttribute(string name)
+        {
+            Unset(name);
+        }
     }
 }

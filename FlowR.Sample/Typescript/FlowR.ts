@@ -99,7 +99,7 @@ class FlowR {
     public StartListenEvent(uuid: string, event_name: string) {
 
         console.log('startListenEvent', uuid, event_name);
-        var handler = (uuid, event_name) => {
+        let handler = (uuid, event_name) => {
             /** @ts-ignore */
             this.connection.invoke(
                 "ClientEventTriggered",
@@ -113,7 +113,7 @@ class FlowR {
     }
 
     public StopListenEvent(uuid: string, event_name: string) {
-
+        // @todo
     }
 
     public SetText(uuid: string, text: string) {
@@ -147,7 +147,7 @@ class FlowR {
 
     public CallMethod(uuid: string, method: string, ...args) {
         try {
-            FlowR.ObjectPathBuilder(document.getElementById(uuid), method).Call(...args);
+            FlowR.ObjectPathBuilder(document.getElementById(uuid), method).Call(args);
         } catch (e) {
             console.log(e);
         }
@@ -166,7 +166,7 @@ class FlowR {
 
     public CallGlobalMethod(method: string, ...args) {
         try {
-            FlowR.ObjectPathBuilder(window, method).Call(...args)
+            FlowR.ObjectPathBuilder(window, method).Call(args)
         } catch (e) {
             console.log(e);
         }
@@ -174,7 +174,7 @@ class FlowR {
 
     public CallGlobalMethodGetResponse(message_uuid: string, path: string, ...args) {
         try {
-            this.Invoke( message_uuid, FlowR.ObjectPathBuilder(window, path).Call(...args));
+            this.Invoke( message_uuid, FlowR.ObjectPathBuilder(window, path).Call(args));
         } catch (e) {
             console.log(e);
         }
@@ -197,7 +197,7 @@ class FlowR {
     }
 
     public AddMethod(uuid:string, name:string, statement:string) {
-        var obj = document.getElementById(uuid);
+        let obj = document.getElementById(uuid);
             obj[name] = new Function("return " + statement)();
     }
 
@@ -263,12 +263,12 @@ class FlowR {
                 // let it return null | undefined | "" | string @todo che if this is a correct behaviour
                 return obj[last_path_chunk];
             },
-            Call(...args) {
+            Call(args) {
                 // if undefined will throw exception better check before call
                 FlowR.AssertNotUndefinedNotNull(obj[last_path_chunk]);
                 // if not a function will throw a error
                 FlowR.AssertIsFunction(obj[last_path_chunk]);
-                return obj[last_path_chunk](...args);
+                return obj[last_path_chunk].apply(null, args);
             }
         }
     }

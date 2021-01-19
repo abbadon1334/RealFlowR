@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
-
 namespace FlowR.Core.Message
 {
     // @todo 4 type of message one single factory, is better to move it directly in classes as static factory with different initialization 
@@ -11,7 +8,7 @@ namespace FlowR.Core.Message
     public static class Factory
     {
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
@@ -31,7 +28,7 @@ namespace FlowR.Core.Message
 
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -43,7 +40,7 @@ namespace FlowR.Core.Message
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -54,7 +51,7 @@ namespace FlowR.Core.Message
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
@@ -64,7 +61,7 @@ namespace FlowR.Core.Message
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="eventName"></param>
@@ -75,7 +72,7 @@ namespace FlowR.Core.Message
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="eventName"></param>
@@ -86,7 +83,7 @@ namespace FlowR.Core.Message
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="text"></param>
@@ -97,7 +94,7 @@ namespace FlowR.Core.Message
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -109,7 +106,7 @@ namespace FlowR.Core.Message
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -121,7 +118,7 @@ namespace FlowR.Core.Message
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -133,7 +130,7 @@ namespace FlowR.Core.Message
         }
 
         /// <summary>
-        /// Return MessageElementWithResponse
+        ///     Return MessageElementWithResponse
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -144,7 +141,7 @@ namespace FlowR.Core.Message
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -156,7 +153,7 @@ namespace FlowR.Core.Message
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="node"></param>
         /// <param name="name"></param>
@@ -211,7 +208,7 @@ namespace FlowR.Core.Message
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="name"></param>
         /// <param name="arguments"></param>
@@ -223,7 +220,7 @@ namespace FlowR.Core.Message
 
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="name"></param>
         /// <param name="arguments"></param>
@@ -234,7 +231,7 @@ namespace FlowR.Core.Message
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
@@ -244,7 +241,7 @@ namespace FlowR.Core.Message
         }
 
         /// <summary>
-        /// Return MessageElement
+        ///     Return MessageElement
         /// </summary>
         /// <param name="path"></param>
         /// <param name="value"></param>
