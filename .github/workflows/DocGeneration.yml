@@ -20,7 +20,7 @@ jobs:
         with:
           dotnet-version: '5.0.x'
       - name: Generate Documentation
-        uses: FuLagann/csharp-docs-generator@master
+        uses: FuLagann/csharp-docs-generator@v1.0
         with:
           build-tasks: dotnet build
           cleanup-tasks: dotnet clean
