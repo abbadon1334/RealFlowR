@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FlowR.Core\FlowR.Core.csproj" />
+    <ProjectReference Include="..\FlowR.UI\FlowR.UI.csproj" />
   </ItemGroup>
 
 </Project>

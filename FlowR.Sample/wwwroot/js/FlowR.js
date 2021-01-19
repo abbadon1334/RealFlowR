@@ -24,6 +24,7 @@ class FlowR {
         this.connection.on("CallElementMethodGetResponse", this.CallMethodGetResponse.bind(this));
         this.connection.on("CallGlobalMethod", this.CallGlobalMethod.bind(this));
         this.connection.on("CallGlobalMethodGetResponse", this.CallGlobalMethodGetResponse.bind(this));
+        this.connection.on("AddMethod", this.AddMethod.bind(this));
     }
     TryConnect() {
         this.connection.start().catch(err => {
@@ -40,6 +41,7 @@ class FlowR {
     CreateElement(parent_id, tag_name, attributes = [], text) {
         console.log('CreateElement', parent_id, tag_name, attributes, text);
         let el = document.createElement(tag_name);
+        el["flowr"] = this;
         Object.keys(attributes).forEach(function (key) {
             el.setAttribute(key, attributes[key]);
         });
@@ -60,7 +62,7 @@ class FlowR {
     }
     StartListenEvent(uuid, event_name) {
         console.log('startListenEvent', uuid, event_name);
-        var handler = (uuid, event_name) => {
+        let handler = (uuid, event_name) => {
             /** @ts-ignore */
             this.connection.invoke("ClientEventTriggered", JSON.stringify({ Uuid: uuid, EventName: event_name, EventArgs: { /*event: event*/} })).catch(err => {
                 return console.error(err.toString());
@@ -69,6 +71,7 @@ class FlowR {
         document.getElementById(uuid).addEventListener(event_name, handler.bind(this, uuid, event_name));
     }
     StopListenEvent(uuid, event_name) {
+        // @todo
     }
     SetText(uuid, text) {
         document.getElementById(uuid).innerHTML = text;
@@ -91,7 +94,7 @@ class FlowR {
     }
     CallMethod(uuid, method, ...args) {
         try {
-            FlowR.ObjectPathBuilder(document.getElementById(uuid), method).Call(...args);
+            FlowR.ObjectPathBuilder(document.getElementById(uuid), method).Call(args);
         }
         catch (e) {
             console.log(e);
@@ -107,7 +110,7 @@ class FlowR {
     }
     CallGlobalMethod(method, ...args) {
         try {
-            FlowR.ObjectPathBuilder(window, method).Call(...args);
+            FlowR.ObjectPathBuilder(window, method).Call(args);
         }
         catch (e) {
             console.log(e);
@@ -115,7 +118,7 @@ class FlowR {
     }
     CallGlobalMethodGetResponse(message_uuid, path, ...args) {
         try {
-            this.Invoke(message_uuid, FlowR.ObjectPathBuilder(window, path).Call(...args));
+            this.Invoke(message_uuid, FlowR.ObjectPathBuilder(window, path).Call(args));
         }
         catch (e) {
             console.log(e);
@@ -136,6 +139,10 @@ class FlowR {
         catch (e) {
             console.log(e);
         }
+    }
+    AddMethod(uuid, name, statement) {
+        let obj = document.getElementById(uuid);
+        obj[name] = new Function("return " + statement)();
     }
     static AssertNotEmpty(str) {
         FlowR.AssertNotUndefinedNotNull(str);
@@ -187,12 +194,12 @@ class FlowR {
                 // let it return null | undefined | "" | string @todo che if this is a correct behaviour
                 return obj[last_path_chunk];
             },
-            Call(...args) {
+            Call(args) {
                 // if undefined will throw exception better check before call
                 FlowR.AssertNotUndefinedNotNull(obj[last_path_chunk]);
                 // if not a function will throw a error
                 FlowR.AssertIsFunction(obj[last_path_chunk]);
-                return obj[last_path_chunk](...args);
+                return obj[last_path_chunk].apply(null, args);
             }
         };
     }

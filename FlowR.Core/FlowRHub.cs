@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using FlowR.Library.Client;
-using FlowR.Library.Client.Message;
+using FlowR.Core.Message;
 using Microsoft.AspNetCore.SignalR;
 
-namespace FlowR.Library
+namespace FlowR.Core
 {
     /// <summary>
     ///     FlowR Hub Service
@@ -26,7 +25,7 @@ namespace FlowR.Library
         /// <summary>
         ///     Called from client whenever an event fires on a Node which are listen for that specific event.
         /// </summary>
-        /// <see cref="Node.DomNode.On(string, EventHandler)" />
+        /// <see cref="Node.On(string, EventHandler)" />
         /// <param name="message"></param>
         public void ClientEventTriggered(string message)
         {
@@ -38,7 +37,7 @@ namespace FlowR.Library
         /// <summary>
         ///     Called from client when a previous message request a response
         /// </summary>
-        /// <see cref="Node.DomNode.CallClientMethodWaitResponse(string, string[])" />
+        /// <see cref="Node.CallClientMethodWaitResponse(string, string[])" />
         /// <see cref="ApplicationCommunication.CallGlobalMethodWaitResponse(string, string[])" />
         /// <param name="message"></param>
         public void ClientMessageResponse(string message)

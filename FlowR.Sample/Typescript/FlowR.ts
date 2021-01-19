@@ -40,6 +40,8 @@ class FlowR {
 
         this.connection.on("CallGlobalMethod", this.CallGlobalMethod.bind(this));
         this.connection.on("CallGlobalMethodGetResponse", this.CallGlobalMethodGetResponse.bind(this));
+
+        this.connection.on("AddMethod", this.AddMethod.bind(this));
     }
 
     TryConnect() {
@@ -57,11 +59,12 @@ class FlowR {
         console.log('disconnect');
     }
 
-    CreateElement(parent_id: string, tag_name: string, attributes = [], text: string) {
+    public CreateElement(parent_id: string, tag_name: string, attributes = [], text: string) {
 
         console.log('CreateElement', parent_id, tag_name, attributes, text);
 
         let el = document.createElement(tag_name);
+            el["flowr"] = this;
 
         Object.keys(attributes).forEach(function (key) {
             el.setAttribute(key, attributes[key]);
@@ -72,31 +75,31 @@ class FlowR {
         document.getElementById(parent_id).appendChild(el);
     }
 
-    RemoveElement(uuid: string) {
+    public RemoveElement(uuid: string) {
 
         console.log('DestroyElement', uuid);
 
         document.getElementById(uuid).remove();
     }
 
-    SetAttribute(uuid: string, name: string, value: string) {
+    public SetAttribute(uuid: string, name: string, value: string) {
 
         console.log('setAttribute', uuid, name, value);
 
         document.getElementById(uuid).setAttribute(name, value);
     }
 
-    RemoveAttribute(uuid: string, name: string) {
+    public RemoveAttribute(uuid: string, name: string) {
 
         console.log('removeAttribute', uuid, name);
 
         document.getElementById(uuid).removeAttribute(name);
     }
 
-    StartListenEvent(uuid: string, event_name: string) {
+    public StartListenEvent(uuid: string, event_name: string) {
 
         console.log('startListenEvent', uuid, event_name);
-        var handler = (uuid, event_name) => {
+        let handler = (uuid, event_name) => {
             /** @ts-ignore */
             this.connection.invoke(
                 "ClientEventTriggered",
@@ -109,20 +112,19 @@ class FlowR {
         document.getElementById(uuid).addEventListener(event_name, handler.bind(this, uuid, event_name));
     }
 
-    StopListenEvent(uuid: string, event_name: string) {
-
+    public StopListenEvent(uuid: string, event_name: string) {
+        // @todo
     }
 
-    SetText(uuid: string, text: string) {
+    public SetText(uuid: string, text: string) {
         document.getElementById(uuid).innerHTML = text;
     }
 
-    SetProperty(uuid: string, property_path: string, value: string) {
-
+    public SetProperty(uuid: string, property_path: string, value: string) {
         FlowR.ObjectPathBuilder(document.getElementById(uuid), property_path).Set(value);
     }
 
-    GetProperty(message_uuid: string, uuid: string, property_path: string): any {
+    public GetProperty(message_uuid: string, uuid: string, property_path: string): any {
         try {
             this.Invoke(
                 message_uuid,
@@ -143,15 +145,15 @@ class FlowR {
         });
     }
 
-    CallMethod(uuid: string, method: string, ...args) {
+    public CallMethod(uuid: string, method: string, ...args) {
         try {
-            FlowR.ObjectPathBuilder(document.getElementById(uuid), method).Call(...args);
+            FlowR.ObjectPathBuilder(document.getElementById(uuid), method).Call(args);
         } catch (e) {
             console.log(e);
         }
     }
 
-    CallMethodGetResponse(message_uuid: string, uuid: string, method: string, ...args) {
+    public CallMethodGetResponse(message_uuid: string, uuid: string, method: string, ...args) {
         try {
             this.Invoke(
                 message_uuid,
@@ -162,23 +164,23 @@ class FlowR {
         }
     }
 
-    CallGlobalMethod(method: string, ...args) {
+    public CallGlobalMethod(method: string, ...args) {
         try {
-            FlowR.ObjectPathBuilder(window, method).Call(...args)
+            FlowR.ObjectPathBuilder(window, method).Call(args)
         } catch (e) {
             console.log(e);
         }
     }
 
-    CallGlobalMethodGetResponse(message_uuid: string, path: string, ...args) {
+    public CallGlobalMethodGetResponse(message_uuid: string, path: string, ...args) {
         try {
-            this.Invoke( message_uuid, FlowR.ObjectPathBuilder(window, path).Call(...args));
+            this.Invoke( message_uuid, FlowR.ObjectPathBuilder(window, path).Call(args));
         } catch (e) {
             console.log(e);
         }
     }
 
-    GetGlobalProperty(message_uuid: string, property_path: string): any {
+    public GetGlobalProperty(message_uuid: string, property_path: string): any {
         try {
             this.Invoke(message_uuid, FlowR.ObjectPathBuilder(window, property_path).Get());
         } catch (e) {
@@ -186,12 +188,17 @@ class FlowR {
         }
     }
 
-    SetGlobalProperty(property_path: string, value: string) {
+    public SetGlobalProperty(property_path: string, value: string) {
         try {
             FlowR.ObjectPathBuilder(window, property_path).Set(value);
         } catch (e) {
             console.log(e);
         }
+    }
+
+    public AddMethod(uuid:string, name:string, statement:string) {
+        let obj = document.getElementById(uuid);
+            obj[name] = new Function("return " + statement)();
     }
 
     public static AssertNotEmpty(str:string) {
@@ -256,12 +263,12 @@ class FlowR {
                 // let it return null | undefined | "" | string @todo che if this is a correct behaviour
                 return obj[last_path_chunk];
             },
-            Call(...args) {
+            Call(args) {
                 // if undefined will throw exception better check before call
                 FlowR.AssertNotUndefinedNotNull(obj[last_path_chunk]);
                 // if not a function will throw a error
                 FlowR.AssertIsFunction(obj[last_path_chunk]);
-                return obj[last_path_chunk](...args);
+                return obj[last_path_chunk].apply(null, args);
             }
         }
     }

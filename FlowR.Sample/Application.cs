@@ -1,65 +1,80 @@
-using FlowR.Library.Client.Tags;
+using System.Linq;
+using FlowR.UI;
+using FlowR.UI.Controls;
 using Microsoft.AspNetCore.SignalR;
 
 namespace FlowR
 {
-    public class Application : Library.Client.Application
+    public class Application : Core.Application
     {
         protected readonly Div RightColumn;
         protected int Counter = 0;
 
         public Application(string connectionId, IClientProxy client) : base(connectionId, client)
         {
-            var masterContainer = RootElement.Add(new Div()).SetAttribute("class", "container-fluid");
-            var containerRow = masterContainer.Add(new Div()).SetAttribute("class", "row");
+            var containerRow = RootElement.Add<Div>()
+                .SetAttribute("class", "container-fluid")
+                .Add<Div>()
+                .SetAttribute("class", "row");
 
-            var leftColumn = containerRow.Add(new Div()).SetAttribute("class", "col");
-            RightColumn = containerRow.Add(new Div()).SetAttribute("class", "col") as Div;
+            var leftColumn = containerRow.Add<Div>()
+                .SetAttribute("class", "col");
 
-            var container = leftColumn
-                .Add(new Div())
+            var form = leftColumn.Add<Form>();
+
+            var input = form.Add<Input>("fldTest");
+
+            var frmSubmit = form.Add<Button>().SetText("Submit");
+
+            form.OnSubmit(values =>
+            {
+                form.Application.Communication.CallGlobalMethod("alert", values.ToArray().ToString());
+            }, input);
+
+            RightColumn = containerRow.Add<Div>();
+            RightColumn.SetAttribute("class", "col");
+
+            var container = leftColumn.Add<Div>()
                 .SetAttribute("class", "card");
 
-            var cardHeaderTime = container
-                .Add(new Div())
+            var cardHeaderTime = container.Add<Div>()
                 .SetAttribute("class", "card-header")
                 .SetText("Server Time");
 
             AddTimer(1 /* 1 millisec to see maximum speed */, (sender, args) =>
             {
-                //    cardHeaderTime.SetText($"ApplicationTimer which update Text every (1ms) with server Time : {DateTime.Now:O}");
+                //cardHeaderTime.SetText($"ApplicationTimer which update Text every (1ms) with server Time : {DateTime.Now:O}");
             });
 
             var cardHeader = container
-                .Add(new Div())
+                .Add<Div>()
                 .SetAttribute("class", "card-header")
                 .SetText("Children 0");
 
             var cardBody = container
-                .Add(new Div())
+                .Add<Div>()
                 .SetAttribute("class", "card-body");
 
             var cardText = cardBody
-                .Add(new Div());
+                .Add<Div>();
 
             var buttonAdd1000 = cardBody
-                .Add(new Button())
+                .Add<Div>()
                 .SetAttribute("class", "btn btn-primary")
                 .SetText("Button Add 1000");
 
             var buttonRemove = cardBody
-                .Add(new Button())
+                .Add<Div>()
                 .SetAttribute("class", "btn btn-danger")
                 .SetText("Button Remove All");
 
             var buttonTestResponse = cardBody
-                .Add(new Button())
+                .Add<Div>()
                 .SetAttribute("class", "btn btn-success")
-                .SetText(
-                    "2 way communication Test");
+                .SetText("2 way communication Test");
 
             var testContainer = RootElement
-                .Add(new Div())
+                .Add<Div>()
                 .SetAttribute("class", "card");
 
             buttonAdd1000.On("click", delegate
@@ -76,7 +91,7 @@ namespace FlowR
                 for (var x = 0; x < 1000; x++)
                 {
                     var count = testContainer.GetChildrenCount();
-                    testContainer.Add(new Div())
+                    testContainer.Add<Div>()
                         .SetAttribute("class", "display-5 pb-3 mb-3 border-bottom")
                         .SetText($"Number {count}");
                     cardHeader.SetText($"Children {count}");
