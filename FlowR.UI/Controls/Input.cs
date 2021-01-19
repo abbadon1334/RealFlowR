@@ -10,15 +10,5 @@ namespace FlowR.UI.Controls
     {
         /// <inheritdoc cref="Node.TagName" />
         public override string TagName => "input";
-
-        /// <summary>
-        ///     Request from Form on submit
-        /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
-        public virtual async Task<string> Collect(string path = "value")
-        {
-            return await GetProperty(path);
-        }
     }
 }

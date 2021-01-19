@@ -25,7 +25,7 @@ namespace FlowR.Core
         /// <summary>
         ///     Called from client whenever an event fires on a Node which are listen for that specific event.
         /// </summary>
-        /// <see cref="Node.On(string, EventHandler)" />
+        /// <see cref="Component{T}.On(string, EventHandler)" />
         /// <param name="message"></param>
         public void ClientEventTriggered(string message)
         {

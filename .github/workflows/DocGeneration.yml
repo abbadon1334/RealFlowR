@@ -24,7 +24,7 @@ jobs:
         with:
           build-tasks: dotnet build
           cleanup-tasks: dotnet clean
-          binaries: FlowR.Sample/bin/Debug/net5.0/FlowR.Core.dll,FlowR.Sample/bin/Debug/net5.0/FlowR.UI.dll
+          binaries: FlowR.Sample/bin/Debug/net5.0/FlowR.UI.dll
           output-path: docs/api
           user-email: fdanti@gmail.com
           user-name: C# Document Generator

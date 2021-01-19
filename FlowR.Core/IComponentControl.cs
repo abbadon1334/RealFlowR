@@ -2,6 +2,9 @@ using System.Threading.Tasks;
 
 namespace FlowR.Core
 {
+    /// <summary>
+    ///     Interface for ComponentControls 
+    /// </summary>
     public interface IComponentControl
     {
         /// <summary>

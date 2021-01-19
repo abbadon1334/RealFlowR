@@ -14,16 +14,16 @@ namespace FlowR.Core
         {
         }
 
-        /// <inheritdoc cref="Node.On" />
+        /// <inheritdoc cref="Component{T}.On" />
         /// summary>
         public void On(string eventName, EventHandler handler)
         {
             if (!Exists(eventName)) Set(eventName, new List<EventHandler>());
-
+            
             Get(eventName).Add(handler);
         }
 
-        /// <inheritdoc cref="Node.Off" />
+        /// <inheritdoc cref="Component{T}.On" />
         /// summary>
         public void Off(string eventName, EventHandler handler)
         {

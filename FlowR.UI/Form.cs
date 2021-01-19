@@ -30,6 +30,13 @@ namespace FlowR.UI
             SetAttribute("onsubmit", "return false;");
         }
 
+        /// <summary>
+        ///     Shorthand to startListen for submit event from form.
+        ///     Attach a callback and Add controls to be collected
+        /// </summary>
+        /// <param name="callback"></param>
+        /// <param name="controls"></param>
+        /// <returns></returns>
         public Form OnSubmit(Action<Dictionary<string, object>> callback, params IComponentControl[] controls)
         {
             On("submit", (sender, args) =>
