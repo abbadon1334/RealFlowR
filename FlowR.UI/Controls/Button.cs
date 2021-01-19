@@ -5,9 +5,9 @@ namespace FlowR.UI.Controls
     /// <summary>
     ///     Tag button
     /// </summary>
-    public class Button : Node
+    public class Button : ComponentElement<Button>
     {
         /// <inheritdoc cref="Node.TagName" />
-        public new readonly string TagName = "button";
+        public override string TagName { get; } = "button";
     }
 }

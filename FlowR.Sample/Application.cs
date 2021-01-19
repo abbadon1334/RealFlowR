@@ -1,3 +1,6 @@
+using System;
+using System.Security.Cryptography;
+using FlowR.Core;
 using FlowR.UI;
 using FlowR.UI.Controls;
 using Microsoft.AspNetCore.SignalR;
@@ -16,9 +19,23 @@ namespace FlowR
                 .SetAttribute("class", "container-fluid")
                     .Add<Div>()
                     .SetAttribute("class", "row");
-
+            
             var leftColumn = containerRow.Add<Div>()
                 .SetAttribute("class", "col");
+            
+            var form = leftColumn.Add<Form>();
+            
+            Input input = form.Add<Input>("fldTest");
+            
+                Button frmSubmit = form.Add<Button>().SetText("Submit");
+
+                form.OnSubmit((values) =>
+                {
+                    form.Application.Communication.CallGlobalMethod("console.log", values.ToString());
+                }, new IComponentControl[]
+                {
+                    input
+                });
             
             RightColumn = containerRow.Add<Div>();
             RightColumn.SetAttribute("class", "col");
@@ -32,7 +49,7 @@ namespace FlowR
 
             AddTimer(1 /* 1 millisec to see maximum speed */, (sender, args) =>
             {
-                //    cardHeaderTime.SetText($"ApplicationTimer which update Text every (1ms) with server Time : {DateTime.Now:O}");
+                //cardHeaderTime.SetText($"ApplicationTimer which update Text every (1ms) with server Time : {DateTime.Now:O}");
             });
 
             var cardHeader = container

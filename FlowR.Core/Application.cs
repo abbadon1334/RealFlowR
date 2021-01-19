@@ -16,7 +16,7 @@ namespace FlowR.Core
         ///     Root element of the Application.
         ///     The composition tree that draw client UI starts from here.
         /// </summary>
-        protected readonly NodeApplicationRoot RootElement;
+        protected readonly ComponentRoot RootElement;
 
         /// <summary>
         ///     Element ID of the master container for the application
@@ -34,7 +34,7 @@ namespace FlowR.Core
             Communication = new ApplicationCommunication(this, client);
 
             // Prepare the root element 
-            RootElement = new NodeApplicationRoot(RootElementId);
+            RootElement = new ComponentRoot(RootElementId);
             RootElement.Application = this;
             RootElement.Init();
 

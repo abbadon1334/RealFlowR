@@ -13,7 +13,7 @@ namespace FlowR.Core
         /// <summary>
         ///     TagName of the Node : any HTML valid tag name is permitted.
         /// </summary>
-        public readonly string TagName = "div";
+        public abstract string TagName { get; }
         
         private NodeCollectionAttribute _attributes;
         
@@ -62,7 +62,7 @@ namespace FlowR.Core
                 if (_uuid != string.Empty) throw new Exception($"Element Uuid is not empty (actual : '{_uuid}'))");
 
                 _uuid = value;
-                if (!HasAttribute("id")) SetAttribute("id", value);
+                if (!HasAttribute("id")) _SetAttribute("id", value);
             }
         }
 
@@ -130,7 +130,7 @@ namespace FlowR.Core
         /// </summary>
         /// <param name="name"></param>
         /// <param name="value"></param>
-        public void SetProperty(string name, string value)
+        protected void _SetProperty(string name, string value)
         {
             _properties.SetProperty(name, value);
         }
@@ -155,7 +155,7 @@ namespace FlowR.Core
         /// </summary>
         /// <param name="eventName"></param>
         /// <param name="handler"></param>
-        public void On(string eventName, EventHandler handler)
+        protected void _On(string eventName, EventHandler handler)
         {
             _events.On(eventName, handler);
         }
@@ -165,7 +165,7 @@ namespace FlowR.Core
         /// </summary>
         /// <param name="eventName"></param>
         /// <param name="handler"></param>
-        public void Off(string eventName, EventHandler handler)
+        protected void _Off(string eventName, EventHandler handler)
         {
             _events.Off(eventName, handler);
         }
@@ -287,9 +287,33 @@ namespace FlowR.Core
         ///     Attach a node to children.
         /// </summary>
         /// <returns></returns>
-        public T Add<T>() where T : Node, new()
+        public TNode Add<TNode>(params KeyValuePair<string,string>[] attributes)
+            where TNode : ComponentElement<TNode>
+            , new()
         {
-            return _children.Add(new T()) as T;
+            TNode cmp = new TNode();
+            cmp.SetAttributes(attributes);
+            Add(cmp);
+        
+            return cmp;
+        }
+        
+        /// <summary>
+        ///     Attach a node to children.
+        /// </summary>
+        /// <returns></returns>
+        public TNode Add<TNode>(string name, params KeyValuePair<string,string>[] attributes)
+            where TNode : ComponentControl<TNode>, IComponentControl
+            , new()
+        {
+            
+            TNode cmp = new TNode();
+            cmp.SetControlName(name);
+            cmp.SetAttributes(attributes);
+            
+            Add(cmp);
+            
+            return cmp;
         }
 
         #endregion
@@ -302,7 +326,7 @@ namespace FlowR.Core
         /// <param name="name"></param>
         /// <param name="value"></param>
         /// <returns></returns>
-        public Node SetAttribute(string name, string value)
+        protected Node _SetAttribute(string name, string value)
         {
             _attributes.SetAttribute(name, value);
 
@@ -323,7 +347,7 @@ namespace FlowR.Core
         ///     Remove an Attribute.
         /// </summary>
         /// <param name="name"></param>
-        public void RemoveAttribute(string name)
+        protected void _RemoveAttribute(string name)
         {
             _attributes.RemoveAttribute(name);
         }
@@ -389,7 +413,7 @@ namespace FlowR.Core
         /// <param name="text"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public Node SetText(string text)
+        protected Node _SetText(string text)
         {
             Text = text;
 
@@ -410,19 +434,9 @@ namespace FlowR.Core
             set
             {
                 _value = value;
-                SetProperty("value", value);
+                _SetProperty("value", value);
             }
         }
         #endregion
-
-        /// <summary>
-        ///     Request from Form on submit
-        /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
-        public virtual async Task<string> Collect(string path = "value")
-        {
-            return await GetProperty(path);
-        }
     }
 }

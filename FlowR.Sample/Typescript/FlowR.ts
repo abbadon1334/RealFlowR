@@ -59,11 +59,12 @@ class FlowR {
         console.log('disconnect');
     }
 
-    CreateElement(parent_id: string, tag_name: string, attributes = [], text: string) {
+    public CreateElement(parent_id: string, tag_name: string, attributes = [], text: string) {
 
         console.log('CreateElement', parent_id, tag_name, attributes, text);
 
         let el = document.createElement(tag_name);
+            el["flowr"] = this;
 
         Object.keys(attributes).forEach(function (key) {
             el.setAttribute(key, attributes[key]);
@@ -74,28 +75,28 @@ class FlowR {
         document.getElementById(parent_id).appendChild(el);
     }
 
-    RemoveElement(uuid: string) {
+    public RemoveElement(uuid: string) {
 
         console.log('DestroyElement', uuid);
 
         document.getElementById(uuid).remove();
     }
 
-    SetAttribute(uuid: string, name: string, value: string) {
+    public SetAttribute(uuid: string, name: string, value: string) {
 
         console.log('setAttribute', uuid, name, value);
 
         document.getElementById(uuid).setAttribute(name, value);
     }
 
-    RemoveAttribute(uuid: string, name: string) {
+    public RemoveAttribute(uuid: string, name: string) {
 
         console.log('removeAttribute', uuid, name);
 
         document.getElementById(uuid).removeAttribute(name);
     }
 
-    StartListenEvent(uuid: string, event_name: string) {
+    public StartListenEvent(uuid: string, event_name: string) {
 
         console.log('startListenEvent', uuid, event_name);
         var handler = (uuid, event_name) => {
@@ -111,19 +112,19 @@ class FlowR {
         document.getElementById(uuid).addEventListener(event_name, handler.bind(this, uuid, event_name));
     }
 
-    StopListenEvent(uuid: string, event_name: string) {
+    public StopListenEvent(uuid: string, event_name: string) {
 
     }
 
-    SetText(uuid: string, text: string) {
+    public SetText(uuid: string, text: string) {
         document.getElementById(uuid).innerHTML = text;
     }
 
-    SetProperty(uuid: string, property_path: string, value: string) {
+    public SetProperty(uuid: string, property_path: string, value: string) {
         FlowR.ObjectPathBuilder(document.getElementById(uuid), property_path).Set(value);
     }
 
-    GetProperty(message_uuid: string, uuid: string, property_path: string): any {
+    public GetProperty(message_uuid: string, uuid: string, property_path: string): any {
         try {
             this.Invoke(
                 message_uuid,
@@ -144,7 +145,7 @@ class FlowR {
         });
     }
 
-    CallMethod(uuid: string, method: string, ...args) {
+    public CallMethod(uuid: string, method: string, ...args) {
         try {
             FlowR.ObjectPathBuilder(document.getElementById(uuid), method).Call(...args);
         } catch (e) {
@@ -152,7 +153,7 @@ class FlowR {
         }
     }
 
-    CallMethodGetResponse(message_uuid: string, uuid: string, method: string, ...args) {
+    public CallMethodGetResponse(message_uuid: string, uuid: string, method: string, ...args) {
         try {
             this.Invoke(
                 message_uuid,
@@ -163,7 +164,7 @@ class FlowR {
         }
     }
 
-    CallGlobalMethod(method: string, ...args) {
+    public CallGlobalMethod(method: string, ...args) {
         try {
             FlowR.ObjectPathBuilder(window, method).Call(...args)
         } catch (e) {
@@ -171,7 +172,7 @@ class FlowR {
         }
     }
 
-    CallGlobalMethodGetResponse(message_uuid: string, path: string, ...args) {
+    public CallGlobalMethodGetResponse(message_uuid: string, path: string, ...args) {
         try {
             this.Invoke( message_uuid, FlowR.ObjectPathBuilder(window, path).Call(...args));
         } catch (e) {
@@ -179,7 +180,7 @@ class FlowR {
         }
     }
 
-    GetGlobalProperty(message_uuid: string, property_path: string): any {
+    public GetGlobalProperty(message_uuid: string, property_path: string): any {
         try {
             this.Invoke(message_uuid, FlowR.ObjectPathBuilder(window, property_path).Get());
         } catch (e) {
@@ -187,7 +188,7 @@ class FlowR {
         }
     }
 
-    SetGlobalProperty(property_path: string, value: string) {
+    public SetGlobalProperty(property_path: string, value: string) {
         try {
             FlowR.ObjectPathBuilder(window, property_path).Set(value);
         } catch (e) {
@@ -195,7 +196,7 @@ class FlowR {
         }
     }
 
-    AddMethod(uuid:string, name:string, statement:string) {
+    public AddMethod(uuid:string, name:string, statement:string) {
         var obj = document.getElementById(uuid);
             obj[name] = new Function("return " + statement)();
     }

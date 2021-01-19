@@ -5,9 +5,9 @@ namespace FlowR.UI
     /// <summary>
     ///     Tag div
     /// </summary>
-    public class Div : Node
+    public class Div : ComponentElement<Div>
     {
         /// <inheritdoc cref="Node.TagName" />
-        public new readonly string TagName = "div";
+        public override string TagName => "div";
     }
 }
