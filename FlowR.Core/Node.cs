@@ -49,7 +49,6 @@ namespace FlowR.Core
         /// <summary>
         ///     Unique identifier of the Node
         /// </summary>
-        /// <exception cref="Exception"></exception>
         public string Uuid
         {
             get
@@ -266,7 +265,6 @@ namespace FlowR.Core
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
-        /// <exception cref="Exception"></exception>
         protected Node Add(Node node)
         {
             if (!IsInitialized()) throw new Exception("Cannot add Child, Node must be initialized first");
@@ -371,7 +369,7 @@ namespace FlowR.Core
         ///     Will be called after attach to Parent.
         ///     This is the method you are looking for if you want to make a component
         /// </summary>
-        /// <exception cref="Exception">Cannot be called multiple times</exception>
+        /// <exception>Cannot be called multiple times</exception>
         public virtual void Init()
         {
             if (IsInitialized()) throw new Exception("Already initialized");
@@ -411,7 +409,6 @@ namespace FlowR.Core
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
-        /// <exception cref="Exception"></exception>
         protected Node _SetText(string text)
         {
             Text = text;
