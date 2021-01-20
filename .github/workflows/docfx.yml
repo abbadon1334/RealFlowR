@@ -30,4 +30,8 @@ jobs:
         uses: nikeee/docfx-action@v1.0.0
         with:
           args: metadata --logLevel Warning docfx.json
-        
+      - uses: maxheld83/ghpages@master
+        name: Publish Documentation on GitHub Pages
+        env:
+          BUILD_DIR: docs
+          GH_PAT: ${{ secrets.GH_PAT }}
