@@ -19,7 +19,7 @@ namespace FlowR.Core
         public void On(string eventName, EventHandler handler)
         {
             if (!Exists(eventName)) Set(eventName, new List<EventHandler>());
-            
+
             Get(eventName).Add(handler);
         }
 

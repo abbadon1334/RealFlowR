@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 namespace FlowR.Core
 {
     /// <summary>
-    ///     Interface for ComponentControls 
+    ///     Interface for ComponentControls
     /// </summary>
     public interface IComponentControl
     {

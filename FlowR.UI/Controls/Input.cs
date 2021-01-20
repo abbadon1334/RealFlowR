@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using FlowR.Core;
 
 namespace FlowR.UI.Controls
