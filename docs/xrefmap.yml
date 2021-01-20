@@ -3,141 +3,141 @@ sorted: true
 references:
 - uid: FlowR.Core
   name: FlowR.Core
-  href: docs/api/FlowR.Core.html
+  href: docfx/api/FlowR.Core.html
   commentId: N:FlowR.Core
   fullName: FlowR.Core
   nameWithType: FlowR.Core
 - uid: FlowR.Core.Application
   name: Application
-  href: docs/api/FlowR.Core.Application.html
+  href: docfx/api/FlowR.Core.Application.html
   commentId: T:FlowR.Core.Application
   fullName: FlowR.Core.Application
   nameWithType: Application
 - uid: FlowR.Core.Application.#ctor(System.String,IClientProxy)
   name: Application(String, IClientProxy)
-  href: docs/api/FlowR.Core.Application.html#FlowR_Core_Application__ctor_System_String_IClientProxy_
+  href: docfx/api/FlowR.Core.Application.html#FlowR_Core_Application__ctor_System_String_IClientProxy_
   commentId: M:FlowR.Core.Application.#ctor(System.String,IClientProxy)
   fullName: FlowR.Core.Application.Application(System.String, IClientProxy)
   nameWithType: Application.Application(String, IClientProxy)
 - uid: FlowR.Core.Application.#ctor*
   name: Application
-  href: docs/api/FlowR.Core.Application.html#FlowR_Core_Application__ctor_
+  href: docfx/api/FlowR.Core.Application.html#FlowR_Core_Application__ctor_
   commentId: Overload:FlowR.Core.Application.#ctor
   isSpec: "True"
   fullName: FlowR.Core.Application.Application
   nameWithType: Application.Application
 - uid: FlowR.Core.Application.AddTimer(System.Int32,EventHandler,System.Boolean)
   name: AddTimer(Int32, EventHandler, Boolean)
-  href: docs/api/FlowR.Core.Application.html#FlowR_Core_Application_AddTimer_System_Int32_EventHandler_System_Boolean_
+  href: docfx/api/FlowR.Core.Application.html#FlowR_Core_Application_AddTimer_System_Int32_EventHandler_System_Boolean_
   commentId: M:FlowR.Core.Application.AddTimer(System.Int32,EventHandler,System.Boolean)
   fullName: FlowR.Core.Application.AddTimer(System.Int32, EventHandler, System.Boolean)
   nameWithType: Application.AddTimer(Int32, EventHandler, Boolean)
 - uid: FlowR.Core.Application.AddTimer*
   name: AddTimer
-  href: docs/api/FlowR.Core.Application.html#FlowR_Core_Application_AddTimer_
+  href: docfx/api/FlowR.Core.Application.html#FlowR_Core_Application_AddTimer_
   commentId: Overload:FlowR.Core.Application.AddTimer
   isSpec: "True"
   fullName: FlowR.Core.Application.AddTimer
   nameWithType: Application.AddTimer
 - uid: FlowR.Core.Application.CancelTimer(FlowR.Core.ApplicationTimer)
   name: CancelTimer(ApplicationTimer)
-  href: docs/api/FlowR.Core.Application.html#FlowR_Core_Application_CancelTimer_FlowR_Core_ApplicationTimer_
+  href: docfx/api/FlowR.Core.Application.html#FlowR_Core_Application_CancelTimer_FlowR_Core_ApplicationTimer_
   commentId: M:FlowR.Core.Application.CancelTimer(FlowR.Core.ApplicationTimer)
   fullName: FlowR.Core.Application.CancelTimer(FlowR.Core.ApplicationTimer)
   nameWithType: Application.CancelTimer(ApplicationTimer)
 - uid: FlowR.Core.Application.CancelTimer*
   name: CancelTimer
-  href: docs/api/FlowR.Core.Application.html#FlowR_Core_Application_CancelTimer_
+  href: docfx/api/FlowR.Core.Application.html#FlowR_Core_Application_CancelTimer_
   commentId: Overload:FlowR.Core.Application.CancelTimer
   isSpec: "True"
   fullName: FlowR.Core.Application.CancelTimer
   nameWithType: Application.CancelTimer
 - uid: FlowR.Core.Application.Communication
   name: Communication
-  href: docs/api/FlowR.Core.Application.html#FlowR_Core_Application_Communication
+  href: docfx/api/FlowR.Core.Application.html#FlowR_Core_Application_Communication
   commentId: P:FlowR.Core.Application.Communication
   fullName: FlowR.Core.Application.Communication
   nameWithType: Application.Communication
 - uid: FlowR.Core.Application.Communication*
   name: Communication
-  href: docs/api/FlowR.Core.Application.html#FlowR_Core_Application_Communication_
+  href: docfx/api/FlowR.Core.Application.html#FlowR_Core_Application_Communication_
   commentId: Overload:FlowR.Core.Application.Communication
   isSpec: "True"
   fullName: FlowR.Core.Application.Communication
   nameWithType: Application.Communication
 - uid: FlowR.Core.Application.OnClientEventTriggered(FlowR.Core.Message.MessageEvent)
   name: OnClientEventTriggered(MessageEvent)
-  href: docs/api/FlowR.Core.Application.html#FlowR_Core_Application_OnClientEventTriggered_FlowR_Core_Message_MessageEvent_
+  href: docfx/api/FlowR.Core.Application.html#FlowR_Core_Application_OnClientEventTriggered_FlowR_Core_Message_MessageEvent_
   commentId: M:FlowR.Core.Application.OnClientEventTriggered(FlowR.Core.Message.MessageEvent)
   fullName: FlowR.Core.Application.OnClientEventTriggered(FlowR.Core.Message.MessageEvent)
   nameWithType: Application.OnClientEventTriggered(MessageEvent)
 - uid: FlowR.Core.Application.OnClientEventTriggered*
   name: OnClientEventTriggered
-  href: docs/api/FlowR.Core.Application.html#FlowR_Core_Application_OnClientEventTriggered_
+  href: docfx/api/FlowR.Core.Application.html#FlowR_Core_Application_OnClientEventTriggered_
   commentId: Overload:FlowR.Core.Application.OnClientEventTriggered
   isSpec: "True"
   fullName: FlowR.Core.Application.OnClientEventTriggered
   nameWithType: Application.OnClientEventTriggered
 - uid: FlowR.Core.Application.RegisterComponent(FlowR.Core.Node)
   name: RegisterComponent(Node)
-  href: docs/api/FlowR.Core.Application.html#FlowR_Core_Application_RegisterComponent_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.Application.html#FlowR_Core_Application_RegisterComponent_FlowR_Core_Node_
   commentId: M:FlowR.Core.Application.RegisterComponent(FlowR.Core.Node)
   fullName: FlowR.Core.Application.RegisterComponent(FlowR.Core.Node)
   nameWithType: Application.RegisterComponent(Node)
 - uid: FlowR.Core.Application.RegisterComponent*
   name: RegisterComponent
-  href: docs/api/FlowR.Core.Application.html#FlowR_Core_Application_RegisterComponent_
+  href: docfx/api/FlowR.Core.Application.html#FlowR_Core_Application_RegisterComponent_
   commentId: Overload:FlowR.Core.Application.RegisterComponent
   isSpec: "True"
   fullName: FlowR.Core.Application.RegisterComponent
   nameWithType: Application.RegisterComponent
 - uid: FlowR.Core.Application.RootElement
   name: RootElement
-  href: docs/api/FlowR.Core.Application.html#FlowR_Core_Application_RootElement
+  href: docfx/api/FlowR.Core.Application.html#FlowR_Core_Application_RootElement
   commentId: F:FlowR.Core.Application.RootElement
   fullName: FlowR.Core.Application.RootElement
   nameWithType: Application.RootElement
 - uid: FlowR.Core.Application.RootElementId
   name: RootElementId
-  href: docs/api/FlowR.Core.Application.html#FlowR_Core_Application_RootElementId
+  href: docfx/api/FlowR.Core.Application.html#FlowR_Core_Application_RootElementId
   commentId: F:FlowR.Core.Application.RootElementId
   fullName: FlowR.Core.Application.RootElementId
   nameWithType: Application.RootElementId
 - uid: FlowR.Core.Application.UnregisterComponent(FlowR.Core.Node)
   name: UnregisterComponent(Node)
-  href: docs/api/FlowR.Core.Application.html#FlowR_Core_Application_UnregisterComponent_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.Application.html#FlowR_Core_Application_UnregisterComponent_FlowR_Core_Node_
   commentId: M:FlowR.Core.Application.UnregisterComponent(FlowR.Core.Node)
   fullName: FlowR.Core.Application.UnregisterComponent(FlowR.Core.Node)
   nameWithType: Application.UnregisterComponent(Node)
 - uid: FlowR.Core.Application.UnregisterComponent*
   name: UnregisterComponent
-  href: docs/api/FlowR.Core.Application.html#FlowR_Core_Application_UnregisterComponent_
+  href: docfx/api/FlowR.Core.Application.html#FlowR_Core_Application_UnregisterComponent_
   commentId: Overload:FlowR.Core.Application.UnregisterComponent
   isSpec: "True"
   fullName: FlowR.Core.Application.UnregisterComponent
   nameWithType: Application.UnregisterComponent
 - uid: FlowR.Core.ApplicationCommunication
   name: ApplicationCommunication
-  href: docs/api/FlowR.Core.ApplicationCommunication.html
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html
   commentId: T:FlowR.Core.ApplicationCommunication
   fullName: FlowR.Core.ApplicationCommunication
   nameWithType: ApplicationCommunication
 - uid: FlowR.Core.ApplicationCommunication.#ctor(FlowR.Core.Application,IClientProxy)
   name: ApplicationCommunication(Application, IClientProxy)
-  href: docs/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication__ctor_FlowR_Core_Application_IClientProxy_
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication__ctor_FlowR_Core_Application_IClientProxy_
   commentId: M:FlowR.Core.ApplicationCommunication.#ctor(FlowR.Core.Application,IClientProxy)
   fullName: FlowR.Core.ApplicationCommunication.ApplicationCommunication(FlowR.Core.Application, IClientProxy)
   nameWithType: ApplicationCommunication.ApplicationCommunication(Application, IClientProxy)
 - uid: FlowR.Core.ApplicationCommunication.#ctor*
   name: ApplicationCommunication
-  href: docs/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication__ctor_
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication__ctor_
   commentId: Overload:FlowR.Core.ApplicationCommunication.#ctor
   isSpec: "True"
   fullName: FlowR.Core.ApplicationCommunication.ApplicationCommunication
   nameWithType: ApplicationCommunication.ApplicationCommunication
 - uid: FlowR.Core.ApplicationCommunication.CallGlobalMethod(System.String,System.String[])
   name: CallGlobalMethod(String, String[])
-  href: docs/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_CallGlobalMethod_System_String_System_String___
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_CallGlobalMethod_System_String_System_String___
   commentId: M:FlowR.Core.ApplicationCommunication.CallGlobalMethod(System.String,System.String[])
   name.vb: CallGlobalMethod(String, String())
   fullName: FlowR.Core.ApplicationCommunication.CallGlobalMethod(System.String, System.String[])
@@ -146,14 +146,14 @@ references:
   nameWithType.vb: ApplicationCommunication.CallGlobalMethod(String, String())
 - uid: FlowR.Core.ApplicationCommunication.CallGlobalMethod*
   name: CallGlobalMethod
-  href: docs/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_CallGlobalMethod_
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_CallGlobalMethod_
   commentId: Overload:FlowR.Core.ApplicationCommunication.CallGlobalMethod
   isSpec: "True"
   fullName: FlowR.Core.ApplicationCommunication.CallGlobalMethod
   nameWithType: ApplicationCommunication.CallGlobalMethod
 - uid: FlowR.Core.ApplicationCommunication.CallGlobalMethodWaitResponse(System.String,System.String[])
   name: CallGlobalMethodWaitResponse(String, String[])
-  href: docs/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_CallGlobalMethodWaitResponse_System_String_System_String___
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_CallGlobalMethodWaitResponse_System_String_System_String___
   commentId: M:FlowR.Core.ApplicationCommunication.CallGlobalMethodWaitResponse(System.String,System.String[])
   name.vb: CallGlobalMethodWaitResponse(String, String())
   fullName: FlowR.Core.ApplicationCommunication.CallGlobalMethodWaitResponse(System.String, System.String[])
@@ -162,252 +162,252 @@ references:
   nameWithType.vb: ApplicationCommunication.CallGlobalMethodWaitResponse(String, String())
 - uid: FlowR.Core.ApplicationCommunication.CallGlobalMethodWaitResponse*
   name: CallGlobalMethodWaitResponse
-  href: docs/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_CallGlobalMethodWaitResponse_
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_CallGlobalMethodWaitResponse_
   commentId: Overload:FlowR.Core.ApplicationCommunication.CallGlobalMethodWaitResponse
   isSpec: "True"
   fullName: FlowR.Core.ApplicationCommunication.CallGlobalMethodWaitResponse
   nameWithType: ApplicationCommunication.CallGlobalMethodWaitResponse
 - uid: FlowR.Core.ApplicationCommunication.GetGlobalProperty(System.String)
   name: GetGlobalProperty(String)
-  href: docs/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_GetGlobalProperty_System_String_
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_GetGlobalProperty_System_String_
   commentId: M:FlowR.Core.ApplicationCommunication.GetGlobalProperty(System.String)
   fullName: FlowR.Core.ApplicationCommunication.GetGlobalProperty(System.String)
   nameWithType: ApplicationCommunication.GetGlobalProperty(String)
 - uid: FlowR.Core.ApplicationCommunication.GetGlobalProperty*
   name: GetGlobalProperty
-  href: docs/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_GetGlobalProperty_
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_GetGlobalProperty_
   commentId: Overload:FlowR.Core.ApplicationCommunication.GetGlobalProperty
   isSpec: "True"
   fullName: FlowR.Core.ApplicationCommunication.GetGlobalProperty
   nameWithType: ApplicationCommunication.GetGlobalProperty
 - uid: FlowR.Core.ApplicationCommunication.OnWaitingMessageResponse(FlowR.Core.Message.IMessageResponse)
   name: OnWaitingMessageResponse(IMessageResponse)
-  href: docs/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_OnWaitingMessageResponse_FlowR_Core_Message_IMessageResponse_
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_OnWaitingMessageResponse_FlowR_Core_Message_IMessageResponse_
   commentId: M:FlowR.Core.ApplicationCommunication.OnWaitingMessageResponse(FlowR.Core.Message.IMessageResponse)
   fullName: FlowR.Core.ApplicationCommunication.OnWaitingMessageResponse(FlowR.Core.Message.IMessageResponse)
   nameWithType: ApplicationCommunication.OnWaitingMessageResponse(IMessageResponse)
 - uid: FlowR.Core.ApplicationCommunication.OnWaitingMessageResponse*
   name: OnWaitingMessageResponse
-  href: docs/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_OnWaitingMessageResponse_
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_OnWaitingMessageResponse_
   commentId: Overload:FlowR.Core.ApplicationCommunication.OnWaitingMessageResponse
   isSpec: "True"
   fullName: FlowR.Core.ApplicationCommunication.OnWaitingMessageResponse
   nameWithType: ApplicationCommunication.OnWaitingMessageResponse
 - uid: FlowR.Core.ApplicationCommunication.SendMessage(FlowR.Core.Message.IMessage)
   name: SendMessage(IMessage)
-  href: docs/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_SendMessage_FlowR_Core_Message_IMessage_
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_SendMessage_FlowR_Core_Message_IMessage_
   commentId: M:FlowR.Core.ApplicationCommunication.SendMessage(FlowR.Core.Message.IMessage)
   fullName: FlowR.Core.ApplicationCommunication.SendMessage(FlowR.Core.Message.IMessage)
   nameWithType: ApplicationCommunication.SendMessage(IMessage)
 - uid: FlowR.Core.ApplicationCommunication.SendMessage*
   name: SendMessage
-  href: docs/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_SendMessage_
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_SendMessage_
   commentId: Overload:FlowR.Core.ApplicationCommunication.SendMessage
   isSpec: "True"
   fullName: FlowR.Core.ApplicationCommunication.SendMessage
   nameWithType: ApplicationCommunication.SendMessage
 - uid: FlowR.Core.ApplicationCommunication.SendMessageWaitResponse(FlowR.Core.Message.IMessageResponse)
   name: SendMessageWaitResponse(IMessageResponse)
-  href: docs/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_SendMessageWaitResponse_FlowR_Core_Message_IMessageResponse_
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_SendMessageWaitResponse_FlowR_Core_Message_IMessageResponse_
   commentId: M:FlowR.Core.ApplicationCommunication.SendMessageWaitResponse(FlowR.Core.Message.IMessageResponse)
   fullName: FlowR.Core.ApplicationCommunication.SendMessageWaitResponse(FlowR.Core.Message.IMessageResponse)
   nameWithType: ApplicationCommunication.SendMessageWaitResponse(IMessageResponse)
 - uid: FlowR.Core.ApplicationCommunication.SendMessageWaitResponse*
   name: SendMessageWaitResponse
-  href: docs/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_SendMessageWaitResponse_
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_SendMessageWaitResponse_
   commentId: Overload:FlowR.Core.ApplicationCommunication.SendMessageWaitResponse
   isSpec: "True"
   fullName: FlowR.Core.ApplicationCommunication.SendMessageWaitResponse
   nameWithType: ApplicationCommunication.SendMessageWaitResponse
 - uid: FlowR.Core.ApplicationCommunication.SetGlobalProperty(System.String,System.String)
   name: SetGlobalProperty(String, String)
-  href: docs/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_SetGlobalProperty_System_String_System_String_
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_SetGlobalProperty_System_String_System_String_
   commentId: M:FlowR.Core.ApplicationCommunication.SetGlobalProperty(System.String,System.String)
   fullName: FlowR.Core.ApplicationCommunication.SetGlobalProperty(System.String, System.String)
   nameWithType: ApplicationCommunication.SetGlobalProperty(String, String)
 - uid: FlowR.Core.ApplicationCommunication.SetGlobalProperty*
   name: SetGlobalProperty
-  href: docs/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_SetGlobalProperty_
+  href: docfx/api/FlowR.Core.ApplicationCommunication.html#FlowR_Core_ApplicationCommunication_SetGlobalProperty_
   commentId: Overload:FlowR.Core.ApplicationCommunication.SetGlobalProperty
   isSpec: "True"
   fullName: FlowR.Core.ApplicationCommunication.SetGlobalProperty
   nameWithType: ApplicationCommunication.SetGlobalProperty
 - uid: FlowR.Core.ApplicationRegistry
   name: ApplicationRegistry
-  href: docs/api/FlowR.Core.ApplicationRegistry.html
+  href: docfx/api/FlowR.Core.ApplicationRegistry.html
   commentId: T:FlowR.Core.ApplicationRegistry
   fullName: FlowR.Core.ApplicationRegistry
   nameWithType: ApplicationRegistry
 - uid: FlowR.Core.ApplicationRegistry.Get(System.String)
   name: Get(String)
-  href: docs/api/FlowR.Core.ApplicationRegistry.html#FlowR_Core_ApplicationRegistry_Get_System_String_
+  href: docfx/api/FlowR.Core.ApplicationRegistry.html#FlowR_Core_ApplicationRegistry_Get_System_String_
   commentId: M:FlowR.Core.ApplicationRegistry.Get(System.String)
   fullName: FlowR.Core.ApplicationRegistry.Get(System.String)
   nameWithType: ApplicationRegistry.Get(String)
 - uid: FlowR.Core.ApplicationRegistry.Get*
   name: Get
-  href: docs/api/FlowR.Core.ApplicationRegistry.html#FlowR_Core_ApplicationRegistry_Get_
+  href: docfx/api/FlowR.Core.ApplicationRegistry.html#FlowR_Core_ApplicationRegistry_Get_
   commentId: Overload:FlowR.Core.ApplicationRegistry.Get
   isSpec: "True"
   fullName: FlowR.Core.ApplicationRegistry.Get
   nameWithType: ApplicationRegistry.Get
 - uid: FlowR.Core.ApplicationRegistry.RegisterComponent(FlowR.Core.Node)
   name: RegisterComponent(Node)
-  href: docs/api/FlowR.Core.ApplicationRegistry.html#FlowR_Core_ApplicationRegistry_RegisterComponent_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.ApplicationRegistry.html#FlowR_Core_ApplicationRegistry_RegisterComponent_FlowR_Core_Node_
   commentId: M:FlowR.Core.ApplicationRegistry.RegisterComponent(FlowR.Core.Node)
   fullName: FlowR.Core.ApplicationRegistry.RegisterComponent(FlowR.Core.Node)
   nameWithType: ApplicationRegistry.RegisterComponent(Node)
 - uid: FlowR.Core.ApplicationRegistry.RegisterComponent*
   name: RegisterComponent
-  href: docs/api/FlowR.Core.ApplicationRegistry.html#FlowR_Core_ApplicationRegistry_RegisterComponent_
+  href: docfx/api/FlowR.Core.ApplicationRegistry.html#FlowR_Core_ApplicationRegistry_RegisterComponent_
   commentId: Overload:FlowR.Core.ApplicationRegistry.RegisterComponent
   isSpec: "True"
   fullName: FlowR.Core.ApplicationRegistry.RegisterComponent
   nameWithType: ApplicationRegistry.RegisterComponent
 - uid: FlowR.Core.ApplicationRegistry.UnregisterComponent(FlowR.Core.Node)
   name: UnregisterComponent(Node)
-  href: docs/api/FlowR.Core.ApplicationRegistry.html#FlowR_Core_ApplicationRegistry_UnregisterComponent_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.ApplicationRegistry.html#FlowR_Core_ApplicationRegistry_UnregisterComponent_FlowR_Core_Node_
   commentId: M:FlowR.Core.ApplicationRegistry.UnregisterComponent(FlowR.Core.Node)
   fullName: FlowR.Core.ApplicationRegistry.UnregisterComponent(FlowR.Core.Node)
   nameWithType: ApplicationRegistry.UnregisterComponent(Node)
 - uid: FlowR.Core.ApplicationRegistry.UnregisterComponent*
   name: UnregisterComponent
-  href: docs/api/FlowR.Core.ApplicationRegistry.html#FlowR_Core_ApplicationRegistry_UnregisterComponent_
+  href: docfx/api/FlowR.Core.ApplicationRegistry.html#FlowR_Core_ApplicationRegistry_UnregisterComponent_
   commentId: Overload:FlowR.Core.ApplicationRegistry.UnregisterComponent
   isSpec: "True"
   fullName: FlowR.Core.ApplicationRegistry.UnregisterComponent
   nameWithType: ApplicationRegistry.UnregisterComponent
 - uid: FlowR.Core.ApplicationResponses
   name: ApplicationResponses
-  href: docs/api/FlowR.Core.ApplicationResponses.html
+  href: docfx/api/FlowR.Core.ApplicationResponses.html
   commentId: T:FlowR.Core.ApplicationResponses
   fullName: FlowR.Core.ApplicationResponses
   nameWithType: ApplicationResponses
 - uid: FlowR.Core.ApplicationResponses.SetResponse(FlowR.Core.Message.IMessageResponse)
   name: SetResponse(IMessageResponse)
-  href: docs/api/FlowR.Core.ApplicationResponses.html#FlowR_Core_ApplicationResponses_SetResponse_FlowR_Core_Message_IMessageResponse_
+  href: docfx/api/FlowR.Core.ApplicationResponses.html#FlowR_Core_ApplicationResponses_SetResponse_FlowR_Core_Message_IMessageResponse_
   commentId: M:FlowR.Core.ApplicationResponses.SetResponse(FlowR.Core.Message.IMessageResponse)
   fullName: FlowR.Core.ApplicationResponses.SetResponse(FlowR.Core.Message.IMessageResponse)
   nameWithType: ApplicationResponses.SetResponse(IMessageResponse)
 - uid: FlowR.Core.ApplicationResponses.SetResponse*
   name: SetResponse
-  href: docs/api/FlowR.Core.ApplicationResponses.html#FlowR_Core_ApplicationResponses_SetResponse_
+  href: docfx/api/FlowR.Core.ApplicationResponses.html#FlowR_Core_ApplicationResponses_SetResponse_
   commentId: Overload:FlowR.Core.ApplicationResponses.SetResponse
   isSpec: "True"
   fullName: FlowR.Core.ApplicationResponses.SetResponse
   nameWithType: ApplicationResponses.SetResponse
 - uid: FlowR.Core.ApplicationResponses.WaitResponse(FlowR.Core.Application,FlowR.Core.Message.IMessageResponse,System.Int32)
   name: WaitResponse(Application, IMessageResponse, Int32)
-  href: docs/api/FlowR.Core.ApplicationResponses.html#FlowR_Core_ApplicationResponses_WaitResponse_FlowR_Core_Application_FlowR_Core_Message_IMessageResponse_System_Int32_
+  href: docfx/api/FlowR.Core.ApplicationResponses.html#FlowR_Core_ApplicationResponses_WaitResponse_FlowR_Core_Application_FlowR_Core_Message_IMessageResponse_System_Int32_
   commentId: M:FlowR.Core.ApplicationResponses.WaitResponse(FlowR.Core.Application,FlowR.Core.Message.IMessageResponse,System.Int32)
   fullName: FlowR.Core.ApplicationResponses.WaitResponse(FlowR.Core.Application, FlowR.Core.Message.IMessageResponse, System.Int32)
   nameWithType: ApplicationResponses.WaitResponse(Application, IMessageResponse, Int32)
 - uid: FlowR.Core.ApplicationResponses.WaitResponse*
   name: WaitResponse
-  href: docs/api/FlowR.Core.ApplicationResponses.html#FlowR_Core_ApplicationResponses_WaitResponse_
+  href: docfx/api/FlowR.Core.ApplicationResponses.html#FlowR_Core_ApplicationResponses_WaitResponse_
   commentId: Overload:FlowR.Core.ApplicationResponses.WaitResponse
   isSpec: "True"
   fullName: FlowR.Core.ApplicationResponses.WaitResponse
   nameWithType: ApplicationResponses.WaitResponse
 - uid: FlowR.Core.ApplicationTimer
   name: ApplicationTimer
-  href: docs/api/FlowR.Core.ApplicationTimer.html
+  href: docfx/api/FlowR.Core.ApplicationTimer.html
   commentId: T:FlowR.Core.ApplicationTimer
   fullName: FlowR.Core.ApplicationTimer
   nameWithType: ApplicationTimer
 - uid: FlowR.Core.ApplicationTimer.#ctor(System.Int32,EventHandler,System.Boolean)
   name: ApplicationTimer(Int32, EventHandler, Boolean)
-  href: docs/api/FlowR.Core.ApplicationTimer.html#FlowR_Core_ApplicationTimer__ctor_System_Int32_EventHandler_System_Boolean_
+  href: docfx/api/FlowR.Core.ApplicationTimer.html#FlowR_Core_ApplicationTimer__ctor_System_Int32_EventHandler_System_Boolean_
   commentId: M:FlowR.Core.ApplicationTimer.#ctor(System.Int32,EventHandler,System.Boolean)
   fullName: FlowR.Core.ApplicationTimer.ApplicationTimer(System.Int32, EventHandler, System.Boolean)
   nameWithType: ApplicationTimer.ApplicationTimer(Int32, EventHandler, Boolean)
 - uid: FlowR.Core.ApplicationTimer.#ctor*
   name: ApplicationTimer
-  href: docs/api/FlowR.Core.ApplicationTimer.html#FlowR_Core_ApplicationTimer__ctor_
+  href: docfx/api/FlowR.Core.ApplicationTimer.html#FlowR_Core_ApplicationTimer__ctor_
   commentId: Overload:FlowR.Core.ApplicationTimer.#ctor
   isSpec: "True"
   fullName: FlowR.Core.ApplicationTimer.ApplicationTimer
   nameWithType: ApplicationTimer.ApplicationTimer
 - uid: FlowR.Core.ApplicationTimer.OnStop
   name: OnStop
-  href: docs/api/FlowR.Core.ApplicationTimer.html#FlowR_Core_ApplicationTimer_OnStop
+  href: docfx/api/FlowR.Core.ApplicationTimer.html#FlowR_Core_ApplicationTimer_OnStop
   commentId: E:FlowR.Core.ApplicationTimer.OnStop
   fullName: FlowR.Core.ApplicationTimer.OnStop
   nameWithType: ApplicationTimer.OnStop
 - uid: FlowR.Core.ApplicationTimer.Start
   name: Start()
-  href: docs/api/FlowR.Core.ApplicationTimer.html#FlowR_Core_ApplicationTimer_Start
+  href: docfx/api/FlowR.Core.ApplicationTimer.html#FlowR_Core_ApplicationTimer_Start
   commentId: M:FlowR.Core.ApplicationTimer.Start
   fullName: FlowR.Core.ApplicationTimer.Start()
   nameWithType: ApplicationTimer.Start()
 - uid: FlowR.Core.ApplicationTimer.Start*
   name: Start
-  href: docs/api/FlowR.Core.ApplicationTimer.html#FlowR_Core_ApplicationTimer_Start_
+  href: docfx/api/FlowR.Core.ApplicationTimer.html#FlowR_Core_ApplicationTimer_Start_
   commentId: Overload:FlowR.Core.ApplicationTimer.Start
   isSpec: "True"
   fullName: FlowR.Core.ApplicationTimer.Start
   nameWithType: ApplicationTimer.Start
 - uid: FlowR.Core.ApplicationTimer.Stop
   name: Stop()
-  href: docs/api/FlowR.Core.ApplicationTimer.html#FlowR_Core_ApplicationTimer_Stop
+  href: docfx/api/FlowR.Core.ApplicationTimer.html#FlowR_Core_ApplicationTimer_Stop
   commentId: M:FlowR.Core.ApplicationTimer.Stop
   fullName: FlowR.Core.ApplicationTimer.Stop()
   nameWithType: ApplicationTimer.Stop()
 - uid: FlowR.Core.ApplicationTimer.Stop*
   name: Stop
-  href: docs/api/FlowR.Core.ApplicationTimer.html#FlowR_Core_ApplicationTimer_Stop_
+  href: docfx/api/FlowR.Core.ApplicationTimer.html#FlowR_Core_ApplicationTimer_Stop_
   commentId: Overload:FlowR.Core.ApplicationTimer.Stop
   isSpec: "True"
   fullName: FlowR.Core.ApplicationTimer.Stop
   nameWithType: ApplicationTimer.Stop
 - uid: FlowR.Core.ApplicationTimers
   name: ApplicationTimers
-  href: docs/api/FlowR.Core.ApplicationTimers.html
+  href: docfx/api/FlowR.Core.ApplicationTimers.html
   commentId: T:FlowR.Core.ApplicationTimers
   fullName: FlowR.Core.ApplicationTimers
   nameWithType: ApplicationTimers
 - uid: FlowR.Core.ApplicationTimers.Add(FlowR.Core.ApplicationTimer)
   name: Add(ApplicationTimer)
-  href: docs/api/FlowR.Core.ApplicationTimers.html#FlowR_Core_ApplicationTimers_Add_FlowR_Core_ApplicationTimer_
+  href: docfx/api/FlowR.Core.ApplicationTimers.html#FlowR_Core_ApplicationTimers_Add_FlowR_Core_ApplicationTimer_
   commentId: M:FlowR.Core.ApplicationTimers.Add(FlowR.Core.ApplicationTimer)
   fullName: FlowR.Core.ApplicationTimers.Add(FlowR.Core.ApplicationTimer)
   nameWithType: ApplicationTimers.Add(ApplicationTimer)
 - uid: FlowR.Core.ApplicationTimers.Add*
   name: Add
-  href: docs/api/FlowR.Core.ApplicationTimers.html#FlowR_Core_ApplicationTimers_Add_
+  href: docfx/api/FlowR.Core.ApplicationTimers.html#FlowR_Core_ApplicationTimers_Add_
   commentId: Overload:FlowR.Core.ApplicationTimers.Add
   isSpec: "True"
   fullName: FlowR.Core.ApplicationTimers.Add
   nameWithType: ApplicationTimers.Add
 - uid: FlowR.Core.ApplicationTimers.AddTimer(System.Int32,EventHandler,System.Boolean)
   name: AddTimer(Int32, EventHandler, Boolean)
-  href: docs/api/FlowR.Core.ApplicationTimers.html#FlowR_Core_ApplicationTimers_AddTimer_System_Int32_EventHandler_System_Boolean_
+  href: docfx/api/FlowR.Core.ApplicationTimers.html#FlowR_Core_ApplicationTimers_AddTimer_System_Int32_EventHandler_System_Boolean_
   commentId: M:FlowR.Core.ApplicationTimers.AddTimer(System.Int32,EventHandler,System.Boolean)
   fullName: FlowR.Core.ApplicationTimers.AddTimer(System.Int32, EventHandler, System.Boolean)
   nameWithType: ApplicationTimers.AddTimer(Int32, EventHandler, Boolean)
 - uid: FlowR.Core.ApplicationTimers.AddTimer*
   name: AddTimer
-  href: docs/api/FlowR.Core.ApplicationTimers.html#FlowR_Core_ApplicationTimers_AddTimer_
+  href: docfx/api/FlowR.Core.ApplicationTimers.html#FlowR_Core_ApplicationTimers_AddTimer_
   commentId: Overload:FlowR.Core.ApplicationTimers.AddTimer
   isSpec: "True"
   fullName: FlowR.Core.ApplicationTimers.AddTimer
   nameWithType: ApplicationTimers.AddTimer
 - uid: FlowR.Core.ApplicationTimers.Remove(FlowR.Core.ApplicationTimer)
   name: Remove(ApplicationTimer)
-  href: docs/api/FlowR.Core.ApplicationTimers.html#FlowR_Core_ApplicationTimers_Remove_FlowR_Core_ApplicationTimer_
+  href: docfx/api/FlowR.Core.ApplicationTimers.html#FlowR_Core_ApplicationTimers_Remove_FlowR_Core_ApplicationTimer_
   commentId: M:FlowR.Core.ApplicationTimers.Remove(FlowR.Core.ApplicationTimer)
   fullName: FlowR.Core.ApplicationTimers.Remove(FlowR.Core.ApplicationTimer)
   nameWithType: ApplicationTimers.Remove(ApplicationTimer)
 - uid: FlowR.Core.ApplicationTimers.Remove*
   name: Remove
-  href: docs/api/FlowR.Core.ApplicationTimers.html#FlowR_Core_ApplicationTimers_Remove_
+  href: docfx/api/FlowR.Core.ApplicationTimers.html#FlowR_Core_ApplicationTimers_Remove_
   commentId: Overload:FlowR.Core.ApplicationTimers.Remove
   isSpec: "True"
   fullName: FlowR.Core.ApplicationTimers.Remove
   nameWithType: ApplicationTimers.Remove
 - uid: FlowR.Core.CollectionAddedEventArgs`1
   name: CollectionAddedEventArgs<T>
-  href: docs/api/FlowR.Core.CollectionAddedEventArgs-1.html
+  href: docfx/api/FlowR.Core.CollectionAddedEventArgs-1.html
   commentId: T:FlowR.Core.CollectionAddedEventArgs`1
   name.vb: CollectionAddedEventArgs(Of T)
   fullName: FlowR.Core.CollectionAddedEventArgs<T>
@@ -416,7 +416,7 @@ references:
   nameWithType.vb: CollectionAddedEventArgs(Of T)
 - uid: FlowR.Core.CollectionAddedEventArgs`1.Name
   name: Name
-  href: docs/api/FlowR.Core.CollectionAddedEventArgs-1.html#FlowR_Core_CollectionAddedEventArgs_1_Name
+  href: docfx/api/FlowR.Core.CollectionAddedEventArgs-1.html#FlowR_Core_CollectionAddedEventArgs_1_Name
   commentId: F:FlowR.Core.CollectionAddedEventArgs`1.Name
   fullName: FlowR.Core.CollectionAddedEventArgs<T>.Name
   fullName.vb: FlowR.Core.CollectionAddedEventArgs(Of T).Name
@@ -424,7 +424,7 @@ references:
   nameWithType.vb: CollectionAddedEventArgs(Of T).Name
 - uid: FlowR.Core.CollectionAddedEventArgs`1.Value
   name: Value
-  href: docs/api/FlowR.Core.CollectionAddedEventArgs-1.html#FlowR_Core_CollectionAddedEventArgs_1_Value
+  href: docfx/api/FlowR.Core.CollectionAddedEventArgs-1.html#FlowR_Core_CollectionAddedEventArgs_1_Value
   commentId: F:FlowR.Core.CollectionAddedEventArgs`1.Value
   fullName: FlowR.Core.CollectionAddedEventArgs<T>.Value
   fullName.vb: FlowR.Core.CollectionAddedEventArgs(Of T).Value
@@ -432,7 +432,7 @@ references:
   nameWithType.vb: CollectionAddedEventArgs(Of T).Value
 - uid: FlowR.Core.CollectionChangedEventArgs`1
   name: CollectionChangedEventArgs<T>
-  href: docs/api/FlowR.Core.CollectionChangedEventArgs-1.html
+  href: docfx/api/FlowR.Core.CollectionChangedEventArgs-1.html
   commentId: T:FlowR.Core.CollectionChangedEventArgs`1
   name.vb: CollectionChangedEventArgs(Of T)
   fullName: FlowR.Core.CollectionChangedEventArgs<T>
@@ -441,7 +441,7 @@ references:
   nameWithType.vb: CollectionChangedEventArgs(Of T)
 - uid: FlowR.Core.CollectionChangedEventArgs`1.OldValue
   name: OldValue
-  href: docs/api/FlowR.Core.CollectionChangedEventArgs-1.html#FlowR_Core_CollectionChangedEventArgs_1_OldValue
+  href: docfx/api/FlowR.Core.CollectionChangedEventArgs-1.html#FlowR_Core_CollectionChangedEventArgs_1_OldValue
   commentId: F:FlowR.Core.CollectionChangedEventArgs`1.OldValue
   fullName: FlowR.Core.CollectionChangedEventArgs<T>.OldValue
   fullName.vb: FlowR.Core.CollectionChangedEventArgs(Of T).OldValue
@@ -449,7 +449,7 @@ references:
   nameWithType.vb: CollectionChangedEventArgs(Of T).OldValue
 - uid: FlowR.Core.Component`1
   name: Component<T>
-  href: docs/api/FlowR.Core.Component-1.html
+  href: docfx/api/FlowR.Core.Component-1.html
   commentId: T:FlowR.Core.Component`1
   name.vb: Component(Of T)
   fullName: FlowR.Core.Component<T>
@@ -458,7 +458,7 @@ references:
   nameWithType.vb: Component(Of T)
 - uid: FlowR.Core.Component`1.#ctor
   name: Component()
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1__ctor
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1__ctor
   commentId: M:FlowR.Core.Component`1.#ctor
   fullName: FlowR.Core.Component<T>.Component()
   fullName.vb: FlowR.Core.Component(Of T).Component()
@@ -466,7 +466,7 @@ references:
   nameWithType.vb: Component(Of T).Component()
 - uid: FlowR.Core.Component`1.#ctor*
   name: Component
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1__ctor_
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1__ctor_
   commentId: Overload:FlowR.Core.Component`1.#ctor
   isSpec: "True"
   fullName: FlowR.Core.Component<T>.Component
@@ -475,7 +475,7 @@ references:
   nameWithType.vb: Component(Of T).Component
 - uid: FlowR.Core.Component`1.DerivedClass
   name: DerivedClass
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_DerivedClass
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_DerivedClass
   commentId: F:FlowR.Core.Component`1.DerivedClass
   fullName: FlowR.Core.Component<T>.DerivedClass
   fullName.vb: FlowR.Core.Component(Of T).DerivedClass
@@ -483,7 +483,7 @@ references:
   nameWithType.vb: Component(Of T).DerivedClass
 - uid: FlowR.Core.Component`1.Off(System.String,EventHandler)
   name: Off(String, EventHandler)
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_Off_System_String_EventHandler_
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_Off_System_String_EventHandler_
   commentId: M:FlowR.Core.Component`1.Off(System.String,EventHandler)
   fullName: FlowR.Core.Component<T>.Off(System.String, EventHandler)
   fullName.vb: FlowR.Core.Component(Of T).Off(System.String, EventHandler)
@@ -491,7 +491,7 @@ references:
   nameWithType.vb: Component(Of T).Off(String, EventHandler)
 - uid: FlowR.Core.Component`1.Off*
   name: Off
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_Off_
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_Off_
   commentId: Overload:FlowR.Core.Component`1.Off
   isSpec: "True"
   fullName: FlowR.Core.Component<T>.Off
@@ -500,7 +500,7 @@ references:
   nameWithType.vb: Component(Of T).Off
 - uid: FlowR.Core.Component`1.On(System.String,EventHandler)
   name: On(String, EventHandler)
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_On_System_String_EventHandler_
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_On_System_String_EventHandler_
   commentId: M:FlowR.Core.Component`1.On(System.String,EventHandler)
   fullName: FlowR.Core.Component<T>.On(System.String, EventHandler)
   fullName.vb: FlowR.Core.Component(Of T).On(System.String, EventHandler)
@@ -508,7 +508,7 @@ references:
   nameWithType.vb: Component(Of T).On(String, EventHandler)
 - uid: FlowR.Core.Component`1.On*
   name: On
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_On_
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_On_
   commentId: Overload:FlowR.Core.Component`1.On
   isSpec: "True"
   fullName: FlowR.Core.Component<T>.On
@@ -517,7 +517,7 @@ references:
   nameWithType.vb: Component(Of T).On
 - uid: FlowR.Core.Component`1.RemoveAttribute(System.String)
   name: RemoveAttribute(String)
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_RemoveAttribute_System_String_
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_RemoveAttribute_System_String_
   commentId: M:FlowR.Core.Component`1.RemoveAttribute(System.String)
   fullName: FlowR.Core.Component<T>.RemoveAttribute(System.String)
   fullName.vb: FlowR.Core.Component(Of T).RemoveAttribute(System.String)
@@ -525,7 +525,7 @@ references:
   nameWithType.vb: Component(Of T).RemoveAttribute(String)
 - uid: FlowR.Core.Component`1.RemoveAttribute*
   name: RemoveAttribute
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_RemoveAttribute_
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_RemoveAttribute_
   commentId: Overload:FlowR.Core.Component`1.RemoveAttribute
   isSpec: "True"
   fullName: FlowR.Core.Component<T>.RemoveAttribute
@@ -534,7 +534,7 @@ references:
   nameWithType.vb: Component(Of T).RemoveAttribute
 - uid: FlowR.Core.Component`1.SetAttribute(System.String,System.String)
   name: SetAttribute(String, String)
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_SetAttribute_System_String_System_String_
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_SetAttribute_System_String_System_String_
   commentId: M:FlowR.Core.Component`1.SetAttribute(System.String,System.String)
   fullName: FlowR.Core.Component<T>.SetAttribute(System.String, System.String)
   fullName.vb: FlowR.Core.Component(Of T).SetAttribute(System.String, System.String)
@@ -542,7 +542,7 @@ references:
   nameWithType.vb: Component(Of T).SetAttribute(String, String)
 - uid: FlowR.Core.Component`1.SetAttribute*
   name: SetAttribute
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_SetAttribute_
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_SetAttribute_
   commentId: Overload:FlowR.Core.Component`1.SetAttribute
   isSpec: "True"
   fullName: FlowR.Core.Component<T>.SetAttribute
@@ -551,7 +551,7 @@ references:
   nameWithType.vb: Component(Of T).SetAttribute
 - uid: FlowR.Core.Component`1.SetAttributes(KeyValuePair{System.String,System.String}[])
   name: SetAttributes(KeyValuePair<String, String>[])
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_SetAttributes_KeyValuePair_System_String_System_String____
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_SetAttributes_KeyValuePair_System_String_System_String____
   commentId: M:FlowR.Core.Component`1.SetAttributes(KeyValuePair{System.String,System.String}[])
   name.vb: SetAttributes(KeyValuePair(Of String, String)())
   fullName: FlowR.Core.Component<T>.SetAttributes(KeyValuePair<System.String, System.String>[])
@@ -560,7 +560,7 @@ references:
   nameWithType.vb: Component(Of T).SetAttributes(KeyValuePair(Of String, String)())
 - uid: FlowR.Core.Component`1.SetAttributes*
   name: SetAttributes
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_SetAttributes_
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_SetAttributes_
   commentId: Overload:FlowR.Core.Component`1.SetAttributes
   isSpec: "True"
   fullName: FlowR.Core.Component<T>.SetAttributes
@@ -569,7 +569,7 @@ references:
   nameWithType.vb: Component(Of T).SetAttributes
 - uid: FlowR.Core.Component`1.SetProperty(System.String,System.String)
   name: SetProperty(String, String)
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_SetProperty_System_String_System_String_
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_SetProperty_System_String_System_String_
   commentId: M:FlowR.Core.Component`1.SetProperty(System.String,System.String)
   fullName: FlowR.Core.Component<T>.SetProperty(System.String, System.String)
   fullName.vb: FlowR.Core.Component(Of T).SetProperty(System.String, System.String)
@@ -577,7 +577,7 @@ references:
   nameWithType.vb: Component(Of T).SetProperty(String, String)
 - uid: FlowR.Core.Component`1.SetProperty*
   name: SetProperty
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_SetProperty_
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_SetProperty_
   commentId: Overload:FlowR.Core.Component`1.SetProperty
   isSpec: "True"
   fullName: FlowR.Core.Component<T>.SetProperty
@@ -586,7 +586,7 @@ references:
   nameWithType.vb: Component(Of T).SetProperty
 - uid: FlowR.Core.Component`1.SetText(System.String)
   name: SetText(String)
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_SetText_System_String_
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_SetText_System_String_
   commentId: M:FlowR.Core.Component`1.SetText(System.String)
   fullName: FlowR.Core.Component<T>.SetText(System.String)
   fullName.vb: FlowR.Core.Component(Of T).SetText(System.String)
@@ -594,7 +594,7 @@ references:
   nameWithType.vb: Component(Of T).SetText(String)
 - uid: FlowR.Core.Component`1.SetText*
   name: SetText
-  href: docs/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_SetText_
+  href: docfx/api/FlowR.Core.Component-1.html#FlowR_Core_Component_1_SetText_
   commentId: Overload:FlowR.Core.Component`1.SetText
   isSpec: "True"
   fullName: FlowR.Core.Component<T>.SetText
@@ -603,7 +603,7 @@ references:
   nameWithType.vb: Component(Of T).SetText
 - uid: FlowR.Core.ComponentControl`1
   name: ComponentControl<T>
-  href: docs/api/FlowR.Core.ComponentControl-1.html
+  href: docfx/api/FlowR.Core.ComponentControl-1.html
   commentId: T:FlowR.Core.ComponentControl`1
   name.vb: ComponentControl(Of T)
   fullName: FlowR.Core.ComponentControl<T>
@@ -612,7 +612,7 @@ references:
   nameWithType.vb: ComponentControl(Of T)
 - uid: FlowR.Core.ComponentControl`1.Collect(System.String)
   name: Collect(String)
-  href: docs/api/FlowR.Core.ComponentControl-1.html#FlowR_Core_ComponentControl_1_Collect_System_String_
+  href: docfx/api/FlowR.Core.ComponentControl-1.html#FlowR_Core_ComponentControl_1_Collect_System_String_
   commentId: M:FlowR.Core.ComponentControl`1.Collect(System.String)
   fullName: FlowR.Core.ComponentControl<T>.Collect(System.String)
   fullName.vb: FlowR.Core.ComponentControl(Of T).Collect(System.String)
@@ -620,7 +620,7 @@ references:
   nameWithType.vb: ComponentControl(Of T).Collect(String)
 - uid: FlowR.Core.ComponentControl`1.Collect*
   name: Collect
-  href: docs/api/FlowR.Core.ComponentControl-1.html#FlowR_Core_ComponentControl_1_Collect_
+  href: docfx/api/FlowR.Core.ComponentControl-1.html#FlowR_Core_ComponentControl_1_Collect_
   commentId: Overload:FlowR.Core.ComponentControl`1.Collect
   isSpec: "True"
   fullName: FlowR.Core.ComponentControl<T>.Collect
@@ -629,7 +629,7 @@ references:
   nameWithType.vb: ComponentControl(Of T).Collect
 - uid: FlowR.Core.ComponentControl`1.GetControlName
   name: GetControlName()
-  href: docs/api/FlowR.Core.ComponentControl-1.html#FlowR_Core_ComponentControl_1_GetControlName
+  href: docfx/api/FlowR.Core.ComponentControl-1.html#FlowR_Core_ComponentControl_1_GetControlName
   commentId: M:FlowR.Core.ComponentControl`1.GetControlName
   fullName: FlowR.Core.ComponentControl<T>.GetControlName()
   fullName.vb: FlowR.Core.ComponentControl(Of T).GetControlName()
@@ -637,7 +637,7 @@ references:
   nameWithType.vb: ComponentControl(Of T).GetControlName()
 - uid: FlowR.Core.ComponentControl`1.GetControlName*
   name: GetControlName
-  href: docs/api/FlowR.Core.ComponentControl-1.html#FlowR_Core_ComponentControl_1_GetControlName_
+  href: docfx/api/FlowR.Core.ComponentControl-1.html#FlowR_Core_ComponentControl_1_GetControlName_
   commentId: Overload:FlowR.Core.ComponentControl`1.GetControlName
   isSpec: "True"
   fullName: FlowR.Core.ComponentControl<T>.GetControlName
@@ -646,7 +646,7 @@ references:
   nameWithType.vb: ComponentControl(Of T).GetControlName
 - uid: FlowR.Core.ComponentControl`1.SetControlName(System.String)
   name: SetControlName(String)
-  href: docs/api/FlowR.Core.ComponentControl-1.html#FlowR_Core_ComponentControl_1_SetControlName_System_String_
+  href: docfx/api/FlowR.Core.ComponentControl-1.html#FlowR_Core_ComponentControl_1_SetControlName_System_String_
   commentId: M:FlowR.Core.ComponentControl`1.SetControlName(System.String)
   fullName: FlowR.Core.ComponentControl<T>.SetControlName(System.String)
   fullName.vb: FlowR.Core.ComponentControl(Of T).SetControlName(System.String)
@@ -654,7 +654,7 @@ references:
   nameWithType.vb: ComponentControl(Of T).SetControlName(String)
 - uid: FlowR.Core.ComponentControl`1.SetControlName*
   name: SetControlName
-  href: docs/api/FlowR.Core.ComponentControl-1.html#FlowR_Core_ComponentControl_1_SetControlName_
+  href: docfx/api/FlowR.Core.ComponentControl-1.html#FlowR_Core_ComponentControl_1_SetControlName_
   commentId: Overload:FlowR.Core.ComponentControl`1.SetControlName
   isSpec: "True"
   fullName: FlowR.Core.ComponentControl<T>.SetControlName
@@ -663,7 +663,7 @@ references:
   nameWithType.vb: ComponentControl(Of T).SetControlName
 - uid: FlowR.Core.ComponentElement`1
   name: ComponentElement<T>
-  href: docs/api/FlowR.Core.ComponentElement-1.html
+  href: docfx/api/FlowR.Core.ComponentElement-1.html
   commentId: T:FlowR.Core.ComponentElement`1
   name.vb: ComponentElement(Of T)
   fullName: FlowR.Core.ComponentElement<T>
@@ -672,39 +672,39 @@ references:
   nameWithType.vb: ComponentElement(Of T)
 - uid: FlowR.Core.ComponentRoot
   name: ComponentRoot
-  href: docs/api/FlowR.Core.ComponentRoot.html
+  href: docfx/api/FlowR.Core.ComponentRoot.html
   commentId: T:FlowR.Core.ComponentRoot
   fullName: FlowR.Core.ComponentRoot
   nameWithType: ComponentRoot
 - uid: FlowR.Core.ComponentRoot.#ctor(System.String)
   name: ComponentRoot(String)
-  href: docs/api/FlowR.Core.ComponentRoot.html#FlowR_Core_ComponentRoot__ctor_System_String_
+  href: docfx/api/FlowR.Core.ComponentRoot.html#FlowR_Core_ComponentRoot__ctor_System_String_
   commentId: M:FlowR.Core.ComponentRoot.#ctor(System.String)
   fullName: FlowR.Core.ComponentRoot.ComponentRoot(System.String)
   nameWithType: ComponentRoot.ComponentRoot(String)
 - uid: FlowR.Core.ComponentRoot.#ctor*
   name: ComponentRoot
-  href: docs/api/FlowR.Core.ComponentRoot.html#FlowR_Core_ComponentRoot__ctor_
+  href: docfx/api/FlowR.Core.ComponentRoot.html#FlowR_Core_ComponentRoot__ctor_
   commentId: Overload:FlowR.Core.ComponentRoot.#ctor
   isSpec: "True"
   fullName: FlowR.Core.ComponentRoot.ComponentRoot
   nameWithType: ComponentRoot.ComponentRoot
 - uid: FlowR.Core.ComponentRoot.TagName
   name: TagName
-  href: docs/api/FlowR.Core.ComponentRoot.html#FlowR_Core_ComponentRoot_TagName
+  href: docfx/api/FlowR.Core.ComponentRoot.html#FlowR_Core_ComponentRoot_TagName
   commentId: P:FlowR.Core.ComponentRoot.TagName
   fullName: FlowR.Core.ComponentRoot.TagName
   nameWithType: ComponentRoot.TagName
 - uid: FlowR.Core.ComponentRoot.TagName*
   name: TagName
-  href: docs/api/FlowR.Core.ComponentRoot.html#FlowR_Core_ComponentRoot_TagName_
+  href: docfx/api/FlowR.Core.ComponentRoot.html#FlowR_Core_ComponentRoot_TagName_
   commentId: Overload:FlowR.Core.ComponentRoot.TagName
   isSpec: "True"
   fullName: FlowR.Core.ComponentRoot.TagName
   nameWithType: ComponentRoot.TagName
 - uid: FlowR.Core.FlowRHub`1
   name: FlowRHub<T>
-  href: docs/api/FlowR.Core.FlowRHub-1.html
+  href: docfx/api/FlowR.Core.FlowRHub-1.html
   commentId: T:FlowR.Core.FlowRHub`1
   name.vb: FlowRHub(Of T)
   fullName: FlowR.Core.FlowRHub<T>
@@ -713,7 +713,7 @@ references:
   nameWithType.vb: FlowRHub(Of T)
 - uid: FlowR.Core.FlowRHub`1.#ctor(FlowR.Core.FlowRService{`0})
   name: FlowRHub(FlowRService<T>)
-  href: docs/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1__ctor_FlowR_Core_FlowRService__0__
+  href: docfx/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1__ctor_FlowR_Core_FlowRService__0__
   commentId: M:FlowR.Core.FlowRHub`1.#ctor(FlowR.Core.FlowRService{`0})
   name.vb: FlowRHub(FlowRService(Of T))
   fullName: FlowR.Core.FlowRHub<T>.FlowRHub(FlowR.Core.FlowRService<T>)
@@ -722,7 +722,7 @@ references:
   nameWithType.vb: FlowRHub(Of T).FlowRHub(FlowRService(Of T))
 - uid: FlowR.Core.FlowRHub`1.#ctor*
   name: FlowRHub
-  href: docs/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1__ctor_
+  href: docfx/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1__ctor_
   commentId: Overload:FlowR.Core.FlowRHub`1.#ctor
   isSpec: "True"
   fullName: FlowR.Core.FlowRHub<T>.FlowRHub
@@ -731,7 +731,7 @@ references:
   nameWithType.vb: FlowRHub(Of T).FlowRHub
 - uid: FlowR.Core.FlowRHub`1.ClientEventTriggered(System.String)
   name: ClientEventTriggered(String)
-  href: docs/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1_ClientEventTriggered_System_String_
+  href: docfx/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1_ClientEventTriggered_System_String_
   commentId: M:FlowR.Core.FlowRHub`1.ClientEventTriggered(System.String)
   fullName: FlowR.Core.FlowRHub<T>.ClientEventTriggered(System.String)
   fullName.vb: FlowR.Core.FlowRHub(Of T).ClientEventTriggered(System.String)
@@ -739,7 +739,7 @@ references:
   nameWithType.vb: FlowRHub(Of T).ClientEventTriggered(String)
 - uid: FlowR.Core.FlowRHub`1.ClientEventTriggered*
   name: ClientEventTriggered
-  href: docs/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1_ClientEventTriggered_
+  href: docfx/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1_ClientEventTriggered_
   commentId: Overload:FlowR.Core.FlowRHub`1.ClientEventTriggered
   isSpec: "True"
   fullName: FlowR.Core.FlowRHub<T>.ClientEventTriggered
@@ -748,7 +748,7 @@ references:
   nameWithType.vb: FlowRHub(Of T).ClientEventTriggered
 - uid: FlowR.Core.FlowRHub`1.ClientMessageResponse(System.String)
   name: ClientMessageResponse(String)
-  href: docs/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1_ClientMessageResponse_System_String_
+  href: docfx/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1_ClientMessageResponse_System_String_
   commentId: M:FlowR.Core.FlowRHub`1.ClientMessageResponse(System.String)
   fullName: FlowR.Core.FlowRHub<T>.ClientMessageResponse(System.String)
   fullName.vb: FlowR.Core.FlowRHub(Of T).ClientMessageResponse(System.String)
@@ -756,7 +756,7 @@ references:
   nameWithType.vb: FlowRHub(Of T).ClientMessageResponse(String)
 - uid: FlowR.Core.FlowRHub`1.ClientMessageResponse*
   name: ClientMessageResponse
-  href: docs/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1_ClientMessageResponse_
+  href: docfx/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1_ClientMessageResponse_
   commentId: Overload:FlowR.Core.FlowRHub`1.ClientMessageResponse
   isSpec: "True"
   fullName: FlowR.Core.FlowRHub<T>.ClientMessageResponse
@@ -765,7 +765,7 @@ references:
   nameWithType.vb: FlowRHub(Of T).ClientMessageResponse
 - uid: FlowR.Core.FlowRHub`1.OnConnectedAsync
   name: OnConnectedAsync()
-  href: docs/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1_OnConnectedAsync
+  href: docfx/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1_OnConnectedAsync
   commentId: M:FlowR.Core.FlowRHub`1.OnConnectedAsync
   fullName: FlowR.Core.FlowRHub<T>.OnConnectedAsync()
   fullName.vb: FlowR.Core.FlowRHub(Of T).OnConnectedAsync()
@@ -773,7 +773,7 @@ references:
   nameWithType.vb: FlowRHub(Of T).OnConnectedAsync()
 - uid: FlowR.Core.FlowRHub`1.OnConnectedAsync*
   name: OnConnectedAsync
-  href: docs/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1_OnConnectedAsync_
+  href: docfx/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1_OnConnectedAsync_
   commentId: Overload:FlowR.Core.FlowRHub`1.OnConnectedAsync
   isSpec: "True"
   fullName: FlowR.Core.FlowRHub<T>.OnConnectedAsync
@@ -782,7 +782,7 @@ references:
   nameWithType.vb: FlowRHub(Of T).OnConnectedAsync
 - uid: FlowR.Core.FlowRHub`1.OnDisconnectedAsync(Exception)
   name: OnDisconnectedAsync(Exception)
-  href: docs/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1_OnDisconnectedAsync_Exception_
+  href: docfx/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1_OnDisconnectedAsync_Exception_
   commentId: M:FlowR.Core.FlowRHub`1.OnDisconnectedAsync(Exception)
   fullName: FlowR.Core.FlowRHub<T>.OnDisconnectedAsync(Exception)
   fullName.vb: FlowR.Core.FlowRHub(Of T).OnDisconnectedAsync(Exception)
@@ -790,7 +790,7 @@ references:
   nameWithType.vb: FlowRHub(Of T).OnDisconnectedAsync(Exception)
 - uid: FlowR.Core.FlowRHub`1.OnDisconnectedAsync*
   name: OnDisconnectedAsync
-  href: docs/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1_OnDisconnectedAsync_
+  href: docfx/api/FlowR.Core.FlowRHub-1.html#FlowR_Core_FlowRHub_1_OnDisconnectedAsync_
   commentId: Overload:FlowR.Core.FlowRHub`1.OnDisconnectedAsync
   isSpec: "True"
   fullName: FlowR.Core.FlowRHub<T>.OnDisconnectedAsync
@@ -799,7 +799,7 @@ references:
   nameWithType.vb: FlowRHub(Of T).OnDisconnectedAsync
 - uid: FlowR.Core.FlowRService`1
   name: FlowRService<T>
-  href: docs/api/FlowR.Core.FlowRService-1.html
+  href: docfx/api/FlowR.Core.FlowRService-1.html
   commentId: T:FlowR.Core.FlowRService`1
   name.vb: FlowRService(Of T)
   fullName: FlowR.Core.FlowRService<T>
@@ -808,7 +808,7 @@ references:
   nameWithType.vb: FlowRService(Of T)
 - uid: FlowR.Core.FlowRService`1.Add(System.String,IClientProxy)
   name: Add(String, IClientProxy)
-  href: docs/api/FlowR.Core.FlowRService-1.html#FlowR_Core_FlowRService_1_Add_System_String_IClientProxy_
+  href: docfx/api/FlowR.Core.FlowRService-1.html#FlowR_Core_FlowRService_1_Add_System_String_IClientProxy_
   commentId: M:FlowR.Core.FlowRService`1.Add(System.String,IClientProxy)
   fullName: FlowR.Core.FlowRService<T>.Add(System.String, IClientProxy)
   fullName.vb: FlowR.Core.FlowRService(Of T).Add(System.String, IClientProxy)
@@ -816,7 +816,7 @@ references:
   nameWithType.vb: FlowRService(Of T).Add(String, IClientProxy)
 - uid: FlowR.Core.FlowRService`1.Add*
   name: Add
-  href: docs/api/FlowR.Core.FlowRService-1.html#FlowR_Core_FlowRService_1_Add_
+  href: docfx/api/FlowR.Core.FlowRService-1.html#FlowR_Core_FlowRService_1_Add_
   commentId: Overload:FlowR.Core.FlowRService`1.Add
   isSpec: "True"
   fullName: FlowR.Core.FlowRService<T>.Add
@@ -825,7 +825,7 @@ references:
   nameWithType.vb: FlowRService(Of T).Add
 - uid: FlowR.Core.FlowRService`1.Get(System.String)
   name: Get(String)
-  href: docs/api/FlowR.Core.FlowRService-1.html#FlowR_Core_FlowRService_1_Get_System_String_
+  href: docfx/api/FlowR.Core.FlowRService-1.html#FlowR_Core_FlowRService_1_Get_System_String_
   commentId: M:FlowR.Core.FlowRService`1.Get(System.String)
   fullName: FlowR.Core.FlowRService<T>.Get(System.String)
   fullName.vb: FlowR.Core.FlowRService(Of T).Get(System.String)
@@ -833,7 +833,7 @@ references:
   nameWithType.vb: FlowRService(Of T).Get(String)
 - uid: FlowR.Core.FlowRService`1.Get*
   name: Get
-  href: docs/api/FlowR.Core.FlowRService-1.html#FlowR_Core_FlowRService_1_Get_
+  href: docfx/api/FlowR.Core.FlowRService-1.html#FlowR_Core_FlowRService_1_Get_
   commentId: Overload:FlowR.Core.FlowRService`1.Get
   isSpec: "True"
   fullName: FlowR.Core.FlowRService<T>.Get
@@ -842,7 +842,7 @@ references:
   nameWithType.vb: FlowRService(Of T).Get
 - uid: FlowR.Core.FlowRService`1.Remove(System.String)
   name: Remove(String)
-  href: docs/api/FlowR.Core.FlowRService-1.html#FlowR_Core_FlowRService_1_Remove_System_String_
+  href: docfx/api/FlowR.Core.FlowRService-1.html#FlowR_Core_FlowRService_1_Remove_System_String_
   commentId: M:FlowR.Core.FlowRService`1.Remove(System.String)
   fullName: FlowR.Core.FlowRService<T>.Remove(System.String)
   fullName.vb: FlowR.Core.FlowRService(Of T).Remove(System.String)
@@ -850,7 +850,7 @@ references:
   nameWithType.vb: FlowRService(Of T).Remove(String)
 - uid: FlowR.Core.FlowRService`1.Remove*
   name: Remove
-  href: docs/api/FlowR.Core.FlowRService-1.html#FlowR_Core_FlowRService_1_Remove_
+  href: docfx/api/FlowR.Core.FlowRService-1.html#FlowR_Core_FlowRService_1_Remove_
   commentId: Overload:FlowR.Core.FlowRService`1.Remove
   isSpec: "True"
   fullName: FlowR.Core.FlowRService<T>.Remove
@@ -859,64 +859,64 @@ references:
   nameWithType.vb: FlowRService(Of T).Remove
 - uid: FlowR.Core.IComponentControl
   name: IComponentControl
-  href: docs/api/FlowR.Core.IComponentControl.html
+  href: docfx/api/FlowR.Core.IComponentControl.html
   commentId: T:FlowR.Core.IComponentControl
   fullName: FlowR.Core.IComponentControl
   nameWithType: IComponentControl
 - uid: FlowR.Core.IComponentControl.Collect(System.String)
   name: Collect(String)
-  href: docs/api/FlowR.Core.IComponentControl.html#FlowR_Core_IComponentControl_Collect_System_String_
+  href: docfx/api/FlowR.Core.IComponentControl.html#FlowR_Core_IComponentControl_Collect_System_String_
   commentId: M:FlowR.Core.IComponentControl.Collect(System.String)
   fullName: FlowR.Core.IComponentControl.Collect(System.String)
   nameWithType: IComponentControl.Collect(String)
 - uid: FlowR.Core.IComponentControl.Collect*
   name: Collect
-  href: docs/api/FlowR.Core.IComponentControl.html#FlowR_Core_IComponentControl_Collect_
+  href: docfx/api/FlowR.Core.IComponentControl.html#FlowR_Core_IComponentControl_Collect_
   commentId: Overload:FlowR.Core.IComponentControl.Collect
   isSpec: "True"
   fullName: FlowR.Core.IComponentControl.Collect
   nameWithType: IComponentControl.Collect
 - uid: FlowR.Core.IComponentControl.GetControlName
   name: GetControlName()
-  href: docs/api/FlowR.Core.IComponentControl.html#FlowR_Core_IComponentControl_GetControlName
+  href: docfx/api/FlowR.Core.IComponentControl.html#FlowR_Core_IComponentControl_GetControlName
   commentId: M:FlowR.Core.IComponentControl.GetControlName
   fullName: FlowR.Core.IComponentControl.GetControlName()
   nameWithType: IComponentControl.GetControlName()
 - uid: FlowR.Core.IComponentControl.GetControlName*
   name: GetControlName
-  href: docs/api/FlowR.Core.IComponentControl.html#FlowR_Core_IComponentControl_GetControlName_
+  href: docfx/api/FlowR.Core.IComponentControl.html#FlowR_Core_IComponentControl_GetControlName_
   commentId: Overload:FlowR.Core.IComponentControl.GetControlName
   isSpec: "True"
   fullName: FlowR.Core.IComponentControl.GetControlName
   nameWithType: IComponentControl.GetControlName
 - uid: FlowR.Core.Message
   name: FlowR.Core.Message
-  href: docs/api/FlowR.Core.Message.html
+  href: docfx/api/FlowR.Core.Message.html
   commentId: N:FlowR.Core.Message
   fullName: FlowR.Core.Message
   nameWithType: FlowR.Core.Message
 - uid: FlowR.Core.Message.Factory
   name: Factory
-  href: docs/api/FlowR.Core.Message.Factory.html
+  href: docfx/api/FlowR.Core.Message.Factory.html
   commentId: T:FlowR.Core.Message.Factory
   fullName: FlowR.Core.Message.Factory
   nameWithType: Factory
 - uid: FlowR.Core.Message.Factory.MessageAddMethod(FlowR.Core.Node,System.String,System.String)
   name: MessageAddMethod(Node, String, String)
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageAddMethod_FlowR_Core_Node_System_String_System_String_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageAddMethod_FlowR_Core_Node_System_String_System_String_
   commentId: M:FlowR.Core.Message.Factory.MessageAddMethod(FlowR.Core.Node,System.String,System.String)
   fullName: FlowR.Core.Message.Factory.MessageAddMethod(FlowR.Core.Node, System.String, System.String)
   nameWithType: Factory.MessageAddMethod(Node, String, String)
 - uid: FlowR.Core.Message.Factory.MessageAddMethod*
   name: MessageAddMethod
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageAddMethod_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageAddMethod_
   commentId: Overload:FlowR.Core.Message.Factory.MessageAddMethod
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageAddMethod
   nameWithType: Factory.MessageAddMethod
 - uid: FlowR.Core.Message.Factory.MessageCallMethod(FlowR.Core.Node,System.String,System.String[])
   name: MessageCallMethod(Node, String, String[])
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageCallMethod_FlowR_Core_Node_System_String_System_String___
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageCallMethod_FlowR_Core_Node_System_String_System_String___
   commentId: M:FlowR.Core.Message.Factory.MessageCallMethod(FlowR.Core.Node,System.String,System.String[])
   name.vb: MessageCallMethod(Node, String, String())
   fullName: FlowR.Core.Message.Factory.MessageCallMethod(FlowR.Core.Node, System.String, System.String[])
@@ -925,53 +925,53 @@ references:
   nameWithType.vb: Factory.MessageCallMethod(Node, String, String())
 - uid: FlowR.Core.Message.Factory.MessageCallMethod*
   name: MessageCallMethod
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageCallMethod_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageCallMethod_
   commentId: Overload:FlowR.Core.Message.Factory.MessageCallMethod
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageCallMethod
   nameWithType: Factory.MessageCallMethod
 - uid: FlowR.Core.Message.Factory.MessageCreate(FlowR.Core.Node)
   name: MessageCreate(Node)
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageCreate_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageCreate_FlowR_Core_Node_
   commentId: M:FlowR.Core.Message.Factory.MessageCreate(FlowR.Core.Node)
   fullName: FlowR.Core.Message.Factory.MessageCreate(FlowR.Core.Node)
   nameWithType: Factory.MessageCreate(Node)
 - uid: FlowR.Core.Message.Factory.MessageCreate*
   name: MessageCreate
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageCreate_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageCreate_
   commentId: Overload:FlowR.Core.Message.Factory.MessageCreate
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageCreate
   nameWithType: Factory.MessageCreate
 - uid: FlowR.Core.Message.Factory.MessageGetProperty(FlowR.Core.Node,System.String)
   name: MessageGetProperty(Node, String)
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageGetProperty_FlowR_Core_Node_System_String_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageGetProperty_FlowR_Core_Node_System_String_
   commentId: M:FlowR.Core.Message.Factory.MessageGetProperty(FlowR.Core.Node,System.String)
   fullName: FlowR.Core.Message.Factory.MessageGetProperty(FlowR.Core.Node, System.String)
   nameWithType: Factory.MessageGetProperty(Node, String)
 - uid: FlowR.Core.Message.Factory.MessageGetProperty*
   name: MessageGetProperty
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageGetProperty_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageGetProperty_
   commentId: Overload:FlowR.Core.Message.Factory.MessageGetProperty
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageGetProperty
   nameWithType: Factory.MessageGetProperty
 - uid: FlowR.Core.Message.Factory.MessageGlobalGetPropertyWaitResponse(System.String)
   name: MessageGlobalGetPropertyWaitResponse(String)
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageGlobalGetPropertyWaitResponse_System_String_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageGlobalGetPropertyWaitResponse_System_String_
   commentId: M:FlowR.Core.Message.Factory.MessageGlobalGetPropertyWaitResponse(System.String)
   fullName: FlowR.Core.Message.Factory.MessageGlobalGetPropertyWaitResponse(System.String)
   nameWithType: Factory.MessageGlobalGetPropertyWaitResponse(String)
 - uid: FlowR.Core.Message.Factory.MessageGlobalGetPropertyWaitResponse*
   name: MessageGlobalGetPropertyWaitResponse
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageGlobalGetPropertyWaitResponse_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageGlobalGetPropertyWaitResponse_
   commentId: Overload:FlowR.Core.Message.Factory.MessageGlobalGetPropertyWaitResponse
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageGlobalGetPropertyWaitResponse
   nameWithType: Factory.MessageGlobalGetPropertyWaitResponse
 - uid: FlowR.Core.Message.Factory.MessageGlobalMethodCall(System.String,System.String[])
   name: MessageGlobalMethodCall(String, String[])
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageGlobalMethodCall_System_String_System_String___
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageGlobalMethodCall_System_String_System_String___
   commentId: M:FlowR.Core.Message.Factory.MessageGlobalMethodCall(System.String,System.String[])
   name.vb: MessageGlobalMethodCall(String, String())
   fullName: FlowR.Core.Message.Factory.MessageGlobalMethodCall(System.String, System.String[])
@@ -980,14 +980,14 @@ references:
   nameWithType.vb: Factory.MessageGlobalMethodCall(String, String())
 - uid: FlowR.Core.Message.Factory.MessageGlobalMethodCall*
   name: MessageGlobalMethodCall
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageGlobalMethodCall_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageGlobalMethodCall_
   commentId: Overload:FlowR.Core.Message.Factory.MessageGlobalMethodCall
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageGlobalMethodCall
   nameWithType: Factory.MessageGlobalMethodCall
 - uid: FlowR.Core.Message.Factory.MessageGlobalMethodCallWaitResponse(System.String,System.String[])
   name: MessageGlobalMethodCallWaitResponse(String, String[])
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageGlobalMethodCallWaitResponse_System_String_System_String___
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageGlobalMethodCallWaitResponse_System_String_System_String___
   commentId: M:FlowR.Core.Message.Factory.MessageGlobalMethodCallWaitResponse(System.String,System.String[])
   name.vb: MessageGlobalMethodCallWaitResponse(String, String())
   fullName: FlowR.Core.Message.Factory.MessageGlobalMethodCallWaitResponse(System.String, System.String[])
@@ -996,14 +996,14 @@ references:
   nameWithType.vb: Factory.MessageGlobalMethodCallWaitResponse(String, String())
 - uid: FlowR.Core.Message.Factory.MessageGlobalMethodCallWaitResponse*
   name: MessageGlobalMethodCallWaitResponse
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageGlobalMethodCallWaitResponse_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageGlobalMethodCallWaitResponse_
   commentId: Overload:FlowR.Core.Message.Factory.MessageGlobalMethodCallWaitResponse
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageGlobalMethodCallWaitResponse
   nameWithType: Factory.MessageGlobalMethodCallWaitResponse
 - uid: FlowR.Core.Message.Factory.MessageMethodCall(FlowR.Core.Node,System.String,System.String[])
   name: MessageMethodCall(Node, String, String[])
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageMethodCall_FlowR_Core_Node_System_String_System_String___
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageMethodCall_FlowR_Core_Node_System_String_System_String___
   commentId: M:FlowR.Core.Message.Factory.MessageMethodCall(FlowR.Core.Node,System.String,System.String[])
   name.vb: MessageMethodCall(Node, String, String())
   fullName: FlowR.Core.Message.Factory.MessageMethodCall(FlowR.Core.Node, System.String, System.String[])
@@ -1012,14 +1012,14 @@ references:
   nameWithType.vb: Factory.MessageMethodCall(Node, String, String())
 - uid: FlowR.Core.Message.Factory.MessageMethodCall*
   name: MessageMethodCall
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageMethodCall_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageMethodCall_
   commentId: Overload:FlowR.Core.Message.Factory.MessageMethodCall
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageMethodCall
   nameWithType: Factory.MessageMethodCall
 - uid: FlowR.Core.Message.Factory.MessageMethodCallWaitResponse(FlowR.Core.Node,System.String,System.String[])
   name: MessageMethodCallWaitResponse(Node, String, String[])
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageMethodCallWaitResponse_FlowR_Core_Node_System_String_System_String___
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageMethodCallWaitResponse_FlowR_Core_Node_System_String_System_String___
   commentId: M:FlowR.Core.Message.Factory.MessageMethodCallWaitResponse(FlowR.Core.Node,System.String,System.String[])
   name.vb: MessageMethodCallWaitResponse(Node, String, String())
   fullName: FlowR.Core.Message.Factory.MessageMethodCallWaitResponse(FlowR.Core.Node, System.String, System.String[])
@@ -1028,214 +1028,214 @@ references:
   nameWithType.vb: Factory.MessageMethodCallWaitResponse(Node, String, String())
 - uid: FlowR.Core.Message.Factory.MessageMethodCallWaitResponse*
   name: MessageMethodCallWaitResponse
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageMethodCallWaitResponse_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageMethodCallWaitResponse_
   commentId: Overload:FlowR.Core.Message.Factory.MessageMethodCallWaitResponse
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageMethodCallWaitResponse
   nameWithType: Factory.MessageMethodCallWaitResponse
 - uid: FlowR.Core.Message.Factory.MessageRemove(FlowR.Core.Node)
   name: MessageRemove(Node)
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageRemove_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageRemove_FlowR_Core_Node_
   commentId: M:FlowR.Core.Message.Factory.MessageRemove(FlowR.Core.Node)
   fullName: FlowR.Core.Message.Factory.MessageRemove(FlowR.Core.Node)
   nameWithType: Factory.MessageRemove(Node)
 - uid: FlowR.Core.Message.Factory.MessageRemove*
   name: MessageRemove
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageRemove_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageRemove_
   commentId: Overload:FlowR.Core.Message.Factory.MessageRemove
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageRemove
   nameWithType: Factory.MessageRemove
 - uid: FlowR.Core.Message.Factory.MessageRemoveAttribute(FlowR.Core.Node,System.String)
   name: MessageRemoveAttribute(Node, String)
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageRemoveAttribute_FlowR_Core_Node_System_String_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageRemoveAttribute_FlowR_Core_Node_System_String_
   commentId: M:FlowR.Core.Message.Factory.MessageRemoveAttribute(FlowR.Core.Node,System.String)
   fullName: FlowR.Core.Message.Factory.MessageRemoveAttribute(FlowR.Core.Node, System.String)
   nameWithType: Factory.MessageRemoveAttribute(Node, String)
 - uid: FlowR.Core.Message.Factory.MessageRemoveAttribute*
   name: MessageRemoveAttribute
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageRemoveAttribute_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageRemoveAttribute_
   commentId: Overload:FlowR.Core.Message.Factory.MessageRemoveAttribute
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageRemoveAttribute
   nameWithType: Factory.MessageRemoveAttribute
 - uid: FlowR.Core.Message.Factory.MessageSetAttribute(FlowR.Core.Node,System.String,System.String)
   name: MessageSetAttribute(Node, String, String)
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageSetAttribute_FlowR_Core_Node_System_String_System_String_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageSetAttribute_FlowR_Core_Node_System_String_System_String_
   commentId: M:FlowR.Core.Message.Factory.MessageSetAttribute(FlowR.Core.Node,System.String,System.String)
   fullName: FlowR.Core.Message.Factory.MessageSetAttribute(FlowR.Core.Node, System.String, System.String)
   nameWithType: Factory.MessageSetAttribute(Node, String, String)
 - uid: FlowR.Core.Message.Factory.MessageSetAttribute*
   name: MessageSetAttribute
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageSetAttribute_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageSetAttribute_
   commentId: Overload:FlowR.Core.Message.Factory.MessageSetAttribute
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageSetAttribute
   nameWithType: Factory.MessageSetAttribute
 - uid: FlowR.Core.Message.Factory.MessageSetGlobalProperty(System.String,System.String)
   name: MessageSetGlobalProperty(String, String)
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageSetGlobalProperty_System_String_System_String_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageSetGlobalProperty_System_String_System_String_
   commentId: M:FlowR.Core.Message.Factory.MessageSetGlobalProperty(System.String,System.String)
   fullName: FlowR.Core.Message.Factory.MessageSetGlobalProperty(System.String, System.String)
   nameWithType: Factory.MessageSetGlobalProperty(String, String)
 - uid: FlowR.Core.Message.Factory.MessageSetGlobalProperty*
   name: MessageSetGlobalProperty
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageSetGlobalProperty_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageSetGlobalProperty_
   commentId: Overload:FlowR.Core.Message.Factory.MessageSetGlobalProperty
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageSetGlobalProperty
   nameWithType: Factory.MessageSetGlobalProperty
 - uid: FlowR.Core.Message.Factory.MessageSetProperty(FlowR.Core.Node,System.String,System.String)
   name: MessageSetProperty(Node, String, String)
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageSetProperty_FlowR_Core_Node_System_String_System_String_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageSetProperty_FlowR_Core_Node_System_String_System_String_
   commentId: M:FlowR.Core.Message.Factory.MessageSetProperty(FlowR.Core.Node,System.String,System.String)
   fullName: FlowR.Core.Message.Factory.MessageSetProperty(FlowR.Core.Node, System.String, System.String)
   nameWithType: Factory.MessageSetProperty(Node, String, String)
 - uid: FlowR.Core.Message.Factory.MessageSetProperty*
   name: MessageSetProperty
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageSetProperty_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageSetProperty_
   commentId: Overload:FlowR.Core.Message.Factory.MessageSetProperty
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageSetProperty
   nameWithType: Factory.MessageSetProperty
 - uid: FlowR.Core.Message.Factory.MessageSetText(FlowR.Core.Node,System.String)
   name: MessageSetText(Node, String)
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageSetText_FlowR_Core_Node_System_String_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageSetText_FlowR_Core_Node_System_String_
   commentId: M:FlowR.Core.Message.Factory.MessageSetText(FlowR.Core.Node,System.String)
   fullName: FlowR.Core.Message.Factory.MessageSetText(FlowR.Core.Node, System.String)
   nameWithType: Factory.MessageSetText(Node, String)
 - uid: FlowR.Core.Message.Factory.MessageSetText*
   name: MessageSetText
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageSetText_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageSetText_
   commentId: Overload:FlowR.Core.Message.Factory.MessageSetText
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageSetText
   nameWithType: Factory.MessageSetText
 - uid: FlowR.Core.Message.Factory.MessageStartListenEvent(FlowR.Core.Node,System.String)
   name: MessageStartListenEvent(Node, String)
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageStartListenEvent_FlowR_Core_Node_System_String_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageStartListenEvent_FlowR_Core_Node_System_String_
   commentId: M:FlowR.Core.Message.Factory.MessageStartListenEvent(FlowR.Core.Node,System.String)
   fullName: FlowR.Core.Message.Factory.MessageStartListenEvent(FlowR.Core.Node, System.String)
   nameWithType: Factory.MessageStartListenEvent(Node, String)
 - uid: FlowR.Core.Message.Factory.MessageStartListenEvent*
   name: MessageStartListenEvent
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageStartListenEvent_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageStartListenEvent_
   commentId: Overload:FlowR.Core.Message.Factory.MessageStartListenEvent
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageStartListenEvent
   nameWithType: Factory.MessageStartListenEvent
 - uid: FlowR.Core.Message.Factory.MessageStopListenEvent(FlowR.Core.Node,System.String)
   name: MessageStopListenEvent(Node, String)
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageStopListenEvent_FlowR_Core_Node_System_String_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageStopListenEvent_FlowR_Core_Node_System_String_
   commentId: M:FlowR.Core.Message.Factory.MessageStopListenEvent(FlowR.Core.Node,System.String)
   fullName: FlowR.Core.Message.Factory.MessageStopListenEvent(FlowR.Core.Node, System.String)
   nameWithType: Factory.MessageStopListenEvent(Node, String)
 - uid: FlowR.Core.Message.Factory.MessageStopListenEvent*
   name: MessageStopListenEvent
-  href: docs/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageStopListenEvent_
+  href: docfx/api/FlowR.Core.Message.Factory.html#FlowR_Core_Message_Factory_MessageStopListenEvent_
   commentId: Overload:FlowR.Core.Message.Factory.MessageStopListenEvent
   isSpec: "True"
   fullName: FlowR.Core.Message.Factory.MessageStopListenEvent
   nameWithType: Factory.MessageStopListenEvent
 - uid: FlowR.Core.Message.IMessage
   name: IMessage
-  href: docs/api/FlowR.Core.Message.IMessage.html
+  href: docfx/api/FlowR.Core.Message.IMessage.html
   commentId: T:FlowR.Core.Message.IMessage
   fullName: FlowR.Core.Message.IMessage
   nameWithType: IMessage
 - uid: FlowR.Core.Message.IMessage.GetArgumentValues
   name: GetArgumentValues()
-  href: docs/api/FlowR.Core.Message.IMessage.html#FlowR_Core_Message_IMessage_GetArgumentValues
+  href: docfx/api/FlowR.Core.Message.IMessage.html#FlowR_Core_Message_IMessage_GetArgumentValues
   commentId: M:FlowR.Core.Message.IMessage.GetArgumentValues
   fullName: FlowR.Core.Message.IMessage.GetArgumentValues()
   nameWithType: IMessage.GetArgumentValues()
 - uid: FlowR.Core.Message.IMessage.GetArgumentValues*
   name: GetArgumentValues
-  href: docs/api/FlowR.Core.Message.IMessage.html#FlowR_Core_Message_IMessage_GetArgumentValues_
+  href: docfx/api/FlowR.Core.Message.IMessage.html#FlowR_Core_Message_IMessage_GetArgumentValues_
   commentId: Overload:FlowR.Core.Message.IMessage.GetArgumentValues
   isSpec: "True"
   fullName: FlowR.Core.Message.IMessage.GetArgumentValues
   nameWithType: IMessage.GetArgumentValues
 - uid: FlowR.Core.Message.IMessage.GetRequestedAction
   name: GetRequestedAction()
-  href: docs/api/FlowR.Core.Message.IMessage.html#FlowR_Core_Message_IMessage_GetRequestedAction
+  href: docfx/api/FlowR.Core.Message.IMessage.html#FlowR_Core_Message_IMessage_GetRequestedAction
   commentId: M:FlowR.Core.Message.IMessage.GetRequestedAction
   fullName: FlowR.Core.Message.IMessage.GetRequestedAction()
   nameWithType: IMessage.GetRequestedAction()
 - uid: FlowR.Core.Message.IMessage.GetRequestedAction*
   name: GetRequestedAction
-  href: docs/api/FlowR.Core.Message.IMessage.html#FlowR_Core_Message_IMessage_GetRequestedAction_
+  href: docfx/api/FlowR.Core.Message.IMessage.html#FlowR_Core_Message_IMessage_GetRequestedAction_
   commentId: Overload:FlowR.Core.Message.IMessage.GetRequestedAction
   isSpec: "True"
   fullName: FlowR.Core.Message.IMessage.GetRequestedAction
   nameWithType: IMessage.GetRequestedAction
 - uid: FlowR.Core.Message.IMessage.GetUuid
   name: GetUuid()
-  href: docs/api/FlowR.Core.Message.IMessage.html#FlowR_Core_Message_IMessage_GetUuid
+  href: docfx/api/FlowR.Core.Message.IMessage.html#FlowR_Core_Message_IMessage_GetUuid
   commentId: M:FlowR.Core.Message.IMessage.GetUuid
   fullName: FlowR.Core.Message.IMessage.GetUuid()
   nameWithType: IMessage.GetUuid()
 - uid: FlowR.Core.Message.IMessage.GetUuid*
   name: GetUuid
-  href: docs/api/FlowR.Core.Message.IMessage.html#FlowR_Core_Message_IMessage_GetUuid_
+  href: docfx/api/FlowR.Core.Message.IMessage.html#FlowR_Core_Message_IMessage_GetUuid_
   commentId: Overload:FlowR.Core.Message.IMessage.GetUuid
   isSpec: "True"
   fullName: FlowR.Core.Message.IMessage.GetUuid
   nameWithType: IMessage.GetUuid
 - uid: FlowR.Core.Message.IMessageResponse
   name: IMessageResponse
-  href: docs/api/FlowR.Core.Message.IMessageResponse.html
+  href: docfx/api/FlowR.Core.Message.IMessageResponse.html
   commentId: T:FlowR.Core.Message.IMessageResponse
   fullName: FlowR.Core.Message.IMessageResponse
   nameWithType: IMessageResponse
 - uid: FlowR.Core.Message.IMessageResponse.GetResponse
   name: GetResponse()
-  href: docs/api/FlowR.Core.Message.IMessageResponse.html#FlowR_Core_Message_IMessageResponse_GetResponse
+  href: docfx/api/FlowR.Core.Message.IMessageResponse.html#FlowR_Core_Message_IMessageResponse_GetResponse
   commentId: M:FlowR.Core.Message.IMessageResponse.GetResponse
   fullName: FlowR.Core.Message.IMessageResponse.GetResponse()
   nameWithType: IMessageResponse.GetResponse()
 - uid: FlowR.Core.Message.IMessageResponse.GetResponse*
   name: GetResponse
-  href: docs/api/FlowR.Core.Message.IMessageResponse.html#FlowR_Core_Message_IMessageResponse_GetResponse_
+  href: docfx/api/FlowR.Core.Message.IMessageResponse.html#FlowR_Core_Message_IMessageResponse_GetResponse_
   commentId: Overload:FlowR.Core.Message.IMessageResponse.GetResponse
   isSpec: "True"
   fullName: FlowR.Core.Message.IMessageResponse.GetResponse
   nameWithType: IMessageResponse.GetResponse
 - uid: FlowR.Core.Message.IMessageResponse.SetResponse(System.String)
   name: SetResponse(String)
-  href: docs/api/FlowR.Core.Message.IMessageResponse.html#FlowR_Core_Message_IMessageResponse_SetResponse_System_String_
+  href: docfx/api/FlowR.Core.Message.IMessageResponse.html#FlowR_Core_Message_IMessageResponse_SetResponse_System_String_
   commentId: M:FlowR.Core.Message.IMessageResponse.SetResponse(System.String)
   fullName: FlowR.Core.Message.IMessageResponse.SetResponse(System.String)
   nameWithType: IMessageResponse.SetResponse(String)
 - uid: FlowR.Core.Message.IMessageResponse.SetResponse*
   name: SetResponse
-  href: docs/api/FlowR.Core.Message.IMessageResponse.html#FlowR_Core_Message_IMessageResponse_SetResponse_
+  href: docfx/api/FlowR.Core.Message.IMessageResponse.html#FlowR_Core_Message_IMessageResponse_SetResponse_
   commentId: Overload:FlowR.Core.Message.IMessageResponse.SetResponse
   isSpec: "True"
   fullName: FlowR.Core.Message.IMessageResponse.SetResponse
   nameWithType: IMessageResponse.SetResponse
 - uid: FlowR.Core.Message.Message
   name: Message
-  href: docs/api/FlowR.Core.Message.Message.html
+  href: docfx/api/FlowR.Core.Message.Message.html
   commentId: T:FlowR.Core.Message.Message
   fullName: FlowR.Core.Message.Message
   nameWithType: Message
 - uid: FlowR.Core.Message.Message.#ctor
   name: Message()
-  href: docs/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message__ctor
+  href: docfx/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message__ctor
   commentId: M:FlowR.Core.Message.Message.#ctor
   fullName: FlowR.Core.Message.Message.Message()
   nameWithType: Message.Message()
 - uid: FlowR.Core.Message.Message.#ctor*
   name: Message
-  href: docs/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message__ctor_
+  href: docfx/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message__ctor_
   commentId: Overload:FlowR.Core.Message.Message.#ctor
   isSpec: "True"
   fullName: FlowR.Core.Message.Message.Message
   nameWithType: Message.Message
 - uid: FlowR.Core.Message.Message.AddArgument(System.Object[])
   name: AddArgument(Object[])
-  href: docs/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_AddArgument_System_Object___
+  href: docfx/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_AddArgument_System_Object___
   commentId: M:FlowR.Core.Message.Message.AddArgument(System.Object[])
   name.vb: AddArgument(Object())
   fullName: FlowR.Core.Message.Message.AddArgument(System.Object[])
@@ -1244,302 +1244,302 @@ references:
   nameWithType.vb: Message.AddArgument(Object())
 - uid: FlowR.Core.Message.Message.AddArgument*
   name: AddArgument
-  href: docs/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_AddArgument_
+  href: docfx/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_AddArgument_
   commentId: Overload:FlowR.Core.Message.Message.AddArgument
   isSpec: "True"
   fullName: FlowR.Core.Message.Message.AddArgument
   nameWithType: Message.AddArgument
 - uid: FlowR.Core.Message.Message.GetArgumentValues
   name: GetArgumentValues()
-  href: docs/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_GetArgumentValues
+  href: docfx/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_GetArgumentValues
   commentId: M:FlowR.Core.Message.Message.GetArgumentValues
   fullName: FlowR.Core.Message.Message.GetArgumentValues()
   nameWithType: Message.GetArgumentValues()
 - uid: FlowR.Core.Message.Message.GetArgumentValues*
   name: GetArgumentValues
-  href: docs/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_GetArgumentValues_
+  href: docfx/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_GetArgumentValues_
   commentId: Overload:FlowR.Core.Message.Message.GetArgumentValues
   isSpec: "True"
   fullName: FlowR.Core.Message.Message.GetArgumentValues
   nameWithType: Message.GetArgumentValues
 - uid: FlowR.Core.Message.Message.GetRequestedAction
   name: GetRequestedAction()
-  href: docs/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_GetRequestedAction
+  href: docfx/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_GetRequestedAction
   commentId: M:FlowR.Core.Message.Message.GetRequestedAction
   fullName: FlowR.Core.Message.Message.GetRequestedAction()
   nameWithType: Message.GetRequestedAction()
 - uid: FlowR.Core.Message.Message.GetRequestedAction*
   name: GetRequestedAction
-  href: docs/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_GetRequestedAction_
+  href: docfx/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_GetRequestedAction_
   commentId: Overload:FlowR.Core.Message.Message.GetRequestedAction
   isSpec: "True"
   fullName: FlowR.Core.Message.Message.GetRequestedAction
   nameWithType: Message.GetRequestedAction
 - uid: FlowR.Core.Message.Message.GetUuid
   name: GetUuid()
-  href: docs/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_GetUuid
+  href: docfx/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_GetUuid
   commentId: M:FlowR.Core.Message.Message.GetUuid
   fullName: FlowR.Core.Message.Message.GetUuid()
   nameWithType: Message.GetUuid()
 - uid: FlowR.Core.Message.Message.GetUuid*
   name: GetUuid
-  href: docs/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_GetUuid_
+  href: docfx/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_GetUuid_
   commentId: Overload:FlowR.Core.Message.Message.GetUuid
   isSpec: "True"
   fullName: FlowR.Core.Message.Message.GetUuid
   nameWithType: Message.GetUuid
 - uid: FlowR.Core.Message.Message.Uuid
   name: Uuid
-  href: docs/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_Uuid
+  href: docfx/api/FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_Uuid
   commentId: F:FlowR.Core.Message.Message.Uuid
   fullName: FlowR.Core.Message.Message.Uuid
   nameWithType: Message.Uuid
 - uid: FlowR.Core.Message.MessageElement
   name: MessageElement
-  href: docs/api/FlowR.Core.Message.MessageElement.html
+  href: docfx/api/FlowR.Core.Message.MessageElement.html
   commentId: T:FlowR.Core.Message.MessageElement
   fullName: FlowR.Core.Message.MessageElement
   nameWithType: MessageElement
 - uid: FlowR.Core.Message.MessageElement.#ctor(FlowR.Core.Node)
   name: MessageElement(Node)
-  href: docs/api/FlowR.Core.Message.MessageElement.html#FlowR_Core_Message_MessageElement__ctor_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.Message.MessageElement.html#FlowR_Core_Message_MessageElement__ctor_FlowR_Core_Node_
   commentId: M:FlowR.Core.Message.MessageElement.#ctor(FlowR.Core.Node)
   fullName: FlowR.Core.Message.MessageElement.MessageElement(FlowR.Core.Node)
   nameWithType: MessageElement.MessageElement(Node)
 - uid: FlowR.Core.Message.MessageElement.#ctor*
   name: MessageElement
-  href: docs/api/FlowR.Core.Message.MessageElement.html#FlowR_Core_Message_MessageElement__ctor_
+  href: docfx/api/FlowR.Core.Message.MessageElement.html#FlowR_Core_Message_MessageElement__ctor_
   commentId: Overload:FlowR.Core.Message.MessageElement.#ctor
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageElement.MessageElement
   nameWithType: MessageElement.MessageElement
 - uid: FlowR.Core.Message.MessageElement.Action
   name: Action
-  href: docs/api/FlowR.Core.Message.MessageElement.html#FlowR_Core_Message_MessageElement_Action
+  href: docfx/api/FlowR.Core.Message.MessageElement.html#FlowR_Core_Message_MessageElement_Action
   commentId: P:FlowR.Core.Message.MessageElement.Action
   fullName: FlowR.Core.Message.MessageElement.Action
   nameWithType: MessageElement.Action
 - uid: FlowR.Core.Message.MessageElement.Action*
   name: Action
-  href: docs/api/FlowR.Core.Message.MessageElement.html#FlowR_Core_Message_MessageElement_Action_
+  href: docfx/api/FlowR.Core.Message.MessageElement.html#FlowR_Core_Message_MessageElement_Action_
   commentId: Overload:FlowR.Core.Message.MessageElement.Action
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageElement.Action
   nameWithType: MessageElement.Action
 - uid: FlowR.Core.Message.MessageElement.GetRequestedAction
   name: GetRequestedAction()
-  href: docs/api/FlowR.Core.Message.MessageElement.html#FlowR_Core_Message_MessageElement_GetRequestedAction
+  href: docfx/api/FlowR.Core.Message.MessageElement.html#FlowR_Core_Message_MessageElement_GetRequestedAction
   commentId: M:FlowR.Core.Message.MessageElement.GetRequestedAction
   fullName: FlowR.Core.Message.MessageElement.GetRequestedAction()
   nameWithType: MessageElement.GetRequestedAction()
 - uid: FlowR.Core.Message.MessageElement.GetRequestedAction*
   name: GetRequestedAction
-  href: docs/api/FlowR.Core.Message.MessageElement.html#FlowR_Core_Message_MessageElement_GetRequestedAction_
+  href: docfx/api/FlowR.Core.Message.MessageElement.html#FlowR_Core_Message_MessageElement_GetRequestedAction_
   commentId: Overload:FlowR.Core.Message.MessageElement.GetRequestedAction
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageElement.GetRequestedAction
   nameWithType: MessageElement.GetRequestedAction
 - uid: FlowR.Core.Message.MessageElement.MessageActions
   name: MessageElement.MessageActions
-  href: docs/api/FlowR.Core.Message.MessageElement.MessageActions.html
+  href: docfx/api/FlowR.Core.Message.MessageElement.MessageActions.html
   commentId: T:FlowR.Core.Message.MessageElement.MessageActions
   fullName: FlowR.Core.Message.MessageElement.MessageActions
   nameWithType: MessageElement.MessageActions
 - uid: FlowR.Core.Message.MessageElement.MessageActions.AddMethod
   name: AddMethod
-  href: docs/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_AddMethod
+  href: docfx/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_AddMethod
   commentId: F:FlowR.Core.Message.MessageElement.MessageActions.AddMethod
   fullName: FlowR.Core.Message.MessageElement.MessageActions.AddMethod
   nameWithType: MessageElement.MessageActions.AddMethod
 - uid: FlowR.Core.Message.MessageElement.MessageActions.CallMethod
   name: CallMethod
-  href: docs/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_CallMethod
+  href: docfx/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_CallMethod
   commentId: F:FlowR.Core.Message.MessageElement.MessageActions.CallMethod
   fullName: FlowR.Core.Message.MessageElement.MessageActions.CallMethod
   nameWithType: MessageElement.MessageActions.CallMethod
 - uid: FlowR.Core.Message.MessageElement.MessageActions.CreateElement
   name: CreateElement
-  href: docs/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_CreateElement
+  href: docfx/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_CreateElement
   commentId: F:FlowR.Core.Message.MessageElement.MessageActions.CreateElement
   fullName: FlowR.Core.Message.MessageElement.MessageActions.CreateElement
   nameWithType: MessageElement.MessageActions.CreateElement
 - uid: FlowR.Core.Message.MessageElement.MessageActions.RemoveAttribute
   name: RemoveAttribute
-  href: docs/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_RemoveAttribute
+  href: docfx/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_RemoveAttribute
   commentId: F:FlowR.Core.Message.MessageElement.MessageActions.RemoveAttribute
   fullName: FlowR.Core.Message.MessageElement.MessageActions.RemoveAttribute
   nameWithType: MessageElement.MessageActions.RemoveAttribute
 - uid: FlowR.Core.Message.MessageElement.MessageActions.RemoveElement
   name: RemoveElement
-  href: docs/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_RemoveElement
+  href: docfx/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_RemoveElement
   commentId: F:FlowR.Core.Message.MessageElement.MessageActions.RemoveElement
   fullName: FlowR.Core.Message.MessageElement.MessageActions.RemoveElement
   nameWithType: MessageElement.MessageActions.RemoveElement
 - uid: FlowR.Core.Message.MessageElement.MessageActions.SetAttribute
   name: SetAttribute
-  href: docs/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_SetAttribute
+  href: docfx/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_SetAttribute
   commentId: F:FlowR.Core.Message.MessageElement.MessageActions.SetAttribute
   fullName: FlowR.Core.Message.MessageElement.MessageActions.SetAttribute
   nameWithType: MessageElement.MessageActions.SetAttribute
 - uid: FlowR.Core.Message.MessageElement.MessageActions.SetProperty
   name: SetProperty
-  href: docs/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_SetProperty
+  href: docfx/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_SetProperty
   commentId: F:FlowR.Core.Message.MessageElement.MessageActions.SetProperty
   fullName: FlowR.Core.Message.MessageElement.MessageActions.SetProperty
   nameWithType: MessageElement.MessageActions.SetProperty
 - uid: FlowR.Core.Message.MessageElement.MessageActions.SetText
   name: SetText
-  href: docs/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_SetText
+  href: docfx/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_SetText
   commentId: F:FlowR.Core.Message.MessageElement.MessageActions.SetText
   fullName: FlowR.Core.Message.MessageElement.MessageActions.SetText
   nameWithType: MessageElement.MessageActions.SetText
 - uid: FlowR.Core.Message.MessageElement.MessageActions.StartListenEvent
   name: StartListenEvent
-  href: docs/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_StartListenEvent
+  href: docfx/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_StartListenEvent
   commentId: F:FlowR.Core.Message.MessageElement.MessageActions.StartListenEvent
   fullName: FlowR.Core.Message.MessageElement.MessageActions.StartListenEvent
   nameWithType: MessageElement.MessageActions.StartListenEvent
 - uid: FlowR.Core.Message.MessageElement.MessageActions.StopListenEvent
   name: StopListenEvent
-  href: docs/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_StopListenEvent
+  href: docfx/api/FlowR.Core.Message.MessageElement.MessageActions.html#FlowR_Core_Message_MessageElement_MessageActions_StopListenEvent
   commentId: F:FlowR.Core.Message.MessageElement.MessageActions.StopListenEvent
   fullName: FlowR.Core.Message.MessageElement.MessageActions.StopListenEvent
   nameWithType: MessageElement.MessageActions.StopListenEvent
 - uid: FlowR.Core.Message.MessageElementWithResponse
   name: MessageElementWithResponse
-  href: docs/api/FlowR.Core.Message.MessageElementWithResponse.html
+  href: docfx/api/FlowR.Core.Message.MessageElementWithResponse.html
   commentId: T:FlowR.Core.Message.MessageElementWithResponse
   fullName: FlowR.Core.Message.MessageElementWithResponse
   nameWithType: MessageElementWithResponse
 - uid: FlowR.Core.Message.MessageElementWithResponse.#ctor(FlowR.Core.Node)
   name: MessageElementWithResponse(Node)
-  href: docs/api/FlowR.Core.Message.MessageElementWithResponse.html#FlowR_Core_Message_MessageElementWithResponse__ctor_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.Message.MessageElementWithResponse.html#FlowR_Core_Message_MessageElementWithResponse__ctor_FlowR_Core_Node_
   commentId: M:FlowR.Core.Message.MessageElementWithResponse.#ctor(FlowR.Core.Node)
   fullName: FlowR.Core.Message.MessageElementWithResponse.MessageElementWithResponse(FlowR.Core.Node)
   nameWithType: MessageElementWithResponse.MessageElementWithResponse(Node)
 - uid: FlowR.Core.Message.MessageElementWithResponse.#ctor*
   name: MessageElementWithResponse
-  href: docs/api/FlowR.Core.Message.MessageElementWithResponse.html#FlowR_Core_Message_MessageElementWithResponse__ctor_
+  href: docfx/api/FlowR.Core.Message.MessageElementWithResponse.html#FlowR_Core_Message_MessageElementWithResponse__ctor_
   commentId: Overload:FlowR.Core.Message.MessageElementWithResponse.#ctor
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageElementWithResponse.MessageElementWithResponse
   nameWithType: MessageElementWithResponse.MessageElementWithResponse
 - uid: FlowR.Core.Message.MessageElementWithResponse.Action
   name: Action
-  href: docs/api/FlowR.Core.Message.MessageElementWithResponse.html#FlowR_Core_Message_MessageElementWithResponse_Action
+  href: docfx/api/FlowR.Core.Message.MessageElementWithResponse.html#FlowR_Core_Message_MessageElementWithResponse_Action
   commentId: P:FlowR.Core.Message.MessageElementWithResponse.Action
   fullName: FlowR.Core.Message.MessageElementWithResponse.Action
   nameWithType: MessageElementWithResponse.Action
 - uid: FlowR.Core.Message.MessageElementWithResponse.Action*
   name: Action
-  href: docs/api/FlowR.Core.Message.MessageElementWithResponse.html#FlowR_Core_Message_MessageElementWithResponse_Action_
+  href: docfx/api/FlowR.Core.Message.MessageElementWithResponse.html#FlowR_Core_Message_MessageElementWithResponse_Action_
   commentId: Overload:FlowR.Core.Message.MessageElementWithResponse.Action
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageElementWithResponse.Action
   nameWithType: MessageElementWithResponse.Action
 - uid: FlowR.Core.Message.MessageElementWithResponse.GetRequestedAction
   name: GetRequestedAction()
-  href: docs/api/FlowR.Core.Message.MessageElementWithResponse.html#FlowR_Core_Message_MessageElementWithResponse_GetRequestedAction
+  href: docfx/api/FlowR.Core.Message.MessageElementWithResponse.html#FlowR_Core_Message_MessageElementWithResponse_GetRequestedAction
   commentId: M:FlowR.Core.Message.MessageElementWithResponse.GetRequestedAction
   fullName: FlowR.Core.Message.MessageElementWithResponse.GetRequestedAction()
   nameWithType: MessageElementWithResponse.GetRequestedAction()
 - uid: FlowR.Core.Message.MessageElementWithResponse.GetRequestedAction*
   name: GetRequestedAction
-  href: docs/api/FlowR.Core.Message.MessageElementWithResponse.html#FlowR_Core_Message_MessageElementWithResponse_GetRequestedAction_
+  href: docfx/api/FlowR.Core.Message.MessageElementWithResponse.html#FlowR_Core_Message_MessageElementWithResponse_GetRequestedAction_
   commentId: Overload:FlowR.Core.Message.MessageElementWithResponse.GetRequestedAction
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageElementWithResponse.GetRequestedAction
   nameWithType: MessageElementWithResponse.GetRequestedAction
 - uid: FlowR.Core.Message.MessageElementWithResponse.MessageActions
   name: MessageElementWithResponse.MessageActions
-  href: docs/api/FlowR.Core.Message.MessageElementWithResponse.MessageActions.html
+  href: docfx/api/FlowR.Core.Message.MessageElementWithResponse.MessageActions.html
   commentId: T:FlowR.Core.Message.MessageElementWithResponse.MessageActions
   fullName: FlowR.Core.Message.MessageElementWithResponse.MessageActions
   nameWithType: MessageElementWithResponse.MessageActions
 - uid: FlowR.Core.Message.MessageElementWithResponse.MessageActions.CallMethodGetResponse
   name: CallMethodGetResponse
-  href: docs/api/FlowR.Core.Message.MessageElementWithResponse.MessageActions.html#FlowR_Core_Message_MessageElementWithResponse_MessageActions_CallMethodGetResponse
+  href: docfx/api/FlowR.Core.Message.MessageElementWithResponse.MessageActions.html#FlowR_Core_Message_MessageElementWithResponse_MessageActions_CallMethodGetResponse
   commentId: F:FlowR.Core.Message.MessageElementWithResponse.MessageActions.CallMethodGetResponse
   fullName: FlowR.Core.Message.MessageElementWithResponse.MessageActions.CallMethodGetResponse
   nameWithType: MessageElementWithResponse.MessageActions.CallMethodGetResponse
 - uid: FlowR.Core.Message.MessageElementWithResponse.MessageActions.GetProperty
   name: GetProperty
-  href: docs/api/FlowR.Core.Message.MessageElementWithResponse.MessageActions.html#FlowR_Core_Message_MessageElementWithResponse_MessageActions_GetProperty
+  href: docfx/api/FlowR.Core.Message.MessageElementWithResponse.MessageActions.html#FlowR_Core_Message_MessageElementWithResponse_MessageActions_GetProperty
   commentId: F:FlowR.Core.Message.MessageElementWithResponse.MessageActions.GetProperty
   fullName: FlowR.Core.Message.MessageElementWithResponse.MessageActions.GetProperty
   nameWithType: MessageElementWithResponse.MessageActions.GetProperty
 - uid: FlowR.Core.Message.MessageEvent
   name: MessageEvent
-  href: docs/api/FlowR.Core.Message.MessageEvent.html
+  href: docfx/api/FlowR.Core.Message.MessageEvent.html
   commentId: T:FlowR.Core.Message.MessageEvent
   fullName: FlowR.Core.Message.MessageEvent
   nameWithType: MessageEvent
 - uid: FlowR.Core.Message.MessageEvent.EventArgs
   name: EventArgs
-  href: docs/api/FlowR.Core.Message.MessageEvent.html#FlowR_Core_Message_MessageEvent_EventArgs
+  href: docfx/api/FlowR.Core.Message.MessageEvent.html#FlowR_Core_Message_MessageEvent_EventArgs
   commentId: F:FlowR.Core.Message.MessageEvent.EventArgs
   fullName: FlowR.Core.Message.MessageEvent.EventArgs
   nameWithType: MessageEvent.EventArgs
 - uid: FlowR.Core.Message.MessageEvent.EventName
   name: EventName
-  href: docs/api/FlowR.Core.Message.MessageEvent.html#FlowR_Core_Message_MessageEvent_EventName
+  href: docfx/api/FlowR.Core.Message.MessageEvent.html#FlowR_Core_Message_MessageEvent_EventName
   commentId: P:FlowR.Core.Message.MessageEvent.EventName
   fullName: FlowR.Core.Message.MessageEvent.EventName
   nameWithType: MessageEvent.EventName
 - uid: FlowR.Core.Message.MessageEvent.EventName*
   name: EventName
-  href: docs/api/FlowR.Core.Message.MessageEvent.html#FlowR_Core_Message_MessageEvent_EventName_
+  href: docfx/api/FlowR.Core.Message.MessageEvent.html#FlowR_Core_Message_MessageEvent_EventName_
   commentId: Overload:FlowR.Core.Message.MessageEvent.EventName
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageEvent.EventName
   nameWithType: MessageEvent.EventName
 - uid: FlowR.Core.Message.MessageEvent.FromJson(System.String)
   name: FromJson(String)
-  href: docs/api/FlowR.Core.Message.MessageEvent.html#FlowR_Core_Message_MessageEvent_FromJson_System_String_
+  href: docfx/api/FlowR.Core.Message.MessageEvent.html#FlowR_Core_Message_MessageEvent_FromJson_System_String_
   commentId: M:FlowR.Core.Message.MessageEvent.FromJson(System.String)
   fullName: FlowR.Core.Message.MessageEvent.FromJson(System.String)
   nameWithType: MessageEvent.FromJson(String)
 - uid: FlowR.Core.Message.MessageEvent.FromJson*
   name: FromJson
-  href: docs/api/FlowR.Core.Message.MessageEvent.html#FlowR_Core_Message_MessageEvent_FromJson_
+  href: docfx/api/FlowR.Core.Message.MessageEvent.html#FlowR_Core_Message_MessageEvent_FromJson_
   commentId: Overload:FlowR.Core.Message.MessageEvent.FromJson
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageEvent.FromJson
   nameWithType: MessageEvent.FromJson
 - uid: FlowR.Core.Message.MessageEvent.GetRequestedAction
   name: GetRequestedAction()
-  href: docs/api/FlowR.Core.Message.MessageEvent.html#FlowR_Core_Message_MessageEvent_GetRequestedAction
+  href: docfx/api/FlowR.Core.Message.MessageEvent.html#FlowR_Core_Message_MessageEvent_GetRequestedAction
   commentId: M:FlowR.Core.Message.MessageEvent.GetRequestedAction
   fullName: FlowR.Core.Message.MessageEvent.GetRequestedAction()
   nameWithType: MessageEvent.GetRequestedAction()
 - uid: FlowR.Core.Message.MessageEvent.GetRequestedAction*
   name: GetRequestedAction
-  href: docs/api/FlowR.Core.Message.MessageEvent.html#FlowR_Core_Message_MessageEvent_GetRequestedAction_
+  href: docfx/api/FlowR.Core.Message.MessageEvent.html#FlowR_Core_Message_MessageEvent_GetRequestedAction_
   commentId: Overload:FlowR.Core.Message.MessageEvent.GetRequestedAction
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageEvent.GetRequestedAction
   nameWithType: MessageEvent.GetRequestedAction
 - uid: FlowR.Core.Message.MessageEventArgs
   name: MessageEventArgs
-  href: docs/api/FlowR.Core.Message.MessageEventArgs.html
+  href: docfx/api/FlowR.Core.Message.MessageEventArgs.html
   commentId: T:FlowR.Core.Message.MessageEventArgs
   fullName: FlowR.Core.Message.MessageEventArgs
   nameWithType: MessageEventArgs
 - uid: FlowR.Core.Message.MessageEventArgs.Data
   name: Data
-  href: docs/api/FlowR.Core.Message.MessageEventArgs.html#FlowR_Core_Message_MessageEventArgs_Data
+  href: docfx/api/FlowR.Core.Message.MessageEventArgs.html#FlowR_Core_Message_MessageEventArgs_Data
   commentId: F:FlowR.Core.Message.MessageEventArgs.Data
   fullName: FlowR.Core.Message.MessageEventArgs.Data
   nameWithType: MessageEventArgs.Data
 - uid: FlowR.Core.Message.MessageGlobal
   name: MessageGlobal
-  href: docs/api/FlowR.Core.Message.MessageGlobal.html
+  href: docfx/api/FlowR.Core.Message.MessageGlobal.html
   commentId: T:FlowR.Core.Message.MessageGlobal
   fullName: FlowR.Core.Message.MessageGlobal
   nameWithType: MessageGlobal
 - uid: FlowR.Core.Message.MessageGlobal.#ctor(System.String,System.String[])
   name: MessageGlobal(String, String[])
-  href: docs/api/FlowR.Core.Message.MessageGlobal.html#FlowR_Core_Message_MessageGlobal__ctor_System_String_System_String___
+  href: docfx/api/FlowR.Core.Message.MessageGlobal.html#FlowR_Core_Message_MessageGlobal__ctor_System_String_System_String___
   commentId: M:FlowR.Core.Message.MessageGlobal.#ctor(System.String,System.String[])
   name.vb: MessageGlobal(String, String())
   fullName: FlowR.Core.Message.MessageGlobal.MessageGlobal(System.String, System.String[])
@@ -1548,64 +1548,64 @@ references:
   nameWithType.vb: MessageGlobal.MessageGlobal(String, String())
 - uid: FlowR.Core.Message.MessageGlobal.#ctor*
   name: MessageGlobal
-  href: docs/api/FlowR.Core.Message.MessageGlobal.html#FlowR_Core_Message_MessageGlobal__ctor_
+  href: docfx/api/FlowR.Core.Message.MessageGlobal.html#FlowR_Core_Message_MessageGlobal__ctor_
   commentId: Overload:FlowR.Core.Message.MessageGlobal.#ctor
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageGlobal.MessageGlobal
   nameWithType: MessageGlobal.MessageGlobal
 - uid: FlowR.Core.Message.MessageGlobal.Action
   name: Action
-  href: docs/api/FlowR.Core.Message.MessageGlobal.html#FlowR_Core_Message_MessageGlobal_Action
+  href: docfx/api/FlowR.Core.Message.MessageGlobal.html#FlowR_Core_Message_MessageGlobal_Action
   commentId: P:FlowR.Core.Message.MessageGlobal.Action
   fullName: FlowR.Core.Message.MessageGlobal.Action
   nameWithType: MessageGlobal.Action
 - uid: FlowR.Core.Message.MessageGlobal.Action*
   name: Action
-  href: docs/api/FlowR.Core.Message.MessageGlobal.html#FlowR_Core_Message_MessageGlobal_Action_
+  href: docfx/api/FlowR.Core.Message.MessageGlobal.html#FlowR_Core_Message_MessageGlobal_Action_
   commentId: Overload:FlowR.Core.Message.MessageGlobal.Action
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageGlobal.Action
   nameWithType: MessageGlobal.Action
 - uid: FlowR.Core.Message.MessageGlobal.GetRequestedAction
   name: GetRequestedAction()
-  href: docs/api/FlowR.Core.Message.MessageGlobal.html#FlowR_Core_Message_MessageGlobal_GetRequestedAction
+  href: docfx/api/FlowR.Core.Message.MessageGlobal.html#FlowR_Core_Message_MessageGlobal_GetRequestedAction
   commentId: M:FlowR.Core.Message.MessageGlobal.GetRequestedAction
   fullName: FlowR.Core.Message.MessageGlobal.GetRequestedAction()
   nameWithType: MessageGlobal.GetRequestedAction()
 - uid: FlowR.Core.Message.MessageGlobal.GetRequestedAction*
   name: GetRequestedAction
-  href: docs/api/FlowR.Core.Message.MessageGlobal.html#FlowR_Core_Message_MessageGlobal_GetRequestedAction_
+  href: docfx/api/FlowR.Core.Message.MessageGlobal.html#FlowR_Core_Message_MessageGlobal_GetRequestedAction_
   commentId: Overload:FlowR.Core.Message.MessageGlobal.GetRequestedAction
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageGlobal.GetRequestedAction
   nameWithType: MessageGlobal.GetRequestedAction
 - uid: FlowR.Core.Message.MessageGlobal.MessageActions
   name: MessageGlobal.MessageActions
-  href: docs/api/FlowR.Core.Message.MessageGlobal.MessageActions.html
+  href: docfx/api/FlowR.Core.Message.MessageGlobal.MessageActions.html
   commentId: T:FlowR.Core.Message.MessageGlobal.MessageActions
   fullName: FlowR.Core.Message.MessageGlobal.MessageActions
   nameWithType: MessageGlobal.MessageActions
 - uid: FlowR.Core.Message.MessageGlobal.MessageActions.CallGlobalMethod
   name: CallGlobalMethod
-  href: docs/api/FlowR.Core.Message.MessageGlobal.MessageActions.html#FlowR_Core_Message_MessageGlobal_MessageActions_CallGlobalMethod
+  href: docfx/api/FlowR.Core.Message.MessageGlobal.MessageActions.html#FlowR_Core_Message_MessageGlobal_MessageActions_CallGlobalMethod
   commentId: F:FlowR.Core.Message.MessageGlobal.MessageActions.CallGlobalMethod
   fullName: FlowR.Core.Message.MessageGlobal.MessageActions.CallGlobalMethod
   nameWithType: MessageGlobal.MessageActions.CallGlobalMethod
 - uid: FlowR.Core.Message.MessageGlobal.MessageActions.SetProperty
   name: SetProperty
-  href: docs/api/FlowR.Core.Message.MessageGlobal.MessageActions.html#FlowR_Core_Message_MessageGlobal_MessageActions_SetProperty
+  href: docfx/api/FlowR.Core.Message.MessageGlobal.MessageActions.html#FlowR_Core_Message_MessageGlobal_MessageActions_SetProperty
   commentId: F:FlowR.Core.Message.MessageGlobal.MessageActions.SetProperty
   fullName: FlowR.Core.Message.MessageGlobal.MessageActions.SetProperty
   nameWithType: MessageGlobal.MessageActions.SetProperty
 - uid: FlowR.Core.Message.MessageGlobalWithResponse
   name: MessageGlobalWithResponse
-  href: docs/api/FlowR.Core.Message.MessageGlobalWithResponse.html
+  href: docfx/api/FlowR.Core.Message.MessageGlobalWithResponse.html
   commentId: T:FlowR.Core.Message.MessageGlobalWithResponse
   fullName: FlowR.Core.Message.MessageGlobalWithResponse
   nameWithType: MessageGlobalWithResponse
 - uid: FlowR.Core.Message.MessageGlobalWithResponse.#ctor(System.String,System.String[])
   name: MessageGlobalWithResponse(String, String[])
-  href: docs/api/FlowR.Core.Message.MessageGlobalWithResponse.html#FlowR_Core_Message_MessageGlobalWithResponse__ctor_System_String_System_String___
+  href: docfx/api/FlowR.Core.Message.MessageGlobalWithResponse.html#FlowR_Core_Message_MessageGlobalWithResponse__ctor_System_String_System_String___
   commentId: M:FlowR.Core.Message.MessageGlobalWithResponse.#ctor(System.String,System.String[])
   name.vb: MessageGlobalWithResponse(String, String())
   fullName: FlowR.Core.Message.MessageGlobalWithResponse.MessageGlobalWithResponse(System.String, System.String[])
@@ -1614,245 +1614,245 @@ references:
   nameWithType.vb: MessageGlobalWithResponse.MessageGlobalWithResponse(String, String())
 - uid: FlowR.Core.Message.MessageGlobalWithResponse.#ctor*
   name: MessageGlobalWithResponse
-  href: docs/api/FlowR.Core.Message.MessageGlobalWithResponse.html#FlowR_Core_Message_MessageGlobalWithResponse__ctor_
+  href: docfx/api/FlowR.Core.Message.MessageGlobalWithResponse.html#FlowR_Core_Message_MessageGlobalWithResponse__ctor_
   commentId: Overload:FlowR.Core.Message.MessageGlobalWithResponse.#ctor
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageGlobalWithResponse.MessageGlobalWithResponse
   nameWithType: MessageGlobalWithResponse.MessageGlobalWithResponse
 - uid: FlowR.Core.Message.MessageGlobalWithResponse.Action
   name: Action
-  href: docs/api/FlowR.Core.Message.MessageGlobalWithResponse.html#FlowR_Core_Message_MessageGlobalWithResponse_Action
+  href: docfx/api/FlowR.Core.Message.MessageGlobalWithResponse.html#FlowR_Core_Message_MessageGlobalWithResponse_Action
   commentId: P:FlowR.Core.Message.MessageGlobalWithResponse.Action
   fullName: FlowR.Core.Message.MessageGlobalWithResponse.Action
   nameWithType: MessageGlobalWithResponse.Action
 - uid: FlowR.Core.Message.MessageGlobalWithResponse.Action*
   name: Action
-  href: docs/api/FlowR.Core.Message.MessageGlobalWithResponse.html#FlowR_Core_Message_MessageGlobalWithResponse_Action_
+  href: docfx/api/FlowR.Core.Message.MessageGlobalWithResponse.html#FlowR_Core_Message_MessageGlobalWithResponse_Action_
   commentId: Overload:FlowR.Core.Message.MessageGlobalWithResponse.Action
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageGlobalWithResponse.Action
   nameWithType: MessageGlobalWithResponse.Action
 - uid: FlowR.Core.Message.MessageGlobalWithResponse.GetRequestedAction
   name: GetRequestedAction()
-  href: docs/api/FlowR.Core.Message.MessageGlobalWithResponse.html#FlowR_Core_Message_MessageGlobalWithResponse_GetRequestedAction
+  href: docfx/api/FlowR.Core.Message.MessageGlobalWithResponse.html#FlowR_Core_Message_MessageGlobalWithResponse_GetRequestedAction
   commentId: M:FlowR.Core.Message.MessageGlobalWithResponse.GetRequestedAction
   fullName: FlowR.Core.Message.MessageGlobalWithResponse.GetRequestedAction()
   nameWithType: MessageGlobalWithResponse.GetRequestedAction()
 - uid: FlowR.Core.Message.MessageGlobalWithResponse.GetRequestedAction*
   name: GetRequestedAction
-  href: docs/api/FlowR.Core.Message.MessageGlobalWithResponse.html#FlowR_Core_Message_MessageGlobalWithResponse_GetRequestedAction_
+  href: docfx/api/FlowR.Core.Message.MessageGlobalWithResponse.html#FlowR_Core_Message_MessageGlobalWithResponse_GetRequestedAction_
   commentId: Overload:FlowR.Core.Message.MessageGlobalWithResponse.GetRequestedAction
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageGlobalWithResponse.GetRequestedAction
   nameWithType: MessageGlobalWithResponse.GetRequestedAction
 - uid: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions
   name: MessageGlobalWithResponse.MessageActions
-  href: docs/api/FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.html
+  href: docfx/api/FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.html
   commentId: T:FlowR.Core.Message.MessageGlobalWithResponse.MessageActions
   fullName: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions
   nameWithType: MessageGlobalWithResponse.MessageActions
 - uid: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.CallGlobalMethodGetResponse
   name: CallGlobalMethodGetResponse
-  href: docs/api/FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.html#FlowR_Core_Message_MessageGlobalWithResponse_MessageActions_CallGlobalMethodGetResponse
+  href: docfx/api/FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.html#FlowR_Core_Message_MessageGlobalWithResponse_MessageActions_CallGlobalMethodGetResponse
   commentId: F:FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.CallGlobalMethodGetResponse
   fullName: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.CallGlobalMethodGetResponse
   nameWithType: MessageGlobalWithResponse.MessageActions.CallGlobalMethodGetResponse
 - uid: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.GetGlobalProperty
   name: GetGlobalProperty
-  href: docs/api/FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.html#FlowR_Core_Message_MessageGlobalWithResponse_MessageActions_GetGlobalProperty
+  href: docfx/api/FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.html#FlowR_Core_Message_MessageGlobalWithResponse_MessageActions_GetGlobalProperty
   commentId: F:FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.GetGlobalProperty
   fullName: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.GetGlobalProperty
   nameWithType: MessageGlobalWithResponse.MessageActions.GetGlobalProperty
 - uid: FlowR.Core.Message.MessageResponse
   name: MessageResponse
-  href: docs/api/FlowR.Core.Message.MessageResponse.html
+  href: docfx/api/FlowR.Core.Message.MessageResponse.html
   commentId: T:FlowR.Core.Message.MessageResponse
   fullName: FlowR.Core.Message.MessageResponse
   nameWithType: MessageResponse
 - uid: FlowR.Core.Message.MessageResponse.#ctor
   name: MessageResponse()
-  href: docs/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse__ctor
+  href: docfx/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse__ctor
   commentId: M:FlowR.Core.Message.MessageResponse.#ctor
   fullName: FlowR.Core.Message.MessageResponse.MessageResponse()
   nameWithType: MessageResponse.MessageResponse()
 - uid: FlowR.Core.Message.MessageResponse.#ctor*
   name: MessageResponse
-  href: docs/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse__ctor_
+  href: docfx/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse__ctor_
   commentId: Overload:FlowR.Core.Message.MessageResponse.#ctor
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageResponse.MessageResponse
   nameWithType: MessageResponse.MessageResponse
 - uid: FlowR.Core.Message.MessageResponse.FromJson(System.String)
   name: FromJson(String)
-  href: docs/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_FromJson_System_String_
+  href: docfx/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_FromJson_System_String_
   commentId: M:FlowR.Core.Message.MessageResponse.FromJson(System.String)
   fullName: FlowR.Core.Message.MessageResponse.FromJson(System.String)
   nameWithType: MessageResponse.FromJson(String)
 - uid: FlowR.Core.Message.MessageResponse.FromJson*
   name: FromJson
-  href: docs/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_FromJson_
+  href: docfx/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_FromJson_
   commentId: Overload:FlowR.Core.Message.MessageResponse.FromJson
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageResponse.FromJson
   nameWithType: MessageResponse.FromJson
 - uid: FlowR.Core.Message.MessageResponse.GetRequestedAction
   name: GetRequestedAction()
-  href: docs/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_GetRequestedAction
+  href: docfx/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_GetRequestedAction
   commentId: M:FlowR.Core.Message.MessageResponse.GetRequestedAction
   fullName: FlowR.Core.Message.MessageResponse.GetRequestedAction()
   nameWithType: MessageResponse.GetRequestedAction()
 - uid: FlowR.Core.Message.MessageResponse.GetRequestedAction*
   name: GetRequestedAction
-  href: docs/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_GetRequestedAction_
+  href: docfx/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_GetRequestedAction_
   commentId: Overload:FlowR.Core.Message.MessageResponse.GetRequestedAction
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageResponse.GetRequestedAction
   nameWithType: MessageResponse.GetRequestedAction
 - uid: FlowR.Core.Message.MessageResponse.GetResponse
   name: GetResponse()
-  href: docs/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_GetResponse
+  href: docfx/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_GetResponse
   commentId: M:FlowR.Core.Message.MessageResponse.GetResponse
   fullName: FlowR.Core.Message.MessageResponse.GetResponse()
   nameWithType: MessageResponse.GetResponse()
 - uid: FlowR.Core.Message.MessageResponse.GetResponse*
   name: GetResponse
-  href: docs/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_GetResponse_
+  href: docfx/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_GetResponse_
   commentId: Overload:FlowR.Core.Message.MessageResponse.GetResponse
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageResponse.GetResponse
   nameWithType: MessageResponse.GetResponse
 - uid: FlowR.Core.Message.MessageResponse.Response
   name: Response
-  href: docs/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_Response
+  href: docfx/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_Response
   commentId: F:FlowR.Core.Message.MessageResponse.Response
   fullName: FlowR.Core.Message.MessageResponse.Response
   nameWithType: MessageResponse.Response
 - uid: FlowR.Core.Message.MessageResponse.SetResponse(System.String)
   name: SetResponse(String)
-  href: docs/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_SetResponse_System_String_
+  href: docfx/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_SetResponse_System_String_
   commentId: M:FlowR.Core.Message.MessageResponse.SetResponse(System.String)
   fullName: FlowR.Core.Message.MessageResponse.SetResponse(System.String)
   nameWithType: MessageResponse.SetResponse(String)
 - uid: FlowR.Core.Message.MessageResponse.SetResponse*
   name: SetResponse
-  href: docs/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_SetResponse_
+  href: docfx/api/FlowR.Core.Message.MessageResponse.html#FlowR_Core_Message_MessageResponse_SetResponse_
   commentId: Overload:FlowR.Core.Message.MessageResponse.SetResponse
   isSpec: "True"
   fullName: FlowR.Core.Message.MessageResponse.SetResponse
   nameWithType: MessageResponse.SetResponse
 - uid: FlowR.Core.Node
   name: Node
-  href: docs/api/FlowR.Core.Node.html
+  href: docfx/api/FlowR.Core.Node.html
   commentId: T:FlowR.Core.Node
   fullName: FlowR.Core.Node
   nameWithType: Node
 - uid: FlowR.Core.Node.#ctor
   name: Node()
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node__ctor
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node__ctor
   commentId: M:FlowR.Core.Node.#ctor
   fullName: FlowR.Core.Node.Node()
   nameWithType: Node.Node()
 - uid: FlowR.Core.Node.#ctor*
   name: Node
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node__ctor_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node__ctor_
   commentId: Overload:FlowR.Core.Node.#ctor
   isSpec: "True"
   fullName: FlowR.Core.Node.Node
   nameWithType: Node.Node
 - uid: FlowR.Core.Node._Off(System.String,EventHandler)
   name: _Off(String, EventHandler)
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node__Off_System_String_EventHandler_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node__Off_System_String_EventHandler_
   commentId: M:FlowR.Core.Node._Off(System.String,EventHandler)
   fullName: FlowR.Core.Node._Off(System.String, EventHandler)
   nameWithType: Node._Off(String, EventHandler)
 - uid: FlowR.Core.Node._Off*
   name: _Off
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node__Off_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node__Off_
   commentId: Overload:FlowR.Core.Node._Off
   isSpec: "True"
   fullName: FlowR.Core.Node._Off
   nameWithType: Node._Off
 - uid: FlowR.Core.Node._On(System.String,EventHandler)
   name: _On(String, EventHandler)
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node__On_System_String_EventHandler_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node__On_System_String_EventHandler_
   commentId: M:FlowR.Core.Node._On(System.String,EventHandler)
   fullName: FlowR.Core.Node._On(System.String, EventHandler)
   nameWithType: Node._On(String, EventHandler)
 - uid: FlowR.Core.Node._On*
   name: _On
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node__On_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node__On_
   commentId: Overload:FlowR.Core.Node._On
   isSpec: "True"
   fullName: FlowR.Core.Node._On
   nameWithType: Node._On
 - uid: FlowR.Core.Node._RemoveAttribute(System.String)
   name: _RemoveAttribute(String)
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node__RemoveAttribute_System_String_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node__RemoveAttribute_System_String_
   commentId: M:FlowR.Core.Node._RemoveAttribute(System.String)
   fullName: FlowR.Core.Node._RemoveAttribute(System.String)
   nameWithType: Node._RemoveAttribute(String)
 - uid: FlowR.Core.Node._RemoveAttribute*
   name: _RemoveAttribute
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node__RemoveAttribute_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node__RemoveAttribute_
   commentId: Overload:FlowR.Core.Node._RemoveAttribute
   isSpec: "True"
   fullName: FlowR.Core.Node._RemoveAttribute
   nameWithType: Node._RemoveAttribute
 - uid: FlowR.Core.Node._SetAttribute(System.String,System.String)
   name: _SetAttribute(String, String)
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node__SetAttribute_System_String_System_String_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node__SetAttribute_System_String_System_String_
   commentId: M:FlowR.Core.Node._SetAttribute(System.String,System.String)
   fullName: FlowR.Core.Node._SetAttribute(System.String, System.String)
   nameWithType: Node._SetAttribute(String, String)
 - uid: FlowR.Core.Node._SetAttribute*
   name: _SetAttribute
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node__SetAttribute_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node__SetAttribute_
   commentId: Overload:FlowR.Core.Node._SetAttribute
   isSpec: "True"
   fullName: FlowR.Core.Node._SetAttribute
   nameWithType: Node._SetAttribute
 - uid: FlowR.Core.Node._SetProperty(System.String,System.String)
   name: _SetProperty(String, String)
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node__SetProperty_System_String_System_String_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node__SetProperty_System_String_System_String_
   commentId: M:FlowR.Core.Node._SetProperty(System.String,System.String)
   fullName: FlowR.Core.Node._SetProperty(System.String, System.String)
   nameWithType: Node._SetProperty(String, String)
 - uid: FlowR.Core.Node._SetProperty*
   name: _SetProperty
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node__SetProperty_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node__SetProperty_
   commentId: Overload:FlowR.Core.Node._SetProperty
   isSpec: "True"
   fullName: FlowR.Core.Node._SetProperty
   nameWithType: Node._SetProperty
 - uid: FlowR.Core.Node._SetText(System.String)
   name: _SetText(String)
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node__SetText_System_String_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node__SetText_System_String_
   commentId: M:FlowR.Core.Node._SetText(System.String)
   fullName: FlowR.Core.Node._SetText(System.String)
   nameWithType: Node._SetText(String)
 - uid: FlowR.Core.Node._SetText*
   name: _SetText
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node__SetText_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node__SetText_
   commentId: Overload:FlowR.Core.Node._SetText
   isSpec: "True"
   fullName: FlowR.Core.Node._SetText
   nameWithType: Node._SetText
 - uid: FlowR.Core.Node.Add(FlowR.Core.Node)
   name: Add(Node)
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Add_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Add_FlowR_Core_Node_
   commentId: M:FlowR.Core.Node.Add(FlowR.Core.Node)
   fullName: FlowR.Core.Node.Add(FlowR.Core.Node)
   nameWithType: Node.Add(Node)
 - uid: FlowR.Core.Node.Add*
   name: Add
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Add_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Add_
   commentId: Overload:FlowR.Core.Node.Add
   isSpec: "True"
   fullName: FlowR.Core.Node.Add
   nameWithType: Node.Add
 - uid: FlowR.Core.Node.Add``1(KeyValuePair{System.String,System.String}[])
   name: Add<TNode>(KeyValuePair<String, String>[])
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Add__1_KeyValuePair_System_String_System_String____
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Add__1_KeyValuePair_System_String_System_String____
   commentId: M:FlowR.Core.Node.Add``1(KeyValuePair{System.String,System.String}[])
   name.vb: Add(Of TNode)(KeyValuePair(Of String, String)())
   fullName: FlowR.Core.Node.Add<TNode>(KeyValuePair<System.String, System.String>[])
@@ -1861,7 +1861,7 @@ references:
   nameWithType.vb: Node.Add(Of TNode)(KeyValuePair(Of String, String)())
 - uid: FlowR.Core.Node.Add``1(System.String,KeyValuePair{System.String,System.String}[])
   name: Add<TNode>(String, KeyValuePair<String, String>[])
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Add__1_System_String_KeyValuePair_System_String_System_String____
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Add__1_System_String_KeyValuePair_System_String_System_String____
   commentId: M:FlowR.Core.Node.Add``1(System.String,KeyValuePair{System.String,System.String}[])
   name.vb: Add(Of TNode)(String, KeyValuePair(Of String, String)())
   fullName: FlowR.Core.Node.Add<TNode>(System.String, KeyValuePair<System.String, System.String>[])
@@ -1870,33 +1870,33 @@ references:
   nameWithType.vb: Node.Add(Of TNode)(String, KeyValuePair(Of String, String)())
 - uid: FlowR.Core.Node.AddClientJavascriptMethod(System.String,System.String)
   name: AddClientJavascriptMethod(String, String)
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_AddClientJavascriptMethod_System_String_System_String_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_AddClientJavascriptMethod_System_String_System_String_
   commentId: M:FlowR.Core.Node.AddClientJavascriptMethod(System.String,System.String)
   fullName: FlowR.Core.Node.AddClientJavascriptMethod(System.String, System.String)
   nameWithType: Node.AddClientJavascriptMethod(String, String)
 - uid: FlowR.Core.Node.AddClientJavascriptMethod*
   name: AddClientJavascriptMethod
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_AddClientJavascriptMethod_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_AddClientJavascriptMethod_
   commentId: Overload:FlowR.Core.Node.AddClientJavascriptMethod
   isSpec: "True"
   fullName: FlowR.Core.Node.AddClientJavascriptMethod
   nameWithType: Node.AddClientJavascriptMethod
 - uid: FlowR.Core.Node.Application
   name: Application
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Application
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Application
   commentId: P:FlowR.Core.Node.Application
   fullName: FlowR.Core.Node.Application
   nameWithType: Node.Application
 - uid: FlowR.Core.Node.Application*
   name: Application
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Application_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Application_
   commentId: Overload:FlowR.Core.Node.Application
   isSpec: "True"
   fullName: FlowR.Core.Node.Application
   nameWithType: Node.Application
 - uid: FlowR.Core.Node.CallClientMethod(System.String,System.String[])
   name: CallClientMethod(String, String[])
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_CallClientMethod_System_String_System_String___
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_CallClientMethod_System_String_System_String___
   commentId: M:FlowR.Core.Node.CallClientMethod(System.String,System.String[])
   name.vb: CallClientMethod(String, String())
   fullName: FlowR.Core.Node.CallClientMethod(System.String, System.String[])
@@ -1905,14 +1905,14 @@ references:
   nameWithType.vb: Node.CallClientMethod(String, String())
 - uid: FlowR.Core.Node.CallClientMethod*
   name: CallClientMethod
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_CallClientMethod_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_CallClientMethod_
   commentId: Overload:FlowR.Core.Node.CallClientMethod
   isSpec: "True"
   fullName: FlowR.Core.Node.CallClientMethod
   nameWithType: Node.CallClientMethod
 - uid: FlowR.Core.Node.CallClientMethodWaitResponse(System.String,System.String[])
   name: CallClientMethodWaitResponse(String, String[])
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_CallClientMethodWaitResponse_System_String_System_String___
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_CallClientMethodWaitResponse_System_String_System_String___
   commentId: M:FlowR.Core.Node.CallClientMethodWaitResponse(System.String,System.String[])
   name.vb: CallClientMethodWaitResponse(String, String())
   fullName: FlowR.Core.Node.CallClientMethodWaitResponse(System.String, System.String[])
@@ -1921,209 +1921,209 @@ references:
   nameWithType.vb: Node.CallClientMethodWaitResponse(String, String())
 - uid: FlowR.Core.Node.CallClientMethodWaitResponse*
   name: CallClientMethodWaitResponse
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_CallClientMethodWaitResponse_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_CallClientMethodWaitResponse_
   commentId: Overload:FlowR.Core.Node.CallClientMethodWaitResponse
   isSpec: "True"
   fullName: FlowR.Core.Node.CallClientMethodWaitResponse
   nameWithType: Node.CallClientMethodWaitResponse
 - uid: FlowR.Core.Node.GetAttributeDictionary
   name: GetAttributeDictionary()
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_GetAttributeDictionary
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_GetAttributeDictionary
   commentId: M:FlowR.Core.Node.GetAttributeDictionary
   fullName: FlowR.Core.Node.GetAttributeDictionary()
   nameWithType: Node.GetAttributeDictionary()
 - uid: FlowR.Core.Node.GetAttributeDictionary*
   name: GetAttributeDictionary
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_GetAttributeDictionary_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_GetAttributeDictionary_
   commentId: Overload:FlowR.Core.Node.GetAttributeDictionary
   isSpec: "True"
   fullName: FlowR.Core.Node.GetAttributeDictionary
   nameWithType: Node.GetAttributeDictionary
 - uid: FlowR.Core.Node.GetChildrenCount
   name: GetChildrenCount()
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_GetChildrenCount
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_GetChildrenCount
   commentId: M:FlowR.Core.Node.GetChildrenCount
   fullName: FlowR.Core.Node.GetChildrenCount()
   nameWithType: Node.GetChildrenCount()
 - uid: FlowR.Core.Node.GetChildrenCount*
   name: GetChildrenCount
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_GetChildrenCount_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_GetChildrenCount_
   commentId: Overload:FlowR.Core.Node.GetChildrenCount
   isSpec: "True"
   fullName: FlowR.Core.Node.GetChildrenCount
   nameWithType: Node.GetChildrenCount
 - uid: FlowR.Core.Node.GetFirstChild
   name: GetFirstChild()
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_GetFirstChild
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_GetFirstChild
   commentId: M:FlowR.Core.Node.GetFirstChild
   fullName: FlowR.Core.Node.GetFirstChild()
   nameWithType: Node.GetFirstChild()
 - uid: FlowR.Core.Node.GetFirstChild*
   name: GetFirstChild
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_GetFirstChild_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_GetFirstChild_
   commentId: Overload:FlowR.Core.Node.GetFirstChild
   isSpec: "True"
   fullName: FlowR.Core.Node.GetFirstChild
   nameWithType: Node.GetFirstChild
 - uid: FlowR.Core.Node.GetLastChild
   name: GetLastChild()
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_GetLastChild
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_GetLastChild
   commentId: M:FlowR.Core.Node.GetLastChild
   fullName: FlowR.Core.Node.GetLastChild()
   nameWithType: Node.GetLastChild()
 - uid: FlowR.Core.Node.GetLastChild*
   name: GetLastChild
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_GetLastChild_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_GetLastChild_
   commentId: Overload:FlowR.Core.Node.GetLastChild
   isSpec: "True"
   fullName: FlowR.Core.Node.GetLastChild
   nameWithType: Node.GetLastChild
 - uid: FlowR.Core.Node.GetProperty(System.String)
   name: GetProperty(String)
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_GetProperty_System_String_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_GetProperty_System_String_
   commentId: M:FlowR.Core.Node.GetProperty(System.String)
   fullName: FlowR.Core.Node.GetProperty(System.String)
   nameWithType: Node.GetProperty(String)
 - uid: FlowR.Core.Node.GetProperty*
   name: GetProperty
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_GetProperty_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_GetProperty_
   commentId: Overload:FlowR.Core.Node.GetProperty
   isSpec: "True"
   fullName: FlowR.Core.Node.GetProperty
   nameWithType: Node.GetProperty
 - uid: FlowR.Core.Node.HasAttribute(System.String)
   name: HasAttribute(String)
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_HasAttribute_System_String_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_HasAttribute_System_String_
   commentId: M:FlowR.Core.Node.HasAttribute(System.String)
   fullName: FlowR.Core.Node.HasAttribute(System.String)
   nameWithType: Node.HasAttribute(String)
 - uid: FlowR.Core.Node.HasAttribute*
   name: HasAttribute
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_HasAttribute_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_HasAttribute_
   commentId: Overload:FlowR.Core.Node.HasAttribute
   isSpec: "True"
   fullName: FlowR.Core.Node.HasAttribute
   nameWithType: Node.HasAttribute
 - uid: FlowR.Core.Node.Init
   name: Init()
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Init
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Init
   commentId: M:FlowR.Core.Node.Init
   fullName: FlowR.Core.Node.Init()
   nameWithType: Node.Init()
 - uid: FlowR.Core.Node.Init*
   name: Init
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Init_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Init_
   commentId: Overload:FlowR.Core.Node.Init
   isSpec: "True"
   fullName: FlowR.Core.Node.Init
   nameWithType: Node.Init
 - uid: FlowR.Core.Node.IsInitialized
   name: IsInitialized()
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_IsInitialized
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_IsInitialized
   commentId: M:FlowR.Core.Node.IsInitialized
   fullName: FlowR.Core.Node.IsInitialized()
   nameWithType: Node.IsInitialized()
 - uid: FlowR.Core.Node.IsInitialized*
   name: IsInitialized
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_IsInitialized_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_IsInitialized_
   commentId: Overload:FlowR.Core.Node.IsInitialized
   isSpec: "True"
   fullName: FlowR.Core.Node.IsInitialized
   nameWithType: Node.IsInitialized
 - uid: FlowR.Core.Node.OnClientEventTriggered(System.String,FlowR.Core.Message.MessageEventArgs)
   name: OnClientEventTriggered(String, MessageEventArgs)
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_OnClientEventTriggered_System_String_FlowR_Core_Message_MessageEventArgs_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_OnClientEventTriggered_System_String_FlowR_Core_Message_MessageEventArgs_
   commentId: M:FlowR.Core.Node.OnClientEventTriggered(System.String,FlowR.Core.Message.MessageEventArgs)
   fullName: FlowR.Core.Node.OnClientEventTriggered(System.String, FlowR.Core.Message.MessageEventArgs)
   nameWithType: Node.OnClientEventTriggered(String, MessageEventArgs)
 - uid: FlowR.Core.Node.OnClientEventTriggered*
   name: OnClientEventTriggered
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_OnClientEventTriggered_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_OnClientEventTriggered_
   commentId: Overload:FlowR.Core.Node.OnClientEventTriggered
   isSpec: "True"
   fullName: FlowR.Core.Node.OnClientEventTriggered
   nameWithType: Node.OnClientEventTriggered
 - uid: FlowR.Core.Node.Owner
   name: Owner
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Owner
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Owner
   commentId: P:FlowR.Core.Node.Owner
   fullName: FlowR.Core.Node.Owner
   nameWithType: Node.Owner
 - uid: FlowR.Core.Node.Owner*
   name: Owner
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Owner_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Owner_
   commentId: Overload:FlowR.Core.Node.Owner
   isSpec: "True"
   fullName: FlowR.Core.Node.Owner
   nameWithType: Node.Owner
 - uid: FlowR.Core.Node.Remove(FlowR.Core.Node)
   name: Remove(Node)
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Remove_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Remove_FlowR_Core_Node_
   commentId: M:FlowR.Core.Node.Remove(FlowR.Core.Node)
   fullName: FlowR.Core.Node.Remove(FlowR.Core.Node)
   nameWithType: Node.Remove(Node)
 - uid: FlowR.Core.Node.Remove*
   name: Remove
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Remove_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Remove_
   commentId: Overload:FlowR.Core.Node.Remove
   isSpec: "True"
   fullName: FlowR.Core.Node.Remove
   nameWithType: Node.Remove
 - uid: FlowR.Core.Node.TagName
   name: TagName
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_TagName
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_TagName
   commentId: P:FlowR.Core.Node.TagName
   fullName: FlowR.Core.Node.TagName
   nameWithType: Node.TagName
 - uid: FlowR.Core.Node.TagName*
   name: TagName
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_TagName_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_TagName_
   commentId: Overload:FlowR.Core.Node.TagName
   isSpec: "True"
   fullName: FlowR.Core.Node.TagName
   nameWithType: Node.TagName
 - uid: FlowR.Core.Node.Text
   name: Text
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Text
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Text
   commentId: P:FlowR.Core.Node.Text
   fullName: FlowR.Core.Node.Text
   nameWithType: Node.Text
 - uid: FlowR.Core.Node.Text*
   name: Text
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Text_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Text_
   commentId: Overload:FlowR.Core.Node.Text
   isSpec: "True"
   fullName: FlowR.Core.Node.Text
   nameWithType: Node.Text
 - uid: FlowR.Core.Node.Uuid
   name: Uuid
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Uuid
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Uuid
   commentId: P:FlowR.Core.Node.Uuid
   fullName: FlowR.Core.Node.Uuid
   nameWithType: Node.Uuid
 - uid: FlowR.Core.Node.Uuid*
   name: Uuid
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Uuid_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Uuid_
   commentId: Overload:FlowR.Core.Node.Uuid
   isSpec: "True"
   fullName: FlowR.Core.Node.Uuid
   nameWithType: Node.Uuid
 - uid: FlowR.Core.Node.Value
   name: Value
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Value
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Value
   commentId: P:FlowR.Core.Node.Value
   fullName: FlowR.Core.Node.Value
   nameWithType: Node.Value
 - uid: FlowR.Core.Node.Value*
   name: Value
-  href: docs/api/FlowR.Core.Node.html#FlowR_Core_Node_Value_
+  href: docfx/api/FlowR.Core.Node.html#FlowR_Core_Node_Value_
   commentId: Overload:FlowR.Core.Node.Value
   isSpec: "True"
   fullName: FlowR.Core.Node.Value
   nameWithType: Node.Value
 - uid: FlowR.Core.NodeCollection`1
   name: NodeCollection<T>
-  href: docs/api/FlowR.Core.NodeCollection-1.html
+  href: docfx/api/FlowR.Core.NodeCollection-1.html
   commentId: T:FlowR.Core.NodeCollection`1
   name.vb: NodeCollection(Of T)
   fullName: FlowR.Core.NodeCollection<T>
@@ -2132,7 +2132,7 @@ references:
   nameWithType.vb: NodeCollection(Of T)
 - uid: FlowR.Core.NodeCollection`1.#ctor(FlowR.Core.Node)
   name: NodeCollection(Node)
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1__ctor_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1__ctor_FlowR_Core_Node_
   commentId: M:FlowR.Core.NodeCollection`1.#ctor(FlowR.Core.Node)
   fullName: FlowR.Core.NodeCollection<T>.NodeCollection(FlowR.Core.Node)
   fullName.vb: FlowR.Core.NodeCollection(Of T).NodeCollection(FlowR.Core.Node)
@@ -2140,7 +2140,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).NodeCollection(Node)
 - uid: FlowR.Core.NodeCollection`1.#ctor*
   name: NodeCollection
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1__ctor_
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1__ctor_
   commentId: Overload:FlowR.Core.NodeCollection`1.#ctor
   isSpec: "True"
   fullName: FlowR.Core.NodeCollection<T>.NodeCollection
@@ -2149,7 +2149,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).NodeCollection
 - uid: FlowR.Core.NodeCollection`1.AfterAdded
   name: AfterAdded
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_AfterAdded
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_AfterAdded
   commentId: F:FlowR.Core.NodeCollection`1.AfterAdded
   fullName: FlowR.Core.NodeCollection<T>.AfterAdded
   fullName.vb: FlowR.Core.NodeCollection(Of T).AfterAdded
@@ -2157,7 +2157,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).AfterAdded
 - uid: FlowR.Core.NodeCollection`1.AfterChanged
   name: AfterChanged
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_AfterChanged
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_AfterChanged
   commentId: F:FlowR.Core.NodeCollection`1.AfterChanged
   fullName: FlowR.Core.NodeCollection<T>.AfterChanged
   fullName.vb: FlowR.Core.NodeCollection(Of T).AfterChanged
@@ -2165,7 +2165,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).AfterChanged
 - uid: FlowR.Core.NodeCollection`1.AfterRemoved
   name: AfterRemoved
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_AfterRemoved
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_AfterRemoved
   commentId: F:FlowR.Core.NodeCollection`1.AfterRemoved
   fullName: FlowR.Core.NodeCollection<T>.AfterRemoved
   fullName.vb: FlowR.Core.NodeCollection(Of T).AfterRemoved
@@ -2173,7 +2173,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).AfterRemoved
 - uid: FlowR.Core.NodeCollection`1.BeforeAdded
   name: BeforeAdded
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_BeforeAdded
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_BeforeAdded
   commentId: F:FlowR.Core.NodeCollection`1.BeforeAdded
   fullName: FlowR.Core.NodeCollection<T>.BeforeAdded
   fullName.vb: FlowR.Core.NodeCollection(Of T).BeforeAdded
@@ -2181,7 +2181,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).BeforeAdded
 - uid: FlowR.Core.NodeCollection`1.BeforeChanged
   name: BeforeChanged
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_BeforeChanged
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_BeforeChanged
   commentId: F:FlowR.Core.NodeCollection`1.BeforeChanged
   fullName: FlowR.Core.NodeCollection<T>.BeforeChanged
   fullName.vb: FlowR.Core.NodeCollection(Of T).BeforeChanged
@@ -2189,7 +2189,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).BeforeChanged
 - uid: FlowR.Core.NodeCollection`1.BeforeRemoved
   name: BeforeRemoved
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_BeforeRemoved
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_BeforeRemoved
   commentId: F:FlowR.Core.NodeCollection`1.BeforeRemoved
   fullName: FlowR.Core.NodeCollection<T>.BeforeRemoved
   fullName.vb: FlowR.Core.NodeCollection(Of T).BeforeRemoved
@@ -2197,7 +2197,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).BeforeRemoved
 - uid: FlowR.Core.NodeCollection`1.Count
   name: Count()
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Count
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Count
   commentId: M:FlowR.Core.NodeCollection`1.Count
   fullName: FlowR.Core.NodeCollection<T>.Count()
   fullName.vb: FlowR.Core.NodeCollection(Of T).Count()
@@ -2205,7 +2205,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).Count()
 - uid: FlowR.Core.NodeCollection`1.Count*
   name: Count
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Count_
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Count_
   commentId: Overload:FlowR.Core.NodeCollection`1.Count
   isSpec: "True"
   fullName: FlowR.Core.NodeCollection<T>.Count
@@ -2214,7 +2214,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).Count
 - uid: FlowR.Core.NodeCollection`1.Exists(System.String)
   name: Exists(String)
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Exists_System_String_
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Exists_System_String_
   commentId: M:FlowR.Core.NodeCollection`1.Exists(System.String)
   fullName: FlowR.Core.NodeCollection<T>.Exists(System.String)
   fullName.vb: FlowR.Core.NodeCollection(Of T).Exists(System.String)
@@ -2222,7 +2222,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).Exists(String)
 - uid: FlowR.Core.NodeCollection`1.Exists*
   name: Exists
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Exists_
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Exists_
   commentId: Overload:FlowR.Core.NodeCollection`1.Exists
   isSpec: "True"
   fullName: FlowR.Core.NodeCollection<T>.Exists
@@ -2231,7 +2231,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).Exists
 - uid: FlowR.Core.NodeCollection`1.Get(System.String)
   name: Get(String)
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Get_System_String_
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Get_System_String_
   commentId: M:FlowR.Core.NodeCollection`1.Get(System.String)
   fullName: FlowR.Core.NodeCollection<T>.Get(System.String)
   fullName.vb: FlowR.Core.NodeCollection(Of T).Get(System.String)
@@ -2239,7 +2239,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).Get(String)
 - uid: FlowR.Core.NodeCollection`1.Get*
   name: Get
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Get_
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Get_
   commentId: Overload:FlowR.Core.NodeCollection`1.Get
   isSpec: "True"
   fullName: FlowR.Core.NodeCollection<T>.Get
@@ -2248,7 +2248,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).Get
 - uid: FlowR.Core.NodeCollection`1.GetFirst
   name: GetFirst()
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_GetFirst
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_GetFirst
   commentId: M:FlowR.Core.NodeCollection`1.GetFirst
   fullName: FlowR.Core.NodeCollection<T>.GetFirst()
   fullName.vb: FlowR.Core.NodeCollection(Of T).GetFirst()
@@ -2256,7 +2256,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).GetFirst()
 - uid: FlowR.Core.NodeCollection`1.GetFirst*
   name: GetFirst
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_GetFirst_
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_GetFirst_
   commentId: Overload:FlowR.Core.NodeCollection`1.GetFirst
   isSpec: "True"
   fullName: FlowR.Core.NodeCollection<T>.GetFirst
@@ -2265,7 +2265,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).GetFirst
 - uid: FlowR.Core.NodeCollection`1.GetLast
   name: GetLast()
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_GetLast
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_GetLast
   commentId: M:FlowR.Core.NodeCollection`1.GetLast
   fullName: FlowR.Core.NodeCollection<T>.GetLast()
   fullName.vb: FlowR.Core.NodeCollection(Of T).GetLast()
@@ -2273,7 +2273,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).GetLast()
 - uid: FlowR.Core.NodeCollection`1.GetLast*
   name: GetLast
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_GetLast_
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_GetLast_
   commentId: Overload:FlowR.Core.NodeCollection`1.GetLast
   isSpec: "True"
   fullName: FlowR.Core.NodeCollection<T>.GetLast
@@ -2282,7 +2282,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).GetLast
 - uid: FlowR.Core.NodeCollection`1.Owner
   name: Owner
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Owner
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Owner
   commentId: P:FlowR.Core.NodeCollection`1.Owner
   fullName: FlowR.Core.NodeCollection<T>.Owner
   fullName.vb: FlowR.Core.NodeCollection(Of T).Owner
@@ -2290,7 +2290,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).Owner
 - uid: FlowR.Core.NodeCollection`1.Owner*
   name: Owner
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Owner_
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Owner_
   commentId: Overload:FlowR.Core.NodeCollection`1.Owner
   isSpec: "True"
   fullName: FlowR.Core.NodeCollection<T>.Owner
@@ -2299,7 +2299,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).Owner
 - uid: FlowR.Core.NodeCollection`1.Set(System.String,`0)
   name: Set(String, T)
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Set_System_String__0_
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Set_System_String__0_
   commentId: M:FlowR.Core.NodeCollection`1.Set(System.String,`0)
   fullName: FlowR.Core.NodeCollection<T>.Set(System.String, T)
   fullName.vb: FlowR.Core.NodeCollection(Of T).Set(System.String, T)
@@ -2307,7 +2307,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).Set(String, T)
 - uid: FlowR.Core.NodeCollection`1.Set*
   name: Set
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Set_
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Set_
   commentId: Overload:FlowR.Core.NodeCollection`1.Set
   isSpec: "True"
   fullName: FlowR.Core.NodeCollection<T>.Set
@@ -2316,7 +2316,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).Set
 - uid: FlowR.Core.NodeCollection`1.ToDictionary
   name: ToDictionary()
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_ToDictionary
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_ToDictionary
   commentId: M:FlowR.Core.NodeCollection`1.ToDictionary
   fullName: FlowR.Core.NodeCollection<T>.ToDictionary()
   fullName.vb: FlowR.Core.NodeCollection(Of T).ToDictionary()
@@ -2324,7 +2324,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).ToDictionary()
 - uid: FlowR.Core.NodeCollection`1.ToDictionary*
   name: ToDictionary
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_ToDictionary_
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_ToDictionary_
   commentId: Overload:FlowR.Core.NodeCollection`1.ToDictionary
   isSpec: "True"
   fullName: FlowR.Core.NodeCollection<T>.ToDictionary
@@ -2333,7 +2333,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).ToDictionary
 - uid: FlowR.Core.NodeCollection`1.Unset(System.String)
   name: Unset(String)
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Unset_System_String_
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Unset_System_String_
   commentId: M:FlowR.Core.NodeCollection`1.Unset(System.String)
   fullName: FlowR.Core.NodeCollection<T>.Unset(System.String)
   fullName.vb: FlowR.Core.NodeCollection(Of T).Unset(System.String)
@@ -2341,7 +2341,7 @@ references:
   nameWithType.vb: NodeCollection(Of T).Unset(String)
 - uid: FlowR.Core.NodeCollection`1.Unset*
   name: Unset
-  href: docs/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Unset_
+  href: docfx/api/FlowR.Core.NodeCollection-1.html#FlowR_Core_NodeCollection_1_Unset_
   commentId: Overload:FlowR.Core.NodeCollection`1.Unset
   isSpec: "True"
   fullName: FlowR.Core.NodeCollection<T>.Unset
@@ -2350,288 +2350,288 @@ references:
   nameWithType.vb: NodeCollection(Of T).Unset
 - uid: FlowR.Core.NodeCollectionAttribute
   name: NodeCollectionAttribute
-  href: docs/api/FlowR.Core.NodeCollectionAttribute.html
+  href: docfx/api/FlowR.Core.NodeCollectionAttribute.html
   commentId: T:FlowR.Core.NodeCollectionAttribute
   fullName: FlowR.Core.NodeCollectionAttribute
   nameWithType: NodeCollectionAttribute
 - uid: FlowR.Core.NodeCollectionAttribute.#ctor(FlowR.Core.Node)
   name: NodeCollectionAttribute(Node)
-  href: docs/api/FlowR.Core.NodeCollectionAttribute.html#FlowR_Core_NodeCollectionAttribute__ctor_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.NodeCollectionAttribute.html#FlowR_Core_NodeCollectionAttribute__ctor_FlowR_Core_Node_
   commentId: M:FlowR.Core.NodeCollectionAttribute.#ctor(FlowR.Core.Node)
   fullName: FlowR.Core.NodeCollectionAttribute.NodeCollectionAttribute(FlowR.Core.Node)
   nameWithType: NodeCollectionAttribute.NodeCollectionAttribute(Node)
 - uid: FlowR.Core.NodeCollectionAttribute.#ctor*
   name: NodeCollectionAttribute
-  href: docs/api/FlowR.Core.NodeCollectionAttribute.html#FlowR_Core_NodeCollectionAttribute__ctor_
+  href: docfx/api/FlowR.Core.NodeCollectionAttribute.html#FlowR_Core_NodeCollectionAttribute__ctor_
   commentId: Overload:FlowR.Core.NodeCollectionAttribute.#ctor
   isSpec: "True"
   fullName: FlowR.Core.NodeCollectionAttribute.NodeCollectionAttribute
   nameWithType: NodeCollectionAttribute.NodeCollectionAttribute
 - uid: FlowR.Core.NodeCollectionAttribute.HasAttribute(System.String)
   name: HasAttribute(String)
-  href: docs/api/FlowR.Core.NodeCollectionAttribute.html#FlowR_Core_NodeCollectionAttribute_HasAttribute_System_String_
+  href: docfx/api/FlowR.Core.NodeCollectionAttribute.html#FlowR_Core_NodeCollectionAttribute_HasAttribute_System_String_
   commentId: M:FlowR.Core.NodeCollectionAttribute.HasAttribute(System.String)
   fullName: FlowR.Core.NodeCollectionAttribute.HasAttribute(System.String)
   nameWithType: NodeCollectionAttribute.HasAttribute(String)
 - uid: FlowR.Core.NodeCollectionAttribute.HasAttribute*
   name: HasAttribute
-  href: docs/api/FlowR.Core.NodeCollectionAttribute.html#FlowR_Core_NodeCollectionAttribute_HasAttribute_
+  href: docfx/api/FlowR.Core.NodeCollectionAttribute.html#FlowR_Core_NodeCollectionAttribute_HasAttribute_
   commentId: Overload:FlowR.Core.NodeCollectionAttribute.HasAttribute
   isSpec: "True"
   fullName: FlowR.Core.NodeCollectionAttribute.HasAttribute
   nameWithType: NodeCollectionAttribute.HasAttribute
 - uid: FlowR.Core.NodeCollectionAttribute.RemoveAttribute(System.String)
   name: RemoveAttribute(String)
-  href: docs/api/FlowR.Core.NodeCollectionAttribute.html#FlowR_Core_NodeCollectionAttribute_RemoveAttribute_System_String_
+  href: docfx/api/FlowR.Core.NodeCollectionAttribute.html#FlowR_Core_NodeCollectionAttribute_RemoveAttribute_System_String_
   commentId: M:FlowR.Core.NodeCollectionAttribute.RemoveAttribute(System.String)
   fullName: FlowR.Core.NodeCollectionAttribute.RemoveAttribute(System.String)
   nameWithType: NodeCollectionAttribute.RemoveAttribute(String)
 - uid: FlowR.Core.NodeCollectionAttribute.RemoveAttribute*
   name: RemoveAttribute
-  href: docs/api/FlowR.Core.NodeCollectionAttribute.html#FlowR_Core_NodeCollectionAttribute_RemoveAttribute_
+  href: docfx/api/FlowR.Core.NodeCollectionAttribute.html#FlowR_Core_NodeCollectionAttribute_RemoveAttribute_
   commentId: Overload:FlowR.Core.NodeCollectionAttribute.RemoveAttribute
   isSpec: "True"
   fullName: FlowR.Core.NodeCollectionAttribute.RemoveAttribute
   nameWithType: NodeCollectionAttribute.RemoveAttribute
 - uid: FlowR.Core.NodeCollectionAttribute.SetAttribute(System.String,System.String)
   name: SetAttribute(String, String)
-  href: docs/api/FlowR.Core.NodeCollectionAttribute.html#FlowR_Core_NodeCollectionAttribute_SetAttribute_System_String_System_String_
+  href: docfx/api/FlowR.Core.NodeCollectionAttribute.html#FlowR_Core_NodeCollectionAttribute_SetAttribute_System_String_System_String_
   commentId: M:FlowR.Core.NodeCollectionAttribute.SetAttribute(System.String,System.String)
   fullName: FlowR.Core.NodeCollectionAttribute.SetAttribute(System.String, System.String)
   nameWithType: NodeCollectionAttribute.SetAttribute(String, String)
 - uid: FlowR.Core.NodeCollectionAttribute.SetAttribute*
   name: SetAttribute
-  href: docs/api/FlowR.Core.NodeCollectionAttribute.html#FlowR_Core_NodeCollectionAttribute_SetAttribute_
+  href: docfx/api/FlowR.Core.NodeCollectionAttribute.html#FlowR_Core_NodeCollectionAttribute_SetAttribute_
   commentId: Overload:FlowR.Core.NodeCollectionAttribute.SetAttribute
   isSpec: "True"
   fullName: FlowR.Core.NodeCollectionAttribute.SetAttribute
   nameWithType: NodeCollectionAttribute.SetAttribute
 - uid: FlowR.Core.NodeCollectionEvent
   name: NodeCollectionEvent
-  href: docs/api/FlowR.Core.NodeCollectionEvent.html
+  href: docfx/api/FlowR.Core.NodeCollectionEvent.html
   commentId: T:FlowR.Core.NodeCollectionEvent
   fullName: FlowR.Core.NodeCollectionEvent
   nameWithType: NodeCollectionEvent
 - uid: FlowR.Core.NodeCollectionEvent.#ctor(FlowR.Core.Node)
   name: NodeCollectionEvent(Node)
-  href: docs/api/FlowR.Core.NodeCollectionEvent.html#FlowR_Core_NodeCollectionEvent__ctor_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.NodeCollectionEvent.html#FlowR_Core_NodeCollectionEvent__ctor_FlowR_Core_Node_
   commentId: M:FlowR.Core.NodeCollectionEvent.#ctor(FlowR.Core.Node)
   fullName: FlowR.Core.NodeCollectionEvent.NodeCollectionEvent(FlowR.Core.Node)
   nameWithType: NodeCollectionEvent.NodeCollectionEvent(Node)
 - uid: FlowR.Core.NodeCollectionEvent.#ctor*
   name: NodeCollectionEvent
-  href: docs/api/FlowR.Core.NodeCollectionEvent.html#FlowR_Core_NodeCollectionEvent__ctor_
+  href: docfx/api/FlowR.Core.NodeCollectionEvent.html#FlowR_Core_NodeCollectionEvent__ctor_
   commentId: Overload:FlowR.Core.NodeCollectionEvent.#ctor
   isSpec: "True"
   fullName: FlowR.Core.NodeCollectionEvent.NodeCollectionEvent
   nameWithType: NodeCollectionEvent.NodeCollectionEvent
 - uid: FlowR.Core.NodeCollectionEvent.Off(System.String,EventHandler)
   name: Off(String, EventHandler)
-  href: docs/api/FlowR.Core.NodeCollectionEvent.html#FlowR_Core_NodeCollectionEvent_Off_System_String_EventHandler_
+  href: docfx/api/FlowR.Core.NodeCollectionEvent.html#FlowR_Core_NodeCollectionEvent_Off_System_String_EventHandler_
   commentId: M:FlowR.Core.NodeCollectionEvent.Off(System.String,EventHandler)
   fullName: FlowR.Core.NodeCollectionEvent.Off(System.String, EventHandler)
   nameWithType: NodeCollectionEvent.Off(String, EventHandler)
 - uid: FlowR.Core.NodeCollectionEvent.Off*
   name: Off
-  href: docs/api/FlowR.Core.NodeCollectionEvent.html#FlowR_Core_NodeCollectionEvent_Off_
+  href: docfx/api/FlowR.Core.NodeCollectionEvent.html#FlowR_Core_NodeCollectionEvent_Off_
   commentId: Overload:FlowR.Core.NodeCollectionEvent.Off
   isSpec: "True"
   fullName: FlowR.Core.NodeCollectionEvent.Off
   nameWithType: NodeCollectionEvent.Off
 - uid: FlowR.Core.NodeCollectionEvent.On(System.String,EventHandler)
   name: On(String, EventHandler)
-  href: docs/api/FlowR.Core.NodeCollectionEvent.html#FlowR_Core_NodeCollectionEvent_On_System_String_EventHandler_
+  href: docfx/api/FlowR.Core.NodeCollectionEvent.html#FlowR_Core_NodeCollectionEvent_On_System_String_EventHandler_
   commentId: M:FlowR.Core.NodeCollectionEvent.On(System.String,EventHandler)
   fullName: FlowR.Core.NodeCollectionEvent.On(System.String, EventHandler)
   nameWithType: NodeCollectionEvent.On(String, EventHandler)
 - uid: FlowR.Core.NodeCollectionEvent.On*
   name: On
-  href: docs/api/FlowR.Core.NodeCollectionEvent.html#FlowR_Core_NodeCollectionEvent_On_
+  href: docfx/api/FlowR.Core.NodeCollectionEvent.html#FlowR_Core_NodeCollectionEvent_On_
   commentId: Overload:FlowR.Core.NodeCollectionEvent.On
   isSpec: "True"
   fullName: FlowR.Core.NodeCollectionEvent.On
   nameWithType: NodeCollectionEvent.On
 - uid: FlowR.Core.NodeCollectionEvent.OnClientEventTriggered(System.String,EventArgs)
   name: OnClientEventTriggered(String, EventArgs)
-  href: docs/api/FlowR.Core.NodeCollectionEvent.html#FlowR_Core_NodeCollectionEvent_OnClientEventTriggered_System_String_EventArgs_
+  href: docfx/api/FlowR.Core.NodeCollectionEvent.html#FlowR_Core_NodeCollectionEvent_OnClientEventTriggered_System_String_EventArgs_
   commentId: M:FlowR.Core.NodeCollectionEvent.OnClientEventTriggered(System.String,EventArgs)
   fullName: FlowR.Core.NodeCollectionEvent.OnClientEventTriggered(System.String, EventArgs)
   nameWithType: NodeCollectionEvent.OnClientEventTriggered(String, EventArgs)
 - uid: FlowR.Core.NodeCollectionEvent.OnClientEventTriggered*
   name: OnClientEventTriggered
-  href: docs/api/FlowR.Core.NodeCollectionEvent.html#FlowR_Core_NodeCollectionEvent_OnClientEventTriggered_
+  href: docfx/api/FlowR.Core.NodeCollectionEvent.html#FlowR_Core_NodeCollectionEvent_OnClientEventTriggered_
   commentId: Overload:FlowR.Core.NodeCollectionEvent.OnClientEventTriggered
   isSpec: "True"
   fullName: FlowR.Core.NodeCollectionEvent.OnClientEventTriggered
   nameWithType: NodeCollectionEvent.OnClientEventTriggered
 - uid: FlowR.Core.NodeCollectionNode
   name: NodeCollectionNode
-  href: docs/api/FlowR.Core.NodeCollectionNode.html
+  href: docfx/api/FlowR.Core.NodeCollectionNode.html
   commentId: T:FlowR.Core.NodeCollectionNode
   fullName: FlowR.Core.NodeCollectionNode
   nameWithType: NodeCollectionNode
 - uid: FlowR.Core.NodeCollectionNode.#ctor(FlowR.Core.Node)
   name: NodeCollectionNode(Node)
-  href: docs/api/FlowR.Core.NodeCollectionNode.html#FlowR_Core_NodeCollectionNode__ctor_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.NodeCollectionNode.html#FlowR_Core_NodeCollectionNode__ctor_FlowR_Core_Node_
   commentId: M:FlowR.Core.NodeCollectionNode.#ctor(FlowR.Core.Node)
   fullName: FlowR.Core.NodeCollectionNode.NodeCollectionNode(FlowR.Core.Node)
   nameWithType: NodeCollectionNode.NodeCollectionNode(Node)
 - uid: FlowR.Core.NodeCollectionNode.#ctor*
   name: NodeCollectionNode
-  href: docs/api/FlowR.Core.NodeCollectionNode.html#FlowR_Core_NodeCollectionNode__ctor_
+  href: docfx/api/FlowR.Core.NodeCollectionNode.html#FlowR_Core_NodeCollectionNode__ctor_
   commentId: Overload:FlowR.Core.NodeCollectionNode.#ctor
   isSpec: "True"
   fullName: FlowR.Core.NodeCollectionNode.NodeCollectionNode
   nameWithType: NodeCollectionNode.NodeCollectionNode
 - uid: FlowR.Core.NodeCollectionNode.Add(FlowR.Core.Node)
   name: Add(Node)
-  href: docs/api/FlowR.Core.NodeCollectionNode.html#FlowR_Core_NodeCollectionNode_Add_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.NodeCollectionNode.html#FlowR_Core_NodeCollectionNode_Add_FlowR_Core_Node_
   commentId: M:FlowR.Core.NodeCollectionNode.Add(FlowR.Core.Node)
   fullName: FlowR.Core.NodeCollectionNode.Add(FlowR.Core.Node)
   nameWithType: NodeCollectionNode.Add(Node)
 - uid: FlowR.Core.NodeCollectionNode.Add*
   name: Add
-  href: docs/api/FlowR.Core.NodeCollectionNode.html#FlowR_Core_NodeCollectionNode_Add_
+  href: docfx/api/FlowR.Core.NodeCollectionNode.html#FlowR_Core_NodeCollectionNode_Add_
   commentId: Overload:FlowR.Core.NodeCollectionNode.Add
   isSpec: "True"
   fullName: FlowR.Core.NodeCollectionNode.Add
   nameWithType: NodeCollectionNode.Add
 - uid: FlowR.Core.NodeCollectionNode.Remove(FlowR.Core.Node)
   name: Remove(Node)
-  href: docs/api/FlowR.Core.NodeCollectionNode.html#FlowR_Core_NodeCollectionNode_Remove_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.NodeCollectionNode.html#FlowR_Core_NodeCollectionNode_Remove_FlowR_Core_Node_
   commentId: M:FlowR.Core.NodeCollectionNode.Remove(FlowR.Core.Node)
   fullName: FlowR.Core.NodeCollectionNode.Remove(FlowR.Core.Node)
   nameWithType: NodeCollectionNode.Remove(Node)
 - uid: FlowR.Core.NodeCollectionNode.Remove*
   name: Remove
-  href: docs/api/FlowR.Core.NodeCollectionNode.html#FlowR_Core_NodeCollectionNode_Remove_
+  href: docfx/api/FlowR.Core.NodeCollectionNode.html#FlowR_Core_NodeCollectionNode_Remove_
   commentId: Overload:FlowR.Core.NodeCollectionNode.Remove
   isSpec: "True"
   fullName: FlowR.Core.NodeCollectionNode.Remove
   nameWithType: NodeCollectionNode.Remove
 - uid: FlowR.Core.NodeCollectionProperty
   name: NodeCollectionProperty
-  href: docs/api/FlowR.Core.NodeCollectionProperty.html
+  href: docfx/api/FlowR.Core.NodeCollectionProperty.html
   commentId: T:FlowR.Core.NodeCollectionProperty
   fullName: FlowR.Core.NodeCollectionProperty
   nameWithType: NodeCollectionProperty
 - uid: FlowR.Core.NodeCollectionProperty.#ctor(FlowR.Core.Node)
   name: NodeCollectionProperty(Node)
-  href: docs/api/FlowR.Core.NodeCollectionProperty.html#FlowR_Core_NodeCollectionProperty__ctor_FlowR_Core_Node_
+  href: docfx/api/FlowR.Core.NodeCollectionProperty.html#FlowR_Core_NodeCollectionProperty__ctor_FlowR_Core_Node_
   commentId: M:FlowR.Core.NodeCollectionProperty.#ctor(FlowR.Core.Node)
   fullName: FlowR.Core.NodeCollectionProperty.NodeCollectionProperty(FlowR.Core.Node)
   nameWithType: NodeCollectionProperty.NodeCollectionProperty(Node)
 - uid: FlowR.Core.NodeCollectionProperty.#ctor*
   name: NodeCollectionProperty
-  href: docs/api/FlowR.Core.NodeCollectionProperty.html#FlowR_Core_NodeCollectionProperty__ctor_
+  href: docfx/api/FlowR.Core.NodeCollectionProperty.html#FlowR_Core_NodeCollectionProperty__ctor_
   commentId: Overload:FlowR.Core.NodeCollectionProperty.#ctor
   isSpec: "True"
   fullName: FlowR.Core.NodeCollectionProperty.NodeCollectionProperty
   nameWithType: NodeCollectionProperty.NodeCollectionProperty
 - uid: FlowR.Core.NodeCollectionProperty.SetProperty(System.String,System.String)
   name: SetProperty(String, String)
-  href: docs/api/FlowR.Core.NodeCollectionProperty.html#FlowR_Core_NodeCollectionProperty_SetProperty_System_String_System_String_
+  href: docfx/api/FlowR.Core.NodeCollectionProperty.html#FlowR_Core_NodeCollectionProperty_SetProperty_System_String_System_String_
   commentId: M:FlowR.Core.NodeCollectionProperty.SetProperty(System.String,System.String)
   fullName: FlowR.Core.NodeCollectionProperty.SetProperty(System.String, System.String)
   nameWithType: NodeCollectionProperty.SetProperty(String, String)
 - uid: FlowR.Core.NodeCollectionProperty.SetProperty*
   name: SetProperty
-  href: docs/api/FlowR.Core.NodeCollectionProperty.html#FlowR_Core_NodeCollectionProperty_SetProperty_
+  href: docfx/api/FlowR.Core.NodeCollectionProperty.html#FlowR_Core_NodeCollectionProperty_SetProperty_
   commentId: Overload:FlowR.Core.NodeCollectionProperty.SetProperty
   isSpec: "True"
   fullName: FlowR.Core.NodeCollectionProperty.SetProperty
   nameWithType: NodeCollectionProperty.SetProperty
 - uid: FlowR.UI
   name: FlowR.UI
-  href: docs/api/FlowR.UI.html
+  href: docfx/api/FlowR.UI.html
   commentId: N:FlowR.UI
   fullName: FlowR.UI
   nameWithType: FlowR.UI
 - uid: FlowR.UI.Controls
   name: FlowR.UI.Controls
-  href: docs/api/FlowR.UI.Controls.html
+  href: docfx/api/FlowR.UI.Controls.html
   commentId: N:FlowR.UI.Controls
   fullName: FlowR.UI.Controls
   nameWithType: FlowR.UI.Controls
 - uid: FlowR.UI.Controls.Button
   name: Button
-  href: docs/api/FlowR.UI.Controls.Button.html
+  href: docfx/api/FlowR.UI.Controls.Button.html
   commentId: T:FlowR.UI.Controls.Button
   fullName: FlowR.UI.Controls.Button
   nameWithType: Button
 - uid: FlowR.UI.Controls.Button.TagName
   name: TagName
-  href: docs/api/FlowR.UI.Controls.Button.html#FlowR_UI_Controls_Button_TagName
+  href: docfx/api/FlowR.UI.Controls.Button.html#FlowR_UI_Controls_Button_TagName
   commentId: P:FlowR.UI.Controls.Button.TagName
   fullName: FlowR.UI.Controls.Button.TagName
   nameWithType: Button.TagName
 - uid: FlowR.UI.Controls.Button.TagName*
   name: TagName
-  href: docs/api/FlowR.UI.Controls.Button.html#FlowR_UI_Controls_Button_TagName_
+  href: docfx/api/FlowR.UI.Controls.Button.html#FlowR_UI_Controls_Button_TagName_
   commentId: Overload:FlowR.UI.Controls.Button.TagName
   isSpec: "True"
   fullName: FlowR.UI.Controls.Button.TagName
   nameWithType: Button.TagName
 - uid: FlowR.UI.Controls.Input
   name: Input
-  href: docs/api/FlowR.UI.Controls.Input.html
+  href: docfx/api/FlowR.UI.Controls.Input.html
   commentId: T:FlowR.UI.Controls.Input
   fullName: FlowR.UI.Controls.Input
   nameWithType: Input
 - uid: FlowR.UI.Controls.Input.TagName
   name: TagName
-  href: docs/api/FlowR.UI.Controls.Input.html#FlowR_UI_Controls_Input_TagName
+  href: docfx/api/FlowR.UI.Controls.Input.html#FlowR_UI_Controls_Input_TagName
   commentId: P:FlowR.UI.Controls.Input.TagName
   fullName: FlowR.UI.Controls.Input.TagName
   nameWithType: Input.TagName
 - uid: FlowR.UI.Controls.Input.TagName*
   name: TagName
-  href: docs/api/FlowR.UI.Controls.Input.html#FlowR_UI_Controls_Input_TagName_
+  href: docfx/api/FlowR.UI.Controls.Input.html#FlowR_UI_Controls_Input_TagName_
   commentId: Overload:FlowR.UI.Controls.Input.TagName
   isSpec: "True"
   fullName: FlowR.UI.Controls.Input.TagName
   nameWithType: Input.TagName
 - uid: FlowR.UI.Div
   name: Div
-  href: docs/api/FlowR.UI.Div.html
+  href: docfx/api/FlowR.UI.Div.html
   commentId: T:FlowR.UI.Div
   fullName: FlowR.UI.Div
   nameWithType: Div
 - uid: FlowR.UI.Div.TagName
   name: TagName
-  href: docs/api/FlowR.UI.Div.html#FlowR_UI_Div_TagName
+  href: docfx/api/FlowR.UI.Div.html#FlowR_UI_Div_TagName
   commentId: P:FlowR.UI.Div.TagName
   fullName: FlowR.UI.Div.TagName
   nameWithType: Div.TagName
 - uid: FlowR.UI.Div.TagName*
   name: TagName
-  href: docs/api/FlowR.UI.Div.html#FlowR_UI_Div_TagName_
+  href: docfx/api/FlowR.UI.Div.html#FlowR_UI_Div_TagName_
   commentId: Overload:FlowR.UI.Div.TagName
   isSpec: "True"
   fullName: FlowR.UI.Div.TagName
   nameWithType: Div.TagName
 - uid: FlowR.UI.Form
   name: Form
-  href: docs/api/FlowR.UI.Form.html
+  href: docfx/api/FlowR.UI.Form.html
   commentId: T:FlowR.UI.Form
   fullName: FlowR.UI.Form
   nameWithType: Form
 - uid: FlowR.UI.Form.Init
   name: Init()
-  href: docs/api/FlowR.UI.Form.html#FlowR_UI_Form_Init
+  href: docfx/api/FlowR.UI.Form.html#FlowR_UI_Form_Init
   commentId: M:FlowR.UI.Form.Init
   fullName: FlowR.UI.Form.Init()
   nameWithType: Form.Init()
 - uid: FlowR.UI.Form.Init*
   name: Init
-  href: docs/api/FlowR.UI.Form.html#FlowR_UI_Form_Init_
+  href: docfx/api/FlowR.UI.Form.html#FlowR_UI_Form_Init_
   commentId: Overload:FlowR.UI.Form.Init
   isSpec: "True"
   fullName: FlowR.UI.Form.Init
   nameWithType: Form.Init
 - uid: FlowR.UI.Form.OnSubmit(Action{Dictionary{System.String,System.Object}},FlowR.Core.IComponentControl[])
   name: OnSubmit(Action<Dictionary<String, Object>>, IComponentControl[])
-  href: docs/api/FlowR.UI.Form.html#FlowR_UI_Form_OnSubmit_Action_Dictionary_System_String_System_Object___FlowR_Core_IComponentControl___
+  href: docfx/api/FlowR.UI.Form.html#FlowR_UI_Form_OnSubmit_Action_Dictionary_System_String_System_Object___FlowR_Core_IComponentControl___
   commentId: M:FlowR.UI.Form.OnSubmit(Action{Dictionary{System.String,System.Object}},FlowR.Core.IComponentControl[])
   name.vb: OnSubmit(Action(Of Dictionary(Of String, Object)), IComponentControl())
   fullName: FlowR.UI.Form.OnSubmit(Action<Dictionary<System.String, System.Object>>, FlowR.Core.IComponentControl[])
@@ -2640,20 +2640,20 @@ references:
   nameWithType.vb: Form.OnSubmit(Action(Of Dictionary(Of String, Object)), IComponentControl())
 - uid: FlowR.UI.Form.OnSubmit*
   name: OnSubmit
-  href: docs/api/FlowR.UI.Form.html#FlowR_UI_Form_OnSubmit_
+  href: docfx/api/FlowR.UI.Form.html#FlowR_UI_Form_OnSubmit_
   commentId: Overload:FlowR.UI.Form.OnSubmit
   isSpec: "True"
   fullName: FlowR.UI.Form.OnSubmit
   nameWithType: Form.OnSubmit
 - uid: FlowR.UI.Form.TagName
   name: TagName
-  href: docs/api/FlowR.UI.Form.html#FlowR_UI_Form_TagName
+  href: docfx/api/FlowR.UI.Form.html#FlowR_UI_Form_TagName
   commentId: P:FlowR.UI.Form.TagName
   fullName: FlowR.UI.Form.TagName
   nameWithType: Form.TagName
 - uid: FlowR.UI.Form.TagName*
   name: TagName
-  href: docs/api/FlowR.UI.Form.html#FlowR_UI_Form_TagName_
+  href: docfx/api/FlowR.UI.Form.html#FlowR_UI_Form_TagName_
   commentId: Overload:FlowR.UI.Form.TagName
   isSpec: "True"
   fullName: FlowR.UI.Form.TagName
