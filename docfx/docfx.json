@@ -47,7 +47,7 @@
     ],
     "overwrite": [],
     "externalReference": [],
-    "dest": "docs",
+    "dest": "../docs",
     "globalMetadata": {},
     "globalMetadataFiles": [],
     "fileMetadata": {},

@@ -29,7 +29,7 @@ jobs:
       # You may pin to the exact commit or the version.
         uses: nikeee/docfx-action@master
         with:
-          args: metadata --logLevel Warning docfx.json
+          args: metadata --logLevel Warning docfx/docfx.json
           
       - name: Publish Documentation on GitHub Pages
         uses: maxheld83/ghpages@master
