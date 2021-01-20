@@ -4,8 +4,8 @@
       "src": [
         {
           "files": [
-            "../FlowR.Core/FlowR.Core.csproj",
-            "../FlowR.UI/FlowR.UI.csproj"
+            "**/FlowR.Core/FlowR.Core.csproj",
+            "**/FlowR.UI/FlowR.UI.csproj"
           ],
           "exclude": [
             "**/bin/**",
