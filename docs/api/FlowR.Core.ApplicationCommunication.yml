@@ -1,0 +1,556 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.ApplicationCommunication
+  commentId: T:FlowR.Core.ApplicationCommunication
+  id: ApplicationCommunication
+  parent: FlowR.Core
+  children:
+  - FlowR.Core.ApplicationCommunication.#ctor(FlowR.Core.Application,IClientProxy)
+  - FlowR.Core.ApplicationCommunication.CallGlobalMethod(System.String,System.String[])
+  - FlowR.Core.ApplicationCommunication.CallGlobalMethodWaitResponse(System.String,System.String[])
+  - FlowR.Core.ApplicationCommunication.GetGlobalProperty(System.String)
+  - FlowR.Core.ApplicationCommunication.OnWaitingMessageResponse(FlowR.Core.Message.IMessageResponse)
+  - FlowR.Core.ApplicationCommunication.SendMessage(FlowR.Core.Message.IMessage)
+  - FlowR.Core.ApplicationCommunication.SendMessageWaitResponse(FlowR.Core.Message.IMessageResponse)
+  - FlowR.Core.ApplicationCommunication.SetGlobalProperty(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: ApplicationCommunication
+  nameWithType: ApplicationCommunication
+  fullName: FlowR.Core.ApplicationCommunication
+  type: Class
+  source:
+    remote:
+      path: FlowR.Core/ApplicationCommunication.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: ApplicationCommunication
+    path: FlowR.Core/ApplicationCommunication.cs
+    startLine: 10
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nManage Communication\n"
+  example: []
+  syntax:
+    content: 'public class ApplicationCommunication : object'
+    content.vb: >-
+      Public Class ApplicationCommunication
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: FlowR.Core.ApplicationCommunication.#ctor(FlowR.Core.Application,IClientProxy)
+  commentId: M:FlowR.Core.ApplicationCommunication.#ctor(FlowR.Core.Application,IClientProxy)
+  id: '#ctor(FlowR.Core.Application,IClientProxy)'
+  parent: FlowR.Core.ApplicationCommunication
+  langs:
+  - csharp
+  - vb
+  name: ApplicationCommunication(Application, IClientProxy)
+  nameWithType: ApplicationCommunication.ApplicationCommunication(Application, IClientProxy)
+  fullName: FlowR.Core.ApplicationCommunication.ApplicationCommunication(FlowR.Core.Application, IClientProxy)
+  type: Constructor
+  source:
+    remote:
+      path: FlowR.Core/ApplicationCommunication.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: .ctor
+    path: FlowR.Core/ApplicationCommunication.cs
+    startLine: 19
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nConstructor\n"
+  example: []
+  syntax:
+    content: public ApplicationCommunication(Application application, IClientProxy client)
+    parameters:
+    - id: application
+      type: FlowR.Core.Application
+      description: ''
+    - id: client
+      type: IClientProxy
+      description: ''
+    content.vb: Public Sub New(application As Application, client As IClientProxy)
+  overload: FlowR.Core.ApplicationCommunication.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: FlowR.Core.ApplicationCommunication.SendMessage(FlowR.Core.Message.IMessage)
+  commentId: M:FlowR.Core.ApplicationCommunication.SendMessage(FlowR.Core.Message.IMessage)
+  id: SendMessage(FlowR.Core.Message.IMessage)
+  parent: FlowR.Core.ApplicationCommunication
+  langs:
+  - csharp
+  - vb
+  name: SendMessage(IMessage)
+  nameWithType: ApplicationCommunication.SendMessage(IMessage)
+  fullName: FlowR.Core.ApplicationCommunication.SendMessage(FlowR.Core.Message.IMessage)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/ApplicationCommunication.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: SendMessage
+    path: FlowR.Core/ApplicationCommunication.cs
+    startLine: 32
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nSend a message to SignalR Client, don&apos;t wait for response\n"
+  example: []
+  syntax:
+    content: public Task SendMessage(IMessage message)
+    parameters:
+    - id: message
+      type: FlowR.Core.Message.IMessage
+      description: ''
+    return:
+      type: Task
+    content.vb: Public Function SendMessage(message As IMessage) As Task
+  overload: FlowR.Core.ApplicationCommunication.SendMessage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: FlowR.Core.ApplicationCommunication.SendMessageWaitResponse(FlowR.Core.Message.IMessageResponse)
+  commentId: M:FlowR.Core.ApplicationCommunication.SendMessageWaitResponse(FlowR.Core.Message.IMessageResponse)
+  id: SendMessageWaitResponse(FlowR.Core.Message.IMessageResponse)
+  parent: FlowR.Core.ApplicationCommunication
+  langs:
+  - csharp
+  - vb
+  name: SendMessageWaitResponse(IMessageResponse)
+  nameWithType: ApplicationCommunication.SendMessageWaitResponse(IMessageResponse)
+  fullName: FlowR.Core.ApplicationCommunication.SendMessageWaitResponse(FlowR.Core.Message.IMessageResponse)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/ApplicationCommunication.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: SendMessageWaitResponse
+    path: FlowR.Core/ApplicationCommunication.cs
+    startLine: 54
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nSend a message to SignalR Client and wait for response\n"
+  example: []
+  syntax:
+    content: public Task<string> SendMessageWaitResponse(IMessageResponse message)
+    parameters:
+    - id: message
+      type: FlowR.Core.Message.IMessageResponse
+      description: ''
+    return:
+      type: Task{System.String}
+      description: ''
+    content.vb: Public Function SendMessageWaitResponse(message As IMessageResponse) As Task(Of String)
+  overload: FlowR.Core.ApplicationCommunication.SendMessageWaitResponse*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: FlowR.Core.ApplicationCommunication.OnWaitingMessageResponse(FlowR.Core.Message.IMessageResponse)
+  commentId: M:FlowR.Core.ApplicationCommunication.OnWaitingMessageResponse(FlowR.Core.Message.IMessageResponse)
+  id: OnWaitingMessageResponse(FlowR.Core.Message.IMessageResponse)
+  parent: FlowR.Core.ApplicationCommunication
+  langs:
+  - csharp
+  - vb
+  name: OnWaitingMessageResponse(IMessageResponse)
+  nameWithType: ApplicationCommunication.OnWaitingMessageResponse(IMessageResponse)
+  fullName: FlowR.Core.ApplicationCommunication.OnWaitingMessageResponse(FlowR.Core.Message.IMessageResponse)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/ApplicationCommunication.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: OnWaitingMessageResponse
+    path: FlowR.Core/ApplicationCommunication.cs
+    startLine: 63
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\n[internal use] Called from SignalR Client when a new response arrive.\n"
+  example: []
+  syntax:
+    content: public void OnWaitingMessageResponse(IMessageResponse message)
+    parameters:
+    - id: message
+      type: FlowR.Core.Message.IMessageResponse
+      description: ''
+    content.vb: Public Sub OnWaitingMessageResponse(message As IMessageResponse)
+  overload: FlowR.Core.ApplicationCommunication.OnWaitingMessageResponse*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: FlowR.Core.ApplicationCommunication.CallGlobalMethod(System.String,System.String[])
+  commentId: M:FlowR.Core.ApplicationCommunication.CallGlobalMethod(System.String,System.String[])
+  id: CallGlobalMethod(System.String,System.String[])
+  parent: FlowR.Core.ApplicationCommunication
+  langs:
+  - csharp
+  - vb
+  name: CallGlobalMethod(String, String[])
+  nameWithType: ApplicationCommunication.CallGlobalMethod(String, String[])
+  fullName: FlowR.Core.ApplicationCommunication.CallGlobalMethod(System.String, System.String[])
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/ApplicationCommunication.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: CallGlobalMethod
+    path: FlowR.Core/ApplicationCommunication.cs
+    startLine: 73
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nCall a global JS method, don&apos;t wait for response.\n"
+  example:
+  - 'from a DomNode : GetApplication().CallGlobalMethod(&apos;alert&apos;,[&apos;this is an alert&apos;]);'
+  syntax:
+    content: public void CallGlobalMethod(string methodName, params string[] arguments)
+    parameters:
+    - id: methodName
+      type: System.String
+      description: ''
+    - id: arguments
+      type: System.String[]
+      description: ''
+    content.vb: Public Sub CallGlobalMethod(methodName As String, ParamArray arguments As String())
+  overload: FlowR.Core.ApplicationCommunication.CallGlobalMethod*
+  nameWithType.vb: ApplicationCommunication.CallGlobalMethod(String, String())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.ApplicationCommunication.CallGlobalMethod(System.String, System.String())
+  name.vb: CallGlobalMethod(String, String())
+- uid: FlowR.Core.ApplicationCommunication.CallGlobalMethodWaitResponse(System.String,System.String[])
+  commentId: M:FlowR.Core.ApplicationCommunication.CallGlobalMethodWaitResponse(System.String,System.String[])
+  id: CallGlobalMethodWaitResponse(System.String,System.String[])
+  parent: FlowR.Core.ApplicationCommunication
+  langs:
+  - csharp
+  - vb
+  name: CallGlobalMethodWaitResponse(String, String[])
+  nameWithType: ApplicationCommunication.CallGlobalMethodWaitResponse(String, String[])
+  fullName: FlowR.Core.ApplicationCommunication.CallGlobalMethodWaitResponse(System.String, System.String[])
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/ApplicationCommunication.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: CallGlobalMethodWaitResponse
+    path: FlowR.Core/ApplicationCommunication.cs
+    startLine: 82
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nCall a global JS method and wait for response\n"
+  example: []
+  syntax:
+    content: public Task<string> CallGlobalMethodWaitResponse(string methodName, params string[] arguments)
+    parameters:
+    - id: methodName
+      type: System.String
+      description: 'window method or complete traversed path like document.location.reload '
+    - id: arguments
+      type: System.String[]
+      description: ''
+    return:
+      type: Task{System.String}
+    content.vb: Public Function CallGlobalMethodWaitResponse(methodName As String, ParamArray arguments As String()) As Task(Of String)
+  overload: FlowR.Core.ApplicationCommunication.CallGlobalMethodWaitResponse*
+  nameWithType.vb: ApplicationCommunication.CallGlobalMethodWaitResponse(String, String())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.ApplicationCommunication.CallGlobalMethodWaitResponse(System.String, System.String())
+  name.vb: CallGlobalMethodWaitResponse(String, String())
+- uid: FlowR.Core.ApplicationCommunication.GetGlobalProperty(System.String)
+  commentId: M:FlowR.Core.ApplicationCommunication.GetGlobalProperty(System.String)
+  id: GetGlobalProperty(System.String)
+  parent: FlowR.Core.ApplicationCommunication
+  langs:
+  - csharp
+  - vb
+  name: GetGlobalProperty(String)
+  nameWithType: ApplicationCommunication.GetGlobalProperty(String)
+  fullName: FlowR.Core.ApplicationCommunication.GetGlobalProperty(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/ApplicationCommunication.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: GetGlobalProperty
+    path: FlowR.Core/ApplicationCommunication.cs
+    startLine: 91
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nGet a global JS property and wait for response\n"
+  example: []
+  syntax:
+    content: public Task<string> GetGlobalProperty(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: 'window method or complete traversed path like document.location.reload '
+    return:
+      type: Task{System.String}
+    content.vb: Public Function GetGlobalProperty(path As String) As Task(Of String)
+  overload: FlowR.Core.ApplicationCommunication.GetGlobalProperty*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: FlowR.Core.ApplicationCommunication.SetGlobalProperty(System.String,System.String)
+  commentId: M:FlowR.Core.ApplicationCommunication.SetGlobalProperty(System.String,System.String)
+  id: SetGlobalProperty(System.String,System.String)
+  parent: FlowR.Core.ApplicationCommunication
+  langs:
+  - csharp
+  - vb
+  name: SetGlobalProperty(String, String)
+  nameWithType: ApplicationCommunication.SetGlobalProperty(String, String)
+  fullName: FlowR.Core.ApplicationCommunication.SetGlobalProperty(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/ApplicationCommunication.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: SetGlobalProperty
+    path: FlowR.Core/ApplicationCommunication.cs
+    startLine: 101
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nSet a global JS property and wait for response\n"
+  example: []
+  syntax:
+    content: public void SetGlobalProperty(string path, string value)
+    parameters:
+    - id: path
+      type: System.String
+      description: 'window property or complete traversed path like document.body.scrollHeight '
+    - id: value
+      type: System.String
+      description: ''
+    content.vb: Public Sub SetGlobalProperty(path As String, value As String)
+  overload: FlowR.Core.ApplicationCommunication.SetGlobalProperty*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: FlowR.Core
+  commentId: N:FlowR.Core
+  name: FlowR.Core
+  nameWithType: FlowR.Core
+  fullName: FlowR.Core
+- uid: FlowR.Core.ApplicationCommunication.#ctor*
+  commentId: Overload:FlowR.Core.ApplicationCommunication.#ctor
+  name: ApplicationCommunication
+  nameWithType: ApplicationCommunication.ApplicationCommunication
+  fullName: FlowR.Core.ApplicationCommunication.ApplicationCommunication
+- uid: FlowR.Core.Application
+  commentId: T:FlowR.Core.Application
+  parent: FlowR.Core
+  name: Application
+  nameWithType: Application
+  fullName: FlowR.Core.Application
+- uid: IClientProxy
+  isExternal: true
+  name: IClientProxy
+  nameWithType: IClientProxy
+  fullName: IClientProxy
+- uid: FlowR.Core.ApplicationCommunication.SendMessage*
+  commentId: Overload:FlowR.Core.ApplicationCommunication.SendMessage
+  name: SendMessage
+  nameWithType: ApplicationCommunication.SendMessage
+  fullName: FlowR.Core.ApplicationCommunication.SendMessage
+- uid: FlowR.Core.Message.IMessage
+  commentId: T:FlowR.Core.Message.IMessage
+  parent: FlowR.Core.Message
+  name: IMessage
+  nameWithType: IMessage
+  fullName: FlowR.Core.Message.IMessage
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: FlowR.Core.Message
+  commentId: N:FlowR.Core.Message
+  name: FlowR.Core.Message
+  nameWithType: FlowR.Core.Message
+  fullName: FlowR.Core.Message
+- uid: FlowR.Core.ApplicationCommunication.SendMessageWaitResponse*
+  commentId: Overload:FlowR.Core.ApplicationCommunication.SendMessageWaitResponse
+  name: SendMessageWaitResponse
+  nameWithType: ApplicationCommunication.SendMessageWaitResponse
+  fullName: FlowR.Core.ApplicationCommunication.SendMessageWaitResponse
+- uid: FlowR.Core.Message.IMessageResponse
+  commentId: T:FlowR.Core.Message.IMessageResponse
+  parent: FlowR.Core.Message
+  name: IMessageResponse
+  nameWithType: IMessageResponse
+  fullName: FlowR.Core.Message.IMessageResponse
+- uid: Task{System.String}
+  commentId: '!:Task{System.String}'
+  definition: Task`1
+  name: Task<String>
+  nameWithType: Task<String>
+  fullName: Task<System.String>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: Task(Of System.String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.ApplicationCommunication.OnWaitingMessageResponse*
+  commentId: Overload:FlowR.Core.ApplicationCommunication.OnWaitingMessageResponse
+  name: OnWaitingMessageResponse
+  nameWithType: ApplicationCommunication.OnWaitingMessageResponse
+  fullName: FlowR.Core.ApplicationCommunication.OnWaitingMessageResponse
+- uid: FlowR.Core.ApplicationCommunication.CallGlobalMethod*
+  commentId: Overload:FlowR.Core.ApplicationCommunication.CallGlobalMethod
+  name: CallGlobalMethod
+  nameWithType: ApplicationCommunication.CallGlobalMethod
+  fullName: FlowR.Core.ApplicationCommunication.CallGlobalMethod
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: FlowR.Core.ApplicationCommunication.CallGlobalMethodWaitResponse*
+  commentId: Overload:FlowR.Core.ApplicationCommunication.CallGlobalMethodWaitResponse
+  name: CallGlobalMethodWaitResponse
+  nameWithType: ApplicationCommunication.CallGlobalMethodWaitResponse
+  fullName: FlowR.Core.ApplicationCommunication.CallGlobalMethodWaitResponse
+- uid: FlowR.Core.ApplicationCommunication.GetGlobalProperty*
+  commentId: Overload:FlowR.Core.ApplicationCommunication.GetGlobalProperty
+  name: GetGlobalProperty
+  nameWithType: ApplicationCommunication.GetGlobalProperty
+  fullName: FlowR.Core.ApplicationCommunication.GetGlobalProperty
+- uid: FlowR.Core.ApplicationCommunication.SetGlobalProperty*
+  commentId: Overload:FlowR.Core.ApplicationCommunication.SetGlobalProperty
+  name: SetGlobalProperty
+  nameWithType: ApplicationCommunication.SetGlobalProperty
+  fullName: FlowR.Core.ApplicationCommunication.SetGlobalProperty

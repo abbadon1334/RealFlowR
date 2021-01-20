@@ -1,0 +1,354 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.Message.MessageElement
+  commentId: T:FlowR.Core.Message.MessageElement
+  id: MessageElement
+  parent: FlowR.Core.Message
+  children:
+  - FlowR.Core.Message.MessageElement.#ctor(FlowR.Core.Node)
+  - FlowR.Core.Message.MessageElement.Action
+  - FlowR.Core.Message.MessageElement.GetRequestedAction
+  langs:
+  - csharp
+  - vb
+  name: MessageElement
+  nameWithType: MessageElement
+  fullName: FlowR.Core.Message.MessageElement
+  type: Class
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageElement.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageElement
+    path: FlowR.Core/Message/MessageElement.cs
+    startLine: 5
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nMessage for Clientside Nodes\n"
+  example: []
+  syntax:
+    content: 'public class MessageElement : Message, IMessage'
+    content.vb: >-
+      Public Class MessageElement
+
+          Inherits Message
+
+          Implements IMessage
+  inheritance:
+  - System.Object
+  - FlowR.Core.Message.Message
+  implements:
+  - FlowR.Core.Message.IMessage
+  inheritedMembers:
+  - FlowR.Core.Message.Message.Uuid
+  - FlowR.Core.Message.Message.GetUuid
+  - FlowR.Core.Message.Message.GetArgumentValues
+  - FlowR.Core.Message.Message.AddArgument(System.Object[])
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: FlowR.Core.Message.MessageElement.#ctor(FlowR.Core.Node)
+  commentId: M:FlowR.Core.Message.MessageElement.#ctor(FlowR.Core.Node)
+  id: '#ctor(FlowR.Core.Node)'
+  parent: FlowR.Core.Message.MessageElement
+  langs:
+  - csharp
+  - vb
+  name: MessageElement(Node)
+  nameWithType: MessageElement.MessageElement(Node)
+  fullName: FlowR.Core.Message.MessageElement.MessageElement(FlowR.Core.Node)
+  type: Constructor
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageElement.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: .ctor
+    path: FlowR.Core/Message/MessageElement.cs
+    startLine: 64
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  example: []
+  syntax:
+    content: public MessageElement(Node node)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+    content.vb: Public Sub New(node As Node)
+  overload: FlowR.Core.Message.MessageElement.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: FlowR.Core.Message.MessageElement.Action
+  commentId: P:FlowR.Core.Message.MessageElement.Action
+  id: Action
+  parent: FlowR.Core.Message.MessageElement
+  langs:
+  - csharp
+  - vb
+  name: Action
+  nameWithType: MessageElement.Action
+  fullName: FlowR.Core.Message.MessageElement.Action
+  type: Property
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageElement.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Action
+    path: FlowR.Core/Message/MessageElement.cs
+    startLine: 71
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nRequested Action\n"
+  example: []
+  syntax:
+    content: public MessageElement.MessageActions Action { get; set; }
+    parameters: []
+    return:
+      type: FlowR.Core.Message.MessageElement.MessageActions
+    content.vb: Public Property Action As MessageElement.MessageActions
+  overload: FlowR.Core.Message.MessageElement.Action*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: FlowR.Core.Message.MessageElement.GetRequestedAction
+  commentId: M:FlowR.Core.Message.MessageElement.GetRequestedAction
+  id: GetRequestedAction
+  parent: FlowR.Core.Message.MessageElement
+  langs:
+  - csharp
+  - vb
+  name: GetRequestedAction()
+  nameWithType: MessageElement.GetRequestedAction()
+  fullName: FlowR.Core.Message.MessageElement.GetRequestedAction()
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageElement.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: GetRequestedAction
+    path: FlowR.Core/Message/MessageElement.cs
+    startLine: 74
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  example: []
+  syntax:
+    content: public override string GetRequestedAction()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function GetRequestedAction As String
+  overridden: FlowR.Core.Message.Message.GetRequestedAction
+  overload: FlowR.Core.Message.MessageElement.GetRequestedAction*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: FlowR.Core.Message
+  commentId: N:FlowR.Core.Message
+  name: FlowR.Core.Message
+  nameWithType: FlowR.Core.Message
+  fullName: FlowR.Core.Message
+- uid: FlowR.Core.Message.Message
+  commentId: T:FlowR.Core.Message.Message
+  parent: FlowR.Core.Message
+  name: Message
+  nameWithType: Message
+  fullName: FlowR.Core.Message.Message
+- uid: FlowR.Core.Message.IMessage
+  commentId: T:FlowR.Core.Message.IMessage
+  parent: FlowR.Core.Message
+  name: IMessage
+  nameWithType: IMessage
+  fullName: FlowR.Core.Message.IMessage
+- uid: FlowR.Core.Message.Message.Uuid
+  commentId: F:FlowR.Core.Message.Message.Uuid
+  parent: FlowR.Core.Message.Message
+  name: Uuid
+  nameWithType: Message.Uuid
+  fullName: FlowR.Core.Message.Message.Uuid
+- uid: FlowR.Core.Message.Message.GetUuid
+  commentId: M:FlowR.Core.Message.Message.GetUuid
+  parent: FlowR.Core.Message.Message
+  name: GetUuid()
+  nameWithType: Message.GetUuid()
+  fullName: FlowR.Core.Message.Message.GetUuid()
+  spec.csharp:
+  - uid: FlowR.Core.Message.Message.GetUuid
+    name: GetUuid
+    nameWithType: Message.GetUuid
+    fullName: FlowR.Core.Message.Message.GetUuid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.Message.GetUuid
+    name: GetUuid
+    nameWithType: Message.GetUuid
+    fullName: FlowR.Core.Message.Message.GetUuid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.Message.GetArgumentValues
+  commentId: M:FlowR.Core.Message.Message.GetArgumentValues
+  parent: FlowR.Core.Message.Message
+  name: GetArgumentValues()
+  nameWithType: Message.GetArgumentValues()
+  fullName: FlowR.Core.Message.Message.GetArgumentValues()
+  spec.csharp:
+  - uid: FlowR.Core.Message.Message.GetArgumentValues
+    name: GetArgumentValues
+    nameWithType: Message.GetArgumentValues
+    fullName: FlowR.Core.Message.Message.GetArgumentValues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.Message.GetArgumentValues
+    name: GetArgumentValues
+    nameWithType: Message.GetArgumentValues
+    fullName: FlowR.Core.Message.Message.GetArgumentValues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.Message.AddArgument(System.Object[])
+  commentId: M:FlowR.Core.Message.Message.AddArgument(System.Object[])
+  parent: FlowR.Core.Message.Message
+  isExternal: true
+  name: AddArgument(Object[])
+  nameWithType: Message.AddArgument(Object[])
+  fullName: FlowR.Core.Message.Message.AddArgument(System.Object[])
+  nameWithType.vb: Message.AddArgument(Object())
+  fullName.vb: FlowR.Core.Message.Message.AddArgument(System.Object())
+  name.vb: AddArgument(Object())
+  spec.csharp:
+  - uid: FlowR.Core.Message.Message.AddArgument(System.Object[])
+    name: AddArgument
+    nameWithType: Message.AddArgument
+    fullName: FlowR.Core.Message.Message.AddArgument
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.Message.AddArgument(System.Object[])
+    name: AddArgument
+    nameWithType: Message.AddArgument
+    fullName: FlowR.Core.Message.Message.AddArgument
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.MessageElement.#ctor*
+  commentId: Overload:FlowR.Core.Message.MessageElement.#ctor
+  name: MessageElement
+  nameWithType: MessageElement.MessageElement
+  fullName: FlowR.Core.Message.MessageElement.MessageElement
+- uid: FlowR.Core.Node
+  commentId: T:FlowR.Core.Node
+  parent: FlowR.Core
+  name: Node
+  nameWithType: Node
+  fullName: FlowR.Core.Node
+- uid: FlowR.Core
+  commentId: N:FlowR.Core
+  name: FlowR.Core
+  nameWithType: FlowR.Core
+  fullName: FlowR.Core
+- uid: FlowR.Core.Message.MessageElement.Action*
+  commentId: Overload:FlowR.Core.Message.MessageElement.Action
+  name: Action
+  nameWithType: MessageElement.Action
+  fullName: FlowR.Core.Message.MessageElement.Action
+- uid: FlowR.Core.Message.MessageElement.MessageActions
+  commentId: T:FlowR.Core.Message.MessageElement.MessageActions
+  parent: FlowR.Core.Message
+  name: MessageElement.MessageActions
+  nameWithType: MessageElement.MessageActions
+  fullName: FlowR.Core.Message.MessageElement.MessageActions
+- uid: FlowR.Core.Message.Message.GetRequestedAction
+  commentId: M:FlowR.Core.Message.Message.GetRequestedAction
+  parent: FlowR.Core.Message.Message
+  name: GetRequestedAction()
+  nameWithType: Message.GetRequestedAction()
+  fullName: FlowR.Core.Message.Message.GetRequestedAction()
+  spec.csharp:
+  - uid: FlowR.Core.Message.Message.GetRequestedAction
+    name: GetRequestedAction
+    nameWithType: Message.GetRequestedAction
+    fullName: FlowR.Core.Message.Message.GetRequestedAction
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.Message.GetRequestedAction
+    name: GetRequestedAction
+    nameWithType: Message.GetRequestedAction
+    fullName: FlowR.Core.Message.Message.GetRequestedAction
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.MessageElement.GetRequestedAction*
+  commentId: Overload:FlowR.Core.Message.MessageElement.GetRequestedAction
+  name: GetRequestedAction
+  nameWithType: MessageElement.GetRequestedAction
+  fullName: FlowR.Core.Message.MessageElement.GetRequestedAction
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

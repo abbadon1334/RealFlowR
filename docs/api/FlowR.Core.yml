@@ -1,0 +1,401 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core
+  commentId: N:FlowR.Core
+  id: FlowR.Core
+  children:
+  - FlowR.Core.Application
+  - FlowR.Core.ApplicationCommunication
+  - FlowR.Core.ApplicationRegistry
+  - FlowR.Core.ApplicationResponses
+  - FlowR.Core.ApplicationTimer
+  - FlowR.Core.ApplicationTimers
+  - FlowR.Core.CollectionAddedEventArgs`1
+  - FlowR.Core.CollectionChangedEventArgs`1
+  - FlowR.Core.Component`1
+  - FlowR.Core.ComponentControl`1
+  - FlowR.Core.ComponentElement`1
+  - FlowR.Core.ComponentRoot
+  - FlowR.Core.FlowRHub`1
+  - FlowR.Core.FlowRService`1
+  - FlowR.Core.IComponentControl
+  - FlowR.Core.Node
+  - FlowR.Core.NodeCollection`1
+  - FlowR.Core.NodeCollectionAttribute
+  - FlowR.Core.NodeCollectionEvent
+  - FlowR.Core.NodeCollectionNode
+  - FlowR.Core.NodeCollectionProperty
+  langs:
+  - csharp
+  - vb
+  name: FlowR.Core
+  nameWithType: FlowR.Core
+  fullName: FlowR.Core
+  type: Namespace
+  assemblies:
+  - FlowR.Core
+references:
+- uid: FlowR.Core.Application
+  commentId: T:FlowR.Core.Application
+  parent: FlowR.Core
+  name: Application
+  nameWithType: Application
+  fullName: FlowR.Core.Application
+- uid: FlowR.Core.ApplicationCommunication
+  commentId: T:FlowR.Core.ApplicationCommunication
+  parent: FlowR.Core
+  name: ApplicationCommunication
+  nameWithType: ApplicationCommunication
+  fullName: FlowR.Core.ApplicationCommunication
+- uid: FlowR.Core.ApplicationRegistry
+  commentId: T:FlowR.Core.ApplicationRegistry
+  name: ApplicationRegistry
+  nameWithType: ApplicationRegistry
+  fullName: FlowR.Core.ApplicationRegistry
+- uid: FlowR.Core.ApplicationResponses
+  commentId: T:FlowR.Core.ApplicationResponses
+  name: ApplicationResponses
+  nameWithType: ApplicationResponses
+  fullName: FlowR.Core.ApplicationResponses
+- uid: FlowR.Core.ApplicationTimer
+  commentId: T:FlowR.Core.ApplicationTimer
+  parent: FlowR.Core
+  name: ApplicationTimer
+  nameWithType: ApplicationTimer
+  fullName: FlowR.Core.ApplicationTimer
+- uid: FlowR.Core.ApplicationTimers
+  commentId: T:FlowR.Core.ApplicationTimers
+  name: ApplicationTimers
+  nameWithType: ApplicationTimers
+  fullName: FlowR.Core.ApplicationTimers
+- uid: FlowR.Core.Component`1
+  commentId: T:FlowR.Core.Component`1
+  name: Component<T>
+  nameWithType: Component<T>
+  fullName: FlowR.Core.Component<T>
+  nameWithType.vb: Component(Of T)
+  fullName.vb: FlowR.Core.Component(Of T)
+  name.vb: Component(Of T)
+  spec.csharp:
+  - uid: FlowR.Core.Component`1
+    name: Component
+    nameWithType: Component
+    fullName: FlowR.Core.Component
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: FlowR.Core.Component`1
+    name: Component
+    nameWithType: Component
+    fullName: FlowR.Core.Component
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.ComponentControl`1
+  commentId: T:FlowR.Core.ComponentControl`1
+  name: ComponentControl<T>
+  nameWithType: ComponentControl<T>
+  fullName: FlowR.Core.ComponentControl<T>
+  nameWithType.vb: ComponentControl(Of T)
+  fullName.vb: FlowR.Core.ComponentControl(Of T)
+  name.vb: ComponentControl(Of T)
+  spec.csharp:
+  - uid: FlowR.Core.ComponentControl`1
+    name: ComponentControl
+    nameWithType: ComponentControl
+    fullName: FlowR.Core.ComponentControl
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: FlowR.Core.ComponentControl`1
+    name: ComponentControl
+    nameWithType: ComponentControl
+    fullName: FlowR.Core.ComponentControl
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.ComponentElement`1
+  commentId: T:FlowR.Core.ComponentElement`1
+  name: ComponentElement<T>
+  nameWithType: ComponentElement<T>
+  fullName: FlowR.Core.ComponentElement<T>
+  nameWithType.vb: ComponentElement(Of T)
+  fullName.vb: FlowR.Core.ComponentElement(Of T)
+  name.vb: ComponentElement(Of T)
+  spec.csharp:
+  - uid: FlowR.Core.ComponentElement`1
+    name: ComponentElement
+    nameWithType: ComponentElement
+    fullName: FlowR.Core.ComponentElement
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: FlowR.Core.ComponentElement`1
+    name: ComponentElement
+    nameWithType: ComponentElement
+    fullName: FlowR.Core.ComponentElement
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.ComponentRoot
+  commentId: T:FlowR.Core.ComponentRoot
+  parent: FlowR.Core
+  name: ComponentRoot
+  nameWithType: ComponentRoot
+  fullName: FlowR.Core.ComponentRoot
+- uid: FlowR.Core.FlowRHub`1
+  commentId: T:FlowR.Core.FlowRHub`1
+  name: FlowRHub<T>
+  nameWithType: FlowRHub<T>
+  fullName: FlowR.Core.FlowRHub<T>
+  nameWithType.vb: FlowRHub(Of T)
+  fullName.vb: FlowR.Core.FlowRHub(Of T)
+  name.vb: FlowRHub(Of T)
+  spec.csharp:
+  - uid: FlowR.Core.FlowRHub`1
+    name: FlowRHub
+    nameWithType: FlowRHub
+    fullName: FlowR.Core.FlowRHub
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: FlowR.Core.FlowRHub`1
+    name: FlowRHub
+    nameWithType: FlowRHub
+    fullName: FlowR.Core.FlowRHub
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.FlowRService`1
+  commentId: T:FlowR.Core.FlowRService`1
+  name: FlowRService<T>
+  nameWithType: FlowRService<T>
+  fullName: FlowR.Core.FlowRService<T>
+  nameWithType.vb: FlowRService(Of T)
+  fullName.vb: FlowR.Core.FlowRService(Of T)
+  name.vb: FlowRService(Of T)
+  spec.csharp:
+  - uid: FlowR.Core.FlowRService`1
+    name: FlowRService
+    nameWithType: FlowRService
+    fullName: FlowR.Core.FlowRService
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: FlowR.Core.FlowRService`1
+    name: FlowRService
+    nameWithType: FlowRService
+    fullName: FlowR.Core.FlowRService
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.IComponentControl
+  commentId: T:FlowR.Core.IComponentControl
+  parent: FlowR.Core
+  name: IComponentControl
+  nameWithType: IComponentControl
+  fullName: FlowR.Core.IComponentControl
+- uid: FlowR.Core.Node
+  commentId: T:FlowR.Core.Node
+  parent: FlowR.Core
+  name: Node
+  nameWithType: Node
+  fullName: FlowR.Core.Node
+- uid: FlowR.Core.NodeCollection`1
+  commentId: T:FlowR.Core.NodeCollection`1
+  name: NodeCollection<T>
+  nameWithType: NodeCollection<T>
+  fullName: FlowR.Core.NodeCollection<T>
+  nameWithType.vb: NodeCollection(Of T)
+  fullName.vb: FlowR.Core.NodeCollection(Of T)
+  name.vb: NodeCollection(Of T)
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1
+    name: NodeCollection
+    nameWithType: NodeCollection
+    fullName: FlowR.Core.NodeCollection
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1
+    name: NodeCollection
+    nameWithType: NodeCollection
+    fullName: FlowR.Core.NodeCollection
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.CollectionAddedEventArgs`1
+  commentId: T:FlowR.Core.CollectionAddedEventArgs`1
+  name: CollectionAddedEventArgs<T>
+  nameWithType: CollectionAddedEventArgs<T>
+  fullName: FlowR.Core.CollectionAddedEventArgs<T>
+  nameWithType.vb: CollectionAddedEventArgs(Of T)
+  fullName.vb: FlowR.Core.CollectionAddedEventArgs(Of T)
+  name.vb: CollectionAddedEventArgs(Of T)
+  spec.csharp:
+  - uid: FlowR.Core.CollectionAddedEventArgs`1
+    name: CollectionAddedEventArgs
+    nameWithType: CollectionAddedEventArgs
+    fullName: FlowR.Core.CollectionAddedEventArgs
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: FlowR.Core.CollectionAddedEventArgs`1
+    name: CollectionAddedEventArgs
+    nameWithType: CollectionAddedEventArgs
+    fullName: FlowR.Core.CollectionAddedEventArgs
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.CollectionChangedEventArgs`1
+  commentId: T:FlowR.Core.CollectionChangedEventArgs`1
+  name: CollectionChangedEventArgs<T>
+  nameWithType: CollectionChangedEventArgs<T>
+  fullName: FlowR.Core.CollectionChangedEventArgs<T>
+  nameWithType.vb: CollectionChangedEventArgs(Of T)
+  fullName.vb: FlowR.Core.CollectionChangedEventArgs(Of T)
+  name.vb: CollectionChangedEventArgs(Of T)
+  spec.csharp:
+  - uid: FlowR.Core.CollectionChangedEventArgs`1
+    name: CollectionChangedEventArgs
+    nameWithType: CollectionChangedEventArgs
+    fullName: FlowR.Core.CollectionChangedEventArgs
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: FlowR.Core.CollectionChangedEventArgs`1
+    name: CollectionChangedEventArgs
+    nameWithType: CollectionChangedEventArgs
+    fullName: FlowR.Core.CollectionChangedEventArgs
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollectionAttribute
+  commentId: T:FlowR.Core.NodeCollectionAttribute
+  name: NodeCollectionAttribute
+  nameWithType: NodeCollectionAttribute
+  fullName: FlowR.Core.NodeCollectionAttribute
+- uid: FlowR.Core.NodeCollectionNode
+  commentId: T:FlowR.Core.NodeCollectionNode
+  name: NodeCollectionNode
+  nameWithType: NodeCollectionNode
+  fullName: FlowR.Core.NodeCollectionNode
+- uid: FlowR.Core.NodeCollectionEvent
+  commentId: T:FlowR.Core.NodeCollectionEvent
+  name: NodeCollectionEvent
+  nameWithType: NodeCollectionEvent
+  fullName: FlowR.Core.NodeCollectionEvent
+- uid: FlowR.Core.NodeCollectionProperty
+  commentId: T:FlowR.Core.NodeCollectionProperty
+  name: NodeCollectionProperty
+  nameWithType: NodeCollectionProperty
+  fullName: FlowR.Core.NodeCollectionProperty
+- uid: FlowR.Core
+  commentId: N:FlowR.Core
+  name: FlowR.Core
+  nameWithType: FlowR.Core
+  fullName: FlowR.Core

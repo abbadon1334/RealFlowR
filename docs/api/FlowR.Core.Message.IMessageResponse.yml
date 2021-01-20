@@ -1,0 +1,219 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.Message.IMessageResponse
+  commentId: T:FlowR.Core.Message.IMessageResponse
+  id: IMessageResponse
+  parent: FlowR.Core.Message
+  children:
+  - FlowR.Core.Message.IMessageResponse.GetResponse
+  - FlowR.Core.Message.IMessageResponse.SetResponse(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IMessageResponse
+  nameWithType: IMessageResponse
+  fullName: FlowR.Core.Message.IMessageResponse
+  type: Interface
+  source:
+    remote:
+      path: FlowR.Core/Message/IMessageResponse.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: IMessageResponse
+    path: FlowR.Core/Message/IMessageResponse.cs
+    startLine: 5
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nMessage Response\n"
+  example: []
+  syntax:
+    content: 'public interface IMessageResponse : IMessage'
+    content.vb: >-
+      Public Interface IMessageResponse
+
+          Inherits IMessage
+  inheritedMembers:
+  - FlowR.Core.Message.IMessage.GetUuid
+  - FlowR.Core.Message.IMessage.GetRequestedAction
+  - FlowR.Core.Message.IMessage.GetArgumentValues
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: FlowR.Core.Message.IMessageResponse.SetResponse(System.String)
+  commentId: M:FlowR.Core.Message.IMessageResponse.SetResponse(System.String)
+  id: SetResponse(System.String)
+  parent: FlowR.Core.Message.IMessageResponse
+  langs:
+  - csharp
+  - vb
+  name: SetResponse(String)
+  nameWithType: IMessageResponse.SetResponse(String)
+  fullName: FlowR.Core.Message.IMessageResponse.SetResponse(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/IMessageResponse.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: SetResponse
+    path: FlowR.Core/Message/IMessageResponse.cs
+    startLine: 12
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nSet incoming response to message\n"
+  example: []
+  syntax:
+    content: void SetResponse(string response)
+    parameters:
+    - id: response
+      type: System.String
+      description: ''
+    content.vb: Sub SetResponse(response As String)
+  overload: FlowR.Core.Message.IMessageResponse.SetResponse*
+- uid: FlowR.Core.Message.IMessageResponse.GetResponse
+  commentId: M:FlowR.Core.Message.IMessageResponse.GetResponse
+  id: GetResponse
+  parent: FlowR.Core.Message.IMessageResponse
+  langs:
+  - csharp
+  - vb
+  name: GetResponse()
+  nameWithType: IMessageResponse.GetResponse()
+  fullName: FlowR.Core.Message.IMessageResponse.GetResponse()
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/IMessageResponse.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: GetResponse
+    path: FlowR.Core/Message/IMessageResponse.cs
+    startLine: 18
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nGet Response from message\n"
+  example: []
+  syntax:
+    content: string GetResponse()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Function GetResponse As String
+  overload: FlowR.Core.Message.IMessageResponse.GetResponse*
+references:
+- uid: FlowR.Core.Message
+  commentId: N:FlowR.Core.Message
+  name: FlowR.Core.Message
+  nameWithType: FlowR.Core.Message
+  fullName: FlowR.Core.Message
+- uid: FlowR.Core.Message.IMessage.GetUuid
+  commentId: M:FlowR.Core.Message.IMessage.GetUuid
+  parent: FlowR.Core.Message.IMessage
+  name: GetUuid()
+  nameWithType: IMessage.GetUuid()
+  fullName: FlowR.Core.Message.IMessage.GetUuid()
+  spec.csharp:
+  - uid: FlowR.Core.Message.IMessage.GetUuid
+    name: GetUuid
+    nameWithType: IMessage.GetUuid
+    fullName: FlowR.Core.Message.IMessage.GetUuid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.IMessage.GetUuid
+    name: GetUuid
+    nameWithType: IMessage.GetUuid
+    fullName: FlowR.Core.Message.IMessage.GetUuid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.IMessage.GetRequestedAction
+  commentId: M:FlowR.Core.Message.IMessage.GetRequestedAction
+  parent: FlowR.Core.Message.IMessage
+  name: GetRequestedAction()
+  nameWithType: IMessage.GetRequestedAction()
+  fullName: FlowR.Core.Message.IMessage.GetRequestedAction()
+  spec.csharp:
+  - uid: FlowR.Core.Message.IMessage.GetRequestedAction
+    name: GetRequestedAction
+    nameWithType: IMessage.GetRequestedAction
+    fullName: FlowR.Core.Message.IMessage.GetRequestedAction
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.IMessage.GetRequestedAction
+    name: GetRequestedAction
+    nameWithType: IMessage.GetRequestedAction
+    fullName: FlowR.Core.Message.IMessage.GetRequestedAction
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.IMessage.GetArgumentValues
+  commentId: M:FlowR.Core.Message.IMessage.GetArgumentValues
+  parent: FlowR.Core.Message.IMessage
+  name: GetArgumentValues()
+  nameWithType: IMessage.GetArgumentValues()
+  fullName: FlowR.Core.Message.IMessage.GetArgumentValues()
+  spec.csharp:
+  - uid: FlowR.Core.Message.IMessage.GetArgumentValues
+    name: GetArgumentValues
+    nameWithType: IMessage.GetArgumentValues
+    fullName: FlowR.Core.Message.IMessage.GetArgumentValues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.IMessage.GetArgumentValues
+    name: GetArgumentValues
+    nameWithType: IMessage.GetArgumentValues
+    fullName: FlowR.Core.Message.IMessage.GetArgumentValues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.IMessage
+  commentId: T:FlowR.Core.Message.IMessage
+  parent: FlowR.Core.Message
+  name: IMessage
+  nameWithType: IMessage
+  fullName: FlowR.Core.Message.IMessage
+- uid: FlowR.Core.Message.IMessageResponse.SetResponse*
+  commentId: Overload:FlowR.Core.Message.IMessageResponse.SetResponse
+  name: SetResponse
+  nameWithType: IMessageResponse.SetResponse
+  fullName: FlowR.Core.Message.IMessageResponse.SetResponse
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: FlowR.Core.Message.IMessageResponse.GetResponse*
+  commentId: Overload:FlowR.Core.Message.IMessageResponse.GetResponse
+  name: GetResponse
+  nameWithType: IMessageResponse.GetResponse
+  fullName: FlowR.Core.Message.IMessageResponse.GetResponse

@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.ApplicationRegistry
+  commentId: T:FlowR.Core.ApplicationRegistry
+  id: ApplicationRegistry
+  parent: FlowR.Core
+  children:
+  - FlowR.Core.ApplicationRegistry.Get(System.String)
+  - FlowR.Core.ApplicationRegistry.RegisterComponent(FlowR.Core.Node)
+  - FlowR.Core.ApplicationRegistry.UnregisterComponent(FlowR.Core.Node)
+  langs:
+  - csharp
+  - vb
+  name: ApplicationRegistry
+  nameWithType: ApplicationRegistry
+  fullName: FlowR.Core.ApplicationRegistry
+  type: Class
+  source:
+    remote:
+      path: FlowR.Core/ApplicationRegistry.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: ApplicationRegistry
+    path: FlowR.Core/ApplicationRegistry.cs
+    startLine: 7
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nApplication DomNode registry, used to fast access uuid->DomNode\n"
+  example: []
+  syntax:
+    content: 'public class ApplicationRegistry : object'
+    content.vb: >-
+      Public Class ApplicationRegistry
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: FlowR.Core.ApplicationRegistry.RegisterComponent(FlowR.Core.Node)
+  commentId: M:FlowR.Core.ApplicationRegistry.RegisterComponent(FlowR.Core.Node)
+  id: RegisterComponent(FlowR.Core.Node)
+  parent: FlowR.Core.ApplicationRegistry
+  langs:
+  - csharp
+  - vb
+  name: RegisterComponent(Node)
+  nameWithType: ApplicationRegistry.RegisterComponent(Node)
+  fullName: FlowR.Core.ApplicationRegistry.RegisterComponent(FlowR.Core.Node)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/ApplicationRegistry.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: RegisterComponent
+    path: FlowR.Core/ApplicationRegistry.cs
+    startLine: 15
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nAdd to Registry\n"
+  example: []
+  syntax:
+    content: public void RegisterComponent(Node node)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    content.vb: Public Sub RegisterComponent(node As Node)
+  overload: FlowR.Core.ApplicationRegistry.RegisterComponent*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: FlowR.Core.ApplicationRegistry.UnregisterComponent(FlowR.Core.Node)
+  commentId: M:FlowR.Core.ApplicationRegistry.UnregisterComponent(FlowR.Core.Node)
+  id: UnregisterComponent(FlowR.Core.Node)
+  parent: FlowR.Core.ApplicationRegistry
+  langs:
+  - csharp
+  - vb
+  name: UnregisterComponent(Node)
+  nameWithType: ApplicationRegistry.UnregisterComponent(Node)
+  fullName: FlowR.Core.ApplicationRegistry.UnregisterComponent(FlowR.Core.Node)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/ApplicationRegistry.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: UnregisterComponent
+    path: FlowR.Core/ApplicationRegistry.cs
+    startLine: 24
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nRemove from Registry\n"
+  example: []
+  syntax:
+    content: public void UnregisterComponent(Node node)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    content.vb: Public Sub UnregisterComponent(node As Node)
+  overload: FlowR.Core.ApplicationRegistry.UnregisterComponent*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: FlowR.Core.ApplicationRegistry.Get(System.String)
+  commentId: M:FlowR.Core.ApplicationRegistry.Get(System.String)
+  id: Get(System.String)
+  parent: FlowR.Core.ApplicationRegistry
+  langs:
+  - csharp
+  - vb
+  name: Get(String)
+  nameWithType: ApplicationRegistry.Get(String)
+  fullName: FlowR.Core.ApplicationRegistry.Get(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/ApplicationRegistry.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Get
+    path: FlowR.Core/ApplicationRegistry.cs
+    startLine: 34
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nGet a DomNode from registry\n"
+  example: []
+  syntax:
+    content: public Node Get(string uuid)
+    parameters:
+    - id: uuid
+      type: System.String
+      description: ''
+    return:
+      type: FlowR.Core.Node
+      description: ''
+    content.vb: Public Function Get(uuid As String) As Node
+  overload: FlowR.Core.ApplicationRegistry.Get*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: FlowR.Core
+  commentId: N:FlowR.Core
+  name: FlowR.Core
+  nameWithType: FlowR.Core
+  fullName: FlowR.Core
+- uid: FlowR.Core.ApplicationRegistry.RegisterComponent*
+  commentId: Overload:FlowR.Core.ApplicationRegistry.RegisterComponent
+  name: RegisterComponent
+  nameWithType: ApplicationRegistry.RegisterComponent
+  fullName: FlowR.Core.ApplicationRegistry.RegisterComponent
+- uid: FlowR.Core.Node
+  commentId: T:FlowR.Core.Node
+  parent: FlowR.Core
+  name: Node
+  nameWithType: Node
+  fullName: FlowR.Core.Node
+- uid: FlowR.Core.ApplicationRegistry.UnregisterComponent*
+  commentId: Overload:FlowR.Core.ApplicationRegistry.UnregisterComponent
+  name: UnregisterComponent
+  nameWithType: ApplicationRegistry.UnregisterComponent
+  fullName: FlowR.Core.ApplicationRegistry.UnregisterComponent
+- uid: FlowR.Core.ApplicationRegistry.Get*
+  commentId: Overload:FlowR.Core.ApplicationRegistry.Get
+  name: Get
+  nameWithType: ApplicationRegistry.Get
+  fullName: FlowR.Core.ApplicationRegistry.Get
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

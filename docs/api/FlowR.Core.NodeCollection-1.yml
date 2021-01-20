@@ -1,0 +1,883 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.NodeCollection`1
+  commentId: T:FlowR.Core.NodeCollection`1
+  id: NodeCollection`1
+  parent: FlowR.Core
+  children:
+  - FlowR.Core.NodeCollection`1.#ctor(FlowR.Core.Node)
+  - FlowR.Core.NodeCollection`1.AfterAdded
+  - FlowR.Core.NodeCollection`1.AfterChanged
+  - FlowR.Core.NodeCollection`1.AfterRemoved
+  - FlowR.Core.NodeCollection`1.BeforeAdded
+  - FlowR.Core.NodeCollection`1.BeforeChanged
+  - FlowR.Core.NodeCollection`1.BeforeRemoved
+  - FlowR.Core.NodeCollection`1.Count
+  - FlowR.Core.NodeCollection`1.Exists(System.String)
+  - FlowR.Core.NodeCollection`1.Get(System.String)
+  - FlowR.Core.NodeCollection`1.GetFirst
+  - FlowR.Core.NodeCollection`1.GetLast
+  - FlowR.Core.NodeCollection`1.Owner
+  - FlowR.Core.NodeCollection`1.Set(System.String,`0)
+  - FlowR.Core.NodeCollection`1.ToDictionary
+  - FlowR.Core.NodeCollection`1.Unset(System.String)
+  langs:
+  - csharp
+  - vb
+  name: NodeCollection<T>
+  nameWithType: NodeCollection<T>
+  fullName: FlowR.Core.NodeCollection<T>
+  type: Class
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: NodeCollection
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 10
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nBase Observable collection with Owner\n"
+  example: []
+  syntax:
+    content: 'public abstract class NodeCollection<T> : object'
+    typeParameters:
+    - id: T
+      description: ''
+    content.vb: >-
+      Public MustInherit Class NodeCollection(Of T)
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - FlowR.Core.NodeCollectionAttribute
+  - FlowR.Core.NodeCollectionEvent
+  - FlowR.Core.NodeCollectionNode
+  - FlowR.Core.NodeCollectionProperty
+  nameWithType.vb: NodeCollection(Of T)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: FlowR.Core.NodeCollection(Of T)
+  name.vb: NodeCollection(Of T)
+- uid: FlowR.Core.NodeCollection`1.AfterAdded
+  commentId: F:FlowR.Core.NodeCollection`1.AfterAdded
+  id: AfterAdded
+  parent: FlowR.Core.NodeCollection`1
+  langs:
+  - csharp
+  - vb
+  name: AfterAdded
+  nameWithType: NodeCollection<T>.AfterAdded
+  fullName: FlowR.Core.NodeCollection<T>.AfterAdded
+  type: Field
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: AfterAdded
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 17
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nFire after add to collection\n"
+  example: []
+  syntax:
+    content: public EventHandler AfterAdded
+    return:
+      type: EventHandler
+    content.vb: Public AfterAdded As EventHandler
+  nameWithType.vb: NodeCollection(Of T).AfterAdded
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.NodeCollection(Of T).AfterAdded
+- uid: FlowR.Core.NodeCollection`1.AfterChanged
+  commentId: F:FlowR.Core.NodeCollection`1.AfterChanged
+  id: AfterChanged
+  parent: FlowR.Core.NodeCollection`1
+  langs:
+  - csharp
+  - vb
+  name: AfterChanged
+  nameWithType: NodeCollection<T>.AfterChanged
+  fullName: FlowR.Core.NodeCollection<T>.AfterChanged
+  type: Field
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: AfterChanged
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 22
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nFire after a change in collection\n"
+  example: []
+  syntax:
+    content: public EventHandler AfterChanged
+    return:
+      type: EventHandler
+    content.vb: Public AfterChanged As EventHandler
+  nameWithType.vb: NodeCollection(Of T).AfterChanged
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.NodeCollection(Of T).AfterChanged
+- uid: FlowR.Core.NodeCollection`1.AfterRemoved
+  commentId: F:FlowR.Core.NodeCollection`1.AfterRemoved
+  id: AfterRemoved
+  parent: FlowR.Core.NodeCollection`1
+  langs:
+  - csharp
+  - vb
+  name: AfterRemoved
+  nameWithType: NodeCollection<T>.AfterRemoved
+  fullName: FlowR.Core.NodeCollection<T>.AfterRemoved
+  type: Field
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: AfterRemoved
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 27
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nFire after remove from collection\n"
+  example: []
+  syntax:
+    content: public EventHandler AfterRemoved
+    return:
+      type: EventHandler
+    content.vb: Public AfterRemoved As EventHandler
+  nameWithType.vb: NodeCollection(Of T).AfterRemoved
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.NodeCollection(Of T).AfterRemoved
+- uid: FlowR.Core.NodeCollection`1.BeforeAdded
+  commentId: F:FlowR.Core.NodeCollection`1.BeforeAdded
+  id: BeforeAdded
+  parent: FlowR.Core.NodeCollection`1
+  langs:
+  - csharp
+  - vb
+  name: BeforeAdded
+  nameWithType: NodeCollection<T>.BeforeAdded
+  fullName: FlowR.Core.NodeCollection<T>.BeforeAdded
+  type: Field
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: BeforeAdded
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 32
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nFire Before add to collection\n"
+  example: []
+  syntax:
+    content: public EventHandler BeforeAdded
+    return:
+      type: EventHandler
+    content.vb: Public BeforeAdded As EventHandler
+  nameWithType.vb: NodeCollection(Of T).BeforeAdded
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.NodeCollection(Of T).BeforeAdded
+- uid: FlowR.Core.NodeCollection`1.BeforeChanged
+  commentId: F:FlowR.Core.NodeCollection`1.BeforeChanged
+  id: BeforeChanged
+  parent: FlowR.Core.NodeCollection`1
+  langs:
+  - csharp
+  - vb
+  name: BeforeChanged
+  nameWithType: NodeCollection<T>.BeforeChanged
+  fullName: FlowR.Core.NodeCollection<T>.BeforeChanged
+  type: Field
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: BeforeChanged
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 38
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nFire before a change in collection\n"
+  example: []
+  syntax:
+    content: public EventHandler BeforeChanged
+    return:
+      type: EventHandler
+    content.vb: Public BeforeChanged As EventHandler
+  nameWithType.vb: NodeCollection(Of T).BeforeChanged
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.NodeCollection(Of T).BeforeChanged
+- uid: FlowR.Core.NodeCollection`1.BeforeRemoved
+  commentId: F:FlowR.Core.NodeCollection`1.BeforeRemoved
+  id: BeforeRemoved
+  parent: FlowR.Core.NodeCollection`1
+  langs:
+  - csharp
+  - vb
+  name: BeforeRemoved
+  nameWithType: NodeCollection<T>.BeforeRemoved
+  fullName: FlowR.Core.NodeCollection<T>.BeforeRemoved
+  type: Field
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: BeforeRemoved
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 43
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nFire before remove from collection\n"
+  example: []
+  syntax:
+    content: public EventHandler BeforeRemoved
+    return:
+      type: EventHandler
+    content.vb: Public BeforeRemoved As EventHandler
+  nameWithType.vb: NodeCollection(Of T).BeforeRemoved
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.NodeCollection(Of T).BeforeRemoved
+- uid: FlowR.Core.NodeCollection`1.#ctor(FlowR.Core.Node)
+  commentId: M:FlowR.Core.NodeCollection`1.#ctor(FlowR.Core.Node)
+  id: '#ctor(FlowR.Core.Node)'
+  parent: FlowR.Core.NodeCollection`1
+  langs:
+  - csharp
+  - vb
+  name: NodeCollection(Node)
+  nameWithType: NodeCollection<T>.NodeCollection(Node)
+  fullName: FlowR.Core.NodeCollection<T>.NodeCollection(FlowR.Core.Node)
+  type: Constructor
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: .ctor
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 49
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nConstructor\n"
+  example: []
+  syntax:
+    content: protected NodeCollection(Node owner)
+    parameters:
+    - id: owner
+      type: FlowR.Core.Node
+      description: The DomNode owner of the collection
+    content.vb: Protected Sub New(owner As Node)
+  overload: FlowR.Core.NodeCollection`1.#ctor*
+  nameWithType.vb: NodeCollection(Of T).NodeCollection(Node)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: FlowR.Core.NodeCollection(Of T).NodeCollection(FlowR.Core.Node)
+- uid: FlowR.Core.NodeCollection`1.Owner
+  commentId: P:FlowR.Core.NodeCollection`1.Owner
+  id: Owner
+  parent: FlowR.Core.NodeCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Owner
+  nameWithType: NodeCollection<T>.Owner
+  fullName: FlowR.Core.NodeCollection<T>.Owner
+  type: Property
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Owner
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 57
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nDomNode parent\n"
+  example: []
+  syntax:
+    content: public Node Owner { get; set; }
+    parameters: []
+    return:
+      type: FlowR.Core.Node
+    content.vb: Public Property Owner As Node
+  overload: FlowR.Core.NodeCollection`1.Owner*
+  nameWithType.vb: NodeCollection(Of T).Owner
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Owner
+- uid: FlowR.Core.NodeCollection`1.Set(System.String,`0)
+  commentId: M:FlowR.Core.NodeCollection`1.Set(System.String,`0)
+  id: Set(System.String,`0)
+  parent: FlowR.Core.NodeCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Set(String, T)
+  nameWithType: NodeCollection<T>.Set(String, T)
+  fullName: FlowR.Core.NodeCollection<T>.Set(System.String, T)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Set
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 64
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nSet an item in collection\n"
+  example: []
+  syntax:
+    content: protected void Set(string name, T value)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    - id: value
+      type: '{T}'
+      description: ''
+    content.vb: Protected Sub Set(name As String, value As T)
+  overload: FlowR.Core.NodeCollection`1.Set*
+  nameWithType.vb: NodeCollection(Of T).Set(String, T)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Set(System.String, T)
+- uid: FlowR.Core.NodeCollection`1.Unset(System.String)
+  commentId: M:FlowR.Core.NodeCollection`1.Unset(System.String)
+  id: Unset(System.String)
+  parent: FlowR.Core.NodeCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Unset(String)
+  nameWithType: NodeCollection<T>.Unset(String)
+  fullName: FlowR.Core.NodeCollection<T>.Unset(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Unset
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 114
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nRemove an item in collection\n"
+  example: []
+  syntax:
+    content: protected void Unset(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    content.vb: Protected Sub Unset(name As String)
+  overload: FlowR.Core.NodeCollection`1.Unset*
+  nameWithType.vb: NodeCollection(Of T).Unset(String)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Unset(System.String)
+- uid: FlowR.Core.NodeCollection`1.Exists(System.String)
+  commentId: M:FlowR.Core.NodeCollection`1.Exists(System.String)
+  id: Exists(System.String)
+  parent: FlowR.Core.NodeCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Exists(String)
+  nameWithType: NodeCollection<T>.Exists(String)
+  fullName: FlowR.Core.NodeCollection<T>.Exists(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Exists
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 130
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nReturn if an item is present in collection\n"
+  example: []
+  syntax:
+    content: protected bool Exists(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Function Exists(name As String) As Boolean
+  overload: FlowR.Core.NodeCollection`1.Exists*
+  nameWithType.vb: NodeCollection(Of T).Exists(String)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Exists(System.String)
+- uid: FlowR.Core.NodeCollection`1.Get(System.String)
+  commentId: M:FlowR.Core.NodeCollection`1.Get(System.String)
+  id: Get(System.String)
+  parent: FlowR.Core.NodeCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Get(String)
+  nameWithType: NodeCollection<T>.Get(String)
+  fullName: FlowR.Core.NodeCollection<T>.Get(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Get
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 140
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nReturn an item from collection\n"
+  example: []
+  syntax:
+    content: protected T Get(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    return:
+      type: '{T}'
+      description: ''
+    content.vb: Protected Function Get(name As String) As T
+  overload: FlowR.Core.NodeCollection`1.Get*
+  nameWithType.vb: NodeCollection(Of T).Get(String)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Get(System.String)
+- uid: FlowR.Core.NodeCollection`1.Count
+  commentId: M:FlowR.Core.NodeCollection`1.Count
+  id: Count
+  parent: FlowR.Core.NodeCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Count()
+  nameWithType: NodeCollection<T>.Count()
+  fullName: FlowR.Core.NodeCollection<T>.Count()
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Count
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 149
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nReturn collection length\n"
+  example: []
+  syntax:
+    content: public int Count()
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Function Count As Integer
+  overload: FlowR.Core.NodeCollection`1.Count*
+  nameWithType.vb: NodeCollection(Of T).Count()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Count()
+- uid: FlowR.Core.NodeCollection`1.GetFirst
+  commentId: M:FlowR.Core.NodeCollection`1.GetFirst
+  id: GetFirst
+  parent: FlowR.Core.NodeCollection`1
+  langs:
+  - csharp
+  - vb
+  name: GetFirst()
+  nameWithType: NodeCollection<T>.GetFirst()
+  fullName: FlowR.Core.NodeCollection<T>.GetFirst()
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: GetFirst
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 158
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nReturn first item of collection\n"
+  example: []
+  syntax:
+    content: public T GetFirst()
+    return:
+      type: '{T}'
+      description: ''
+    content.vb: Public Function GetFirst As T
+  overload: FlowR.Core.NodeCollection`1.GetFirst*
+  nameWithType.vb: NodeCollection(Of T).GetFirst()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.NodeCollection(Of T).GetFirst()
+- uid: FlowR.Core.NodeCollection`1.GetLast
+  commentId: M:FlowR.Core.NodeCollection`1.GetLast
+  id: GetLast
+  parent: FlowR.Core.NodeCollection`1
+  langs:
+  - csharp
+  - vb
+  name: GetLast()
+  nameWithType: NodeCollection<T>.GetLast()
+  fullName: FlowR.Core.NodeCollection<T>.GetLast()
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: GetLast
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 167
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nReturn last item of collection\n"
+  example: []
+  syntax:
+    content: public T GetLast()
+    return:
+      type: '{T}'
+      description: ''
+    content.vb: Public Function GetLast As T
+  overload: FlowR.Core.NodeCollection`1.GetLast*
+  nameWithType.vb: NodeCollection(Of T).GetLast()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.NodeCollection(Of T).GetLast()
+- uid: FlowR.Core.NodeCollection`1.ToDictionary
+  commentId: M:FlowR.Core.NodeCollection`1.ToDictionary
+  id: ToDictionary
+  parent: FlowR.Core.NodeCollection`1
+  langs:
+  - csharp
+  - vb
+  name: ToDictionary()
+  nameWithType: NodeCollection<T>.ToDictionary()
+  fullName: FlowR.Core.NodeCollection<T>.ToDictionary()
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: ToDictionary
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 176
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nReturn Collection\n"
+  example: []
+  syntax:
+    content: public Dictionary<string, T> ToDictionary()
+    return:
+      type: Dictionary{System.String,{T}}
+      description: ''
+    content.vb: Public Function ToDictionary As Dictionary(Of String, T)
+  overload: FlowR.Core.NodeCollection`1.ToDictionary*
+  nameWithType.vb: NodeCollection(Of T).ToDictionary()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.NodeCollection(Of T).ToDictionary()
+references:
+- uid: FlowR.Core
+  commentId: N:FlowR.Core
+  name: FlowR.Core
+  nameWithType: FlowR.Core
+  fullName: FlowR.Core
+- uid: EventHandler
+  isExternal: true
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: EventHandler
+- uid: FlowR.Core.NodeCollection`1.#ctor*
+  commentId: Overload:FlowR.Core.NodeCollection`1.#ctor
+  name: NodeCollection
+  nameWithType: NodeCollection<T>.NodeCollection
+  fullName: FlowR.Core.NodeCollection<T>.NodeCollection
+  nameWithType.vb: NodeCollection(Of T).NodeCollection
+  fullName.vb: FlowR.Core.NodeCollection(Of T).NodeCollection
+- uid: FlowR.Core.Node
+  commentId: T:FlowR.Core.Node
+  parent: FlowR.Core
+  name: Node
+  nameWithType: Node
+  fullName: FlowR.Core.Node
+- uid: FlowR.Core.NodeCollection`1.Owner*
+  commentId: Overload:FlowR.Core.NodeCollection`1.Owner
+  name: Owner
+  nameWithType: NodeCollection<T>.Owner
+  fullName: FlowR.Core.NodeCollection<T>.Owner
+  nameWithType.vb: NodeCollection(Of T).Owner
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Owner
+- uid: FlowR.Core.NodeCollection`1.Set*
+  commentId: Overload:FlowR.Core.NodeCollection`1.Set
+  name: Set
+  nameWithType: NodeCollection<T>.Set
+  fullName: FlowR.Core.NodeCollection<T>.Set
+  nameWithType.vb: NodeCollection(Of T).Set
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Set
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: FlowR.Core.NodeCollection`1.Unset*
+  commentId: Overload:FlowR.Core.NodeCollection`1.Unset
+  name: Unset
+  nameWithType: NodeCollection<T>.Unset
+  fullName: FlowR.Core.NodeCollection<T>.Unset
+  nameWithType.vb: NodeCollection(Of T).Unset
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Unset
+- uid: FlowR.Core.NodeCollection`1.Exists*
+  commentId: Overload:FlowR.Core.NodeCollection`1.Exists
+  name: Exists
+  nameWithType: NodeCollection<T>.Exists
+  fullName: FlowR.Core.NodeCollection<T>.Exists
+  nameWithType.vb: NodeCollection(Of T).Exists
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Exists
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: FlowR.Core.NodeCollection`1.Get*
+  commentId: Overload:FlowR.Core.NodeCollection`1.Get
+  name: Get
+  nameWithType: NodeCollection<T>.Get
+  fullName: FlowR.Core.NodeCollection<T>.Get
+  nameWithType.vb: NodeCollection(Of T).Get
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Get
+- uid: FlowR.Core.NodeCollection`1.Count*
+  commentId: Overload:FlowR.Core.NodeCollection`1.Count
+  name: Count
+  nameWithType: NodeCollection<T>.Count
+  fullName: FlowR.Core.NodeCollection<T>.Count
+  nameWithType.vb: NodeCollection(Of T).Count
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Count
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: FlowR.Core.NodeCollection`1.GetFirst*
+  commentId: Overload:FlowR.Core.NodeCollection`1.GetFirst
+  name: GetFirst
+  nameWithType: NodeCollection<T>.GetFirst
+  fullName: FlowR.Core.NodeCollection<T>.GetFirst
+  nameWithType.vb: NodeCollection(Of T).GetFirst
+  fullName.vb: FlowR.Core.NodeCollection(Of T).GetFirst
+- uid: FlowR.Core.NodeCollection`1.GetLast*
+  commentId: Overload:FlowR.Core.NodeCollection`1.GetLast
+  name: GetLast
+  nameWithType: NodeCollection<T>.GetLast
+  fullName: FlowR.Core.NodeCollection<T>.GetLast
+  nameWithType.vb: NodeCollection(Of T).GetLast
+  fullName.vb: FlowR.Core.NodeCollection(Of T).GetLast
+- uid: FlowR.Core.NodeCollection`1.ToDictionary*
+  commentId: Overload:FlowR.Core.NodeCollection`1.ToDictionary
+  name: ToDictionary
+  nameWithType: NodeCollection<T>.ToDictionary
+  fullName: FlowR.Core.NodeCollection<T>.ToDictionary
+  nameWithType.vb: NodeCollection(Of T).ToDictionary
+  fullName.vb: FlowR.Core.NodeCollection(Of T).ToDictionary
+- uid: Dictionary{System.String,{T}}
+  commentId: '!:Dictionary{System.String,`0}'
+  definition: Dictionary`2
+  name: Dictionary<String, T>
+  nameWithType: Dictionary<String, T>
+  fullName: Dictionary<System.String, T>
+  nameWithType.vb: Dictionary(Of String, T)
+  fullName.vb: Dictionary(Of System.String, T)
+  name.vb: Dictionary(Of String, T)
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

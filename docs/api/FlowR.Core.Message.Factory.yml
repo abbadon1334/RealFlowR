@@ -1,0 +1,976 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.Message.Factory
+  commentId: T:FlowR.Core.Message.Factory
+  id: Factory
+  parent: FlowR.Core.Message
+  children:
+  - FlowR.Core.Message.Factory.MessageAddMethod(FlowR.Core.Node,System.String,System.String)
+  - FlowR.Core.Message.Factory.MessageCallMethod(FlowR.Core.Node,System.String,System.String[])
+  - FlowR.Core.Message.Factory.MessageCreate(FlowR.Core.Node)
+  - FlowR.Core.Message.Factory.MessageGetProperty(FlowR.Core.Node,System.String)
+  - FlowR.Core.Message.Factory.MessageGlobalGetPropertyWaitResponse(System.String)
+  - FlowR.Core.Message.Factory.MessageGlobalMethodCall(System.String,System.String[])
+  - FlowR.Core.Message.Factory.MessageGlobalMethodCallWaitResponse(System.String,System.String[])
+  - FlowR.Core.Message.Factory.MessageMethodCall(FlowR.Core.Node,System.String,System.String[])
+  - FlowR.Core.Message.Factory.MessageMethodCallWaitResponse(FlowR.Core.Node,System.String,System.String[])
+  - FlowR.Core.Message.Factory.MessageRemove(FlowR.Core.Node)
+  - FlowR.Core.Message.Factory.MessageRemoveAttribute(FlowR.Core.Node,System.String)
+  - FlowR.Core.Message.Factory.MessageSetAttribute(FlowR.Core.Node,System.String,System.String)
+  - FlowR.Core.Message.Factory.MessageSetGlobalProperty(System.String,System.String)
+  - FlowR.Core.Message.Factory.MessageSetProperty(FlowR.Core.Node,System.String,System.String)
+  - FlowR.Core.Message.Factory.MessageSetText(FlowR.Core.Node,System.String)
+  - FlowR.Core.Message.Factory.MessageStartListenEvent(FlowR.Core.Node,System.String)
+  - FlowR.Core.Message.Factory.MessageStopListenEvent(FlowR.Core.Node,System.String)
+  langs:
+  - csharp
+  - vb
+  name: Factory
+  nameWithType: Factory
+  fullName: FlowR.Core.Message.Factory
+  type: Class
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Factory
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 7
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nMessage factory class\n"
+  example: []
+  syntax:
+    content: 'public static class Factory : object'
+    content.vb: >-
+      Public Module Factory
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: FlowR.Core.Message.Factory.MessageCreate(FlowR.Core.Node)
+  commentId: M:FlowR.Core.Message.Factory.MessageCreate(FlowR.Core.Node)
+  id: MessageCreate(FlowR.Core.Node)
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageCreate(Node)
+  nameWithType: Factory.MessageCreate(Node)
+  fullName: FlowR.Core.Message.Factory.MessageCreate(FlowR.Core.Node)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageCreate
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 14
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElement\n"
+  example: []
+  syntax:
+    content: public static IMessage MessageCreate(Node node)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessage
+      description: ''
+    content.vb: Public Shared Function MessageCreate(node As Node) As IMessage
+  overload: FlowR.Core.Message.Factory.MessageCreate*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: FlowR.Core.Message.Factory.MessageSetAttribute(FlowR.Core.Node,System.String,System.String)
+  commentId: M:FlowR.Core.Message.Factory.MessageSetAttribute(FlowR.Core.Node,System.String,System.String)
+  id: MessageSetAttribute(FlowR.Core.Node,System.String,System.String)
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageSetAttribute(Node, String, String)
+  nameWithType: Factory.MessageSetAttribute(Node, String, String)
+  fullName: FlowR.Core.Message.Factory.MessageSetAttribute(FlowR.Core.Node, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageSetAttribute
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 36
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElement\n"
+  example: []
+  syntax:
+    content: public static IMessage MessageSetAttribute(Node node, string name, string value)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    - id: name
+      type: System.String
+      description: ''
+    - id: value
+      type: System.String
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessage
+      description: ''
+    content.vb: Public Shared Function MessageSetAttribute(node As Node, name As String, value As String) As IMessage
+  overload: FlowR.Core.Message.Factory.MessageSetAttribute*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: FlowR.Core.Message.Factory.MessageRemoveAttribute(FlowR.Core.Node,System.String)
+  commentId: M:FlowR.Core.Message.Factory.MessageRemoveAttribute(FlowR.Core.Node,System.String)
+  id: MessageRemoveAttribute(FlowR.Core.Node,System.String)
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageRemoveAttribute(Node, String)
+  nameWithType: Factory.MessageRemoveAttribute(Node, String)
+  fullName: FlowR.Core.Message.Factory.MessageRemoveAttribute(FlowR.Core.Node, System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageRemoveAttribute
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 47
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElement\n"
+  example: []
+  syntax:
+    content: public static IMessage MessageRemoveAttribute(Node node, string name)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    - id: name
+      type: System.String
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessage
+      description: ''
+    content.vb: Public Shared Function MessageRemoveAttribute(node As Node, name As String) As IMessage
+  overload: FlowR.Core.Message.Factory.MessageRemoveAttribute*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: FlowR.Core.Message.Factory.MessageRemove(FlowR.Core.Node)
+  commentId: M:FlowR.Core.Message.Factory.MessageRemove(FlowR.Core.Node)
+  id: MessageRemove(FlowR.Core.Node)
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageRemove(Node)
+  nameWithType: Factory.MessageRemove(Node)
+  fullName: FlowR.Core.Message.Factory.MessageRemove(FlowR.Core.Node)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageRemove
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 57
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElement\n"
+  example: []
+  syntax:
+    content: public static IMessage MessageRemove(Node node)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessage
+      description: ''
+    content.vb: Public Shared Function MessageRemove(node As Node) As IMessage
+  overload: FlowR.Core.Message.Factory.MessageRemove*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: FlowR.Core.Message.Factory.MessageStartListenEvent(FlowR.Core.Node,System.String)
+  commentId: M:FlowR.Core.Message.Factory.MessageStartListenEvent(FlowR.Core.Node,System.String)
+  id: MessageStartListenEvent(FlowR.Core.Node,System.String)
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageStartListenEvent(Node, String)
+  nameWithType: Factory.MessageStartListenEvent(Node, String)
+  fullName: FlowR.Core.Message.Factory.MessageStartListenEvent(FlowR.Core.Node, System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageStartListenEvent
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 68
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElement\n"
+  example: []
+  syntax:
+    content: public static IMessage MessageStartListenEvent(Node node, string eventName)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    - id: eventName
+      type: System.String
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessage
+      description: ''
+    content.vb: Public Shared Function MessageStartListenEvent(node As Node, eventName As String) As IMessage
+  overload: FlowR.Core.Message.Factory.MessageStartListenEvent*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: FlowR.Core.Message.Factory.MessageStopListenEvent(FlowR.Core.Node,System.String)
+  commentId: M:FlowR.Core.Message.Factory.MessageStopListenEvent(FlowR.Core.Node,System.String)
+  id: MessageStopListenEvent(FlowR.Core.Node,System.String)
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageStopListenEvent(Node, String)
+  nameWithType: Factory.MessageStopListenEvent(Node, String)
+  fullName: FlowR.Core.Message.Factory.MessageStopListenEvent(FlowR.Core.Node, System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageStopListenEvent
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 79
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElement\n"
+  example: []
+  syntax:
+    content: public static IMessage MessageStopListenEvent(Node node, string eventName)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    - id: eventName
+      type: System.String
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessage
+      description: ''
+    content.vb: Public Shared Function MessageStopListenEvent(node As Node, eventName As String) As IMessage
+  overload: FlowR.Core.Message.Factory.MessageStopListenEvent*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: FlowR.Core.Message.Factory.MessageSetText(FlowR.Core.Node,System.String)
+  commentId: M:FlowR.Core.Message.Factory.MessageSetText(FlowR.Core.Node,System.String)
+  id: MessageSetText(FlowR.Core.Node,System.String)
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageSetText(Node, String)
+  nameWithType: Factory.MessageSetText(Node, String)
+  fullName: FlowR.Core.Message.Factory.MessageSetText(FlowR.Core.Node, System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageSetText
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 90
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElement\n"
+  example: []
+  syntax:
+    content: public static IMessage MessageSetText(Node node, string text)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    - id: text
+      type: System.String
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessage
+      description: ''
+    content.vb: Public Shared Function MessageSetText(node As Node, text As String) As IMessage
+  overload: FlowR.Core.Message.Factory.MessageSetText*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: FlowR.Core.Message.Factory.MessageSetProperty(FlowR.Core.Node,System.String,System.String)
+  commentId: M:FlowR.Core.Message.Factory.MessageSetProperty(FlowR.Core.Node,System.String,System.String)
+  id: MessageSetProperty(FlowR.Core.Node,System.String,System.String)
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageSetProperty(Node, String, String)
+  nameWithType: Factory.MessageSetProperty(Node, String, String)
+  fullName: FlowR.Core.Message.Factory.MessageSetProperty(FlowR.Core.Node, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageSetProperty
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 102
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElement\n"
+  example: []
+  syntax:
+    content: public static IMessage MessageSetProperty(Node node, string name, string value)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    - id: name
+      type: System.String
+      description: ''
+    - id: value
+      type: System.String
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessage
+      description: ''
+    content.vb: Public Shared Function MessageSetProperty(node As Node, name As String, value As String) As IMessage
+  overload: FlowR.Core.Message.Factory.MessageSetProperty*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: FlowR.Core.Message.Factory.MessageCallMethod(FlowR.Core.Node,System.String,System.String[])
+  commentId: M:FlowR.Core.Message.Factory.MessageCallMethod(FlowR.Core.Node,System.String,System.String[])
+  id: MessageCallMethod(FlowR.Core.Node,System.String,System.String[])
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageCallMethod(Node, String, String[])
+  nameWithType: Factory.MessageCallMethod(Node, String, String[])
+  fullName: FlowR.Core.Message.Factory.MessageCallMethod(FlowR.Core.Node, System.String, System.String[])
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageCallMethod
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 114
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElement\n"
+  example: []
+  syntax:
+    content: public static IMessage MessageCallMethod(Node node, string name, params string[] args)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    - id: name
+      type: System.String
+      description: ''
+    - id: args
+      type: System.String[]
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessage
+      description: ''
+    content.vb: Public Shared Function MessageCallMethod(node As Node, name As String, ParamArray args As String()) As IMessage
+  overload: FlowR.Core.Message.Factory.MessageCallMethod*
+  nameWithType.vb: Factory.MessageCallMethod(Node, String, String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: FlowR.Core.Message.Factory.MessageCallMethod(FlowR.Core.Node, System.String, System.String())
+  name.vb: MessageCallMethod(Node, String, String())
+- uid: FlowR.Core.Message.Factory.MessageAddMethod(FlowR.Core.Node,System.String,System.String)
+  commentId: M:FlowR.Core.Message.Factory.MessageAddMethod(FlowR.Core.Node,System.String,System.String)
+  id: MessageAddMethod(FlowR.Core.Node,System.String,System.String)
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageAddMethod(Node, String, String)
+  nameWithType: Factory.MessageAddMethod(Node, String, String)
+  fullName: FlowR.Core.Message.Factory.MessageAddMethod(FlowR.Core.Node, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageAddMethod
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 126
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElement\n"
+  example: []
+  syntax:
+    content: public static IMessage MessageAddMethod(Node node, string name, string jsStatement)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    - id: name
+      type: System.String
+      description: ''
+    - id: jsStatement
+      type: System.String
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessage
+      description: ''
+    content.vb: Public Shared Function MessageAddMethod(node As Node, name As String, jsStatement As String) As IMessage
+  overload: FlowR.Core.Message.Factory.MessageAddMethod*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: FlowR.Core.Message.Factory.MessageGetProperty(FlowR.Core.Node,System.String)
+  commentId: M:FlowR.Core.Message.Factory.MessageGetProperty(FlowR.Core.Node,System.String)
+  id: MessageGetProperty(FlowR.Core.Node,System.String)
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageGetProperty(Node, String)
+  nameWithType: Factory.MessageGetProperty(Node, String)
+  fullName: FlowR.Core.Message.Factory.MessageGetProperty(FlowR.Core.Node, System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageGetProperty
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 137
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElementWithResponse\n"
+  example: []
+  syntax:
+    content: public static IMessageResponse MessageGetProperty(Node node, string name)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    - id: name
+      type: System.String
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessageResponse
+      description: ''
+    content.vb: Public Shared Function MessageGetProperty(node As Node, name As String) As IMessageResponse
+  overload: FlowR.Core.Message.Factory.MessageGetProperty*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: FlowR.Core.Message.Factory.MessageMethodCall(FlowR.Core.Node,System.String,System.String[])
+  commentId: M:FlowR.Core.Message.Factory.MessageMethodCall(FlowR.Core.Node,System.String,System.String[])
+  id: MessageMethodCall(FlowR.Core.Node,System.String,System.String[])
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageMethodCall(Node, String, String[])
+  nameWithType: Factory.MessageMethodCall(Node, String, String[])
+  fullName: FlowR.Core.Message.Factory.MessageMethodCall(FlowR.Core.Node, System.String, System.String[])
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageMethodCall
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 149
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElement\n"
+  example: []
+  syntax:
+    content: public static IMessage MessageMethodCall(Node node, string name, string[] arguments)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    - id: name
+      type: System.String
+      description: ''
+    - id: arguments
+      type: System.String[]
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessage
+      description: ''
+    content.vb: Public Shared Function MessageMethodCall(node As Node, name As String, arguments As String()) As IMessage
+  overload: FlowR.Core.Message.Factory.MessageMethodCall*
+  nameWithType.vb: Factory.MessageMethodCall(Node, String, String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: FlowR.Core.Message.Factory.MessageMethodCall(FlowR.Core.Node, System.String, System.String())
+  name.vb: MessageMethodCall(Node, String, String())
+- uid: FlowR.Core.Message.Factory.MessageMethodCallWaitResponse(FlowR.Core.Node,System.String,System.String[])
+  commentId: M:FlowR.Core.Message.Factory.MessageMethodCallWaitResponse(FlowR.Core.Node,System.String,System.String[])
+  id: MessageMethodCallWaitResponse(FlowR.Core.Node,System.String,System.String[])
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageMethodCallWaitResponse(Node, String, String[])
+  nameWithType: Factory.MessageMethodCallWaitResponse(Node, String, String[])
+  fullName: FlowR.Core.Message.Factory.MessageMethodCallWaitResponse(FlowR.Core.Node, System.String, System.String[])
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageMethodCallWaitResponse
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 161
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElement\n"
+  example: []
+  syntax:
+    content: public static IMessageResponse MessageMethodCallWaitResponse(Node node, string name, string[] arguments)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    - id: name
+      type: System.String
+      description: ''
+    - id: arguments
+      type: System.String[]
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessageResponse
+      description: ''
+    content.vb: Public Shared Function MessageMethodCallWaitResponse(node As Node, name As String, arguments As String()) As IMessageResponse
+  overload: FlowR.Core.Message.Factory.MessageMethodCallWaitResponse*
+  nameWithType.vb: Factory.MessageMethodCallWaitResponse(Node, String, String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: FlowR.Core.Message.Factory.MessageMethodCallWaitResponse(FlowR.Core.Node, System.String, System.String())
+  name.vb: MessageMethodCallWaitResponse(Node, String, String())
+- uid: FlowR.Core.Message.Factory.MessageGlobalMethodCall(System.String,System.String[])
+  commentId: M:FlowR.Core.Message.Factory.MessageGlobalMethodCall(System.String,System.String[])
+  id: MessageGlobalMethodCall(System.String,System.String[])
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageGlobalMethodCall(String, String[])
+  nameWithType: Factory.MessageGlobalMethodCall(String, String[])
+  fullName: FlowR.Core.Message.Factory.MessageGlobalMethodCall(System.String, System.String[])
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageGlobalMethodCall
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 215
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElement\n"
+  example: []
+  syntax:
+    content: public static IMessage MessageGlobalMethodCall(string name, string[] arguments)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    - id: arguments
+      type: System.String[]
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessage
+      description: ''
+    content.vb: Public Shared Function MessageGlobalMethodCall(name As String, arguments As String()) As IMessage
+  overload: FlowR.Core.Message.Factory.MessageGlobalMethodCall*
+  nameWithType.vb: Factory.MessageGlobalMethodCall(String, String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: FlowR.Core.Message.Factory.MessageGlobalMethodCall(System.String, System.String())
+  name.vb: MessageGlobalMethodCall(String, String())
+- uid: FlowR.Core.Message.Factory.MessageGlobalMethodCallWaitResponse(System.String,System.String[])
+  commentId: M:FlowR.Core.Message.Factory.MessageGlobalMethodCallWaitResponse(System.String,System.String[])
+  id: MessageGlobalMethodCallWaitResponse(System.String,System.String[])
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageGlobalMethodCallWaitResponse(String, String[])
+  nameWithType: Factory.MessageGlobalMethodCallWaitResponse(String, String[])
+  fullName: FlowR.Core.Message.Factory.MessageGlobalMethodCallWaitResponse(System.String, System.String[])
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageGlobalMethodCallWaitResponse
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 227
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElement\n"
+  example: []
+  syntax:
+    content: public static IMessageResponse MessageGlobalMethodCallWaitResponse(string name, string[] arguments)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    - id: arguments
+      type: System.String[]
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessageResponse
+      description: ''
+    content.vb: Public Shared Function MessageGlobalMethodCallWaitResponse(name As String, arguments As String()) As IMessageResponse
+  overload: FlowR.Core.Message.Factory.MessageGlobalMethodCallWaitResponse*
+  nameWithType.vb: Factory.MessageGlobalMethodCallWaitResponse(String, String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: FlowR.Core.Message.Factory.MessageGlobalMethodCallWaitResponse(System.String, System.String())
+  name.vb: MessageGlobalMethodCallWaitResponse(String, String())
+- uid: FlowR.Core.Message.Factory.MessageGlobalGetPropertyWaitResponse(System.String)
+  commentId: M:FlowR.Core.Message.Factory.MessageGlobalGetPropertyWaitResponse(System.String)
+  id: MessageGlobalGetPropertyWaitResponse(System.String)
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageGlobalGetPropertyWaitResponse(String)
+  nameWithType: Factory.MessageGlobalGetPropertyWaitResponse(String)
+  fullName: FlowR.Core.Message.Factory.MessageGlobalGetPropertyWaitResponse(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageGlobalGetPropertyWaitResponse
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 237
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElement\n"
+  example: []
+  syntax:
+    content: public static IMessageResponse MessageGlobalGetPropertyWaitResponse(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessageResponse
+      description: ''
+    content.vb: Public Shared Function MessageGlobalGetPropertyWaitResponse(name As String) As IMessageResponse
+  overload: FlowR.Core.Message.Factory.MessageGlobalGetPropertyWaitResponse*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: FlowR.Core.Message.Factory.MessageSetGlobalProperty(System.String,System.String)
+  commentId: M:FlowR.Core.Message.Factory.MessageSetGlobalProperty(System.String,System.String)
+  id: MessageSetGlobalProperty(System.String,System.String)
+  parent: FlowR.Core.Message.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageSetGlobalProperty(String, String)
+  nameWithType: Factory.MessageSetGlobalProperty(String, String)
+  fullName: FlowR.Core.Message.Factory.MessageSetGlobalProperty(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/Factory.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageSetGlobalProperty
+    path: FlowR.Core/Message/Factory.cs
+    startLine: 248
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nReturn MessageElement\n"
+  example: []
+  syntax:
+    content: public static IMessage MessageSetGlobalProperty(string path, string value)
+    parameters:
+    - id: path
+      type: System.String
+      description: ''
+    - id: value
+      type: System.String
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessage
+      description: ''
+    content.vb: Public Shared Function MessageSetGlobalProperty(path As String, value As String) As IMessage
+  overload: FlowR.Core.Message.Factory.MessageSetGlobalProperty*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: FlowR.Core.Message
+  commentId: N:FlowR.Core.Message
+  name: FlowR.Core.Message
+  nameWithType: FlowR.Core.Message
+  fullName: FlowR.Core.Message
+- uid: FlowR.Core.Message.Factory.MessageCreate*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageCreate
+  name: MessageCreate
+  nameWithType: Factory.MessageCreate
+  fullName: FlowR.Core.Message.Factory.MessageCreate
+- uid: FlowR.Core.Node
+  commentId: T:FlowR.Core.Node
+  parent: FlowR.Core
+  name: Node
+  nameWithType: Node
+  fullName: FlowR.Core.Node
+- uid: FlowR.Core.Message.IMessage
+  commentId: T:FlowR.Core.Message.IMessage
+  parent: FlowR.Core.Message
+  name: IMessage
+  nameWithType: IMessage
+  fullName: FlowR.Core.Message.IMessage
+- uid: FlowR.Core
+  commentId: N:FlowR.Core
+  name: FlowR.Core
+  nameWithType: FlowR.Core
+  fullName: FlowR.Core
+- uid: FlowR.Core.Message.Factory.MessageSetAttribute*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageSetAttribute
+  name: MessageSetAttribute
+  nameWithType: Factory.MessageSetAttribute
+  fullName: FlowR.Core.Message.Factory.MessageSetAttribute
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: FlowR.Core.Message.Factory.MessageRemoveAttribute*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageRemoveAttribute
+  name: MessageRemoveAttribute
+  nameWithType: Factory.MessageRemoveAttribute
+  fullName: FlowR.Core.Message.Factory.MessageRemoveAttribute
+- uid: FlowR.Core.Message.Factory.MessageRemove*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageRemove
+  name: MessageRemove
+  nameWithType: Factory.MessageRemove
+  fullName: FlowR.Core.Message.Factory.MessageRemove
+- uid: FlowR.Core.Message.Factory.MessageStartListenEvent*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageStartListenEvent
+  name: MessageStartListenEvent
+  nameWithType: Factory.MessageStartListenEvent
+  fullName: FlowR.Core.Message.Factory.MessageStartListenEvent
+- uid: FlowR.Core.Message.Factory.MessageStopListenEvent*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageStopListenEvent
+  name: MessageStopListenEvent
+  nameWithType: Factory.MessageStopListenEvent
+  fullName: FlowR.Core.Message.Factory.MessageStopListenEvent
+- uid: FlowR.Core.Message.Factory.MessageSetText*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageSetText
+  name: MessageSetText
+  nameWithType: Factory.MessageSetText
+  fullName: FlowR.Core.Message.Factory.MessageSetText
+- uid: FlowR.Core.Message.Factory.MessageSetProperty*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageSetProperty
+  name: MessageSetProperty
+  nameWithType: Factory.MessageSetProperty
+  fullName: FlowR.Core.Message.Factory.MessageSetProperty
+- uid: FlowR.Core.Message.Factory.MessageCallMethod*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageCallMethod
+  name: MessageCallMethod
+  nameWithType: Factory.MessageCallMethod
+  fullName: FlowR.Core.Message.Factory.MessageCallMethod
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: FlowR.Core.Message.Factory.MessageAddMethod*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageAddMethod
+  name: MessageAddMethod
+  nameWithType: Factory.MessageAddMethod
+  fullName: FlowR.Core.Message.Factory.MessageAddMethod
+- uid: FlowR.Core.Message.Factory.MessageGetProperty*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageGetProperty
+  name: MessageGetProperty
+  nameWithType: Factory.MessageGetProperty
+  fullName: FlowR.Core.Message.Factory.MessageGetProperty
+- uid: FlowR.Core.Message.IMessageResponse
+  commentId: T:FlowR.Core.Message.IMessageResponse
+  parent: FlowR.Core.Message
+  name: IMessageResponse
+  nameWithType: IMessageResponse
+  fullName: FlowR.Core.Message.IMessageResponse
+- uid: FlowR.Core.Message.Factory.MessageMethodCall*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageMethodCall
+  name: MessageMethodCall
+  nameWithType: Factory.MessageMethodCall
+  fullName: FlowR.Core.Message.Factory.MessageMethodCall
+- uid: FlowR.Core.Message.Factory.MessageMethodCallWaitResponse*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageMethodCallWaitResponse
+  name: MessageMethodCallWaitResponse
+  nameWithType: Factory.MessageMethodCallWaitResponse
+  fullName: FlowR.Core.Message.Factory.MessageMethodCallWaitResponse
+- uid: FlowR.Core.Message.Factory.MessageGlobalMethodCall*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageGlobalMethodCall
+  name: MessageGlobalMethodCall
+  nameWithType: Factory.MessageGlobalMethodCall
+  fullName: FlowR.Core.Message.Factory.MessageGlobalMethodCall
+- uid: FlowR.Core.Message.Factory.MessageGlobalMethodCallWaitResponse*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageGlobalMethodCallWaitResponse
+  name: MessageGlobalMethodCallWaitResponse
+  nameWithType: Factory.MessageGlobalMethodCallWaitResponse
+  fullName: FlowR.Core.Message.Factory.MessageGlobalMethodCallWaitResponse
+- uid: FlowR.Core.Message.Factory.MessageGlobalGetPropertyWaitResponse*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageGlobalGetPropertyWaitResponse
+  name: MessageGlobalGetPropertyWaitResponse
+  nameWithType: Factory.MessageGlobalGetPropertyWaitResponse
+  fullName: FlowR.Core.Message.Factory.MessageGlobalGetPropertyWaitResponse
+- uid: FlowR.Core.Message.Factory.MessageSetGlobalProperty*
+  commentId: Overload:FlowR.Core.Message.Factory.MessageSetGlobalProperty
+  name: MessageSetGlobalProperty
+  nameWithType: Factory.MessageSetGlobalProperty
+  fullName: FlowR.Core.Message.Factory.MessageSetGlobalProperty

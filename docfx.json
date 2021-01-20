@@ -1,0 +1,70 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "FlowR.Core/FlowR.Core.csproj",
+            "FlowR.UI/FlowR.UI.csproj"
+          ]
+        }
+      ],
+      "dest": "docs/api",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "docs/api/**.yml",
+          "docs/api/index.md",
+          "docs/index.md"
+        ]
+      },
+      {
+        "files": [
+          "docfx/content/**.md",
+          "docfx/content/*.md",
+          "docfx/content/toc.yml",
+          "docfx/content/**/toc.yml",
+          "docfx/*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "docfx/images/**"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "docfx/content_overwriting/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "docs/**"
+        ]
+      }
+    ],
+    "xref": [
+      "N"
+    ],
+    "dest": "docs",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  }
+}

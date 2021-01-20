@@ -1,0 +1,118 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions
+  commentId: T:FlowR.Core.Message.MessageGlobalWithResponse.MessageActions
+  id: MessageGlobalWithResponse.MessageActions
+  parent: FlowR.Core.Message
+  children:
+  - FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.CallGlobalMethodGetResponse
+  - FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.GetGlobalProperty
+  langs:
+  - csharp
+  - vb
+  name: MessageGlobalWithResponse.MessageActions
+  nameWithType: MessageGlobalWithResponse.MessageActions
+  fullName: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions
+  type: Enum
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageGlobalWithResponse.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageActions
+    path: FlowR.Core/Message/MessageGlobalWithResponse.cs
+    startLine: 9
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nPossible Actions\n"
+  example: []
+  syntax:
+    content: 'public enum MessageActions : int'
+    content.vb: Public Enum MessageActions As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.CallGlobalMethodGetResponse
+  commentId: F:FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.CallGlobalMethodGetResponse
+  id: CallGlobalMethodGetResponse
+  parent: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions
+  langs:
+  - csharp
+  - vb
+  name: CallGlobalMethodGetResponse
+  nameWithType: MessageGlobalWithResponse.MessageActions.CallGlobalMethodGetResponse
+  fullName: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.CallGlobalMethodGetResponse
+  type: Field
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageGlobalWithResponse.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: CallGlobalMethodGetResponse
+    path: FlowR.Core/Message/MessageGlobalWithResponse.cs
+    startLine: 14
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nCall a Global method and wait for response\n"
+  example: []
+  syntax:
+    content: CallGlobalMethodGetResponse = 0
+    return:
+      type: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.GetGlobalProperty
+  commentId: F:FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.GetGlobalProperty
+  id: GetGlobalProperty
+  parent: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions
+  langs:
+  - csharp
+  - vb
+  name: GetGlobalProperty
+  nameWithType: MessageGlobalWithResponse.MessageActions.GetGlobalProperty
+  fullName: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.GetGlobalProperty
+  type: Field
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageGlobalWithResponse.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: GetGlobalProperty
+    path: FlowR.Core/Message/MessageGlobalWithResponse.cs
+    startLine: 19
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nCall a Global method and wait for response\n"
+  example: []
+  syntax:
+    content: GetGlobalProperty = 1
+    return:
+      type: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: FlowR.Core.Message
+  commentId: N:FlowR.Core.Message
+  name: FlowR.Core.Message
+  nameWithType: FlowR.Core.Message
+  fullName: FlowR.Core.Message
+- uid: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions
+  commentId: T:FlowR.Core.Message.MessageGlobalWithResponse.MessageActions
+  parent: FlowR.Core.Message
+  name: MessageGlobalWithResponse.MessageActions
+  nameWithType: MessageGlobalWithResponse.MessageActions
+  fullName: FlowR.Core.Message.MessageGlobalWithResponse.MessageActions

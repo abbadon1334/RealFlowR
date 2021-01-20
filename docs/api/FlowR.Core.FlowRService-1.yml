@@ -1,0 +1,225 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.FlowRService`1
+  commentId: T:FlowR.Core.FlowRService`1
+  id: FlowRService`1
+  parent: FlowR.Core
+  children:
+  - FlowR.Core.FlowRService`1.Add(System.String,IClientProxy)
+  - FlowR.Core.FlowRService`1.Get(System.String)
+  - FlowR.Core.FlowRService`1.Remove(System.String)
+  langs:
+  - csharp
+  - vb
+  name: FlowRService<T>
+  nameWithType: FlowRService<T>
+  fullName: FlowR.Core.FlowRService<T>
+  type: Class
+  source:
+    remote:
+      path: FlowR.Core/FlowRService.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: FlowRService
+    path: FlowR.Core/FlowRService.cs
+    startLine: 10
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nSingleton service\n"
+  example: []
+  syntax:
+    content: 'public class FlowRService<T> : object where T : Application'
+    typeParameters:
+    - id: T
+      description: ''
+    content.vb: >-
+      Public Class FlowRService(Of T As Application)
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  nameWithType.vb: FlowRService(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: FlowR.Core.FlowRService(Of T)
+  name.vb: FlowRService(Of T)
+- uid: FlowR.Core.FlowRService`1.Get(System.String)
+  commentId: M:FlowR.Core.FlowRService`1.Get(System.String)
+  id: Get(System.String)
+  parent: FlowR.Core.FlowRService`1
+  langs:
+  - csharp
+  - vb
+  name: Get(String)
+  nameWithType: FlowRService<T>.Get(String)
+  fullName: FlowR.Core.FlowRService<T>.Get(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/FlowRService.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Get
+    path: FlowR.Core/FlowRService.cs
+    startLine: 19
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nGet application from application registry\n"
+  example: []
+  syntax:
+    content: public T Get(string uid)
+    parameters:
+    - id: uid
+      type: System.String
+      description: ''
+    return:
+      type: '{T}'
+      description: ''
+    content.vb: Public Function Get(uid As String) As T
+  overload: FlowR.Core.FlowRService`1.Get*
+  nameWithType.vb: FlowRService(Of T).Get(String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.FlowRService(Of T).Get(System.String)
+- uid: FlowR.Core.FlowRService`1.Add(System.String,IClientProxy)
+  commentId: M:FlowR.Core.FlowRService`1.Add(System.String,IClientProxy)
+  id: Add(System.String,IClientProxy)
+  parent: FlowR.Core.FlowRService`1
+  langs:
+  - csharp
+  - vb
+  name: Add(String, IClientProxy)
+  nameWithType: FlowRService<T>.Add(String, IClientProxy)
+  fullName: FlowR.Core.FlowRService<T>.Add(System.String, IClientProxy)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/FlowRService.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Add
+    path: FlowR.Core/FlowRService.cs
+    startLine: 29
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nAdd Application to Registry\n"
+  example: []
+  syntax:
+    content: public void Add(string uid, IClientProxy client)
+    parameters:
+    - id: uid
+      type: System.String
+      description: ''
+    - id: client
+      type: IClientProxy
+      description: ''
+    content.vb: Public Sub Add(uid As String, client As IClientProxy)
+  overload: FlowR.Core.FlowRService`1.Add*
+  nameWithType.vb: FlowRService(Of T).Add(String, IClientProxy)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.FlowRService(Of T).Add(System.String, IClientProxy)
+- uid: FlowR.Core.FlowRService`1.Remove(System.String)
+  commentId: M:FlowR.Core.FlowRService`1.Remove(System.String)
+  id: Remove(System.String)
+  parent: FlowR.Core.FlowRService`1
+  langs:
+  - csharp
+  - vb
+  name: Remove(String)
+  nameWithType: FlowRService<T>.Remove(String)
+  fullName: FlowR.Core.FlowRService<T>.Remove(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/FlowRService.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Remove
+    path: FlowR.Core/FlowRService.cs
+    startLine: 41
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nRemove Application from registry\n"
+  example: []
+  syntax:
+    content: public bool Remove(string uid)
+    parameters:
+    - id: uid
+      type: System.String
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function Remove(uid As String) As Boolean
+  overload: FlowR.Core.FlowRService`1.Remove*
+  nameWithType.vb: FlowRService(Of T).Remove(String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.FlowRService(Of T).Remove(System.String)
+references:
+- uid: FlowR.Core
+  commentId: N:FlowR.Core
+  name: FlowR.Core
+  nameWithType: FlowR.Core
+  fullName: FlowR.Core
+- uid: FlowR.Core.FlowRService`1.Get*
+  commentId: Overload:FlowR.Core.FlowRService`1.Get
+  name: Get
+  nameWithType: FlowRService<T>.Get
+  fullName: FlowR.Core.FlowRService<T>.Get
+  nameWithType.vb: FlowRService(Of T).Get
+  fullName.vb: FlowR.Core.FlowRService(Of T).Get
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: FlowR.Core.FlowRService`1.Add*
+  commentId: Overload:FlowR.Core.FlowRService`1.Add
+  name: Add
+  nameWithType: FlowRService<T>.Add
+  fullName: FlowR.Core.FlowRService<T>.Add
+  nameWithType.vb: FlowRService(Of T).Add
+  fullName.vb: FlowR.Core.FlowRService(Of T).Add
+- uid: IClientProxy
+  isExternal: true
+  name: IClientProxy
+  nameWithType: IClientProxy
+  fullName: IClientProxy
+- uid: FlowR.Core.FlowRService`1.Remove*
+  commentId: Overload:FlowR.Core.FlowRService`1.Remove
+  name: Remove
+  nameWithType: FlowRService<T>.Remove
+  fullName: FlowR.Core.FlowRService<T>.Remove
+  nameWithType.vb: FlowRService(Of T).Remove
+  fullName.vb: FlowR.Core.FlowRService(Of T).Remove
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

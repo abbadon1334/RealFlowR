@@ -1,0 +1,940 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.NodeCollectionProperty
+  commentId: T:FlowR.Core.NodeCollectionProperty
+  id: NodeCollectionProperty
+  parent: FlowR.Core
+  children:
+  - FlowR.Core.NodeCollectionProperty.#ctor(FlowR.Core.Node)
+  - FlowR.Core.NodeCollectionProperty.SetProperty(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: NodeCollectionProperty
+  nameWithType: NodeCollectionProperty
+  fullName: FlowR.Core.NodeCollectionProperty
+  type: Class
+  source:
+    remote:
+      path: FlowR.Core/NodeCollectionProperty.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: NodeCollectionProperty
+    path: FlowR.Core/NodeCollectionProperty.cs
+    startLine: 3
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  syntax:
+    content: 'public class NodeCollectionProperty : NodeCollection<string>'
+    content.vb: >-
+      Public Class NodeCollectionProperty
+
+          Inherits NodeCollection(Of String)
+  inheritance:
+  - System.Object
+  - FlowR.Core.NodeCollection{System.String}
+  inheritedMembers:
+  - FlowR.Core.NodeCollection{System.String}.AfterAdded
+  - FlowR.Core.NodeCollection{System.String}.AfterChanged
+  - FlowR.Core.NodeCollection{System.String}.AfterRemoved
+  - FlowR.Core.NodeCollection{System.String}.BeforeAdded
+  - FlowR.Core.NodeCollection{System.String}.BeforeChanged
+  - FlowR.Core.NodeCollection{System.String}.BeforeRemoved
+  - FlowR.Core.NodeCollection{System.String}.Owner
+  - FlowR.Core.NodeCollection{System.String}.Set(System.String,System.String)
+  - FlowR.Core.NodeCollection{System.String}.Unset(System.String)
+  - FlowR.Core.NodeCollection{System.String}.Exists(System.String)
+  - FlowR.Core.NodeCollection{System.String}.Get(System.String)
+  - FlowR.Core.NodeCollection{System.String}.Count
+  - FlowR.Core.NodeCollection{System.String}.GetFirst
+  - FlowR.Core.NodeCollection{System.String}.GetLast
+  - FlowR.Core.NodeCollection{System.String}.ToDictionary
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: FlowR.Core.NodeCollectionProperty.#ctor(FlowR.Core.Node)
+  commentId: M:FlowR.Core.NodeCollectionProperty.#ctor(FlowR.Core.Node)
+  id: '#ctor(FlowR.Core.Node)'
+  parent: FlowR.Core.NodeCollectionProperty
+  langs:
+  - csharp
+  - vb
+  name: NodeCollectionProperty(Node)
+  nameWithType: NodeCollectionProperty.NodeCollectionProperty(Node)
+  fullName: FlowR.Core.NodeCollectionProperty.NodeCollectionProperty(FlowR.Core.Node)
+  type: Constructor
+  source:
+    remote:
+      path: FlowR.Core/NodeCollectionProperty.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: .ctor
+    path: FlowR.Core/NodeCollectionProperty.cs
+    startLine: 6
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  example: []
+  syntax:
+    content: public NodeCollectionProperty(Node owner)
+    parameters:
+    - id: owner
+      type: FlowR.Core.Node
+    content.vb: Public Sub New(owner As Node)
+  overload: FlowR.Core.NodeCollectionProperty.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: FlowR.Core.NodeCollectionProperty.SetProperty(System.String,System.String)
+  commentId: M:FlowR.Core.NodeCollectionProperty.SetProperty(System.String,System.String)
+  id: SetProperty(System.String,System.String)
+  parent: FlowR.Core.NodeCollectionProperty
+  langs:
+  - csharp
+  - vb
+  name: SetProperty(String, String)
+  nameWithType: NodeCollectionProperty.SetProperty(String, String)
+  fullName: FlowR.Core.NodeCollectionProperty.SetProperty(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/NodeCollectionProperty.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: SetProperty
+    path: FlowR.Core/NodeCollectionProperty.cs
+    startLine: 15
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nSet a DomNode property\n"
+  example: []
+  syntax:
+    content: public void SetProperty(string name, string value)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    - id: value
+      type: System.String
+      description: ''
+    content.vb: Public Sub SetProperty(name As String, value As String)
+  overload: FlowR.Core.NodeCollectionProperty.SetProperty*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: FlowR.Core
+  commentId: N:FlowR.Core
+  name: FlowR.Core
+  nameWithType: FlowR.Core
+  fullName: FlowR.Core
+- uid: FlowR.Core.NodeCollection{System.String}
+  commentId: T:FlowR.Core.NodeCollection{System.String}
+  parent: FlowR.Core
+  definition: FlowR.Core.NodeCollection`1
+  name: NodeCollection<String>
+  nameWithType: NodeCollection<String>
+  fullName: FlowR.Core.NodeCollection<System.String>
+  nameWithType.vb: NodeCollection(Of String)
+  fullName.vb: FlowR.Core.NodeCollection(Of System.String)
+  name.vb: NodeCollection(Of String)
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1
+    name: NodeCollection
+    nameWithType: NodeCollection
+    fullName: FlowR.Core.NodeCollection
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1
+    name: NodeCollection
+    nameWithType: NodeCollection
+    fullName: FlowR.Core.NodeCollection
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection{System.String}.AfterAdded
+  commentId: F:FlowR.Core.NodeCollection{System.String}.AfterAdded
+  parent: FlowR.Core.NodeCollection{System.String}
+  definition: FlowR.Core.NodeCollection`1.AfterAdded
+  name: AfterAdded
+  nameWithType: NodeCollection<String>.AfterAdded
+  fullName: FlowR.Core.NodeCollection<System.String>.AfterAdded
+  nameWithType.vb: NodeCollection(Of String).AfterAdded
+  fullName.vb: FlowR.Core.NodeCollection(Of System.String).AfterAdded
+- uid: FlowR.Core.NodeCollection{System.String}.AfterChanged
+  commentId: F:FlowR.Core.NodeCollection{System.String}.AfterChanged
+  parent: FlowR.Core.NodeCollection{System.String}
+  definition: FlowR.Core.NodeCollection`1.AfterChanged
+  name: AfterChanged
+  nameWithType: NodeCollection<String>.AfterChanged
+  fullName: FlowR.Core.NodeCollection<System.String>.AfterChanged
+  nameWithType.vb: NodeCollection(Of String).AfterChanged
+  fullName.vb: FlowR.Core.NodeCollection(Of System.String).AfterChanged
+- uid: FlowR.Core.NodeCollection{System.String}.AfterRemoved
+  commentId: F:FlowR.Core.NodeCollection{System.String}.AfterRemoved
+  parent: FlowR.Core.NodeCollection{System.String}
+  definition: FlowR.Core.NodeCollection`1.AfterRemoved
+  name: AfterRemoved
+  nameWithType: NodeCollection<String>.AfterRemoved
+  fullName: FlowR.Core.NodeCollection<System.String>.AfterRemoved
+  nameWithType.vb: NodeCollection(Of String).AfterRemoved
+  fullName.vb: FlowR.Core.NodeCollection(Of System.String).AfterRemoved
+- uid: FlowR.Core.NodeCollection{System.String}.BeforeAdded
+  commentId: F:FlowR.Core.NodeCollection{System.String}.BeforeAdded
+  parent: FlowR.Core.NodeCollection{System.String}
+  definition: FlowR.Core.NodeCollection`1.BeforeAdded
+  name: BeforeAdded
+  nameWithType: NodeCollection<String>.BeforeAdded
+  fullName: FlowR.Core.NodeCollection<System.String>.BeforeAdded
+  nameWithType.vb: NodeCollection(Of String).BeforeAdded
+  fullName.vb: FlowR.Core.NodeCollection(Of System.String).BeforeAdded
+- uid: FlowR.Core.NodeCollection{System.String}.BeforeChanged
+  commentId: F:FlowR.Core.NodeCollection{System.String}.BeforeChanged
+  parent: FlowR.Core.NodeCollection{System.String}
+  definition: FlowR.Core.NodeCollection`1.BeforeChanged
+  name: BeforeChanged
+  nameWithType: NodeCollection<String>.BeforeChanged
+  fullName: FlowR.Core.NodeCollection<System.String>.BeforeChanged
+  nameWithType.vb: NodeCollection(Of String).BeforeChanged
+  fullName.vb: FlowR.Core.NodeCollection(Of System.String).BeforeChanged
+- uid: FlowR.Core.NodeCollection{System.String}.BeforeRemoved
+  commentId: F:FlowR.Core.NodeCollection{System.String}.BeforeRemoved
+  parent: FlowR.Core.NodeCollection{System.String}
+  definition: FlowR.Core.NodeCollection`1.BeforeRemoved
+  name: BeforeRemoved
+  nameWithType: NodeCollection<String>.BeforeRemoved
+  fullName: FlowR.Core.NodeCollection<System.String>.BeforeRemoved
+  nameWithType.vb: NodeCollection(Of String).BeforeRemoved
+  fullName.vb: FlowR.Core.NodeCollection(Of System.String).BeforeRemoved
+- uid: FlowR.Core.NodeCollection{System.String}.Owner
+  commentId: P:FlowR.Core.NodeCollection{System.String}.Owner
+  parent: FlowR.Core.NodeCollection{System.String}
+  definition: FlowR.Core.NodeCollection`1.Owner
+  name: Owner
+  nameWithType: NodeCollection<String>.Owner
+  fullName: FlowR.Core.NodeCollection<System.String>.Owner
+  nameWithType.vb: NodeCollection(Of String).Owner
+  fullName.vb: FlowR.Core.NodeCollection(Of System.String).Owner
+- uid: FlowR.Core.NodeCollection{System.String}.Set(System.String,System.String)
+  commentId: M:FlowR.Core.NodeCollection{System.String}.Set(System.String,System.String)
+  parent: FlowR.Core.NodeCollection{System.String}
+  definition: FlowR.Core.NodeCollection`1.Set(System.String,`0)
+  name: Set(String, String)
+  nameWithType: NodeCollection<String>.Set(String, String)
+  fullName: FlowR.Core.NodeCollection<System.String>.Set(System.String, System.String)
+  nameWithType.vb: NodeCollection(Of String).Set(String, String)
+  fullName.vb: FlowR.Core.NodeCollection(Of System.String).Set(System.String, System.String)
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1.Set(System.String,`0)
+    name: Set
+    nameWithType: NodeCollection<String>.Set
+    fullName: FlowR.Core.NodeCollection<System.String>.Set
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1.Set(System.String,`0)
+    name: Set
+    nameWithType: NodeCollection(Of String).Set
+    fullName: FlowR.Core.NodeCollection(Of System.String).Set
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection{System.String}.Unset(System.String)
+  commentId: M:FlowR.Core.NodeCollection{System.String}.Unset(System.String)
+  parent: FlowR.Core.NodeCollection{System.String}
+  definition: FlowR.Core.NodeCollection`1.Unset(System.String)
+  name: Unset(String)
+  nameWithType: NodeCollection<String>.Unset(String)
+  fullName: FlowR.Core.NodeCollection<System.String>.Unset(System.String)
+  nameWithType.vb: NodeCollection(Of String).Unset(String)
+  fullName.vb: FlowR.Core.NodeCollection(Of System.String).Unset(System.String)
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1.Unset(System.String)
+    name: Unset
+    nameWithType: NodeCollection<String>.Unset
+    fullName: FlowR.Core.NodeCollection<System.String>.Unset
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1.Unset(System.String)
+    name: Unset
+    nameWithType: NodeCollection(Of String).Unset
+    fullName: FlowR.Core.NodeCollection(Of System.String).Unset
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection{System.String}.Exists(System.String)
+  commentId: M:FlowR.Core.NodeCollection{System.String}.Exists(System.String)
+  parent: FlowR.Core.NodeCollection{System.String}
+  definition: FlowR.Core.NodeCollection`1.Exists(System.String)
+  name: Exists(String)
+  nameWithType: NodeCollection<String>.Exists(String)
+  fullName: FlowR.Core.NodeCollection<System.String>.Exists(System.String)
+  nameWithType.vb: NodeCollection(Of String).Exists(String)
+  fullName.vb: FlowR.Core.NodeCollection(Of System.String).Exists(System.String)
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1.Exists(System.String)
+    name: Exists
+    nameWithType: NodeCollection<String>.Exists
+    fullName: FlowR.Core.NodeCollection<System.String>.Exists
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1.Exists(System.String)
+    name: Exists
+    nameWithType: NodeCollection(Of String).Exists
+    fullName: FlowR.Core.NodeCollection(Of System.String).Exists
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection{System.String}.Get(System.String)
+  commentId: M:FlowR.Core.NodeCollection{System.String}.Get(System.String)
+  parent: FlowR.Core.NodeCollection{System.String}
+  definition: FlowR.Core.NodeCollection`1.Get(System.String)
+  name: Get(String)
+  nameWithType: NodeCollection<String>.Get(String)
+  fullName: FlowR.Core.NodeCollection<System.String>.Get(System.String)
+  nameWithType.vb: NodeCollection(Of String).Get(String)
+  fullName.vb: FlowR.Core.NodeCollection(Of System.String).Get(System.String)
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1.Get(System.String)
+    name: Get
+    nameWithType: NodeCollection<String>.Get
+    fullName: FlowR.Core.NodeCollection<System.String>.Get
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1.Get(System.String)
+    name: Get
+    nameWithType: NodeCollection(Of String).Get
+    fullName: FlowR.Core.NodeCollection(Of System.String).Get
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection{System.String}.Count
+  commentId: M:FlowR.Core.NodeCollection{System.String}.Count
+  parent: FlowR.Core.NodeCollection{System.String}
+  definition: FlowR.Core.NodeCollection`1.Count
+  name: Count()
+  nameWithType: NodeCollection<String>.Count()
+  fullName: FlowR.Core.NodeCollection<System.String>.Count()
+  nameWithType.vb: NodeCollection(Of String).Count()
+  fullName.vb: FlowR.Core.NodeCollection(Of System.String).Count()
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1.Count
+    name: Count
+    nameWithType: NodeCollection<String>.Count
+    fullName: FlowR.Core.NodeCollection<System.String>.Count
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1.Count
+    name: Count
+    nameWithType: NodeCollection(Of String).Count
+    fullName: FlowR.Core.NodeCollection(Of System.String).Count
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection{System.String}.GetFirst
+  commentId: M:FlowR.Core.NodeCollection{System.String}.GetFirst
+  parent: FlowR.Core.NodeCollection{System.String}
+  definition: FlowR.Core.NodeCollection`1.GetFirst
+  name: GetFirst()
+  nameWithType: NodeCollection<String>.GetFirst()
+  fullName: FlowR.Core.NodeCollection<System.String>.GetFirst()
+  nameWithType.vb: NodeCollection(Of String).GetFirst()
+  fullName.vb: FlowR.Core.NodeCollection(Of System.String).GetFirst()
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1.GetFirst
+    name: GetFirst
+    nameWithType: NodeCollection<String>.GetFirst
+    fullName: FlowR.Core.NodeCollection<System.String>.GetFirst
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1.GetFirst
+    name: GetFirst
+    nameWithType: NodeCollection(Of String).GetFirst
+    fullName: FlowR.Core.NodeCollection(Of System.String).GetFirst
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection{System.String}.GetLast
+  commentId: M:FlowR.Core.NodeCollection{System.String}.GetLast
+  parent: FlowR.Core.NodeCollection{System.String}
+  definition: FlowR.Core.NodeCollection`1.GetLast
+  name: GetLast()
+  nameWithType: NodeCollection<String>.GetLast()
+  fullName: FlowR.Core.NodeCollection<System.String>.GetLast()
+  nameWithType.vb: NodeCollection(Of String).GetLast()
+  fullName.vb: FlowR.Core.NodeCollection(Of System.String).GetLast()
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1.GetLast
+    name: GetLast
+    nameWithType: NodeCollection<String>.GetLast
+    fullName: FlowR.Core.NodeCollection<System.String>.GetLast
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1.GetLast
+    name: GetLast
+    nameWithType: NodeCollection(Of String).GetLast
+    fullName: FlowR.Core.NodeCollection(Of System.String).GetLast
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection{System.String}.ToDictionary
+  commentId: M:FlowR.Core.NodeCollection{System.String}.ToDictionary
+  parent: FlowR.Core.NodeCollection{System.String}
+  definition: FlowR.Core.NodeCollection`1.ToDictionary
+  name: ToDictionary()
+  nameWithType: NodeCollection<String>.ToDictionary()
+  fullName: FlowR.Core.NodeCollection<System.String>.ToDictionary()
+  nameWithType.vb: NodeCollection(Of String).ToDictionary()
+  fullName.vb: FlowR.Core.NodeCollection(Of System.String).ToDictionary()
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1.ToDictionary
+    name: ToDictionary
+    nameWithType: NodeCollection<String>.ToDictionary
+    fullName: FlowR.Core.NodeCollection<System.String>.ToDictionary
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1.ToDictionary
+    name: ToDictionary
+    nameWithType: NodeCollection(Of String).ToDictionary
+    fullName: FlowR.Core.NodeCollection(Of System.String).ToDictionary
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection`1
+  commentId: T:FlowR.Core.NodeCollection`1
+  name: NodeCollection<T>
+  nameWithType: NodeCollection<T>
+  fullName: FlowR.Core.NodeCollection<T>
+  nameWithType.vb: NodeCollection(Of T)
+  fullName.vb: FlowR.Core.NodeCollection(Of T)
+  name.vb: NodeCollection(Of T)
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1
+    name: NodeCollection
+    nameWithType: NodeCollection
+    fullName: FlowR.Core.NodeCollection
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1
+    name: NodeCollection
+    nameWithType: NodeCollection
+    fullName: FlowR.Core.NodeCollection
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection`1.AfterAdded
+  commentId: F:FlowR.Core.NodeCollection`1.AfterAdded
+  name: AfterAdded
+  nameWithType: NodeCollection<T>.AfterAdded
+  fullName: FlowR.Core.NodeCollection<T>.AfterAdded
+  nameWithType.vb: NodeCollection(Of T).AfterAdded
+  fullName.vb: FlowR.Core.NodeCollection(Of T).AfterAdded
+- uid: FlowR.Core.NodeCollection`1.AfterChanged
+  commentId: F:FlowR.Core.NodeCollection`1.AfterChanged
+  name: AfterChanged
+  nameWithType: NodeCollection<T>.AfterChanged
+  fullName: FlowR.Core.NodeCollection<T>.AfterChanged
+  nameWithType.vb: NodeCollection(Of T).AfterChanged
+  fullName.vb: FlowR.Core.NodeCollection(Of T).AfterChanged
+- uid: FlowR.Core.NodeCollection`1.AfterRemoved
+  commentId: F:FlowR.Core.NodeCollection`1.AfterRemoved
+  name: AfterRemoved
+  nameWithType: NodeCollection<T>.AfterRemoved
+  fullName: FlowR.Core.NodeCollection<T>.AfterRemoved
+  nameWithType.vb: NodeCollection(Of T).AfterRemoved
+  fullName.vb: FlowR.Core.NodeCollection(Of T).AfterRemoved
+- uid: FlowR.Core.NodeCollection`1.BeforeAdded
+  commentId: F:FlowR.Core.NodeCollection`1.BeforeAdded
+  name: BeforeAdded
+  nameWithType: NodeCollection<T>.BeforeAdded
+  fullName: FlowR.Core.NodeCollection<T>.BeforeAdded
+  nameWithType.vb: NodeCollection(Of T).BeforeAdded
+  fullName.vb: FlowR.Core.NodeCollection(Of T).BeforeAdded
+- uid: FlowR.Core.NodeCollection`1.BeforeChanged
+  commentId: F:FlowR.Core.NodeCollection`1.BeforeChanged
+  name: BeforeChanged
+  nameWithType: NodeCollection<T>.BeforeChanged
+  fullName: FlowR.Core.NodeCollection<T>.BeforeChanged
+  nameWithType.vb: NodeCollection(Of T).BeforeChanged
+  fullName.vb: FlowR.Core.NodeCollection(Of T).BeforeChanged
+- uid: FlowR.Core.NodeCollection`1.BeforeRemoved
+  commentId: F:FlowR.Core.NodeCollection`1.BeforeRemoved
+  name: BeforeRemoved
+  nameWithType: NodeCollection<T>.BeforeRemoved
+  fullName: FlowR.Core.NodeCollection<T>.BeforeRemoved
+  nameWithType.vb: NodeCollection(Of T).BeforeRemoved
+  fullName.vb: FlowR.Core.NodeCollection(Of T).BeforeRemoved
+- uid: FlowR.Core.NodeCollection`1.Owner
+  commentId: P:FlowR.Core.NodeCollection`1.Owner
+  name: Owner
+  nameWithType: NodeCollection<T>.Owner
+  fullName: FlowR.Core.NodeCollection<T>.Owner
+  nameWithType.vb: NodeCollection(Of T).Owner
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Owner
+- uid: FlowR.Core.NodeCollection`1.Set(System.String,`0)
+  commentId: M:FlowR.Core.NodeCollection`1.Set(System.String,`0)
+  isExternal: true
+  name: Set(String, T)
+  nameWithType: NodeCollection<T>.Set(String, T)
+  fullName: FlowR.Core.NodeCollection<T>.Set(System.String, T)
+  nameWithType.vb: NodeCollection(Of T).Set(String, T)
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Set(System.String, T)
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1.Set(System.String,`0)
+    name: Set
+    nameWithType: NodeCollection<T>.Set
+    fullName: FlowR.Core.NodeCollection<T>.Set
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1.Set(System.String,`0)
+    name: Set
+    nameWithType: NodeCollection(Of T).Set
+    fullName: FlowR.Core.NodeCollection(Of T).Set
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection`1.Unset(System.String)
+  commentId: M:FlowR.Core.NodeCollection`1.Unset(System.String)
+  isExternal: true
+  name: Unset(String)
+  nameWithType: NodeCollection<T>.Unset(String)
+  fullName: FlowR.Core.NodeCollection<T>.Unset(System.String)
+  nameWithType.vb: NodeCollection(Of T).Unset(String)
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Unset(System.String)
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1.Unset(System.String)
+    name: Unset
+    nameWithType: NodeCollection<T>.Unset
+    fullName: FlowR.Core.NodeCollection<T>.Unset
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1.Unset(System.String)
+    name: Unset
+    nameWithType: NodeCollection(Of T).Unset
+    fullName: FlowR.Core.NodeCollection(Of T).Unset
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection`1.Exists(System.String)
+  commentId: M:FlowR.Core.NodeCollection`1.Exists(System.String)
+  isExternal: true
+  name: Exists(String)
+  nameWithType: NodeCollection<T>.Exists(String)
+  fullName: FlowR.Core.NodeCollection<T>.Exists(System.String)
+  nameWithType.vb: NodeCollection(Of T).Exists(String)
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Exists(System.String)
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1.Exists(System.String)
+    name: Exists
+    nameWithType: NodeCollection<T>.Exists
+    fullName: FlowR.Core.NodeCollection<T>.Exists
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1.Exists(System.String)
+    name: Exists
+    nameWithType: NodeCollection(Of T).Exists
+    fullName: FlowR.Core.NodeCollection(Of T).Exists
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection`1.Get(System.String)
+  commentId: M:FlowR.Core.NodeCollection`1.Get(System.String)
+  isExternal: true
+  name: Get(String)
+  nameWithType: NodeCollection<T>.Get(String)
+  fullName: FlowR.Core.NodeCollection<T>.Get(System.String)
+  nameWithType.vb: NodeCollection(Of T).Get(String)
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Get(System.String)
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1.Get(System.String)
+    name: Get
+    nameWithType: NodeCollection<T>.Get
+    fullName: FlowR.Core.NodeCollection<T>.Get
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1.Get(System.String)
+    name: Get
+    nameWithType: NodeCollection(Of T).Get
+    fullName: FlowR.Core.NodeCollection(Of T).Get
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection`1.Count
+  commentId: M:FlowR.Core.NodeCollection`1.Count
+  name: Count()
+  nameWithType: NodeCollection<T>.Count()
+  fullName: FlowR.Core.NodeCollection<T>.Count()
+  nameWithType.vb: NodeCollection(Of T).Count()
+  fullName.vb: FlowR.Core.NodeCollection(Of T).Count()
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1.Count
+    name: Count
+    nameWithType: NodeCollection<T>.Count
+    fullName: FlowR.Core.NodeCollection<T>.Count
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1.Count
+    name: Count
+    nameWithType: NodeCollection(Of T).Count
+    fullName: FlowR.Core.NodeCollection(Of T).Count
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection`1.GetFirst
+  commentId: M:FlowR.Core.NodeCollection`1.GetFirst
+  name: GetFirst()
+  nameWithType: NodeCollection<T>.GetFirst()
+  fullName: FlowR.Core.NodeCollection<T>.GetFirst()
+  nameWithType.vb: NodeCollection(Of T).GetFirst()
+  fullName.vb: FlowR.Core.NodeCollection(Of T).GetFirst()
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1.GetFirst
+    name: GetFirst
+    nameWithType: NodeCollection<T>.GetFirst
+    fullName: FlowR.Core.NodeCollection<T>.GetFirst
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1.GetFirst
+    name: GetFirst
+    nameWithType: NodeCollection(Of T).GetFirst
+    fullName: FlowR.Core.NodeCollection(Of T).GetFirst
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection`1.GetLast
+  commentId: M:FlowR.Core.NodeCollection`1.GetLast
+  name: GetLast()
+  nameWithType: NodeCollection<T>.GetLast()
+  fullName: FlowR.Core.NodeCollection<T>.GetLast()
+  nameWithType.vb: NodeCollection(Of T).GetLast()
+  fullName.vb: FlowR.Core.NodeCollection(Of T).GetLast()
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1.GetLast
+    name: GetLast
+    nameWithType: NodeCollection<T>.GetLast
+    fullName: FlowR.Core.NodeCollection<T>.GetLast
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1.GetLast
+    name: GetLast
+    nameWithType: NodeCollection(Of T).GetLast
+    fullName: FlowR.Core.NodeCollection(Of T).GetLast
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollection`1.ToDictionary
+  commentId: M:FlowR.Core.NodeCollection`1.ToDictionary
+  name: ToDictionary()
+  nameWithType: NodeCollection<T>.ToDictionary()
+  fullName: FlowR.Core.NodeCollection<T>.ToDictionary()
+  nameWithType.vb: NodeCollection(Of T).ToDictionary()
+  fullName.vb: FlowR.Core.NodeCollection(Of T).ToDictionary()
+  spec.csharp:
+  - uid: FlowR.Core.NodeCollection`1.ToDictionary
+    name: ToDictionary
+    nameWithType: NodeCollection<T>.ToDictionary
+    fullName: FlowR.Core.NodeCollection<T>.ToDictionary
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.NodeCollection`1.ToDictionary
+    name: ToDictionary
+    nameWithType: NodeCollection(Of T).ToDictionary
+    fullName: FlowR.Core.NodeCollection(Of T).ToDictionary
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.NodeCollectionProperty.#ctor*
+  commentId: Overload:FlowR.Core.NodeCollectionProperty.#ctor
+  name: NodeCollectionProperty
+  nameWithType: NodeCollectionProperty.NodeCollectionProperty
+  fullName: FlowR.Core.NodeCollectionProperty.NodeCollectionProperty
+- uid: FlowR.Core.Node
+  commentId: T:FlowR.Core.Node
+  parent: FlowR.Core
+  name: Node
+  nameWithType: Node
+  fullName: FlowR.Core.Node
+- uid: FlowR.Core.NodeCollectionProperty.SetProperty*
+  commentId: Overload:FlowR.Core.NodeCollectionProperty.SetProperty
+  name: SetProperty
+  nameWithType: NodeCollectionProperty.SetProperty
+  fullName: FlowR.Core.NodeCollectionProperty.SetProperty
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

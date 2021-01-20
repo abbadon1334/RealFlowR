@@ -1,0 +1,485 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.Application
+  commentId: T:FlowR.Core.Application
+  id: Application
+  parent: FlowR.Core
+  children:
+  - FlowR.Core.Application.#ctor(System.String,IClientProxy)
+  - FlowR.Core.Application.AddTimer(System.Int32,EventHandler,System.Boolean)
+  - FlowR.Core.Application.CancelTimer(FlowR.Core.ApplicationTimer)
+  - FlowR.Core.Application.Communication
+  - FlowR.Core.Application.OnClientEventTriggered(FlowR.Core.Message.MessageEvent)
+  - FlowR.Core.Application.RegisterComponent(FlowR.Core.Node)
+  - FlowR.Core.Application.RootElement
+  - FlowR.Core.Application.RootElementId
+  - FlowR.Core.Application.UnregisterComponent(FlowR.Core.Node)
+  langs:
+  - csharp
+  - vb
+  name: Application
+  nameWithType: Application
+  fullName: FlowR.Core.Application
+  type: Class
+  source:
+    remote:
+      path: FlowR.Core/Application.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Application
+    path: FlowR.Core/Application.cs
+    startLine: 9
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nApplication container class.\n"
+  example: []
+  syntax:
+    content: 'public abstract class Application : object'
+    content.vb: >-
+      Public MustInherit Class Application
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: FlowR.Core.Application.RootElement
+  commentId: F:FlowR.Core.Application.RootElement
+  id: RootElement
+  parent: FlowR.Core.Application
+  langs:
+  - csharp
+  - vb
+  name: RootElement
+  nameWithType: Application.RootElement
+  fullName: FlowR.Core.Application.RootElement
+  type: Field
+  source:
+    remote:
+      path: FlowR.Core/Application.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: RootElement
+    path: FlowR.Core/Application.cs
+    startLine: 18
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nRoot element of the Application.\nThe composition tree that draw client UI starts from here.\n"
+  example: []
+  syntax:
+    content: protected readonly ComponentRoot RootElement
+    return:
+      type: FlowR.Core.ComponentRoot
+    content.vb: Protected ReadOnly RootElement As ComponentRoot
+  modifiers.csharp:
+  - protected
+  - readonly
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: FlowR.Core.Application.RootElementId
+  commentId: F:FlowR.Core.Application.RootElementId
+  id: RootElementId
+  parent: FlowR.Core.Application
+  langs:
+  - csharp
+  - vb
+  name: RootElementId
+  nameWithType: Application.RootElementId
+  fullName: FlowR.Core.Application.RootElementId
+  type: Field
+  source:
+    remote:
+      path: FlowR.Core/Application.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: RootElementId
+    path: FlowR.Core/Application.cs
+    startLine: 23
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nElement ID of the master container for the application\n"
+  example: []
+  syntax:
+    content: protected readonly string RootElementId
+    return:
+      type: System.String
+    content.vb: Protected ReadOnly RootElementId As String
+  modifiers.csharp:
+  - protected
+  - readonly
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: FlowR.Core.Application.#ctor(System.String,IClientProxy)
+  commentId: M:FlowR.Core.Application.#ctor(System.String,IClientProxy)
+  id: '#ctor(System.String,IClientProxy)'
+  parent: FlowR.Core.Application
+  langs:
+  - csharp
+  - vb
+  name: Application(String, IClientProxy)
+  nameWithType: Application.Application(String, IClientProxy)
+  fullName: FlowR.Core.Application.Application(System.String, IClientProxy)
+  type: Constructor
+  source:
+    remote:
+      path: FlowR.Core/Application.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: .ctor
+    path: FlowR.Core/Application.cs
+    startLine: 30
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nthis will be called from the FlowRHub Service\n"
+  example: []
+  syntax:
+    content: protected Application(string connectionId, IClientProxy client)
+    parameters:
+    - id: connectionId
+      type: System.String
+      description: connectionId from Hub
+    - id: client
+      type: IClientProxy
+      description: SignalR client from Hub
+    content.vb: Protected Sub New(connectionId As String, client As IClientProxy)
+  overload: FlowR.Core.Application.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: FlowR.Core.Application.Communication
+  commentId: P:FlowR.Core.Application.Communication
+  id: Communication
+  parent: FlowR.Core.Application
+  langs:
+  - csharp
+  - vb
+  name: Communication
+  nameWithType: Application.Communication
+  fullName: FlowR.Core.Application.Communication
+  type: Property
+  source:
+    remote:
+      path: FlowR.Core/Application.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Communication
+    path: FlowR.Core/Application.cs
+    startLine: 48
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  example: []
+  syntax:
+    content: public ApplicationCommunication Communication { get; }
+    parameters: []
+    return:
+      type: FlowR.Core.ApplicationCommunication
+    content.vb: Public ReadOnly Property Communication As ApplicationCommunication
+  overload: FlowR.Core.Application.Communication*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: FlowR.Core.Application.RegisterComponent(FlowR.Core.Node)
+  commentId: M:FlowR.Core.Application.RegisterComponent(FlowR.Core.Node)
+  id: RegisterComponent(FlowR.Core.Node)
+  parent: FlowR.Core.Application
+  langs:
+  - csharp
+  - vb
+  name: RegisterComponent(Node)
+  nameWithType: Application.RegisterComponent(Node)
+  fullName: FlowR.Core.Application.RegisterComponent(FlowR.Core.Node)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Application.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: RegisterComponent
+    path: FlowR.Core/Application.cs
+    startLine: 60
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\n[internal use] Add Node to registry.\nInternally called after add to parent Node, usually there is no need to be called.\n"
+  example: []
+  syntax:
+    content: public void RegisterComponent(Node node)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    content.vb: Public Sub RegisterComponent(node As Node)
+  overload: FlowR.Core.Application.RegisterComponent*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: FlowR.Core.Application.UnregisterComponent(FlowR.Core.Node)
+  commentId: M:FlowR.Core.Application.UnregisterComponent(FlowR.Core.Node)
+  id: UnregisterComponent(FlowR.Core.Node)
+  parent: FlowR.Core.Application
+  langs:
+  - csharp
+  - vb
+  name: UnregisterComponent(Node)
+  nameWithType: Application.UnregisterComponent(Node)
+  fullName: FlowR.Core.Application.UnregisterComponent(FlowR.Core.Node)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Application.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: UnregisterComponent
+    path: FlowR.Core/Application.cs
+    startLine: 82
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\n[internal use] Remove Node from registry.\nInternally called after removed from parent Node, usually there is no need to be called.\n"
+  example: []
+  syntax:
+    content: public void UnregisterComponent(Node node)
+    parameters:
+    - id: node
+      type: FlowR.Core.Node
+      description: ''
+    content.vb: Public Sub UnregisterComponent(node As Node)
+  overload: FlowR.Core.Application.UnregisterComponent*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: FlowR.Core.Application.OnClientEventTriggered(FlowR.Core.Message.MessageEvent)
+  commentId: M:FlowR.Core.Application.OnClientEventTriggered(FlowR.Core.Message.MessageEvent)
+  id: OnClientEventTriggered(FlowR.Core.Message.MessageEvent)
+  parent: FlowR.Core.Application
+  langs:
+  - csharp
+  - vb
+  name: OnClientEventTriggered(MessageEvent)
+  nameWithType: Application.OnClientEventTriggered(MessageEvent)
+  fullName: FlowR.Core.Application.OnClientEventTriggered(FlowR.Core.Message.MessageEvent)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Application.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: OnClientEventTriggered
+    path: FlowR.Core/Application.cs
+    startLine: 91
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\n[internal use] Called from FlowR Hub when a client event is triggered.\n"
+  example: []
+  syntax:
+    content: public void OnClientEventTriggered(MessageEvent message)
+    parameters:
+    - id: message
+      type: FlowR.Core.Message.MessageEvent
+      description: ''
+    content.vb: Public Sub OnClientEventTriggered(message As MessageEvent)
+  overload: FlowR.Core.Application.OnClientEventTriggered*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: FlowR.Core.Application.AddTimer(System.Int32,EventHandler,System.Boolean)
+  commentId: M:FlowR.Core.Application.AddTimer(System.Int32,EventHandler,System.Boolean)
+  id: AddTimer(System.Int32,EventHandler,System.Boolean)
+  parent: FlowR.Core.Application
+  langs:
+  - csharp
+  - vb
+  name: AddTimer(Int32, EventHandler, Boolean)
+  nameWithType: Application.AddTimer(Int32, EventHandler, Boolean)
+  fullName: FlowR.Core.Application.AddTimer(System.Int32, EventHandler, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Application.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: AddTimer
+    path: FlowR.Core/Application.cs
+    startLine: 108
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nAdd a Timer with a callback\n"
+  remarks: Timer will be passed as first argument of every callback call, so you can stop it anytime
+  example: []
+  syntax:
+    content: public void AddTimer(int delay, EventHandler callback, bool infinite = true)
+    parameters:
+    - id: delay
+      type: System.Int32
+      description: delay in millisec
+    - id: callback
+      type: EventHandler
+      description: The Callback
+    - id: infinite
+      type: System.Boolean
+      description: is a timeout or an interval
+    content.vb: Public Sub AddTimer(delay As Integer, callback As EventHandler, infinite As Boolean = True)
+  overload: FlowR.Core.Application.AddTimer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: FlowR.Core.Application.CancelTimer(FlowR.Core.ApplicationTimer)
+  commentId: M:FlowR.Core.Application.CancelTimer(FlowR.Core.ApplicationTimer)
+  id: CancelTimer(FlowR.Core.ApplicationTimer)
+  parent: FlowR.Core.Application
+  langs:
+  - csharp
+  - vb
+  name: CancelTimer(ApplicationTimer)
+  nameWithType: Application.CancelTimer(ApplicationTimer)
+  fullName: FlowR.Core.Application.CancelTimer(FlowR.Core.ApplicationTimer)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Application.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: CancelTimer
+    path: FlowR.Core/Application.cs
+    startLine: 117
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nRemove a Timer.\n"
+  example: []
+  syntax:
+    content: public void CancelTimer(ApplicationTimer timer)
+    parameters:
+    - id: timer
+      type: FlowR.Core.ApplicationTimer
+      description: ''
+    content.vb: Public Sub CancelTimer(timer As ApplicationTimer)
+  overload: FlowR.Core.Application.CancelTimer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: FlowR.Core
+  commentId: N:FlowR.Core
+  name: FlowR.Core
+  nameWithType: FlowR.Core
+  fullName: FlowR.Core
+- uid: FlowR.Core.ComponentRoot
+  commentId: T:FlowR.Core.ComponentRoot
+  parent: FlowR.Core
+  name: ComponentRoot
+  nameWithType: ComponentRoot
+  fullName: FlowR.Core.ComponentRoot
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: FlowR.Core.Application.#ctor*
+  commentId: Overload:FlowR.Core.Application.#ctor
+  name: Application
+  nameWithType: Application.Application
+  fullName: FlowR.Core.Application.Application
+- uid: IClientProxy
+  isExternal: true
+  name: IClientProxy
+  nameWithType: IClientProxy
+  fullName: IClientProxy
+- uid: FlowR.Core.ApplicationCommunication
+  commentId: T:FlowR.Core.ApplicationCommunication
+  parent: FlowR.Core
+  name: ApplicationCommunication
+  nameWithType: ApplicationCommunication
+  fullName: FlowR.Core.ApplicationCommunication
+- uid: FlowR.Core.Application.Communication*
+  commentId: Overload:FlowR.Core.Application.Communication
+  name: Communication
+  nameWithType: Application.Communication
+  fullName: FlowR.Core.Application.Communication
+- uid: FlowR.Core.Application.RegisterComponent*
+  commentId: Overload:FlowR.Core.Application.RegisterComponent
+  name: RegisterComponent
+  nameWithType: Application.RegisterComponent
+  fullName: FlowR.Core.Application.RegisterComponent
+- uid: FlowR.Core.Node
+  commentId: T:FlowR.Core.Node
+  parent: FlowR.Core
+  name: Node
+  nameWithType: Node
+  fullName: FlowR.Core.Node
+- uid: FlowR.Core.Application.UnregisterComponent*
+  commentId: Overload:FlowR.Core.Application.UnregisterComponent
+  name: UnregisterComponent
+  nameWithType: Application.UnregisterComponent
+  fullName: FlowR.Core.Application.UnregisterComponent
+- uid: FlowR.Core.Application.OnClientEventTriggered*
+  commentId: Overload:FlowR.Core.Application.OnClientEventTriggered
+  name: OnClientEventTriggered
+  nameWithType: Application.OnClientEventTriggered
+  fullName: FlowR.Core.Application.OnClientEventTriggered
+- uid: FlowR.Core.Message.MessageEvent
+  commentId: T:FlowR.Core.Message.MessageEvent
+  parent: FlowR.Core.Message
+  name: MessageEvent
+  nameWithType: MessageEvent
+  fullName: FlowR.Core.Message.MessageEvent
+- uid: FlowR.Core.Message
+  commentId: N:FlowR.Core.Message
+  name: FlowR.Core.Message
+  nameWithType: FlowR.Core.Message
+  fullName: FlowR.Core.Message
+- uid: FlowR.Core.Application.AddTimer*
+  commentId: Overload:FlowR.Core.Application.AddTimer
+  name: AddTimer
+  nameWithType: Application.AddTimer
+  fullName: FlowR.Core.Application.AddTimer
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EventHandler
+  isExternal: true
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: EventHandler
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: FlowR.Core.Application.CancelTimer*
+  commentId: Overload:FlowR.Core.Application.CancelTimer
+  name: CancelTimer
+  nameWithType: Application.CancelTimer
+  fullName: FlowR.Core.Application.CancelTimer
+- uid: FlowR.Core.ApplicationTimer
+  commentId: T:FlowR.Core.ApplicationTimer
+  parent: FlowR.Core
+  name: ApplicationTimer
+  nameWithType: ApplicationTimer
+  fullName: FlowR.Core.ApplicationTimer

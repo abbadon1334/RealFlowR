@@ -1,0 +1,184 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.Message.IMessage
+  commentId: T:FlowR.Core.Message.IMessage
+  id: IMessage
+  parent: FlowR.Core.Message
+  children:
+  - FlowR.Core.Message.IMessage.GetArgumentValues
+  - FlowR.Core.Message.IMessage.GetRequestedAction
+  - FlowR.Core.Message.IMessage.GetUuid
+  langs:
+  - csharp
+  - vb
+  name: IMessage
+  nameWithType: IMessage
+  fullName: FlowR.Core.Message.IMessage
+  type: Interface
+  source:
+    remote:
+      path: FlowR.Core/Message/IMessage.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: IMessage
+    path: FlowR.Core/Message/IMessage.cs
+    startLine: 5
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nInterface for message communications\n"
+  example: []
+  syntax:
+    content: public interface IMessage
+    content.vb: Public Interface IMessage
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: FlowR.Core.Message.IMessage.GetUuid
+  commentId: M:FlowR.Core.Message.IMessage.GetUuid
+  id: GetUuid
+  parent: FlowR.Core.Message.IMessage
+  langs:
+  - csharp
+  - vb
+  name: GetUuid()
+  nameWithType: IMessage.GetUuid()
+  fullName: FlowR.Core.Message.IMessage.GetUuid()
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/IMessage.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: GetUuid
+    path: FlowR.Core/Message/IMessage.cs
+    startLine: 11
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nGet the Uuid of the message.\n"
+  example: []
+  syntax:
+    content: string GetUuid()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Function GetUuid As String
+  overload: FlowR.Core.Message.IMessage.GetUuid*
+- uid: FlowR.Core.Message.IMessage.GetRequestedAction
+  commentId: M:FlowR.Core.Message.IMessage.GetRequestedAction
+  id: GetRequestedAction
+  parent: FlowR.Core.Message.IMessage
+  langs:
+  - csharp
+  - vb
+  name: GetRequestedAction()
+  nameWithType: IMessage.GetRequestedAction()
+  fullName: FlowR.Core.Message.IMessage.GetRequestedAction()
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/IMessage.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: GetRequestedAction
+    path: FlowR.Core/Message/IMessage.cs
+    startLine: 17
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nGet Action as string\n"
+  example: []
+  syntax:
+    content: string GetRequestedAction()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Function GetRequestedAction As String
+  overload: FlowR.Core.Message.IMessage.GetRequestedAction*
+- uid: FlowR.Core.Message.IMessage.GetArgumentValues
+  commentId: M:FlowR.Core.Message.IMessage.GetArgumentValues
+  id: GetArgumentValues
+  parent: FlowR.Core.Message.IMessage
+  langs:
+  - csharp
+  - vb
+  name: GetArgumentValues()
+  nameWithType: IMessage.GetArgumentValues()
+  fullName: FlowR.Core.Message.IMessage.GetArgumentValues()
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/IMessage.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: GetArgumentValues
+    path: FlowR.Core/Message/IMessage.cs
+    startLine: 23
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nGet Arguments as array\n"
+  example: []
+  syntax:
+    content: object[] GetArgumentValues()
+    return:
+      type: System.Object[]
+      description: ''
+    content.vb: Function GetArgumentValues As Object()
+  overload: FlowR.Core.Message.IMessage.GetArgumentValues*
+references:
+- uid: FlowR.Core.Message
+  commentId: N:FlowR.Core.Message
+  name: FlowR.Core.Message
+  nameWithType: FlowR.Core.Message
+  fullName: FlowR.Core.Message
+- uid: FlowR.Core.Message.IMessage.GetUuid*
+  commentId: Overload:FlowR.Core.Message.IMessage.GetUuid
+  name: GetUuid
+  nameWithType: IMessage.GetUuid
+  fullName: FlowR.Core.Message.IMessage.GetUuid
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: FlowR.Core.Message.IMessage.GetRequestedAction*
+  commentId: Overload:FlowR.Core.Message.IMessage.GetRequestedAction
+  name: GetRequestedAction
+  nameWithType: IMessage.GetRequestedAction
+  fullName: FlowR.Core.Message.IMessage.GetRequestedAction
+- uid: FlowR.Core.Message.IMessage.GetArgumentValues*
+  commentId: Overload:FlowR.Core.Message.IMessage.GetArgumentValues
+  name: GetArgumentValues
+  nameWithType: IMessage.GetArgumentValues
+  fullName: FlowR.Core.Message.IMessage.GetArgumentValues
+- uid: System.Object[]
+  isExternal: true
+  name: Object[]
+  nameWithType: Object[]
+  fullName: System.Object[]
+  nameWithType.vb: Object()
+  fullName.vb: System.Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()

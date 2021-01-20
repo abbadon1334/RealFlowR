@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.Message.MessageEventArgs
+  commentId: T:FlowR.Core.Message.MessageEventArgs
+  id: MessageEventArgs
+  parent: FlowR.Core.Message
+  children:
+  - FlowR.Core.Message.MessageEventArgs.Data
+  langs:
+  - csharp
+  - vb
+  name: MessageEventArgs
+  nameWithType: MessageEventArgs
+  fullName: FlowR.Core.Message.MessageEventArgs
+  type: Class
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageEvent.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageEventArgs
+    path: FlowR.Core/Message/MessageEvent.cs
+    startLine: 45
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nMessage EventArguments\n"
+  example: []
+  syntax:
+    content: 'public class MessageEventArgs : EventArgs'
+    content.vb: >-
+      Public Class MessageEventArgs
+
+          Inherits EventArgs
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: FlowR.Core.Message.MessageEventArgs.Data
+  commentId: F:FlowR.Core.Message.MessageEventArgs.Data
+  id: Data
+  parent: FlowR.Core.Message.MessageEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: MessageEventArgs.Data
+  fullName: FlowR.Core.Message.MessageEventArgs.Data
+  type: Field
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageEvent.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Data
+    path: FlowR.Core/Message/MessageEvent.cs
+    startLine: 50
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nArgument Dictionary Store\n"
+  example: []
+  syntax:
+    content: public Dictionary<string, string> Data
+    return:
+      type: Dictionary{System.String,System.String}
+    content.vb: Public Data As Dictionary(Of String, String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: FlowR.Core.Message
+  commentId: N:FlowR.Core.Message
+  name: FlowR.Core.Message
+  nameWithType: FlowR.Core.Message
+  fullName: FlowR.Core.Message
+- uid: Dictionary{System.String,System.String}
+  commentId: '!:Dictionary{System.String,System.String}'
+  definition: Dictionary`2
+  name: Dictionary<String, String>
+  nameWithType: Dictionary<String, String>
+  fullName: Dictionary<System.String, System.String>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: Dictionary(Of System.String, System.String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

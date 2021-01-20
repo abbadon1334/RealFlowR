@@ -1,0 +1,606 @@
+{
+  "homepages": [],
+  "source_base_path": "/home/abbadon1334/RiderProjects/RealFlowR",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docfx/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docfx/index.html",
+          "hash": "eOdvYTJ2NL69bd1AvgTtHw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Application.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Application.html",
+          "hash": "PNV8wDYkm1uAgPbpBBK57w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.ApplicationCommunication.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.ApplicationCommunication.html",
+          "hash": "FL8BwzTVv3Gw+Tj1cv3IXg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.ApplicationRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.ApplicationRegistry.html",
+          "hash": "3DtvSFZYCABOrLnkiNQIcQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.ApplicationResponses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.ApplicationResponses.html",
+          "hash": "w4B9FaR3sEzWvvzoxT2GFw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.ApplicationTimer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.ApplicationTimer.html",
+          "hash": "6aciXqrA/kxPlwaczXLtaA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.ApplicationTimers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.ApplicationTimers.html",
+          "hash": "9O3RqlCRCDh60JL1RRWTWg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.CollectionAddedEventArgs-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.CollectionAddedEventArgs-1.html",
+          "hash": "gsj51UPSjahhSoUQyLVQWw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.CollectionChangedEventArgs-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.CollectionChangedEventArgs-1.html",
+          "hash": "hVy1SaJHuhkRO5U6j989og=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Component-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Component-1.html",
+          "hash": "nmRXRyORW5o4fOJXE6pbtg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.ComponentControl-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.ComponentControl-1.html",
+          "hash": "ZR3lVfzEW5KhmBi8PEiy9w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.ComponentElement-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.ComponentElement-1.html",
+          "hash": "JsTUrfGvAzcvN8EasJb3NA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.ComponentRoot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.ComponentRoot.html",
+          "hash": "H5Tp7OFw9dA704kDOZNC0Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.FlowRHub-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.FlowRHub-1.html",
+          "hash": "QrUp92T3MG81J0fWAjDEvQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.FlowRService-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.FlowRService-1.html",
+          "hash": "4IfCPrIAFshT6vNHHb7q4Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.IComponentControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.IComponentControl.html",
+          "hash": "gN0rEIgOuXGKZi/51KPk9A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Message.Factory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Message.Factory.html",
+          "hash": "OQYSxAM60GAGSKoNFs5ATg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Message.IMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Message.IMessage.html",
+          "hash": "SsgwybqsdHYdMyxsZIDiow=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Message.IMessageResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Message.IMessageResponse.html",
+          "hash": "3VY75JZzis9PQZLqgBsFyA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Message.Message.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Message.Message.html",
+          "hash": "YBQo2HqjYhpR5KtPPGIVEA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Message.MessageElement.MessageActions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Message.MessageElement.MessageActions.html",
+          "hash": "yh617yNzTjlRmeut3Ycfig=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Message.MessageElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Message.MessageElement.html",
+          "hash": "KqvCcJYRKOe6JdcWPOFang=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Message.MessageElementWithResponse.MessageActions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Message.MessageElementWithResponse.MessageActions.html",
+          "hash": "I0F4gUsfFsRXFz2jfyMJLA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Message.MessageElementWithResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Message.MessageElementWithResponse.html",
+          "hash": "gGEA9d9RDtoZmC0QlTE5SQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Message.MessageEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Message.MessageEvent.html",
+          "hash": "J9ILvoOQwJPXwRpwTD+w2w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Message.MessageEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Message.MessageEventArgs.html",
+          "hash": "METqsQpG6Uk9lIviAGfl0Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Message.MessageGlobal.MessageActions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Message.MessageGlobal.MessageActions.html",
+          "hash": "PC4JFJ3PJEHBZJeC0fNg7Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Message.MessageGlobal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Message.MessageGlobal.html",
+          "hash": "H1I0aMwAmvQkaW3MAbwbzw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.html",
+          "hash": "x96vMkWGxuWQpndncCo9ew=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Message.MessageGlobalWithResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Message.MessageGlobalWithResponse.html",
+          "hash": "0tqReIGkVGwHoSwZZSrJZg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Message.MessageResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Message.MessageResponse.html",
+          "hash": "Y9O05FaZqs2AcsxybHZNrQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Message.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Message.html",
+          "hash": "AxzhVChLAFJQDs/22ElX+g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.Node.html",
+          "hash": "24GJMaF+WeTTSR/hmfkT6A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.NodeCollection-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.NodeCollection-1.html",
+          "hash": "MN8rE1HE9zmUVQx0XvmjWg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.NodeCollectionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.NodeCollectionAttribute.html",
+          "hash": "mdk2p8qDF+bHTdJ6LEhVbQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.NodeCollectionEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.NodeCollectionEvent.html",
+          "hash": "rR3M2coVRWS0t+ebD3McvA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.NodeCollectionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.NodeCollectionNode.html",
+          "hash": "Eb4a8FsNIFlGK7VRgSlR1A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.NodeCollectionProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.NodeCollectionProperty.html",
+          "hash": "tpB/eo0D1bfpEXgjW7fyyg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.Core.html",
+          "hash": "0PWkMjZUADaG2SDSxgGmlA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.UI.Controls.Button.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.UI.Controls.Button.html",
+          "hash": "Mtzjfg9uLuFF3dHnaBb1GA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.UI.Controls.Input.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.UI.Controls.Input.html",
+          "hash": "42pU+FINvEOumtE5ChwBfQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.UI.Controls.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.UI.Controls.html",
+          "hash": "W34B+ON5yitNwkJCp/l2RA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.UI.Div.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.UI.Div.html",
+          "hash": "RpHz2TFxFf3Fjirk9L+1+g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.UI.Form.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.UI.Form.html",
+          "hash": "GpVY7PVmW6s0oWZw6KtTCQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/FlowR.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/FlowR.UI.html",
+          "hash": "7nZJ45qQbUyc7YhmB3bMBg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/toc.html",
+          "hash": "7LeeSXMe746xC1VM5u1a8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 1,
+          "skipped_file_count": 1
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 44,
+          "skipped_file_count": 44
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,0 +1,1250 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.ComponentRoot
+  commentId: T:FlowR.Core.ComponentRoot
+  id: ComponentRoot
+  parent: FlowR.Core
+  children:
+  - FlowR.Core.ComponentRoot.#ctor(System.String)
+  - FlowR.Core.ComponentRoot.TagName
+  langs:
+  - csharp
+  - vb
+  name: ComponentRoot
+  nameWithType: ComponentRoot
+  fullName: FlowR.Core.ComponentRoot
+  type: Class
+  source:
+    remote:
+      path: FlowR.Core/ComponentRoot.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: ComponentRoot
+    path: FlowR.Core/ComponentRoot.cs
+    startLine: 5
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nSpecial internal Node as root of the composite tree\n"
+  example: []
+  syntax:
+    content: 'public class ComponentRoot : Node'
+    content.vb: >-
+      Public Class ComponentRoot
+
+          Inherits Node
+  inheritance:
+  - System.Object
+  - FlowR.Core.Node
+  inheritedMembers:
+  - FlowR.Core.Node.Application
+  - FlowR.Core.Node.Owner
+  - FlowR.Core.Node.Uuid
+  - FlowR.Core.Node._SetProperty(System.String,System.String)
+  - FlowR.Core.Node.GetProperty(System.String)
+  - FlowR.Core.Node._On(System.String,EventHandler)
+  - FlowR.Core.Node._Off(System.String,EventHandler)
+  - FlowR.Core.Node.OnClientEventTriggered(System.String,FlowR.Core.Message.MessageEventArgs)
+  - FlowR.Core.Node.AddClientJavascriptMethod(System.String,System.String)
+  - FlowR.Core.Node.CallClientMethod(System.String,System.String[])
+  - FlowR.Core.Node.CallClientMethodWaitResponse(System.String,System.String[])
+  - FlowR.Core.Node.GetChildrenCount
+  - FlowR.Core.Node.GetFirstChild
+  - FlowR.Core.Node.GetLastChild
+  - FlowR.Core.Node.Add(FlowR.Core.Node)
+  - FlowR.Core.Node.Remove(FlowR.Core.Node)
+  - FlowR.Core.Node.Add``1(KeyValuePair{System.String,System.String}[])
+  - FlowR.Core.Node.Add``1(System.String,KeyValuePair{System.String,System.String}[])
+  - FlowR.Core.Node._SetAttribute(System.String,System.String)
+  - FlowR.Core.Node.HasAttribute(System.String)
+  - FlowR.Core.Node._RemoveAttribute(System.String)
+  - FlowR.Core.Node.GetAttributeDictionary
+  - FlowR.Core.Node.Init
+  - FlowR.Core.Node.IsInitialized
+  - FlowR.Core.Node.Text
+  - FlowR.Core.Node._SetText(System.String)
+  - FlowR.Core.Node.Value
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: FlowR.Core.ComponentRoot.#ctor(System.String)
+  commentId: M:FlowR.Core.ComponentRoot.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: FlowR.Core.ComponentRoot
+  langs:
+  - csharp
+  - vb
+  name: ComponentRoot(String)
+  nameWithType: ComponentRoot.ComponentRoot(String)
+  fullName: FlowR.Core.ComponentRoot.ComponentRoot(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: FlowR.Core/ComponentRoot.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: .ctor
+    path: FlowR.Core/ComponentRoot.cs
+    startLine: 12
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\n[internal use]\n"
+  example: []
+  syntax:
+    content: public ComponentRoot(string rootId)
+    parameters:
+    - id: rootId
+      type: System.String
+      description: ''
+    content.vb: Public Sub New(rootId As String)
+  overload: FlowR.Core.ComponentRoot.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: FlowR.Core.ComponentRoot.TagName
+  commentId: P:FlowR.Core.ComponentRoot.TagName
+  id: TagName
+  parent: FlowR.Core.ComponentRoot
+  langs:
+  - csharp
+  - vb
+  name: TagName
+  nameWithType: ComponentRoot.TagName
+  fullName: FlowR.Core.ComponentRoot.TagName
+  type: Property
+  source:
+    remote:
+      path: FlowR.Core/ComponentRoot.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: TagName
+    path: FlowR.Core/ComponentRoot.cs
+    startLine: 17
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  example: []
+  syntax:
+    content: public override string TagName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides ReadOnly Property TagName As String
+  overridden: FlowR.Core.Node.TagName
+  overload: FlowR.Core.ComponentRoot.TagName*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+references:
+- uid: FlowR.Core
+  commentId: N:FlowR.Core
+  name: FlowR.Core
+  nameWithType: FlowR.Core
+  fullName: FlowR.Core
+- uid: FlowR.Core.Node
+  commentId: T:FlowR.Core.Node
+  parent: FlowR.Core
+  name: Node
+  nameWithType: Node
+  fullName: FlowR.Core.Node
+- uid: FlowR.Core.Node.Application
+  commentId: P:FlowR.Core.Node.Application
+  parent: FlowR.Core.Node
+  name: Application
+  nameWithType: Node.Application
+  fullName: FlowR.Core.Node.Application
+- uid: FlowR.Core.Node.Owner
+  commentId: P:FlowR.Core.Node.Owner
+  parent: FlowR.Core.Node
+  name: Owner
+  nameWithType: Node.Owner
+  fullName: FlowR.Core.Node.Owner
+- uid: FlowR.Core.Node.Uuid
+  commentId: P:FlowR.Core.Node.Uuid
+  parent: FlowR.Core.Node
+  name: Uuid
+  nameWithType: Node.Uuid
+  fullName: FlowR.Core.Node.Uuid
+- uid: FlowR.Core.Node._SetProperty(System.String,System.String)
+  commentId: M:FlowR.Core.Node._SetProperty(System.String,System.String)
+  parent: FlowR.Core.Node
+  isExternal: true
+  name: _SetProperty(String, String)
+  nameWithType: Node._SetProperty(String, String)
+  fullName: FlowR.Core.Node._SetProperty(System.String, System.String)
+  spec.csharp:
+  - uid: FlowR.Core.Node._SetProperty(System.String,System.String)
+    name: _SetProperty
+    nameWithType: Node._SetProperty
+    fullName: FlowR.Core.Node._SetProperty
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node._SetProperty(System.String,System.String)
+    name: _SetProperty
+    nameWithType: Node._SetProperty
+    fullName: FlowR.Core.Node._SetProperty
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.GetProperty(System.String)
+  commentId: M:FlowR.Core.Node.GetProperty(System.String)
+  parent: FlowR.Core.Node
+  isExternal: true
+  name: GetProperty(String)
+  nameWithType: Node.GetProperty(String)
+  fullName: FlowR.Core.Node.GetProperty(System.String)
+  spec.csharp:
+  - uid: FlowR.Core.Node.GetProperty(System.String)
+    name: GetProperty
+    nameWithType: Node.GetProperty
+    fullName: FlowR.Core.Node.GetProperty
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node.GetProperty(System.String)
+    name: GetProperty
+    nameWithType: Node.GetProperty
+    fullName: FlowR.Core.Node.GetProperty
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node._On(System.String,EventHandler)
+  commentId: M:FlowR.Core.Node._On(System.String,EventHandler)
+  parent: FlowR.Core.Node
+  isExternal: true
+  name: _On(String, EventHandler)
+  nameWithType: Node._On(String, EventHandler)
+  fullName: FlowR.Core.Node._On(System.String, EventHandler)
+  spec.csharp:
+  - uid: FlowR.Core.Node._On(System.String,EventHandler)
+    name: _On
+    nameWithType: Node._On
+    fullName: FlowR.Core.Node._On
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EventHandler
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: EventHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node._On(System.String,EventHandler)
+    name: _On
+    nameWithType: Node._On
+    fullName: FlowR.Core.Node._On
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EventHandler
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: EventHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node._Off(System.String,EventHandler)
+  commentId: M:FlowR.Core.Node._Off(System.String,EventHandler)
+  parent: FlowR.Core.Node
+  isExternal: true
+  name: _Off(String, EventHandler)
+  nameWithType: Node._Off(String, EventHandler)
+  fullName: FlowR.Core.Node._Off(System.String, EventHandler)
+  spec.csharp:
+  - uid: FlowR.Core.Node._Off(System.String,EventHandler)
+    name: _Off
+    nameWithType: Node._Off
+    fullName: FlowR.Core.Node._Off
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EventHandler
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: EventHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node._Off(System.String,EventHandler)
+    name: _Off
+    nameWithType: Node._Off
+    fullName: FlowR.Core.Node._Off
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EventHandler
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: EventHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.OnClientEventTriggered(System.String,FlowR.Core.Message.MessageEventArgs)
+  commentId: M:FlowR.Core.Node.OnClientEventTriggered(System.String,FlowR.Core.Message.MessageEventArgs)
+  parent: FlowR.Core.Node
+  isExternal: true
+  name: OnClientEventTriggered(String, MessageEventArgs)
+  nameWithType: Node.OnClientEventTriggered(String, MessageEventArgs)
+  fullName: FlowR.Core.Node.OnClientEventTriggered(System.String, FlowR.Core.Message.MessageEventArgs)
+  spec.csharp:
+  - uid: FlowR.Core.Node.OnClientEventTriggered(System.String,FlowR.Core.Message.MessageEventArgs)
+    name: OnClientEventTriggered
+    nameWithType: Node.OnClientEventTriggered
+    fullName: FlowR.Core.Node.OnClientEventTriggered
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: FlowR.Core.Message.MessageEventArgs
+    name: MessageEventArgs
+    nameWithType: MessageEventArgs
+    fullName: FlowR.Core.Message.MessageEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node.OnClientEventTriggered(System.String,FlowR.Core.Message.MessageEventArgs)
+    name: OnClientEventTriggered
+    nameWithType: Node.OnClientEventTriggered
+    fullName: FlowR.Core.Node.OnClientEventTriggered
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: FlowR.Core.Message.MessageEventArgs
+    name: MessageEventArgs
+    nameWithType: MessageEventArgs
+    fullName: FlowR.Core.Message.MessageEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.AddClientJavascriptMethod(System.String,System.String)
+  commentId: M:FlowR.Core.Node.AddClientJavascriptMethod(System.String,System.String)
+  parent: FlowR.Core.Node
+  isExternal: true
+  name: AddClientJavascriptMethod(String, String)
+  nameWithType: Node.AddClientJavascriptMethod(String, String)
+  fullName: FlowR.Core.Node.AddClientJavascriptMethod(System.String, System.String)
+  spec.csharp:
+  - uid: FlowR.Core.Node.AddClientJavascriptMethod(System.String,System.String)
+    name: AddClientJavascriptMethod
+    nameWithType: Node.AddClientJavascriptMethod
+    fullName: FlowR.Core.Node.AddClientJavascriptMethod
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node.AddClientJavascriptMethod(System.String,System.String)
+    name: AddClientJavascriptMethod
+    nameWithType: Node.AddClientJavascriptMethod
+    fullName: FlowR.Core.Node.AddClientJavascriptMethod
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.CallClientMethod(System.String,System.String[])
+  commentId: M:FlowR.Core.Node.CallClientMethod(System.String,System.String[])
+  parent: FlowR.Core.Node
+  isExternal: true
+  name: CallClientMethod(String, String[])
+  nameWithType: Node.CallClientMethod(String, String[])
+  fullName: FlowR.Core.Node.CallClientMethod(System.String, System.String[])
+  nameWithType.vb: Node.CallClientMethod(String, String())
+  fullName.vb: FlowR.Core.Node.CallClientMethod(System.String, System.String())
+  name.vb: CallClientMethod(String, String())
+  spec.csharp:
+  - uid: FlowR.Core.Node.CallClientMethod(System.String,System.String[])
+    name: CallClientMethod
+    nameWithType: Node.CallClientMethod
+    fullName: FlowR.Core.Node.CallClientMethod
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node.CallClientMethod(System.String,System.String[])
+    name: CallClientMethod
+    nameWithType: Node.CallClientMethod
+    fullName: FlowR.Core.Node.CallClientMethod
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.CallClientMethodWaitResponse(System.String,System.String[])
+  commentId: M:FlowR.Core.Node.CallClientMethodWaitResponse(System.String,System.String[])
+  parent: FlowR.Core.Node
+  isExternal: true
+  name: CallClientMethodWaitResponse(String, String[])
+  nameWithType: Node.CallClientMethodWaitResponse(String, String[])
+  fullName: FlowR.Core.Node.CallClientMethodWaitResponse(System.String, System.String[])
+  nameWithType.vb: Node.CallClientMethodWaitResponse(String, String())
+  fullName.vb: FlowR.Core.Node.CallClientMethodWaitResponse(System.String, System.String())
+  name.vb: CallClientMethodWaitResponse(String, String())
+  spec.csharp:
+  - uid: FlowR.Core.Node.CallClientMethodWaitResponse(System.String,System.String[])
+    name: CallClientMethodWaitResponse
+    nameWithType: Node.CallClientMethodWaitResponse
+    fullName: FlowR.Core.Node.CallClientMethodWaitResponse
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node.CallClientMethodWaitResponse(System.String,System.String[])
+    name: CallClientMethodWaitResponse
+    nameWithType: Node.CallClientMethodWaitResponse
+    fullName: FlowR.Core.Node.CallClientMethodWaitResponse
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.GetChildrenCount
+  commentId: M:FlowR.Core.Node.GetChildrenCount
+  parent: FlowR.Core.Node
+  name: GetChildrenCount()
+  nameWithType: Node.GetChildrenCount()
+  fullName: FlowR.Core.Node.GetChildrenCount()
+  spec.csharp:
+  - uid: FlowR.Core.Node.GetChildrenCount
+    name: GetChildrenCount
+    nameWithType: Node.GetChildrenCount
+    fullName: FlowR.Core.Node.GetChildrenCount
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node.GetChildrenCount
+    name: GetChildrenCount
+    nameWithType: Node.GetChildrenCount
+    fullName: FlowR.Core.Node.GetChildrenCount
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.GetFirstChild
+  commentId: M:FlowR.Core.Node.GetFirstChild
+  parent: FlowR.Core.Node
+  name: GetFirstChild()
+  nameWithType: Node.GetFirstChild()
+  fullName: FlowR.Core.Node.GetFirstChild()
+  spec.csharp:
+  - uid: FlowR.Core.Node.GetFirstChild
+    name: GetFirstChild
+    nameWithType: Node.GetFirstChild
+    fullName: FlowR.Core.Node.GetFirstChild
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node.GetFirstChild
+    name: GetFirstChild
+    nameWithType: Node.GetFirstChild
+    fullName: FlowR.Core.Node.GetFirstChild
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.GetLastChild
+  commentId: M:FlowR.Core.Node.GetLastChild
+  parent: FlowR.Core.Node
+  name: GetLastChild()
+  nameWithType: Node.GetLastChild()
+  fullName: FlowR.Core.Node.GetLastChild()
+  spec.csharp:
+  - uid: FlowR.Core.Node.GetLastChild
+    name: GetLastChild
+    nameWithType: Node.GetLastChild
+    fullName: FlowR.Core.Node.GetLastChild
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node.GetLastChild
+    name: GetLastChild
+    nameWithType: Node.GetLastChild
+    fullName: FlowR.Core.Node.GetLastChild
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.Add(FlowR.Core.Node)
+  commentId: M:FlowR.Core.Node.Add(FlowR.Core.Node)
+  parent: FlowR.Core.Node
+  name: Add(Node)
+  nameWithType: Node.Add(Node)
+  fullName: FlowR.Core.Node.Add(FlowR.Core.Node)
+  spec.csharp:
+  - uid: FlowR.Core.Node.Add(FlowR.Core.Node)
+    name: Add
+    nameWithType: Node.Add
+    fullName: FlowR.Core.Node.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: FlowR.Core.Node
+    name: Node
+    nameWithType: Node
+    fullName: FlowR.Core.Node
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node.Add(FlowR.Core.Node)
+    name: Add
+    nameWithType: Node.Add
+    fullName: FlowR.Core.Node.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: FlowR.Core.Node
+    name: Node
+    nameWithType: Node
+    fullName: FlowR.Core.Node
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.Remove(FlowR.Core.Node)
+  commentId: M:FlowR.Core.Node.Remove(FlowR.Core.Node)
+  parent: FlowR.Core.Node
+  name: Remove(Node)
+  nameWithType: Node.Remove(Node)
+  fullName: FlowR.Core.Node.Remove(FlowR.Core.Node)
+  spec.csharp:
+  - uid: FlowR.Core.Node.Remove(FlowR.Core.Node)
+    name: Remove
+    nameWithType: Node.Remove
+    fullName: FlowR.Core.Node.Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: FlowR.Core.Node
+    name: Node
+    nameWithType: Node
+    fullName: FlowR.Core.Node
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node.Remove(FlowR.Core.Node)
+    name: Remove
+    nameWithType: Node.Remove
+    fullName: FlowR.Core.Node.Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: FlowR.Core.Node
+    name: Node
+    nameWithType: Node
+    fullName: FlowR.Core.Node
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.Add``1(KeyValuePair{System.String,System.String}[])
+  commentId: M:FlowR.Core.Node.Add``1(KeyValuePair{System.String,System.String}[])
+  parent: FlowR.Core.Node
+  isExternal: true
+  name: Add<TNode>(KeyValuePair<String, String>[])
+  nameWithType: Node.Add<TNode>(KeyValuePair<String, String>[])
+  fullName: FlowR.Core.Node.Add<TNode>(KeyValuePair<System.String, System.String>[])
+  nameWithType.vb: Node.Add(Of TNode)(KeyValuePair(Of String, String)())
+  fullName.vb: FlowR.Core.Node.Add(Of TNode)(KeyValuePair(Of System.String, System.String)())
+  name.vb: Add(Of TNode)(KeyValuePair(Of String, String)())
+  spec.csharp:
+  - uid: FlowR.Core.Node.Add``1(KeyValuePair{System.String,System.String}[])
+    name: Add<TNode>
+    nameWithType: Node.Add<TNode>
+    fullName: FlowR.Core.Node.Add<TNode>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node.Add``1(KeyValuePair{System.String,System.String}[])
+    name: Add(Of TNode)
+    nameWithType: Node.Add(Of TNode)
+    fullName: FlowR.Core.Node.Add(Of TNode)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.Add``1(System.String,KeyValuePair{System.String,System.String}[])
+  commentId: M:FlowR.Core.Node.Add``1(System.String,KeyValuePair{System.String,System.String}[])
+  parent: FlowR.Core.Node
+  isExternal: true
+  name: Add<TNode>(String, KeyValuePair<String, String>[])
+  nameWithType: Node.Add<TNode>(String, KeyValuePair<String, String>[])
+  fullName: FlowR.Core.Node.Add<TNode>(System.String, KeyValuePair<System.String, System.String>[])
+  nameWithType.vb: Node.Add(Of TNode)(String, KeyValuePair(Of String, String)())
+  fullName.vb: FlowR.Core.Node.Add(Of TNode)(System.String, KeyValuePair(Of System.String, System.String)())
+  name.vb: Add(Of TNode)(String, KeyValuePair(Of String, String)())
+  spec.csharp:
+  - uid: FlowR.Core.Node.Add``1(System.String,KeyValuePair{System.String,System.String}[])
+    name: Add<TNode>
+    nameWithType: Node.Add<TNode>
+    fullName: FlowR.Core.Node.Add<TNode>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node.Add``1(System.String,KeyValuePair{System.String,System.String}[])
+    name: Add(Of TNode)
+    nameWithType: Node.Add(Of TNode)
+    fullName: FlowR.Core.Node.Add(Of TNode)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node._SetAttribute(System.String,System.String)
+  commentId: M:FlowR.Core.Node._SetAttribute(System.String,System.String)
+  parent: FlowR.Core.Node
+  isExternal: true
+  name: _SetAttribute(String, String)
+  nameWithType: Node._SetAttribute(String, String)
+  fullName: FlowR.Core.Node._SetAttribute(System.String, System.String)
+  spec.csharp:
+  - uid: FlowR.Core.Node._SetAttribute(System.String,System.String)
+    name: _SetAttribute
+    nameWithType: Node._SetAttribute
+    fullName: FlowR.Core.Node._SetAttribute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node._SetAttribute(System.String,System.String)
+    name: _SetAttribute
+    nameWithType: Node._SetAttribute
+    fullName: FlowR.Core.Node._SetAttribute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.HasAttribute(System.String)
+  commentId: M:FlowR.Core.Node.HasAttribute(System.String)
+  parent: FlowR.Core.Node
+  isExternal: true
+  name: HasAttribute(String)
+  nameWithType: Node.HasAttribute(String)
+  fullName: FlowR.Core.Node.HasAttribute(System.String)
+  spec.csharp:
+  - uid: FlowR.Core.Node.HasAttribute(System.String)
+    name: HasAttribute
+    nameWithType: Node.HasAttribute
+    fullName: FlowR.Core.Node.HasAttribute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node.HasAttribute(System.String)
+    name: HasAttribute
+    nameWithType: Node.HasAttribute
+    fullName: FlowR.Core.Node.HasAttribute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node._RemoveAttribute(System.String)
+  commentId: M:FlowR.Core.Node._RemoveAttribute(System.String)
+  parent: FlowR.Core.Node
+  isExternal: true
+  name: _RemoveAttribute(String)
+  nameWithType: Node._RemoveAttribute(String)
+  fullName: FlowR.Core.Node._RemoveAttribute(System.String)
+  spec.csharp:
+  - uid: FlowR.Core.Node._RemoveAttribute(System.String)
+    name: _RemoveAttribute
+    nameWithType: Node._RemoveAttribute
+    fullName: FlowR.Core.Node._RemoveAttribute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node._RemoveAttribute(System.String)
+    name: _RemoveAttribute
+    nameWithType: Node._RemoveAttribute
+    fullName: FlowR.Core.Node._RemoveAttribute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.GetAttributeDictionary
+  commentId: M:FlowR.Core.Node.GetAttributeDictionary
+  parent: FlowR.Core.Node
+  name: GetAttributeDictionary()
+  nameWithType: Node.GetAttributeDictionary()
+  fullName: FlowR.Core.Node.GetAttributeDictionary()
+  spec.csharp:
+  - uid: FlowR.Core.Node.GetAttributeDictionary
+    name: GetAttributeDictionary
+    nameWithType: Node.GetAttributeDictionary
+    fullName: FlowR.Core.Node.GetAttributeDictionary
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node.GetAttributeDictionary
+    name: GetAttributeDictionary
+    nameWithType: Node.GetAttributeDictionary
+    fullName: FlowR.Core.Node.GetAttributeDictionary
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.Init
+  commentId: M:FlowR.Core.Node.Init
+  parent: FlowR.Core.Node
+  name: Init()
+  nameWithType: Node.Init()
+  fullName: FlowR.Core.Node.Init()
+  spec.csharp:
+  - uid: FlowR.Core.Node.Init
+    name: Init
+    nameWithType: Node.Init
+    fullName: FlowR.Core.Node.Init
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node.Init
+    name: Init
+    nameWithType: Node.Init
+    fullName: FlowR.Core.Node.Init
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.IsInitialized
+  commentId: M:FlowR.Core.Node.IsInitialized
+  parent: FlowR.Core.Node
+  name: IsInitialized()
+  nameWithType: Node.IsInitialized()
+  fullName: FlowR.Core.Node.IsInitialized()
+  spec.csharp:
+  - uid: FlowR.Core.Node.IsInitialized
+    name: IsInitialized
+    nameWithType: Node.IsInitialized
+    fullName: FlowR.Core.Node.IsInitialized
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node.IsInitialized
+    name: IsInitialized
+    nameWithType: Node.IsInitialized
+    fullName: FlowR.Core.Node.IsInitialized
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.Text
+  commentId: P:FlowR.Core.Node.Text
+  parent: FlowR.Core.Node
+  name: Text
+  nameWithType: Node.Text
+  fullName: FlowR.Core.Node.Text
+- uid: FlowR.Core.Node._SetText(System.String)
+  commentId: M:FlowR.Core.Node._SetText(System.String)
+  parent: FlowR.Core.Node
+  isExternal: true
+  name: _SetText(String)
+  nameWithType: Node._SetText(String)
+  fullName: FlowR.Core.Node._SetText(System.String)
+  spec.csharp:
+  - uid: FlowR.Core.Node._SetText(System.String)
+    name: _SetText
+    nameWithType: Node._SetText
+    fullName: FlowR.Core.Node._SetText
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Node._SetText(System.String)
+    name: _SetText
+    nameWithType: Node._SetText
+    fullName: FlowR.Core.Node._SetText
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Node.Value
+  commentId: P:FlowR.Core.Node.Value
+  parent: FlowR.Core.Node
+  name: Value
+  nameWithType: Node.Value
+  fullName: FlowR.Core.Node.Value
+- uid: FlowR.Core.ComponentRoot.#ctor*
+  commentId: Overload:FlowR.Core.ComponentRoot.#ctor
+  name: ComponentRoot
+  nameWithType: ComponentRoot.ComponentRoot
+  fullName: FlowR.Core.ComponentRoot.ComponentRoot
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: FlowR.Core.Node.TagName
+  commentId: P:FlowR.Core.Node.TagName
+  parent: FlowR.Core.Node
+  name: TagName
+  nameWithType: Node.TagName
+  fullName: FlowR.Core.Node.TagName
+- uid: FlowR.Core.ComponentRoot.TagName*
+  commentId: Overload:FlowR.Core.ComponentRoot.TagName
+  name: TagName
+  nameWithType: ComponentRoot.TagName
+  fullName: FlowR.Core.ComponentRoot.TagName

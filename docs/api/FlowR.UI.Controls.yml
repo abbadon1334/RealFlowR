@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.UI.Controls
+  commentId: N:FlowR.UI.Controls
+  id: FlowR.UI.Controls
+  children:
+  - FlowR.UI.Controls.Button
+  - FlowR.UI.Controls.Input
+  langs:
+  - csharp
+  - vb
+  name: FlowR.UI.Controls
+  nameWithType: FlowR.UI.Controls
+  fullName: FlowR.UI.Controls
+  type: Namespace
+  assemblies:
+  - FlowR.UI
+references:
+- uid: FlowR.UI.Controls.Button
+  commentId: T:FlowR.UI.Controls.Button
+  name: Button
+  nameWithType: Button
+  fullName: FlowR.UI.Controls.Button
+- uid: FlowR.UI.Controls.Input
+  commentId: T:FlowR.UI.Controls.Input
+  name: Input
+  nameWithType: Input
+  fullName: FlowR.UI.Controls.Input

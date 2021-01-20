@@ -1,0 +1,142 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.CollectionAddedEventArgs`1
+  commentId: T:FlowR.Core.CollectionAddedEventArgs`1
+  id: CollectionAddedEventArgs`1
+  parent: FlowR.Core
+  children:
+  - FlowR.Core.CollectionAddedEventArgs`1.Name
+  - FlowR.Core.CollectionAddedEventArgs`1.Value
+  langs:
+  - csharp
+  - vb
+  name: CollectionAddedEventArgs<T>
+  nameWithType: CollectionAddedEventArgs<T>
+  fullName: FlowR.Core.CollectionAddedEventArgs<T>
+  type: Class
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: CollectionAddedEventArgs
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 188
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nBase EventArgs for event Add\n"
+  example: []
+  syntax:
+    content: 'public class CollectionAddedEventArgs<T> : EventArgs'
+    typeParameters:
+    - id: T
+      description: ''
+    content.vb: >-
+      Public Class CollectionAddedEventArgs(Of T)
+
+          Inherits EventArgs
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - FlowR.Core.CollectionChangedEventArgs`1
+  nameWithType.vb: CollectionAddedEventArgs(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: FlowR.Core.CollectionAddedEventArgs(Of T)
+  name.vb: CollectionAddedEventArgs(Of T)
+- uid: FlowR.Core.CollectionAddedEventArgs`1.Name
+  commentId: F:FlowR.Core.CollectionAddedEventArgs`1.Name
+  id: Name
+  parent: FlowR.Core.CollectionAddedEventArgs`1
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: CollectionAddedEventArgs<T>.Name
+  fullName: FlowR.Core.CollectionAddedEventArgs<T>.Name
+  type: Field
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Name
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 193
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nEvent Name\n"
+  example: []
+  syntax:
+    content: public string Name
+    return:
+      type: System.String
+    content.vb: Public Name As String
+  nameWithType.vb: CollectionAddedEventArgs(Of T).Name
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.CollectionAddedEventArgs(Of T).Name
+- uid: FlowR.Core.CollectionAddedEventArgs`1.Value
+  commentId: F:FlowR.Core.CollectionAddedEventArgs`1.Value
+  id: Value
+  parent: FlowR.Core.CollectionAddedEventArgs`1
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: CollectionAddedEventArgs<T>.Value
+  fullName: FlowR.Core.CollectionAddedEventArgs<T>.Value
+  type: Field
+  source:
+    remote:
+      path: FlowR.Core/NodeCollection.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Value
+    path: FlowR.Core/NodeCollection.cs
+    startLine: 198
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nItem Add\n"
+  example: []
+  syntax:
+    content: public T Value
+    return:
+      type: '{T}'
+    content.vb: Public Value As T
+  nameWithType.vb: CollectionAddedEventArgs(Of T).Value
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.CollectionAddedEventArgs(Of T).Value
+references:
+- uid: FlowR.Core
+  commentId: N:FlowR.Core
+  name: FlowR.Core
+  nameWithType: FlowR.Core
+  fullName: FlowR.Core
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

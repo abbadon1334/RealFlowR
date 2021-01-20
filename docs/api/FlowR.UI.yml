@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.UI
+  commentId: N:FlowR.UI
+  id: FlowR.UI
+  children:
+  - FlowR.UI.Div
+  - FlowR.UI.Form
+  langs:
+  - csharp
+  - vb
+  name: FlowR.UI
+  nameWithType: FlowR.UI
+  fullName: FlowR.UI
+  type: Namespace
+  assemblies:
+  - FlowR.UI
+references:
+- uid: FlowR.UI.Div
+  commentId: T:FlowR.UI.Div
+  name: Div
+  nameWithType: Div
+  fullName: FlowR.UI.Div
+- uid: FlowR.UI.Form
+  commentId: T:FlowR.UI.Form
+  parent: FlowR.UI
+  name: Form
+  nameWithType: Form
+  fullName: FlowR.UI.Form
+- uid: FlowR.UI
+  commentId: N:FlowR.UI
+  name: FlowR.UI
+  nameWithType: FlowR.UI
+  fullName: FlowR.UI
