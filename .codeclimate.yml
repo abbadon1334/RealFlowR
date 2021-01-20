@@ -3,3 +3,5 @@ exclude_patterns:
   - "**/wwwroot/lib/"
   - "**/wwwroot/js/signalr/"
   - "**/wwwroot/js/FlowR.js"
+  - "docs/"
+  - "docfx/"
