@@ -5,3 +5,4 @@ exclude_patterns:
   - "**/wwwroot/js/FlowR.js"
   - "docs/"
   - "docfx/"
+  - "FlowR.Tests/*.feature.cs"
