@@ -3,9 +3,10 @@
     {
       "src": [
         {
+          "src": "../",
           "files": [
-            "**/FlowR.Core/FlowR.Core.csproj",
-            "**/FlowR.UI/FlowR.UI.csproj"
+            "FlowR.Core/FlowR.Core.csproj",
+            "FlowR.UI/FlowR.UI.csproj"
           ],
           "exclude": [
             "**/bin/**",
@@ -48,14 +49,21 @@
     "overwrite": [],
     "externalReference": [],
     "dest": "../docs",
-    "globalMetadata": {},
+    "globalMetadata": {
+      "_appFooter": "© 2020 Francesco Danti aka Abbadon1334"
+    },
     "globalMetadataFiles": [],
     "fileMetadata": {},
-    "template": [],
+    "template": [
+      "default"
+    ],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,
-    "disableGitFeatures": false
+    "disableGitFeatures": false,
+    "xrefService": [
+      "https://xref.docs.microsoft.com/query?uid={uid}"
+    ]
   }
 }
