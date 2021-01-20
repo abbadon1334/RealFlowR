@@ -4,8 +4,8 @@
       "src": [
         {
           "files": [
-            "FlowR.Core/FlowR.Core.csproj",
-            "FlowR.UI/FlowR.UI.csproj"
+            "../FlowR.Core/FlowR.Core.csproj",
+            "../FlowR.UI/FlowR.UI.csproj"
           ],
           "exclude": [
             "**/bin/**",
@@ -13,7 +13,7 @@
           ]
         }
       ],
-      "dest": "docfx/api",
+      "dest": "api",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     }
@@ -22,26 +22,26 @@
     "content": [
       {
         "files": [
-          "docfx/api/**.yml",
-          "docfx/api/index.md",
-          "docfx/index.md",
-          "docfx/toc.yml"
+          "api/**.yml",
+          "api/index.md",
+          "index.md",
+          "toc.yml"
         ]
       },
       {
         "files": [
-          "docfx/content/**.md",
-          "docfx/content/*.md",
-          "docfx/content/toc.yml",
-          "docfx/content/**/toc.yml",
-          "docfx/*.md"
+          "content/**.md",
+          "content/*.md",
+          "content/toc.yml",
+          "content/**/toc.yml",
+          "*.md"
         ]
       }
     ],
     "resource": [
       {
         "files": [
-          "docfx/images/**"
+          "images/**"
         ]
       }
     ],
@@ -52,6 +52,10 @@
     "globalMetadataFiles": [],
     "fileMetadata": {},
     "template": [],
-    "markdownEngineName": "markdig"
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
   }
 }
