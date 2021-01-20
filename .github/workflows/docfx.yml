@@ -27,7 +27,7 @@ jobs:
 
       - name: docfx-action
       # You may pin to the exact commit or the version.
-        uses: nikeee/docfx-action@v1.0.0
+        uses: nikeee/docfx-action@master
         with:
           args: metadata --logLevel Warning docfx.json
       - uses: maxheld83/ghpages@master
