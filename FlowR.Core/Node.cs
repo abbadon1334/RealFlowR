@@ -214,7 +214,7 @@ namespace FlowR.Core
         /// <param name="arguments"></param>
         public void CallClientMethod(string methodName, params string[] arguments)
         {
-            SendMessage(Factory.MessageGlobalMethodCall(methodName, arguments));
+            SendMessage(Factory.MessageCallMethod(this, methodName, arguments));
         }
 
         /// <summary>
