@@ -55,4 +55,4 @@ jobs:
       
       - name: Send test report result to codeclimate
         run: |
-          ./codeclimate-test-reporter after-build -t lcov -r ${CC_TEST_REPORTER_ID} -p ./ --exit-code $?
+          ./codeclimate-test-reporter after-build -t lcov -r ${{secrets.CC_TEST_REPORTER_ID}} -p ./ --exit-code $?
