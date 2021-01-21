@@ -57,4 +57,4 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         run: |
-          ./codeclimate-test-reporter after-build -t lcov -r "$CC_TEST_REPORTER_ID" -p ./ --exit-code $?
+          ./codeclimate-test-reporter after-build -t lcov -r "$CC_TEST_REPORTER_ID" -p /home/runner/work/RealFlowR/RealFlowR/ --exit-code $?
