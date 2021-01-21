@@ -1,0 +1,60 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CodeClimate Coverage
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Download codeclimate test reporter
+        run: |
+          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./codeclimate-test-reporter
+          chmod +x ./codeclimate-test-reporter
+          
+      - name: Install dotnet tools to generate test report
+        run: |
+          dotnet tool install --global coverlet.console
+          dotnet add FlowR.Core/FlowR.Core.csproj package coverlet.msbuild
+          dotnet add FlowR.Sample/FlowR.Sample.csproj package coverlet.msbuild
+          dotnet add FlowR.Tests/FlowR.Tests.csproj package coverlet.msbuild
+          dotnet add FlowR.UI/FlowR.UI.csproj package coverlet.msbuild
+
+      - name: Start codeclimate process
+        run: |
+          ./codeclimate-test-reporter before-build
+
+      - name: Build solution
+        run: |
+          dotnet restore
+          dotnet build ./FlowR.sln
+
+      - name: Running unit tests - lcov output format (and put coverage in correct path)
+        run: |
+          dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=coverage /p:Exclude=[xunit.*]* FlowR.Tests/FlowR.Tests.csproj
+          mkdir coverage && mv ./FlowR.Tests/coverage.info coverage/lcov.info
+      
+      - name: Send test report result to codeclimate
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        run: |
+          ./codeclimate-test-reporter after-build -t lcov -r "$CC_TEST_REPORTER_ID" -p ./ --exit-code $?
