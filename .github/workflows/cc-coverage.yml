@@ -50,7 +50,7 @@ jobs:
 
       - name: Running unit tests - lcov output format (and put coverage in correct path)
         run: |
-          dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=coverage /p:Exclude=[xunit.*]* ./FlowR.sln
+          dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=coverage /p:Exclude=[xunit.*]* FlowR.Tests/FlowR.Tests.csproj
           mkdir coverage && mv ./FlowR.Tests/coverage.info coverage/lcov.info
       
       - name: Send test report result to codeclimate
