@@ -54,5 +54,7 @@ jobs:
           mkdir coverage && mv ./FlowR.Tests/coverage.info coverage/lcov.info
       
       - name: Send test report result to codeclimate
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         run: |
-          ./codeclimate-test-reporter after-build -t lcov -r ${{secrets.CC_TEST_REPORTER_ID}} -p ./ --exit-code $?
+          ./codeclimate-test-reporter after-build -t lcov -r "$CC_TEST_REPORTER_ID" -p ./ --exit-code $?
