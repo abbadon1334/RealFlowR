@@ -26,27 +26,30 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
+      - name: Download codeclimate test reporter
         run: |
-
-          # Download codeclimate test reporter
           curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./codeclimate-test-reporter
           chmod +x ./codeclimate-test-reporter
-
-          # Install dotnet tools to generate test report
+          
+      - name: Install dotnet tools to generate test report
+        run: |
           dotnet tool install --global coverlet.console 
           dotnet add package coverlet.msbuild
 
-          # Start codeclimate process
+      - name: Start codeclimate process
+        run: |
           ./codeclimate-test-reporter before-build
 
-          # Build solution
+      - name: Build solution
+        run: |
           dotnet restore
-          dotnet build ./FlowR.sln
+          dotnet build FlowR.sln
 
-          # Running unit tests - 'lcov' output format (and put coverage in correct path)
+      - name: Running unit tests - lcov output format (and put coverage in correct path)
+        run: |
           dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=coverage /p:Exclude=[xunit.*]* ./FlowR.sln
           mkdir coverage && mv ./FlowR.Tests/coverage.info coverage/lcov.info
-
-          # Send test report result to codeclimate
+      
+      - name: Send test report result to codeclimate
+        run: |
           ./codeclimate-test-reporter after-build -t lcov -r ${CC_TEST_REPORTER_ID} -p ./ --exit-code $?
