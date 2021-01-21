@@ -42,14 +42,14 @@ namespace FlowR.Tests
             CurrentComponent.Owner.Remove(CurrentComponent);
         }
 
+        [Given(@"I call a method (.*)")] public void CallMethod(string name)
+        {
+            CurrentComponent.CallClientMethod(name);
+        }
+        
         [When(@"I get a message")] public void ConsumeMessage()
         {
             CurrentMessage = Client.ConsumeMessage();
-        }
-
-        [Then(@"Check the message method : (.*)")] public void CheckMessageMethod(string method)
-        {
-            Assert.Equal(method, CurrentMessage.Method);
         }
 
         [Then(@"Check attribute (.*) is not null")] public void CheckAttributeNotNull(string name)
@@ -60,6 +60,16 @@ namespace FlowR.Tests
         [Then(@"Check attribute (.*) has value (.*)")] public void CheckAttributeNotNull(string name, string value)
         {
             Assert.Equal(value, CurrentComponent.GetAttributeDictionary()[name]);
+        }
+        
+        [Then(@"Check the message method : (.*)")] public void CheckMessageMethod(string method)
+        {
+            Assert.Equal(method, CurrentMessage.Method);
+        }
+        
+        [Then(@"Check the message argument (.*) as (.*)")] public void CheckMessageMethod(int argNum, string value)
+        {
+            Assert.Equal(value, CurrentMessage.Arguments[argNum]);
         }
     }
 }
