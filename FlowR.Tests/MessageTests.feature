@@ -25,3 +25,13 @@
     And I remove the element
     When I get the message at index 3
     Then Check the message method : RemoveElement
+
+  Scenario: Test Call method
+    Given A new application starts
+    When I get a message
+    Given I add a div component
+    When I get a message
+    Given I call a method focus
+    When I get a message
+    Then Check the message method : CallMethod
+    Then Check the message argument 1 as focus    
