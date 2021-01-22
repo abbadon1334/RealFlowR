@@ -27,11 +27,11 @@
     Then Check the message method : RemoveElement
 
   Scenario: Test Call method
-    Given A new application starts
-    When I get a message
+    Given A new application
+    When I get the last message
     Given I add a div component
-    When I get a message
+    When I get the last message
     Given I call a method focus
-    When I get a message
+    When I get the last message
     Then Check the message method : CallMethod
     Then Check the message argument 1 as focus    

@@ -62,9 +62,19 @@ namespace FlowR.Tests
             for (var x = 0; x < number; x++) WhenIGetAMessage();
         }
 
+        [Given(@"I call a method (.*)")] public void CallMethod(string name)
+        {
+            CurrentComponent.CallClientMethod(name);
+        }
+        
         [Then(@"Check the message method : (.*)")] public void CheckMessageMethod(string method)
         {
             Assert.Equal(method, CurrentMessage.Method);
+        }
+        
+        [Then(@"Check the message argument (.*) as (.*)")] public void CheckMessageArgument(int argNum, string value)
+        {
+            Assert.Equal(value, CurrentMessage.Arguments[argNum]);
         }
     }
 }
