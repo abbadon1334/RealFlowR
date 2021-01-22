@@ -26,7 +26,7 @@ namespace FlowR.Tests
         {
             CurrentComponent = App.GetComponentRoot().Add<Div>();
         }
-        
+
         [Given(@"I SetAttribute (.*) with (.*)")] public void LastElementSetAttribute(string name, string value)
         {
             CurrentComponent.SetAttribute(name, value);
@@ -51,7 +51,7 @@ namespace FlowR.Tests
         {
             Assert.Equal(value, CurrentComponent.GetAttributeDictionary()[name]);
         }
-        
+
         [When(@"I get the last message")] public void WhenIGetAMessage()
         {
             CurrentMessage = Client.ConsumeMessage();
@@ -66,12 +66,12 @@ namespace FlowR.Tests
         {
             CurrentComponent.CallClientMethod(name);
         }
-        
+
         [Then(@"Check the message method : (.*)")] public void CheckMessageMethod(string method)
         {
             Assert.Equal(method, CurrentMessage.Method);
         }
-        
+
         [Then(@"Check the message argument (.*) as (.*)")] public void CheckMessageArgument(int argNum, string value)
         {
             Assert.Equal(value, CurrentMessage.Arguments[argNum]);

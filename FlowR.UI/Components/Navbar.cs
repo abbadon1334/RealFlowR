@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using FlowR.Core;
 using FlowR.Core.Components;
@@ -9,10 +8,10 @@ namespace FlowR.UI.Components
 {
     public class Navbar : ComponentElement<Navbar>
     {
-        /// <inheritdoc />
-        public override string TagName { get; protected set; } = "navbar";
 
         public Div Container;
+        /// <inheritdoc />
+        public override string TagName { get; protected set; } = "navbar";
 
         protected override Dictionary<string, string> defaultAttributes { get; set; } = new()
         {
@@ -25,7 +24,7 @@ namespace FlowR.UI.Components
             base.Init();
             Container = Add<Div>().SetAttribute("class", "container-fluid");
         }
-        
+
         /// <summary>
         ///     Add navbar brand.
         /// </summary>
@@ -45,21 +44,24 @@ namespace FlowR.UI.Components
 
             Container = Container.Add<Div>().AddCSSClass("collapse navbar-collapse");
 
-            Button.SetAttributes(new Dictionary<string, string>()
+            Button.SetAttributes(new Dictionary<string, string>
             {
                 { "type", "button" },
                 { "data-bs-toggle", "collapse" },
                 { "data-bs-target", "#" + Container.Uuid },
                 { "aria-controls", Container.Uuid },
                 { "aria-expanded", "false" },
-                { "aria-label", "Toggle navigation" },
+                { "aria-label", "Toggle navigation" }
             }.ToArray());
-            
+
             Button.Add<Span>().AddCSSClass("navbar-toggler-icon");
 
             return Button;
         }
 
-        public NavbarMenu AddMenu() => Container.Add<NavbarMenu>();
+        public NavbarMenu AddMenu()
+        {
+            return Container.Add<NavbarMenu>();
+        }
     }
 }

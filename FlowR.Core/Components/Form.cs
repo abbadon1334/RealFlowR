@@ -41,12 +41,9 @@ namespace FlowR.Core.Components
         public Form OnSubmit(Action<Dictionary<string, object>> callback, params IComponentControl[] controls)
         {
             // set default 
-            List<IComponentControl> controlsToCollect = _controls;
-            
-            if (controls.Length > 0)
-            {
-                controlsToCollect = controls.ToList();
-            }
+            var controlsToCollect = _controls;
+
+            if (controls.Length > 0) controlsToCollect = controls.ToList();
 
             On("submit", (sender, args) =>
             {
@@ -68,7 +65,7 @@ namespace FlowR.Core.Components
 
             return values;
         }
-        
+
         /// <summary>
         ///     Usually done internally. But it will bind the control to a Form
         /// </summary>
@@ -77,7 +74,7 @@ namespace FlowR.Core.Components
         {
             _controls.Add(componentControl);
         }
-        
+
         /// <summary>
         ///     @todo need to lower visibility, probably protected.
         /// </summary>

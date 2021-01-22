@@ -239,7 +239,7 @@ namespace FlowR.Core.Message
         {
             return GetMessageGlobalWithResponse(MessageGlobalWithResponse.MessageActions.GetGlobalProperty, name);
         }
-        
+
         /// <summary>
         ///     Return MessageElement
         /// </summary>
@@ -249,7 +249,7 @@ namespace FlowR.Core.Message
         {
             return GetMessageGlobalWithResponse(MessageGlobalWithResponse.MessageActions.AddScriptWaitLoad, url);
         }
-        
+
         /// <summary>
         ///     Return MessageElement
         /// </summary>

@@ -103,11 +103,11 @@ namespace FlowR.Core
         {
             SendMessage(Factory.MessageSetGlobalProperty(path, value));
         }
-        
+
         #region Script & CSS
 
         /// <summary>
-        ///     Add script to application. 
+        ///     Add script to application.
         /// </summary>
         /// <param name="url"></param>
         /// <returns></returns>
@@ -116,16 +116,17 @@ namespace FlowR.Core
             var message = Factory.MessageGlobalAddScriptWaitLoad(url);
             return await _responses.WaitResponse(_application, message);
         }
-        
+
         /// <summary>
-        ///     Add stylesheet to application. 
+        ///     Add stylesheet to application.
         /// </summary>
         public async Task<string> AddCss(string url)
         {
             var message = Factory.MessageGlobalAddStylesheetWaitLoad(url);
             return await _responses.WaitResponse(_application, message);
         }
-        
+
         #endregion
+
     }
 }

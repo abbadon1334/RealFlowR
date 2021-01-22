@@ -9,9 +9,9 @@ namespace FlowR.Core
     public abstract class ComponentControl<T> : Component<T>
         where T : Component<T>, IComponentControl
     {
-        private string _controlName;
 
         private Form _bindedForm;
+        private string _controlName;
 
         /// <inheritdoc cref="IComponentControl.GetControlName" />
         public string GetControlName()
@@ -49,7 +49,7 @@ namespace FlowR.Core
             _controlName = name;
             return DerivedClass;
         }
-        
+
         /// <inheritdoc cref="IComponentControl.Collect" />
         public virtual async Task<string> Collect(string path = "value")
         {

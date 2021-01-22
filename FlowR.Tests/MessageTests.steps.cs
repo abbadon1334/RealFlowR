@@ -1,7 +1,4 @@
-﻿using FlowR.Core;
-using FlowR.Core.Components;
-using TechTalk.SpecFlow;
-using Xunit;
+﻿using TechTalk.SpecFlow;
 
 namespace FlowR.Tests
 {

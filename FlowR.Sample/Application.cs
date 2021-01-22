@@ -1,6 +1,4 @@
-using System.Linq;
 using FlowR.Core.Components;
-using FlowR.Core.Components.Controls;
 using FlowR.UI.Components;
 using Microsoft.AspNetCore.SignalR;
 
@@ -13,7 +11,6 @@ namespace FlowR
 
         public Application(string connectionId, IClientProxy client) : base(connectionId, client)
         {
-            
             RootElement.SetAttribute("css", "d-flex h-100 text-center text-white bg-dark");
 
             var Navbar = RootElement.Add<Navbar>();
@@ -34,7 +31,6 @@ namespace FlowR
             });
             menu.AddMenuItem().SetText("Link C").onClick((sender, args) =>
             {
-                
             });
         }
     }

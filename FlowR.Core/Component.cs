@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.ExceptionServices;
 using FlowR.Core.Exceptions;
-using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace FlowR.Core
 {
@@ -21,10 +19,7 @@ namespace FlowR.Core
         {
             DerivedClass = this as T;
 
-            foreach (var kvp in defaultAttributes)
-            {
-                SetAttribute(kvp.Key, kvp.Value);
-            }
+            foreach (var kvp in defaultAttributes) SetAttribute(kvp.Key, kvp.Value);
         }
 
         protected virtual Dictionary<string, string> defaultAttributes { get; set; } = new();
@@ -38,7 +33,7 @@ namespace FlowR.Core
         }
 
         /// <inheritdoc cref="Node._SetAttribute" />
-        public T SetAttributes(params KeyValuePair<string,string>[] attributes)
+        public T SetAttributes(params KeyValuePair<string, string>[] attributes)
         {
             foreach (var kvp in attributes) _SetAttribute(kvp.Key, kvp.Value);
 
@@ -85,48 +80,41 @@ namespace FlowR.Core
         }
 
         /// <summary>
-        ///     Add a classname to class attribute 
+        ///     Add a classname to class attribute
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
         public T AddCSSClass(string name)
         {
-            string actualCss = "";
-            Dictionary<string, string> attributes = GetAttributeDictionary();
-            if (attributes.ContainsKey("class"))
-            {
-                actualCss = GetAttributeDictionary()["class"];
-            }
+            var actualCss = "";
+            var attributes = GetAttributeDictionary();
+            if (attributes.ContainsKey("class")) actualCss = GetAttributeDictionary()["class"];
 
             SetAttribute("class", (actualCss + " " + name).Trim());
-            
+
             return DerivedClass;
         }
-        
+
         /// <summary>
-        ///     Remove a classname from class attribute 
+        ///     Remove a classname from class attribute
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
         public T RemoveCSSClass(string name)
         {
-            
-            string actualCss = "";
-            Dictionary<string, string> attributes = GetAttributeDictionary();
-            if (attributes.ContainsKey("class"))
-            {
-                actualCss = GetAttributeDictionary()["class"];
-            }
-            
-            List<string> css = actualCss.Split(" ").ToList();
+            var actualCss = "";
+            var attributes = GetAttributeDictionary();
+            if (attributes.ContainsKey("class")) actualCss = GetAttributeDictionary()["class"];
+
+            var css = actualCss.Split(" ").ToList();
             css.Remove(name);
-            
-            SetAttribute("class", String.Join(" ", css));
-            
+
+            SetAttribute("class", string.Join(" ", css));
+
             return DerivedClass;
         }
 
-        /// <summary> 
+        /// <summary>
         ///     Search upward for first owner of a specific type.
         /// </summary>
         /// <typeparam name="TNode"></typeparam>
@@ -146,7 +134,7 @@ namespace FlowR.Core
 
             return null;
         }
-        
+
         /// <summary>
         ///     Search upward for first owner of a specific type.
         /// </summary>
@@ -158,16 +146,12 @@ namespace FlowR.Core
         public TNode FindFirstOwnerByType<TNode>() where TNode : Component<TNode>
         {
             Node scopedOwner = this;
-            
+
             // cycle until root of the tree
             while (scopedOwner.Owner.GetType() != typeof(TNode))
-            {
                 if (scopedOwner.GetType() == typeof(ComponentRoot))
-                {
                     throw new ElementNotFoundException(
                         $"Owner of Type {typeof(TNode)} not found.");
-                }
-            }
 
             return scopedOwner.Owner as TNode;
         }

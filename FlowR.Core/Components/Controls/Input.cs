@@ -5,6 +5,15 @@ namespace FlowR.Core.Components.Controls
     /// </summary>
     public class Input : ComponentControl<Input>, IComponentControl
     {
+
+
+        /// <summary>
+        ///     Constructor.
+        /// </summary>
+        public Input()
+        {
+            SetAttribute("type", InputType);
+        }
         /// <inheritdoc cref="Node.TagName" />
         public override string TagName { get; protected set; } = "input";
 
@@ -12,14 +21,5 @@ namespace FlowR.Core.Components.Controls
         ///     The html input type
         /// </summary>
         protected string InputType { get; set; } = "text";
-        
-        
-        /// <summary>
-        ///     Constructor.
-        /// </summary>
-        public Input()
-        {
-            this.SetAttribute("type", InputType);
-        }
     }
 }

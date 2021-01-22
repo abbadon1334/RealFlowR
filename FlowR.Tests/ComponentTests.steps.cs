@@ -10,7 +10,7 @@ namespace FlowR.Tests
         {
             CurrentComponent.AddCSSClass(className);
         }
-        
+
         [Then(@"I Remove class (.*)")] public void RemoveClass(string className)
         {
             CurrentComponent.RemoveCSSClass(className);

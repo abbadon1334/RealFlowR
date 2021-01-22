@@ -14,20 +14,17 @@ namespace FlowR.Tests
     {
         private Form _componentForm;
 
-        [Given(@"Add a form")]
-        public void GivenAddAForm()
+        [Given(@"Add a form")] public void GivenAddAForm()
         {
             _componentForm = App.GetComponentRoot().Add<Form>();
         }
 
-        [Given(@"Add control to form with name (.*)")]
-        public void GivenAddAControlInputToForm(string name)
+        [Given(@"Add control to form with name (.*)")] public void GivenAddAControlInputToForm(string name)
         {
             _componentForm.Add<Input>(name);
         }
 
-        [Then(@"Check if input (.*) has attribute (.*) with value (.*)")]
-        public void ThenCheckIfInputIsBindToForm(string name, string attrName, string attrValue)
+        [Then(@"Check if input (.*) has attribute (.*) with value (.*)")] public void ThenCheckIfInputIsBindToForm(string name, string attrName, string attrValue)
         {
             Assert.Equal(
                 attrValue,
@@ -35,8 +32,7 @@ namespace FlowR.Tests
             );
         }
 
-        [Then(@"Check if input (.*) is binded to form")]
-        public void ThenCheckIfInputWithNameIsBindToForm(string name)
+        [Then(@"Check if input (.*) is binded to form")] public void ThenCheckIfInputWithNameIsBindToForm(string name)
         {
             Assert.Equal(
                 name,
