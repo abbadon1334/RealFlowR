@@ -27,6 +27,7 @@
     <ItemGroup>
       <Compile Remove="obj\**" />
       <Compile Remove="SomeTest.feature.cs" />
+      <Compile Remove="MessageTests.feature.cs" />
     </ItemGroup>
 
     <ItemGroup>
@@ -35,10 +36,6 @@
 
     <ItemGroup>
       <None Remove="obj\**" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Content Include="SomeTest.feature" />
     </ItemGroup>
 
     <ItemGroup>

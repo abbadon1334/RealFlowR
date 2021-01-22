@@ -5,7 +5,6 @@ namespace FlowR.Tests.Mock
 {
     public class ApplicationMock : Application
     {
-
         public ApplicationMock(string connectionId, IClientProxy client) : base(connectionId, client)
         {
         }

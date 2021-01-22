@@ -1,6 +1,5 @@
 ﻿using FlowR.Core;
-using FlowR.Tests.Mock;
-using FlowR.UI;
+using FlowR.Core.Components;
 using TechTalk.SpecFlow;
 using Xunit;
 
@@ -8,19 +7,9 @@ namespace FlowR.Tests
 {
     [Binding]
     [Scope(Feature = "Element And Message Tests")]
-    public class MessageTests
+    public class MessageTests : BaseTest
     {
-        public ApplicationMock App;
-        public ClientProxyMock Client;
-
-        public Component<Div> CurrentComponent;
-        public ClientMessageSent CurrentMessage;
-
-        [Given(@"A new application starts")] public void AppStart()
-        {
-            Client = new ClientProxyMock();
-            App = new ApplicationMock("test", Client);
-        }
+        private ComponentElement<Div> CurrentComponent;
 
         [Given(@"I add a div component")] public void AddDiv()
         {
@@ -40,16 +29,6 @@ namespace FlowR.Tests
         [Given(@"I remove the element")] public void LastElementRemove()
         {
             CurrentComponent.Owner.Remove(CurrentComponent);
-        }
-
-        [When(@"I get a message")] public void ConsumeMessage()
-        {
-            CurrentMessage = Client.ConsumeMessage();
-        }
-
-        [Then(@"Check the message method : (.*)")] public void CheckMessageMethod(string method)
-        {
-            Assert.Equal(method, CurrentMessage.Method);
         }
 
         [Then(@"Check attribute (.*) is not null")] public void CheckAttributeNotNull(string name)
