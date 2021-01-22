@@ -1,6 +1,6 @@
 using System.Linq;
-using FlowR.UI;
-using FlowR.UI.Controls;
+using FlowR.Core.Components;
+using FlowR.Core.Components.Controls;
 using Microsoft.AspNetCore.SignalR;
 
 namespace FlowR

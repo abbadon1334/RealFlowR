@@ -1,6 +1,4 @@
-using FlowR.Core;
-
-namespace FlowR.UI
+namespace FlowR.Core.Components
 {
     /// <summary>
     ///     Tag div

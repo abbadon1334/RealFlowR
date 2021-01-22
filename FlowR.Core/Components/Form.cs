@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using FlowR.Core;
+using System.Linq;
 
-namespace FlowR.UI
+namespace FlowR.Core.Components
 {
     /// <summary>
     ///     Tag Form
@@ -33,23 +33,30 @@ namespace FlowR.UI
         /// <summary>
         ///     Shorthand to startListen for submit event from form.
         ///     Attach a callback and Add controls to be collected
+        ///     If no control is attached it will take all the already binded controls
         /// </summary>
         /// <param name="callback"></param>
         /// <param name="controls"></param>
         /// <returns></returns>
         public Form OnSubmit(Action<Dictionary<string, object>> callback, params IComponentControl[] controls)
         {
+            // set default 
+            List<IComponentControl> controlsToCollect = _controls;
+            
+            if (controls.Length > 0)
+            {
+                controlsToCollect = controls.ToList();
+            }
+
             On("submit", (sender, args) =>
             {
-                callback(CollectValues());
+                callback(CollectValues(controlsToCollect));
             });
-
-            foreach (var control in controls) _controls.Add(control);
 
             return this;
         }
 
-        private Dictionary<string, object> CollectValues()
+        private Dictionary<string, object> CollectValues(List<IComponentControl> controlsToCollect)
         {
             Dictionary<string, object> values = new();
             foreach (var control in _controls)
@@ -60,6 +67,14 @@ namespace FlowR.UI
             }
 
             return values;
+        }
+        public void BindControl(IComponentControl componentControl)
+        {
+            _controls.Add(componentControl);
+        }
+        public List<IComponentControl> GetBindedControls()
+        {
+            return _controls;
         }
     }
 }

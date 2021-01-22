@@ -5,7 +5,6 @@ namespace FlowR.Core
     /// </summary>
     public class ComponentRoot : Node
     {
-
         /// <summary>
         ///     [internal use]
         /// </summary>
@@ -14,7 +13,7 @@ namespace FlowR.Core
         {
             Uuid = rootId;
         }
-        /// <inheritdoc cref="Node.TagName" />
+        /// <inheritdoc cref="FlowR.Core.Node.TagName" />
         public override string TagName => "body";
     }
 }

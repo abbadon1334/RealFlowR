@@ -1,5 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.ExceptionServices;
+using FlowR.Core.Exceptions;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace FlowR.Core
 {
@@ -71,6 +75,71 @@ namespace FlowR.Core
             _SetProperty(name, value);
 
             return DerivedClass;
+        }
+
+        public T AddCSSClass(string name)
+        {
+            SetAttribute("class", GetAttributeDictionary()[name] + " " + name);
+            
+            return DerivedClass;
+        }
+        
+        public T RemoveCSSClass(string name)
+        {
+            // todo better way to do this? without storing a css variable
+            
+            List<string> css = GetAttributeDictionary()[name].Split(" ").ToList();
+            css.Remove(name);
+            
+            SetAttribute("class", String.Join(" ", css));
+            
+            return DerivedClass;
+        }
+
+        /// <summary> 
+        ///     Search upward for first owner of a specific type.
+        /// </summary>
+        /// <typeparam name="TNode"></typeparam>
+        /// <returns><![CDATA[ 
+        ///    Component<T> or null if not found
+        /// ]]></returns>
+        public TNode? TryFindFirstOwnerByType<TNode>() where TNode : Component<TNode>
+        {
+            try
+            {
+                return FindFirstOwnerByType<TNode>();
+            }
+            catch (Exception e)
+            {
+                // intentionally silent
+            }
+
+            return null;
+        }
+        
+        /// <summary>
+        ///     Search upward for first owner of a specific type.
+        /// </summary>
+        /// <typeparam name="TNode"></typeparam>
+        /// <returns><![CDATA[
+        ///     Component<TNode>
+        /// ]]></returns>
+        /// <exception cref="ElementNotFoundException"></exception>
+        public TNode FindFirstOwnerByType<TNode>() where TNode : Component<TNode>
+        {
+            Node scopedOwner = this;
+            
+            // cycle until root of the tree
+            while (scopedOwner.Owner.GetType() != typeof(TNode))
+            {
+                if (scopedOwner.GetType() == typeof(ComponentRoot))
+                {
+                    throw new ElementNotFoundException(
+                        $"Owner of Type {typeof(TNode)} not found.");
+                }
+            }
+
+            return scopedOwner.Owner as TNode;
         }
     }
 }

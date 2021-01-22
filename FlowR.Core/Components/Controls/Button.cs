@@ -1,6 +1,4 @@
-using FlowR.Core;
-
-namespace FlowR.UI.Controls
+namespace FlowR.Core.Components.Controls
 {
     /// <summary>
     ///     Tag button
