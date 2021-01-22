@@ -17,7 +17,18 @@ namespace FlowR.Core.Message
             /// <summary>
             ///     Call a Global method and wait for response
             /// </summary>
-            GetGlobalProperty
+            GetGlobalProperty,
+
+            /// <summary>
+            ///     Add tag script and wait until fully loaded
+            /// </summary>
+            AddScriptWaitLoad,
+
+            /// <summary>
+            ///     Add link script and wait until fully loaded
+            /// </summary>
+            AddStylesheetWaitLoad
+
         }
 
         /// <inheritdoc />

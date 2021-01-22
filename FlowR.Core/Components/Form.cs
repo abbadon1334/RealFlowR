@@ -19,7 +19,7 @@ namespace FlowR.Core.Components
 
         private readonly List<IComponentControl> _controls = new();
         /// <inheritdoc cref="Node.TagName" />
-        public override string TagName => "form";
+        public override string TagName { get; protected set; } = "form";
 
         /// <inheritdoc />
         public override void Init()

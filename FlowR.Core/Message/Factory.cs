@@ -239,6 +239,26 @@ namespace FlowR.Core.Message
         {
             return GetMessageGlobalWithResponse(MessageGlobalWithResponse.MessageActions.GetGlobalProperty, name);
         }
+        
+        /// <summary>
+        ///     Return MessageElement
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public static IMessageResponse MessageGlobalAddScriptWaitLoad(string url)
+        {
+            return GetMessageGlobalWithResponse(MessageGlobalWithResponse.MessageActions.AddScriptWaitLoad, url);
+        }
+        
+        /// <summary>
+        ///     Return MessageElement
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public static IMessageResponse MessageGlobalAddStylesheetWaitLoad(string url)
+        {
+            return GetMessageGlobalWithResponse(MessageGlobalWithResponse.MessageActions.AddStylesheetWaitLoad, url);
+        }
 
         /// <summary>
         ///     Return MessageElement

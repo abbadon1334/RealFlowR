@@ -1,9 +1,11 @@
+using FlowR.Core.Components;
+
 namespace FlowR.Core
 {
     /// <summary>
     ///     Special internal Node as root of the composite tree
     /// </summary>
-    public class ComponentRoot : Node
+    public class ComponentRoot : Div
     {
         /// <summary>
         ///     [internal use]

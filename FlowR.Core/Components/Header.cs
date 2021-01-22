@@ -3,9 +3,9 @@ namespace FlowR.Core.Components
     /// <summary>
     ///     Tag div
     /// </summary>
-    public class Div : ComponentElement<Div>
+    public class Header : ComponentElement<Header>
     {
         /// <inheritdoc cref="Node.TagName" />
-        public override string TagName { get; protected set; } = "div";
+        public override string TagName { get; protected set; } = "header";
     }
 }

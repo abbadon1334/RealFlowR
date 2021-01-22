@@ -1,156 +1,41 @@
 using System.Linq;
 using FlowR.Core.Components;
 using FlowR.Core.Components.Controls;
+using FlowR.UI.Components;
 using Microsoft.AspNetCore.SignalR;
 
 namespace FlowR
 {
-    public class Application : Core.Application
+    public class Application : UI.Application
     {
         protected readonly Div RightColumn;
         protected int Counter = 0;
 
         public Application(string connectionId, IClientProxy client) : base(connectionId, client)
         {
-            var containerRow = RootElement.Add<Div>()
-                .SetAttribute("class", "container-fluid")
-                .Add<Div>()
-                .SetAttribute("class", "row");
+            
+            RootElement.SetAttribute("css", "d-flex h-100 text-center text-white bg-dark");
 
-            var leftColumn = containerRow.Add<Div>()
-                .SetAttribute("class", "col");
+            var Navbar = RootElement.Add<Navbar>();
+            Navbar.AddBrand().SetText("FlowR");
+            Navbar.AddToggler();
+            Navbar.AddCSSClass("navbar-dark bg-dark");
 
-            var form = leftColumn.Add<Form>();
+            var main = RootElement.Add<Div>();
 
-            var input = form.Add<Input>("fldTest");
-
-            var frmSubmit = form.Add<Button>().SetText("Submit");
-
-            form.OnSubmit(values =>
+            var menu = Navbar.AddMenu();
+            menu.AddMenuItem().SetText("Add Dark").onClick((sender, args) =>
             {
-                form.Application.Communication.CallGlobalMethod("alert", values.ToArray().ToString());
-            }, input);
-
-            RightColumn = containerRow.Add<Div>();
-            RightColumn.SetAttribute("class", "col");
-
-            var container = leftColumn.Add<Div>()
-                .SetAttribute("class", "card");
-
-            var cardHeaderTime = container.Add<Div>()
-                .SetAttribute("class", "card-header")
-                .SetText("Server Time");
-
-            AddTimer(1 /* 1 millisec to see maximum speed */, (sender, args) =>
-            {
-                //cardHeaderTime.SetText($"ApplicationTimer which update Text every (1ms) with server Time : {DateTime.Now:O}");
+                Navbar.AddCSSClass("navbar-dark bg-dark");
             });
-
-            var cardHeader = container
-                .Add<Div>()
-                .SetAttribute("class", "card-header")
-                .SetText("Children 0");
-
-            var cardBody = container
-                .Add<Div>()
-                .SetAttribute("class", "card-body");
-
-            var cardText = cardBody
-                .Add<Div>();
-
-            var buttonAdd1000 = cardBody
-                .Add<Div>()
-                .SetAttribute("class", "btn btn-primary")
-                .SetText("Button Add 1000");
-
-            var buttonRemove = cardBody
-                .Add<Div>()
-                .SetAttribute("class", "btn btn-danger")
-                .SetText("Button Remove All");
-
-            var buttonTestResponse = cardBody
-                .Add<Div>()
-                .SetAttribute("class", "btn btn-success")
-                .SetText("2 way communication Test");
-
-            var testContainer = RootElement
-                .Add<Div>()
-                .SetAttribute("class", "card");
-
-            buttonAdd1000.On("click", delegate
+            menu.AddMenuItem().SetText("Remove Dark").onClick((sender, args) =>
             {
-                ClearLogActions();
-                AddLogAction("button Add1000 clicked on client");
-                AddLogAction("JS Client : notify server that a click event happen on DomNode with UID : " +
-                             buttonAdd1000.Uuid);
-                AddLogAction("SRV : search DomNode registry for UID : " + buttonAdd1000.Uuid);
-                AddLogAction("SRV : trigger defined callback on click");
-                AddLogAction(
-                    "SRV : which will fire 1000 create event on client side and for every call update the children count");
-                //buttonAdd1000.SetProperty("value", "test");
-                for (var x = 0; x < 1000; x++)
-                {
-                    var count = testContainer.GetChildrenCount();
-                    testContainer.Add<Div>()
-                        .SetAttribute("class", "display-5 pb-3 mb-3 border-bottom")
-                        .SetText($"Number {count}");
-                    cardHeader.SetText($"Children {count}");
-                }
-
-                /*
-                el.SetAttribute("class", $"danger{(new Random()).Next(0, 100).ToString()}");
-                cardText.SetText($"random {(new Random()).Next(0, 100).ToString()}");
-                */
+                Navbar.RemoveCSSClass("navbar-dark").RemoveCSSClass("bg-dark");
             });
-
-            buttonRemove.On("click", delegate
+            menu.AddMenuItem().SetText("Link C").onClick((sender, args) =>
             {
-                ClearLogActions();
-                AddLogAction("button Remove clicked on client");
-                AddLogAction("JS Client : notify server that a click event happen on DomNode with UID : " +
-                             buttonRemove.Uuid);
-                AddLogAction("SRV : search DomNode registry for UID : " + buttonRemove.Uuid);
-                AddLogAction("SRV : trigger defined callback on click");
-                AddLogAction(
-                    "SRV : which will fire 1000 remove child event on client side and for every call update the children count");
-
-                while (testContainer.GetChildrenCount() != 0)
-                {
-                    testContainer.Remove(testContainer.GetLastChild());
-
-                    var count = testContainer.GetChildrenCount();
-                    cardHeader.SetText($"Children {count}");
-                }
+                
             });
-
-            buttonTestResponse.On("click", async delegate
-            {
-                ClearLogActions();
-                AddLogAction("button Add1000 clicked on client");
-                AddLogAction("JS Client : notify server that a click event happen on DomNode with UID : " +
-                             buttonTestResponse.Uuid);
-                AddLogAction("SRV : search DomNode registry for UID : " + buttonTestResponse.Uuid);
-                AddLogAction("SRV : trigger defined callback on click");
-                AddLogAction("SRV : Ask client for JS property `innerHTML`");
-                AddLogAction("JS : Response with `innerHTML` value");
-                AddLogAction("SRV : Set client " + buttonTestResponse.Uuid +
-                             " JS property `innerHTML` with the same label adding a point at the end");
-
-                var label = await buttonTestResponse.GetProperty("innerHTML");
-
-                // add a point as an example of the workflow on every call
-                buttonTestResponse.SetProperty("innerHTML", $"{label}.");
-            });
-        }
-
-        private void ClearLogActions()
-        {
-            RightColumn.SetText("");
-        }
-
-        private void AddLogAction(string log)
-        {
-            RightColumn.Text += log + "<br/>";
         }
     }
 }

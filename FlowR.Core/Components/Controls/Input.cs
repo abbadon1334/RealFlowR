@@ -6,7 +6,7 @@ namespace FlowR.Core.Components.Controls
     public class Input : ComponentControl<Input>, IComponentControl
     {
         /// <inheritdoc cref="Node.TagName" />
-        public override string TagName => "input";
+        public override string TagName { get; protected set; } = "input";
 
         /// <summary>
         ///     The html input type

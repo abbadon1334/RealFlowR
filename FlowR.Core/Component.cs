@@ -20,7 +20,14 @@ namespace FlowR.Core
         protected Component()
         {
             DerivedClass = this as T;
+
+            foreach (var kvp in defaultAttributes)
+            {
+                SetAttribute(kvp.Key, kvp.Value);
+            }
         }
+
+        protected virtual Dictionary<string, string> defaultAttributes { get; set; } = new();
 
         /// <inheritdoc cref="Node._SetAttribute" />
         public T SetAttribute(string name, string value)
@@ -31,7 +38,7 @@ namespace FlowR.Core
         }
 
         /// <inheritdoc cref="Node._SetAttribute" />
-        public T SetAttributes(KeyValuePair<string, string>[] attributes)
+        public T SetAttributes(params KeyValuePair<string,string>[] attributes)
         {
             foreach (var kvp in attributes) _SetAttribute(kvp.Key, kvp.Value);
 
@@ -47,7 +54,7 @@ namespace FlowR.Core
         }
 
         /// <inheritdoc cref="Node._SetText" />
-        public T SetText(string text)
+        public virtual T SetText(string text)
         {
             _SetText(text);
 
@@ -91,7 +98,7 @@ namespace FlowR.Core
                 actualCss = GetAttributeDictionary()["class"];
             }
 
-            SetAttribute("class", actualCss + " " + name);
+            SetAttribute("class", (actualCss + " " + name).Trim());
             
             return DerivedClass;
         }

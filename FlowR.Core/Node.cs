@@ -34,7 +34,7 @@ namespace FlowR.Core
         /// <summary>
         ///     TagName of the Node : any HTML valid tag name is permitted.
         /// </summary>
-        public abstract string TagName { get; }
+        public abstract string TagName { get; protected set; }
 
         /// <summary>
         ///     The Client Application.
@@ -225,7 +225,7 @@ namespace FlowR.Core
         /// <returns></returns>
         public async Task<string> CallClientMethodWaitResponse(string methodName, params string[] arguments)
         {
-            var message = Factory.MessageGlobalMethodCallWaitResponse(methodName, arguments);
+            var message = Factory.MessageMethodCallWaitResponse(this, methodName, arguments);
             return await Application.Communication.SendMessageWaitResponse(message);
         }
 

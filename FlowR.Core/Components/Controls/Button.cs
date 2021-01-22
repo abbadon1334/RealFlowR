@@ -6,6 +6,6 @@ namespace FlowR.Core.Components.Controls
     public class Button : ComponentElement<Button>
     {
         /// <inheritdoc cref="Node.TagName" />
-        public override string TagName { get; } = "button";
+        public override string TagName { get; protected set; } =  "button";
     }
 }
