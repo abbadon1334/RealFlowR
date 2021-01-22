@@ -77,18 +77,41 @@ namespace FlowR.Core
             return DerivedClass;
         }
 
+        /// <summary>
+        ///     Add a classname to class attribute 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public T AddCSSClass(string name)
         {
-            SetAttribute("class", GetAttributeDictionary()[name] + " " + name);
+            string actualCss = "";
+            Dictionary<string, string> attributes = GetAttributeDictionary();
+            if (attributes.ContainsKey("class"))
+            {
+                actualCss = GetAttributeDictionary()["class"];
+            }
+
+            SetAttribute("class", actualCss + " " + name);
             
             return DerivedClass;
         }
         
+        /// <summary>
+        ///     Remove a classname from class attribute 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public T RemoveCSSClass(string name)
         {
-            // todo better way to do this? without storing a css variable
             
-            List<string> css = GetAttributeDictionary()[name].Split(" ").ToList();
+            string actualCss = "";
+            Dictionary<string, string> attributes = GetAttributeDictionary();
+            if (attributes.ContainsKey("class"))
+            {
+                actualCss = GetAttributeDictionary()["class"];
+            }
+            
+            List<string> css = actualCss.Split(" ").ToList();
             css.Remove(name);
             
             SetAttribute("class", String.Join(" ", css));
@@ -103,7 +126,7 @@ namespace FlowR.Core
         /// <returns><![CDATA[ 
         ///    Component<T> or null if not found
         /// ]]></returns>
-        public TNode? TryFindFirstOwnerByType<TNode>() where TNode : Component<TNode>
+        public TNode TryFindFirstOwnerByType<TNode>() where TNode : Component<TNode>
         {
             try
             {

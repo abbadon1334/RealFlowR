@@ -8,7 +8,7 @@
   Scenario: Test SetAttribute 
     Given A new application
     And I add a div component
-    Then Check attribute id is not null
+    Then Check no null attribute id
     When I get the message at index 2
     Then Check the message method : CreateElement
     Given I SetAttribute name with test

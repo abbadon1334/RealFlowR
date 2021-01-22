@@ -50,7 +50,10 @@ namespace FlowR.Tests
             {
                 return _componentForm.GetBindedControls().First(componentControl => componentControl.GetControlName() == name);
             }
-            catch (Exception e) {}
+            catch (Exception e)
+            {
+                // silent intentionally
+            }
 
             return null;
         }

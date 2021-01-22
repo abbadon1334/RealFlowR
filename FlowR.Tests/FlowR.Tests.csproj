@@ -28,6 +28,7 @@
       <Compile Remove="obj\**" />
       <Compile Remove="SomeTest.feature.cs" />
       <Compile Remove="MessageTests.feature.cs" />
+      <Compile Remove="ComponentControlTests.feature.cs" />
     </ItemGroup>
 
     <ItemGroup>

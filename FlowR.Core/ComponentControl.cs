@@ -19,6 +19,7 @@ namespace FlowR.Core
             return _controlName;
         }
 
+        /// <inheritdoc />
         public override void Init()
         {
             base.Init();

@@ -8,6 +8,9 @@ namespace FlowR.Core.Components.Controls
         /// <inheritdoc cref="Node.TagName" />
         public override string TagName => "input";
 
+        /// <summary>
+        ///     The html input type
+        /// </summary>
         protected string InputType { get; set; } = "text";
         
         

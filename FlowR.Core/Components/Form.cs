@@ -68,10 +68,20 @@ namespace FlowR.Core.Components
 
             return values;
         }
+        
+        /// <summary>
+        ///     Usually done internally. But it will bind the control to a Form
+        /// </summary>
+        /// <param name="componentControl"></param>
         public void BindControl(IComponentControl componentControl)
         {
             _controls.Add(componentControl);
         }
+        
+        /// <summary>
+        ///     @todo need to lower visibility, probably protected.
+        /// </summary>
+        /// <returns></returns>
         public List<IComponentControl> GetBindedControls()
         {
             return _controls;

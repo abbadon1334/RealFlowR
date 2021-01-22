@@ -22,6 +22,36 @@ namespace FlowR.Tests
             );
         }
 
+        [Given(@"I add a div component")] public void AddDiv()
+        {
+            CurrentComponent = App.GetComponentRoot().Add<Div>();
+        }
+        
+        [Given(@"I SetAttribute (.*) with (.*)")] public void LastElementSetAttribute(string name, string value)
+        {
+            CurrentComponent.SetAttribute(name, value);
+        }
+
+        [Given(@"I remove Attribute with name (.*)")] public void LastElementRemoveAttribute(string name)
+        {
+            CurrentComponent.RemoveAttribute(name);
+        }
+
+        [Given(@"I remove the element")] public void LastElementRemove()
+        {
+            CurrentComponent.Owner.Remove(CurrentComponent);
+        }
+
+        [Then(@"Check no null attribute (.*)")] public void CheckAttributeNotNull(string name)
+        {
+            Assert.NotEmpty(CurrentComponent.GetAttributeDictionary()[name]);
+        }
+
+        [Then(@"Check attribute (.*) has value (.*)")] public void CheckAttribute(string name, string value)
+        {
+            Assert.Equal(value, CurrentComponent.GetAttributeDictionary()[name]);
+        }
+        
         [When(@"I get the last message")] public void WhenIGetAMessage()
         {
             CurrentMessage = Client.ConsumeMessage();
