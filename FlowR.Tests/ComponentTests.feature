@@ -26,3 +26,10 @@ Feature: Component tests
 
     Given I remove class second
     Then Check attribute class has value first
+
+  Scenario: Test mix SetAttribute add same class twice
+    Given A new application
+    And I add a div component
+    And I SetAttribute class with btn first first
+    And I add class first
+    Then Check attribute class has value btn first
