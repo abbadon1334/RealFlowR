@@ -29,6 +29,7 @@
       <Compile Remove="SomeTest.feature.cs" />
       <Compile Remove="MessageTests.feature.cs" />
       <Compile Remove="ComponentControlTests.feature.cs" />
+      <Compile Remove="ComponentTests.feature.cs" />
     </ItemGroup>
 
     <ItemGroup>

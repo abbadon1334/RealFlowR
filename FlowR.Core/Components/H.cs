@@ -1,7 +1,11 @@
 namespace FlowR.Core.Components
 {
+    /// <summary>
+    ///     H tag
+    /// </summary>
     public class H : ComponentElement<H>
     {
+        /// <inheritdoc />
         public override string TagName { get; protected set; } = "H1";
 
         /// <summary>

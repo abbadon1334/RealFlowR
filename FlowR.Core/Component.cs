@@ -22,6 +22,9 @@ namespace FlowR.Core
             foreach (var kvp in defaultAttributes) SetAttribute(kvp.Key, kvp.Value);
         }
 
+        /// <summary>
+        ///     Setup default Component attributes
+        /// </summary>
         protected virtual Dictionary<string, string> defaultAttributes { get; set; } = new();
 
         /// <inheritdoc cref="Node._SetAttribute" />
@@ -79,6 +82,16 @@ namespace FlowR.Core
             return DerivedClass;
         }
 
+        private List<string> GetAttributeClassAsList()
+        {
+            GetAttributeDictionary().TryGetValue("class", out var actualCss);
+                
+            return actualCss == null
+                    ? new List<string>()
+                    : actualCss.Split(" ").Distinct().ToList()
+                ;
+        }
+        
         /// <summary>
         ///     Add a classname to class attribute
         /// </summary>
@@ -86,11 +99,7 @@ namespace FlowR.Core
         /// <returns></returns>
         public T AddCSSClass(string name)
         {
-            var actualCss = "";
-            var attributes = GetAttributeDictionary();
-            if (attributes.ContainsKey("class")) actualCss = GetAttributeDictionary()["class"];
-
-            SetAttribute("class", (actualCss + " " + name).Trim());
+            SetAttribute("class", string.Join(" ", GetAttributeClassAsList().Append(name).Distinct()).Trim());
 
             return DerivedClass;
         }
@@ -102,14 +111,11 @@ namespace FlowR.Core
         /// <returns></returns>
         public T RemoveCSSClass(string name)
         {
-            var actualCss = "";
-            var attributes = GetAttributeDictionary();
-            if (attributes.ContainsKey("class")) actualCss = GetAttributeDictionary()["class"];
+            var css = GetAttributeClassAsList();
+                css.Remove(name);
+            
 
-            var css = actualCss.Split(" ").ToList();
-            css.Remove(name);
-
-            SetAttribute("class", string.Join(" ", css));
+            SetAttribute("class", string.Join(" ", css.Distinct()).Trim());
 
             return DerivedClass;
         }

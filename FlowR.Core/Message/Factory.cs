@@ -243,7 +243,7 @@ namespace FlowR.Core.Message
         /// <summary>
         ///     Return MessageElement
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="url"></param>
         /// <returns></returns>
         public static IMessageResponse MessageGlobalAddScriptWaitLoad(string url)
         {
@@ -253,7 +253,7 @@ namespace FlowR.Core.Message
         /// <summary>
         ///     Return MessageElement
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="url"></param>
         /// <returns></returns>
         public static IMessageResponse MessageGlobalAddStylesheetWaitLoad(string url)
         {

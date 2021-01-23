@@ -10,11 +10,15 @@ namespace FlowR.UI.Components
     /// </summary>
     public class NavbarMenuItem : ComponentElement<NavbarMenuItem>
     {
-
+        /// <summary>
+        ///     The link of the item.
+        /// </summary>
         protected A Link;
+        
         /// <inheritdoc cref="Node.TagName" />
         public override string TagName { get; protected set; } = "li";
 
+        /// <inheritdoc />
         protected override Dictionary<string, string> defaultAttributes { get; set; } = new()
         {
             { "class", "nav-item" }
@@ -35,6 +39,11 @@ namespace FlowR.UI.Components
             return this;
         }
 
+        /// <summary>
+        ///     Add event on click with callback
+        /// </summary>
+        /// <param name="callback"></param>
+        /// <returns></returns>
         public NavbarMenuItem onClick(EventHandler callback)
         {
             Link.On("click", callback);
@@ -42,6 +51,10 @@ namespace FlowR.UI.Components
             return this;
         }
 
+        /// <summary>
+        ///     Set item Active
+        /// </summary>
+        /// <returns></returns>
         public NavbarMenuItem SetActive()
         {
             AddCSSClass("active");
@@ -49,6 +62,10 @@ namespace FlowR.UI.Components
             return this;
         }
 
+        /// <summary>
+        ///     Set item Inactive
+        /// </summary>
+        /// <returns></returns>
         public NavbarMenuItem SetInactive()
         {
             RemoveCSSClass("active");

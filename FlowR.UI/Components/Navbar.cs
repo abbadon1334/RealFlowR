@@ -6,13 +6,19 @@ using FlowR.Core.Components.Controls;
 
 namespace FlowR.UI.Components
 {
+    /// <summary>
+    ///     Navbar Bootstrap element
+    /// </summary>
     public class Navbar : ComponentElement<Navbar>
     {
-
+        /// <summary>
+        ///     Internal container  
+        /// </summary>
         public Div Container;
         /// <inheritdoc />
         public override string TagName { get; protected set; } = "navbar";
 
+        /// <inheritdoc />
         protected override Dictionary<string, string> defaultAttributes { get; set; } = new()
         {
             { "class", "navbar navbar-expand-lg" }
@@ -59,6 +65,10 @@ namespace FlowR.UI.Components
             return Button;
         }
 
+        /// <summary>
+        ///     Add menu to navbar
+        /// </summary>
+        /// <returns></returns>
         public NavbarMenu AddMenu()
         {
             return Container.Add<NavbarMenu>();

@@ -10,6 +10,7 @@ namespace FlowR.Core.Components
         /// <inheritdoc cref="Node.TagName" />
         public override string TagName { get; protected set; } = "a";
 
+        /// <inheritdoc />
         protected override Dictionary<string, string> defaultAttributes { get; set; } = new()
         {
             { "href", "#" }

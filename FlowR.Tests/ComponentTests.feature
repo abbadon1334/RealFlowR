@@ -5,9 +5,24 @@ Feature: Component tests
     And I add a div component
     And I SetAttribute class with btn
     Then Check attribute class has value btn
-    
-    And I Add class success
+
+    Given I add class success
     Then Check attribute class has value btn success
 
-    And I Remove class btn
+    Given I remove class btn
     Then Check attribute class has value success
+
+  Scenario: Test add same class twice
+    Given A new application
+    And I add a div component
+    And I add class first
+    Then Check attribute class has value first
+
+    Given I add class second
+    Then Check attribute class has value first second
+
+    Given I add class second
+    Then Check attribute class has value first second
+
+    Given I remove class second
+    Then Check attribute class has value first
