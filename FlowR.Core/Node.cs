@@ -37,13 +37,13 @@ namespace FlowR.Core
         public Node()
         {
             SetupCollections();
-            SetAttributes(defaultAttributes);
+            SetAttribute(DefaultAttributes);
         }
 
         /// <summary>
         ///     Setup default Component attributes
         /// </summary>
-        protected virtual Dictionary<string, string> defaultAttributes { get; set; } = new();
+        protected virtual Dictionary<string, string> DefaultAttributes { get; set; } = new();
 
         /// <summary>
         ///     Stored HTML Tag name.
@@ -169,7 +169,7 @@ namespace FlowR.Core
         ///     Short hand to set multiple attributes
         /// </summary>
         /// <param name="attributes"></param>
-        public void SetAttributes(Dictionary<string, string> attributes = null)
+        public void SetAttribute(Dictionary<string, string> attributes = null)
         {
             attributes ??= new Dictionary<string, string>();
 
@@ -397,7 +397,7 @@ namespace FlowR.Core
                         break;
 
                     case NotifyCollectionChangedAction.Remove:
-                        foreach (KeyValuePair<string, string> kvp in args.NewItems)
+                        foreach (KeyValuePair<string, string> kvp in args.OldItems)
                             MessageElement.Factory.MessageRemoveAttribute(
                                 this,
                                 kvp.Key
@@ -506,7 +506,7 @@ namespace FlowR.Core
             if (!IsInitialized()) throw new Exception("Node must be a Owner, you need to add it to the tree");
 
             node.SetOwner(this);
-            node.SetAttributes(attributes);
+            node.SetAttribute(attributes);
 
             GetChildren().Add(node.GetUuid(), node);
         }

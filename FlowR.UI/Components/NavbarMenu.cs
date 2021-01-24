@@ -12,7 +12,7 @@ namespace FlowR.UI.Components
         protected override string TagName => "ul";
 
         /// <inheritdoc />
-        protected override Dictionary<string, string> defaultAttributes { get; set; } = new()
+        protected override Dictionary<string, string> DefaultAttributes { get; set; } = new()
         {
             { "class", "navbar-nav" }
         };

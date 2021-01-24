@@ -18,7 +18,7 @@ namespace FlowR.UI.Components
         protected override string TagName => "navbar";
 
         /// <inheritdoc />
-        protected override Dictionary<string, string> defaultAttributes { get; set; } = new()
+        protected override Dictionary<string, string> DefaultAttributes { get; set; } = new()
         {
             { "class", "navbar navbar-expand-lg" }
         };
@@ -55,7 +55,7 @@ namespace FlowR.UI.Components
             Container = Container.Add<Container>();
             Container.AddCSSClass("collapse navbar-collapse");
 
-            Button.SetAttributes(new Dictionary<string, string>
+            Button.SetAttribute(new Dictionary<string, string>
             {
                 { "type", "button" },
                 { "data-bs-toggle", "collapse" },

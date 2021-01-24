@@ -12,7 +12,7 @@ namespace FlowR.UI.Layout
         protected override string TagName => "div";
 
         /// <inheritdoc />
-        protected override Dictionary<string, string> defaultAttributes { get; set; } = new()
+        protected override Dictionary<string, string> DefaultAttributes { get; set; } = new()
         {
             { "class", "row" }
         };

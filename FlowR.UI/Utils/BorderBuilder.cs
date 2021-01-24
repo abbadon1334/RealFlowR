@@ -2,7 +2,8 @@ namespace FlowR.UI.Utils
 {
     public class BorderBuilder
     {
-        public override string ToString()
+        
+        public string ToString()
         {
             return base.ToString();
         }

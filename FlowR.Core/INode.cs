@@ -100,7 +100,7 @@ namespace FlowR.Core
         ///     Set multiple attributes.
         /// </summary>
         /// <param name="attributes"></param>
-        public void SetAttributes(Dictionary<string, string> attributes = null);
+        public void SetAttribute(Dictionary<string, string> attributes = null);
 
         /// <summary>
         ///     Get Attribute of Inode by name.
