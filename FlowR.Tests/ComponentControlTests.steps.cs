@@ -1,8 +1,6 @@
-using System;
-using System.Linq;
 using FlowR.Core;
-using FlowR.Core.Components;
-using FlowR.Core.Components.Controls;
+using FlowR.Core.Tags;
+using FlowR.Core.Tags.Controls;
 using TechTalk.SpecFlow;
 using Xunit;
 
@@ -28,7 +26,7 @@ namespace FlowR.Tests
         {
             Assert.Equal(
                 attrValue,
-                (GetComponentByName(name) as Node)?.GetAttributeDictionary()[attrName]
+                GetComponentByName(name)?.GetAttribute(attrName)
             );
         }
 
@@ -40,18 +38,11 @@ namespace FlowR.Tests
             );
         }
 
-        private IComponentControl GetComponentByName(string name)
+        private INodeControl GetComponentByName(string name)
         {
-            try
-            {
-                return _componentForm.GetBindedControls().First(componentControl => componentControl.GetControlName() == name);
-            }
-            catch (Exception e)
-            {
-                // silent intentionally
-            }
+            _componentForm.GetControls().TryGetValue(name, out var control);
 
-            return null;
+            return control;
         }
     }
 }

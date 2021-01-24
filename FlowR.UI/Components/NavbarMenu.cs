@@ -6,10 +6,10 @@ namespace FlowR.UI.Components
     /// <summary>
     ///     Tag div
     /// </summary>
-    public class NavbarMenu : ComponentElement<NavbarMenu>
+    public class NavbarMenu : NodeComponent
     {
         /// <inheritdoc cref="Node.TagName" />
-        public override string TagName { get; protected set; } = "ul";
+        protected override string TagName => "ul";
 
         /// <inheritdoc />
         protected override Dictionary<string, string> defaultAttributes { get; set; } = new()

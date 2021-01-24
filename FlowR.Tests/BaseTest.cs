@@ -1,6 +1,7 @@
 using FlowR.Core;
-using FlowR.Core.Components;
+using FlowR.Core.Tags;
 using FlowR.Tests.Mock;
+using Microsoft.Extensions.Logging.Abstractions;
 using TechTalk.SpecFlow;
 using Xunit;
 
@@ -11,14 +12,15 @@ namespace FlowR.Tests
         public ApplicationMock App;
         public ClientProxyMock Client;
 
-        public ComponentElement<Div> CurrentComponent;
+        public Div CurrentComponent;
         public ClientMessageSent CurrentMessage;
 
         [Given(@"A new application")] public void GivenANewApplication()
         {
             App = new ApplicationMock(
                 "testApp",
-                Client = new ClientProxyMock()
+                Client = new ClientProxyMock(),
+                NullLogger<Application>.Instance
             );
         }
 
@@ -39,17 +41,17 @@ namespace FlowR.Tests
 
         [Given(@"I remove the element")] public void LastElementRemove()
         {
-            CurrentComponent.Owner.Remove(CurrentComponent);
+            CurrentComponent.GetOwner().Remove(CurrentComponent);
         }
 
         [Then(@"Check no null attribute (.*)")] public void CheckAttributeNotNull(string name)
         {
-            Assert.NotEmpty(CurrentComponent.GetAttributeDictionary()[name]);
+            Assert.NotEmpty(CurrentComponent.GetAttribute(name));
         }
 
         [Then(@"Check attribute (.*) has value (.*)")] public void CheckAttribute(string name, string value)
         {
-            Assert.Equal(value, CurrentComponent.GetAttributeDictionary()[name]);
+            Assert.Equal(value, CurrentComponent.GetAttribute(name));
         }
 
         [When(@"I get the last message")] public void WhenIGetAMessage()

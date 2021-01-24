@@ -22,6 +22,8 @@ namespace FlowR
             services.AddRazorPages();
             services.AddSignalR();
 
+            services.AddLogging();
+
             services.AddSingleton<FlowRService<Application>>();
         }
 

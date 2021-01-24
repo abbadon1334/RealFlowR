@@ -1,6 +1,8 @@
 using System;
+using System.Threading.Tasks;
 using FlowR.Core.Message;
 using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.Logging;
 
 namespace FlowR.Core
 {
@@ -9,6 +11,8 @@ namespace FlowR.Core
     /// </summary>
     public abstract class Application
     {
+
+        private readonly ILogger<Application> _logger;
         private readonly ApplicationRegistry _registry = new();
         private readonly ApplicationTimers _timers = new();
 
@@ -16,7 +20,7 @@ namespace FlowR.Core
         ///     Root element of the Application.
         ///     The composition tree that draw client UI starts from here.
         /// </summary>
-        protected readonly ComponentRoot RootElement;
+        protected readonly NodeComponentRoot RootElement;
 
         /// <summary>
         ///     Element ID of the master container for the application
@@ -28,14 +32,16 @@ namespace FlowR.Core
         /// </summary>
         /// <param name="connectionId">connectionId from Hub</param>
         /// <param name="client">SignalR client from Hub</param>
-        protected Application(string connectionId, IClientProxy client)
+        /// <param name="logger">ILogger</param>
+        protected Application(string connectionId, IClientProxy client, ILogger<Application> logger)
         {
+            _logger = logger;
+
             ConnectionId = connectionId;
             Communication = new ApplicationCommunication(this, client);
 
             // Prepare the root element 
-            RootElement = new ComponentRoot(RootElementId);
-            RootElement.Application = this;
+            RootElement = new NodeComponentRoot(RootElementId, this);
             RootElement.Init();
 
             // register component
@@ -43,6 +49,8 @@ namespace FlowR.Core
 
             // send async message to client, indicating the id of the starting HTMLElement
             client.SendAsync("OnInit", RootElementId);
+
+            GetLogger().LogDebug("Application initialized");
         }
 
         /// <inheritdoc cref="ApplicationCommunication" />
@@ -54,11 +62,20 @@ namespace FlowR.Core
         private string ConnectionId { get; }
 
         /// <summary>
+        ///     Get Application logger
+        /// </summary>
+        /// <returns></returns>
+        public ILogger<Application> GetLogger()
+        {
+            return _logger;
+        }
+
+        /// <summary>
         ///     [internal use] Add Node to registry.
         ///     Internally called after add to parent Node, usually there is no need to be called.
         /// </summary>
         /// <param name="node"></param>
-        public void RegisterComponent(Node node)
+        public void RegisterComponent(INode node)
         {
             // @todo find a way to lower visibility of internal calls 
             _registry.RegisterComponent(node);
@@ -69,7 +86,7 @@ namespace FlowR.Core
         /// </summary>
         /// <param name="uuid"></param>
         /// <returns></returns>
-        private Node GetRegisterComponent(string uuid)
+        private INode GetRegisterComponent(string uuid)
         {
             // @todo find a way to lower visibility of internal calls 
             return _registry.Get(uuid);
@@ -80,7 +97,7 @@ namespace FlowR.Core
         ///     Internally called after removed from parent Node, usually there is no need to be called.
         /// </summary>
         /// <param name="node"></param>
-        public void UnregisterComponent(Node node)
+        public void UnregisterComponent(INode node)
         {
             _registry.UnregisterComponent(node);
         }
@@ -118,6 +135,76 @@ namespace FlowR.Core
         public void CancelTimer(ApplicationTimer timer)
         {
             _timers.Remove(timer);
+        }
+
+        /// <summary>
+        ///     Call a global JS method, don't wait for response.
+        /// </summary>
+        /// <example>from a DomNode : GetApplication().CallGlobalMethod('alert',['this is an alert']);</example>
+        /// <param name="methodName"></param>
+        /// <param name="arguments"></param>
+        public void CallGlobalMethod(string methodName, params string[] arguments)
+        {
+            MessageGlobal.Factory.MessageGlobalMethodCall(
+                methodName,
+                arguments
+            ).SendMessageAsync(Communication);
+        }
+        /// <summary>
+        ///     Call a global JS method and wait for response
+        /// </summary>
+        /// <param name="methodName">window method or complete traversed path like document.location.reload </param>
+        /// <param name="arguments"></param>
+        public async Task<string> CallGlobalMethodWaitResponse(string methodName, params string[] arguments)
+        {
+            return await MessageGlobalWithResponse.Factory.MessageGlobalCallMethodWaitResponse(
+                methodName,
+                arguments
+            ).SendMessageAsync(Communication);
+        }
+        /// <summary>
+        ///     Get a global JS property and wait for response
+        /// </summary>
+        /// <param name="path">window method or complete traversed path like document.location.reload </param>
+        public async Task<string> GetGlobalProperty(string path)
+        {
+            return await MessageGlobalWithResponse.Factory.MessageGlobalGetPropertyWaitResponse(
+                path
+            ).SendMessageAsync(Communication);
+        }
+        /// <summary>
+        ///     Set a global JS property and wait for response
+        /// </summary>
+        /// <param name="path">window property or complete traversed path like document.body.scrollHeight </param>
+        /// <param name="value"></param>
+        public void SetGlobalProperty(string path, string value)
+        {
+            MessageGlobal.Factory.MessageSetGlobalProperty(
+                path,
+                value
+            ).SendMessageAsync(Communication);
+        }
+
+        /// <summary>
+        ///     Inject Javascript file in document
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public async Task<string> AddJavascriptResource(string url)
+        {
+            return await MessageGlobalWithResponse.Factory.MessageGlobalAddScriptWaitLoad(url)
+                .SendMessageAsync(Communication);
+        }
+
+        /// <summary>
+        ///     Inject Stylesheet file in document
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public async Task<string> AddStylesheetResource(string url)
+        {
+            return await MessageGlobalWithResponse.Factory.MessageGlobalAddStylesheetWaitLoad(url)
+                .SendMessageAsync(Communication);
         }
     }
 }

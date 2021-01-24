@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 
 namespace FlowR.Core.Message
 {
@@ -14,7 +15,8 @@ namespace FlowR.Core.Message
         /// <summary>
         ///     Message Uuid
         /// </summary>
-        [JsonInclude] public string Uuid;
+        [JsonInclude]
+        public string Uuid;
 
         /// <summary>
         ///     Constructor
@@ -40,20 +42,24 @@ namespace FlowR.Core.Message
         /// <returns></returns>
         public abstract string GetRequestedAction();
 
-        /// <summary>
-        ///     Get Arguments as array
-        /// </summary>
-        /// <returns></returns>
+
+        /// <inheritdoc />
         public object[] GetArgumentValues()
         {
             return _arguments.ToArray();
+        }
+
+        /// <inheritdoc />
+        public virtual Task SendMessageAsync(ApplicationCommunication comm)
+        {
+            return comm.SendMessage(this);
         }
 
         /// <summary>
         ///     Add Argument to Argument list for the message.
         /// </summary>
         /// <param name="values"></param>
-        public void AddArgument(params object[] values)
+        protected void AddArgument(params object[] values)
         {
             foreach (var value in values) _arguments.Add(value);
         }

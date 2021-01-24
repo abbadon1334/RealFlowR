@@ -7,24 +7,24 @@ namespace FlowR.Core
     /// </summary>
     public class ApplicationRegistry
     {
-        private readonly Dictionary<string, Node> _registerComponents = new();
+        private readonly Dictionary<string, INode> _registerComponents = new();
 
         /// <summary>
         ///     Add to Registry
         /// </summary>
         /// <param name="node"></param>
-        public void RegisterComponent(Node node)
+        public void RegisterComponent(INode node)
         {
-            _registerComponents[node.Uuid] = node;
+            _registerComponents[node.GetUuid()] = node;
         }
 
         /// <summary>
         ///     Remove from Registry
         /// </summary>
         /// <param name="node"></param>
-        public void UnregisterComponent(Node node)
+        public void UnregisterComponent(INode node)
         {
-            _registerComponents.Remove(node.Uuid);
+            _registerComponents.Remove(node.GetUuid());
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace FlowR.Core
         /// </summary>
         /// <param name="uuid"></param>
         /// <returns></returns>
-        public Node Get(string uuid)
+        public INode Get(string uuid)
         {
             return _registerComponents[uuid];
         }

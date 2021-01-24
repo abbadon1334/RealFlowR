@@ -1,6 +1,7 @@
-using FlowR.Core.Components;
+using FlowR.Core.Tags;
 using FlowR.UI.Components;
 using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.Logging;
 
 namespace FlowR
 {
@@ -9,7 +10,7 @@ namespace FlowR
         protected readonly Div RightColumn;
         protected int Counter = 0;
 
-        public Application(string connectionId, IClientProxy client) : base(connectionId, client)
+        public Application(string connectionId, IClientProxy client, ILogger<Core.Application> logger) : base(connectionId, client, logger)
         {
             RootElement.SetAttribute("css", "d-flex h-100 text-center text-white bg-dark");
 
@@ -21,15 +22,22 @@ namespace FlowR
             var main = RootElement.Add<Div>();
 
             var menu = Navbar.AddMenu();
-            menu.AddMenuItem().SetText("Add Dark").onClick((sender, args) =>
+            var menuItem = menu.AddMenuItem();
+            menuItem.SetText("Add Dark");
+            menuItem.OnClick((sender, args) =>
             {
                 Navbar.AddCSSClass("navbar-dark bg-dark");
             });
-            menu.AddMenuItem().SetText("Remove Dark").onClick((sender, args) =>
+            var menuItem2 = menu.AddMenuItem();
+            menuItem2.SetText("Remove Dark");
+            menuItem2.OnClick((sender, args) =>
             {
-                Navbar.RemoveCSSClass("navbar-dark").RemoveCSSClass("bg-dark");
+                Navbar.RemoveCSSClass("navbar-dark");
+                Navbar.RemoveCSSClass("bg-dark");
             });
-            menu.AddMenuItem().SetText("Link C").onClick((sender, args) =>
+            var menuItem3 = menu.AddMenuItem();
+            menuItem3.SetText("Link C");
+            menuItem3.OnClick((sender, args) =>
             {
             });
         }

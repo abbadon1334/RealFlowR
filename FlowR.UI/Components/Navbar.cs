@@ -1,22 +1,21 @@
 using System.Collections.Generic;
-using System.Linq;
 using FlowR.Core;
-using FlowR.Core.Components;
-using FlowR.Core.Components.Controls;
+using FlowR.Core.Tags;
+using FlowR.UI.Layout;
 
 namespace FlowR.UI.Components
 {
     /// <summary>
     ///     Navbar Bootstrap element
     /// </summary>
-    public class Navbar : ComponentElement<Navbar>
+    public class Navbar : NodeComponent
     {
         /// <summary>
-        ///     Internal container  
+        ///     Internal container
         /// </summary>
-        public Div Container;
+        public Container Container;
         /// <inheritdoc />
-        public override string TagName { get; protected set; } = "navbar";
+        protected override string TagName => "navbar";
 
         /// <inheritdoc />
         protected override Dictionary<string, string> defaultAttributes { get; set; } = new()
@@ -28,7 +27,8 @@ namespace FlowR.UI.Components
         public override void Init()
         {
             base.Init();
-            Container = Add<Div>().SetAttribute("class", "container-fluid");
+            Container = Add<Container>();
+            Container.setResponsive(ResponsiveViewports.FLUID);
         }
 
         /// <summary>
@@ -37,7 +37,10 @@ namespace FlowR.UI.Components
         /// <returns></returns>
         public Div AddBrand()
         {
-            return Container.Add<Div>().AddCSSClass("navbar-brand");
+            var div = Container.Add<Div>();
+            div.AddCSSClass("navbar-brand me-md-auto");
+
+            return div;
         }
 
         /// <summary>
@@ -46,19 +49,21 @@ namespace FlowR.UI.Components
         /// <returns></returns>
         public Button AddToggler()
         {
-            var Button = Container.Add<Button>().AddCSSClass("navbar-toggler");
+            var Button = Container.Add<Button>();
+            Button.AddCSSClass("navbar-toggler btn btn-outline-primary");
 
-            Container = Container.Add<Div>().AddCSSClass("collapse navbar-collapse");
+            Container = Container.Add<Container>();
+            Container.AddCSSClass("collapse navbar-collapse");
 
             Button.SetAttributes(new Dictionary<string, string>
             {
                 { "type", "button" },
                 { "data-bs-toggle", "collapse" },
-                { "data-bs-target", "#" + Container.Uuid },
-                { "aria-controls", Container.Uuid },
+                { "data-bs-target", "#" + Container.GetUuid() },
+                { "aria-controls", Container.GetUuid() },
                 { "aria-expanded", "false" },
                 { "aria-label", "Toggle navigation" }
-            }.ToArray());
+            });
 
             Button.Add<Span>().AddCSSClass("navbar-toggler-icon");
 

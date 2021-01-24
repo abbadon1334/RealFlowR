@@ -6,8 +6,7 @@ namespace FlowR.Tests
     [Scope(Feature = "Component tests")]
     public class ComponentTests : BaseTest
     {
-        [Given(@"I add class (.*)")]
-        public void AddClass(string className)
+        [Given(@"I add class (.*)")] public void AddClass(string className)
         {
             CurrentComponent.AddCSSClass(className);
         }

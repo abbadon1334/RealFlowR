@@ -1,440 +1,519 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Linq;
 using System.Threading.Tasks;
 using FlowR.Core.Message;
+using Microsoft.Extensions.Logging;
 
 namespace FlowR.Core
 {
     /// <summary>
-    ///     DomNode base class
+    ///     INode implementation class
     /// </summary>
-    public abstract class Node
+    public abstract class Node : INode
     {
+        private readonly ObservableDictionary<string, string> _attributes = new();
 
-        private NodeCollectionAttribute _attributes;
+        private readonly ObservableDictionary<string, INode> _children = new();
 
-        private NodeCollectionNode _children;
+        private readonly ObservableDictionary<string, List<EventHandler>> _events = new();
 
-        private NodeCollectionEvent _events;
+        private readonly ObservableDictionary<string, string> _properties = new();
 
-        private NodeCollectionProperty _properties;
+        private Application _application;
 
-        private string _uuid = string.Empty;
+        private bool _initialized;
+
+        private INode _owner;
+
+        private string _text = "";
+
+        private string _uuid;
 
         /// <summary>
         ///     Constructor
         /// </summary>
-        protected Node()
+        public Node()
         {
-            SetupAttributes();
-            SetupChildren();
-            SetupEvents();
-            SetupProperties();
-        }
-        /// <summary>
-        ///     TagName of the Node : any HTML valid tag name is permitted.
-        /// </summary>
-        public abstract string TagName { get; protected set; }
-
-        /// <summary>
-        ///     The Client Application.
-        /// </summary>
-        public Application Application { get; set; }
-
-        /// <summary>
-        ///     DomNode parent
-        /// </summary>
-        public Node Owner { get; set; }
-
-        /// <summary>
-        ///     Unique identifier of the Node
-        /// </summary>
-        public string Uuid
-        {
-            get
-            {
-                if (_uuid == string.Empty) Uuid = Guid.NewGuid().ToString();
-                return _uuid;
-            }
-            set
-            {
-                if (_uuid != string.Empty) throw new Exception($"Element Uuid is not empty (actual : '{_uuid}'))");
-
-                _uuid = value;
-                if (!HasAttribute("id")) _SetAttribute("id", value);
-            }
-        }
-
-        #region Setup
-
-        private void SetupProperties()
-        {
-            _properties = new NodeCollectionProperty(this);
-            _properties.AfterChanged += (o, args) =>
-            {
-                var prop = (CollectionChangedEventArgs<string>)args;
-                SendMessage(Factory.MessageSetProperty(this, prop.Name, prop.Value));
-            };
-        }
-
-        private void SetupEvents()
-        {
-            _events = new NodeCollectionEvent(this);
-            _events.AfterAdded += (o, args) =>
-            {
-                SendMessage(Factory.MessageStartListenEvent(this,
-                    ((CollectionAddedEventArgs<List<EventHandler>>)args).Name));
-            };
-            _events.AfterRemoved += (o, args) =>
-            {
-                SendMessage(Factory.MessageStopListenEvent(this,
-                    ((CollectionAddedEventArgs<List<EventHandler>>)args).Name));
-            };
-        }
-
-        private void SetupChildren()
-        {
-            _children = new NodeCollectionNode(this);
-            _children.AfterAdded += (o, args) =>
-            {
-                SendMessage(Factory.MessageCreate(((CollectionAddedEventArgs<Node>)args).Value));
-            };
-            _children.AfterRemoved += (o, args) =>
-            {
-                SendMessage(Factory.MessageRemove(((CollectionRemovedEventArgs<Node>)args).Value));
-            };
-        }
-
-        private void SetupAttributes()
-        {
-            _attributes = new NodeCollectionAttribute(this);
-            _attributes.AfterChanged += (o, args) =>
-            {
-                var attr = (CollectionChangedEventArgs<string>)args;
-                SendMessage(Factory.MessageSetAttribute(this, attr.Name, attr.Value));
-            };
-            _attributes.AfterRemoved += (o, args) =>
-            {
-                var attr = (CollectionAddedEventArgs<string>)args;
-                SendMessage(Factory.MessageRemoveAttribute(this, attr.Name));
-            };
-        }
-
-        #endregion
-
-        #region Property
-
-        /// <summary>
-        ///     Set Node property on client side.
-        /// </summary>
-        /// <param name="name"></param>
-        /// <param name="value"></param>
-        protected void _SetProperty(string name, string value)
-        {
-            _properties.SetProperty(name, value);
+            SetupCollections();
+            SetAttributes(defaultAttributes);
         }
 
         /// <summary>
-        ///     Get Node property from client.
+        ///     Setup default Component attributes
         /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
-        public async Task<string> GetProperty(string path)
-        {
-            var message = Factory.MessageGetProperty(this, path);
-            return await Application.Communication.SendMessageWaitResponse(message);
-        }
-
-        #endregion
-
-        #region Event Listen
+        protected virtual Dictionary<string, string> defaultAttributes { get; set; } = new();
 
         /// <summary>
-        ///     Start Listen for specified eventName.
+        ///     Stored HTML Tag name.
         /// </summary>
-        /// <param name="eventName"></param>
-        /// <param name="handler"></param>
-        protected void _On(string eventName, EventHandler handler)
+        protected virtual string TagName => "div";
+
+        /// <inheritdoc />
+        public string GetTagName()
         {
-            _events.On(eventName, handler);
+            return TagName;
         }
 
-        /// <summary>
-        ///     Stop Listen for specified eventName.
-        /// </summary>
-        /// <param name="eventName"></param>
-        /// <param name="handler"></param>
-        protected void _Off(string eventName, EventHandler handler)
+        /// <inheritdoc />
+        public INode GetOwner()
         {
-            _events.Off(eventName, handler);
+            return _owner;
         }
 
-        /// <summary>
-        ///     Handle incoming Node Event fired from client.
-        /// </summary>
-        /// <remarks>Never use this. This is called from application on incoming events</remarks>
-        /// <param name="eventName"></param>
-        /// <param name="eventArgs"></param>
-        public void OnClientEventTriggered(string eventName, MessageEventArgs eventArgs)
+        /// <inheritdoc />
+        public void SetOwner(INode owner)
         {
-            // @todo find a way to lower the visibility 
-            _events.OnClientEventTriggered(eventName, eventArgs);
+            _owner = owner;
+        }
+        /// <inheritdoc />
+        public string GetUuid()
+        {
+            if (string.IsNullOrEmpty(_uuid)) SetUuid(Guid.NewGuid().ToString());
+            return _uuid;
         }
 
-        #endregion
-
-        #region Message
-
-        /// <summary>
-        ///     Send a message to client side
-        /// </summary>
-        /// <param name="message"></param>
-        private void SendMessage(IMessage message)
+        /// <inheritdoc />
+        public ObservableDictionary<string, string> GetAttributes()
         {
-            if (!IsInitialized()) return;
-
-            Application?.Communication.SendMessage(message);
+            return _attributes;
         }
 
-        /// <summary>
-        ///     Add a method to the node, don't wait for response.
-        ///     Later can be called via CallClientMethod and CallClientMethodWaitResponse
-        /// </summary>
-        /// <param name="methodName"></param>
-        /// <param name="jsStatement"></param>
-        public void AddClientJavascriptMethod(string methodName, string jsStatement)
+        /// <inheritdoc />
+        public ObservableDictionary<string, string> GetProperties()
         {
-            SendMessage(Factory.MessageAddMethod(this, methodName, jsStatement));
+            return _properties;
         }
 
-        /// <summary>
-        ///     Call a method on client side on this node with arguments, don't wait for response.
-        /// </summary>
-        /// <param name="methodName"></param>
-        /// <param name="arguments"></param>
-        public void CallClientMethod(string methodName, params string[] arguments)
+        /// <inheritdoc />
+        public ObservableDictionary<string, List<EventHandler>> GetEventHandlers()
         {
-            SendMessage(Factory.MessageCallMethod(this, methodName, arguments));
+            return _events;
         }
 
-        /// <summary>
-        ///     Return Response after call a method on client side on this node with arguments.
-        /// </summary>
-        /// <param name="methodName"></param>
-        /// <param name="arguments"></param>
-        /// <returns></returns>
-        public async Task<string> CallClientMethodWaitResponse(string methodName, params string[] arguments)
+        /// <inheritdoc />
+        public Application GetApplication()
         {
-            var message = Factory.MessageMethodCallWaitResponse(this, methodName, arguments);
-            return await Application.Communication.SendMessageWaitResponse(message);
+            return _application;
         }
 
-        #endregion
-
-        #region Children
-
-        /// <summary>
-        ///     Return count of children node attached.
-        /// </summary>
-        /// <returns></returns>
-        public int GetChildrenCount()
+        /// <inheritdoc />
+        public ApplicationCommunication GetCommunication()
         {
-            return _children.Count();
+            return _application.Communication;
         }
 
-        /// <summary>
-        ///     Get first child node from attached children.
-        /// </summary>
-        /// <returns></returns>
-        public Node GetFirstChild()
+        /// <inheritdoc />
+        public ObservableDictionary<string, INode> GetChildren()
         {
-            return _children.GetFirst();
+            return _children;
         }
 
-        /// <summary>
-        ///     Get last child node from attached children.
-        /// </summary>
-        /// <returns></returns>
-        public Node GetLastChild()
+        /// <inheritdoc />
+        public virtual string GetText()
         {
-            return _children.GetLast();
+            return _text;
         }
 
-        /// <summary>
-        ///     Attach a node to children.
-        /// </summary>
-        /// <param name="node"></param>
-        /// <returns></returns>
-        protected Node Add(Node node)
+        /// <inheritdoc />
+        public virtual void SetText(string text)
         {
-            if (!IsInitialized()) throw new Exception("Cannot add Child, Node must be initialized first");
+            _text = text;
 
-            return _children.Add(node);
+            MessageElement.Factory.MessageSetText(
+                this,
+                text
+            ).SendMessageAsync(GetCommunication());
         }
 
-        /// <summary>
-        ///     Remove children from node children.
-        /// </summary>
-        /// <param name="node"></param>
-        public void Remove(Node node)
-        {
-            _children.Remove(node);
-        }
-
-        /// <summary>
-        ///     Attach a node to children.
-        /// </summary>
-        /// <returns></returns>
-        public TNode Add<TNode>(params KeyValuePair<string, string>[] attributes)
-            where TNode : ComponentElement<TNode>
-            , new()
-        {
-            var cmp = new TNode();
-            cmp.SetAttributes(attributes);
-            Add(cmp);
-
-            return cmp;
-        }
-
-        /// <summary>
-        ///     Attach a node to children.
-        /// </summary>
-        /// <returns></returns>
-        public TNode Add<TNode>(string name, params KeyValuePair<string, string>[] attributes)
-            where TNode : ComponentControl<TNode>, IComponentControl
-            , new()
-        {
-            var cmp = new TNode();
-            cmp.SetControlName(name);
-            cmp.SetAttributes(attributes);
-
-            Add(cmp);
-
-            return cmp;
-        }
-
-        #endregion
-
-        #region Attributes
-
-        /// <summary>
-        ///     Set Attribute of the node.
-        /// </summary>
-        /// <param name="name"></param>
-        /// <param name="value"></param>
-        /// <returns></returns>
-        protected Node _SetAttribute(string name, string value)
-        {
-            _attributes.SetAttribute(name, value);
-
-            return this;
-        }
-
-        /// <summary>
-        ///     Return if Attribute already exists.
-        /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
-        public bool HasAttribute(string name)
-        {
-            return _attributes.HasAttribute(name);
-        }
-
-        /// <summary>
-        ///     Remove an Attribute.
-        /// </summary>
-        /// <param name="name"></param>
-        protected void _RemoveAttribute(string name)
-        {
-            _attributes.RemoveAttribute(name);
-        }
-
-        /// <summary>
-        ///     Return Attributes as Dictionary.
-        /// </summary>
-        /// <returns></returns>
-        public Dictionary<string, string> GetAttributeDictionary()
-        {
-            return _attributes.ToDictionary();
-        }
-
-        #endregion
-
-        #region initialization
-
-        private bool _initialized;
-
-        /// <summary>
-        ///     Starting point of every component.
-        ///     Will be called after attach to Parent.
-        ///     This is the method you are looking for if you want to make a component
-        /// </summary>
-        /// <exception>Cannot be called multiple times</exception>
+        /// <inheritdoc />
         public virtual void Init()
         {
-            if (IsInitialized()) throw new Exception("Already initialized");
+            ValidateNode();
 
+            _application ??= GetOwner().GetApplication();
             _initialized = true;
         }
 
+        /// <inheritdoc />
+        public void SetAttribute(string name, string value)
+        {
+            value = (value ?? "").Trim();
+
+            switch (name)
+            {
+                case "class":
+                    value = string.Join(" ", getCSSClassArrayFromString(value).Distinct()).Trim();
+                    break;
+            }
+
+            GetAttributes()[name] = value;
+        }
+
+        /// <inheritdoc />
+        public string GetAttribute(string name)
+        {
+            GetAttributes().TryGetValue(name, out var value);
+
+            return value;
+        }
+
+        /// <inheritdoc />
+        public void RemoveAttribute(string name)
+        {
+            GetAttributes().Remove(name);
+        }
+
         /// <summary>
-        ///     Return if the DomNode is initialized.
+        ///     Short hand to set multiple attributes
+        /// </summary>
+        /// <param name="attributes"></param>
+        public void SetAttributes(Dictionary<string, string> attributes = null)
+        {
+            attributes ??= new Dictionary<string, string>();
+
+            foreach (var (key, value) in attributes) SetAttribute(key, value);
+        }
+
+        /// <inheritdoc />
+        public bool HasAttribute(string name)
+        {
+            return GetAttributes().ContainsKey(name);
+        }
+
+        /// <inheritdoc />
+        public void SetProperty(string name, string value)
+        {
+            GetProperties().TryAdd(name, value);
+        }
+
+        /// <inheritdoc />
+        public string GetProperty(string path)
+        {
+            GetProperties().TryGetValue(path, out var result);
+
+            return result;
+        }
+
+        /// <inheritdoc />
+        public async Task<string> GetPropertyAsync(string path)
+        {
+            var result = await MessageElementWithResponse.Factory
+                .MessageGetProperty(this, path)
+                .SendMessageAsync(GetCommunication());
+
+            GetProperties().TryAdd(path, result);
+
+            return result;
+        }
+
+        /// <inheritdoc />
+        public TNodeComponent Add<TNodeComponent>(Dictionary<string, string> attributes = null) where TNodeComponent : INodeComponent, new()
+        {
+            TNodeComponent el = new();
+
+            Add(el, attributes);
+
+            el.Init();
+
+            return el;
+        }
+
+        /// <inheritdoc />
+        public TNodeControl Add<TNodeControl>(string controlName, Dictionary<string, string> attributes = null) where TNodeControl : INodeControl, new()
+        {
+            TNodeControl el = new();
+
+            el.SetControlName(controlName);
+
+            Add(el, attributes);
+
+            el.Init();
+
+            return el;
+        }
+
+        /// <inheritdoc />
+        public void Remove(INode child)
+        {
+            GetChildren().Remove(child.GetUuid());
+        }
+
+        /// <inheritdoc />
+        public void On(string eventName, EventHandler handler)
+        {
+            GetEventHandlers().TryGetValue(eventName, out var handlers);
+
+            if (handlers == null)
+            {
+                handlers = new List<EventHandler>();
+                GetEventHandlers().Add(eventName, handlers);
+            }
+            
+            
+            handlers.Add(handler);
+
+            GetEventHandlers()[eventName] = handlers;
+        }
+
+        /// <inheritdoc />
+        public void Off(string eventName, EventHandler handler)
+        {
+            GetEventHandlers().TryGetValue(eventName, out var handlers);
+
+            if (handlers == null) return;
+
+            handlers.Remove(handler);
+
+            if (handlers.Count == 0) Off(eventName);
+        }
+
+        /// <inheritdoc />
+        public void Off(string eventName)
+        {
+            GetEventHandlers().Remove(eventName);
+        }
+
+        /// <inheritdoc />
+        public void OnClientEventTriggered(string eventName, EventArgs eventArgs)
+        {
+            GetEventHandlers().TryGetValue(eventName, out var handlers);
+
+            handlers?.ForEach(del => del.Invoke(this, eventArgs));
+        }
+
+        /// <inheritdoc />
+        public void AddJavascriptMethod(string methodName, string jsStatement)
+        {
+            MessageElement.Factory.MessageAddMethod(
+                this,
+                methodName,
+                jsStatement
+            ).SendMessageAsync(GetCommunication());
+        }
+
+        /// <inheritdoc />
+        public void CallClientMethod(string methodName, params string[] arguments)
+        {
+            MessageElement.Factory.MessageCallMethod(
+                this,
+                methodName,
+                arguments
+            ).SendMessageAsync(GetCommunication());
+        }
+
+        /// <inheritdoc />
+        public async Task<string> CallClientMethodAsync(string methodName, params string[] arguments)
+        {
+            return await MessageElementWithResponse.Factory
+                .MessageMethodCallWaitResponse(
+                    this,
+                    methodName,
+                    arguments
+                ).SendMessageAsync(GetCommunication());
+        }
+
+        /// <inheritdoc />
+        public T GetFirstOwnerOfType<T>() where T : INode
+        {
+            var owner = GetOwner();
+
+            while (true)
+            {
+                if (owner == null || owner.GetType() == typeof(NodeComponentRoot)) return default;
+
+                if (owner.GetType() == typeof(T)) break;
+
+                owner = owner.GetOwner();
+            }
+
+            return (T)owner;
+        }
+
+        /// <inheritdoc />
+        public List<T> GetChildrenOfType<T>() where T : INode
+        {
+            List<T> children = new();
+            foreach (var (key, value) in GetChildren()) children.Add((T)value);
+
+            return children;
+        }
+
+        /// <inheritdoc />
+        public void AddCSSClass(string className)
+        {
+            var css = getCSSClassArrayFromString(GetAttribute("class") ?? "");
+            var cssAdd = getCSSClassArrayFromString(className.Trim());
+            foreach (var c in cssAdd) css.Add(c.Trim());
+            SetAttribute("class", string.Join(" ", css).Trim());
+        }
+
+        /// <inheritdoc />
+        public void RemoveCSSClass(string className)
+        {
+            var css = getCSSClassArrayFromString(GetAttribute("class") ?? "");
+            var cssRemove = getCSSClassArrayFromString(className.Trim());
+
+            foreach (var cr in cssRemove) css.Remove(cr.Trim());
+
+            SetAttribute("class", string.Join(" ", css).Trim());
+        }
+
+        /// <inheritdoc />
+        public void SetUuid(string uuid)
+        {
+            if (!string.IsNullOrEmpty(_uuid)) throw new Exception($"Element Uuid is not empty (actual : '{_uuid}'))");
+
+            _uuid = uuid;
+
+            SetAttribute("id", uuid);
+        }
+
+        /// <inheritdoc />
+        protected void SetApplication(Application app)
+        {
+            if (_application != null) throw new Exception("Application already set");
+
+            _application = app;
+        }
+
+        private void SetupCollections()
+        {
+            GetAttributes().CollectionChanged += (sender, args) =>
+            {
+                if (!IsInitialized()) return;
+
+                switch (args.Action)
+                {
+                    case NotifyCollectionChangedAction.Add:
+                    case NotifyCollectionChangedAction.Replace:
+                        foreach (KeyValuePair<string, string> kvp in args.NewItems)
+                            MessageElement.Factory.MessageSetAttribute(
+                                this,
+                                kvp.Key,
+                                kvp.Value
+                            ).SendMessageAsync(GetCommunication());
+                        break;
+
+                    case NotifyCollectionChangedAction.Remove:
+                        foreach (KeyValuePair<string, string> kvp in args.NewItems)
+                            MessageElement.Factory.MessageRemoveAttribute(
+                                this,
+                                kvp.Key
+                            ).SendMessageAsync(GetCommunication());
+                        break;
+                }
+            };
+
+            GetChildren().CollectionChanged += (sender, args) =>
+            {
+                if (!IsInitialized()) return;
+
+                switch (args.Action)
+                {
+                    case NotifyCollectionChangedAction.Add:
+                        foreach (KeyValuePair<string, INode> kvp in args.NewItems)
+                        {
+                            GetApplication().RegisterComponent(kvp.Value);
+                            MessageElement.Factory.MessageCreate(
+                                kvp.Value
+                            ).SendMessageAsync(GetCommunication());
+                        }
+                        break;
+                    case NotifyCollectionChangedAction.Remove:
+                        foreach (KeyValuePair<string, INode> kvp in args.OldItems)
+                        {
+                            
+                            GetApplication().UnregisterComponent(kvp.Value);
+                            MessageElement.Factory.MessageRemove(
+                                kvp.Value
+                            ).SendMessageAsync(GetCommunication());
+                        }
+                        break;
+                }
+            };
+
+            GetProperties().CollectionChanged += (sender, args) =>
+            {
+                if (!IsInitialized()) return;
+
+                switch (args.Action)
+                {
+                    case NotifyCollectionChangedAction.Add:
+                    case NotifyCollectionChangedAction.Replace:
+                        foreach (KeyValuePair<string, string> kvp in args.NewItems)
+                            MessageElement.Factory.MessageSetProperty(
+                                this,
+                                kvp.Key,
+                                kvp.Value
+                            ).SendMessageAsync(GetCommunication());
+                        break;
+                }
+            };
+
+            GetEventHandlers().CollectionChanged += (sender, args) =>
+            {
+                if (!IsInitialized()) return;
+
+                switch (args.Action)
+                {
+                    case NotifyCollectionChangedAction.Add:
+                        foreach (KeyValuePair<string, List<EventHandler>> kvp in args.NewItems)
+                            MessageElement.Factory.MessageStartListenEvent(
+                                this,
+                                kvp.Key
+                            ).SendMessageAsync(GetCommunication());
+                        break;
+                    case NotifyCollectionChangedAction.Remove:
+                        foreach (KeyValuePair<string, List<EventHandler>> kvp in args.OldItems)
+                            MessageElement.Factory.MessageStopListenEvent(
+                                this,
+                                kvp.Key
+                            ).SendMessageAsync(GetCommunication());
+                        break;
+                }
+            };
+        }
+
+        /// <summary>
+        ///     Return if the INode is initialized.
         /// </summary>
         /// <returns></returns>
-        protected bool IsInitialized()
+        private bool IsInitialized()
         {
             return _initialized;
         }
 
-        #endregion
-
-        #region Text
-
-        private string _text = string.Empty;
-        /// <summary>
-        ///     Content Text of the element
-        /// </summary>
-        public string Text
+        /// <inheritdoc />
+        protected virtual void ValidateNode()
         {
-            get => _text;
-            set
-            {
-                _text = value;
-                SendMessage(Factory.MessageSetText(this, _text));
-            }
+            if (IsInitialized()) throw new Exception("Cannot initialized twice");
+
+            if (GetOwner() == null) throw new Exception("Missing Owner");
+
+            if (GetOwner().GetApplication() == null) throw new Exception("Missing Application");
         }
 
-        /// <summary>
-        ///     Fluent Set Text
-        /// </summary>
-        /// <param name="text"></param>
-        /// <returns></returns>
-        protected Node _SetText(string text)
+        /// <inheritdoc cref="Application.GetLogger" />
+        public ILogger<Application> GetLogger()
         {
-            Text = text;
-
-            return this;
+            return GetApplication().GetLogger();
         }
 
-        #endregion
-
-        #region Value
-
-        private string _value = string.Empty;
-        /// <summary>
-        ///     Value
-        /// </summary>
-        public string Value
+        private void Add(INode node, Dictionary<string, string> attributes = null)
         {
-            get => _value;
-            set
-            {
-                _value = value;
-                _SetProperty("value", value);
-            }
+            if (!IsInitialized()) throw new Exception("Node must be a Owner, you need to add it to the tree");
+
+            node.SetOwner(this);
+            node.SetAttributes(attributes);
+
+            GetChildren().Add(node.GetUuid(), node);
         }
 
-        #endregion
-
+        private static List<string> getCSSClassArrayFromString(string css = "")
+        {
+            return css.Split(" ").Distinct().ToList();
+        }
     }
 }

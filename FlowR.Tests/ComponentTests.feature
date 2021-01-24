@@ -6,6 +6,12 @@ Feature: Component tests
     And I SetAttribute class with btn
     Then Check attribute class has value btn
 
+    Given I SetAttribute class with btn success
+    Then Check attribute class has value btn success
+
+    Given I SetAttribute class with btn btn success success
+    Then Check attribute class has value btn success
+
     Given I add class success
     Then Check attribute class has value btn success
 

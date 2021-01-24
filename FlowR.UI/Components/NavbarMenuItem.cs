@@ -1,22 +1,22 @@
 using System;
 using System.Collections.Generic;
 using FlowR.Core;
-using FlowR.Core.Components;
+using FlowR.Core.Tags;
 
 namespace FlowR.UI.Components
 {
     /// <summary>
     ///     Tag div
     /// </summary>
-    public class NavbarMenuItem : ComponentElement<NavbarMenuItem>
+    public class NavbarMenuItem : NodeComponent
     {
         /// <summary>
         ///     The link of the item.
         /// </summary>
-        protected A Link;
-        
+        private A _link;
+
         /// <inheritdoc cref="Node.TagName" />
-        public override string TagName { get; protected set; } = "li";
+        protected override string TagName => "li";
 
         /// <inheritdoc />
         protected override Dictionary<string, string> defaultAttributes { get; set; } = new()
@@ -28,15 +28,20 @@ namespace FlowR.UI.Components
         public override void Init()
         {
             base.Init();
-            Link = Add<A>().AddCSSClass("nav-link");
+            _link = Add<A>();
+            _link.AddCSSClass("nav-link");
         }
 
         /// <inheritdoc />
-        public override NavbarMenuItem SetText(string text)
+        public override void SetText(string text)
         {
-            Link.SetText(text);
+            _link?.SetText(text);
+        }
 
-            return this;
+        /// <inheritdoc />
+        public override string GetText()
+        {
+            return _link?.GetText();
         }
 
         /// <summary>
@@ -44,9 +49,9 @@ namespace FlowR.UI.Components
         /// </summary>
         /// <param name="callback"></param>
         /// <returns></returns>
-        public NavbarMenuItem onClick(EventHandler callback)
+        public NavbarMenuItem OnClick(EventHandler callback)
         {
-            Link.On("click", callback);
+            _link.On("click", callback);
 
             return this;
         }
