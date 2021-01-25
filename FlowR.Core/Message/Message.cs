@@ -15,7 +15,8 @@ namespace FlowR.Core.Message
         /// <summary>
         ///     Message Uuid
         /// </summary>
-        [JsonInclude] public string Uuid;
+        [JsonInclude]
+        public string Uuid;
 
         /// <summary>
         ///     Constructor
