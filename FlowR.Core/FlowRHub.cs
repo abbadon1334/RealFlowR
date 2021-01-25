@@ -19,6 +19,7 @@ namespace FlowR.Core
         ///     Constructor.
         /// </summary>
         /// <param name="applicationFlowRService"></param>
+        /// <param name="logger"></param>
         public FlowRHub(FlowRService<T> applicationFlowRService, ILogger<Application> logger)
         {
             _applicationFlowRService = applicationFlowRService;

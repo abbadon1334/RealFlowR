@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace FlowR.Core.Tags.Controls
 {
     /// <summary>
@@ -5,11 +7,12 @@ namespace FlowR.Core.Tags.Controls
     /// </summary>
     public class Input : NodeControl
     {
-
-        public Input()
+        /// <inheritdoc />
+        protected override Dictionary<string, string> DefaultAttributes => new Dictionary<string, string>()
         {
-            SetAttribute("type", ControlType);
-        }
+            {"type", ControlType}
+        };
+
         /// <inheritdoc />
         protected override string TagName => "input";
 

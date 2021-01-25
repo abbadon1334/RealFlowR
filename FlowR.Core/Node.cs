@@ -511,7 +511,11 @@ namespace FlowR.Core
             return _initialized;
         }
 
-        /// <inheritdoc />
+        
+        /// <summary>
+        ///     Validate Node before call init
+        /// </summary>
+        /// <exception cref="Exception"></exception>
         protected virtual void ValidateNode()
         {
             if (IsInitialized()) throw new Exception("Cannot initialized twice");

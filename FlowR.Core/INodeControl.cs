@@ -21,6 +21,12 @@ namespace FlowR.Core
         public void SetControlName(string name);
 
         /// <summary>
+        ///     Get control type like input attribute type
+        /// </summary>
+        /// <returns></returns>
+        public string GetControlType();
+
+        /// <summary>
         ///     Return the binded form
         /// </summary>
         public Form GetBindedForm();

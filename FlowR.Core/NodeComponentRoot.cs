@@ -18,6 +18,7 @@ namespace FlowR.Core
         /// <inheritdoc />
         protected override string TagName => "root";
 
+        /// <inheritdoc />
         protected override void ValidateNode()
         {
         }

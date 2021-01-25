@@ -28,6 +28,7 @@ namespace FlowR.Core
         /// </summary>
         /// <param name="connectionId"></param>
         /// <param name="client"></param>
+        /// <param name="logger"></param>
         public void Add(string connectionId, IClientProxy client, ILogger<Application> logger)
         {
             var application = (T)Activator.CreateInstance(typeof(T), connectionId, client, logger);

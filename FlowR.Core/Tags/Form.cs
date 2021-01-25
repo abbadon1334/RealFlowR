@@ -13,6 +13,7 @@ namespace FlowR.Core.Tags
 
         private readonly Dictionary<string, INodeControl> _controls = new();
 
+        /// <inheritdoc />
         protected override string TagName => "form";
 
         /// <summary>
