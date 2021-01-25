@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+
 namespace FlowR.Core.Message
 {
     /// <summary>
@@ -17,5 +19,11 @@ namespace FlowR.Core.Message
         /// </summary>
         /// <returns></returns>
         public string GetResponse();
+
+        /// <summary>
+        ///     Send a message to SignalR Client, wait for response
+        /// </summary>
+        /// <param name="comm"></param>
+        public new Task<string> SendMessageAsync(ApplicationCommunication comm);
     }
 }

@@ -41,6 +41,9 @@ class FlowR {
         this.connection.on("CallGlobalMethod", this.CallGlobalMethod.bind(this));
         this.connection.on("CallGlobalMethodGetResponse", this.CallGlobalMethodGetResponse.bind(this));
 
+        this.connection.on("AddScriptWaitLoad", this.AddScriptWaitLoad.bind(this));
+        this.connection.on("AddStylesheetWaitLoad", this.AddStylesheetWaitLoad.bind(this));
+
         this.connection.on("AddMethod", this.AddMethod.bind(this));
     }
 
@@ -175,6 +178,39 @@ class FlowR {
     public CallGlobalMethodGetResponse(message_uuid: string, path: string, ...args) {
         try {
             this.Invoke( message_uuid, FlowR.ObjectPathBuilder(window, path).Call(args));
+        } catch (e) {
+            console.log(e);
+        }
+    }
+    /*
+    this.connection.on("AddScriptWaitLoad", this.AddScriptWaitLoad.bind(this));
+    this.connection.on("AddStylesheetWaitLoad", this.AddStylesheetWaitLoad.bind(this));
+    */
+
+    public AddScriptWaitLoad(message_uuid: string, url: string) {
+        try {
+            
+            let s = document.createElement( 'script' );
+            s.setAttribute( 'src', url );
+            document.head.appendChild( s );
+            
+            this.Invoke( message_uuid, "done");
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    public AddStylesheetWaitLoad(message_uuid: string, url: string) {
+        
+        try {
+
+            let s = document.createElement( 'link' );
+            s.setAttribute( 'rel', 'stylesheet' );
+            s.setAttribute( 'type', 'text/css' );
+            s.setAttribute( 'href', url );
+            document.head.appendChild( s );
+            
+            this.Invoke( message_uuid, "done");
         } catch (e) {
             console.log(e);
         }

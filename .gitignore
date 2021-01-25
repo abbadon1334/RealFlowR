@@ -339,6 +339,9 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 
-FlowR/wwwroot/js/FlowR.js
-FlowR/wwwroot/js/FlowR.js.map
+FlowR.Sample/wwwroot/js/FlowR.js
+FlowR.Sample/wwwroot/js/FlowR.js.map
 .idea
+
+#remove possible error prone syntax of generated SpecFlow features
+/FlowR.Tests/*.feature.cs

@@ -1,6 +1,6 @@
-using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 
 namespace FlowR.Core.Message
 {
@@ -12,7 +12,8 @@ namespace FlowR.Core.Message
         /// <summary>
         ///     When completed store response here
         /// </summary>
-        [JsonInclude] public string Response;
+        [JsonInclude]
+        public string Response;
 
         /// <inheritdoc />
         public MessageResponse()
@@ -31,10 +32,16 @@ namespace FlowR.Core.Message
         {
             return Response;
         }
+
         /// <inheritdoc />
         public override string GetRequestedAction()
         {
-            throw new NotImplementedException();
+            throw new System.NotImplementedException();
+        }
+        /// <inheritdoc />
+        public override Task<string> SendMessageAsync(ApplicationCommunication comm)
+        {
+            return comm.SendMessageWaitResponse(this);
         }
 
         /// <summary>

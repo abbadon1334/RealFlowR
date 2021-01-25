@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.Concurrent;
 using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.Logging;
 
 namespace FlowR.Core
 {
@@ -10,38 +11,41 @@ namespace FlowR.Core
     /// <typeparam name="T"></typeparam>
     public class FlowRService<T> where T : Application
     {
-        private readonly Dictionary<string, T> _applications = new();
+        private readonly ConcurrentDictionary<string, T> _applications = new();
 
         /// <summary>
         ///     Get application from application registry
         /// </summary>
-        /// <param name="uid"></param>
+        /// <param name="connectionId"></param>
         /// <returns></returns>
-        public T Get(string uid)
+        public T Get(string connectionId)
         {
-            return _applications[uid];
+            return _applications[connectionId];
         }
 
         /// <summary>
         ///     Add Application to Registry
         /// </summary>
-        /// <param name="uid"></param>
+        /// <param name="connectionId"></param>
         /// <param name="client"></param>
-        public void Add(string uid, IClientProxy client)
+        /// <param name="logger"></param>
+        public void Add(string connectionId, IClientProxy client, ILogger<Application> logger)
         {
-            var application = (T)Activator.CreateInstance(typeof(T), uid, client);
+            var application = (T)Activator.CreateInstance(typeof(T), connectionId, client, logger);
 
-            _applications.Add(uid, application);
+            logger.LogDebug($"new App : {connectionId}");
+
+            _applications.TryAdd(connectionId, application);
         }
 
         /// <summary>
         ///     Remove Application from registry
         /// </summary>
-        /// <param name="uid"></param>
+        /// <param name="connectionId"></param>
         /// <returns></returns>
-        public bool Remove(string uid)
+        public bool Remove(string connectionId)
         {
-            return _applications.Remove(uid);
+            return _applications.TryRemove(connectionId, out var app);
         }
     }
 }

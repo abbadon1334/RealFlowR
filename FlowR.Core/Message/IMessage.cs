@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+
 namespace FlowR.Core.Message
 {
     /// <summary>
@@ -9,18 +11,24 @@ namespace FlowR.Core.Message
         ///     Get the Uuid of the message.
         /// </summary>
         /// <returns></returns>
-        string GetUuid();
+        public string GetUuid();
 
         /// <summary>
         ///     Get Action as string
         /// </summary>
         /// <returns></returns>
-        string GetRequestedAction();
+        public string GetRequestedAction();
 
         /// <summary>
         ///     Get Arguments as array
         /// </summary>
         /// <returns></returns>
-        object[] GetArgumentValues();
+        public object[] GetArgumentValues();
+
+        /// <summary>
+        ///     Send a message to SignalR Client, don't wait for response
+        /// </summary>
+        /// <param name="comm"></param>
+        public Task SendMessageAsync(ApplicationCommunication comm);
     }
 }

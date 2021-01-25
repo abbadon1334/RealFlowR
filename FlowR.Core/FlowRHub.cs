@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using FlowR.Core.Message;
 using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.Logging;
 
 namespace FlowR.Core
 {
@@ -12,20 +13,23 @@ namespace FlowR.Core
     public class FlowRHub<T> : Hub where T : Application
     {
         private readonly FlowRService<T> _applicationFlowRService;
+        private readonly ILogger<Application> _logger;
 
         /// <summary>
         ///     Constructor.
         /// </summary>
         /// <param name="applicationFlowRService"></param>
-        public FlowRHub(FlowRService<T> applicationFlowRService)
+        /// <param name="logger"></param>
+        public FlowRHub(FlowRService<T> applicationFlowRService, ILogger<Application> logger)
         {
             _applicationFlowRService = applicationFlowRService;
+            _logger = logger;
         }
 
         /// <summary>
         ///     Called from client whenever an event fires on a Node which are listen for that specific event.
         /// </summary>
-        /// <see cref="Component{T}.On(string, EventHandler)" />
+        /// <see cref="INode.On(string, EventHandler)" />
         /// <param name="message"></param>
         public void ClientEventTriggered(string message)
         {
@@ -37,8 +41,7 @@ namespace FlowR.Core
         /// <summary>
         ///     Called from client when a previous message request a response
         /// </summary>
-        /// <see cref="Node.CallClientMethodWaitResponse(string, string[])" />
-        /// <see cref="ApplicationCommunication.CallGlobalMethodWaitResponse(string, string[])" />
+        /// <see cref="ApplicationCommunication.SendMessageWaitResponse" />
         /// <param name="message"></param>
         public void ClientMessageResponse(string message)
         {
@@ -51,7 +54,7 @@ namespace FlowR.Core
         public override async Task OnConnectedAsync()
         {
             await base.OnConnectedAsync();
-            _applicationFlowRService.Add(Context.ConnectionId, Clients.Caller);
+            _applicationFlowRService.Add(Context.ConnectionId, Clients.Caller, _logger);
         }
 
         /// <inheritdoc />
