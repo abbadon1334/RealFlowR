@@ -20,7 +20,8 @@ namespace FlowR.Core.Message
         /// <summary>
         ///     Name of the Event
         /// </summary>
-        [JsonInclude] public string EventName { get; set; }
+        [JsonInclude]
+        public string EventName { get; set; }
 
         /// <summary>
         ///     Convert JSON to MessageEvent

@@ -5,6 +5,5 @@ namespace FlowR.Tests.Mock
 {
     public class BootstrapFluentMock : BootstrapComponent<Div>
     {
-        
     }
 }

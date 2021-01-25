@@ -1,31 +1,31 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <UserSecretsId>b447fa5f-b77c-4d9d-ae0c-97a3c94c3a9b</UserSecretsId>
-    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <RootNamespace>FlowR</RootNamespace>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <UserSecretsId>b447fa5f-b77c-4d9d-ae0c-97a3c94c3a9b</UserSecretsId>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <RootNamespace>FlowR</RootNamespace>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.1.2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.1.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
 
-  <ItemGroup>
-    <TypeScriptCompile Include="Typescript\FlowR.ts" />
-  </ItemGroup>
+    <ItemGroup>
+        <TypeScriptCompile Include="Typescript\FlowR.ts" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\FlowR.Core\FlowR.Core.csproj" />
-    <ProjectReference Include="..\FlowR.UI\FlowR.UI.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\FlowR.Core\FlowR.Core.csproj" />
+        <ProjectReference Include="..\FlowR.UI\FlowR.UI.csproj" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <Content Remove="wwwroot\js\FlowR.js" />
-    <Content Remove="wwwroot\js\FlowR.js.map" />
-  </ItemGroup>
+    <ItemGroup>
+        <Content Remove="wwwroot\js\FlowR.js" />
+        <Content Remove="wwwroot\js\FlowR.js.map" />
+    </ItemGroup>
 
 </Project>

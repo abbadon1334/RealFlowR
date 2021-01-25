@@ -36,7 +36,7 @@ namespace FlowR.UI.Components
         public override INode SetText(string text)
         {
             _link?.SetText(text);
-            
+
             return this;
         }
 

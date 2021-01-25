@@ -19,7 +19,7 @@ namespace FlowR.UI
             /// </summary>
             Center,
             /// <summary>
-            ///     End 
+            ///     End
             /// </summary>
             End,
             /// <summary>
@@ -27,11 +27,11 @@ namespace FlowR.UI
             /// </summary>
             Around,
             /// <summary>
-            ///     Between 
+            ///     Between
             /// </summary>
             Between,
             /// <summary>
-            ///     Evenly 
+            ///     Evenly
             /// </summary>
             Evenly
         }
@@ -50,9 +50,9 @@ namespace FlowR.UI
             /// </summary>
             Center,
             /// <summary>
-            ///     End 
+            ///     End
             /// </summary>
-            End,
+            End
         }
 
         /// <summary>
@@ -69,9 +69,9 @@ namespace FlowR.UI
             /// </summary>
             Center,
             /// <summary>
-            ///     End 
+            ///     End
             /// </summary>
-            End,
+            End
         }
     }
 }

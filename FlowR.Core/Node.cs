@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
-using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 using FlowR.Core.Message;
 using Microsoft.Extensions.Logging;
@@ -168,7 +167,7 @@ namespace FlowR.Core
         public virtual INode RemoveAttribute(string name)
         {
             GetAttributes().Remove(name);
-            
+
             return this;
         }
 
@@ -195,7 +194,7 @@ namespace FlowR.Core
         public virtual INode SetProperty(string name, string value)
         {
             GetProperties().TryAdd(name, value);
-            
+
             return this;
         }
 
@@ -261,8 +260,8 @@ namespace FlowR.Core
                 handlers = new List<EventHandler>();
                 GetEventHandlers().Add(eventName, handlers);
             }
-            
-            
+
+
             handlers.Add(handler);
 
             GetEventHandlers()[eventName] = handlers;
@@ -278,7 +277,7 @@ namespace FlowR.Core
             if (handlers != null)
             {
                 handlers.Remove(handler);
-                
+
                 if (handlers.Count == 0) Off(eventName);
             }
 
@@ -369,7 +368,7 @@ namespace FlowR.Core
             var cssAdd = GetCssClassesFromStringAsList(className.Trim());
             foreach (var c in cssAdd) css.Add(c.Trim());
             SetAttribute("class", string.Join(" ", css).Trim());
-            
+
             return this;
         }
 
@@ -450,7 +449,6 @@ namespace FlowR.Core
                     case NotifyCollectionChangedAction.Remove:
                         foreach (KeyValuePair<string, INode> kvp in args.OldItems)
                         {
-                            
                             GetApplication().UnregisterComponent(kvp.Value);
                             MessageElement.Factory.MessageRemove(
                                 kvp.Value
@@ -511,7 +509,7 @@ namespace FlowR.Core
             return _initialized;
         }
 
-        
+
         /// <summary>
         ///     Validate Node before call init
         /// </summary>

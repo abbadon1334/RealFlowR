@@ -6,27 +6,27 @@ namespace FlowR.UI
     public enum ResponsiveViewports
     {
         /// <summary>
-        /// SM
+        ///     SM
         /// </summary>
         SM,
         /// <summary>
-        /// MD
+        ///     MD
         /// </summary>
         MD,
         /// <summary>
-        /// LG
+        ///     LG
         /// </summary>
         LG,
         /// <summary>
-        /// XL
+        ///     XL
         /// </summary>
         XL,
         /// <summary>
-        /// XXL
+        ///     XXL
         /// </summary>
         XXL,
         /// <summary>
-        /// FLUID
+        ///     FLUID
         /// </summary>
         FLUID
     }

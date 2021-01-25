@@ -12,7 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\FlowR.Core\FlowR.Core.csproj" />
+        <ProjectReference Include="..\FlowR.Core\FlowR.Core.csproj" />
     </ItemGroup>
 
 </Project>

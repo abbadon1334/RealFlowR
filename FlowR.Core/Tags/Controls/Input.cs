@@ -8,9 +8,9 @@ namespace FlowR.Core.Tags.Controls
     public class Input : NodeControl
     {
         /// <inheritdoc />
-        protected override Dictionary<string, string> DefaultAttributes => new Dictionary<string, string>()
+        protected override Dictionary<string, string> DefaultAttributes => new()
         {
-            {"type", ControlType}
+            { "type", ControlType }
         };
 
         /// <inheritdoc />
