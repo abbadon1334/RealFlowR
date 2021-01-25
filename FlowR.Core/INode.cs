@@ -79,7 +79,7 @@ namespace FlowR.Core
         ///     Set Node Text.
         /// </summary>
         /// <param name="text"></param>
-        public void SetText(string text);
+        public INode SetText(string text);
 
         /// <summary>
         ///     Starting point of every component.
@@ -94,13 +94,13 @@ namespace FlowR.Core
         /// </summary>
         /// <param name="name"></param>
         /// <param name="value"></param>
-        public void SetAttribute(string name, string value);
+        public INode SetAttribute(string name, string value);
 
         /// <summary>
         ///     Set multiple attributes.
         /// </summary>
         /// <param name="attributes"></param>
-        public void SetAttribute(Dictionary<string, string> attributes = null);
+        public INode SetAttribute(Dictionary<string, string> attributes = null);
 
         /// <summary>
         ///     Get Attribute of Inode by name.
@@ -114,7 +114,7 @@ namespace FlowR.Core
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public void RemoveAttribute(string name);
+        public INode RemoveAttribute(string name);
 
         /// <summary>
         ///     Return if Has Attribute with name.
@@ -128,7 +128,7 @@ namespace FlowR.Core
         /// </summary>
         /// <param name="name"></param>
         /// <param name="value"></param>
-        public void SetProperty(string name, string value);
+        public INode SetProperty(string name, string value);
 
         /// <summary>
         ///     Get Node property from memory.
@@ -173,20 +173,20 @@ namespace FlowR.Core
         /// </summary>
         /// <param name="eventName"></param>
         /// <param name="handler"></param>
-        public void On(string eventName, EventHandler handler);
+        public INode On(string eventName, EventHandler handler);
 
         /// <summary>
         ///     Stop Listen for specified eventName and handler.
         /// </summary>
         /// <param name="eventName"></param>
         /// <param name="handler"></param>
-        public void Off(string eventName, EventHandler handler);
+        public INode Off(string eventName, EventHandler handler);
 
         /// <summary>
         ///     Stop Listen for specified eventName.
         /// </summary>
         /// <param name="eventName"></param>
-        public void Off(string eventName);
+        public INode Off(string eventName);
 
         /// <summary>
         ///     Handle incoming Node Event fired from client.
@@ -203,14 +203,14 @@ namespace FlowR.Core
         /// </summary>
         /// <param name="methodName"></param>
         /// <param name="jsStatement"></param>
-        public void AddJavascriptMethod(string methodName, string jsStatement);
+        public INode AddJavascriptMethod(string methodName, string jsStatement);
 
         /// <summary>
         ///     Call a method on client side on this node with arguments, don't wait for response.
         /// </summary>
         /// <param name="methodName"></param>
         /// <param name="arguments"></param>
-        public void CallClientMethod(string methodName, params string[] arguments);
+        public INode CallClientMethod(string methodName, params string[] arguments);
 
         /// <summary>
         ///     Return Response after call a method on client side on this node with arguments.
@@ -240,13 +240,13 @@ namespace FlowR.Core
         /// </summary>
         /// <param name="className"></param>
         /// <returns></returns>
-        public void AddCSSClass(string className);
+        public INode AddCssClass(string className);
 
         /// <summary>
         ///     Remove a classname from class attribute
         /// </summary>
         /// <param name="className"></param>
         /// <returns></returns>
-        public void RemoveCSSClass(string className);
+        public INode RemoveCssClass(string className);
     }
 }

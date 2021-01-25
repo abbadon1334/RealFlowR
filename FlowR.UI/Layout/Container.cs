@@ -20,9 +20,9 @@ namespace FlowR.UI.Layout
         /// </summary>
         /// <param name="breakpoint"></param>
         /// <returns></returns>
-        public Container setResponsive(ResponsiveViewports breakpoint)
+        public Container SetResponsive(ResponsiveViewports breakpoint)
         {
-            AddCSSClass("container-" + breakpoint.ToString().ToLower());
+            AddCssClass("container-" + breakpoint.ToString().ToLower());
             return this;
         }
 
@@ -30,7 +30,7 @@ namespace FlowR.UI.Layout
         ///     Add Row to container
         /// </summary>
         /// <returns></returns>
-        public ContainerRow addRow()
+        public ContainerRow AddRow()
         {
             return Add<ContainerRow>();
         }

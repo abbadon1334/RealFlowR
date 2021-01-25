@@ -29,13 +29,15 @@ namespace FlowR.UI.Components
         {
             base.Init();
             _link = Add<A>();
-            _link.AddCSSClass("nav-link");
+            _link.AddCssClass("nav-link");
         }
 
         /// <inheritdoc />
-        public override void SetText(string text)
+        public override INode SetText(string text)
         {
             _link?.SetText(text);
+            
+            return this;
         }
 
         /// <inheritdoc />
@@ -62,7 +64,7 @@ namespace FlowR.UI.Components
         /// <returns></returns>
         public NavbarMenuItem SetActive()
         {
-            AddCSSClass("active");
+            AddCssClass("active");
 
             return this;
         }
@@ -73,7 +75,7 @@ namespace FlowR.UI.Components
         /// <returns></returns>
         public NavbarMenuItem SetInactive()
         {
-            RemoveCSSClass("active");
+            RemoveCssClass("active");
 
             return this;
         }

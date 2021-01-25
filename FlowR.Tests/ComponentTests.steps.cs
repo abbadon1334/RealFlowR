@@ -8,12 +8,12 @@ namespace FlowR.Tests
     {
         [Given(@"I add class (.*)")] public void AddClass(string className)
         {
-            CurrentComponent.AddCSSClass(className);
+            CurrentComponent.AddCssClass(className);
         }
 
         [Given(@"I remove class (.*)")] public void RemoveClass(string className)
         {
-            CurrentComponent.RemoveCSSClass(className);
+            CurrentComponent.RemoveCssClass(className);
         }
     }
 }

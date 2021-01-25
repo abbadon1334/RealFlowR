@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 using FlowR.Core.Message;
 using Microsoft.Extensions.Logging;
@@ -117,7 +118,7 @@ namespace FlowR.Core
         }
 
         /// <inheritdoc />
-        public virtual void SetText(string text)
+        public virtual INode SetText(string text)
         {
             _text = text;
 
@@ -125,6 +126,8 @@ namespace FlowR.Core
                 this,
                 text
             ).SendMessageAsync(GetCommunication());
+
+            return this;
         }
 
         /// <inheritdoc />
@@ -137,18 +140,20 @@ namespace FlowR.Core
         }
 
         /// <inheritdoc />
-        public void SetAttribute(string name, string value)
+        public virtual INode SetAttribute(string name, string value)
         {
             value = (value ?? "").Trim();
 
             switch (name)
             {
                 case "class":
-                    value = string.Join(" ", getCSSClassArrayFromString(value).Distinct()).Trim();
+                    value = string.Join(" ", GetCssClassesFromStringAsList(value).Distinct()).Trim();
                     break;
             }
 
             GetAttributes()[name] = value;
+
+            return this;
         }
 
         /// <inheritdoc />
@@ -160,20 +165,24 @@ namespace FlowR.Core
         }
 
         /// <inheritdoc />
-        public void RemoveAttribute(string name)
+        public virtual INode RemoveAttribute(string name)
         {
             GetAttributes().Remove(name);
+            
+            return this;
         }
 
         /// <summary>
         ///     Short hand to set multiple attributes
         /// </summary>
         /// <param name="attributes"></param>
-        public void SetAttribute(Dictionary<string, string> attributes = null)
+        public virtual INode SetAttribute(Dictionary<string, string> attributes = null)
         {
             attributes ??= new Dictionary<string, string>();
 
             foreach (var (key, value) in attributes) SetAttribute(key, value);
+
+            return this;
         }
 
         /// <inheritdoc />
@@ -183,9 +192,11 @@ namespace FlowR.Core
         }
 
         /// <inheritdoc />
-        public void SetProperty(string name, string value)
+        public virtual INode SetProperty(string name, string value)
         {
             GetProperties().TryAdd(name, value);
+            
+            return this;
         }
 
         /// <inheritdoc />
@@ -241,7 +252,7 @@ namespace FlowR.Core
         }
 
         /// <inheritdoc />
-        public void On(string eventName, EventHandler handler)
+        public virtual INode On(string eventName, EventHandler handler)
         {
             GetEventHandlers().TryGetValue(eventName, out var handlers);
 
@@ -255,24 +266,31 @@ namespace FlowR.Core
             handlers.Add(handler);
 
             GetEventHandlers()[eventName] = handlers;
+
+            return this;
         }
 
         /// <inheritdoc />
-        public void Off(string eventName, EventHandler handler)
+        public virtual INode Off(string eventName, EventHandler handler)
         {
             GetEventHandlers().TryGetValue(eventName, out var handlers);
 
-            if (handlers == null) return;
+            if (handlers != null)
+            {
+                handlers.Remove(handler);
+                
+                if (handlers.Count == 0) Off(eventName);
+            }
 
-            handlers.Remove(handler);
-
-            if (handlers.Count == 0) Off(eventName);
+            return this;
         }
 
         /// <inheritdoc />
-        public void Off(string eventName)
+        public virtual INode Off(string eventName)
         {
             GetEventHandlers().Remove(eventName);
+
+            return this;
         }
 
         /// <inheritdoc />
@@ -284,23 +302,27 @@ namespace FlowR.Core
         }
 
         /// <inheritdoc />
-        public void AddJavascriptMethod(string methodName, string jsStatement)
+        public virtual INode AddJavascriptMethod(string methodName, string jsStatement)
         {
             MessageElement.Factory.MessageAddMethod(
                 this,
                 methodName,
                 jsStatement
             ).SendMessageAsync(GetCommunication());
+
+            return this;
         }
 
         /// <inheritdoc />
-        public void CallClientMethod(string methodName, params string[] arguments)
+        public virtual INode CallClientMethod(string methodName, params string[] arguments)
         {
             MessageElement.Factory.MessageCallMethod(
                 this,
                 methodName,
                 arguments
             ).SendMessageAsync(GetCommunication());
+
+            return this;
         }
 
         /// <inheritdoc />
@@ -341,23 +363,27 @@ namespace FlowR.Core
         }
 
         /// <inheritdoc />
-        public void AddCSSClass(string className)
+        public virtual INode AddCssClass(string className)
         {
-            var css = getCSSClassArrayFromString(GetAttribute("class") ?? "");
-            var cssAdd = getCSSClassArrayFromString(className.Trim());
+            var css = GetCssClassesFromStringAsList(GetAttribute("class") ?? "");
+            var cssAdd = GetCssClassesFromStringAsList(className.Trim());
             foreach (var c in cssAdd) css.Add(c.Trim());
             SetAttribute("class", string.Join(" ", css).Trim());
+            
+            return this;
         }
 
         /// <inheritdoc />
-        public void RemoveCSSClass(string className)
+        public virtual INode RemoveCssClass(string className)
         {
-            var css = getCSSClassArrayFromString(GetAttribute("class") ?? "");
-            var cssRemove = getCSSClassArrayFromString(className.Trim());
+            var css = GetCssClassesFromStringAsList(GetAttribute("class") ?? "");
+            var cssRemove = GetCssClassesFromStringAsList(className.Trim());
 
             foreach (var cr in cssRemove) css.Remove(cr.Trim());
 
             SetAttribute("class", string.Join(" ", css).Trim());
+
+            return this;
         }
 
         /// <inheritdoc />
@@ -511,7 +537,7 @@ namespace FlowR.Core
             GetChildren().Add(node.GetUuid(), node);
         }
 
-        private static List<string> getCSSClassArrayFromString(string css = "")
+        private static List<string> GetCssClassesFromStringAsList(string css = "")
         {
             return css.Split(" ").Distinct().ToList();
         }

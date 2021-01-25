@@ -11,65 +11,63 @@ namespace FlowR.UI
     /// <typeparam name="T"></typeparam>
     public class BootstrapComponent<T> : NodeComponent where T : NodeComponent
     {
-        /// <summary>
-        ///     Generic class for Fluent
-        /// </summary>
-        private readonly BootstrapComponent<T> _generic;
+        /// <inheritdoc />
+        public override BootstrapComponent<T> SetAttribute(string name, string value) {
+            
+            base.SetAttribute(name, value);
+            
+            return this;
+        }
         
-        private readonly INode _internalCalls; // @todo find a different way to avoid looping during calls to upward inheritance
+        /// <inheritdoc />
+        public override BootstrapComponent<T> SetAttribute(Dictionary<string, string> attrs = null){
+            
+            base.SetAttribute(attrs);
+            
+            return this;
+        }
         
-        private delegate void DelegateReturner(INode fluentObj);
+        /// <inheritdoc />
+        public override BootstrapComponent<T> RemoveAttribute(string name) {
+            base.RemoveAttribute(name);
+
+            return this;
+        }
 
         /// <inheritdoc />
-        public BootstrapComponent()
-        {
-            _generic = this;
-            _internalCalls = this;
+        public override BootstrapComponent<T> SetText(string text) {
+            base.SetText(text);
+            return this;
         }
 
-        private BootstrapComponent<T> ExecAndReturnGeneric(DelegateReturner callback)
-        {
-            callback(_internalCalls);
-            
-            return _generic;
+        /// <inheritdoc />
+        public override BootstrapComponent<T> On(string eventName, EventHandler handler) {
+            base.On(eventName, handler);
+            return this;
         }
-
-        /// <inheritdoc cref="Node.SetAttribute(string,string)"/>
-        public new BootstrapComponent<T> SetAttribute(string name, string value) => ExecAndReturnGeneric((obj) => {
-            obj.SetAttribute(name, value);
-        });
         
-        /// <inheritdoc cref="Node.SetAttribute(string,string)"/>
-        public new BootstrapComponent<T> SetAttribute(Dictionary<string, string> attrs) => ExecAndReturnGeneric((obj) => {
-            obj.SetAttribute(attrs);
-        });
+        /// <inheritdoc />
+        public override BootstrapComponent<T> Off(string eventName, EventHandler handler) {
+            base.Off(eventName, handler);
+            return this;
+        }
         
-        /// <inheritdoc cref="Node.RemoveAttribute"/>
-        public new BootstrapComponent<T> RemoveAttribute(string name) => ExecAndReturnGeneric((obj) => {
-            obj.RemoveAttribute(name);
-        });
-
-        /// <inheritdoc cref="Node.SetText"/>
-        public new BootstrapComponent<T> SetText(string text) => ExecAndReturnGeneric((obj) => {
-            obj.SetText(text);
-        });
-
-        /// <inheritdoc cref="Node.On"/>
-        public new BootstrapComponent<T> On(string eventName, EventHandler handler) => ExecAndReturnGeneric((obj) =>
-        {
-            obj.On(eventName, handler);
-        });
+        /// <inheritdoc />
+        public override BootstrapComponent<T> Off(string eventName) {
+            base.Off(eventName);
+            return this;
+        }
         
-        /// <inheritdoc cref="Node.Off(string,System.EventHandler)"/>
-        public new BootstrapComponent<T> Off(string eventName, EventHandler handler) => ExecAndReturnGeneric((obj) =>
-        {
-            obj.Off(eventName, handler);
-        });
+        /// <inheritdoc />
+        public override BootstrapComponent<T> RemoveCssClass(string className) {
+            base.RemoveCssClass(className);
+            return this;
+        }
         
-        /// <inheritdoc cref="Node.Off(string)"/>
-        public new BootstrapComponent<T> Off(string eventName) => ExecAndReturnGeneric((obj) =>
-        {
-            obj.Off(eventName);
-        });
+        /// <inheritdoc />
+        public override BootstrapComponent<T> AddCssClass(string className) {
+            base.AddCssClass(className);
+            return this;
+        }
     }
 }

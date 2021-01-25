@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using FlowR.Core;
 using FlowR.Core.Tags;
 using FlowR.UI.Layout;
 
@@ -8,7 +7,7 @@ namespace FlowR.UI.Components
     /// <summary>
     ///     Navbar Bootstrap element
     /// </summary>
-    public class Navbar : NodeComponent
+    public class Navbar : BootstrapComponent<Navbar>
     {
         /// <summary>
         ///     Internal container
@@ -28,7 +27,7 @@ namespace FlowR.UI.Components
         {
             base.Init();
             Container = Add<Container>();
-            Container.setResponsive(ResponsiveViewports.FLUID);
+            Container.SetResponsive(ResponsiveViewports.FLUID);
         }
 
         /// <summary>
@@ -38,7 +37,7 @@ namespace FlowR.UI.Components
         public Div AddBrand()
         {
             var div = Container.Add<Div>();
-            div.AddCSSClass("navbar-brand me-md-auto");
+            div.AddCssClass("navbar-brand me-md-auto");
 
             return div;
         }
@@ -49,13 +48,13 @@ namespace FlowR.UI.Components
         /// <returns></returns>
         public Button AddToggler()
         {
-            var Button = Container.Add<Button>();
-            Button.AddCSSClass("navbar-toggler btn btn-outline-primary");
+            var button = Container.Add<Button>();
+            button.AddCssClass("navbar-toggler btn btn-outline-primary");
 
             Container = Container.Add<Container>();
-            Container.AddCSSClass("collapse navbar-collapse");
+            Container.AddCssClass("collapse navbar-collapse");
 
-            Button.SetAttribute(new Dictionary<string, string>
+            button.SetAttribute(new Dictionary<string, string>
             {
                 { "type", "button" },
                 { "data-bs-toggle", "collapse" },
@@ -65,9 +64,9 @@ namespace FlowR.UI.Components
                 { "aria-label", "Toggle navigation" }
             });
 
-            Button.Add<Span>().AddCSSClass("navbar-toggler-icon");
+            button.Add<Span>().AddCssClass("navbar-toggler-icon");
 
-            return Button;
+            return button;
         }
 
         /// <summary>
