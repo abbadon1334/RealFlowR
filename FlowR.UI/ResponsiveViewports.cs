@@ -8,26 +8,26 @@ namespace FlowR.UI
         /// <summary>
         ///     SM
         /// </summary>
-        SM,
+        Sm,
         /// <summary>
         ///     MD
         /// </summary>
-        MD,
+        Md,
         /// <summary>
         ///     LG
         /// </summary>
-        LG,
+        Lg,
         /// <summary>
         ///     XL
         /// </summary>
-        XL,
+        Xl,
         /// <summary>
         ///     XXL
         /// </summary>
-        XXL,
+        Xxl,
         /// <summary>
         ///     FLUID
         /// </summary>
-        FLUID
+        Fluid
     }
 }

@@ -7,10 +7,9 @@ namespace FlowR
 {
     public class Application : UI.Application
     {
-        protected readonly Div RightColumn;
         protected int Counter = 0;
 
-        public Application(string connectionId, IClientProxy client, ILogger<Core.Application> logger) : base(connectionId, client, logger)
+        public Application(string connectionId, IClientProxy client, ILogger<Application> logger) : base(connectionId, client, logger)
         {
             RootElement.SetAttribute("css", "d-flex h-100 text-center text-white bg-dark");
 

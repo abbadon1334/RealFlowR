@@ -7,7 +7,7 @@ namespace FlowR.UI
     public class Application : Core.Application
     {
         /// <inheritdoc />
-        protected Application(string connectionId, IClientProxy client, ILogger<Core.Application> logger) : base(connectionId, client, logger)
+        protected Application(string connectionId, IClientProxy client, ILogger<Application> logger) : base(connectionId, client, logger)
         {
             AddStylesheetResource("https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css");
             AddJavascriptResource("https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js");

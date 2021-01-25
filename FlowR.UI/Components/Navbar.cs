@@ -27,7 +27,7 @@ namespace FlowR.UI.Components
         {
             base.Init();
             Container = Add<Container>();
-            Container.SetResponsive(ResponsiveViewports.FLUID);
+            Container.SetResponsive(ResponsiveViewports.Fluid);
         }
 
         /// <summary>

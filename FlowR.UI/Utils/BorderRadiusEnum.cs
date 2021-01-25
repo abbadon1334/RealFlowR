@@ -8,26 +8,26 @@ namespace FlowR.UI.Utils
         /// <summary>
         ///     radius top
         /// </summary>
-        top,
+        Top,
         /// <summary>
         ///     radius right
         /// </summary>
-        end,
+        End,
         /// <summary>
         ///     radius bottom
         /// </summary>
-        bottom,
+        Bottom,
         /// <summary>
         ///     radius left
         /// </summary>
-        start,
+        Start,
         /// <summary>
         ///     radius all circle
         /// </summary>
-        circle,
+        Circle,
         /// <summary>
         ///     radius all pill
         /// </summary>
-        pill
+        Pill
     }
 }
