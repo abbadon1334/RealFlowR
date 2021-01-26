@@ -20,6 +20,6 @@ on_success:
   - cd tmp_docs
   - git rm -r *
   - cp -r ../docs/* .
-  - git add -A 2>&1
-  - git commit -m "CI Updates" -q
-  - git push origin gh-pages -q
+  - git add --all .
+  - git commit
+  - git push
