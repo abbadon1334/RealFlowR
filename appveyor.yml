@@ -1,6 +1,6 @@
 environment:
   access_token:
-    secure: a2f4dcd34d1e9c051c69db4aa46229c0bf367e30
+    secure: 3863e27f8bb5f7ccaff7a8c9163cea054a52caed
   op_build_user: "abbadon1334"
   op_build_user_email: "fdanti@gmail.com"
 
