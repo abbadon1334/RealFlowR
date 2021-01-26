@@ -33,7 +33,7 @@ namespace FlowR.Core
         /// <param name="connectionId">connectionId from Hub</param>
         /// <param name="client">SignalR client from Hub</param>
         /// <param name="logger">ILogger</param>
-        protected Application(string connectionId, IClientProxy client, ILogger<Application> logger)
+        public Application(string connectionId, IClientProxy client, ILogger<Application> logger)
         {
             _logger = logger;
 
@@ -53,7 +53,9 @@ namespace FlowR.Core
             GetLogger().LogDebug("Application initialized");
         }
 
-        /// <inheritdoc cref="ApplicationCommunication" />
+        /// <summary>
+        ///     Client Communications
+        /// </summary>
         public ApplicationCommunication Communication { get; }
 
         /// <summary>

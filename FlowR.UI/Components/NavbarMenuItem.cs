@@ -15,7 +15,7 @@ namespace FlowR.UI.Components
         /// </summary>
         private A _link;
 
-        /// <inheritdoc cref="Node.TagName" />
+        /// <inheritdoc />
         protected override string TagName => "li";
 
         /// <inheritdoc />

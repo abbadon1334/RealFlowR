@@ -33,7 +33,7 @@ namespace FlowR.Core
         {
             var application = (T)Activator.CreateInstance(typeof(T), connectionId, client, logger);
 
-            logger.LogDebug($"new App : {connectionId}");
+            logger.LogDebug("new App : " + connectionId);
 
             _applications.TryAdd(connectionId, application);
         }

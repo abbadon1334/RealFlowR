@@ -1,7 +1,7 @@
 namespace FlowR.UI
 {
     /// <summary>
-    ///     Vieports enum
+    ///     Viewports enum
     /// </summary>
     public enum ResponsiveViewports
     {

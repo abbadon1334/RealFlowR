@@ -3,7 +3,7 @@ using FlowR.UI;
 
 namespace FlowR.Tests.Mock
 {
-    public class BootstrapFluentMock : BootstrapComponent<Div>
+    public class FluentComponentMock : FluentComponent<Div>
     {
     }
 }

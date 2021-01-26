@@ -3,14 +3,15 @@
     {
       "src": [
         {
-          "src": "../",
+          "src": "..",
           "files": [
             "FlowR.Core/FlowR.Core.csproj",
             "FlowR.UI/FlowR.UI.csproj"
           ],
           "exclude": [
             "**/bin/**",
-            "**/obj/**"
+            "**/obj/**",
+            "FlowR.UI/FluentComponent.cs"
           ]
         }
       ],

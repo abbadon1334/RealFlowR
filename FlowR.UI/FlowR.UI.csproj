@@ -9,6 +9,9 @@
 
     <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+    
+    <ItemGroup>
         <ProjectReference Include="..\FlowR.Core\FlowR.Core.csproj" />
     </ItemGroup>
 

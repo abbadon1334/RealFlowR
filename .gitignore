@@ -344,4 +344,5 @@ FlowR.Sample/wwwroot/js/FlowR.js.map
 .idea
 
 #remove possible error prone syntax of generated SpecFlow features
-/FlowR.Tests/*.feature.cs
+FlowR.Tests/*.feature.cs
+/FlowR.DocFx/

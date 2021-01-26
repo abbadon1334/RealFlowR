@@ -9,12 +9,12 @@ namespace FlowR.Tests
     [Scope(Feature = "Fluent tests")]
     public class BootstrapFluentTests : BaseTest
     {
-        public BootstrapComponent<Div> FluentDiv;
+        public FluentComponent<Div> FluentDiv;
 
         [Given(@"I create a full Fluent div")] public void GivenCreateFluentDiv()
         {
             FluentDiv = App.GetComponentRoot()
-                    .Add<BootstrapComponent<Div>>()
+                    .Add<FluentComponent<Div>>()
                     .SetAttribute("keyA", "valueA")
                     .SetAttribute("keyB", "valueB")
                     .SetAttribute("keyC", "valueC")

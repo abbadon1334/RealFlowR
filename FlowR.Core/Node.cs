@@ -385,8 +385,12 @@ namespace FlowR.Core
             return this;
         }
 
-        /// <inheritdoc />
-        public void SetUuid(string uuid)
+        /// <summary>
+        ///     Set Uuid, under the hood will call SetAttribute(id, Uuid) 
+        /// </summary>
+        /// <param name="uuid"></param>
+        /// <exception cref="Exception"></exception>
+        protected void SetUuid(string uuid)
         {
             if (!string.IsNullOrEmpty(_uuid)) throw new Exception($"Element Uuid is not empty (actual : '{_uuid}'))");
 
@@ -395,7 +399,11 @@ namespace FlowR.Core
             SetAttribute("id", uuid);
         }
 
-        /// <inheritdoc />
+        /// <summary>
+        /// [internal use] Set Application from owner on init. 
+        /// </summary>
+        /// <param name="app"></param>
+        /// <exception cref="Exception"></exception>
         protected void SetApplication(Application app)
         {
             if (_application != null) throw new Exception("Application already set");
@@ -523,7 +531,10 @@ namespace FlowR.Core
             if (GetOwner().GetApplication() == null) throw new Exception("Missing Application");
         }
 
-        /// <inheritdoc cref="Application.GetLogger" />
+        /// <summary>
+        ///     Get Application logger
+        /// </summary>
+        /// <returns></returns>
         public ILogger<Application> GetLogger()
         {
             return GetApplication().GetLogger();

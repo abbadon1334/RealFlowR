@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using FlowR.Core;
 using FlowR.Core.Tags;
 using FlowR.UI.Layout;
 
@@ -7,7 +8,7 @@ namespace FlowR.UI.Components
     /// <summary>
     ///     Navbar Bootstrap element
     /// </summary>
-    public class Navbar : BootstrapComponent<Navbar>
+    public class Navbar : FluentComponent<Navbar>
     {
         /// <summary>
         ///     Internal container

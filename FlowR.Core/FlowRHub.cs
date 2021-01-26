@@ -13,14 +13,14 @@ namespace FlowR.Core
     public class FlowRHub<T> : Hub where T : Application
     {
         private readonly FlowRService<T> _applicationFlowRService;
-        private readonly ILogger<Application> _logger;
+        private readonly ILogger<T> _logger;
 
         /// <summary>
         ///     Constructor.
         /// </summary>
         /// <param name="applicationFlowRService"></param>
         /// <param name="logger"></param>
-        public FlowRHub(FlowRService<T> applicationFlowRService, ILogger<Application> logger)
+        public FlowRHub(FlowRService<T> applicationFlowRService, ILogger<T> logger)
         {
             _applicationFlowRService = applicationFlowRService;
             _logger = logger;
