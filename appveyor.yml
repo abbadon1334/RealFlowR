@@ -20,7 +20,7 @@ on_success:
   - cd tmp_docs
   - git rm -r *
   - cp -r ../docs/* .
-  - git remote set-url origin https://github.com/abbadon1334/RealFlowR.git
+  - git remote set-url origin "https://github.com/abbadon1334/RealFlowR.git"
   - git add --all .
   - git commit -a -m "%APPVEYOR_BUILD_VERSION% commit [skip ci]"
   - git push
