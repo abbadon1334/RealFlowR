@@ -50,16 +50,9 @@
     "globalMetadataFiles": [],
     "fileMetadata": {},
     "template": [
-      "default",
-      "FlowR.DocFx/DocFx.Plugins.PlantUml/template"
+      "default"
     ],
-    "markdownEngineProperties": {
-      "plantUml.renderingMode": "local",
-      //"plantUml.outputFormat": "png",
-      "plantUml.localPlantUmlPath": "DocFx.Plugins.PlantUml/plantuml.jar",
-      //"plantUml.remoteUrl": "http://www.plantuml.com/plantuml/",
-      //"plantUml.renderingMode": "remote"
-    },
+    "markdownEngineProperties": {},
     "noLangKeyword": false
   }
 }

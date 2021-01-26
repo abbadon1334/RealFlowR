@@ -31,6 +31,7 @@
       <Compile Remove="ComponentControlTests.feature.cs" />
       <Compile Remove="ComponentTests.feature.cs" />
       <Compile Remove="BootstrapFluentTests.feature.cs" />
+      <Compile Remove="FluentComponentTests.feature.cs" />
     </ItemGroup>
 
     <ItemGroup>
