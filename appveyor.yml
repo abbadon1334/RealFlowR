@@ -10,19 +10,20 @@ build_script:
   - dotnet build ./FlowR.sln
 
 on_success:
-  - git config --global core.autocrlf false
-  - git config --global credential.helper store
-  - ps : Add-Content "~/.git-credentials" "https://3863e27f8bb5f7ccaff7a8c9163cea054a52caed:x-oauth-basic@github.com`n"
-  - git config --global user.email "fdanti@gmail.com"
-  - git config --global user.name "abbadon1334"
-  - git config -l
-  - git remote -v
-  - docfx FlowR.DocFx/docfx.json
-  - git clone https://github.com/abbadon1334/RealFlowR.git -b gh-pages tmp_docs
-  - cd tmp_docs
-  - git rm -r *
-  - cp -r ../docs/* .
-  - git remote set-url origin git@github.com:abbadon1334/RealFlowR.git
-  - git add --all .
-  - git commit -a -m "%APPVEYOR_BUILD_VERSION% commit [skip ci]"
-  - git push
+  - ps: >-
+      git config --global core.autocrlf false
+      git config --global credential.helper store
+      Add-Content "~/.git-credentials" "https://3863e27f8bb5f7ccaff7a8c9163cea054a52caed:x-oauth-basic@github.com`n"
+      git config --global user.email "fdanti@gmail.com"
+      git config --global user.name "abbadon1334"
+      git config -l
+      git remote -v
+      docfx FlowR.DocFx/docfx.json
+      git clone https://github.com/abbadon1334/RealFlowR.git -b gh-pages tmp_docs
+      cd tmp_docs
+      git rm -r *
+      cp -r ../docs/* .
+      git remote set-url origin git@github.com:abbadon1334/RealFlowR.git
+      git add --all .
+      git commit -a -m "%APPVEYOR_BUILD_VERSION% commit [skip ci]"
+      git push
