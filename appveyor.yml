@@ -26,13 +26,14 @@ after_build:
             throw [System.Exception] "docfx build failed with exit code $lastexitcode."
           }
 
+          git config --global core.autocrlf false
           git config --global credential.helper store
-          Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
           git config --global user.email $env:op_build_user_email
           git config --global user.name $env:op_build_user
-          git clone https://github.com/abbadon1334/RealFlowR.git -b gh-pages origin_site -q
-          Copy-Item origin_site/.git docs -recurse
-          CD docs
+          Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+          git clone https://github.com/abbadon1334/RealFlowR.git -b gh-pages gh-pages -q
+          Copy-Item ./docs/* ./docs/ -Recurse
+          cd docs
           git add -A 2>&1
           git commit -m "CI Updates" -q
           git push origin gh-pages -q
