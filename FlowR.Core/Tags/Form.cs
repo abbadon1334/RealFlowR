@@ -21,7 +21,7 @@ namespace FlowR.Core.Tags
         /// </summary>
         /// <see cref="NodeControl.ValidateNode" />
         /// <param name="control"></param>
-        /// <exception cref="Exception"></exception>
+        /// <exception></exception>
         public void Bind(INodeControl control)
         {
             if (_controls.ContainsKey(control.GetControlName())) throw new Exception("You cannot add control with same name twice");
