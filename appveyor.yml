@@ -10,16 +10,16 @@ build_script:
   - dotnet build ./FlowR.sln
 
 on_success:
-  - docfx FlowR.DocFx/docfx.json
-  - git clone https://github.com/abbadon1334/RealFlowR.git --branch gh-pages tmp_docs  
   - git config --global core.autocrlf false
   - git config --global credential.helper store
   - ps : Set-Content -Path "$HOME\.git-credentials" -Value "https://$($env:access_token):x-oauth-basic@github.com`n" -NoNewline
   - git config --global user.email "fdanti@gmail.com"
   - git config --global user.name "abbadon1334"
+  - docfx FlowR.DocFx/docfx.json
+  - git clone https://github.com/abbadon1334/RealFlowR.git -b gh-pages tmp_docs
   - cd tmp_docs
   - git rm -r *
   - cp -r ../docs/* .
-  - git add . -A
-  - git commit -m "Update generated documentation"
-  - git push origin gh-pages
+  - git add -A 2>&1
+  - git commit -m "CI Updates" -q
+  - git push origin gh-pages -q
