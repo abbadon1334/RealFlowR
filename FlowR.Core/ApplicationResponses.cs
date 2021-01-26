@@ -38,7 +38,9 @@ namespace FlowR.Core
                     // @todo if hit the timeout _completed remain an extra item, how to remove it
                     // bad solution but give the idea, a pruning routine which remove completed, but who knows if they are already used? a flag ?
 
+                {
                     Task.Delay(2, answerCancel.Token);
+                }
 
                 return response;
             }, answerCancel.Token);
@@ -50,7 +52,10 @@ namespace FlowR.Core
         /// <param name="message"></param>
         public void SetResponse(IMessageResponse message)
         {
-            if (!_pending.TryGetValue(message.GetUuid(), out var storedMessage)) return;
+            if (!_pending.TryGetValue(message.GetUuid(), out var storedMessage))
+            {
+                return;
+            }
 
             storedMessage.SetResponse(message.GetResponse());
             _pending.TryRemove(message.GetUuid(), out _);

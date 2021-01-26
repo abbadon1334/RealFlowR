@@ -60,7 +60,10 @@ namespace FlowR.Core.Message
         /// <param name="values"></param>
         protected void AddArgument(params object[] values)
         {
-            foreach (var value in values) _arguments.Add(value);
+            foreach (var value in values)
+            {
+                _arguments.Add(value);
+            }
         }
     }
 }

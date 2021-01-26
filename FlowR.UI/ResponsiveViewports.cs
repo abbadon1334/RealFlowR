@@ -28,6 +28,6 @@ namespace FlowR.UI
         /// <summary>
         ///     FLUID
         /// </summary>
-        Fluid
+        Fluid,
     }
 }

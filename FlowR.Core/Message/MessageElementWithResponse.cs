@@ -19,7 +19,7 @@ namespace FlowR.Core.Message
             /// <summary>
             ///     Call method and wait for response
             /// </summary>
-            CallMethodGetResponse
+            CallMethodGetResponse,
         }
 
         /// <inheritdoc />
@@ -27,7 +27,10 @@ namespace FlowR.Core.Message
         {
             AddArgument(node.GetUuid());
 
-            foreach (var o in args) AddArgument(o);
+            foreach (var o in args)
+            {
+                AddArgument(o);
+            }
         }
         /// <summary>
         ///     Requested Action

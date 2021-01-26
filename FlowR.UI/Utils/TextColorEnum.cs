@@ -63,6 +63,6 @@ namespace FlowR.UI.Utils
         /// <summary>
         ///     muted color
         /// </summary>
-        Muted
+        Muted,
     }
 }

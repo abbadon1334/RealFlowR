@@ -28,6 +28,6 @@ namespace FlowR.UI.Utils
         /// <summary>
         ///     radius all pill
         /// </summary>
-        Pill
+        Pill,
     }
 }

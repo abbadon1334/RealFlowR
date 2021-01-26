@@ -33,7 +33,7 @@ namespace FlowR.UI
             /// <summary>
             ///     Evenly
             /// </summary>
-            Evenly
+            Evenly,
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace FlowR.UI
             /// <summary>
             ///     End
             /// </summary>
-            End
+            End,
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace FlowR.UI
             /// <summary>
             ///     End
             /// </summary>
-            End
+            End,
         }
     }
 }

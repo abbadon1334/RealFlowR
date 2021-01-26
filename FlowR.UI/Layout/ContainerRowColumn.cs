@@ -14,7 +14,7 @@ namespace FlowR.UI.Layout
         /// <inheritdoc />
         protected override Dictionary<string, string> DefaultAttributes { get; set; } = new()
         {
-            { "class", "col" }
+            { "class", "col" },
         };
     }
 }

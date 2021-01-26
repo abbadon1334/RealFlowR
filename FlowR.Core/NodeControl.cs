@@ -60,7 +60,10 @@ namespace FlowR.Core
         {
             base.ValidateNode();
 
-            if (string.IsNullOrEmpty(GetControlName())) throw new Exception("Control must have a name");
+            if (string.IsNullOrEmpty(GetControlName()))
+            {
+                throw new Exception("Control must have a name");
+            }
         }
     }
 }

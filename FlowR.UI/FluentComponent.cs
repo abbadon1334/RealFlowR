@@ -5,10 +5,10 @@ using FlowR.Core;
 namespace FlowR.UI
 {
     /// <summary>
-    ///     Base Bootstrap component
+    ///     Fluent Component
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public class FluentComponent<T> : NodeComponent where T : INode
+    /// <typeparam name="TComponent"></typeparam>
+    public class FluentComponent<TComponent> : NodeComponent where TComponent : INodeComponent
     {
         /// <summary>
         ///     Fluent NodeComponent SetAttribute (single)
@@ -16,7 +16,7 @@ namespace FlowR.UI
         /// <param name="name"></param>
         /// <param name="value"></param>
         /// <returns></returns>
-        public override FluentComponent<T> SetAttribute(string name, string value)
+        public override FluentComponent<TComponent> SetAttribute(string name, string value)
         {
             base.SetAttribute(name, value);
 
@@ -28,7 +28,7 @@ namespace FlowR.UI
         /// </summary>
         /// <param name="attrs"></param>
         /// <returns></returns>
-        public override FluentComponent<T> SetAttribute(Dictionary<string, string> attrs = null)
+        public override FluentComponent<TComponent> SetAttribute(Dictionary<string, string> attrs = null)
         {
             base.SetAttribute(attrs);
 
@@ -40,7 +40,7 @@ namespace FlowR.UI
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public override FluentComponent<T> RemoveAttribute(string name)
+        public override FluentComponent<TComponent> RemoveAttribute(string name)
         {
             base.RemoveAttribute(name);
 
@@ -48,14 +48,14 @@ namespace FlowR.UI
         }
 
         /// <summary>
-        ///     Fluent NodeComponent SetText 
+        ///     Fluent NodeComponent SetText
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
-        public override FluentComponent<T> SetText(string text)
+        public override FluentComponent<TComponent> SetText(string text)
         {
             base.SetText(text);
-            
+
             return this;
         }
 
@@ -65,10 +65,10 @@ namespace FlowR.UI
         /// <param name="eventName"></param>
         /// <param name="handler"></param>
         /// <returns></returns>
-        public override FluentComponent<T> On(string eventName, EventHandler handler)
+        public override FluentComponent<TComponent> On(string eventName, EventHandler handler)
         {
             base.On(eventName, handler);
-            
+
             return this;
         }
 
@@ -78,46 +78,46 @@ namespace FlowR.UI
         /// <param name="eventName"></param>
         /// <param name="handler"></param>
         /// <returns></returns>
-        public override FluentComponent<T> Off(string eventName, EventHandler handler)
+        public override FluentComponent<TComponent> Off(string eventName, EventHandler handler)
         {
             base.Off(eventName, handler);
-            
+
             return this;
         }
 
         /// <summary>
-        ///     Fluent NodeComponent Off 
+        ///     Fluent NodeComponent Off
         /// </summary>
         /// <param name="eventName"></param>
         /// <returns></returns>
-        public override FluentComponent<T> Off(string eventName)
+        public override FluentComponent<TComponent> Off(string eventName)
         {
             base.Off(eventName);
-            
+
             return this;
         }
 
         /// <summary>
-        ///      Fluent NodeComponent RemoveCssClass
+        ///     Fluent NodeComponent RemoveCssClass
         /// </summary>
         /// <param name="className"></param>
         /// <returns></returns>
-        public override FluentComponent<T> RemoveCssClass(string className)
+        public override FluentComponent<TComponent> RemoveCssClass(string className)
         {
             base.RemoveCssClass(className);
-            
+
             return this;
         }
 
         /// <summary>
-        ///      Fluent NodeComponent AddCssClass
+        ///     Fluent NodeComponent AddCssClass
         /// </summary>
         /// <param name="className"></param>
         /// <returns></returns>
-        public override FluentComponent<T> AddCssClass(string className)
+        public override FluentComponent<TComponent> AddCssClass(string className)
         {
             base.AddCssClass(className);
-            
+
             return this;
         }
     }

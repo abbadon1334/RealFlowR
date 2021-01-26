@@ -8,7 +8,7 @@ namespace FlowR.UI.Components
     /// <summary>
     ///     Navbar Bootstrap element
     /// </summary>
-    public class Navbar : FluentComponent<Navbar>
+    public class Navbar : NodeComponent
     {
         /// <summary>
         ///     Internal container
@@ -20,7 +20,7 @@ namespace FlowR.UI.Components
         /// <inheritdoc />
         protected override Dictionary<string, string> DefaultAttributes { get; set; } = new()
         {
-            { "class", "navbar navbar-expand-lg" }
+            { "class", "navbar navbar-expand-lg" },
         };
 
         /// <inheritdoc />
@@ -62,7 +62,7 @@ namespace FlowR.UI.Components
                 { "data-bs-target", "#" + Container.GetUuid() },
                 { "aria-controls", Container.GetUuid() },
                 { "aria-expanded", "false" },
-                { "aria-label", "Toggle navigation" }
+                { "aria-label", "Toggle navigation" },
             });
 
             button.Add<Span>().AddCssClass("navbar-toggler-icon");

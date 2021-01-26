@@ -10,8 +10,7 @@
           ],
           "exclude": [
             "**/bin/**",
-            "**/obj/**",
-            "FlowR.UI/FluentComponent.cs"
+            "**/obj/**"
           ]
         }
       ],

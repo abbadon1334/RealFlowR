@@ -47,7 +47,7 @@ namespace FlowR.Core
                 4 => Client.SendAsync(method, args[0], args[1], args[2], args[3]),
                 5 => Client.SendAsync(method, args[0], args[1], args[2], args[3], args[4]),
                 6 => Client.SendAsync(method, args[0], args[1], args[2], args[3], args[4], args[5]),
-                _ => throw new Exception("Message Arguments Array to long")
+                _ => throw new Exception("Message Arguments Array to long"),
             };
         }
 

@@ -61,7 +61,10 @@ namespace FlowR.Tests
 
         [When(@"I get the message at index (.*)")] public void ConsumeMessageOfIndex(int number)
         {
-            for (var x = 0; x < number; x++) WhenIGetAMessage();
+            for (var x = 0; x < number; x++)
+            {
+                WhenIGetAMessage();
+            }
         }
 
         [Given(@"I call a method (.*)")] public void CallMethod(string name)

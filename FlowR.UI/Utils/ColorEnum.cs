@@ -53,6 +53,6 @@ namespace FlowR.UI.Utils
         /// <summary>
         ///     transparent color
         /// </summary>
-        Transparent
+        Transparent,
     }
 }

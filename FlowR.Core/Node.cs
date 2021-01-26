@@ -70,7 +70,10 @@ namespace FlowR.Core
         /// <inheritdoc />
         public string GetUuid()
         {
-            if (string.IsNullOrEmpty(_uuid)) SetUuid(Guid.NewGuid().ToString());
+            if (string.IsNullOrEmpty(_uuid))
+            {
+                SetUuid(Guid.NewGuid().ToString());
+            }
             return _uuid;
         }
 
@@ -179,7 +182,10 @@ namespace FlowR.Core
         {
             attributes ??= new Dictionary<string, string>();
 
-            foreach (var (key, value) in attributes) SetAttribute(key, value);
+            foreach (var (key, value) in attributes)
+            {
+                SetAttribute(key, value);
+            }
 
             return this;
         }
@@ -278,7 +284,10 @@ namespace FlowR.Core
             {
                 handlers.Remove(handler);
 
-                if (handlers.Count == 0) Off(eventName);
+                if (handlers.Count == 0)
+                {
+                    Off(eventName);
+                }
             }
 
             return this;
@@ -342,9 +351,15 @@ namespace FlowR.Core
 
             while (true)
             {
-                if (owner == null || owner.GetType() == typeof(NodeComponentRoot)) return default;
+                if (owner == null || owner.GetType() == typeof(NodeComponentRoot))
+                {
+                    return default;
+                }
 
-                if (owner.GetType() == typeof(T)) break;
+                if (owner.GetType() == typeof(T))
+                {
+                    break;
+                }
 
                 owner = owner.GetOwner();
             }
@@ -356,7 +371,10 @@ namespace FlowR.Core
         public List<T> GetChildrenOfType<T>() where T : INode
         {
             List<T> children = new();
-            foreach (var (key, value) in GetChildren()) children.Add((T)value);
+            foreach (var (key, value) in GetChildren())
+            {
+                children.Add((T)value);
+            }
 
             return children;
         }
@@ -366,7 +384,10 @@ namespace FlowR.Core
         {
             var css = GetCssClassesFromStringAsList(GetAttribute("class") ?? "");
             var cssAdd = GetCssClassesFromStringAsList(className.Trim());
-            foreach (var c in cssAdd) css.Add(c.Trim());
+            foreach (var c in cssAdd)
+            {
+                css.Add(c.Trim());
+            }
             SetAttribute("class", string.Join(" ", css).Trim());
 
             return this;
@@ -378,7 +399,10 @@ namespace FlowR.Core
             var css = GetCssClassesFromStringAsList(GetAttribute("class") ?? "");
             var cssRemove = GetCssClassesFromStringAsList(className.Trim());
 
-            foreach (var cr in cssRemove) css.Remove(cr.Trim());
+            foreach (var cr in cssRemove)
+            {
+                css.Remove(cr.Trim());
+            }
 
             SetAttribute("class", string.Join(" ", css).Trim());
 
@@ -386,13 +410,16 @@ namespace FlowR.Core
         }
 
         /// <summary>
-        ///     Set Uuid, under the hood will call SetAttribute(id, Uuid) 
+        ///     Set Uuid, under the hood will call SetAttribute(id, Uuid)
         /// </summary>
         /// <param name="uuid"></param>
         /// <exception></exception>
         protected void SetUuid(string uuid)
         {
-            if (!string.IsNullOrEmpty(_uuid)) throw new Exception($"Element Uuid is not empty (actual : '{_uuid}'))");
+            if (!string.IsNullOrEmpty(_uuid))
+            {
+                throw new Exception($"Element Uuid is not empty (actual : '{_uuid}'))");
+            }
 
             _uuid = uuid;
 
@@ -400,13 +427,16 @@ namespace FlowR.Core
         }
 
         /// <summary>
-        /// [internal use] Set Application from owner on init. 
+        ///     [internal use] Set Application from owner on init.
         /// </summary>
         /// <param name="app"></param>
         /// <exception></exception>
         protected void SetApplication(Application app)
         {
-            if (_application != null) throw new Exception("Application already set");
+            if (_application != null)
+            {
+                throw new Exception("Application already set");
+            }
 
             _application = app;
         }
@@ -415,33 +445,43 @@ namespace FlowR.Core
         {
             GetAttributes().CollectionChanged += (sender, args) =>
             {
-                if (!IsInitialized()) return;
+                if (!IsInitialized())
+                {
+                    return;
+                }
 
                 switch (args.Action)
                 {
                     case NotifyCollectionChangedAction.Add:
                     case NotifyCollectionChangedAction.Replace:
                         foreach (KeyValuePair<string, string> kvp in args.NewItems)
+                        {
                             MessageElement.Factory.MessageSetAttribute(
                                 this,
                                 kvp.Key,
                                 kvp.Value
                             ).SendMessageAsync(GetCommunication());
+                        }
                         break;
 
                     case NotifyCollectionChangedAction.Remove:
                         foreach (KeyValuePair<string, string> kvp in args.OldItems)
+                        {
                             MessageElement.Factory.MessageRemoveAttribute(
                                 this,
                                 kvp.Key
                             ).SendMessageAsync(GetCommunication());
+                        }
                         break;
                 }
             };
 
             GetChildren().CollectionChanged += (sender, args) =>
             {
-                if (!IsInitialized()) return;
+                if (!IsInitialized())
+                {
+                    return;
+                }
 
                 switch (args.Action)
                 {
@@ -468,41 +508,53 @@ namespace FlowR.Core
 
             GetProperties().CollectionChanged += (sender, args) =>
             {
-                if (!IsInitialized()) return;
+                if (!IsInitialized())
+                {
+                    return;
+                }
 
                 switch (args.Action)
                 {
                     case NotifyCollectionChangedAction.Add:
                     case NotifyCollectionChangedAction.Replace:
                         foreach (KeyValuePair<string, string> kvp in args.NewItems)
+                        {
                             MessageElement.Factory.MessageSetProperty(
                                 this,
                                 kvp.Key,
                                 kvp.Value
                             ).SendMessageAsync(GetCommunication());
+                        }
                         break;
                 }
             };
 
             GetEventHandlers().CollectionChanged += (sender, args) =>
             {
-                if (!IsInitialized()) return;
+                if (!IsInitialized())
+                {
+                    return;
+                }
 
                 switch (args.Action)
                 {
                     case NotifyCollectionChangedAction.Add:
                         foreach (KeyValuePair<string, List<EventHandler>> kvp in args.NewItems)
+                        {
                             MessageElement.Factory.MessageStartListenEvent(
                                 this,
                                 kvp.Key
                             ).SendMessageAsync(GetCommunication());
+                        }
                         break;
                     case NotifyCollectionChangedAction.Remove:
                         foreach (KeyValuePair<string, List<EventHandler>> kvp in args.OldItems)
+                        {
                             MessageElement.Factory.MessageStopListenEvent(
                                 this,
                                 kvp.Key
                             ).SendMessageAsync(GetCommunication());
+                        }
                         break;
                 }
             };
@@ -524,11 +576,20 @@ namespace FlowR.Core
         /// <exception></exception>
         protected virtual void ValidateNode()
         {
-            if (IsInitialized()) throw new Exception("Cannot initialized twice");
+            if (IsInitialized())
+            {
+                throw new Exception("Cannot initialized twice");
+            }
 
-            if (GetOwner() == null) throw new Exception("Missing Owner");
+            if (GetOwner() == null)
+            {
+                throw new Exception("Missing Owner");
+            }
 
-            if (GetOwner().GetApplication() == null) throw new Exception("Missing Application");
+            if (GetOwner().GetApplication() == null)
+            {
+                throw new Exception("Missing Application");
+            }
         }
 
         /// <summary>
@@ -542,7 +603,10 @@ namespace FlowR.Core
 
         private void Add(INode node, Dictionary<string, string> attributes = null)
         {
-            if (!IsInitialized()) throw new Exception("Node must be a Owner, you need to add it to the tree");
+            if (!IsInitialized())
+            {
+                throw new Exception("Node must be a Owner, you need to add it to the tree");
+            }
 
             node.SetOwner(this);
             node.SetAttribute(attributes);

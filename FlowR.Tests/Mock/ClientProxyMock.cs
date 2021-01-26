@@ -15,7 +15,7 @@ namespace FlowR.Tests.Mock
             MessageSents.Add(new ClientMessageSent
             {
                 Method = method,
-                Arguments = args.Select(o => o.ToString()).ToArray()
+                Arguments = args.Select(o => o.ToString()).ToArray(),
             });
 
             return Task.FromResult(0);

@@ -24,7 +24,10 @@ namespace FlowR.Core.Tags
         /// <exception></exception>
         public void Bind(INodeControl control)
         {
-            if (_controls.ContainsKey(control.GetControlName())) throw new Exception("You cannot add control with same name twice");
+            if (_controls.ContainsKey(control.GetControlName()))
+            {
+                throw new Exception("You cannot add control with same name twice");
+            }
 
             _controls.Add(control.GetControlName(), control);
         }

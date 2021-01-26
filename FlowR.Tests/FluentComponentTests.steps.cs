@@ -1,4 +1,5 @@
 using FlowR.Core.Tags;
+using FlowR.Tests.Mock;
 using FlowR.UI;
 using TechTalk.SpecFlow;
 using Xunit;
@@ -9,6 +10,9 @@ namespace FlowR.Tests
     [Scope(Feature = "Fluent tests")]
     public class BootstrapFluentTests : BaseTest
     {
+        /// <summary>
+        ///     FluentComponent mock
+        /// </summary>
         public FluentComponent<Div> FluentDiv;
 
         [Given(@"I create a full Fluent div")] public void GivenCreateFluentDiv()

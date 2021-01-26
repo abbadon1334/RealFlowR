@@ -58,7 +58,7 @@ namespace FlowR.Core.Message
             /// <summary>
             ///     Add a custom method to an Element
             /// </summary>
-            AddMethod
+            AddMethod,
         }
 
         /// <inheritdoc />
@@ -66,9 +66,15 @@ namespace FlowR.Core.Message
         {
             Action = action;
 
-            if (node != null) AddArgument(node.GetUuid());
+            if (node != null)
+            {
+                AddArgument(node.GetUuid());
+            }
 
-            foreach (var o in args) AddArgument(o);
+            foreach (var o in args)
+            {
+                AddArgument(o);
+            }
         }
         /// <summary>
         ///     Requested Action

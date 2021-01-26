@@ -22,7 +22,7 @@ namespace FlowR.Core.Message
             /// <summary>
             ///     Set Property
             /// </summary>
-            SetProperty
+            SetProperty,
         }
 
         /// <inheritdoc />
@@ -32,10 +32,13 @@ namespace FlowR.Core.Message
 
             var argList = new List<string>(arguments ?? Array.Empty<string>())
             {
-                name
+                name,
             };
 
-            foreach (var argument in argList) AddArgument(argument);
+            foreach (var argument in argList)
+            {
+                AddArgument(argument);
+            }
         }
         /// <summary>
         ///     Requested Action

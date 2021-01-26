@@ -27,7 +27,7 @@ namespace FlowR.Core.Message
             /// <summary>
             ///     Add link script and wait until fully loaded
             /// </summary>
-            AddStylesheetWaitLoad
+            AddStylesheetWaitLoad,
 
         }
 
@@ -36,7 +36,10 @@ namespace FlowR.Core.Message
         {
             Action = action;
             AddArgument(name);
-            if (arguments != null) AddArgument(arguments);
+            if (arguments != null)
+            {
+                AddArgument(arguments);
+            }
         }
 
         /// <summary>

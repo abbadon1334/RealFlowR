@@ -21,7 +21,7 @@ namespace FlowR.UI.Components
         /// <inheritdoc />
         protected override Dictionary<string, string> DefaultAttributes { get; set; } = new()
         {
-            { "class", "nav-item" }
+            { "class", "nav-item" },
         };
 
         /// <inheritdoc />

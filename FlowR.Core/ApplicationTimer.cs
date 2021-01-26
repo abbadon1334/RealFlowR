@@ -36,7 +36,10 @@ namespace FlowR.Core
             {
                 _callback((Timer)o, args);
 
-                if (!_infinite) ((Timer)o).Stop();
+                if (!_infinite)
+                {
+                    ((Timer)o).Stop();
+                }
             };
             _timer.AutoReset = _infinite;
             _timer.Enabled = true;

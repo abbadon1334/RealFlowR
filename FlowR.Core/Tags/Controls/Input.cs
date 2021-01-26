@@ -10,7 +10,7 @@ namespace FlowR.Core.Tags.Controls
         /// <inheritdoc />
         protected override Dictionary<string, string> DefaultAttributes => new()
         {
-            { "type", ControlType }
+            { "type", ControlType },
         };
 
         /// <inheritdoc />
