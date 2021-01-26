@@ -1,0 +1,258 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.UI.ResponsiveViewports
+  commentId: T:FlowR.UI.ResponsiveViewports
+  id: ResponsiveViewports
+  parent: FlowR.UI
+  children:
+  - FlowR.UI.ResponsiveViewports.Fluid
+  - FlowR.UI.ResponsiveViewports.Lg
+  - FlowR.UI.ResponsiveViewports.Md
+  - FlowR.UI.ResponsiveViewports.Sm
+  - FlowR.UI.ResponsiveViewports.Xl
+  - FlowR.UI.ResponsiveViewports.Xxl
+  langs:
+  - csharp
+  - vb
+  name: ResponsiveViewports
+  nameWithType: ResponsiveViewports
+  fullName: FlowR.UI.ResponsiveViewports
+  type: Enum
+  source:
+    remote:
+      path: FlowR.UI/ResponsiveViewports.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: ResponsiveViewports
+    path: ../FlowR.UI/ResponsiveViewports.cs
+    startLine: 5
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nViewports enum\n"
+  example: []
+  syntax:
+    content: public enum ResponsiveViewports
+    content.vb: Public Enum ResponsiveViewports
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: FlowR.UI.ResponsiveViewports.Sm
+  commentId: F:FlowR.UI.ResponsiveViewports.Sm
+  id: Sm
+  parent: FlowR.UI.ResponsiveViewports
+  langs:
+  - csharp
+  - vb
+  name: Sm
+  nameWithType: ResponsiveViewports.Sm
+  fullName: FlowR.UI.ResponsiveViewports.Sm
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/ResponsiveViewports.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Sm
+    path: ../FlowR.UI/ResponsiveViewports.cs
+    startLine: 10
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nSM\n"
+  example: []
+  syntax:
+    content: Sm = 0
+    return:
+      type: FlowR.UI.ResponsiveViewports
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.ResponsiveViewports.Md
+  commentId: F:FlowR.UI.ResponsiveViewports.Md
+  id: Md
+  parent: FlowR.UI.ResponsiveViewports
+  langs:
+  - csharp
+  - vb
+  name: Md
+  nameWithType: ResponsiveViewports.Md
+  fullName: FlowR.UI.ResponsiveViewports.Md
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/ResponsiveViewports.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Md
+    path: ../FlowR.UI/ResponsiveViewports.cs
+    startLine: 14
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nMD\n"
+  example: []
+  syntax:
+    content: Md = 1
+    return:
+      type: FlowR.UI.ResponsiveViewports
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.ResponsiveViewports.Lg
+  commentId: F:FlowR.UI.ResponsiveViewports.Lg
+  id: Lg
+  parent: FlowR.UI.ResponsiveViewports
+  langs:
+  - csharp
+  - vb
+  name: Lg
+  nameWithType: ResponsiveViewports.Lg
+  fullName: FlowR.UI.ResponsiveViewports.Lg
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/ResponsiveViewports.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Lg
+    path: ../FlowR.UI/ResponsiveViewports.cs
+    startLine: 18
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nLG\n"
+  example: []
+  syntax:
+    content: Lg = 2
+    return:
+      type: FlowR.UI.ResponsiveViewports
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.ResponsiveViewports.Xl
+  commentId: F:FlowR.UI.ResponsiveViewports.Xl
+  id: Xl
+  parent: FlowR.UI.ResponsiveViewports
+  langs:
+  - csharp
+  - vb
+  name: Xl
+  nameWithType: ResponsiveViewports.Xl
+  fullName: FlowR.UI.ResponsiveViewports.Xl
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/ResponsiveViewports.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Xl
+    path: ../FlowR.UI/ResponsiveViewports.cs
+    startLine: 22
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nXL\n"
+  example: []
+  syntax:
+    content: Xl = 3
+    return:
+      type: FlowR.UI.ResponsiveViewports
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.ResponsiveViewports.Xxl
+  commentId: F:FlowR.UI.ResponsiveViewports.Xxl
+  id: Xxl
+  parent: FlowR.UI.ResponsiveViewports
+  langs:
+  - csharp
+  - vb
+  name: Xxl
+  nameWithType: ResponsiveViewports.Xxl
+  fullName: FlowR.UI.ResponsiveViewports.Xxl
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/ResponsiveViewports.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Xxl
+    path: ../FlowR.UI/ResponsiveViewports.cs
+    startLine: 26
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nXXL\n"
+  example: []
+  syntax:
+    content: Xxl = 4
+    return:
+      type: FlowR.UI.ResponsiveViewports
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.ResponsiveViewports.Fluid
+  commentId: F:FlowR.UI.ResponsiveViewports.Fluid
+  id: Fluid
+  parent: FlowR.UI.ResponsiveViewports
+  langs:
+  - csharp
+  - vb
+  name: Fluid
+  nameWithType: ResponsiveViewports.Fluid
+  fullName: FlowR.UI.ResponsiveViewports.Fluid
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/ResponsiveViewports.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Fluid
+    path: ../FlowR.UI/ResponsiveViewports.cs
+    startLine: 30
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nFLUID\n"
+  example: []
+  syntax:
+    content: Fluid = 5
+    return:
+      type: FlowR.UI.ResponsiveViewports
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: FlowR.UI
+  commentId: N:FlowR.UI
+  name: FlowR.UI
+  nameWithType: FlowR.UI
+  fullName: FlowR.UI
+- uid: FlowR.UI.ResponsiveViewports
+  commentId: T:FlowR.UI.ResponsiveViewports
+  parent: FlowR.UI
+  name: ResponsiveViewports
+  nameWithType: ResponsiveViewports
+  fullName: FlowR.UI.ResponsiveViewports

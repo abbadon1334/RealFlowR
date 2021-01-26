@@ -1,0 +1,468 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.UI.Utils.TextColorEnum
+  commentId: T:FlowR.UI.Utils.TextColorEnum
+  id: TextColorEnum
+  parent: FlowR.UI.Utils
+  children:
+  - FlowR.UI.Utils.TextColorEnum.Body
+  - FlowR.UI.Utils.TextColorEnum.Danger
+  - FlowR.UI.Utils.TextColorEnum.Dark
+  - FlowR.UI.Utils.TextColorEnum.Info
+  - FlowR.UI.Utils.TextColorEnum.Light
+  - FlowR.UI.Utils.TextColorEnum.Muted
+  - FlowR.UI.Utils.TextColorEnum.Primary
+  - FlowR.UI.Utils.TextColorEnum.Secondary
+  - FlowR.UI.Utils.TextColorEnum.Success
+  - FlowR.UI.Utils.TextColorEnum.Transparent
+  - FlowR.UI.Utils.TextColorEnum.Warning
+  - FlowR.UI.Utils.TextColorEnum.White
+  langs:
+  - csharp
+  - vb
+  name: TextColorEnum
+  nameWithType: TextColorEnum
+  fullName: FlowR.UI.Utils.TextColorEnum
+  type: Enum
+  source:
+    remote:
+      path: FlowR.UI/Utils/TextColorEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: TextColorEnum
+    path: ../FlowR.UI/Utils/TextColorEnum.cs
+    startLine: 5
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\nText color Enum\n"
+  example: []
+  syntax:
+    content: public enum TextColorEnum
+    content.vb: Public Enum TextColorEnum
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: FlowR.UI.Utils.TextColorEnum.Primary
+  commentId: F:FlowR.UI.Utils.TextColorEnum.Primary
+  id: Primary
+  parent: FlowR.UI.Utils.TextColorEnum
+  langs:
+  - csharp
+  - vb
+  name: Primary
+  nameWithType: TextColorEnum.Primary
+  fullName: FlowR.UI.Utils.TextColorEnum.Primary
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/TextColorEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Primary
+    path: ../FlowR.UI/Utils/TextColorEnum.cs
+    startLine: 10
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\nprimary color\n"
+  example: []
+  syntax:
+    content: Primary = 0
+    return:
+      type: FlowR.UI.Utils.TextColorEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.Utils.TextColorEnum.Secondary
+  commentId: F:FlowR.UI.Utils.TextColorEnum.Secondary
+  id: Secondary
+  parent: FlowR.UI.Utils.TextColorEnum
+  langs:
+  - csharp
+  - vb
+  name: Secondary
+  nameWithType: TextColorEnum.Secondary
+  fullName: FlowR.UI.Utils.TextColorEnum.Secondary
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/TextColorEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Secondary
+    path: ../FlowR.UI/Utils/TextColorEnum.cs
+    startLine: 15
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\nsecondary color\n"
+  example: []
+  syntax:
+    content: Secondary = 1
+    return:
+      type: FlowR.UI.Utils.TextColorEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.Utils.TextColorEnum.Success
+  commentId: F:FlowR.UI.Utils.TextColorEnum.Success
+  id: Success
+  parent: FlowR.UI.Utils.TextColorEnum
+  langs:
+  - csharp
+  - vb
+  name: Success
+  nameWithType: TextColorEnum.Success
+  fullName: FlowR.UI.Utils.TextColorEnum.Success
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/TextColorEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Success
+    path: ../FlowR.UI/Utils/TextColorEnum.cs
+    startLine: 20
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\nsuccess color\n"
+  example: []
+  syntax:
+    content: Success = 2
+    return:
+      type: FlowR.UI.Utils.TextColorEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.Utils.TextColorEnum.Danger
+  commentId: F:FlowR.UI.Utils.TextColorEnum.Danger
+  id: Danger
+  parent: FlowR.UI.Utils.TextColorEnum
+  langs:
+  - csharp
+  - vb
+  name: Danger
+  nameWithType: TextColorEnum.Danger
+  fullName: FlowR.UI.Utils.TextColorEnum.Danger
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/TextColorEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Danger
+    path: ../FlowR.UI/Utils/TextColorEnum.cs
+    startLine: 25
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\ndanger color\n"
+  example: []
+  syntax:
+    content: Danger = 3
+    return:
+      type: FlowR.UI.Utils.TextColorEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.Utils.TextColorEnum.Warning
+  commentId: F:FlowR.UI.Utils.TextColorEnum.Warning
+  id: Warning
+  parent: FlowR.UI.Utils.TextColorEnum
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: TextColorEnum.Warning
+  fullName: FlowR.UI.Utils.TextColorEnum.Warning
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/TextColorEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Warning
+    path: ../FlowR.UI/Utils/TextColorEnum.cs
+    startLine: 30
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\nwarning color\n"
+  example: []
+  syntax:
+    content: Warning = 4
+    return:
+      type: FlowR.UI.Utils.TextColorEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.Utils.TextColorEnum.Info
+  commentId: F:FlowR.UI.Utils.TextColorEnum.Info
+  id: Info
+  parent: FlowR.UI.Utils.TextColorEnum
+  langs:
+  - csharp
+  - vb
+  name: Info
+  nameWithType: TextColorEnum.Info
+  fullName: FlowR.UI.Utils.TextColorEnum.Info
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/TextColorEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Info
+    path: ../FlowR.UI/Utils/TextColorEnum.cs
+    startLine: 35
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\ninfo color\n"
+  example: []
+  syntax:
+    content: Info = 5
+    return:
+      type: FlowR.UI.Utils.TextColorEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.Utils.TextColorEnum.Light
+  commentId: F:FlowR.UI.Utils.TextColorEnum.Light
+  id: Light
+  parent: FlowR.UI.Utils.TextColorEnum
+  langs:
+  - csharp
+  - vb
+  name: Light
+  nameWithType: TextColorEnum.Light
+  fullName: FlowR.UI.Utils.TextColorEnum.Light
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/TextColorEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Light
+    path: ../FlowR.UI/Utils/TextColorEnum.cs
+    startLine: 40
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\nlight color\n"
+  example: []
+  syntax:
+    content: Light = 6
+    return:
+      type: FlowR.UI.Utils.TextColorEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.Utils.TextColorEnum.Dark
+  commentId: F:FlowR.UI.Utils.TextColorEnum.Dark
+  id: Dark
+  parent: FlowR.UI.Utils.TextColorEnum
+  langs:
+  - csharp
+  - vb
+  name: Dark
+  nameWithType: TextColorEnum.Dark
+  fullName: FlowR.UI.Utils.TextColorEnum.Dark
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/TextColorEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Dark
+    path: ../FlowR.UI/Utils/TextColorEnum.cs
+    startLine: 45
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\ndark color\n"
+  example: []
+  syntax:
+    content: Dark = 7
+    return:
+      type: FlowR.UI.Utils.TextColorEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.Utils.TextColorEnum.White
+  commentId: F:FlowR.UI.Utils.TextColorEnum.White
+  id: White
+  parent: FlowR.UI.Utils.TextColorEnum
+  langs:
+  - csharp
+  - vb
+  name: White
+  nameWithType: TextColorEnum.White
+  fullName: FlowR.UI.Utils.TextColorEnum.White
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/TextColorEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: White
+    path: ../FlowR.UI/Utils/TextColorEnum.cs
+    startLine: 50
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\nwhite color\n"
+  example: []
+  syntax:
+    content: White = 8
+    return:
+      type: FlowR.UI.Utils.TextColorEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.Utils.TextColorEnum.Transparent
+  commentId: F:FlowR.UI.Utils.TextColorEnum.Transparent
+  id: Transparent
+  parent: FlowR.UI.Utils.TextColorEnum
+  langs:
+  - csharp
+  - vb
+  name: Transparent
+  nameWithType: TextColorEnum.Transparent
+  fullName: FlowR.UI.Utils.TextColorEnum.Transparent
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/TextColorEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Transparent
+    path: ../FlowR.UI/Utils/TextColorEnum.cs
+    startLine: 55
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\ntransparent color\n"
+  example: []
+  syntax:
+    content: Transparent = 9
+    return:
+      type: FlowR.UI.Utils.TextColorEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.Utils.TextColorEnum.Body
+  commentId: F:FlowR.UI.Utils.TextColorEnum.Body
+  id: Body
+  parent: FlowR.UI.Utils.TextColorEnum
+  langs:
+  - csharp
+  - vb
+  name: Body
+  nameWithType: TextColorEnum.Body
+  fullName: FlowR.UI.Utils.TextColorEnum.Body
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/TextColorEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Body
+    path: ../FlowR.UI/Utils/TextColorEnum.cs
+    startLine: 60
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\nbody color\n"
+  example: []
+  syntax:
+    content: Body = 10
+    return:
+      type: FlowR.UI.Utils.TextColorEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.Utils.TextColorEnum.Muted
+  commentId: F:FlowR.UI.Utils.TextColorEnum.Muted
+  id: Muted
+  parent: FlowR.UI.Utils.TextColorEnum
+  langs:
+  - csharp
+  - vb
+  name: Muted
+  nameWithType: TextColorEnum.Muted
+  fullName: FlowR.UI.Utils.TextColorEnum.Muted
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/TextColorEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Muted
+    path: ../FlowR.UI/Utils/TextColorEnum.cs
+    startLine: 65
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\nmuted color\n"
+  example: []
+  syntax:
+    content: Muted = 11
+    return:
+      type: FlowR.UI.Utils.TextColorEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: FlowR.UI.Utils
+  commentId: N:FlowR.UI.Utils
+  name: FlowR.UI.Utils
+  nameWithType: FlowR.UI.Utils
+  fullName: FlowR.UI.Utils
+- uid: FlowR.UI.Utils.TextColorEnum
+  commentId: T:FlowR.UI.Utils.TextColorEnum
+  parent: FlowR.UI.Utils
+  name: TextColorEnum
+  nameWithType: TextColorEnum
+  fullName: FlowR.UI.Utils.TextColorEnum

@@ -1,0 +1,153 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.UI.FlexBoxAlign.Items
+  commentId: T:FlowR.UI.FlexBoxAlign.Items
+  id: FlexBoxAlign.Items
+  parent: FlowR.UI
+  children:
+  - FlowR.UI.FlexBoxAlign.Items.Center
+  - FlowR.UI.FlexBoxAlign.Items.End
+  - FlowR.UI.FlexBoxAlign.Items.Start
+  langs:
+  - csharp
+  - vb
+  name: FlexBoxAlign.Items
+  nameWithType: FlexBoxAlign.Items
+  fullName: FlowR.UI.FlexBoxAlign.Items
+  type: Enum
+  source:
+    remote:
+      path: FlowR.UI/FlexBoxAlign.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Items
+    path: ../FlowR.UI/FlexBoxAlign.cs
+    startLine: 41
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nFlexbox align items\n"
+  example: []
+  syntax:
+    content: public enum Items
+    content.vb: Public Enum Items
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: FlowR.UI.FlexBoxAlign.Items.Start
+  commentId: F:FlowR.UI.FlexBoxAlign.Items.Start
+  id: Start
+  parent: FlowR.UI.FlexBoxAlign.Items
+  langs:
+  - csharp
+  - vb
+  name: Start
+  nameWithType: FlexBoxAlign.Items.Start
+  fullName: FlowR.UI.FlexBoxAlign.Items.Start
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/FlexBoxAlign.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Start
+    path: ../FlowR.UI/FlexBoxAlign.cs
+    startLine: 46
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nStart\n"
+  example: []
+  syntax:
+    content: Start = 0
+    return:
+      type: FlowR.UI.FlexBoxAlign.Items
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.FlexBoxAlign.Items.Center
+  commentId: F:FlowR.UI.FlexBoxAlign.Items.Center
+  id: Center
+  parent: FlowR.UI.FlexBoxAlign.Items
+  langs:
+  - csharp
+  - vb
+  name: Center
+  nameWithType: FlexBoxAlign.Items.Center
+  fullName: FlowR.UI.FlexBoxAlign.Items.Center
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/FlexBoxAlign.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Center
+    path: ../FlowR.UI/FlexBoxAlign.cs
+    startLine: 50
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nCenter\n"
+  example: []
+  syntax:
+    content: Center = 1
+    return:
+      type: FlowR.UI.FlexBoxAlign.Items
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.FlexBoxAlign.Items.End
+  commentId: F:FlowR.UI.FlexBoxAlign.Items.End
+  id: End
+  parent: FlowR.UI.FlexBoxAlign.Items
+  langs:
+  - csharp
+  - vb
+  name: End
+  nameWithType: FlexBoxAlign.Items.End
+  fullName: FlowR.UI.FlexBoxAlign.Items.End
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/FlexBoxAlign.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: End
+    path: ../FlowR.UI/FlexBoxAlign.cs
+    startLine: 54
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nEnd\n"
+  example: []
+  syntax:
+    content: End = 2
+    return:
+      type: FlowR.UI.FlexBoxAlign.Items
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: FlowR.UI
+  commentId: N:FlowR.UI
+  name: FlowR.UI
+  nameWithType: FlowR.UI
+  fullName: FlowR.UI
+- uid: FlowR.UI.FlexBoxAlign.Items
+  commentId: T:FlowR.UI.FlexBoxAlign.Items
+  parent: FlowR.UI
+  name: FlexBoxAlign.Items
+  nameWithType: FlexBoxAlign.Items
+  fullName: FlowR.UI.FlexBoxAlign.Items

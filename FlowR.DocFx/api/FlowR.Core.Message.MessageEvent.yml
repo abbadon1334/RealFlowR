@@ -1,0 +1,861 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.Message.MessageEvent
+  commentId: T:FlowR.Core.Message.MessageEvent
+  id: MessageEvent
+  parent: FlowR.Core.Message
+  children:
+  - FlowR.Core.Message.MessageEvent.EventArgs
+  - FlowR.Core.Message.MessageEvent.EventName
+  - FlowR.Core.Message.MessageEvent.FromJson(System.String)
+  - FlowR.Core.Message.MessageEvent.GetRequestedAction
+  langs:
+  - csharp
+  - vb
+  name: MessageEvent
+  nameWithType: MessageEvent
+  fullName: FlowR.Core.Message.MessageEvent
+  type: Class
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageEvent.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageEvent
+    path: ../FlowR.Core/Message/MessageEvent.cs
+    startLine: 10
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nMessage Event sent from client\n"
+  example: []
+  syntax:
+    content: 'public class MessageEvent : Message, IMessage'
+    content.vb: >-
+      Public Class MessageEvent
+          Inherits Message
+          Implements IMessage
+  inheritance:
+  - System.Object
+  - FlowR.Core.Message.Message
+  implements:
+  - FlowR.Core.Message.IMessage
+  inheritedMembers:
+  - FlowR.Core.Message.Message.Uuid
+  - FlowR.Core.Message.Message.GetUuid
+  - FlowR.Core.Message.Message.GetArgumentValues
+  - FlowR.Core.Message.Message.SendMessageAsync(FlowR.Core.ApplicationCommunication)
+  - FlowR.Core.Message.Message.AddArgument(System.Object[])
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: FlowR.Core.Message.MessageEvent.EventArgs
+  commentId: F:FlowR.Core.Message.MessageEvent.EventArgs
+  id: EventArgs
+  parent: FlowR.Core.Message.MessageEvent
+  langs:
+  - csharp
+  - vb
+  name: EventArgs
+  nameWithType: MessageEvent.EventArgs
+  fullName: FlowR.Core.Message.MessageEvent.EventArgs
+  type: Field
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageEvent.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: EventArgs
+    path: ../FlowR.Core/Message/MessageEvent.cs
+    startLine: 17
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nEvent arguments\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonInclude]
+
+      public readonly Dictionary<string, string> EventArgs
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+    content.vb: >-
+      <JsonInclude>
+
+      Public ReadOnly EventArgs As Dictionary(Of String, String)
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIncludeAttribute
+    ctor: System.Text.Json.Serialization.JsonIncludeAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: FlowR.Core.Message.MessageEvent.EventName
+  commentId: P:FlowR.Core.Message.MessageEvent.EventName
+  id: EventName
+  parent: FlowR.Core.Message.MessageEvent
+  langs:
+  - csharp
+  - vb
+  name: EventName
+  nameWithType: MessageEvent.EventName
+  fullName: FlowR.Core.Message.MessageEvent.EventName
+  type: Property
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageEvent.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: EventName
+    path: ../FlowR.Core/Message/MessageEvent.cs
+    startLine: 22
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nName of the Event\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonInclude]
+
+      public string EventName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonInclude>
+
+      Public Property EventName As String
+  overload: FlowR.Core.Message.MessageEvent.EventName*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonIncludeAttribute
+    ctor: System.Text.Json.Serialization.JsonIncludeAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: FlowR.Core.Message.MessageEvent.FromJson(System.String)
+  commentId: M:FlowR.Core.Message.MessageEvent.FromJson(System.String)
+  id: FromJson(System.String)
+  parent: FlowR.Core.Message.MessageEvent
+  langs:
+  - csharp
+  - vb
+  name: FromJson(String)
+  nameWithType: MessageEvent.FromJson(String)
+  fullName: FlowR.Core.Message.MessageEvent.FromJson(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageEvent.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: FromJson
+    path: ../FlowR.Core/Message/MessageEvent.cs
+    startLine: 30
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nConvert JSON to MessageEvent\n"
+  example: []
+  syntax:
+    content: public static MessageEvent FromJson(string json)
+    parameters:
+    - id: json
+      type: System.String
+      description: ''
+    return:
+      type: FlowR.Core.Message.MessageEvent
+      description: ''
+    content.vb: Public Shared Function FromJson(json As String) As MessageEvent
+  overload: FlowR.Core.Message.MessageEvent.FromJson*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: FlowR.Core.Message.MessageEvent.GetRequestedAction
+  commentId: M:FlowR.Core.Message.MessageEvent.GetRequestedAction
+  id: GetRequestedAction
+  parent: FlowR.Core.Message.MessageEvent
+  langs:
+  - csharp
+  - vb
+  name: GetRequestedAction()
+  nameWithType: MessageEvent.GetRequestedAction()
+  fullName: FlowR.Core.Message.MessageEvent.GetRequestedAction()
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageEvent.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: GetRequestedAction
+    path: ../FlowR.Core/Message/MessageEvent.cs
+    startLine: 36
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nGet Action as string\n"
+  example: []
+  syntax:
+    content: public override string GetRequestedAction()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function GetRequestedAction As String
+  overridden: FlowR.Core.Message.Message.GetRequestedAction
+  overload: FlowR.Core.Message.MessageEvent.GetRequestedAction*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: FlowR.Core.Message
+  commentId: N:FlowR.Core.Message
+  name: FlowR.Core.Message
+  nameWithType: FlowR.Core.Message
+  fullName: FlowR.Core.Message
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: FlowR.Core.Message.Message
+  commentId: T:FlowR.Core.Message.Message
+  parent: FlowR.Core.Message
+  name: Message
+  nameWithType: Message
+  fullName: FlowR.Core.Message.Message
+- uid: FlowR.Core.Message.IMessage
+  commentId: T:FlowR.Core.Message.IMessage
+  parent: FlowR.Core.Message
+  name: IMessage
+  nameWithType: IMessage
+  fullName: FlowR.Core.Message.IMessage
+- uid: FlowR.Core.Message.Message.Uuid
+  commentId: F:FlowR.Core.Message.Message.Uuid
+  parent: FlowR.Core.Message.Message
+  name: Uuid
+  nameWithType: Message.Uuid
+  fullName: FlowR.Core.Message.Message.Uuid
+- uid: FlowR.Core.Message.Message.GetUuid
+  commentId: M:FlowR.Core.Message.Message.GetUuid
+  parent: FlowR.Core.Message.Message
+  name: GetUuid()
+  nameWithType: Message.GetUuid()
+  fullName: FlowR.Core.Message.Message.GetUuid()
+  spec.csharp:
+  - uid: FlowR.Core.Message.Message.GetUuid
+    name: GetUuid
+    nameWithType: Message.GetUuid
+    fullName: FlowR.Core.Message.Message.GetUuid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.Message.GetUuid
+    name: GetUuid
+    nameWithType: Message.GetUuid
+    fullName: FlowR.Core.Message.Message.GetUuid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.Message.GetArgumentValues
+  commentId: M:FlowR.Core.Message.Message.GetArgumentValues
+  parent: FlowR.Core.Message.Message
+  name: GetArgumentValues()
+  nameWithType: Message.GetArgumentValues()
+  fullName: FlowR.Core.Message.Message.GetArgumentValues()
+  spec.csharp:
+  - uid: FlowR.Core.Message.Message.GetArgumentValues
+    name: GetArgumentValues
+    nameWithType: Message.GetArgumentValues
+    fullName: FlowR.Core.Message.Message.GetArgumentValues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.Message.GetArgumentValues
+    name: GetArgumentValues
+    nameWithType: Message.GetArgumentValues
+    fullName: FlowR.Core.Message.Message.GetArgumentValues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.Message.SendMessageAsync(FlowR.Core.ApplicationCommunication)
+  commentId: M:FlowR.Core.Message.Message.SendMessageAsync(FlowR.Core.ApplicationCommunication)
+  parent: FlowR.Core.Message.Message
+  name: SendMessageAsync(ApplicationCommunication)
+  nameWithType: Message.SendMessageAsync(ApplicationCommunication)
+  fullName: FlowR.Core.Message.Message.SendMessageAsync(FlowR.Core.ApplicationCommunication)
+  spec.csharp:
+  - uid: FlowR.Core.Message.Message.SendMessageAsync(FlowR.Core.ApplicationCommunication)
+    name: SendMessageAsync
+    nameWithType: Message.SendMessageAsync
+    fullName: FlowR.Core.Message.Message.SendMessageAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: FlowR.Core.ApplicationCommunication
+    name: ApplicationCommunication
+    nameWithType: ApplicationCommunication
+    fullName: FlowR.Core.ApplicationCommunication
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.Message.SendMessageAsync(FlowR.Core.ApplicationCommunication)
+    name: SendMessageAsync
+    nameWithType: Message.SendMessageAsync
+    fullName: FlowR.Core.Message.Message.SendMessageAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: FlowR.Core.ApplicationCommunication
+    name: ApplicationCommunication
+    nameWithType: ApplicationCommunication
+    fullName: FlowR.Core.ApplicationCommunication
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.Message.AddArgument(System.Object[])
+  commentId: M:FlowR.Core.Message.Message.AddArgument(System.Object[])
+  parent: FlowR.Core.Message.Message
+  isExternal: true
+  name: AddArgument(Object[])
+  nameWithType: Message.AddArgument(Object[])
+  fullName: FlowR.Core.Message.Message.AddArgument(System.Object[])
+  nameWithType.vb: Message.AddArgument(Object())
+  fullName.vb: FlowR.Core.Message.Message.AddArgument(System.Object())
+  name.vb: AddArgument(Object())
+  spec.csharp:
+  - uid: FlowR.Core.Message.Message.AddArgument(System.Object[])
+    name: AddArgument
+    nameWithType: Message.AddArgument
+    fullName: FlowR.Core.Message.Message.AddArgument
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.Message.AddArgument(System.Object[])
+    name: AddArgument
+    nameWithType: Message.AddArgument
+    fullName: FlowR.Core.Message.Message.AddArgument
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, String>
+  nameWithType: Dictionary<String, String>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.String>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: FlowR.Core.Message.MessageEvent.EventName*
+  commentId: Overload:FlowR.Core.Message.MessageEvent.EventName
+  name: EventName
+  nameWithType: MessageEvent.EventName
+  fullName: FlowR.Core.Message.MessageEvent.EventName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: FlowR.Core.Message.MessageEvent.FromJson*
+  commentId: Overload:FlowR.Core.Message.MessageEvent.FromJson
+  name: FromJson
+  nameWithType: MessageEvent.FromJson
+  fullName: FlowR.Core.Message.MessageEvent.FromJson
+- uid: FlowR.Core.Message.MessageEvent
+  commentId: T:FlowR.Core.Message.MessageEvent
+  parent: FlowR.Core.Message
+  name: MessageEvent
+  nameWithType: MessageEvent
+  fullName: FlowR.Core.Message.MessageEvent
+- uid: FlowR.Core.Message.Message.GetRequestedAction
+  commentId: M:FlowR.Core.Message.Message.GetRequestedAction
+  parent: FlowR.Core.Message.Message
+  name: GetRequestedAction()
+  nameWithType: Message.GetRequestedAction()
+  fullName: FlowR.Core.Message.Message.GetRequestedAction()
+  spec.csharp:
+  - uid: FlowR.Core.Message.Message.GetRequestedAction
+    name: GetRequestedAction
+    nameWithType: Message.GetRequestedAction
+    fullName: FlowR.Core.Message.Message.GetRequestedAction
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.Message.GetRequestedAction
+    name: GetRequestedAction
+    nameWithType: Message.GetRequestedAction
+    fullName: FlowR.Core.Message.Message.GetRequestedAction
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.MessageEvent.GetRequestedAction*
+  commentId: Overload:FlowR.Core.Message.MessageEvent.GetRequestedAction
+  name: GetRequestedAction
+  nameWithType: MessageEvent.GetRequestedAction
+  fullName: FlowR.Core.Message.MessageEvent.GetRequestedAction

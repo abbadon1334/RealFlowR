@@ -1,0 +1,42 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.UI.Utils
+  commentId: N:FlowR.UI.Utils
+  id: FlowR.UI.Utils
+  children:
+  - FlowR.UI.Utils.BorderRadiusEnum
+  - FlowR.UI.Utils.ColorEnum
+  - FlowR.UI.Utils.TextColorEnum
+  langs:
+  - csharp
+  - vb
+  name: FlowR.UI.Utils
+  nameWithType: FlowR.UI.Utils
+  fullName: FlowR.UI.Utils
+  type: Namespace
+  assemblies:
+  - FlowR.UI
+references:
+- uid: FlowR.UI.Utils.BorderRadiusEnum
+  commentId: T:FlowR.UI.Utils.BorderRadiusEnum
+  parent: FlowR.UI.Utils
+  name: BorderRadiusEnum
+  nameWithType: BorderRadiusEnum
+  fullName: FlowR.UI.Utils.BorderRadiusEnum
+- uid: FlowR.UI.Utils.ColorEnum
+  commentId: T:FlowR.UI.Utils.ColorEnum
+  parent: FlowR.UI.Utils
+  name: ColorEnum
+  nameWithType: ColorEnum
+  fullName: FlowR.UI.Utils.ColorEnum
+- uid: FlowR.UI.Utils.TextColorEnum
+  commentId: T:FlowR.UI.Utils.TextColorEnum
+  parent: FlowR.UI.Utils
+  name: TextColorEnum
+  nameWithType: TextColorEnum
+  fullName: FlowR.UI.Utils.TextColorEnum
+- uid: FlowR.UI.Utils
+  commentId: N:FlowR.UI.Utils
+  name: FlowR.UI.Utils
+  nameWithType: FlowR.UI.Utils
+  fullName: FlowR.UI.Utils

@@ -1,0 +1,812 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.Message.MessageElementWithResponse
+  commentId: T:FlowR.Core.Message.MessageElementWithResponse
+  id: MessageElementWithResponse
+  parent: FlowR.Core.Message
+  children:
+  - FlowR.Core.Message.MessageElementWithResponse.#ctor(FlowR.Core.INode,FlowR.Core.Message.MessageElementWithResponse.MessageActions,System.Object[])
+  - FlowR.Core.Message.MessageElementWithResponse.GetRequestedAction
+  langs:
+  - csharp
+  - vb
+  name: MessageElementWithResponse
+  nameWithType: MessageElementWithResponse
+  fullName: FlowR.Core.Message.MessageElementWithResponse
+  type: Class
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageElementWithResponse.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageElementWithResponse
+    path: ../FlowR.Core/Message/MessageElementWithResponse.cs
+    startLine: 5
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nMessage waiting Response for Clientside Nodes\n"
+  example: []
+  syntax:
+    content: 'public class MessageElementWithResponse : MessageResponse, IMessageResponse, IMessage'
+    content.vb: >-
+      Public Class MessageElementWithResponse
+          Inherits MessageResponse
+          Implements IMessageResponse, IMessage
+  inheritance:
+  - System.Object
+  - FlowR.Core.Message.Message
+  - FlowR.Core.Message.MessageResponse
+  implements:
+  - FlowR.Core.Message.IMessageResponse
+  - FlowR.Core.Message.IMessage
+  inheritedMembers:
+  - FlowR.Core.Message.MessageResponse.Response
+  - FlowR.Core.Message.MessageResponse.SetResponse(System.String)
+  - FlowR.Core.Message.MessageResponse.GetResponse
+  - FlowR.Core.Message.MessageResponse.SendMessageAsync(FlowR.Core.ApplicationCommunication)
+  - FlowR.Core.Message.MessageResponse.FromJson(System.String)
+  - FlowR.Core.Message.Message.Uuid
+  - FlowR.Core.Message.Message.GetUuid
+  - FlowR.Core.Message.Message.GetArgumentValues
+  - FlowR.Core.Message.Message.AddArgument(System.Object[])
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: FlowR.Core.Message.MessageElementWithResponse.#ctor(FlowR.Core.INode,FlowR.Core.Message.MessageElementWithResponse.MessageActions,System.Object[])
+  commentId: M:FlowR.Core.Message.MessageElementWithResponse.#ctor(FlowR.Core.INode,FlowR.Core.Message.MessageElementWithResponse.MessageActions,System.Object[])
+  id: '#ctor(FlowR.Core.INode,FlowR.Core.Message.MessageElementWithResponse.MessageActions,System.Object[])'
+  parent: FlowR.Core.Message.MessageElementWithResponse
+  langs:
+  - csharp
+  - vb
+  name: MessageElementWithResponse(INode, MessageElementWithResponse.MessageActions, Object[])
+  nameWithType: MessageElementWithResponse.MessageElementWithResponse(INode, MessageElementWithResponse.MessageActions, Object[])
+  fullName: FlowR.Core.Message.MessageElementWithResponse.MessageElementWithResponse(FlowR.Core.INode, FlowR.Core.Message.MessageElementWithResponse.MessageActions, System.Object[])
+  type: Constructor
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageElementWithResponse.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: .ctor
+    path: ../FlowR.Core/Message/MessageElementWithResponse.cs
+    startLine: 25
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  example: []
+  syntax:
+    content: public MessageElementWithResponse(INode node, MessageElementWithResponse.MessageActions action, params object[] args)
+    parameters:
+    - id: node
+      type: FlowR.Core.INode
+    - id: action
+      type: FlowR.Core.Message.MessageElementWithResponse.MessageActions
+    - id: args
+      type: System.Object[]
+    content.vb: Public Sub New(node As INode, action As MessageElementWithResponse.MessageActions, ParamArray args As Object())
+  overload: FlowR.Core.Message.MessageElementWithResponse.#ctor*
+  nameWithType.vb: MessageElementWithResponse.MessageElementWithResponse(INode, MessageElementWithResponse.MessageActions, Object())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.Message.MessageElementWithResponse.MessageElementWithResponse(FlowR.Core.INode, FlowR.Core.Message.MessageElementWithResponse.MessageActions, System.Object())
+  name.vb: MessageElementWithResponse(INode, MessageElementWithResponse.MessageActions, Object())
+- uid: FlowR.Core.Message.MessageElementWithResponse.GetRequestedAction
+  commentId: M:FlowR.Core.Message.MessageElementWithResponse.GetRequestedAction
+  id: GetRequestedAction
+  parent: FlowR.Core.Message.MessageElementWithResponse
+  langs:
+  - csharp
+  - vb
+  name: GetRequestedAction()
+  nameWithType: MessageElementWithResponse.GetRequestedAction()
+  fullName: FlowR.Core.Message.MessageElementWithResponse.GetRequestedAction()
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageElementWithResponse.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: GetRequestedAction
+    path: ../FlowR.Core/Message/MessageElementWithResponse.cs
+    startLine: 40
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nGet Action as string\n"
+  example: []
+  syntax:
+    content: public override string GetRequestedAction()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function GetRequestedAction As String
+  overridden: FlowR.Core.Message.MessageResponse.GetRequestedAction
+  overload: FlowR.Core.Message.MessageElementWithResponse.GetRequestedAction*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: FlowR.Core.Message
+  commentId: N:FlowR.Core.Message
+  name: FlowR.Core.Message
+  nameWithType: FlowR.Core.Message
+  fullName: FlowR.Core.Message
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: FlowR.Core.Message.Message
+  commentId: T:FlowR.Core.Message.Message
+  parent: FlowR.Core.Message
+  name: Message
+  nameWithType: Message
+  fullName: FlowR.Core.Message.Message
+- uid: FlowR.Core.Message.MessageResponse
+  commentId: T:FlowR.Core.Message.MessageResponse
+  parent: FlowR.Core.Message
+  name: MessageResponse
+  nameWithType: MessageResponse
+  fullName: FlowR.Core.Message.MessageResponse
+- uid: FlowR.Core.Message.IMessageResponse
+  commentId: T:FlowR.Core.Message.IMessageResponse
+  parent: FlowR.Core.Message
+  name: IMessageResponse
+  nameWithType: IMessageResponse
+  fullName: FlowR.Core.Message.IMessageResponse
+- uid: FlowR.Core.Message.IMessage
+  commentId: T:FlowR.Core.Message.IMessage
+  parent: FlowR.Core.Message
+  name: IMessage
+  nameWithType: IMessage
+  fullName: FlowR.Core.Message.IMessage
+- uid: FlowR.Core.Message.MessageResponse.Response
+  commentId: F:FlowR.Core.Message.MessageResponse.Response
+  parent: FlowR.Core.Message.MessageResponse
+  name: Response
+  nameWithType: MessageResponse.Response
+  fullName: FlowR.Core.Message.MessageResponse.Response
+- uid: FlowR.Core.Message.MessageResponse.SetResponse(System.String)
+  commentId: M:FlowR.Core.Message.MessageResponse.SetResponse(System.String)
+  parent: FlowR.Core.Message.MessageResponse
+  isExternal: true
+  name: SetResponse(String)
+  nameWithType: MessageResponse.SetResponse(String)
+  fullName: FlowR.Core.Message.MessageResponse.SetResponse(System.String)
+  spec.csharp:
+  - uid: FlowR.Core.Message.MessageResponse.SetResponse(System.String)
+    name: SetResponse
+    nameWithType: MessageResponse.SetResponse
+    fullName: FlowR.Core.Message.MessageResponse.SetResponse
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.MessageResponse.SetResponse(System.String)
+    name: SetResponse
+    nameWithType: MessageResponse.SetResponse
+    fullName: FlowR.Core.Message.MessageResponse.SetResponse
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.MessageResponse.GetResponse
+  commentId: M:FlowR.Core.Message.MessageResponse.GetResponse
+  parent: FlowR.Core.Message.MessageResponse
+  name: GetResponse()
+  nameWithType: MessageResponse.GetResponse()
+  fullName: FlowR.Core.Message.MessageResponse.GetResponse()
+  spec.csharp:
+  - uid: FlowR.Core.Message.MessageResponse.GetResponse
+    name: GetResponse
+    nameWithType: MessageResponse.GetResponse
+    fullName: FlowR.Core.Message.MessageResponse.GetResponse
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.MessageResponse.GetResponse
+    name: GetResponse
+    nameWithType: MessageResponse.GetResponse
+    fullName: FlowR.Core.Message.MessageResponse.GetResponse
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.MessageResponse.SendMessageAsync(FlowR.Core.ApplicationCommunication)
+  commentId: M:FlowR.Core.Message.MessageResponse.SendMessageAsync(FlowR.Core.ApplicationCommunication)
+  parent: FlowR.Core.Message.MessageResponse
+  name: SendMessageAsync(ApplicationCommunication)
+  nameWithType: MessageResponse.SendMessageAsync(ApplicationCommunication)
+  fullName: FlowR.Core.Message.MessageResponse.SendMessageAsync(FlowR.Core.ApplicationCommunication)
+  spec.csharp:
+  - uid: FlowR.Core.Message.MessageResponse.SendMessageAsync(FlowR.Core.ApplicationCommunication)
+    name: SendMessageAsync
+    nameWithType: MessageResponse.SendMessageAsync
+    fullName: FlowR.Core.Message.MessageResponse.SendMessageAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: FlowR.Core.ApplicationCommunication
+    name: ApplicationCommunication
+    nameWithType: ApplicationCommunication
+    fullName: FlowR.Core.ApplicationCommunication
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.MessageResponse.SendMessageAsync(FlowR.Core.ApplicationCommunication)
+    name: SendMessageAsync
+    nameWithType: MessageResponse.SendMessageAsync
+    fullName: FlowR.Core.Message.MessageResponse.SendMessageAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: FlowR.Core.ApplicationCommunication
+    name: ApplicationCommunication
+    nameWithType: ApplicationCommunication
+    fullName: FlowR.Core.ApplicationCommunication
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.MessageResponse.FromJson(System.String)
+  commentId: M:FlowR.Core.Message.MessageResponse.FromJson(System.String)
+  parent: FlowR.Core.Message.MessageResponse
+  isExternal: true
+  name: FromJson(String)
+  nameWithType: MessageResponse.FromJson(String)
+  fullName: FlowR.Core.Message.MessageResponse.FromJson(System.String)
+  spec.csharp:
+  - uid: FlowR.Core.Message.MessageResponse.FromJson(System.String)
+    name: FromJson
+    nameWithType: MessageResponse.FromJson
+    fullName: FlowR.Core.Message.MessageResponse.FromJson
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.MessageResponse.FromJson(System.String)
+    name: FromJson
+    nameWithType: MessageResponse.FromJson
+    fullName: FlowR.Core.Message.MessageResponse.FromJson
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.Message.Uuid
+  commentId: F:FlowR.Core.Message.Message.Uuid
+  parent: FlowR.Core.Message.Message
+  name: Uuid
+  nameWithType: Message.Uuid
+  fullName: FlowR.Core.Message.Message.Uuid
+- uid: FlowR.Core.Message.Message.GetUuid
+  commentId: M:FlowR.Core.Message.Message.GetUuid
+  parent: FlowR.Core.Message.Message
+  name: GetUuid()
+  nameWithType: Message.GetUuid()
+  fullName: FlowR.Core.Message.Message.GetUuid()
+  spec.csharp:
+  - uid: FlowR.Core.Message.Message.GetUuid
+    name: GetUuid
+    nameWithType: Message.GetUuid
+    fullName: FlowR.Core.Message.Message.GetUuid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.Message.GetUuid
+    name: GetUuid
+    nameWithType: Message.GetUuid
+    fullName: FlowR.Core.Message.Message.GetUuid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.Message.GetArgumentValues
+  commentId: M:FlowR.Core.Message.Message.GetArgumentValues
+  parent: FlowR.Core.Message.Message
+  name: GetArgumentValues()
+  nameWithType: Message.GetArgumentValues()
+  fullName: FlowR.Core.Message.Message.GetArgumentValues()
+  spec.csharp:
+  - uid: FlowR.Core.Message.Message.GetArgumentValues
+    name: GetArgumentValues
+    nameWithType: Message.GetArgumentValues
+    fullName: FlowR.Core.Message.Message.GetArgumentValues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.Message.GetArgumentValues
+    name: GetArgumentValues
+    nameWithType: Message.GetArgumentValues
+    fullName: FlowR.Core.Message.Message.GetArgumentValues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.Message.AddArgument(System.Object[])
+  commentId: M:FlowR.Core.Message.Message.AddArgument(System.Object[])
+  parent: FlowR.Core.Message.Message
+  isExternal: true
+  name: AddArgument(Object[])
+  nameWithType: Message.AddArgument(Object[])
+  fullName: FlowR.Core.Message.Message.AddArgument(System.Object[])
+  nameWithType.vb: Message.AddArgument(Object())
+  fullName.vb: FlowR.Core.Message.Message.AddArgument(System.Object())
+  name.vb: AddArgument(Object())
+  spec.csharp:
+  - uid: FlowR.Core.Message.Message.AddArgument(System.Object[])
+    name: AddArgument
+    nameWithType: Message.AddArgument
+    fullName: FlowR.Core.Message.Message.AddArgument
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.Message.AddArgument(System.Object[])
+    name: AddArgument
+    nameWithType: Message.AddArgument
+    fullName: FlowR.Core.Message.Message.AddArgument
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FlowR.Core.Message.MessageElementWithResponse.#ctor*
+  commentId: Overload:FlowR.Core.Message.MessageElementWithResponse.#ctor
+  name: MessageElementWithResponse
+  nameWithType: MessageElementWithResponse.MessageElementWithResponse
+  fullName: FlowR.Core.Message.MessageElementWithResponse.MessageElementWithResponse
+- uid: FlowR.Core.INode
+  commentId: T:FlowR.Core.INode
+  parent: FlowR.Core
+  name: INode
+  nameWithType: INode
+  fullName: FlowR.Core.INode
+- uid: FlowR.Core.Message.MessageElementWithResponse.MessageActions
+  commentId: T:FlowR.Core.Message.MessageElementWithResponse.MessageActions
+  parent: FlowR.Core.Message
+  name: MessageElementWithResponse.MessageActions
+  nameWithType: MessageElementWithResponse.MessageActions
+  fullName: FlowR.Core.Message.MessageElementWithResponse.MessageActions
+- uid: System.Object[]
+  isExternal: true
+  name: Object[]
+  nameWithType: Object[]
+  fullName: System.Object[]
+  nameWithType.vb: Object()
+  fullName.vb: System.Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: FlowR.Core
+  commentId: N:FlowR.Core
+  name: FlowR.Core
+  nameWithType: FlowR.Core
+  fullName: FlowR.Core
+- uid: FlowR.Core.Message.MessageResponse.GetRequestedAction
+  commentId: M:FlowR.Core.Message.MessageResponse.GetRequestedAction
+  parent: FlowR.Core.Message.MessageResponse
+  name: GetRequestedAction()
+  nameWithType: MessageResponse.GetRequestedAction()
+  fullName: FlowR.Core.Message.MessageResponse.GetRequestedAction()
+  spec.csharp:
+  - uid: FlowR.Core.Message.MessageResponse.GetRequestedAction
+    name: GetRequestedAction
+    nameWithType: MessageResponse.GetRequestedAction
+    fullName: FlowR.Core.Message.MessageResponse.GetRequestedAction
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.Message.MessageResponse.GetRequestedAction
+    name: GetRequestedAction
+    nameWithType: MessageResponse.GetRequestedAction
+    fullName: FlowR.Core.Message.MessageResponse.GetRequestedAction
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.Message.MessageElementWithResponse.GetRequestedAction*
+  commentId: Overload:FlowR.Core.Message.MessageElementWithResponse.GetRequestedAction
+  name: GetRequestedAction
+  nameWithType: MessageElementWithResponse.GetRequestedAction
+  fullName: FlowR.Core.Message.MessageElementWithResponse.GetRequestedAction
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

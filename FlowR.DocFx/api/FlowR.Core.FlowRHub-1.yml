@@ -1,0 +1,1039 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.FlowRHub`1
+  commentId: T:FlowR.Core.FlowRHub`1
+  id: FlowRHub`1
+  parent: FlowR.Core
+  children:
+  - FlowR.Core.FlowRHub`1.#ctor(FlowR.Core.FlowRService{`0},Microsoft.Extensions.Logging.ILogger{`0})
+  - FlowR.Core.FlowRHub`1.ClientEventTriggered(System.String)
+  - FlowR.Core.FlowRHub`1.ClientMessageResponse(System.String)
+  - FlowR.Core.FlowRHub`1.OnConnectedAsync
+  - FlowR.Core.FlowRHub`1.OnDisconnectedAsync(System.Exception)
+  langs:
+  - csharp
+  - vb
+  name: FlowRHub<T>
+  nameWithType: FlowRHub<T>
+  fullName: FlowR.Core.FlowRHub<T>
+  type: Class
+  source:
+    remote:
+      path: FlowR.Core/FlowRHub.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: FlowRHub
+    path: ../FlowR.Core/FlowRHub.cs
+    startLine: 12
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nFlowR Hub Service\n"
+  example: []
+  syntax:
+    content: 'public class FlowRHub<T> : Hub, IDisposable where T : Application'
+    typeParameters:
+    - id: T
+      description: ''
+    content.vb: >-
+      Public Class FlowRHub(Of T As Application)
+          Inherits Hub
+          Implements IDisposable
+  inheritance:
+  - System.Object
+  - Microsoft.AspNetCore.SignalR.Hub
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - Microsoft.AspNetCore.SignalR.Hub.Dispose(System.Boolean)
+  - Microsoft.AspNetCore.SignalR.Hub.Dispose
+  - Microsoft.AspNetCore.SignalR.Hub.Clients
+  - Microsoft.AspNetCore.SignalR.Hub.Context
+  - Microsoft.AspNetCore.SignalR.Hub.Groups
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: FlowRHub(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: FlowR.Core.FlowRHub(Of T)
+  name.vb: FlowRHub(Of T)
+- uid: FlowR.Core.FlowRHub`1.#ctor(FlowR.Core.FlowRService{`0},Microsoft.Extensions.Logging.ILogger{`0})
+  commentId: M:FlowR.Core.FlowRHub`1.#ctor(FlowR.Core.FlowRService{`0},Microsoft.Extensions.Logging.ILogger{`0})
+  id: '#ctor(FlowR.Core.FlowRService{`0},Microsoft.Extensions.Logging.ILogger{`0})'
+  parent: FlowR.Core.FlowRHub`1
+  langs:
+  - csharp
+  - vb
+  name: FlowRHub(FlowRService<T>, ILogger<T>)
+  nameWithType: FlowRHub<T>.FlowRHub(FlowRService<T>, ILogger<T>)
+  fullName: FlowR.Core.FlowRHub<T>.FlowRHub(FlowR.Core.FlowRService<T>, Microsoft.Extensions.Logging.ILogger<T>)
+  type: Constructor
+  source:
+    remote:
+      path: FlowR.Core/FlowRHub.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: .ctor
+    path: ../FlowR.Core/FlowRHub.cs
+    startLine: 22
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nConstructor.\n"
+  example: []
+  syntax:
+    content: public FlowRHub(FlowRService<T> applicationFlowRService, ILogger<T> logger)
+    parameters:
+    - id: applicationFlowRService
+      type: FlowR.Core.FlowRService{{T}}
+      description: ''
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{{T}}
+      description: ''
+    content.vb: Public Sub New(applicationFlowRService As FlowRService(Of T), logger As ILogger(Of T))
+  overload: FlowR.Core.FlowRHub`1.#ctor*
+  nameWithType.vb: FlowRHub(Of T).FlowRHub(FlowRService(Of T), ILogger(Of T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.FlowRHub(Of T).FlowRHub(FlowR.Core.FlowRService(Of T), Microsoft.Extensions.Logging.ILogger(Of T))
+  name.vb: FlowRHub(FlowRService(Of T), ILogger(Of T))
+- uid: FlowR.Core.FlowRHub`1.ClientEventTriggered(System.String)
+  commentId: M:FlowR.Core.FlowRHub`1.ClientEventTriggered(System.String)
+  id: ClientEventTriggered(System.String)
+  parent: FlowR.Core.FlowRHub`1
+  langs:
+  - csharp
+  - vb
+  name: ClientEventTriggered(String)
+  nameWithType: FlowRHub<T>.ClientEventTriggered(String)
+  fullName: FlowR.Core.FlowRHub<T>.ClientEventTriggered(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/FlowRHub.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: ClientEventTriggered
+    path: ../FlowR.Core/FlowRHub.cs
+    startLine: 33
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nCalled from client whenever an event fires on a Node which are listen for that specific event.\n"
+  example: []
+  syntax:
+    content: public void ClientEventTriggered(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: ''
+    content.vb: Public Sub ClientEventTriggered(message As String)
+  overload: FlowR.Core.FlowRHub`1.ClientEventTriggered*
+  see:
+  - linkId: FlowR.Core.INode.On(System.String,System.EventHandler)
+    commentId: M:FlowR.Core.INode.On(System.String,System.EventHandler)
+  nameWithType.vb: FlowRHub(Of T).ClientEventTriggered(String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.FlowRHub(Of T).ClientEventTriggered(System.String)
+- uid: FlowR.Core.FlowRHub`1.ClientMessageResponse(System.String)
+  commentId: M:FlowR.Core.FlowRHub`1.ClientMessageResponse(System.String)
+  id: ClientMessageResponse(System.String)
+  parent: FlowR.Core.FlowRHub`1
+  langs:
+  - csharp
+  - vb
+  name: ClientMessageResponse(String)
+  nameWithType: FlowRHub<T>.ClientMessageResponse(String)
+  fullName: FlowR.Core.FlowRHub<T>.ClientMessageResponse(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/FlowRHub.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: ClientMessageResponse
+    path: ../FlowR.Core/FlowRHub.cs
+    startLine: 45
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nCalled from client when a previous message request a response\n"
+  example: []
+  syntax:
+    content: public void ClientMessageResponse(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: ''
+    content.vb: Public Sub ClientMessageResponse(message As String)
+  overload: FlowR.Core.FlowRHub`1.ClientMessageResponse*
+  see:
+  - linkId: FlowR.Core.ApplicationCommunication.SendMessageWaitResponse(FlowR.Core.Message.IMessageResponse)
+    commentId: M:FlowR.Core.ApplicationCommunication.SendMessageWaitResponse(FlowR.Core.Message.IMessageResponse)
+  nameWithType.vb: FlowRHub(Of T).ClientMessageResponse(String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.FlowRHub(Of T).ClientMessageResponse(System.String)
+- uid: FlowR.Core.FlowRHub`1.OnConnectedAsync
+  commentId: M:FlowR.Core.FlowRHub`1.OnConnectedAsync
+  id: OnConnectedAsync
+  parent: FlowR.Core.FlowRHub`1
+  langs:
+  - csharp
+  - vb
+  name: OnConnectedAsync()
+  nameWithType: FlowRHub<T>.OnConnectedAsync()
+  fullName: FlowR.Core.FlowRHub<T>.OnConnectedAsync()
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/FlowRHub.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: OnConnectedAsync
+    path: ../FlowR.Core/FlowRHub.cs
+    startLine: 53
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  example: []
+  syntax:
+    content: public override Task OnConnectedAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overrides Function OnConnectedAsync As Task
+  overridden: Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync
+  overload: FlowR.Core.FlowRHub`1.OnConnectedAsync*
+  nameWithType.vb: FlowRHub(Of T).OnConnectedAsync()
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: FlowR.Core.FlowRHub(Of T).OnConnectedAsync()
+- uid: FlowR.Core.FlowRHub`1.OnDisconnectedAsync(System.Exception)
+  commentId: M:FlowR.Core.FlowRHub`1.OnDisconnectedAsync(System.Exception)
+  id: OnDisconnectedAsync(System.Exception)
+  parent: FlowR.Core.FlowRHub`1
+  langs:
+  - csharp
+  - vb
+  name: OnDisconnectedAsync(Exception)
+  nameWithType: FlowRHub<T>.OnDisconnectedAsync(Exception)
+  fullName: FlowR.Core.FlowRHub<T>.OnDisconnectedAsync(System.Exception)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/FlowRHub.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: OnDisconnectedAsync
+    path: ../FlowR.Core/FlowRHub.cs
+    startLine: 60
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  example: []
+  syntax:
+    content: public override Task OnDisconnectedAsync(Exception e)
+    parameters:
+    - id: e
+      type: System.Exception
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overrides Function OnDisconnectedAsync(e As Exception) As Task
+  overridden: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+  overload: FlowR.Core.FlowRHub`1.OnDisconnectedAsync*
+  nameWithType.vb: FlowRHub(Of T).OnDisconnectedAsync(Exception)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: FlowR.Core.FlowRHub(Of T).OnDisconnectedAsync(System.Exception)
+references:
+- uid: FlowR.Core
+  commentId: N:FlowR.Core
+  name: FlowR.Core
+  nameWithType: FlowR.Core
+  fullName: FlowR.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Microsoft.AspNetCore.SignalR.Hub
+  commentId: T:Microsoft.AspNetCore.SignalR.Hub
+  parent: Microsoft.AspNetCore.SignalR
+  isExternal: true
+  name: Hub
+  nameWithType: Hub
+  fullName: Microsoft.AspNetCore.SignalR.Hub
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Microsoft.AspNetCore.SignalR.Hub.Dispose(System.Boolean)
+  commentId: M:Microsoft.AspNetCore.SignalR.Hub.Dispose(System.Boolean)
+  parent: Microsoft.AspNetCore.SignalR.Hub
+  isExternal: true
+  name: Dispose(Boolean)
+  nameWithType: Hub.Dispose(Boolean)
+  fullName: Microsoft.AspNetCore.SignalR.Hub.Dispose(System.Boolean)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: Hub.Dispose
+    fullName: Microsoft.AspNetCore.SignalR.Hub.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: Hub.Dispose
+    fullName: Microsoft.AspNetCore.SignalR.Hub.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.SignalR.Hub.Dispose
+  commentId: M:Microsoft.AspNetCore.SignalR.Hub.Dispose
+  parent: Microsoft.AspNetCore.SignalR.Hub
+  isExternal: true
+  name: Dispose()
+  nameWithType: Hub.Dispose()
+  fullName: Microsoft.AspNetCore.SignalR.Hub.Dispose()
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.Dispose
+    name: Dispose
+    nameWithType: Hub.Dispose
+    fullName: Microsoft.AspNetCore.SignalR.Hub.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.Dispose
+    name: Dispose
+    nameWithType: Hub.Dispose
+    fullName: Microsoft.AspNetCore.SignalR.Hub.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.SignalR.Hub.Clients
+  commentId: P:Microsoft.AspNetCore.SignalR.Hub.Clients
+  parent: Microsoft.AspNetCore.SignalR.Hub
+  isExternal: true
+  name: Clients
+  nameWithType: Hub.Clients
+  fullName: Microsoft.AspNetCore.SignalR.Hub.Clients
+- uid: Microsoft.AspNetCore.SignalR.Hub.Context
+  commentId: P:Microsoft.AspNetCore.SignalR.Hub.Context
+  parent: Microsoft.AspNetCore.SignalR.Hub
+  isExternal: true
+  name: Context
+  nameWithType: Hub.Context
+  fullName: Microsoft.AspNetCore.SignalR.Hub.Context
+- uid: Microsoft.AspNetCore.SignalR.Hub.Groups
+  commentId: P:Microsoft.AspNetCore.SignalR.Hub.Groups
+  parent: Microsoft.AspNetCore.SignalR.Hub
+  isExternal: true
+  name: Groups
+  nameWithType: Hub.Groups
+  fullName: Microsoft.AspNetCore.SignalR.Hub.Groups
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.AspNetCore.SignalR
+  commentId: N:Microsoft.AspNetCore.SignalR
+  isExternal: true
+  name: Microsoft.AspNetCore.SignalR
+  nameWithType: Microsoft.AspNetCore.SignalR
+  fullName: Microsoft.AspNetCore.SignalR
+- uid: FlowR.Core.FlowRHub`1.#ctor*
+  commentId: Overload:FlowR.Core.FlowRHub`1.#ctor
+  name: FlowRHub
+  nameWithType: FlowRHub<T>.FlowRHub
+  fullName: FlowR.Core.FlowRHub<T>.FlowRHub
+  nameWithType.vb: FlowRHub(Of T).FlowRHub
+  fullName.vb: FlowR.Core.FlowRHub(Of T).FlowRHub
+- uid: FlowR.Core.FlowRService{{T}}
+  commentId: T:FlowR.Core.FlowRService{`0}
+  parent: FlowR.Core
+  definition: FlowR.Core.FlowRService`1
+  name: FlowRService<T>
+  nameWithType: FlowRService<T>
+  fullName: FlowR.Core.FlowRService<T>
+  nameWithType.vb: FlowRService(Of T)
+  fullName.vb: FlowR.Core.FlowRService(Of T)
+  name.vb: FlowRService(Of T)
+  spec.csharp:
+  - uid: FlowR.Core.FlowRService`1
+    name: FlowRService
+    nameWithType: FlowRService
+    fullName: FlowR.Core.FlowRService
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: FlowR.Core.FlowRService`1
+    name: FlowRService
+    nameWithType: FlowRService
+    fullName: FlowR.Core.FlowRService
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Logging.ILogger{{T}}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{`0}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  name: ILogger<T>
+  nameWithType: ILogger<T>
+  fullName: Microsoft.Extensions.Logging.ILogger<T>
+  nameWithType.vb: ILogger(Of T)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of T)
+  name.vb: ILogger(Of T)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.FlowRService`1
+  commentId: T:FlowR.Core.FlowRService`1
+  name: FlowRService<T>
+  nameWithType: FlowRService<T>
+  fullName: FlowR.Core.FlowRService<T>
+  nameWithType.vb: FlowRService(Of T)
+  fullName.vb: FlowR.Core.FlowRService(Of T)
+  name.vb: FlowRService(Of T)
+  spec.csharp:
+  - uid: FlowR.Core.FlowRService`1
+    name: FlowRService
+    nameWithType: FlowRService
+    fullName: FlowR.Core.FlowRService
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: FlowR.Core.FlowRService`1
+    name: FlowRService
+    nameWithType: FlowRService
+    fullName: FlowR.Core.FlowRService
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TCategoryName
+    nameWithType: TCategoryName
+    fullName: TCategoryName
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TCategoryName
+    nameWithType: TCategoryName
+    fullName: TCategoryName
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+- uid: FlowR.Core.INode.On(System.String,System.EventHandler)
+  commentId: M:FlowR.Core.INode.On(System.String,System.EventHandler)
+  parent: FlowR.Core.INode
+  isExternal: true
+  name: On(String, EventHandler)
+  nameWithType: INode.On(String, EventHandler)
+  fullName: FlowR.Core.INode.On(System.String, System.EventHandler)
+  spec.csharp:
+  - uid: FlowR.Core.INode.On(System.String,System.EventHandler)
+    name: On
+    nameWithType: INode.On
+    fullName: FlowR.Core.INode.On
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.EventHandler
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: FlowR.Core.INode.On(System.String,System.EventHandler)
+    name: On
+    nameWithType: INode.On
+    fullName: FlowR.Core.INode.On
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.EventHandler
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.FlowRHub`1.ClientEventTriggered*
+  commentId: Overload:FlowR.Core.FlowRHub`1.ClientEventTriggered
+  name: ClientEventTriggered
+  nameWithType: FlowRHub<T>.ClientEventTriggered
+  fullName: FlowR.Core.FlowRHub<T>.ClientEventTriggered
+  nameWithType.vb: FlowRHub(Of T).ClientEventTriggered
+  fullName.vb: FlowR.Core.FlowRHub(Of T).ClientEventTriggered
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: FlowR.Core.INode
+  commentId: T:FlowR.Core.INode
+  parent: FlowR.Core
+  name: INode
+  nameWithType: INode
+  fullName: FlowR.Core.INode
+- uid: FlowR.Core.ApplicationCommunication.SendMessageWaitResponse(FlowR.Core.Message.IMessageResponse)
+  commentId: M:FlowR.Core.ApplicationCommunication.SendMessageWaitResponse(FlowR.Core.Message.IMessageResponse)
+  isExternal: true
+- uid: FlowR.Core.FlowRHub`1.ClientMessageResponse*
+  commentId: Overload:FlowR.Core.FlowRHub`1.ClientMessageResponse
+  name: ClientMessageResponse
+  nameWithType: FlowRHub<T>.ClientMessageResponse
+  fullName: FlowR.Core.FlowRHub<T>.ClientMessageResponse
+  nameWithType.vb: FlowRHub(Of T).ClientMessageResponse
+  fullName.vb: FlowR.Core.FlowRHub(Of T).ClientMessageResponse
+- uid: Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync
+  commentId: M:Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync
+  parent: Microsoft.AspNetCore.SignalR.Hub
+  isExternal: true
+  name: OnConnectedAsync()
+  nameWithType: Hub.OnConnectedAsync()
+  fullName: Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync()
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync
+    name: OnConnectedAsync
+    nameWithType: Hub.OnConnectedAsync
+    fullName: Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync
+    name: OnConnectedAsync
+    nameWithType: Hub.OnConnectedAsync
+    fullName: Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.FlowRHub`1.OnConnectedAsync*
+  commentId: Overload:FlowR.Core.FlowRHub`1.OnConnectedAsync
+  name: OnConnectedAsync
+  nameWithType: FlowRHub<T>.OnConnectedAsync
+  fullName: FlowR.Core.FlowRHub<T>.OnConnectedAsync
+  nameWithType.vb: FlowRHub(Of T).OnConnectedAsync
+  fullName.vb: FlowR.Core.FlowRHub(Of T).OnConnectedAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+  commentId: M:Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+  parent: Microsoft.AspNetCore.SignalR.Hub
+  isExternal: true
+  name: OnDisconnectedAsync(Exception)
+  nameWithType: Hub.OnDisconnectedAsync(Exception)
+  fullName: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+    name: OnDisconnectedAsync
+    nameWithType: Hub.OnDisconnectedAsync
+    fullName: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+    name: OnDisconnectedAsync
+    nameWithType: Hub.OnDisconnectedAsync
+    fullName: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: FlowR.Core.FlowRHub`1.OnDisconnectedAsync*
+  commentId: Overload:FlowR.Core.FlowRHub`1.OnDisconnectedAsync
+  name: OnDisconnectedAsync
+  nameWithType: FlowRHub<T>.OnDisconnectedAsync
+  fullName: FlowR.Core.FlowRHub<T>.OnDisconnectedAsync
+  nameWithType.vb: FlowRHub(Of T).OnDisconnectedAsync
+  fullName.vb: FlowR.Core.FlowRHub(Of T).OnDisconnectedAsync
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception

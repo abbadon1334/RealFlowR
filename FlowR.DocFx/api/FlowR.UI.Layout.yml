@@ -1,0 +1,41 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.UI.Layout
+  commentId: N:FlowR.UI.Layout
+  id: FlowR.UI.Layout
+  children:
+  - FlowR.UI.Layout.Container
+  - FlowR.UI.Layout.ContainerRow
+  - FlowR.UI.Layout.ContainerRowColumn
+  langs:
+  - csharp
+  - vb
+  name: FlowR.UI.Layout
+  nameWithType: FlowR.UI.Layout
+  fullName: FlowR.UI.Layout
+  type: Namespace
+  assemblies:
+  - FlowR.UI
+references:
+- uid: FlowR.UI.Layout.Container
+  commentId: T:FlowR.UI.Layout.Container
+  parent: FlowR.UI.Layout
+  name: Container
+  nameWithType: Container
+  fullName: FlowR.UI.Layout.Container
+- uid: FlowR.UI.Layout.ContainerRow
+  commentId: T:FlowR.UI.Layout.ContainerRow
+  parent: FlowR.UI.Layout
+  name: ContainerRow
+  nameWithType: ContainerRow
+  fullName: FlowR.UI.Layout.ContainerRow
+- uid: FlowR.UI.Layout.ContainerRowColumn
+  commentId: T:FlowR.UI.Layout.ContainerRowColumn
+  name: ContainerRowColumn
+  nameWithType: ContainerRowColumn
+  fullName: FlowR.UI.Layout.ContainerRowColumn
+- uid: FlowR.UI.Layout
+  commentId: N:FlowR.UI.Layout
+  name: FlowR.UI.Layout
+  nameWithType: FlowR.UI.Layout
+  fullName: FlowR.UI.Layout

@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.Exceptions
+  commentId: N:FlowR.Core.Exceptions
+  id: FlowR.Core.Exceptions
+  children:
+  - FlowR.Core.Exceptions.ElementNotFoundException
+  langs:
+  - csharp
+  - vb
+  name: FlowR.Core.Exceptions
+  nameWithType: FlowR.Core.Exceptions
+  fullName: FlowR.Core.Exceptions
+  type: Namespace
+  assemblies:
+  - FlowR.Core
+references:
+- uid: FlowR.Core.Exceptions.ElementNotFoundException
+  commentId: T:FlowR.Core.Exceptions.ElementNotFoundException
+  name: ElementNotFoundException
+  nameWithType: ElementNotFoundException
+  fullName: FlowR.Core.Exceptions.ElementNotFoundException

@@ -1,0 +1,578 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.Message.MessageGlobalWithResponse.Factory
+  commentId: T:FlowR.Core.Message.MessageGlobalWithResponse.Factory
+  id: MessageGlobalWithResponse.Factory
+  parent: FlowR.Core.Message
+  children:
+  - FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalAddScriptWaitLoad(System.String)
+  - FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalAddStylesheetWaitLoad(System.String)
+  - FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalCallMethodWaitResponse(System.String,System.String[])
+  - FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalGetPropertyWaitResponse(System.String)
+  langs:
+  - csharp
+  - vb
+  name: MessageGlobalWithResponse.Factory
+  nameWithType: MessageGlobalWithResponse.Factory
+  fullName: FlowR.Core.Message.MessageGlobalWithResponse.Factory
+  type: Class
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageGlobalWithResponse.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Factory
+    path: ../FlowR.Core/Message/MessageGlobalWithResponse.cs
+    startLine: 58
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nMessage factory\n"
+  example: []
+  syntax:
+    content: public static class Factory
+    content.vb: Public Module Factory
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalCallMethodWaitResponse(System.String,System.String[])
+  commentId: M:FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalCallMethodWaitResponse(System.String,System.String[])
+  id: MessageGlobalCallMethodWaitResponse(System.String,System.String[])
+  parent: FlowR.Core.Message.MessageGlobalWithResponse.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageGlobalCallMethodWaitResponse(String, String[])
+  nameWithType: MessageGlobalWithResponse.Factory.MessageGlobalCallMethodWaitResponse(String, String[])
+  fullName: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalCallMethodWaitResponse(System.String, System.String[])
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageGlobalWithResponse.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageGlobalCallMethodWaitResponse
+    path: ../FlowR.Core/Message/MessageGlobalWithResponse.cs
+    startLine: 67
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nMessage Global CallMethod Wait Response\n"
+  example: []
+  syntax:
+    content: public static IMessageResponse MessageGlobalCallMethodWaitResponse(string name, string[] arguments)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    - id: arguments
+      type: System.String[]
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessageResponse
+      description: ''
+    content.vb: Public Shared Function MessageGlobalCallMethodWaitResponse(name As String, arguments As String()) As IMessageResponse
+  overload: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalCallMethodWaitResponse*
+  nameWithType.vb: MessageGlobalWithResponse.Factory.MessageGlobalCallMethodWaitResponse(String, String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalCallMethodWaitResponse(System.String, System.String())
+  name.vb: MessageGlobalCallMethodWaitResponse(String, String())
+- uid: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalGetPropertyWaitResponse(System.String)
+  commentId: M:FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalGetPropertyWaitResponse(System.String)
+  id: MessageGlobalGetPropertyWaitResponse(System.String)
+  parent: FlowR.Core.Message.MessageGlobalWithResponse.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageGlobalGetPropertyWaitResponse(String)
+  nameWithType: MessageGlobalWithResponse.Factory.MessageGlobalGetPropertyWaitResponse(String)
+  fullName: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalGetPropertyWaitResponse(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageGlobalWithResponse.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageGlobalGetPropertyWaitResponse
+    path: ../FlowR.Core/Message/MessageGlobalWithResponse.cs
+    startLine: 81
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nMessage Global GetPropertyWaitResponse\n"
+  example: []
+  syntax:
+    content: public static IMessageResponse MessageGlobalGetPropertyWaitResponse(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessageResponse
+      description: ''
+    content.vb: Public Shared Function MessageGlobalGetPropertyWaitResponse(name As String) As IMessageResponse
+  overload: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalGetPropertyWaitResponse*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalAddScriptWaitLoad(System.String)
+  commentId: M:FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalAddScriptWaitLoad(System.String)
+  id: MessageGlobalAddScriptWaitLoad(System.String)
+  parent: FlowR.Core.Message.MessageGlobalWithResponse.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageGlobalAddScriptWaitLoad(String)
+  nameWithType: MessageGlobalWithResponse.Factory.MessageGlobalAddScriptWaitLoad(String)
+  fullName: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalAddScriptWaitLoad(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageGlobalWithResponse.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageGlobalAddScriptWaitLoad
+    path: ../FlowR.Core/Message/MessageGlobalWithResponse.cs
+    startLine: 93
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nMessage Global AddScriptWaitLoad\n"
+  example: []
+  syntax:
+    content: public static IMessageResponse MessageGlobalAddScriptWaitLoad(string url)
+    parameters:
+    - id: url
+      type: System.String
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessageResponse
+      description: ''
+    content.vb: Public Shared Function MessageGlobalAddScriptWaitLoad(url As String) As IMessageResponse
+  overload: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalAddScriptWaitLoad*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalAddStylesheetWaitLoad(System.String)
+  commentId: M:FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalAddStylesheetWaitLoad(System.String)
+  id: MessageGlobalAddStylesheetWaitLoad(System.String)
+  parent: FlowR.Core.Message.MessageGlobalWithResponse.Factory
+  langs:
+  - csharp
+  - vb
+  name: MessageGlobalAddStylesheetWaitLoad(String)
+  nameWithType: MessageGlobalWithResponse.Factory.MessageGlobalAddStylesheetWaitLoad(String)
+  fullName: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalAddStylesheetWaitLoad(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/Message/MessageGlobalWithResponse.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: MessageGlobalAddStylesheetWaitLoad
+    path: ../FlowR.Core/Message/MessageGlobalWithResponse.cs
+    startLine: 105
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core.Message
+  summary: "\nMessage Global AddStylesheetWaitLoad\n"
+  example: []
+  syntax:
+    content: public static IMessageResponse MessageGlobalAddStylesheetWaitLoad(string url)
+    parameters:
+    - id: url
+      type: System.String
+      description: ''
+    return:
+      type: FlowR.Core.Message.IMessageResponse
+      description: ''
+    content.vb: Public Shared Function MessageGlobalAddStylesheetWaitLoad(url As String) As IMessageResponse
+  overload: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalAddStylesheetWaitLoad*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: FlowR.Core.Message
+  commentId: N:FlowR.Core.Message
+  name: FlowR.Core.Message
+  nameWithType: FlowR.Core.Message
+  fullName: FlowR.Core.Message
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalCallMethodWaitResponse*
+  commentId: Overload:FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalCallMethodWaitResponse
+  name: MessageGlobalCallMethodWaitResponse
+  nameWithType: MessageGlobalWithResponse.Factory.MessageGlobalCallMethodWaitResponse
+  fullName: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalCallMethodWaitResponse
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: FlowR.Core.Message.IMessageResponse
+  commentId: T:FlowR.Core.Message.IMessageResponse
+  parent: FlowR.Core.Message
+  name: IMessageResponse
+  nameWithType: IMessageResponse
+  fullName: FlowR.Core.Message.IMessageResponse
+- uid: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalGetPropertyWaitResponse*
+  commentId: Overload:FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalGetPropertyWaitResponse
+  name: MessageGlobalGetPropertyWaitResponse
+  nameWithType: MessageGlobalWithResponse.Factory.MessageGlobalGetPropertyWaitResponse
+  fullName: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalGetPropertyWaitResponse
+- uid: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalAddScriptWaitLoad*
+  commentId: Overload:FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalAddScriptWaitLoad
+  name: MessageGlobalAddScriptWaitLoad
+  nameWithType: MessageGlobalWithResponse.Factory.MessageGlobalAddScriptWaitLoad
+  fullName: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalAddScriptWaitLoad
+- uid: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalAddStylesheetWaitLoad*
+  commentId: Overload:FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalAddStylesheetWaitLoad
+  name: MessageGlobalAddStylesheetWaitLoad
+  nameWithType: MessageGlobalWithResponse.Factory.MessageGlobalAddStylesheetWaitLoad
+  fullName: FlowR.Core.Message.MessageGlobalWithResponse.Factory.MessageGlobalAddStylesheetWaitLoad

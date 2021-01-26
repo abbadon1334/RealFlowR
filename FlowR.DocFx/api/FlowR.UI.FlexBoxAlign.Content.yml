@@ -1,0 +1,258 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.UI.FlexBoxAlign.Content
+  commentId: T:FlowR.UI.FlexBoxAlign.Content
+  id: FlexBoxAlign.Content
+  parent: FlowR.UI
+  children:
+  - FlowR.UI.FlexBoxAlign.Content.Around
+  - FlowR.UI.FlexBoxAlign.Content.Between
+  - FlowR.UI.FlexBoxAlign.Content.Center
+  - FlowR.UI.FlexBoxAlign.Content.End
+  - FlowR.UI.FlexBoxAlign.Content.Evenly
+  - FlowR.UI.FlexBoxAlign.Content.Start
+  langs:
+  - csharp
+  - vb
+  name: FlexBoxAlign.Content
+  nameWithType: FlexBoxAlign.Content
+  fullName: FlowR.UI.FlexBoxAlign.Content
+  type: Enum
+  source:
+    remote:
+      path: FlowR.UI/FlexBoxAlign.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Content
+    path: ../FlowR.UI/FlexBoxAlign.cs
+    startLine: 10
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nFlexbox align content\n"
+  example: []
+  syntax:
+    content: public enum Content
+    content.vb: Public Enum Content
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: FlowR.UI.FlexBoxAlign.Content.Start
+  commentId: F:FlowR.UI.FlexBoxAlign.Content.Start
+  id: Start
+  parent: FlowR.UI.FlexBoxAlign.Content
+  langs:
+  - csharp
+  - vb
+  name: Start
+  nameWithType: FlexBoxAlign.Content.Start
+  fullName: FlowR.UI.FlexBoxAlign.Content.Start
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/FlexBoxAlign.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Start
+    path: ../FlowR.UI/FlexBoxAlign.cs
+    startLine: 15
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nStart\n"
+  example: []
+  syntax:
+    content: Start = 0
+    return:
+      type: FlowR.UI.FlexBoxAlign.Content
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.FlexBoxAlign.Content.Center
+  commentId: F:FlowR.UI.FlexBoxAlign.Content.Center
+  id: Center
+  parent: FlowR.UI.FlexBoxAlign.Content
+  langs:
+  - csharp
+  - vb
+  name: Center
+  nameWithType: FlexBoxAlign.Content.Center
+  fullName: FlowR.UI.FlexBoxAlign.Content.Center
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/FlexBoxAlign.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Center
+    path: ../FlowR.UI/FlexBoxAlign.cs
+    startLine: 19
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nCenter\n"
+  example: []
+  syntax:
+    content: Center = 1
+    return:
+      type: FlowR.UI.FlexBoxAlign.Content
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.FlexBoxAlign.Content.End
+  commentId: F:FlowR.UI.FlexBoxAlign.Content.End
+  id: End
+  parent: FlowR.UI.FlexBoxAlign.Content
+  langs:
+  - csharp
+  - vb
+  name: End
+  nameWithType: FlexBoxAlign.Content.End
+  fullName: FlowR.UI.FlexBoxAlign.Content.End
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/FlexBoxAlign.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: End
+    path: ../FlowR.UI/FlexBoxAlign.cs
+    startLine: 23
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nEnd\n"
+  example: []
+  syntax:
+    content: End = 2
+    return:
+      type: FlowR.UI.FlexBoxAlign.Content
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.FlexBoxAlign.Content.Around
+  commentId: F:FlowR.UI.FlexBoxAlign.Content.Around
+  id: Around
+  parent: FlowR.UI.FlexBoxAlign.Content
+  langs:
+  - csharp
+  - vb
+  name: Around
+  nameWithType: FlexBoxAlign.Content.Around
+  fullName: FlowR.UI.FlexBoxAlign.Content.Around
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/FlexBoxAlign.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Around
+    path: ../FlowR.UI/FlexBoxAlign.cs
+    startLine: 27
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nAround\n"
+  example: []
+  syntax:
+    content: Around = 3
+    return:
+      type: FlowR.UI.FlexBoxAlign.Content
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.FlexBoxAlign.Content.Between
+  commentId: F:FlowR.UI.FlexBoxAlign.Content.Between
+  id: Between
+  parent: FlowR.UI.FlexBoxAlign.Content
+  langs:
+  - csharp
+  - vb
+  name: Between
+  nameWithType: FlexBoxAlign.Content.Between
+  fullName: FlowR.UI.FlexBoxAlign.Content.Between
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/FlexBoxAlign.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Between
+    path: ../FlowR.UI/FlexBoxAlign.cs
+    startLine: 31
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nBetween\n"
+  example: []
+  syntax:
+    content: Between = 4
+    return:
+      type: FlowR.UI.FlexBoxAlign.Content
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.FlexBoxAlign.Content.Evenly
+  commentId: F:FlowR.UI.FlexBoxAlign.Content.Evenly
+  id: Evenly
+  parent: FlowR.UI.FlexBoxAlign.Content
+  langs:
+  - csharp
+  - vb
+  name: Evenly
+  nameWithType: FlexBoxAlign.Content.Evenly
+  fullName: FlowR.UI.FlexBoxAlign.Content.Evenly
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/FlexBoxAlign.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Evenly
+    path: ../FlowR.UI/FlexBoxAlign.cs
+    startLine: 35
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI
+  summary: "\nEvenly\n"
+  example: []
+  syntax:
+    content: Evenly = 5
+    return:
+      type: FlowR.UI.FlexBoxAlign.Content
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: FlowR.UI
+  commentId: N:FlowR.UI
+  name: FlowR.UI
+  nameWithType: FlowR.UI
+  fullName: FlowR.UI
+- uid: FlowR.UI.FlexBoxAlign.Content
+  commentId: T:FlowR.UI.FlexBoxAlign.Content
+  parent: FlowR.UI
+  name: FlexBoxAlign.Content
+  nameWithType: FlexBoxAlign.Content
+  fullName: FlowR.UI.FlexBoxAlign.Content

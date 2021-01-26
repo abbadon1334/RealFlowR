@@ -1,0 +1,258 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.UI.Utils.BorderRadiusEnum
+  commentId: T:FlowR.UI.Utils.BorderRadiusEnum
+  id: BorderRadiusEnum
+  parent: FlowR.UI.Utils
+  children:
+  - FlowR.UI.Utils.BorderRadiusEnum.Bottom
+  - FlowR.UI.Utils.BorderRadiusEnum.Circle
+  - FlowR.UI.Utils.BorderRadiusEnum.End
+  - FlowR.UI.Utils.BorderRadiusEnum.Pill
+  - FlowR.UI.Utils.BorderRadiusEnum.Start
+  - FlowR.UI.Utils.BorderRadiusEnum.Top
+  langs:
+  - csharp
+  - vb
+  name: BorderRadiusEnum
+  nameWithType: BorderRadiusEnum
+  fullName: FlowR.UI.Utils.BorderRadiusEnum
+  type: Enum
+  source:
+    remote:
+      path: FlowR.UI/Utils/BorderRadiusEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: BorderRadiusEnum
+    path: ../FlowR.UI/Utils/BorderRadiusEnum.cs
+    startLine: 5
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\nBorder radius enum\n"
+  example: []
+  syntax:
+    content: public enum BorderRadiusEnum
+    content.vb: Public Enum BorderRadiusEnum
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: FlowR.UI.Utils.BorderRadiusEnum.Top
+  commentId: F:FlowR.UI.Utils.BorderRadiusEnum.Top
+  id: Top
+  parent: FlowR.UI.Utils.BorderRadiusEnum
+  langs:
+  - csharp
+  - vb
+  name: Top
+  nameWithType: BorderRadiusEnum.Top
+  fullName: FlowR.UI.Utils.BorderRadiusEnum.Top
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/BorderRadiusEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Top
+    path: ../FlowR.UI/Utils/BorderRadiusEnum.cs
+    startLine: 10
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\nradius top\n"
+  example: []
+  syntax:
+    content: Top = 0
+    return:
+      type: FlowR.UI.Utils.BorderRadiusEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.Utils.BorderRadiusEnum.End
+  commentId: F:FlowR.UI.Utils.BorderRadiusEnum.End
+  id: End
+  parent: FlowR.UI.Utils.BorderRadiusEnum
+  langs:
+  - csharp
+  - vb
+  name: End
+  nameWithType: BorderRadiusEnum.End
+  fullName: FlowR.UI.Utils.BorderRadiusEnum.End
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/BorderRadiusEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: End
+    path: ../FlowR.UI/Utils/BorderRadiusEnum.cs
+    startLine: 14
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\nradius right\n"
+  example: []
+  syntax:
+    content: End = 1
+    return:
+      type: FlowR.UI.Utils.BorderRadiusEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.Utils.BorderRadiusEnum.Bottom
+  commentId: F:FlowR.UI.Utils.BorderRadiusEnum.Bottom
+  id: Bottom
+  parent: FlowR.UI.Utils.BorderRadiusEnum
+  langs:
+  - csharp
+  - vb
+  name: Bottom
+  nameWithType: BorderRadiusEnum.Bottom
+  fullName: FlowR.UI.Utils.BorderRadiusEnum.Bottom
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/BorderRadiusEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Bottom
+    path: ../FlowR.UI/Utils/BorderRadiusEnum.cs
+    startLine: 18
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\nradius bottom\n"
+  example: []
+  syntax:
+    content: Bottom = 2
+    return:
+      type: FlowR.UI.Utils.BorderRadiusEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.Utils.BorderRadiusEnum.Start
+  commentId: F:FlowR.UI.Utils.BorderRadiusEnum.Start
+  id: Start
+  parent: FlowR.UI.Utils.BorderRadiusEnum
+  langs:
+  - csharp
+  - vb
+  name: Start
+  nameWithType: BorderRadiusEnum.Start
+  fullName: FlowR.UI.Utils.BorderRadiusEnum.Start
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/BorderRadiusEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Start
+    path: ../FlowR.UI/Utils/BorderRadiusEnum.cs
+    startLine: 22
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\nradius left\n"
+  example: []
+  syntax:
+    content: Start = 3
+    return:
+      type: FlowR.UI.Utils.BorderRadiusEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.Utils.BorderRadiusEnum.Circle
+  commentId: F:FlowR.UI.Utils.BorderRadiusEnum.Circle
+  id: Circle
+  parent: FlowR.UI.Utils.BorderRadiusEnum
+  langs:
+  - csharp
+  - vb
+  name: Circle
+  nameWithType: BorderRadiusEnum.Circle
+  fullName: FlowR.UI.Utils.BorderRadiusEnum.Circle
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/BorderRadiusEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Circle
+    path: ../FlowR.UI/Utils/BorderRadiusEnum.cs
+    startLine: 26
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\nradius all circle\n"
+  example: []
+  syntax:
+    content: Circle = 4
+    return:
+      type: FlowR.UI.Utils.BorderRadiusEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: FlowR.UI.Utils.BorderRadiusEnum.Pill
+  commentId: F:FlowR.UI.Utils.BorderRadiusEnum.Pill
+  id: Pill
+  parent: FlowR.UI.Utils.BorderRadiusEnum
+  langs:
+  - csharp
+  - vb
+  name: Pill
+  nameWithType: BorderRadiusEnum.Pill
+  fullName: FlowR.UI.Utils.BorderRadiusEnum.Pill
+  type: Field
+  source:
+    remote:
+      path: FlowR.UI/Utils/BorderRadiusEnum.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Pill
+    path: ../FlowR.UI/Utils/BorderRadiusEnum.cs
+    startLine: 30
+  assemblies:
+  - FlowR.UI
+  namespace: FlowR.UI.Utils
+  summary: "\nradius all pill\n"
+  example: []
+  syntax:
+    content: Pill = 5
+    return:
+      type: FlowR.UI.Utils.BorderRadiusEnum
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: FlowR.UI.Utils
+  commentId: N:FlowR.UI.Utils
+  name: FlowR.UI.Utils
+  nameWithType: FlowR.UI.Utils
+  fullName: FlowR.UI.Utils
+- uid: FlowR.UI.Utils.BorderRadiusEnum
+  commentId: T:FlowR.UI.Utils.BorderRadiusEnum
+  parent: FlowR.UI.Utils
+  name: BorderRadiusEnum
+  nameWithType: BorderRadiusEnum
+  fullName: FlowR.UI.Utils.BorderRadiusEnum

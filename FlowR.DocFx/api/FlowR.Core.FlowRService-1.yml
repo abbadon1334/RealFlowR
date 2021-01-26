@@ -1,0 +1,627 @@
+### YamlMime:ManagedReference
+items:
+- uid: FlowR.Core.FlowRService`1
+  commentId: T:FlowR.Core.FlowRService`1
+  id: FlowRService`1
+  parent: FlowR.Core
+  children:
+  - FlowR.Core.FlowRService`1.Add(System.String,Microsoft.AspNetCore.SignalR.IClientProxy,Microsoft.Extensions.Logging.ILogger{FlowR.Core.Application})
+  - FlowR.Core.FlowRService`1.Get(System.String)
+  - FlowR.Core.FlowRService`1.Remove(System.String)
+  langs:
+  - csharp
+  - vb
+  name: FlowRService<T>
+  nameWithType: FlowRService<T>
+  fullName: FlowR.Core.FlowRService<T>
+  type: Class
+  source:
+    remote:
+      path: FlowR.Core/FlowRService.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: FlowRService
+    path: ../FlowR.Core/FlowRService.cs
+    startLine: 11
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nSingleton service\n"
+  example: []
+  syntax:
+    content: >-
+      public class FlowRService<T>
+          where T : Application
+    typeParameters:
+    - id: T
+      description: ''
+    content.vb: Public Class FlowRService(Of T As Application)
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: FlowRService(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: FlowR.Core.FlowRService(Of T)
+  name.vb: FlowRService(Of T)
+- uid: FlowR.Core.FlowRService`1.Get(System.String)
+  commentId: M:FlowR.Core.FlowRService`1.Get(System.String)
+  id: Get(System.String)
+  parent: FlowR.Core.FlowRService`1
+  langs:
+  - csharp
+  - vb
+  name: Get(String)
+  nameWithType: FlowRService<T>.Get(String)
+  fullName: FlowR.Core.FlowRService<T>.Get(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/FlowRService.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Get
+    path: ../FlowR.Core/FlowRService.cs
+    startLine: 20
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nGet application from application registry\n"
+  example: []
+  syntax:
+    content: public T Get(string connectionId)
+    parameters:
+    - id: connectionId
+      type: System.String
+      description: ''
+    return:
+      type: '{T}'
+      description: ''
+    content.vb: Public Function Get(connectionId As String) As T
+  overload: FlowR.Core.FlowRService`1.Get*
+  nameWithType.vb: FlowRService(Of T).Get(String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.FlowRService(Of T).Get(System.String)
+- uid: FlowR.Core.FlowRService`1.Add(System.String,Microsoft.AspNetCore.SignalR.IClientProxy,Microsoft.Extensions.Logging.ILogger{FlowR.Core.Application})
+  commentId: M:FlowR.Core.FlowRService`1.Add(System.String,Microsoft.AspNetCore.SignalR.IClientProxy,Microsoft.Extensions.Logging.ILogger{FlowR.Core.Application})
+  id: Add(System.String,Microsoft.AspNetCore.SignalR.IClientProxy,Microsoft.Extensions.Logging.ILogger{FlowR.Core.Application})
+  parent: FlowR.Core.FlowRService`1
+  langs:
+  - csharp
+  - vb
+  name: Add(String, IClientProxy, ILogger<Application>)
+  nameWithType: FlowRService<T>.Add(String, IClientProxy, ILogger<Application>)
+  fullName: FlowR.Core.FlowRService<T>.Add(System.String, Microsoft.AspNetCore.SignalR.IClientProxy, Microsoft.Extensions.Logging.ILogger<FlowR.Core.Application>)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/FlowRService.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Add
+    path: ../FlowR.Core/FlowRService.cs
+    startLine: 31
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nAdd Application to Registry\n"
+  example: []
+  syntax:
+    content: public void Add(string connectionId, IClientProxy client, ILogger<Application> logger)
+    parameters:
+    - id: connectionId
+      type: System.String
+      description: ''
+    - id: client
+      type: Microsoft.AspNetCore.SignalR.IClientProxy
+      description: ''
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{FlowR.Core.Application}
+      description: ''
+    content.vb: Public Sub Add(connectionId As String, client As IClientProxy, logger As ILogger(Of Application))
+  overload: FlowR.Core.FlowRService`1.Add*
+  nameWithType.vb: FlowRService(Of T).Add(String, IClientProxy, ILogger(Of Application))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.FlowRService(Of T).Add(System.String, Microsoft.AspNetCore.SignalR.IClientProxy, Microsoft.Extensions.Logging.ILogger(Of FlowR.Core.Application))
+  name.vb: Add(String, IClientProxy, ILogger(Of Application))
+- uid: FlowR.Core.FlowRService`1.Remove(System.String)
+  commentId: M:FlowR.Core.FlowRService`1.Remove(System.String)
+  id: Remove(System.String)
+  parent: FlowR.Core.FlowRService`1
+  langs:
+  - csharp
+  - vb
+  name: Remove(String)
+  nameWithType: FlowRService<T>.Remove(String)
+  fullName: FlowR.Core.FlowRService<T>.Remove(System.String)
+  type: Method
+  source:
+    remote:
+      path: FlowR.Core/FlowRService.cs
+      branch: master
+      repo: https://github.com/abbadon1334/RealFlowR.git
+    id: Remove
+    path: ../FlowR.Core/FlowRService.cs
+    startLine: 45
+  assemblies:
+  - FlowR.Core
+  namespace: FlowR.Core
+  summary: "\nRemove Application from registry\n"
+  example: []
+  syntax:
+    content: public bool Remove(string connectionId)
+    parameters:
+    - id: connectionId
+      type: System.String
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function Remove(connectionId As String) As Boolean
+  overload: FlowR.Core.FlowRService`1.Remove*
+  nameWithType.vb: FlowRService(Of T).Remove(String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: FlowR.Core.FlowRService(Of T).Remove(System.String)
+references:
+- uid: FlowR.Core
+  commentId: N:FlowR.Core
+  name: FlowR.Core
+  nameWithType: FlowR.Core
+  fullName: FlowR.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FlowR.Core.FlowRService`1.Get*
+  commentId: Overload:FlowR.Core.FlowRService`1.Get
+  name: Get
+  nameWithType: FlowRService<T>.Get
+  fullName: FlowR.Core.FlowRService<T>.Get
+  nameWithType.vb: FlowRService(Of T).Get
+  fullName.vb: FlowR.Core.FlowRService(Of T).Get
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: FlowR.Core.FlowRService`1.Add*
+  commentId: Overload:FlowR.Core.FlowRService`1.Add
+  name: Add
+  nameWithType: FlowRService<T>.Add
+  fullName: FlowR.Core.FlowRService<T>.Add
+  nameWithType.vb: FlowRService(Of T).Add
+  fullName.vb: FlowR.Core.FlowRService(Of T).Add
+- uid: Microsoft.AspNetCore.SignalR.IClientProxy
+  commentId: T:Microsoft.AspNetCore.SignalR.IClientProxy
+  parent: Microsoft.AspNetCore.SignalR
+  isExternal: true
+  name: IClientProxy
+  nameWithType: IClientProxy
+  fullName: Microsoft.AspNetCore.SignalR.IClientProxy
+- uid: Microsoft.Extensions.Logging.ILogger{FlowR.Core.Application}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{FlowR.Core.Application}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  name: ILogger<Application>
+  nameWithType: ILogger<Application>
+  fullName: Microsoft.Extensions.Logging.ILogger<FlowR.Core.Application>
+  nameWithType.vb: ILogger(Of Application)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of FlowR.Core.Application)
+  name.vb: ILogger(Of Application)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: FlowR.Core.Application
+    name: Application
+    nameWithType: Application
+    fullName: FlowR.Core.Application
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: FlowR.Core.Application
+    name: Application
+    nameWithType: Application
+    fullName: FlowR.Core.Application
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.SignalR
+  commentId: N:Microsoft.AspNetCore.SignalR
+  isExternal: true
+  name: Microsoft.AspNetCore.SignalR
+  nameWithType: Microsoft.AspNetCore.SignalR
+  fullName: Microsoft.AspNetCore.SignalR
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TCategoryName
+    nameWithType: TCategoryName
+    fullName: TCategoryName
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TCategoryName
+    nameWithType: TCategoryName
+    fullName: TCategoryName
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+- uid: FlowR.Core.FlowRService`1.Remove*
+  commentId: Overload:FlowR.Core.FlowRService`1.Remove
+  name: Remove
+  nameWithType: FlowRService<T>.Remove
+  fullName: FlowR.Core.FlowRService<T>.Remove
+  nameWithType.vb: FlowRService(Of T).Remove
+  fullName.vb: FlowR.Core.FlowRService(Of T).Remove
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
