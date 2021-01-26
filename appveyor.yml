@@ -6,35 +6,22 @@ environment:
 
 image: Visual Studio 2019
 before_build:
-  - ps: |
-      if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE)
-      {
-          git checkout $env:APPVEYOR_REPO_BRANCH -q
-          choco install docfx -y
-          # choco install nuget.commandline -y
-      }
+  - choco install docfx -y
+
 build_script:
   - dotnet build ./FlowR.sln
 
-after_build:
-  - ps: |
-      if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE)
-      {
-          docfx FlowR.DocFx/docfx.json
-          
-          if ($lastexitcode -ne 0){
-            throw [System.Exception] "docfx build failed with exit code $lastexitcode."
-          }
-
-          git config --global core.autocrlf false
-          git config --global credential.helper store
-          git config --global user.email $env:op_build_user_email
-          git config --global user.name $env:op_build_user
-          Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
-          git clone https://github.com/abbadon1334/RealFlowR.git -b gh-pages gh-pages -q
-          Copy-Item ./docs/* ./docs/ -Recurse
-          cd docs
-          git add -A 2>&1
-          git commit -m "CI Updates" -q
-          git push origin gh-pages -q
-      }
+on_success:
+  - docfx FlowR.DocFx/docfx.json
+  - git config --global core.autocrlf false
+  - git config --global credential.helper store
+  - ps : Set-Content -Path "$HOME\.git-credentials" -Value "https://$($env:access_token):x-oauth-basic@github.com`n" -NoNewline
+  - git config --global user.email $env:op_build_user_email
+  - git config --global user.name $env:op_build_user
+  - git clone https://github.com/myaccount/my-project.git --branch gh-pages tmp_docs
+  - cd tmp_docs
+  - git rm -r *
+  - cp -r ../docs/* .
+  - git add . -A
+  - git commit -m "Update generated documentation"
+  - git push origin gh-pages
