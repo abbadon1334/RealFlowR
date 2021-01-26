@@ -389,7 +389,7 @@ namespace FlowR.Core
         ///     Set Uuid, under the hood will call SetAttribute(id, Uuid) 
         /// </summary>
         /// <param name="uuid"></param>
-        /// <exception cref="Exception"></exception>
+        /// <exception></exception>
         protected void SetUuid(string uuid)
         {
             if (!string.IsNullOrEmpty(_uuid)) throw new Exception($"Element Uuid is not empty (actual : '{_uuid}'))");
@@ -403,7 +403,7 @@ namespace FlowR.Core
         /// [internal use] Set Application from owner on init. 
         /// </summary>
         /// <param name="app"></param>
-        /// <exception cref="Exception"></exception>
+        /// <exception></exception>
         protected void SetApplication(Application app)
         {
             if (_application != null) throw new Exception("Application already set");
@@ -521,7 +521,7 @@ namespace FlowR.Core
         /// <summary>
         ///     Validate Node before call init
         /// </summary>
-        /// <exception cref="Exception"></exception>
+        /// <exception></exception>
         protected virtual void ValidateNode()
         {
             if (IsInitialized()) throw new Exception("Cannot initialized twice");
