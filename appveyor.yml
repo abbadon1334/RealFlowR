@@ -15,6 +15,7 @@ on_success:
   - ps : Add-Content "~/.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
   - git config --global user.email "fdanti@gmail.com"
   - git config --global user.name "abbadon1334"
+  - git config -l
   - docfx FlowR.DocFx/docfx.json
   - git clone https://github.com/abbadon1334/RealFlowR.git -b gh-pages tmp_docs
   - cd tmp_docs
