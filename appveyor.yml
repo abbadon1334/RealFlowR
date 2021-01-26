@@ -12,7 +12,7 @@ build_script:
 on_success:
   - git config --global core.autocrlf false
   - git config --global credential.helper store
-  - ps : Add-Content "~/.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - ps : Add-Content "~/.git-credentials" "https://3863e27f8bb5f7ccaff7a8c9163cea054a52caed:x-oauth-basic@github.com`n"
   - git config --global user.email "fdanti@gmail.com"
   - git config --global user.name "abbadon1334"
   - git config -l
