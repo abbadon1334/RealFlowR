@@ -12,7 +12,7 @@ build_script:
 on_success:
   - git config --global core.autocrlf false
   - git config --global credential.helper store
-  - ps : Set-Content -Path "$HOME\.git-credentials" -Value "https://$($env:access_token):x-oauth-basic@github.com`n" -NoNewline
+  - ps : Add-Content "$HOME\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
   - git config --global user.email "fdanti@gmail.com"
   - git config --global user.name "abbadon1334"
   - docfx FlowR.DocFx/docfx.json
@@ -21,5 +21,5 @@ on_success:
   - git rm -r *
   - cp -r ../docs/* .
   - git add --all .
-  - git commit -m "CI Updates"
+  - git commit --message "%APPVEYOR_BUILD_VERSION% commit [skip ci]"
   - git push
