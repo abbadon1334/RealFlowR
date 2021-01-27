@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ApplicationResponses
+    <title>Interface IMessageResponse
    | FlowR - Low Code UI over SignalR </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ApplicationResponses
+    <meta name="title" content="Interface IMessageResponse
    | FlowR - Low Code UI over SignalR ">
     <meta name="generator" content="docfx 2.56.6.0">
     
@@ -68,99 +68,80 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="FlowR.Core.ApplicationResponses">
+            <article class="content wrap" id="_content" data-uid="FlowR.Core.Messages.IMessageResponse">
   
   
-  <h1 id="FlowR_Core_ApplicationResponses" data-uid="FlowR.Core.ApplicationResponses" class="text-break">Class ApplicationResponses
+  <h1 id="FlowR_Core_Messages_IMessageResponse" data-uid="FlowR.Core.Messages.IMessageResponse" class="text-break">Interface IMessageResponse
   </h1>
-  <div class="markdown level0 summary"><p>Logicv class for Message Responses</p>
+  <div class="markdown level0 summary"><p>Message Response</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ApplicationResponses</span></div>
-  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <a class="xref" href="FlowR.Core.Messages.IMessage.html#FlowR_Core_Messages_IMessage_GetUuid">IMessage.GetUuid()</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <a class="xref" href="FlowR.Core.Messages.IMessage.html#FlowR_Core_Messages_IMessage_GetRequestedAction">IMessage.GetRequestedAction()</a>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
+      <a class="xref" href="FlowR.Core.Messages.IMessage.html#FlowR_Core_Messages_IMessage_GetArgumentValues">IMessage.GetArgumentValues()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="FlowR.Core.html">FlowR.Core</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="FlowR.Core.Messages.html">FlowR.Core.Messages</a></h6>
   <h6><strong>Assembly</strong>: FlowR.Core.dll</h6>
-  <h5 id="FlowR_Core_ApplicationResponses_syntax">Syntax</h5>
+  <h5 id="FlowR_Core_Messages_IMessageResponse_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ApplicationResponses</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IMessageResponse : IMessage</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_ApplicationResponses_SetResponse_FlowR_Core_Messages_IMessageResponse_.md&amp;value=---%0Auid%3A%20FlowR.Core.ApplicationResponses.SetResponse(FlowR.Core.Messages.IMessageResponse)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Messages_IMessageResponse_GetResponse.md&amp;value=---%0Auid%3A%20FlowR.Core.Messages.IMessageResponse.GetResponse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/ApplicationResponses.cs/#L53">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Messages/IMessageResponse.cs/#L21">View Source</a>
   </span>
-  <a id="FlowR_Core_ApplicationResponses_SetResponse_" data-uid="FlowR.Core.ApplicationResponses.SetResponse*"></a>
-  <h4 id="FlowR_Core_ApplicationResponses_SetResponse_FlowR_Core_Messages_IMessageResponse_" data-uid="FlowR.Core.ApplicationResponses.SetResponse(FlowR.Core.Messages.IMessageResponse)">SetResponse(IMessageResponse)</h4>
-  <div class="markdown level1 summary"><p>[internal use] Process response from client</p>
+  <a id="FlowR_Core_Messages_IMessageResponse_GetResponse_" data-uid="FlowR.Core.Messages.IMessageResponse.GetResponse*"></a>
+  <h4 id="FlowR_Core_Messages_IMessageResponse_GetResponse" data-uid="FlowR.Core.Messages.IMessageResponse.GetResponse">GetResponse()</h4>
+  <div class="markdown level1 summary"><p>Get Response from message</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetResponse(IMessageResponse message)</code></pre>
+    <pre><code class="lang-csharp hljs">string GetResponse()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FlowR.Core.Messages.IMessageResponse.html">IMessageResponse</a></td>
-        <td><span class="parametername">message</span></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_ApplicationResponses_WaitResponse_FlowR_Core_Application_FlowR_Core_Messages_IMessageResponse_System_Int32_.md&amp;value=---%0Auid%3A%20FlowR.Core.ApplicationResponses.WaitResponse(FlowR.Core.Application%2CFlowR.Core.Messages.IMessageResponse%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Messages_IMessageResponse_SendMessageAsync_FlowR_Core_ApplicationCommunication_.md&amp;value=---%0Auid%3A%20FlowR.Core.Messages.IMessageResponse.SendMessageAsync(FlowR.Core.ApplicationCommunication)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/ApplicationResponses.cs/#L24">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Messages/IMessageResponse.cs/#L27">View Source</a>
   </span>
-  <a id="FlowR_Core_ApplicationResponses_WaitResponse_" data-uid="FlowR.Core.ApplicationResponses.WaitResponse*"></a>
-  <h4 id="FlowR_Core_ApplicationResponses_WaitResponse_FlowR_Core_Application_FlowR_Core_Messages_IMessageResponse_System_Int32_" data-uid="FlowR.Core.ApplicationResponses.WaitResponse(FlowR.Core.Application,FlowR.Core.Messages.IMessageResponse,System.Int32)">WaitResponse(Application, IMessageResponse, Int32)</h4>
-  <div class="markdown level1 summary"><p>[internal use] Send and wait for a response</p>
+  <a id="FlowR_Core_Messages_IMessageResponse_SendMessageAsync_" data-uid="FlowR.Core.Messages.IMessageResponse.SendMessageAsync*"></a>
+  <h4 id="FlowR_Core_Messages_IMessageResponse_SendMessageAsync_FlowR_Core_ApplicationCommunication_" data-uid="FlowR.Core.Messages.IMessageResponse.SendMessageAsync(FlowR.Core.ApplicationCommunication)">SendMessageAsync(ApplicationCommunication)</h4>
+  <div class="markdown level1 summary"><p>Send a message to SignalR Client, wait for response</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; WaitResponse(Application app, IMessageResponse message, int timeoutSeconds = 2)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; SendMessageAsync(ApplicationCommunication comm)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -173,18 +154,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FlowR.Core.Application.html">Application</a></td>
-        <td><span class="parametername">app</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="FlowR.Core.Messages.IMessageResponse.html">IMessageResponse</a></td>
-        <td><span class="parametername">message</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">timeoutSeconds</span></td>
+        <td><a class="xref" href="FlowR.Core.ApplicationCommunication.html">ApplicationCommunication</a></td>
+        <td><span class="parametername">comm</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -204,6 +175,39 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Messages_IMessageResponse_SetResponse_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Messages.IMessageResponse.SetResponse(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Messages/IMessageResponse.cs/#L15">View Source</a>
+  </span>
+  <a id="FlowR_Core_Messages_IMessageResponse_SetResponse_" data-uid="FlowR.Core.Messages.IMessageResponse.SetResponse*"></a>
+  <h4 id="FlowR_Core_Messages_IMessageResponse_SetResponse_System_String_" data-uid="FlowR.Core.Messages.IMessageResponse.SetResponse(System.String)">SetResponse(String)</h4>
+  <div class="markdown level1 summary"><p>Set incoming response to message</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetResponse(string response)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">response</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -212,10 +216,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_ApplicationResponses.md&amp;value=---%0Auid%3A%20FlowR.Core.ApplicationResponses%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Messages_IMessageResponse.md&amp;value=---%0Auid%3A%20FlowR.Core.Messages.IMessageResponse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/ApplicationResponses.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Messages/IMessageResponse.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
