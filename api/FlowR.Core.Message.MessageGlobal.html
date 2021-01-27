@@ -78,7 +78,7 @@
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="FlowR.Core.Message.Message.html">Message</a></div>
     <div class="level2"><span class="xref">MessageGlobal</span></div>
   </div>
@@ -98,7 +98,31 @@
       <a class="xref" href="FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_GetArgumentValues">Message.GetArgumentValues()</a>
     </div>
     <div>
+      <a class="xref" href="FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_SendMessageAsync_FlowR_Core_ApplicationCommunication_">Message.SendMessageAsync(ApplicationCommunication)</a>
+    </div>
+    <div>
       <a class="xref" href="FlowR.Core.Message.Message.html#FlowR_Core_Message_Message_AddArgument_System_Object___">Message.AddArgument(Object[])</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="FlowR.Core.Message.html">FlowR.Core.Message</a></h6>
@@ -111,18 +135,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Message_MessageGlobal__ctor_System_String_System_String___.md&amp;value=---%0Auid%3A%20FlowR.Core.Message.MessageGlobal.%23ctor(System.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Message_MessageGlobal__ctor_FlowR_Core_Message_MessageGlobal_MessageActions_System_String_System_String___.md&amp;value=---%0Auid%3A%20FlowR.Core.Message.MessageGlobal.%23ctor(FlowR.Core.Message.MessageGlobal.MessageActions%2CSystem.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/MessageGlobal.cs/#L26">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/MessageGlobal.cs/#L29">View Source</a>
   </span>
   <a id="FlowR_Core_Message_MessageGlobal__ctor_" data-uid="FlowR.Core.Message.MessageGlobal.#ctor*"></a>
-  <h4 id="FlowR_Core_Message_MessageGlobal__ctor_System_String_System_String___" data-uid="FlowR.Core.Message.MessageGlobal.#ctor(System.String,System.String[])">MessageGlobal(String, String[])</h4>
+  <h4 id="FlowR_Core_Message_MessageGlobal__ctor_FlowR_Core_Message_MessageGlobal_MessageActions_System_String_System_String___" data-uid="FlowR.Core.Message.MessageGlobal.#ctor(FlowR.Core.Message.MessageGlobal.MessageActions,System.String,System.String[])">MessageGlobal(MessageGlobal.MessageActions, String, String[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MessageGlobal(string name, string[] arguments = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public MessageGlobal(MessageGlobal.MessageActions action, string name, string[] arguments = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,12 +159,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="FlowR.Core.Message.MessageGlobal.MessageActions.html">MessageGlobal.MessageActions</a></td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="xref">System.String</span>[]</td>
         <td><span class="parametername">arguments</span></td>
         <td></td>
       </tr>
@@ -153,7 +182,7 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Message_MessageGlobal_Action.md&amp;value=---%0Auid%3A%20FlowR.Core.Message.MessageGlobal.Action%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/MessageGlobal.cs/#L34">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/MessageGlobal.cs/#L46">View Source</a>
   </span>
   <a id="FlowR_Core_Message_MessageGlobal_Action_" data-uid="FlowR.Core.Message.MessageGlobal.Action*"></a>
   <h4 id="FlowR_Core_Message_MessageGlobal_Action" data-uid="FlowR.Core.Message.MessageGlobal.Action">Action</h4>
@@ -162,7 +191,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MessageGlobal.MessageActions Action { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public MessageGlobal.MessageActions Action { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,7 +215,7 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Message_MessageGlobal_GetRequestedAction.md&amp;value=---%0Auid%3A%20FlowR.Core.Message.MessageGlobal.GetRequestedAction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/MessageGlobal.cs/#L37">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/MessageGlobal.cs/#L49">View Source</a>
   </span>
   <a id="FlowR_Core_Message_MessageGlobal_GetRequestedAction_" data-uid="FlowR.Core.Message.MessageGlobal.GetRequestedAction*"></a>
   <h4 id="FlowR_Core_Message_MessageGlobal_GetRequestedAction" data-uid="FlowR.Core.Message.MessageGlobal.GetRequestedAction">GetRequestedAction()</h4>
@@ -207,7 +236,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -229,7 +258,7 @@
                     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Message_MessageGlobal.md&amp;value=---%0Auid%3A%20FlowR.Core.Message.MessageGlobal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/MessageGlobal.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/MessageGlobal.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -78,7 +78,7 @@
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Message</span></div>
       <div class="level2"><a class="xref" href="FlowR.Core.Message.MessageElement.html">MessageElement</a></div>
       <div class="level2"><a class="xref" href="FlowR.Core.Message.MessageEvent.html">MessageEvent</a></div>
@@ -89,11 +89,35 @@
     <h5>Implements</h5>
     <div><a class="xref" href="FlowR.Core.Message.IMessage.html">IMessage</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="FlowR.Core.Message.html">FlowR.Core.Message</a></h6>
   <h6><strong>Assembly</strong>: FlowR.Core.dll</h6>
   <h5 id="FlowR_Core_Message_Message_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Message : object, IMessage</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Message : IMessage</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -102,7 +126,7 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Message_Message__ctor.md&amp;value=---%0Auid%3A%20FlowR.Core.Message.Message.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/Message.cs/#L22">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/Message.cs/#L23">View Source</a>
   </span>
   <a id="FlowR_Core_Message_Message__ctor_" data-uid="FlowR.Core.Message.Message.#ctor*"></a>
   <h4 id="FlowR_Core_Message_Message__ctor" data-uid="FlowR.Core.Message.Message.#ctor">Message()</h4>
@@ -120,7 +144,7 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Message_Message_Uuid.md&amp;value=---%0Auid%3A%20FlowR.Core.Message.Message.Uuid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/Message.cs/#L17">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/Message.cs/#L18">View Source</a>
   </span>
   <h4 id="FlowR_Core_Message_Message_Uuid" data-uid="FlowR.Core.Message.Message.Uuid">Uuid</h4>
   <div class="markdown level1 summary"><p>Message Uuid</p>
@@ -128,7 +152,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Uuid</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonInclude]
+public string Uuid</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,7 +165,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -152,7 +177,7 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Message_Message_AddArgument_System_Object___.md&amp;value=---%0Auid%3A%20FlowR.Core.Message.Message.AddArgument(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/Message.cs/#L56">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/Message.cs/#L61">View Source</a>
   </span>
   <a id="FlowR_Core_Message_Message_AddArgument_" data-uid="FlowR.Core.Message.Message.AddArgument*"></a>
   <h4 id="FlowR_Core_Message_Message_AddArgument_System_Object___" data-uid="FlowR.Core.Message.Message.AddArgument(System.Object[])">AddArgument(Object[])</h4>
@@ -161,7 +186,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddArgument(params object[] values)</code></pre>
+    <pre><code class="lang-csharp hljs">protected void AddArgument(params object[] values)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -174,7 +199,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="xref">System.Object</span>[]</td>
         <td><span class="parametername">values</span></td>
         <td></td>
       </tr>
@@ -185,7 +210,7 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Message_Message_GetArgumentValues.md&amp;value=---%0Auid%3A%20FlowR.Core.Message.Message.GetArgumentValues%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/Message.cs/#L47">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/Message.cs/#L46">View Source</a>
   </span>
   <a id="FlowR_Core_Message_Message_GetArgumentValues_" data-uid="FlowR.Core.Message.Message.GetArgumentValues*"></a>
   <h4 id="FlowR_Core_Message_Message_GetArgumentValues" data-uid="FlowR.Core.Message.Message.GetArgumentValues">GetArgumentValues()</h4>
@@ -206,7 +231,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="xref">System.Object</span>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -216,7 +241,7 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Message_Message_GetRequestedAction.md&amp;value=---%0Auid%3A%20FlowR.Core.Message.Message.GetRequestedAction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/Message.cs/#L41">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/Message.cs/#L42">View Source</a>
   </span>
   <a id="FlowR_Core_Message_Message_GetRequestedAction_" data-uid="FlowR.Core.Message.Message.GetRequestedAction*"></a>
   <h4 id="FlowR_Core_Message_Message_GetRequestedAction" data-uid="FlowR.Core.Message.Message.GetRequestedAction">GetRequestedAction()</h4>
@@ -237,7 +262,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -247,7 +272,7 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Message_Message_GetUuid.md&amp;value=---%0Auid%3A%20FlowR.Core.Message.Message.GetUuid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/Message.cs/#L32">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/Message.cs/#L33">View Source</a>
   </span>
   <a id="FlowR_Core_Message_Message_GetUuid_" data-uid="FlowR.Core.Message.Message.GetUuid*"></a>
   <h4 id="FlowR_Core_Message_Message_GetUuid" data-uid="FlowR.Core.Message.Message.GetUuid">GetUuid()</h4>
@@ -268,7 +293,55 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Message_Message_SendMessageAsync_FlowR_Core_ApplicationCommunication_.md&amp;value=---%0Auid%3A%20FlowR.Core.Message.Message.SendMessageAsync(FlowR.Core.ApplicationCommunication)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/Message.cs/#L52">View Source</a>
+  </span>
+  <a id="FlowR_Core_Message_Message_SendMessageAsync_" data-uid="FlowR.Core.Message.Message.SendMessageAsync*"></a>
+  <h4 id="FlowR_Core_Message_Message_SendMessageAsync_FlowR_Core_ApplicationCommunication_" data-uid="FlowR.Core.Message.Message.SendMessageAsync(FlowR.Core.ApplicationCommunication)">SendMessageAsync(ApplicationCommunication)</h4>
+  <div class="markdown level1 summary"><p>Send a message to SignalR Client, don&apos;t wait for response</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task SendMessageAsync(ApplicationCommunication comm)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.ApplicationCommunication.html">ApplicationCommunication</a></td>
+        <td><span class="parametername">comm</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -288,7 +361,7 @@
                     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Message_Message.md&amp;value=---%0Auid%3A%20FlowR.Core.Message.Message%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/Message.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Message/Message.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

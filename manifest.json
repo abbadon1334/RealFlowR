@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "/github/workspace/docfx",
+  "source_base_path": "D:/a/RealFlowR/RealFlowR/FlowR.DocFx",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Application.html",
-          "hash": "YiK65AzjcCWRoOMo7odp2g=="
+          "hash": "L5spK3Fawy3OR0NFIMv1RQ=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.ApplicationCommunication.html",
-          "hash": "kI4I4DQnZ7qYRsGCaKB7Xg=="
+          "hash": "iTzHOM2PQW7IHcZK7bicSA=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.ApplicationRegistry.html",
-          "hash": "B2iBhoWvq0xIAxdcZq9GDQ=="
+          "hash": "S+d04GHAfUFhNqtTrFkLQQ=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.ApplicationResponses.html",
-          "hash": "2HagSjIMUcGNYnYNF5jMYg=="
+          "hash": "Nr5/9oLQCIDWiwFluP4eZA=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.ApplicationTimer.html",
-          "hash": "faXZY9jPaLnTalbscfxWkQ=="
+          "hash": "4gQ/moKTJvBhoQW10VUjLQ=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.ApplicationTimers.html",
-          "hash": "+O68JlwsKPQ0k9VQU9ZdpQ=="
+          "hash": "kuJjWkTHG0IzB/e6y5bAeA=="
         }
       },
       "is_incremental": false,
@@ -77,11 +77,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.Core.CollectionAddedEventArgs-1.yml",
+      "source_relative_path": "api/FlowR.Core.Exceptions.ElementNotFoundException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/FlowR.Core.CollectionAddedEventArgs-1.html",
-          "hash": "L5QbS0/VQAvrfM+XAZ9jRQ=="
+          "relative_path": "api/FlowR.Core.Exceptions.ElementNotFoundException.html",
+          "hash": "sXlZ68xCAlAr/9VdxUlHMw=="
         }
       },
       "is_incremental": false,
@@ -89,59 +89,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.Core.CollectionChangedEventArgs-1.yml",
+      "source_relative_path": "api/FlowR.Core.Exceptions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/FlowR.Core.CollectionChangedEventArgs-1.html",
-          "hash": "+iE99edx1g63AQrH6NG8cg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.Core.Component-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/FlowR.Core.Component-1.html",
-          "hash": "/9vXfGbJwgPpcDsh5kUeEA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.Core.ComponentControl-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/FlowR.Core.ComponentControl-1.html",
-          "hash": "FdRbeFdODaYrwkzW4cusdQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.Core.ComponentElement-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/FlowR.Core.ComponentElement-1.html",
-          "hash": "bL2UlENUDIhRAV0GKlOrlw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.Core.ComponentRoot.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/FlowR.Core.ComponentRoot.html",
-          "hash": "aJnZNiK53FogeXDxYhfZPA=="
+          "relative_path": "api/FlowR.Core.Exceptions.html",
+          "hash": "l9uk9V7IraKTDql26hHz5w=="
         }
       },
       "is_incremental": false,
@@ -153,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.FlowRHub-1.html",
-          "hash": "ZAHaRBfDSIGLFhFx+E0Jmw=="
+          "hash": "Oa15tr4+xKKfw9HbykF/Pg=="
         }
       },
       "is_incremental": false,
@@ -165,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.FlowRService-1.html",
-          "hash": "2lOo7kEVaZvuupHmoL4J5g=="
+          "hash": "6v0fd8VBJW4DcpROanyT+A=="
         }
       },
       "is_incremental": false,
@@ -173,11 +125,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.Core.IComponentControl.yml",
+      "source_relative_path": "api/FlowR.Core.INode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/FlowR.Core.IComponentControl.html",
-          "hash": "3aySMf2YSv7mvq/V1Az3pQ=="
+          "relative_path": "api/FlowR.Core.INode.html",
+          "hash": "hn6EkYIoblHpM5wPNCMuEA=="
         }
       },
       "is_incremental": false,
@@ -185,11 +137,23 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.Core.Message.Factory.yml",
+      "source_relative_path": "api/FlowR.Core.INodeComponent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/FlowR.Core.Message.Factory.html",
-          "hash": "fFNSec+dvwOISjoZ1l/myQ=="
+          "relative_path": "api/FlowR.Core.INodeComponent.html",
+          "hash": "i/keMpmr/maTnmtCgCZJYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.INodeControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.INodeControl.html",
+          "hash": "C5DHVO2jEsNehT8ktI5SGw=="
         }
       },
       "is_incremental": false,
@@ -201,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Message.IMessage.html",
-          "hash": "fuibQCTKSb/HmCdmq799sA=="
+          "hash": "JP7Gj0/qYmQfQETlTE995A=="
         }
       },
       "is_incremental": false,
@@ -213,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Message.IMessageResponse.html",
-          "hash": "NilXA7Hq+NIKoChEoA/XNw=="
+          "hash": "IDB7xpTp7TBiSE2Sj1Ox4A=="
         }
       },
       "is_incremental": false,
@@ -225,7 +189,19 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Message.Message.html",
-          "hash": "Wre1mbszNUpJlHxkoh0K8g=="
+          "hash": "HTAks2EJTeENhdyTPbjkfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Message.MessageElement.Factory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Message.MessageElement.Factory.html",
+          "hash": "TQO8sfQyk5LHu4QIsiit7A=="
         }
       },
       "is_incremental": false,
@@ -237,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Message.MessageElement.MessageActions.html",
-          "hash": "5DQkGpDdv21mdBLChZsb/Q=="
+          "hash": "gjTOKlLMjyKVoqWwLOaK0w=="
         }
       },
       "is_incremental": false,
@@ -249,7 +225,19 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Message.MessageElement.html",
-          "hash": "2aA7CQm9jwV/5/7FwkDqtQ=="
+          "hash": "rnvqgKiJ9bNVWPZfQHyEvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Message.MessageElementWithResponse.Factory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Message.MessageElementWithResponse.Factory.html",
+          "hash": "xNeFBuwPO47HQlkeVtCQMQ=="
         }
       },
       "is_incremental": false,
@@ -261,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Message.MessageElementWithResponse.MessageActions.html",
-          "hash": "74/uXh0UJZVpRb7VLXYBmA=="
+          "hash": "fM3FStd9woHvKmne0LwQSg=="
         }
       },
       "is_incremental": false,
@@ -273,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Message.MessageElementWithResponse.html",
-          "hash": "BuUO8SzIvxn4Jvr4Z5Uz+g=="
+          "hash": "kvj01gtgbXZ+CM5fkMOPGQ=="
         }
       },
       "is_incremental": false,
@@ -285,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Message.MessageEvent.html",
-          "hash": "IurQnQezhapNdZ9FS5v1iA=="
+          "hash": "9iIxQI3NHE8kaQ++qNaRUQ=="
         }
       },
       "is_incremental": false,
@@ -297,7 +285,19 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Message.MessageEventArgs.html",
-          "hash": "iFwjBW87YjYGdUllcAeP0g=="
+          "hash": "mZpO30npAEwq+UEk1FXCpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Message.MessageGlobal.Factory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Message.MessageGlobal.Factory.html",
+          "hash": "8syxnxlAmEL+SNRfw/xIxw=="
         }
       },
       "is_incremental": false,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Message.MessageGlobal.MessageActions.html",
-          "hash": "S6ZQTirfSIkEXW1IuAOp4A=="
+          "hash": "zx0W0N4EHS21ztSn3Q0wqg=="
         }
       },
       "is_incremental": false,
@@ -321,7 +321,19 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Message.MessageGlobal.html",
-          "hash": "0qZGOx9ZYBdz7XK3Va6JeA=="
+          "hash": "dWLtZJFBTRaDo0jJQ8lIfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Message.MessageGlobalWithResponse.Factory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Message.MessageGlobalWithResponse.Factory.html",
+          "hash": "f25ofgJ1G4uLLFxxk1CN5g=="
         }
       },
       "is_incremental": false,
@@ -333,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Message.MessageGlobalWithResponse.MessageActions.html",
-          "hash": "rZkzHOBDbi4UlBK7g46TKg=="
+          "hash": "jbAJhvjq1Baj8Uurq17jeA=="
         }
       },
       "is_incremental": false,
@@ -345,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Message.MessageGlobalWithResponse.html",
-          "hash": "By8NCjRhGAFzYOFUa1XgTA=="
+          "hash": "YTBHcObLcY5I5MXyKGQ6ag=="
         }
       },
       "is_incremental": false,
@@ -357,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Message.MessageResponse.html",
-          "hash": "ffyo9baHn5Cw3q8uxDlqSQ=="
+          "hash": "+BHaNmJsfPSpE+jPBlHP+A=="
         }
       },
       "is_incremental": false,
@@ -369,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Message.html",
-          "hash": "O5Vcjc6fW9HRAdn6qGfJSw=="
+          "hash": "pB3/4TOn977PqZf6V9dxCg=="
         }
       },
       "is_incremental": false,
@@ -381,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.Node.html",
-          "hash": "sVC8dFalW2vV76Xaiussow=="
+          "hash": "GaLwfPIHU0tCJW8zYXd1XQ=="
         }
       },
       "is_incremental": false,
@@ -389,11 +401,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.Core.NodeCollection-1.yml",
+      "source_relative_path": "api/FlowR.Core.NodeComponent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/FlowR.Core.NodeCollection-1.html",
-          "hash": "AtzRNF4FhzZm7iv6O1C4cQ=="
+          "relative_path": "api/FlowR.Core.NodeComponent.html",
+          "hash": "6U8IQQ2XYgHK3FdutayaSA=="
         }
       },
       "is_incremental": false,
@@ -401,11 +413,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.Core.NodeCollectionAttribute.yml",
+      "source_relative_path": "api/FlowR.Core.NodeComponentRoot.yml",
       "output": {
         ".html": {
-          "relative_path": "api/FlowR.Core.NodeCollectionAttribute.html",
-          "hash": "Xs+XyVANN3i7h+g8019MgA=="
+          "relative_path": "api/FlowR.Core.NodeComponentRoot.html",
+          "hash": "PQFDlVO+0nLhm/lwFqt1sg=="
         }
       },
       "is_incremental": false,
@@ -413,11 +425,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.Core.NodeCollectionEvent.yml",
+      "source_relative_path": "api/FlowR.Core.NodeControl.yml",
       "output": {
         ".html": {
-          "relative_path": "api/FlowR.Core.NodeCollectionEvent.html",
-          "hash": "NF/1nL/HgHrPVL9Xizb7EQ=="
+          "relative_path": "api/FlowR.Core.NodeControl.html",
+          "hash": "8WYDlg0uIuNQvNma4kJ7Fw=="
         }
       },
       "is_incremental": false,
@@ -425,11 +437,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.Core.NodeCollectionNode.yml",
+      "source_relative_path": "api/FlowR.Core.ObservableDictionary-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/FlowR.Core.NodeCollectionNode.html",
-          "hash": "Tp+aBxTGXe0uOsaQG/YGzw=="
+          "relative_path": "api/FlowR.Core.ObservableDictionary-2.html",
+          "hash": "BI2kNkMg1tY7LJQ163xSMQ=="
         }
       },
       "is_incremental": false,
@@ -437,11 +449,1403 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.Core.NodeCollectionProperty.yml",
+      "source_relative_path": "api/FlowR.Core.Tags.A.yml",
       "output": {
         ".html": {
-          "relative_path": "api/FlowR.Core.NodeCollectionProperty.html",
-          "hash": "M+QWRr67IhIzEr5So+5gSg=="
+          "relative_path": "api/FlowR.Core.Tags.A.html",
+          "hash": "+GK03DDG7DRPssKXoaoHBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Abbr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Abbr.html",
+          "hash": "fx6d4dCPy1XaaN3rBjzbMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Address.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Address.html",
+          "hash": "coJCoNKbD/yZ8bPodx3cNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Area.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Area.html",
+          "hash": "iSRybJiCcjcHCPVNXF8ZUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Article.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Article.html",
+          "hash": "Fd9h1hfFRE83fNqfOPDS+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Aside.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Aside.html",
+          "hash": "DYRzxoAkgyBpPZSUAb3NDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Audio.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Audio.html",
+          "hash": "X/3yXdKlqymtXHPHWOH8VQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.B.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.B.html",
+          "hash": "eRSY1McH4/YCog5aHzWfhQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Base.html",
+          "hash": "sIDFT1Qrcew62QvCOgD/Eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Bdi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Bdi.html",
+          "hash": "ZRuWFaH6iSM1T5OSpiR+hg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Bdo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Bdo.html",
+          "hash": "CE5LbnBex87bbPZQVrCOfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Blockquote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Blockquote.html",
+          "hash": "oQR69kGfFX2bUEJxZNFIrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Body.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Body.html",
+          "hash": "+fwa4qXz/0xPTz8t1Qmo4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Br.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Br.html",
+          "hash": "rU6Qf6ZfpwqhWtDaymWjIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Button.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Button.html",
+          "hash": "l4Az+M/sN/BN7gLqYh8krg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Canvas.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Canvas.html",
+          "hash": "p0ZRuURWbMuHmRY2LTiQ2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Caption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Caption.html",
+          "hash": "iQIgY/5PXDOxrjMz3YKjIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Cite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Cite.html",
+          "hash": "j2uCJKsQuY4URwCilFexSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Code.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Code.html",
+          "hash": "toJT2K94IrxV/2kbaMpZMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Col.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Col.html",
+          "hash": "cpa8GxVx/R4YGdzYKIM/Cg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Colgroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Colgroup.html",
+          "hash": "k2iwr9z1GX8TdMk+YiPJ1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Controls.Input.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Controls.Input.html",
+          "hash": "3UnrrdJPFpVVMvQ7tOBgVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Controls.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Controls.html",
+          "hash": "5lSApST3evq3CDzRETEdQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Data.html",
+          "hash": "7V99Di5ruFi6AoAk4Q2tAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Datalist.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Datalist.html",
+          "hash": "sw9gF3/NieKO6krEwjMHjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Dd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Dd.html",
+          "hash": "9KUoWVNbM42h6mRheNqg5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Del.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Del.html",
+          "hash": "YJnGFhnmbwxjG/44fPUEKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Details.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Details.html",
+          "hash": "kyEnJVP1ceyIxG6M7nyH1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Dfn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Dfn.html",
+          "hash": "PhBUkl64lMbyXTx9dochjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Dialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Dialog.html",
+          "hash": "Kx4zr1sRSOdawD9PCl5Lcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Div.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Div.html",
+          "hash": "Gg0UkwBIYT87K5xuu6Xbsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Dl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Dl.html",
+          "hash": "MWJz9QW06T1sJpDZV/pIvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Dt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Dt.html",
+          "hash": "lYJSsxYigNqp5Q6YNIgHYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Em.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Em.html",
+          "hash": "NqHk+zSoRQCV82T/LbOOgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Embed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Embed.html",
+          "hash": "KWyE45Z9YxkOOO6kX94fUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Fieldset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Fieldset.html",
+          "hash": "qzw4uhpO4k38Y605bVxvDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Figcaption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Figcaption.html",
+          "hash": "T+6lcRibarB3TqkjYrB2/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Figure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Figure.html",
+          "hash": "JfwNnvTOEo82bEYqvIlt2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Footer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Footer.html",
+          "hash": "KuWl9F9DiMwEd+2ZWj9c3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Form.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Form.html",
+          "hash": "Frm+Ohkiy1Kl352Qr+rJPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.H.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.H.html",
+          "hash": "iKE9BY8GdZm9p9kLRVtDFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.H1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.H1.html",
+          "hash": "k6wi8jqiXWY+VOD6bNYyVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.H2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.H2.html",
+          "hash": "P5tmlLyDrNhRpgHOguq0Ig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.H3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.H3.html",
+          "hash": "QZEmdXzwC/l5h3PpXZ+UAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.H4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.H4.html",
+          "hash": "X7BbAlLiJmdJ9c06bvrvSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.H5.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.H5.html",
+          "hash": "lGZFCvjIdVV6DiqhIV4cpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.H6.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.H6.html",
+          "hash": "lzRw4YGhgK2EiyWHX5LTSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Head.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Head.html",
+          "hash": "Q3+fXYLjy3yhACeCd8CjAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Header.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Header.html",
+          "hash": "XJhgyjaKVfq7DCRaDbWVIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Hgroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Hgroup.html",
+          "hash": "MKQXMebcp3maISsBbbs58Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Hr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Hr.html",
+          "hash": "3fd8yWc4b4KqgRd+h1TVgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Html.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Html.html",
+          "hash": "yepbsrdvnM+k81vkMYfLEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.I.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.I.html",
+          "hash": "ApppvLWh8N/TcTUcT/FiKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Iframe.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Iframe.html",
+          "hash": "ukRdXqnzeGqMqxeDqWotjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Img.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Img.html",
+          "hash": "+8a+/OBDLsazFI0WqpzzRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Ins.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Ins.html",
+          "hash": "tcbfdx2BHzkC+epgschVEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Kbd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Kbd.html",
+          "hash": "aQ83/3YwbHxXPmsgg8L53g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Keygen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Keygen.html",
+          "hash": "AFGlsTWSeJdWMx8ZRtUzZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Label.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Label.html",
+          "hash": "ix23oVdmZgi8RwfKunU3VQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Legend.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Legend.html",
+          "hash": "j2MXbYMmKH8oTUKoE1EUbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Li.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Li.html",
+          "hash": "z0HoDICtBoL4ZPR2Oubl9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Link.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Link.html",
+          "hash": "4TpxVioecNqGrkWfHoDnGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Main.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Main.html",
+          "hash": "8Prc4HnNhE7XExMEOZUDsQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Map.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Map.html",
+          "hash": "YufyeRXiRMNuyZ540UINCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Mark.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Mark.html",
+          "hash": "p2BnC7sl6dId+4xs77F5Yw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Menu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Menu.html",
+          "hash": "TJNhaj7uS8bNVhiCE0aIiw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Menuitem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Menuitem.html",
+          "hash": "YtjUDByERLyoOCQwNHcWyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Meta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Meta.html",
+          "hash": "CanmjO+kEyMi+kT7jE0SpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Meter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Meter.html",
+          "hash": "CnE8pcVWnSlhKqzsZ7V1cg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Nav.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Nav.html",
+          "hash": "IyKyUBwW/Esfte9DnYmqxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Noscript.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Noscript.html",
+          "hash": "2DP5XYen+DDRECqa4Caajg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Object.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Object.html",
+          "hash": "clz3DvO52sUNNpJIeDaOmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Ol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Ol.html",
+          "hash": "Ccf1JA5ODG2g/UdKMh/AQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Optgroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Optgroup.html",
+          "hash": "sNnznTTQnNmkxug9IyYTWw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Option.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Option.html",
+          "hash": "twmzHP9p2vAQqOs+iaDDdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Output.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Output.html",
+          "hash": "/XxEPoxvE+eA0L7sGYI3mA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.P.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.P.html",
+          "hash": "1TWgJHz6Vg95nwC7wzyZjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Param.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Param.html",
+          "hash": "JlnkIf2iTQfwPbNp2TDhNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Picture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Picture.html",
+          "hash": "D4giMTIVDlWT9k7plTGS2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Pre.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Pre.html",
+          "hash": "6nNcxT2xpzHourc/V5MQbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Progress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Progress.html",
+          "hash": "NUUiI2O/vWxmKHxxeyCcjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Q.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Q.html",
+          "hash": "KkLVxBmpEE776P3tL+4UVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Rp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Rp.html",
+          "hash": "PFzRz5ye2XDFTkzYpZrR5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Rt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Rt.html",
+          "hash": "ZwTvBhqxCDw5rL4Vt9kOVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Ruby.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Ruby.html",
+          "hash": "eCWUmEqq3EnLMtz8YEkiLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.S.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.S.html",
+          "hash": "f5OlYAWCjb1nMzdaWrsNLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Samp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Samp.html",
+          "hash": "Pmn34NYmMQBRvfVaOULgCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Script.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Script.html",
+          "hash": "hg/sFHMlRyKg7KuQ1AaU3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Section.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Section.html",
+          "hash": "GF0+2Gb83YOSzJa1E13h+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Select.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Select.html",
+          "hash": "dZ4VgRHf+ULQ7aNrn1CIsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Small.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Small.html",
+          "hash": "xxJszKKHNIxaT1BD5dI4Tw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Source.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Source.html",
+          "hash": "Luo8v2e3VtMdouWjUZh+tg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Span.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Span.html",
+          "hash": "QQqMsMN+od0b+qKe05Byuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Strong.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Strong.html",
+          "hash": "SEMm5jehW0ltUxJhJ/+G4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Style.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Style.html",
+          "hash": "hpyOeRbS7AQjBbqmU2x4zw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Sub.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Sub.html",
+          "hash": "9Op0y7jFCCAxAyg3RGOs0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Summary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Summary.html",
+          "hash": "5H91TxMe6hy6BBZTfBUMBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Sup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Sup.html",
+          "hash": "cwYV/cpNxrQoBezIY0BAgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Svg.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Svg.html",
+          "hash": "AucAZZHYslQx99gsI3PovQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Table.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Table.html",
+          "hash": "LSQ0U0y5UC2Y4Zn9vjkeVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Tbody.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Tbody.html",
+          "hash": "OZP4jfYE8KZfNLudHASasg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Td.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Td.html",
+          "hash": "UDj91fDTBFUS5l+IlgGgPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Template.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Template.html",
+          "hash": "gJdepwve0ATHi/I5G8e77A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Textarea.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Textarea.html",
+          "hash": "nUWvlJIrpeGra3gjEcQl3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Tfoot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Tfoot.html",
+          "hash": "dtPgJlbZ/pJD2ytTS6RR3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Th.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Th.html",
+          "hash": "QPjHPXORq1WBk3FDas4xpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Thead.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Thead.html",
+          "hash": "ZuLmjIMbUMz8WTJNkm/VJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Time.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Time.html",
+          "hash": "Vmr+AHFnZKOlwXqGQyDNdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Title.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Title.html",
+          "hash": "E+dQ+SEgiq4p6KYDUOxrcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Tr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Tr.html",
+          "hash": "GaoT/BtQUGU+pbf4YKzesQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Track.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Track.html",
+          "hash": "xwUi4M6BvilaOeqfgaZssA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.U.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.U.html",
+          "hash": "taY/WxpIdUkc6QOYyhu5cA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Ul.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Ul.html",
+          "hash": "NtgQgc6JMYUj52OESf++Xg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Var.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Var.html",
+          "hash": "1cvW8Qyhhxt5gcGcwXofTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Video.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Video.html",
+          "hash": "qz6Q4XfhFGLDfhtE+RLFgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.Wbr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.Wbr.html",
+          "hash": "fMr/WSZ2wHmHwo6ABcI7hw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.Core.Tags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.Core.Tags.html",
+          "hash": "aQb13VpeKB6yDngcp3nUFQ=="
         }
       },
       "is_incremental": false,
@@ -453,7 +1857,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.Core.html",
-          "hash": "bJYgnmd8JBzixo23ZNaDuA=="
+          "hash": "dTYkkNiLq9Vml0PZsBYF9w=="
         }
       },
       "is_incremental": false,
@@ -461,11 +1865,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.UI.Controls.Button.yml",
+      "source_relative_path": "api/FlowR.UI.Application.yml",
       "output": {
         ".html": {
-          "relative_path": "api/FlowR.UI.Controls.Button.html",
-          "hash": "+2Gfu+KWCm3P2/stAli1lA=="
+          "relative_path": "api/FlowR.UI.Application.html",
+          "hash": "tkNS+uvbFP/Nz0RNDZeHPg=="
         }
       },
       "is_incremental": false,
@@ -473,11 +1877,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.UI.Controls.Input.yml",
+      "source_relative_path": "api/FlowR.UI.Components.Navbar.yml",
       "output": {
         ".html": {
-          "relative_path": "api/FlowR.UI.Controls.Input.html",
-          "hash": "e9k5ilHbpry5Ch8bAWWHOQ=="
+          "relative_path": "api/FlowR.UI.Components.Navbar.html",
+          "hash": "a3S+J7xozAPMMTG0e5Ibvg=="
         }
       },
       "is_incremental": false,
@@ -485,11 +1889,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.UI.Controls.yml",
+      "source_relative_path": "api/FlowR.UI.Components.NavbarMenu.yml",
       "output": {
         ".html": {
-          "relative_path": "api/FlowR.UI.Controls.html",
-          "hash": "orP3xcVGCgoTNVz1f9Texw=="
+          "relative_path": "api/FlowR.UI.Components.NavbarMenu.html",
+          "hash": "UtxMGG5SSSfaLSPEykrPwQ=="
         }
       },
       "is_incremental": false,
@@ -497,11 +1901,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.UI.Div.yml",
+      "source_relative_path": "api/FlowR.UI.Components.NavbarMenuItem.yml",
       "output": {
         ".html": {
-          "relative_path": "api/FlowR.UI.Div.html",
-          "hash": "gnv2Y3oY69jAZR9pQqV6qA=="
+          "relative_path": "api/FlowR.UI.Components.NavbarMenuItem.html",
+          "hash": "4qqpBfWBRouDE5qe/fA+PQ=="
         }
       },
       "is_incremental": false,
@@ -509,11 +1913,179 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/FlowR.UI.Form.yml",
+      "source_relative_path": "api/FlowR.UI.Components.yml",
       "output": {
         ".html": {
-          "relative_path": "api/FlowR.UI.Form.html",
-          "hash": "AHErlFJOAvp7TV7yves4gQ=="
+          "relative_path": "api/FlowR.UI.Components.html",
+          "hash": "zFgJbBxHuz1S5SaOmy1ADg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.UI.FlexBoxAlign.Content.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.UI.FlexBoxAlign.Content.html",
+          "hash": "0YPQHv2eFyzBEu3rOcpK9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.UI.FlexBoxAlign.Items.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.UI.FlexBoxAlign.Items.html",
+          "hash": "I5/od+WyxGK2x9Et5lpm6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.UI.FlexBoxAlign.Self.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.UI.FlexBoxAlign.Self.html",
+          "hash": "A0AnGNISnbwwoC1MIkqTrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.UI.FlexBoxAlign.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.UI.FlexBoxAlign.html",
+          "hash": "8jVGyRAEY7yaocNvxVkozA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.UI.FluentComponent-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.UI.FluentComponent-1.html",
+          "hash": "wyVbPellCE3ugWWzaIDJTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.UI.Layout.Container.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.UI.Layout.Container.html",
+          "hash": "Pp1O4FjBuJG83eqINBHp5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.UI.Layout.ContainerRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.UI.Layout.ContainerRow.html",
+          "hash": "H6U1XIqYqRQ6LIBq9xgX8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.UI.Layout.ContainerRowColumn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.UI.Layout.ContainerRowColumn.html",
+          "hash": "AMby/xp72QwQaokrwJUEfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.UI.Layout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.UI.Layout.html",
+          "hash": "GMXgF4QvgQElWjCjc2YtPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.UI.ResponsiveViewports.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.UI.ResponsiveViewports.html",
+          "hash": "SLcbd2o1TF/NMuzFlztr/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.UI.Utils.BorderRadiusEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.UI.Utils.BorderRadiusEnum.html",
+          "hash": "FdijhlvK5ZfkDC1Ebi1/YA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.UI.Utils.ColorEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.UI.Utils.ColorEnum.html",
+          "hash": "ia/o7i18/IsxBxjJVPulGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.UI.Utils.TextColorEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.UI.Utils.TextColorEnum.html",
+          "hash": "xUlvdyy2OmTdbVoRMaWkpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FlowR.UI.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlowR.UI.Utils.html",
+          "hash": "uwRmIkj6Hw8Ws/362uTC1Q=="
         }
       },
       "is_incremental": false,
@@ -525,7 +2097,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlowR.UI.html",
-          "hash": "Y+h1sag5nkSjG9Qv6YJ+/A=="
+          "hash": "TS0e4VsZxYWqlOg/ddRYaQ=="
         }
       },
       "is_incremental": false,
@@ -537,7 +2109,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "1ZHXgIgkE1PJF0hiMjIk0Q=="
+          "hash": "O2+ItMsTB5dhz87jZtyzAw=="
         }
       },
       "is_incremental": false,
@@ -549,7 +2121,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "7LeeSXMe746xC1VM5u1a8w=="
+          "hash": "BFoh2uk5jnvlw0TsszQlbA=="
         }
       },
       "is_incremental": false,
@@ -557,11 +2129,23 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/docfx/index.md",
+      "source_relative_path": "content/index.md",
       "output": {
         ".html": {
-          "relative_path": "content/docfx/index.html",
-          "hash": "fFcoALEQOAjjH5xlSu7vJQ=="
+          "relative_path": "content/index.html",
+          "hash": "ZS+u45AEdCdi0MVfH28WMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "content/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "content/toc.html",
+          "hash": "4+EvaDXb4/MrX4AG95jhqw=="
         }
       },
       "is_incremental": false,
@@ -573,16 +2157,13 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "jKS3q9QGWVh6llZkX8c0VQ=="
+          "hash": "CB6ChuxB/WpnkQh6EmmKOA=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
@@ -615,7 +2196,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 44,
+          "total_file_count": 175,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

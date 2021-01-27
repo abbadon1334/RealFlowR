@@ -73,21 +73,49 @@
   
   <h1 id="FlowR_Core_Node" data-uid="FlowR.Core.Node" class="text-break">Class Node
   </h1>
-  <div class="markdown level0 summary"><p>DomNode base class</p>
+  <div class="markdown level0 summary"><p>INode implementation class</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Node</span></div>
-      <div class="level2"><a class="xref" href="FlowR.Core.Component-1.html">Component&lt;T&gt;</a></div>
-      <div class="level2"><a class="xref" href="FlowR.Core.ComponentRoot.html">ComponentRoot</a></div>
+      <div class="level2"><a class="xref" href="FlowR.Core.NodeComponent.html">NodeComponent</a></div>
+      <div class="level2"><a class="xref" href="FlowR.Core.NodeControl.html">NodeControl</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="FlowR.Core.INode.html">INode</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="FlowR.Core.html">FlowR.Core</a></h6>
   <h6><strong>Assembly</strong>: FlowR.Core.dll</h6>
   <h5 id="FlowR_Core_Node_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Node : object</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Node : INode</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -96,7 +124,7 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node__ctor.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L27">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L37">View Source</a>
   </span>
   <a id="FlowR_Core_Node__ctor_" data-uid="FlowR.Core.Node.#ctor*"></a>
   <h4 id="FlowR_Core_Node__ctor" data-uid="FlowR.Core.Node.#ctor">Node()</h4>
@@ -105,27 +133,432 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Node()</code></pre>
+    <pre><code class="lang-csharp hljs">public Node()</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Application.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Application%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_DefaultAttributes.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.DefaultAttributes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L42">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L46">View Source</a>
   </span>
-  <a id="FlowR_Core_Node_Application_" data-uid="FlowR.Core.Node.Application*"></a>
-  <h4 id="FlowR_Core_Node_Application" data-uid="FlowR.Core.Node.Application">Application</h4>
-  <div class="markdown level1 summary"><p>The Client Application.</p>
+  <a id="FlowR_Core_Node_DefaultAttributes_" data-uid="FlowR.Core.Node.DefaultAttributes*"></a>
+  <h4 id="FlowR_Core_Node_DefaultAttributes" data-uid="FlowR.Core.Node.DefaultAttributes">DefaultAttributes</h4>
+  <div class="markdown level1 summary"><p>Setup default Component attributes</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Application Application { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual Dictionary&lt;string, string&gt; DefaultAttributes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_TagName.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.TagName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L51">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_TagName_" data-uid="FlowR.Core.Node.TagName*"></a>
+  <h4 id="FlowR_Core_Node_TagName" data-uid="FlowR.Core.Node.TagName">TagName</h4>
+  <div class="markdown level1 summary"><p>Stored HTML Tag name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string TagName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Add__1_System_Collections_Generic_Dictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Add%60%601(System.Collections.Generic.Dictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L228">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_Add_" data-uid="FlowR.Core.Node.Add*"></a>
+  <h4 id="FlowR_Core_Node_Add__1_System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="FlowR.Core.Node.Add``1(System.Collections.Generic.Dictionary{System.String,System.String})">Add&lt;TNodeComponent&gt;(Dictionary&lt;String, String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Fluid Add Element</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TNodeComponent Add&lt;TNodeComponent&gt;(Dictionary&lt;string, string&gt; attributes = null)
+    where TNodeComponent : INodeComponent, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">attributes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TNodeComponent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TNodeComponent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Add__1_System_String_System_Collections_Generic_Dictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Add%60%601(System.String%2CSystem.Collections.Generic.Dictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L240">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_Add_" data-uid="FlowR.Core.Node.Add*"></a>
+  <h4 id="FlowR_Core_Node_Add__1_System_String_System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="FlowR.Core.Node.Add``1(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">Add&lt;TNodeControl&gt;(String, Dictionary&lt;String, String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Fluid Add Element</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TNodeControl Add&lt;TNodeControl&gt;(string controlName, Dictionary&lt;string, string&gt; attributes = null)
+    where TNodeControl : INodeControl, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">controlName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">attributes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TNodeControl</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TNodeControl</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_AddCssClass_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.AddCssClass(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L383">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_AddCssClass_" data-uid="FlowR.Core.Node.AddCssClass*"></a>
+  <h4 id="FlowR_Core_Node_AddCssClass_System_String_" data-uid="FlowR.Core.Node.AddCssClass(System.String)">AddCssClass(String)</h4>
+  <div class="markdown level1 summary"><p>Add a classname to class attribute</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual INode AddCssClass(string className)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">className</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_AddJavascriptMethod_System_String_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.AddJavascriptMethod(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L313">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_AddJavascriptMethod_" data-uid="FlowR.Core.Node.AddJavascriptMethod*"></a>
+  <h4 id="FlowR_Core_Node_AddJavascriptMethod_System_String_System_String_" data-uid="FlowR.Core.Node.AddJavascriptMethod(System.String,System.String)">AddJavascriptMethod(String, String)</h4>
+  <div class="markdown level1 summary"><p>Add a method to the node, don&apos;t wait for response.
+Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual INode AddJavascriptMethod(string methodName, string jsStatement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">methodName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">jsStatement</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_CallClientMethod_System_String_System_String___.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.CallClientMethod(System.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L325">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_CallClientMethod_" data-uid="FlowR.Core.Node.CallClientMethod*"></a>
+  <h4 id="FlowR_Core_Node_CallClientMethod_System_String_System_String___" data-uid="FlowR.Core.Node.CallClientMethod(System.String,System.String[])">CallClientMethod(String, String[])</h4>
+  <div class="markdown level1 summary"><p>Call a method on client side on this node with arguments, don&apos;t wait for response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual INode CallClientMethod(string methodName, params string[] arguments)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">methodName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">arguments</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_CallClientMethodAsync_System_String_System_String___.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.CallClientMethodAsync(System.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L337">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_CallClientMethodAsync_" data-uid="FlowR.Core.Node.CallClientMethodAsync*"></a>
+  <h4 id="FlowR_Core_Node_CallClientMethodAsync_System_String_System_String___" data-uid="FlowR.Core.Node.CallClientMethodAsync(System.String,System.String[])">CallClientMethodAsync(String, String[])</h4>
+  <div class="markdown level1 summary"><p>Return Response after call a method on client side on this node with arguments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; CallClientMethodAsync(string methodName, params string[] arguments)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">methodName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">arguments</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetApplication.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetApplication%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L99">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_GetApplication_" data-uid="FlowR.Core.Node.GetApplication*"></a>
+  <h4 id="FlowR_Core_Node_GetApplication" data-uid="FlowR.Core.Node.GetApplication">GetApplication()</h4>
+  <div class="markdown level1 summary"><p>Get the linked Application Client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Application GetApplication()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -142,176 +575,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Owner.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Owner%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetAttribute_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetAttribute(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L47">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L162">View Source</a>
   </span>
-  <a id="FlowR_Core_Node_Owner_" data-uid="FlowR.Core.Node.Owner*"></a>
-  <h4 id="FlowR_Core_Node_Owner" data-uid="FlowR.Core.Node.Owner">Owner</h4>
-  <div class="markdown level1 summary"><p>DomNode parent</p>
+  <a id="FlowR_Core_Node_GetAttribute_" data-uid="FlowR.Core.Node.GetAttribute*"></a>
+  <h4 id="FlowR_Core_Node_GetAttribute_System_String_" data-uid="FlowR.Core.Node.GetAttribute(System.String)">GetAttribute(String)</h4>
+  <div class="markdown level1 summary"><p>Get Attribute of Inode by name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Node Owner { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="FlowR.Core.Node.html">Node</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_TagName.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.TagName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L37">View Source</a>
-  </span>
-  <a id="FlowR_Core_Node_TagName_" data-uid="FlowR.Core.Node.TagName*"></a>
-  <h4 id="FlowR_Core_Node_TagName" data-uid="FlowR.Core.Node.TagName">TagName</h4>
-  <div class="markdown level1 summary"><p>TagName of the Node : any HTML valid tag name is permitted.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract string TagName { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Text.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Text%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L397">View Source</a>
-  </span>
-  <a id="FlowR_Core_Node_Text_" data-uid="FlowR.Core.Node.Text*"></a>
-  <h4 id="FlowR_Core_Node_Text" data-uid="FlowR.Core.Node.Text">Text</h4>
-  <div class="markdown level1 summary"><p>Content Text of the element</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Text { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Uuid.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Uuid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L52">View Source</a>
-  </span>
-  <a id="FlowR_Core_Node_Uuid_" data-uid="FlowR.Core.Node.Uuid*"></a>
-  <h4 id="FlowR_Core_Node_Uuid" data-uid="FlowR.Core.Node.Uuid">Uuid</h4>
-  <div class="markdown level1 summary"><p>Unique identifier of the Node</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Uuid { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Value.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L427">View Source</a>
-  </span>
-  <a id="FlowR_Core_Node_Value_" data-uid="FlowR.Core.Node.Value*"></a>
-  <h4 id="FlowR_Core_Node_Value" data-uid="FlowR.Core.Node.Value">Value</h4>
-  <div class="markdown level1 summary"><p>Value</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Value { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node__Off_System_String_EventHandler_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node._Off(System.String%2CEventHandler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L167">View Source</a>
-  </span>
-  <a id="FlowR_Core_Node__Off_" data-uid="FlowR.Core.Node._Off*"></a>
-  <h4 id="FlowR_Core_Node__Off_System_String_EventHandler_" data-uid="FlowR.Core.Node._Off(System.String,EventHandler)">_Off(String, EventHandler)</h4>
-  <div class="markdown level1 summary"><p>Stop Listen for specified eventName.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void _Off(string eventName, EventHandler handler)</code></pre>
+    <pre><code class="lang-csharp hljs">public string GetAttribute(string name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -324,126 +600,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">eventName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">EventHandler</span></td>
-        <td><span class="parametername">handler</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node__On_System_String_EventHandler_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node._On(System.String%2CEventHandler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L157">View Source</a>
-  </span>
-  <a id="FlowR_Core_Node__On_" data-uid="FlowR.Core.Node._On*"></a>
-  <h4 id="FlowR_Core_Node__On_System_String_EventHandler_" data-uid="FlowR.Core.Node._On(System.String,EventHandler)">_On(String, EventHandler)</h4>
-  <div class="markdown level1 summary"><p>Start Listen for specified eventName.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void _On(string eventName, EventHandler handler)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">eventName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">EventHandler</span></td>
-        <td><span class="parametername">handler</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node__RemoveAttribute_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node._RemoveAttribute(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L347">View Source</a>
-  </span>
-  <a id="FlowR_Core_Node__RemoveAttribute_" data-uid="FlowR.Core.Node._RemoveAttribute*"></a>
-  <h4 id="FlowR_Core_Node__RemoveAttribute_System_String_" data-uid="FlowR.Core.Node._RemoveAttribute(System.String)">_RemoveAttribute(String)</h4>
-  <div class="markdown level1 summary"><p>Remove an Attribute.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void _RemoveAttribute(string name)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node__SetAttribute_System_String_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node._SetAttribute(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L326">View Source</a>
-  </span>
-  <a id="FlowR_Core_Node__SetAttribute_" data-uid="FlowR.Core.Node._SetAttribute*"></a>
-  <h4 id="FlowR_Core_Node__SetAttribute_System_String_System_String_" data-uid="FlowR.Core.Node._SetAttribute(System.String,System.String)">_SetAttribute(String, String)</h4>
-  <div class="markdown level1 summary"><p>Set Attribute of the node.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Node _SetAttribute(string name, string value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -454,82 +616,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FlowR.Core.Node.html">Node</a></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node__SetProperty_System_String_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node._SetProperty(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetAttributes.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetAttributes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L132">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L81">View Source</a>
   </span>
-  <a id="FlowR_Core_Node__SetProperty_" data-uid="FlowR.Core.Node._SetProperty*"></a>
-  <h4 id="FlowR_Core_Node__SetProperty_System_String_System_String_" data-uid="FlowR.Core.Node._SetProperty(System.String,System.String)">_SetProperty(String, String)</h4>
-  <div class="markdown level1 summary"><p>Set Node property on client side.</p>
+  <a id="FlowR_Core_Node_GetAttributes_" data-uid="FlowR.Core.Node.GetAttributes*"></a>
+  <h4 id="FlowR_Core_Node_GetAttributes" data-uid="FlowR.Core.Node.GetAttributes">GetAttributes()</h4>
+  <div class="markdown level1 summary"><p>Get the Dictionary attributes of the Inode</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void _SetProperty(string name, string value)</code></pre>
+    <pre><code class="lang-csharp hljs">public ObservableDictionary&lt;string, string&gt; GetAttributes()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node__SetText_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node._SetText(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L412">View Source</a>
-  </span>
-  <a id="FlowR_Core_Node__SetText_" data-uid="FlowR.Core.Node._SetText*"></a>
-  <h4 id="FlowR_Core_Node__SetText_System_String_" data-uid="FlowR.Core.Node._SetText(System.String)">_SetText(String)</h4>
-  <div class="markdown level1 summary"><p>Fluent Set Text</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Node _SetText(string text)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">text</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -540,44 +647,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FlowR.Core.Node.html">Node</a></td>
+        <td><a class="xref" href="FlowR.Core.ObservableDictionary-2.html">ObservableDictionary</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Add_FlowR_Core_Node_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Add(FlowR.Core.Node)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetChildren.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetChildren%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L268">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L111">View Source</a>
   </span>
-  <a id="FlowR_Core_Node_Add_" data-uid="FlowR.Core.Node.Add*"></a>
-  <h4 id="FlowR_Core_Node_Add_FlowR_Core_Node_" data-uid="FlowR.Core.Node.Add(FlowR.Core.Node)">Add(Node)</h4>
-  <div class="markdown level1 summary"><p>Attach a node to children.</p>
+  <a id="FlowR_Core_Node_GetChildren_" data-uid="FlowR.Core.Node.GetChildren*"></a>
+  <h4 id="FlowR_Core_Node_GetChildren" data-uid="FlowR.Core.Node.GetChildren">GetChildren()</h4>
+  <div class="markdown level1 summary"><p>Get Children Inodes</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Node Add(Node node)</code></pre>
+    <pre><code class="lang-csharp hljs">public ObservableDictionary&lt;string, INode&gt; GetChildren()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="FlowR.Core.Node.html">Node</a></td>
-        <td><span class="parametername">node</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -588,45 +678,28 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FlowR.Core.Node.html">Node</a></td>
+        <td><a class="xref" href="FlowR.Core.ObservableDictionary-2.html">ObservableDictionary</a>&lt;<span class="xref">System.String</span>, <a class="xref" href="FlowR.Core.INode.html">INode</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Add__1_KeyValuePair_System_String_System_String____.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Add%60%601(KeyValuePair%7BSystem.String%2CSystem.String%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetChildrenOfType__1.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetChildrenOfType%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L288">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L371">View Source</a>
   </span>
-  <a id="FlowR_Core_Node_Add_" data-uid="FlowR.Core.Node.Add*"></a>
-  <h4 id="FlowR_Core_Node_Add__1_KeyValuePair_System_String_System_String____" data-uid="FlowR.Core.Node.Add``1(KeyValuePair{System.String,System.String}[])">Add&lt;TNode&gt;(KeyValuePair&lt;String, String&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Attach a node to children.</p>
+  <a id="FlowR_Core_Node_GetChildrenOfType_" data-uid="FlowR.Core.Node.GetChildrenOfType*"></a>
+  <h4 id="FlowR_Core_Node_GetChildrenOfType__1" data-uid="FlowR.Core.Node.GetChildrenOfType``1">GetChildrenOfType&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Get All children of a specific type</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TNode Add&lt;TNode&gt;(params KeyValuePair&lt;string, string&gt;[] attributes)
-    where TNode : ComponentElement&lt;TNode&gt;, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;T&gt; GetChildrenOfType&lt;T&gt;()
+    where T : INode</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">KeyValuePair</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;[]</td>
-        <td><span class="parametername">attributes</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -637,7 +710,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TNode</span></td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -652,50 +725,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TNode</span></td>
+        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Add__1_System_String_KeyValuePair_System_String_System_String____.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Add%60%601(System.String%2CKeyValuePair%7BSystem.String%2CSystem.String%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetCommunication.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetCommunication%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L303">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L105">View Source</a>
   </span>
-  <a id="FlowR_Core_Node_Add_" data-uid="FlowR.Core.Node.Add*"></a>
-  <h4 id="FlowR_Core_Node_Add__1_System_String_KeyValuePair_System_String_System_String____" data-uid="FlowR.Core.Node.Add``1(System.String,KeyValuePair{System.String,System.String}[])">Add&lt;TNode&gt;(String, KeyValuePair&lt;String, String&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Attach a node to children.</p>
+  <a id="FlowR_Core_Node_GetCommunication_" data-uid="FlowR.Core.Node.GetCommunication*"></a>
+  <h4 id="FlowR_Core_Node_GetCommunication" data-uid="FlowR.Core.Node.GetCommunication">GetCommunication()</h4>
+  <div class="markdown level1 summary"><p>Get the ApplicationCommunication of the Inode</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TNode Add&lt;TNode&gt;(string name, params KeyValuePair&lt;string, string&gt;[] attributes)
-    where TNode : ComponentControl&lt;TNode&gt;, IComponentControl, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public ApplicationCommunication GetCommunication()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">KeyValuePair</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;[]</td>
-        <td><span class="parametername">attributes</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -706,7 +756,71 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TNode</span></td>
+        <td><a class="xref" href="FlowR.Core.ApplicationCommunication.html">ApplicationCommunication</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetEventHandlers.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetEventHandlers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L93">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_GetEventHandlers_" data-uid="FlowR.Core.Node.GetEventHandlers*"></a>
+  <h4 id="FlowR_Core_Node_GetEventHandlers" data-uid="FlowR.Core.Node.GetEventHandlers">GetEventHandlers()</h4>
+  <div class="markdown level1 summary"><p>Get the Dictionary properties of the Inode</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableDictionary&lt;string, List&lt;EventHandler&gt;&gt; GetEventHandlers()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.ObservableDictionary-2.html">ObservableDictionary</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.EventHandler</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetFirstOwnerOfType__1.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetFirstOwnerOfType%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L348">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_GetFirstOwnerOfType_" data-uid="FlowR.Core.Node.GetFirstOwnerOfType*"></a>
+  <h4 id="FlowR_Core_Node_GetFirstOwnerOfType__1" data-uid="FlowR.Core.Node.GetFirstOwnerOfType``1">GetFirstOwnerOfType&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Get First INode of a specific type
+(eg. A Control get first Form Owner)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T GetFirstOwnerOfType&lt;T&gt;()
+    where T : INode</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -721,156 +835,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TNode</span></td>
+        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_AddClientJavascriptMethod_System_String_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.AddClientJavascriptMethod(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetLogger.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetLogger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L205">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L599">View Source</a>
   </span>
-  <a id="FlowR_Core_Node_AddClientJavascriptMethod_" data-uid="FlowR.Core.Node.AddClientJavascriptMethod*"></a>
-  <h4 id="FlowR_Core_Node_AddClientJavascriptMethod_System_String_System_String_" data-uid="FlowR.Core.Node.AddClientJavascriptMethod(System.String,System.String)">AddClientJavascriptMethod(String, String)</h4>
-  <div class="markdown level1 summary"><p>Add a method to the node, don't wait for response.
-Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
+  <a id="FlowR_Core_Node_GetLogger_" data-uid="FlowR.Core.Node.GetLogger*"></a>
+  <h4 id="FlowR_Core_Node_GetLogger" data-uid="FlowR.Core.Node.GetLogger">GetLogger()</h4>
+  <div class="markdown level1 summary"><p>Get Application logger</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddClientJavascriptMethod(string methodName, string jsStatement)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">methodName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">jsStatement</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_CallClientMethod_System_String_System_String___.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.CallClientMethod(System.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L215">View Source</a>
-  </span>
-  <a id="FlowR_Core_Node_CallClientMethod_" data-uid="FlowR.Core.Node.CallClientMethod*"></a>
-  <h4 id="FlowR_Core_Node_CallClientMethod_System_String_System_String___" data-uid="FlowR.Core.Node.CallClientMethod(System.String,System.String[])">CallClientMethod(String, String[])</h4>
-  <div class="markdown level1 summary"><p>Call a method on client side on this node with arguments, don't wait for response.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CallClientMethod(string methodName, params string[] arguments)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">methodName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
-        <td><span class="parametername">arguments</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_CallClientMethodWaitResponse_System_String_System_String___.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.CallClientMethodWaitResponse(System.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L226">View Source</a>
-  </span>
-  <a id="FlowR_Core_Node_CallClientMethodWaitResponse_" data-uid="FlowR.Core.Node.CallClientMethodWaitResponse*"></a>
-  <h4 id="FlowR_Core_Node_CallClientMethodWaitResponse_System_String_System_String___" data-uid="FlowR.Core.Node.CallClientMethodWaitResponse(System.String,System.String[])">CallClientMethodWaitResponse(String, String[])</h4>
-  <div class="markdown level1 summary"><p>Return Response after call a method on client side on this node with arguments.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; CallClientMethodWaitResponse(string methodName, params string[] arguments)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">methodName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
-        <td><span class="parametername">arguments</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetAttributeDictionary.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetAttributeDictionary%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L356">View Source</a>
-  </span>
-  <a id="FlowR_Core_Node_GetAttributeDictionary_" data-uid="FlowR.Core.Node.GetAttributeDictionary*"></a>
-  <h4 id="FlowR_Core_Node_GetAttributeDictionary" data-uid="FlowR.Core.Node.GetAttributeDictionary">GetAttributeDictionary()</h4>
-  <div class="markdown level1 summary"><p>Return Attributes as Dictionary.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, string&gt; GetAttributeDictionary()</code></pre>
+    <pre><code class="lang-csharp hljs">public ILogger&lt;Application&gt; GetLogger()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -882,26 +866,26 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span>&lt;<a class="xref" href="FlowR.Core.Application.html">Application</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetChildrenCount.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetChildrenCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetOwner.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetOwner%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L240">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L60">View Source</a>
   </span>
-  <a id="FlowR_Core_Node_GetChildrenCount_" data-uid="FlowR.Core.Node.GetChildrenCount*"></a>
-  <h4 id="FlowR_Core_Node_GetChildrenCount" data-uid="FlowR.Core.Node.GetChildrenCount">GetChildrenCount()</h4>
-  <div class="markdown level1 summary"><p>Return count of children node attached.</p>
+  <a id="FlowR_Core_Node_GetOwner_" data-uid="FlowR.Core.Node.GetOwner*"></a>
+  <h4 id="FlowR_Core_Node_GetOwner" data-uid="FlowR.Core.Node.GetOwner">GetOwner()</h4>
+  <div class="markdown level1 summary"><p>Get INode Owner, the parent INode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int GetChildrenCount()</code></pre>
+    <pre><code class="lang-csharp hljs">public INode GetOwner()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -913,26 +897,26 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetFirstChild.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetFirstChild%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetProperties.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetProperties%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L249">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L87">View Source</a>
   </span>
-  <a id="FlowR_Core_Node_GetFirstChild_" data-uid="FlowR.Core.Node.GetFirstChild*"></a>
-  <h4 id="FlowR_Core_Node_GetFirstChild" data-uid="FlowR.Core.Node.GetFirstChild">GetFirstChild()</h4>
-  <div class="markdown level1 summary"><p>Get first child node from attached children.</p>
+  <a id="FlowR_Core_Node_GetProperties_" data-uid="FlowR.Core.Node.GetProperties*"></a>
+  <h4 id="FlowR_Core_Node_GetProperties" data-uid="FlowR.Core.Node.GetProperties">GetProperties()</h4>
+  <div class="markdown level1 summary"><p>Get the Dictionary properties of the Inode</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Node GetFirstChild()</code></pre>
+    <pre><code class="lang-csharp hljs">public ObservableDictionary&lt;string, string&gt; GetProperties()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -944,38 +928,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FlowR.Core.Node.html">Node</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetLastChild.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetLastChild%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L258">View Source</a>
-  </span>
-  <a id="FlowR_Core_Node_GetLastChild_" data-uid="FlowR.Core.Node.GetLastChild*"></a>
-  <h4 id="FlowR_Core_Node_GetLastChild" data-uid="FlowR.Core.Node.GetLastChild">GetLastChild()</h4>
-  <div class="markdown level1 summary"><p>Get last child node from attached children.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Node GetLastChild()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="FlowR.Core.Node.html">Node</a></td>
+        <td><a class="xref" href="FlowR.Core.ObservableDictionary-2.html">ObservableDictionary</a>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -985,16 +938,16 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetProperty_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetProperty(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L142">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L208">View Source</a>
   </span>
   <a id="FlowR_Core_Node_GetProperty_" data-uid="FlowR.Core.Node.GetProperty*"></a>
   <h4 id="FlowR_Core_Node_GetProperty_System_String_" data-uid="FlowR.Core.Node.GetProperty(System.String)">GetProperty(String)</h4>
-  <div class="markdown level1 summary"><p>Get Node property from client.</p>
+  <div class="markdown level1 summary"><p>Get Node property from memory.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; GetProperty(string path)</code></pre>
+    <pre><code class="lang-csharp hljs">public string GetProperty(string path)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1007,7 +960,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">path</span></td>
         <td></td>
       </tr>
@@ -1023,7 +976,149 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetPropertyAsync_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetPropertyAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L216">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_GetPropertyAsync_" data-uid="FlowR.Core.Node.GetPropertyAsync*"></a>
+  <h4 id="FlowR_Core_Node_GetPropertyAsync_System_String_" data-uid="FlowR.Core.Node.GetPropertyAsync(System.String)">GetPropertyAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Async request INode property from client.
+Wait for response, update in memory and return result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; GetPropertyAsync(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetTagName.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetTagName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L54">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_GetTagName_" data-uid="FlowR.Core.Node.GetTagName*"></a>
+  <h4 id="FlowR_Core_Node_GetTagName" data-uid="FlowR.Core.Node.GetTagName">GetTagName()</h4>
+  <div class="markdown level1 summary"><p>Get HTML Tag name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetTagName()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetText.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetText%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L117">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_GetText_" data-uid="FlowR.Core.Node.GetText*"></a>
+  <h4 id="FlowR_Core_Node_GetText" data-uid="FlowR.Core.Node.GetText">GetText()</h4>
+  <div class="markdown level1 summary"><p>Get Node Text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string GetText()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetUuid.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetUuid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L71">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_GetUuid_" data-uid="FlowR.Core.Node.GetUuid*"></a>
+  <h4 id="FlowR_Core_Node_GetUuid" data-uid="FlowR.Core.Node.GetUuid">GetUuid()</h4>
+  <div class="markdown level1 summary"><p>Get Uuid. if not defined will be generated on first request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetUuid()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1033,11 +1128,11 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_HasAttribute_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.HasAttribute(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L338">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L194">View Source</a>
   </span>
   <a id="FlowR_Core_Node_HasAttribute_" data-uid="FlowR.Core.Node.HasAttribute*"></a>
   <h4 id="FlowR_Core_Node_HasAttribute_System_String_" data-uid="FlowR.Core.Node.HasAttribute(System.String)">HasAttribute(String)</h4>
-  <div class="markdown level1 summary"><p>Return if Attribute already exists.</p>
+  <div class="markdown level1 summary"><p>Return if Has Attribute with name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1055,7 +1150,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
@@ -1071,7 +1166,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1081,13 +1176,13 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Init.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Init%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L373">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L136">View Source</a>
   </span>
   <a id="FlowR_Core_Node_Init_" data-uid="FlowR.Core.Node.Init*"></a>
   <h4 id="FlowR_Core_Node_Init" data-uid="FlowR.Core.Node.Init">Init()</h4>
   <div class="markdown level1 summary"><p>Starting point of every component.
-Will be called after attach to Parent.
-This is the method you are looking for if you want to make a component</p>
+Will be called after attach to Owner.
+This is the method you are looking for if you want to make a new component</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1096,20 +1191,37 @@ This is the method you are looking for if you want to make a component</p>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_IsInitialized.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.IsInitialized%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Off_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Off(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L384">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L297">View Source</a>
   </span>
-  <a id="FlowR_Core_Node_IsInitialized_" data-uid="FlowR.Core.Node.IsInitialized*"></a>
-  <h4 id="FlowR_Core_Node_IsInitialized" data-uid="FlowR.Core.Node.IsInitialized">IsInitialized()</h4>
-  <div class="markdown level1 summary"><p>Return if the DomNode is initialized.</p>
+  <a id="FlowR_Core_Node_Off_" data-uid="FlowR.Core.Node.Off*"></a>
+  <h4 id="FlowR_Core_Node_Off_System_String_" data-uid="FlowR.Core.Node.Off(System.String)">Off(String)</h4>
+  <div class="markdown level1 summary"><p>Stop Listen for specified eventName.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected bool IsInitialized()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual INode Off(string eventName)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">eventName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -1120,26 +1232,132 @@ This is the method you are looking for if you want to make a component</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_OnClientEventTriggered_System_String_FlowR_Core_Message_MessageEventArgs_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.OnClientEventTriggered(System.String%2CFlowR.Core.Message.MessageEventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Off_System_String_System_EventHandler_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Off(System.String%2CSystem.EventHandler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L178">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L279">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_Off_" data-uid="FlowR.Core.Node.Off*"></a>
+  <h4 id="FlowR_Core_Node_Off_System_String_System_EventHandler_" data-uid="FlowR.Core.Node.Off(System.String,System.EventHandler)">Off(String, EventHandler)</h4>
+  <div class="markdown level1 summary"><p>Stop Listen for specified eventName and handler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual INode Off(string eventName, EventHandler handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">eventName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span></td>
+        <td><span class="parametername">handler</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_On_System_String_System_EventHandler_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.On(System.String%2CSystem.EventHandler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L260">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_On_" data-uid="FlowR.Core.Node.On*"></a>
+  <h4 id="FlowR_Core_Node_On_System_String_System_EventHandler_" data-uid="FlowR.Core.Node.On(System.String,System.EventHandler)">On(String, EventHandler)</h4>
+  <div class="markdown level1 summary"><p>Start Listen for specified eventName.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual INode On(string eventName, EventHandler handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">eventName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.EventHandler</span></td>
+        <td><span class="parametername">handler</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_OnClientEventTriggered_System_String_System_EventArgs_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.OnClientEventTriggered(System.String%2CSystem.EventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L305">View Source</a>
   </span>
   <a id="FlowR_Core_Node_OnClientEventTriggered_" data-uid="FlowR.Core.Node.OnClientEventTriggered*"></a>
-  <h4 id="FlowR_Core_Node_OnClientEventTriggered_System_String_FlowR_Core_Message_MessageEventArgs_" data-uid="FlowR.Core.Node.OnClientEventTriggered(System.String,FlowR.Core.Message.MessageEventArgs)">OnClientEventTriggered(String, MessageEventArgs)</h4>
+  <h4 id="FlowR_Core_Node_OnClientEventTriggered_System_String_System_EventArgs_" data-uid="FlowR.Core.Node.OnClientEventTriggered(System.String,System.EventArgs)">OnClientEventTriggered(String, EventArgs)</h4>
   <div class="markdown level1 summary"><p>Handle incoming Node Event fired from client.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnClientEventTriggered(string eventName, MessageEventArgs eventArgs)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnClientEventTriggered(string eventName, EventArgs eventArgs)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1152,35 +1370,35 @@ This is the method you are looking for if you want to make a component</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">eventName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="FlowR.Core.Message.MessageEventArgs.html">MessageEventArgs</a></td>
+        <td><span class="xref">System.EventArgs</span></td>
         <td><span class="parametername">eventArgs</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="FlowR_Core_Node_OnClientEventTriggered_System_String_FlowR_Core_Message_MessageEventArgs__remarks">Remarks</h5>
+  <h5 id="FlowR_Core_Node_OnClientEventTriggered_System_String_System_EventArgs__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Never use this. This is called from application on incoming events</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Remove_FlowR_Core_Node_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Remove(FlowR.Core.Node)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Remove_FlowR_Core_INode_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Remove(FlowR.Core.INode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L279">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L254">View Source</a>
   </span>
   <a id="FlowR_Core_Node_Remove_" data-uid="FlowR.Core.Node.Remove*"></a>
-  <h4 id="FlowR_Core_Node_Remove_FlowR_Core_Node_" data-uid="FlowR.Core.Node.Remove(FlowR.Core.Node)">Remove(Node)</h4>
-  <div class="markdown level1 summary"><p>Remove children from node children.</p>
+  <h4 id="FlowR_Core_Node_Remove_FlowR_Core_INode_" data-uid="FlowR.Core.Node.Remove(FlowR.Core.INode)">Remove(INode)</h4>
+  <div class="markdown level1 summary"><p>Remove child.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Remove(Node node)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Remove(INode child)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1193,12 +1411,429 @@ This is the method you are looking for if you want to make a component</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FlowR.Core.Node.html">Node</a></td>
-        <td><span class="parametername">node</span></td>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
+        <td><span class="parametername">child</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_RemoveAttribute_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.RemoveAttribute(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L170">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_RemoveAttribute_" data-uid="FlowR.Core.Node.RemoveAttribute*"></a>
+  <h4 id="FlowR_Core_Node_RemoveAttribute_System_String_" data-uid="FlowR.Core.Node.RemoveAttribute(System.String)">RemoveAttribute(String)</h4>
+  <div class="markdown level1 summary"><p>Remove Attribute of Inode by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual INode RemoveAttribute(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_RemoveCssClass_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.RemoveCssClass(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L397">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_RemoveCssClass_" data-uid="FlowR.Core.Node.RemoveCssClass*"></a>
+  <h4 id="FlowR_Core_Node_RemoveCssClass_System_String_" data-uid="FlowR.Core.Node.RemoveCssClass(System.String)">RemoveCssClass(String)</h4>
+  <div class="markdown level1 summary"><p>Remove a classname from class attribute</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual INode RemoveCssClass(string className)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">className</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_SetApplication_FlowR_Core_Application_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.SetApplication(FlowR.Core.Application)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L434">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_SetApplication_" data-uid="FlowR.Core.Node.SetApplication*"></a>
+  <h4 id="FlowR_Core_Node_SetApplication_FlowR_Core_Application_" data-uid="FlowR.Core.Node.SetApplication(FlowR.Core.Application)">SetApplication(Application)</h4>
+  <div class="markdown level1 summary"><p>[internal use] Set Application from owner on init.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SetApplication(Application app)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.Application.html">Application</a></td>
+        <td><span class="parametername">app</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_SetAttribute_System_Collections_Generic_Dictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.SetAttribute(System.Collections.Generic.Dictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L181">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_SetAttribute_" data-uid="FlowR.Core.Node.SetAttribute*"></a>
+  <h4 id="FlowR_Core_Node_SetAttribute_System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="FlowR.Core.Node.SetAttribute(System.Collections.Generic.Dictionary{System.String,System.String})">SetAttribute(Dictionary&lt;String, String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Short hand to set multiple attributes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual INode SetAttribute(Dictionary&lt;string, string&gt; attributes = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">attributes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_SetAttribute_System_String_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.SetAttribute(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L145">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_SetAttribute_" data-uid="FlowR.Core.Node.SetAttribute*"></a>
+  <h4 id="FlowR_Core_Node_SetAttribute_System_String_System_String_" data-uid="FlowR.Core.Node.SetAttribute(System.String,System.String)">SetAttribute(String, String)</h4>
+  <div class="markdown level1 summary"><p>Set Attribute of INode</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual INode SetAttribute(string name, string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_SetOwner_FlowR_Core_INode_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.SetOwner(FlowR.Core.INode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L66">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_SetOwner_" data-uid="FlowR.Core.Node.SetOwner*"></a>
+  <h4 id="FlowR_Core_Node_SetOwner_FlowR_Core_INode_" data-uid="FlowR.Core.Node.SetOwner(FlowR.Core.INode)">SetOwner(INode)</h4>
+  <div class="markdown level1 summary"><p>Set Inode Owner, the parent INode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetOwner(INode owner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_SetProperty_System_String_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.SetProperty(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L200">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_SetProperty_" data-uid="FlowR.Core.Node.SetProperty*"></a>
+  <h4 id="FlowR_Core_Node_SetProperty_System_String_System_String_" data-uid="FlowR.Core.Node.SetProperty(System.String,System.String)">SetProperty(String, String)</h4>
+  <div class="markdown level1 summary"><p>Set Node property on client side.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual INode SetProperty(string name, string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_SetText_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.SetText(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L123">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_SetText_" data-uid="FlowR.Core.Node.SetText*"></a>
+  <h4 id="FlowR_Core_Node_SetText_System_String_" data-uid="FlowR.Core.Node.SetText(System.String)">SetText(String)</h4>
+  <div class="markdown level1 summary"><p>Set Node Text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual INode SetText(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_SetUuid_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.SetUuid(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L417">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_SetUuid_" data-uid="FlowR.Core.Node.SetUuid*"></a>
+  <h4 id="FlowR_Core_Node_SetUuid_System_String_" data-uid="FlowR.Core.Node.SetUuid(System.String)">SetUuid(String)</h4>
+  <div class="markdown level1 summary"><p>Set Uuid, under the hood will call SetAttribute(id, Uuid)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SetUuid(string uuid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">uuid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_ValidateNode.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.ValidateNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L577">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_ValidateNode_" data-uid="FlowR.Core.Node.ValidateNode*"></a>
+  <h4 id="FlowR_Core_Node_ValidateNode" data-uid="FlowR.Core.Node.ValidateNode">ValidateNode()</h4>
+  <div class="markdown level1 summary"><p>Validate Node before call init</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ValidateNode()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="FlowR.Core.INode.html">INode</a>
+  </div>
 </article>
           </div>
           
@@ -1210,7 +1845,7 @@ This is the method you are looking for if you want to make a component</p>
                     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node.md&amp;value=---%0Auid%3A%20FlowR.Core.Node%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

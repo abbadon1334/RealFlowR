@@ -78,32 +78,57 @@
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Application</span></div>
+      <div class="level2"><a class="xref" href="FlowR.UI.Application.html">Application</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="FlowR.Core.html">FlowR.Core</a></h6>
   <h6><strong>Assembly</strong>: FlowR.Core.dll</h6>
   <h5 id="FlowR_Core_Application_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Application : object</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Application</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application__ctor_System_String_IClientProxy_.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.%23ctor(System.String%2CIClientProxy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application__ctor_System_String_Microsoft_AspNetCore_SignalR_IClientProxy_Microsoft_Extensions_Logging_ILogger_FlowR_Core_Application__.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.%23ctor(System.String%2CMicrosoft.AspNetCore.SignalR.IClientProxy%2CMicrosoft.Extensions.Logging.ILogger%7BFlowR.Core.Application%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L31">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L36">View Source</a>
   </span>
   <a id="FlowR_Core_Application__ctor_" data-uid="FlowR.Core.Application.#ctor*"></a>
-  <h4 id="FlowR_Core_Application__ctor_System_String_IClientProxy_" data-uid="FlowR.Core.Application.#ctor(System.String,IClientProxy)">Application(String, IClientProxy)</h4>
+  <h4 id="FlowR_Core_Application__ctor_System_String_Microsoft_AspNetCore_SignalR_IClientProxy_Microsoft_Extensions_Logging_ILogger_FlowR_Core_Application__" data-uid="FlowR.Core.Application.#ctor(System.String,Microsoft.AspNetCore.SignalR.IClientProxy,Microsoft.Extensions.Logging.ILogger{FlowR.Core.Application})">Application(String, IClientProxy, ILogger&lt;Application&gt;)</h4>
   <div class="markdown level1 summary"><p>this will be called from the FlowRHub Service</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Application(string connectionId, IClientProxy client)</code></pre>
+    <pre><code class="lang-csharp hljs">public Application(string connectionId, IClientProxy client, ILogger&lt;Application&gt; logger)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -116,15 +141,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td><span class="parametername">connectionId</span></td>
         <td><p>connectionId from Hub</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">IClientProxy</span></td>
+        <td><span class="xref">Microsoft.AspNetCore.SignalR.IClientProxy</span></td>
         <td><span class="parametername">client</span></td>
         <td><p>SignalR client from Hub</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span>&lt;<a class="xref" href="FlowR.Core.Application.html">Application</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>ILogger</p>
 </td>
       </tr>
     </tbody>
@@ -136,7 +167,7 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_RootElement.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.RootElement%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L19">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L23">View Source</a>
   </span>
   <h4 id="FlowR_Core_Application_RootElement" data-uid="FlowR.Core.Application.RootElement">RootElement</h4>
   <div class="markdown level1 summary"><p>Root element of the Application.
@@ -145,7 +176,7 @@ The composition tree that draw client UI starts from here.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly ComponentRoot RootElement</code></pre>
+    <pre><code class="lang-csharp hljs">protected readonly NodeComponentRoot RootElement</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,7 +188,7 @@ The composition tree that draw client UI starts from here.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FlowR.Core.ComponentRoot.html">ComponentRoot</a></td>
+        <td><a class="xref" href="FlowR.Core.NodeComponentRoot.html">NodeComponentRoot</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -167,7 +198,7 @@ The composition tree that draw client UI starts from here.</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_RootElementId.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.RootElementId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L24">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L28">View Source</a>
   </span>
   <h4 id="FlowR_Core_Application_RootElementId" data-uid="FlowR.Core.Application.RootElementId">RootElementId</h4>
   <div class="markdown level1 summary"><p>Element ID of the master container for the application</p>
@@ -187,7 +218,7 @@ The composition tree that draw client UI starts from here.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -199,11 +230,11 @@ The composition tree that draw client UI starts from here.</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_Communication.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.Communication%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L49">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L59">View Source</a>
   </span>
   <a id="FlowR_Core_Application_Communication_" data-uid="FlowR.Core.Application.Communication*"></a>
   <h4 id="FlowR_Core_Application_Communication" data-uid="FlowR.Core.Application.Communication">Communication</h4>
-  <div class="markdown level1 summary"><p>Manage Communication</p>
+  <div class="markdown level1 summary"><p>Client Communications</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -229,13 +260,109 @@ The composition tree that draw client UI starts from here.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_AddTimer_System_Int32_EventHandler_System_Boolean_.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.AddTimer(System.Int32%2CEventHandler%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_AddJavascriptResource_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.AddJavascriptResource(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L109">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L195">View Source</a>
+  </span>
+  <a id="FlowR_Core_Application_AddJavascriptResource_" data-uid="FlowR.Core.Application.AddJavascriptResource*"></a>
+  <h4 id="FlowR_Core_Application_AddJavascriptResource_System_String_" data-uid="FlowR.Core.Application.AddJavascriptResource(System.String)">AddJavascriptResource(String)</h4>
+  <div class="markdown level1 summary"><p>Inject Javascript file in document</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; AddJavascriptResource(string url)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">url</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_AddStylesheetResource_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.AddStylesheetResource(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L206">View Source</a>
+  </span>
+  <a id="FlowR_Core_Application_AddStylesheetResource_" data-uid="FlowR.Core.Application.AddStylesheetResource*"></a>
+  <h4 id="FlowR_Core_Application_AddStylesheetResource_System_String_" data-uid="FlowR.Core.Application.AddStylesheetResource(System.String)">AddStylesheetResource(String)</h4>
+  <div class="markdown level1 summary"><p>Inject Stylesheet file in document</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; AddStylesheetResource(string url)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">url</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_AddTimer_System_Int32_System_EventHandler_System_Boolean_.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.AddTimer(System.Int32%2CSystem.EventHandler%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L128">View Source</a>
   </span>
   <a id="FlowR_Core_Application_AddTimer_" data-uid="FlowR.Core.Application.AddTimer*"></a>
-  <h4 id="FlowR_Core_Application_AddTimer_System_Int32_EventHandler_System_Boolean_" data-uid="FlowR.Core.Application.AddTimer(System.Int32,EventHandler,System.Boolean)">AddTimer(Int32, EventHandler, Boolean)</h4>
+  <h4 id="FlowR_Core_Application_AddTimer_System_Int32_System_EventHandler_System_Boolean_" data-uid="FlowR.Core.Application.AddTimer(System.Int32,System.EventHandler,System.Boolean)">AddTimer(Int32, EventHandler, Boolean)</h4>
   <div class="markdown level1 summary"><p>Add a Timer with a callback</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -254,34 +381,129 @@ The composition tree that draw client UI starts from here.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">delay</span></td>
         <td><p>delay in millisec</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">EventHandler</span></td>
+        <td><span class="xref">System.EventHandler</span></td>
         <td><span class="parametername">callback</span></td>
         <td><p>The Callback</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">infinite</span></td>
         <td><p>is a timeout or an interval</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="FlowR_Core_Application_AddTimer_System_Int32_EventHandler_System_Boolean__remarks">Remarks</h5>
+  <h5 id="FlowR_Core_Application_AddTimer_System_Int32_System_EventHandler_System_Boolean__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Timer will be passed as first argument of every callback call, so you can stop it anytime</p>
 </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_CallGlobalMethod_System_String_System_String___.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.CallGlobalMethod(System.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L148">View Source</a>
+  </span>
+  <a id="FlowR_Core_Application_CallGlobalMethod_" data-uid="FlowR.Core.Application.CallGlobalMethod*"></a>
+  <h4 id="FlowR_Core_Application_CallGlobalMethod_System_String_System_String___" data-uid="FlowR.Core.Application.CallGlobalMethod(System.String,System.String[])">CallGlobalMethod(String, String[])</h4>
+  <div class="markdown level1 summary"><p>Call a global JS method, don&apos;t wait for response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CallGlobalMethod(string methodName, params string[] arguments)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">methodName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">arguments</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="FlowR_Core_Application_CallGlobalMethod_System_String_System_String____examples">Examples</h5>
+  <p>from a DomNode : GetApplication().CallGlobalMethod(&apos;alert&apos;,[&apos;this is an alert&apos;]);</p>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_CallGlobalMethodWaitResponse_System_String_System_String___.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.CallGlobalMethodWaitResponse(System.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L160">View Source</a>
+  </span>
+  <a id="FlowR_Core_Application_CallGlobalMethodWaitResponse_" data-uid="FlowR.Core.Application.CallGlobalMethodWaitResponse*"></a>
+  <h4 id="FlowR_Core_Application_CallGlobalMethodWaitResponse_System_String_System_String___" data-uid="FlowR.Core.Application.CallGlobalMethodWaitResponse(System.String,System.String[])">CallGlobalMethodWaitResponse(String, String[])</h4>
+  <div class="markdown level1 summary"><p>Call a global JS method and wait for response</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; CallGlobalMethodWaitResponse(string methodName, params string[] arguments)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">methodName</span></td>
+        <td><p>window method or complete traversed path like document.location.reload </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">arguments</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_CancelTimer_FlowR_Core_ApplicationTimer_.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.CancelTimer(FlowR.Core.ApplicationTimer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L118">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L137">View Source</a>
   </span>
   <a id="FlowR_Core_Application_CancelTimer_" data-uid="FlowR.Core.Application.CancelTimer*"></a>
   <h4 id="FlowR_Core_Application_CancelTimer_FlowR_Core_ApplicationTimer_" data-uid="FlowR.Core.Application.CancelTimer(FlowR.Core.ApplicationTimer)">CancelTimer(ApplicationTimer)</h4>
@@ -311,10 +533,90 @@ The composition tree that draw client UI starts from here.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_GetGlobalProperty_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.GetGlobalProperty(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L171">View Source</a>
+  </span>
+  <a id="FlowR_Core_Application_GetGlobalProperty_" data-uid="FlowR.Core.Application.GetGlobalProperty*"></a>
+  <h4 id="FlowR_Core_Application_GetGlobalProperty_System_String_" data-uid="FlowR.Core.Application.GetGlobalProperty(System.String)">GetGlobalProperty(String)</h4>
+  <div class="markdown level1 summary"><p>Get a global JS property and wait for response</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; GetGlobalProperty(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>window method or complete traversed path like document.location.reload </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_GetLogger.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.GetLogger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L70">View Source</a>
+  </span>
+  <a id="FlowR_Core_Application_GetLogger_" data-uid="FlowR.Core.Application.GetLogger*"></a>
+  <h4 id="FlowR_Core_Application_GetLogger" data-uid="FlowR.Core.Application.GetLogger">GetLogger()</h4>
+  <div class="markdown level1 summary"><p>Get Application logger</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILogger&lt;Application&gt; GetLogger()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span>&lt;<a class="xref" href="FlowR.Core.Application.html">Application</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_OnClientEventTriggered_FlowR_Core_Message_MessageEvent_.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.OnClientEventTriggered(FlowR.Core.Message.MessageEvent)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L92">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L111">View Source</a>
   </span>
   <a id="FlowR_Core_Application_OnClientEventTriggered_" data-uid="FlowR.Core.Application.OnClientEventTriggered*"></a>
   <h4 id="FlowR_Core_Application_OnClientEventTriggered_FlowR_Core_Message_MessageEvent_" data-uid="FlowR.Core.Application.OnClientEventTriggered(FlowR.Core.Message.MessageEvent)">OnClientEventTriggered(MessageEvent)</h4>
@@ -344,20 +646,20 @@ The composition tree that draw client UI starts from here.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_RegisterComponent_FlowR_Core_Node_.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.RegisterComponent(FlowR.Core.Node)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_RegisterComponent_FlowR_Core_INode_.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.RegisterComponent(FlowR.Core.INode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L61">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L80">View Source</a>
   </span>
   <a id="FlowR_Core_Application_RegisterComponent_" data-uid="FlowR.Core.Application.RegisterComponent*"></a>
-  <h4 id="FlowR_Core_Application_RegisterComponent_FlowR_Core_Node_" data-uid="FlowR.Core.Application.RegisterComponent(FlowR.Core.Node)">RegisterComponent(Node)</h4>
+  <h4 id="FlowR_Core_Application_RegisterComponent_FlowR_Core_INode_" data-uid="FlowR.Core.Application.RegisterComponent(FlowR.Core.INode)">RegisterComponent(INode)</h4>
   <div class="markdown level1 summary"><p>[internal use] Add Node to registry.
 Internally called after add to parent Node, usually there is no need to be called.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RegisterComponent(Node node)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RegisterComponent(INode node)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -370,7 +672,7 @@ Internally called after add to parent Node, usually there is no need to be calle
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FlowR.Core.Node.html">Node</a></td>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
         <td><span class="parametername">node</span></td>
         <td></td>
       </tr>
@@ -378,20 +680,19 @@ Internally called after add to parent Node, usually there is no need to be calle
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_UnregisterComponent_FlowR_Core_Node_.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.UnregisterComponent(FlowR.Core.Node)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_SetGlobalProperty_System_String_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.SetGlobalProperty(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L83">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L182">View Source</a>
   </span>
-  <a id="FlowR_Core_Application_UnregisterComponent_" data-uid="FlowR.Core.Application.UnregisterComponent*"></a>
-  <h4 id="FlowR_Core_Application_UnregisterComponent_FlowR_Core_Node_" data-uid="FlowR.Core.Application.UnregisterComponent(FlowR.Core.Node)">UnregisterComponent(Node)</h4>
-  <div class="markdown level1 summary"><p>[internal use] Remove Node from registry.
-Internally called after removed from parent Node, usually there is no need to be called.</p>
+  <a id="FlowR_Core_Application_SetGlobalProperty_" data-uid="FlowR.Core.Application.SetGlobalProperty*"></a>
+  <h4 id="FlowR_Core_Application_SetGlobalProperty_System_String_System_String_" data-uid="FlowR.Core.Application.SetGlobalProperty(System.String,System.String)">SetGlobalProperty(String, String)</h4>
+  <div class="markdown level1 summary"><p>Set a global JS property and wait for response</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UnregisterComponent(Node node)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetGlobalProperty(string path, string value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -404,7 +705,47 @@ Internally called after removed from parent Node, usually there is no need to be
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FlowR.Core.Node.html">Node</a></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>window property or complete traversed path like document.body.scrollHeight </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application_UnregisterComponent_FlowR_Core_INode_.md&amp;value=---%0Auid%3A%20FlowR.Core.Application.UnregisterComponent(FlowR.Core.INode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L102">View Source</a>
+  </span>
+  <a id="FlowR_Core_Application_UnregisterComponent_" data-uid="FlowR.Core.Application.UnregisterComponent*"></a>
+  <h4 id="FlowR_Core_Application_UnregisterComponent_FlowR_Core_INode_" data-uid="FlowR.Core.Application.UnregisterComponent(FlowR.Core.INode)">UnregisterComponent(INode)</h4>
+  <div class="markdown level1 summary"><p>[internal use] Remove Node from registry.
+Internally called after removed from parent Node, usually there is no need to be called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterComponent(INode node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
         <td><span class="parametername">node</span></td>
         <td></td>
       </tr>
@@ -421,7 +762,7 @@ Internally called after removed from parent Node, usually there is no need to be
                     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Application.md&amp;value=---%0Auid%3A%20FlowR.Core.Application%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Application.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
