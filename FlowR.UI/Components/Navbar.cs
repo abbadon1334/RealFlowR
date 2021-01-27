@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using FlowR.Core;
 using FlowR.Core.Tags;
-using FlowR.UI.Layout;
+using FlowR.UI.Layout.Containers;
 
 namespace FlowR.UI.Components
 {
@@ -28,7 +28,7 @@ namespace FlowR.UI.Components
         {
             base.Init();
             Container = Add<Container>();
-            Container.SetResponsive(ResponsiveViewports.Fluid);
+            Container.SetResponsiveBreakpoint(Enums.BreakpointsEnum.Fluid);
         }
 
         /// <summary>

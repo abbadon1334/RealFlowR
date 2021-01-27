@@ -1,6 +1,6 @@
 using System;
 using System.Threading.Tasks;
-using FlowR.Core.Message;
+using FlowR.Core.Messages;
 using Microsoft.AspNetCore.SignalR;
 
 namespace FlowR.Core

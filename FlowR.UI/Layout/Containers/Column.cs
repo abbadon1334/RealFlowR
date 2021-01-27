@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using FlowR.Core;
 
-namespace FlowR.UI.Layout
+namespace FlowR.UI.Layout.Containers
 {
     /// <summary>
-    ///     Row of container
+    ///     Column of row container
     /// </summary>
-    public class ContainerRow : NodeComponent
+    public class Column : NodeComponent
     {
         /// <inheritdoc />
         protected override string TagName => "div";
@@ -14,12 +14,7 @@ namespace FlowR.UI.Layout
         /// <inheritdoc />
         protected override Dictionary<string, string> DefaultAttributes { get; set; } = new()
         {
-            { "class", "row" },
+            { "class", "col" },
         };
-
-        private ContainerRowColumn AddCol()
-        {
-            return Add<ContainerRowColumn>();
-        }
     }
 }

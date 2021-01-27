@@ -28,6 +28,7 @@ namespace FlowR.UI.Components
         public override void Init()
         {
             base.Init();
+
             _link = Add<A>();
             _link.AddCssClass("nav-link");
         }

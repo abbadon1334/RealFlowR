@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace FlowR.Core.Message
+namespace FlowR.Core.Messages
 {
     /// <summary>
     ///     Interface for message communications

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Threading.Tasks;
-using FlowR.Core.Message;
+using FlowR.Core.Messages;
 using Microsoft.Extensions.Logging;
 
 namespace FlowR.Core

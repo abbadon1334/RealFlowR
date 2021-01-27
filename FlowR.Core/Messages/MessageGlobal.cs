@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace FlowR.Core.Message
+namespace FlowR.Core.Messages
 {
     /// <summary>
     ///     Global Messages
@@ -30,10 +30,9 @@ namespace FlowR.Core.Message
         {
             Action = action;
 
-            var argList = new List<string>(arguments ?? Array.Empty<string>())
-            {
-                name,
-            };
+            AddArgument(name);
+
+            var argList = new List<string>(arguments ?? Array.Empty<string>());
 
             foreach (var argument in argList)
             {

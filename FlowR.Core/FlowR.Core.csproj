@@ -11,4 +11,12 @@
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>
 	
+    <ItemGroup>
+      <Compile Remove="Message\IMessageResponse.cs" />
+      <Compile Remove="Message\MessageEvent.cs" />
+      <Compile Remove="Message\MessageGlobal.cs" />
+      <Compile Remove="Message\MessageElement.cs" />
+      <Compile Remove="Message\Message.cs" />
+    </ItemGroup>
+	
 </Project>

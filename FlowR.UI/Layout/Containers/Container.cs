@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using FlowR.Core;
 
-namespace FlowR.UI.Layout
+namespace FlowR.UI.Layout.Containers
 {
     /// <inheritdoc />
     public class Container : NodeComponent
@@ -20,7 +20,7 @@ namespace FlowR.UI.Layout
         /// </summary>
         /// <param name="breakpoint"></param>
         /// <returns></returns>
-        public Container SetResponsive(ResponsiveViewports breakpoint)
+        public Container SetResponsiveBreakpoint(Enums.BreakpointsEnum breakpoint)
         {
             AddCssClass("container-" + breakpoint.ToString().ToLower());
             return this;
@@ -30,9 +30,9 @@ namespace FlowR.UI.Layout
         ///     Add Row to container
         /// </summary>
         /// <returns></returns>
-        public ContainerRow AddRow()
+        public Row AddRow()
         {
-            return Add<ContainerRow>();
+            return Add<Row>();
         }
     }
 }

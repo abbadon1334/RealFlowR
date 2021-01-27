@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using FlowR.Core.Message;
+using FlowR.Core.Messages;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
 
@@ -24,6 +24,7 @@ namespace FlowR.Core
         {
             _applicationFlowRService = applicationFlowRService;
             _logger = logger;
+            _logger.LogDebug("FlowR Service started");
         }
 
         /// <summary>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace FlowR.Core.Message
+namespace FlowR.Core.Messages
 {
     /// <summary>
     ///     Message Event sent from client

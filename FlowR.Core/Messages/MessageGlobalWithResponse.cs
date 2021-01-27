@@ -1,4 +1,4 @@
-namespace FlowR.Core.Message
+namespace FlowR.Core.Messages
 {
     /// <inheritdoc />
     public class MessageGlobalWithResponse : MessageResponse

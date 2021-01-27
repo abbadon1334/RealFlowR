@@ -2,7 +2,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
-using FlowR.Core.Message;
+using FlowR.Core.Messages;
 
 namespace FlowR.Core
 {
