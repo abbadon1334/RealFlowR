@@ -1,4 +1,4 @@
-## ![Logo](https://abbadon1334.github.io/RealFlowR/images/logo.svg) RealFlowR
+## ![Logo](https://raw.githubusercontent.com/abbadon1334/RealFlowR/master/FlowR.DocFx/images/logo.svg) RealFlowR
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/b0dccaa467a682b7d5d2/maintainability)](https://codeclimate.com/github/abbadon1334/RealFlowR/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b0dccaa467a682b7d5d2/test_coverage)](https://codeclimate.com/github/abbadon1334/RealFlowR/test_coverage)
