@@ -28,9 +28,9 @@ jobs:
         
       - name: Generate documentation
         run: docfx FlowR.DocFx/docfx.json
-          
-      - name: Publish Documentation on GitHub Pages
-        uses: maxheld83/ghpages@master
-        env:
-          BUILD_DIR: docs
-          GH_PAT: ${{ secrets.GH_PAT }}
+  
+      - name: Push to ghpages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          publish_dir: ./docs          
