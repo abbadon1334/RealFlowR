@@ -1,5 +1,8 @@
 namespace FlowR.UI
 {
+    /// <summary>
+    ///     Bootstrap Enums
+    /// </summary>
     public class Enums
     {
 
