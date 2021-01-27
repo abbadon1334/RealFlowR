@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   id="svg9"
+   width="64"
+   height="50"
+   viewBox="0 0 63.999999 49.999999"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs13">
+    <linearGradient
+       id="linearGradient2280-5">
+      <stop
+         style="stop-color:#b70060;stop-opacity:1"
+         offset="0"
+         id="stop2276" />
+      <stop
+         style="stop-color:#280080;stop-opacity:1"
+         offset="1"
+         id="stop2278" />
+    </linearGradient>
+    <radialGradient
+       xlink:href="#linearGradient2280-5"
+       id="radialGradient2282"
+       cx="97.843193"
+       cy="-4.9959607"
+       fx="97.843193"
+       fy="-4.9959607"
+       r="95.216293"
+       gradientTransform="matrix(-1.0164047,0,3.9679932e-8,-2.1957158,197.29147,-7.7595541)"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter3209"
+       x="-0.076173949"
+       y="-0.086291277"
+       width="1.1523479"
+       height="1.217999">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3199" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="out"
+         result="composite1"
+         id="feComposite3201" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="6"
+         result="blur"
+         id="feGaussianBlur3203" />
+      <feOffset
+         dx="0"
+         dy="3"
+         result="offset"
+         id="feOffset3205" />
+      <feComposite
+         in="offset"
+         in2="SourceGraphic"
+         operator="atop"
+         result="composite2"
+         id="feComposite3207" />
+    </filter>
+  </defs>
+  <g
+     id="g15"
+     transform="translate(4.0267079,-23.856062)">
+    <path
+       id="rect255"
+       style="fill:url(#radialGradient2282);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.984;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter3209)"
+       d="M 98.188539,3.4091823 3.668034,97.931503 32.261282,126.52475 98.188539,60.597495 164.11579,126.52475 192.70904,97.931503 Z m -0.03271,70.6055907 -47.264795,47.264797 14.240302,14.2403 33.057196,-33.0572 33.057198,33.0572 14.24031,-14.2403 -47.264805,-47.264797 -0.03271,0.0328 z"
+       transform="matrix(-0.32855185,0,0,-0.32855185,59.627176,72.598169)" />
+  </g>
+</svg>
