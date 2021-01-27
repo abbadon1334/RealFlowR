@@ -1,4 +1,5 @@
-## RealFlowR 
+## ![Logo](https://abbadon1334.github.io/RealFlowR/images/logo.svg) RealFlowR
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/b0dccaa467a682b7d5d2/maintainability)](https://codeclimate.com/github/abbadon1334/RealFlowR/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b0dccaa467a682b7d5d2/test_coverage)](https://codeclimate.com/github/abbadon1334/RealFlowR/test_coverage)
 
@@ -23,12 +24,12 @@ using only server side .NET 5 __without touching HTML or JS__.
     - [x] Add Input
         - [x] Add Collect Method : ask UI Element to get value from UI when needed
     - [ ] ~~Add Component Data Model to define data driven components~~
-- [ ] Tests
-    - [ ] Add SpecFlow test
+- [x] Tests
+    - [x] Add SpecFlow test
     - [ ] Reach at least 80% of test coverage
     - [ ] Add Selenium for functional tests 
-- [ ] Add Runtime injection of js/css
-- [ ] Add Bootstrap5
+- [x] Add Runtime injection of js/css
+- [x] Add Bootstrap5
 - [ ] Add Bootstrap elements
 - [ ] Add Entity Framework
     - [ ] Define in Component Method SetModel()

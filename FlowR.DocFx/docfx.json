@@ -45,7 +45,13 @@
     "externalReference": [],
     "dest": "../docs",
     "globalMetadata": {
-      "_appFooter": "© 2020 Francesco Danti aka Abbadon1334"
+      "_appTitle": "FlowR - Low Code UI over SignalR",
+      "_appFooter": "© 2020 Francesco Danti aka Abbadon1334",
+      "_gitContribute": {
+        "repo": "https://github.com/abbadon1334/RealFlowR",
+        "branch": "master"
+      },
+      "_appLogoPath": "images/logo.svg" 
     },
     "globalMetadataFiles": [],
     "fileMetadata": {},

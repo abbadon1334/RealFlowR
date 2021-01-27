@@ -1,5 +1,7 @@
 - name: Content
   href: content/
+  homepage: content/index.md
+  
 - name: Api Documentation
   href: api/
   homepage: api/index.md

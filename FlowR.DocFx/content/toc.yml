@@ -1,2 +1,2 @@
-- name: Content
-  homepage: index.md
+- name: Getting started
+  homepage: getting_started.md
