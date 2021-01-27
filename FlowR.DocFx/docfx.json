@@ -49,9 +49,7 @@
     },
     "globalMetadataFiles": [],
     "fileMetadata": {},
-    "template": [
-      "default"
-    ],
+    "template": [ "default" ],
     "markdownEngineProperties": {},
     "noLangKeyword": false
   }
