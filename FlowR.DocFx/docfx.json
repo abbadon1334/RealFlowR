@@ -49,7 +49,9 @@
     },
     "globalMetadataFiles": [],
     "fileMetadata": {},
-    "template": [ "default", "template.mermaid" ],
+    "template": [
+      "default", "templates/darkfx", "templates/mermaid"
+    ],
     "markdownEngineProperties": {},
     "noLangKeyword": false
   }
