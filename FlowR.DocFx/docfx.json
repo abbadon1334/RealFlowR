@@ -49,7 +49,7 @@
     },
     "globalMetadataFiles": [],
     "fileMetadata": {},
-    "template": [ "default" ],
+    "template": [ "default", "template.mermaid" ],
     "markdownEngineProperties": {},
     "noLangKeyword": false
   }
