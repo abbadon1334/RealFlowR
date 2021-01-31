@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>This is the HOMEPAGE. | FlowR - Low Code UI over SignalR </title>
+    <title> RealFlowR, a low code .NET library for RealTime UI | FlowR - Low Code UI over SignalR </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="This is the HOMEPAGE. | FlowR - Low Code UI over SignalR ">
+    <meta name="title" content=" RealFlowR, a low code .NET library for RealTime UI | FlowR - Low Code UI over SignalR ">
     <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="favicon.ico">
@@ -19,8 +19,7 @@
     
     
     
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -60,15 +59,29 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="this-is-the-homepage">This is the <strong>HOMEPAGE</strong>.</h1>
+<h2 id="logohttpsrawgithubusercontentcomabbadon1334realflowrmasterflowrdocfximageslogosvg-realflowr-a-low-code-net-library-for-realtime-ui"><img src="https://raw.githubusercontent.com/abbadon1334/RealFlowR/master/FlowR.DocFx/images/logo.svg" alt="Logo"> RealFlowR, a low code .NET library for RealTime UI</h2>
 
-<p>Refer to <a href="http://daringfireball.net/projects/markdown/">Markdown</a> for how to write markdown files.</p>
-<h2 id="quick-start-notes">Quick Start Notes:</h2>
-<ol>
-<li>Add images to the <em>images</em> folder if the file is referencing an image.</li>
-</ol>
+<p>Real time UI interactions using only server side .NET 5 <strong>without touching HTML
+or JS</strong>.</p>
+<h4 id="how-it-works">How it works</h4>
+<p>After connecting to SignalR, the client has its own unique instance associated
+with the server side.</p>
+<p>Every server-side operation is replicated on the client side, the trees built in
+this way are comparable in number and type and can be defined as &quot;mirrored&quot;.</p>
+<p>The client is reduced to a passive tool that reacts to commands from the server
+by building the UI or reacting to actions performed by the user.</p>
+<p>Client-side operations are performed at a low level in the DOM, using</p>
+<p>In this way we can work at a high level focusing on the single server-side
+element as an object that talks to itself through SignalR.</p>
 <pre><code class="lang-mermaid">graph LR
-    A -- text --&gt; B -- text2 --&gt; C
+
+    Application
+        --&gt; |.NET| SignalR-Server
+        --&gt; |.NET| ServerTree(Components Tree)
+
+    Client
+        --&gt; |DOM| SignalR-Client
+        --&gt; |DOM| ClientTree(Components Tree)
 </code></pre></article>
           </div>
           
@@ -81,9 +94,22 @@
                   </li>
                 </ul>
               </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+                <script type="text/javascript" src="styles/toggle-theme.js"></script>
+              </div>
+          
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>

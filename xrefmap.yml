@@ -3624,6 +3624,207 @@ references:
   isSpec: "True"
   fullName: FlowR.Core.Tags.Controls.Input.TagName
   nameWithType: Input.TagName
+- uid: FlowR.Core.Tags.Controls.Option
+  name: Option
+  href: api/FlowR.Core.Tags.Controls.Option.html
+  commentId: T:FlowR.Core.Tags.Controls.Option
+  fullName: FlowR.Core.Tags.Controls.Option
+  nameWithType: Option
+- uid: FlowR.Core.Tags.Controls.Option.SetSelected(System.Boolean)
+  name: SetSelected(Boolean)
+  href: api/FlowR.Core.Tags.Controls.Option.html#FlowR_Core_Tags_Controls_Option_SetSelected_System_Boolean_
+  commentId: M:FlowR.Core.Tags.Controls.Option.SetSelected(System.Boolean)
+  fullName: FlowR.Core.Tags.Controls.Option.SetSelected(System.Boolean)
+  nameWithType: Option.SetSelected(Boolean)
+- uid: FlowR.Core.Tags.Controls.Option.SetSelected*
+  name: SetSelected
+  href: api/FlowR.Core.Tags.Controls.Option.html#FlowR_Core_Tags_Controls_Option_SetSelected_
+  commentId: Overload:FlowR.Core.Tags.Controls.Option.SetSelected
+  isSpec: "True"
+  fullName: FlowR.Core.Tags.Controls.Option.SetSelected
+  nameWithType: Option.SetSelected
+- uid: FlowR.Core.Tags.Controls.Option.TagName
+  name: TagName
+  href: api/FlowR.Core.Tags.Controls.Option.html#FlowR_Core_Tags_Controls_Option_TagName
+  commentId: P:FlowR.Core.Tags.Controls.Option.TagName
+  fullName: FlowR.Core.Tags.Controls.Option.TagName
+  nameWithType: Option.TagName
+- uid: FlowR.Core.Tags.Controls.Option.TagName*
+  name: TagName
+  href: api/FlowR.Core.Tags.Controls.Option.html#FlowR_Core_Tags_Controls_Option_TagName_
+  commentId: Overload:FlowR.Core.Tags.Controls.Option.TagName
+  isSpec: "True"
+  fullName: FlowR.Core.Tags.Controls.Option.TagName
+  nameWithType: Option.TagName
+- uid: FlowR.Core.Tags.Controls.OptionGroup
+  name: OptionGroup
+  href: api/FlowR.Core.Tags.Controls.OptionGroup.html
+  commentId: T:FlowR.Core.Tags.Controls.OptionGroup
+  fullName: FlowR.Core.Tags.Controls.OptionGroup
+  nameWithType: OptionGroup
+- uid: FlowR.Core.Tags.Controls.OptionGroup.AddOption(System.String,System.String)
+  name: AddOption(String, String)
+  href: api/FlowR.Core.Tags.Controls.OptionGroup.html#FlowR_Core_Tags_Controls_OptionGroup_AddOption_System_String_System_String_
+  commentId: M:FlowR.Core.Tags.Controls.OptionGroup.AddOption(System.String,System.String)
+  fullName: FlowR.Core.Tags.Controls.OptionGroup.AddOption(System.String, System.String)
+  nameWithType: OptionGroup.AddOption(String, String)
+- uid: FlowR.Core.Tags.Controls.OptionGroup.AddOption*
+  name: AddOption
+  href: api/FlowR.Core.Tags.Controls.OptionGroup.html#FlowR_Core_Tags_Controls_OptionGroup_AddOption_
+  commentId: Overload:FlowR.Core.Tags.Controls.OptionGroup.AddOption
+  isSpec: "True"
+  fullName: FlowR.Core.Tags.Controls.OptionGroup.AddOption
+  nameWithType: OptionGroup.AddOption
+- uid: FlowR.Core.Tags.Controls.OptionGroup.TagName
+  name: TagName
+  href: api/FlowR.Core.Tags.Controls.OptionGroup.html#FlowR_Core_Tags_Controls_OptionGroup_TagName
+  commentId: P:FlowR.Core.Tags.Controls.OptionGroup.TagName
+  fullName: FlowR.Core.Tags.Controls.OptionGroup.TagName
+  nameWithType: OptionGroup.TagName
+- uid: FlowR.Core.Tags.Controls.OptionGroup.TagName*
+  name: TagName
+  href: api/FlowR.Core.Tags.Controls.OptionGroup.html#FlowR_Core_Tags_Controls_OptionGroup_TagName_
+  commentId: Overload:FlowR.Core.Tags.Controls.OptionGroup.TagName
+  isSpec: "True"
+  fullName: FlowR.Core.Tags.Controls.OptionGroup.TagName
+  nameWithType: OptionGroup.TagName
+- uid: FlowR.Core.Tags.Controls.Select
+  name: Select
+  href: api/FlowR.Core.Tags.Controls.Select.html
+  commentId: T:FlowR.Core.Tags.Controls.Select
+  fullName: FlowR.Core.Tags.Controls.Select
+  nameWithType: Select
+- uid: FlowR.Core.Tags.Controls.Select.AddOption(System.Collections.Generic.Dictionary{System.String,System.String})
+  name: AddOption(Dictionary<String, String>)
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_AddOption_System_Collections_Generic_Dictionary_System_String_System_String__
+  commentId: M:FlowR.Core.Tags.Controls.Select.AddOption(System.Collections.Generic.Dictionary{System.String,System.String})
+  name.vb: AddOption(Dictionary(Of String, String))
+  fullName: FlowR.Core.Tags.Controls.Select.AddOption(System.Collections.Generic.Dictionary<System.String, System.String>)
+  fullName.vb: FlowR.Core.Tags.Controls.Select.AddOption(System.Collections.Generic.Dictionary(Of System.String, System.String))
+  nameWithType: Select.AddOption(Dictionary<String, String>)
+  nameWithType.vb: Select.AddOption(Dictionary(Of String, String))
+- uid: FlowR.Core.Tags.Controls.Select.AddOption(System.Collections.Generic.Dictionary{System.String,System.String},System.String)
+  name: AddOption(Dictionary<String, String>, String)
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_AddOption_System_Collections_Generic_Dictionary_System_String_System_String__System_String_
+  commentId: M:FlowR.Core.Tags.Controls.Select.AddOption(System.Collections.Generic.Dictionary{System.String,System.String},System.String)
+  name.vb: AddOption(Dictionary(Of String, String), String)
+  fullName: FlowR.Core.Tags.Controls.Select.AddOption(System.Collections.Generic.Dictionary<System.String, System.String>, System.String)
+  fullName.vb: FlowR.Core.Tags.Controls.Select.AddOption(System.Collections.Generic.Dictionary(Of System.String, System.String), System.String)
+  nameWithType: Select.AddOption(Dictionary<String, String>, String)
+  nameWithType.vb: Select.AddOption(Dictionary(Of String, String), String)
+- uid: FlowR.Core.Tags.Controls.Select.AddOption(System.String,System.String)
+  name: AddOption(String, String)
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_AddOption_System_String_System_String_
+  commentId: M:FlowR.Core.Tags.Controls.Select.AddOption(System.String,System.String)
+  fullName: FlowR.Core.Tags.Controls.Select.AddOption(System.String, System.String)
+  nameWithType: Select.AddOption(String, String)
+- uid: FlowR.Core.Tags.Controls.Select.AddOption(System.String,System.String,System.String)
+  name: AddOption(String, String, String)
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_AddOption_System_String_System_String_System_String_
+  commentId: M:FlowR.Core.Tags.Controls.Select.AddOption(System.String,System.String,System.String)
+  fullName: FlowR.Core.Tags.Controls.Select.AddOption(System.String, System.String, System.String)
+  nameWithType: Select.AddOption(String, String, String)
+- uid: FlowR.Core.Tags.Controls.Select.AddOption*
+  name: AddOption
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_AddOption_
+  commentId: Overload:FlowR.Core.Tags.Controls.Select.AddOption
+  isSpec: "True"
+  fullName: FlowR.Core.Tags.Controls.Select.AddOption
+  nameWithType: Select.AddOption
+- uid: FlowR.Core.Tags.Controls.Select.AddOptionGroup(System.String,System.String)
+  name: AddOptionGroup(String, String)
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_AddOptionGroup_System_String_System_String_
+  commentId: M:FlowR.Core.Tags.Controls.Select.AddOptionGroup(System.String,System.String)
+  fullName: FlowR.Core.Tags.Controls.Select.AddOptionGroup(System.String, System.String)
+  nameWithType: Select.AddOptionGroup(String, String)
+- uid: FlowR.Core.Tags.Controls.Select.AddOptionGroup*
+  name: AddOptionGroup
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_AddOptionGroup_
+  commentId: Overload:FlowR.Core.Tags.Controls.Select.AddOptionGroup
+  isSpec: "True"
+  fullName: FlowR.Core.Tags.Controls.Select.AddOptionGroup
+  nameWithType: Select.AddOptionGroup
+- uid: FlowR.Core.Tags.Controls.Select.ClearOptions
+  name: ClearOptions()
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_ClearOptions
+  commentId: M:FlowR.Core.Tags.Controls.Select.ClearOptions
+  fullName: FlowR.Core.Tags.Controls.Select.ClearOptions()
+  nameWithType: Select.ClearOptions()
+- uid: FlowR.Core.Tags.Controls.Select.ClearOptions*
+  name: ClearOptions
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_ClearOptions_
+  commentId: Overload:FlowR.Core.Tags.Controls.Select.ClearOptions
+  isSpec: "True"
+  fullName: FlowR.Core.Tags.Controls.Select.ClearOptions
+  nameWithType: Select.ClearOptions
+- uid: FlowR.Core.Tags.Controls.Select.ControlType
+  name: ControlType
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_ControlType
+  commentId: P:FlowR.Core.Tags.Controls.Select.ControlType
+  fullName: FlowR.Core.Tags.Controls.Select.ControlType
+  nameWithType: Select.ControlType
+- uid: FlowR.Core.Tags.Controls.Select.ControlType*
+  name: ControlType
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_ControlType_
+  commentId: Overload:FlowR.Core.Tags.Controls.Select.ControlType
+  isSpec: "True"
+  fullName: FlowR.Core.Tags.Controls.Select.ControlType
+  nameWithType: Select.ControlType
+- uid: FlowR.Core.Tags.Controls.Select.GetOptionGroup(System.String)
+  name: GetOptionGroup(String)
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_GetOptionGroup_System_String_
+  commentId: M:FlowR.Core.Tags.Controls.Select.GetOptionGroup(System.String)
+  fullName: FlowR.Core.Tags.Controls.Select.GetOptionGroup(System.String)
+  nameWithType: Select.GetOptionGroup(String)
+- uid: FlowR.Core.Tags.Controls.Select.GetOptionGroup*
+  name: GetOptionGroup
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_GetOptionGroup_
+  commentId: Overload:FlowR.Core.Tags.Controls.Select.GetOptionGroup
+  isSpec: "True"
+  fullName: FlowR.Core.Tags.Controls.Select.GetOptionGroup
+  nameWithType: Select.GetOptionGroup
+- uid: FlowR.Core.Tags.Controls.Select.ReplaceOption(System.Collections.Generic.Dictionary{System.String,System.String})
+  name: ReplaceOption(Dictionary<String, String>)
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_ReplaceOption_System_Collections_Generic_Dictionary_System_String_System_String__
+  commentId: M:FlowR.Core.Tags.Controls.Select.ReplaceOption(System.Collections.Generic.Dictionary{System.String,System.String})
+  name.vb: ReplaceOption(Dictionary(Of String, String))
+  fullName: FlowR.Core.Tags.Controls.Select.ReplaceOption(System.Collections.Generic.Dictionary<System.String, System.String>)
+  fullName.vb: FlowR.Core.Tags.Controls.Select.ReplaceOption(System.Collections.Generic.Dictionary(Of System.String, System.String))
+  nameWithType: Select.ReplaceOption(Dictionary<String, String>)
+  nameWithType.vb: Select.ReplaceOption(Dictionary(Of String, String))
+- uid: FlowR.Core.Tags.Controls.Select.ReplaceOption*
+  name: ReplaceOption
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_ReplaceOption_
+  commentId: Overload:FlowR.Core.Tags.Controls.Select.ReplaceOption
+  isSpec: "True"
+  fullName: FlowR.Core.Tags.Controls.Select.ReplaceOption
+  nameWithType: Select.ReplaceOption
+- uid: FlowR.Core.Tags.Controls.Select.SetSelectedOption(System.String)
+  name: SetSelectedOption(String)
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_SetSelectedOption_System_String_
+  commentId: M:FlowR.Core.Tags.Controls.Select.SetSelectedOption(System.String)
+  fullName: FlowR.Core.Tags.Controls.Select.SetSelectedOption(System.String)
+  nameWithType: Select.SetSelectedOption(String)
+- uid: FlowR.Core.Tags.Controls.Select.SetSelectedOption*
+  name: SetSelectedOption
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_SetSelectedOption_
+  commentId: Overload:FlowR.Core.Tags.Controls.Select.SetSelectedOption
+  isSpec: "True"
+  fullName: FlowR.Core.Tags.Controls.Select.SetSelectedOption
+  nameWithType: Select.SetSelectedOption
+- uid: FlowR.Core.Tags.Controls.Select.TagName
+  name: TagName
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_TagName
+  commentId: P:FlowR.Core.Tags.Controls.Select.TagName
+  fullName: FlowR.Core.Tags.Controls.Select.TagName
+  nameWithType: Select.TagName
+- uid: FlowR.Core.Tags.Controls.Select.TagName*
+  name: TagName
+  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_TagName_
+  commentId: Overload:FlowR.Core.Tags.Controls.Select.TagName
+  isSpec: "True"
+  fullName: FlowR.Core.Tags.Controls.Select.TagName
+  nameWithType: Select.TagName
 - uid: FlowR.Core.Tags.Data
   name: Data
   href: api/FlowR.Core.Tags.Data.html
@@ -4587,44 +4788,6 @@ references:
   isSpec: "True"
   fullName: FlowR.Core.Tags.Ol.TagName
   nameWithType: Ol.TagName
-- uid: FlowR.Core.Tags.Optgroup
-  name: Optgroup
-  href: api/FlowR.Core.Tags.Optgroup.html
-  commentId: T:FlowR.Core.Tags.Optgroup
-  fullName: FlowR.Core.Tags.Optgroup
-  nameWithType: Optgroup
-- uid: FlowR.Core.Tags.Optgroup.TagName
-  name: TagName
-  href: api/FlowR.Core.Tags.Optgroup.html#FlowR_Core_Tags_Optgroup_TagName
-  commentId: P:FlowR.Core.Tags.Optgroup.TagName
-  fullName: FlowR.Core.Tags.Optgroup.TagName
-  nameWithType: Optgroup.TagName
-- uid: FlowR.Core.Tags.Optgroup.TagName*
-  name: TagName
-  href: api/FlowR.Core.Tags.Optgroup.html#FlowR_Core_Tags_Optgroup_TagName_
-  commentId: Overload:FlowR.Core.Tags.Optgroup.TagName
-  isSpec: "True"
-  fullName: FlowR.Core.Tags.Optgroup.TagName
-  nameWithType: Optgroup.TagName
-- uid: FlowR.Core.Tags.Option
-  name: Option
-  href: api/FlowR.Core.Tags.Option.html
-  commentId: T:FlowR.Core.Tags.Option
-  fullName: FlowR.Core.Tags.Option
-  nameWithType: Option
-- uid: FlowR.Core.Tags.Option.TagName
-  name: TagName
-  href: api/FlowR.Core.Tags.Option.html#FlowR_Core_Tags_Option_TagName
-  commentId: P:FlowR.Core.Tags.Option.TagName
-  fullName: FlowR.Core.Tags.Option.TagName
-  nameWithType: Option.TagName
-- uid: FlowR.Core.Tags.Option.TagName*
-  name: TagName
-  href: api/FlowR.Core.Tags.Option.html#FlowR_Core_Tags_Option_TagName_
-  commentId: Overload:FlowR.Core.Tags.Option.TagName
-  isSpec: "True"
-  fullName: FlowR.Core.Tags.Option.TagName
-  nameWithType: Option.TagName
 - uid: FlowR.Core.Tags.Output
   name: Output
   href: api/FlowR.Core.Tags.Output.html
@@ -4891,25 +5054,6 @@ references:
   isSpec: "True"
   fullName: FlowR.Core.Tags.Section.TagName
   nameWithType: Section.TagName
-- uid: FlowR.Core.Tags.Select
-  name: Select
-  href: api/FlowR.Core.Tags.Select.html
-  commentId: T:FlowR.Core.Tags.Select
-  fullName: FlowR.Core.Tags.Select
-  nameWithType: Select
-- uid: FlowR.Core.Tags.Select.TagName
-  name: TagName
-  href: api/FlowR.Core.Tags.Select.html#FlowR_Core_Tags_Select_TagName
-  commentId: P:FlowR.Core.Tags.Select.TagName
-  fullName: FlowR.Core.Tags.Select.TagName
-  nameWithType: Select.TagName
-- uid: FlowR.Core.Tags.Select.TagName*
-  name: TagName
-  href: api/FlowR.Core.Tags.Select.html#FlowR_Core_Tags_Select_TagName_
-  commentId: Overload:FlowR.Core.Tags.Select.TagName
-  isSpec: "True"
-  fullName: FlowR.Core.Tags.Select.TagName
-  nameWithType: Select.TagName
 - uid: FlowR.Core.Tags.Small
   name: Small
   href: api/FlowR.Core.Tags.Small.html
