@@ -1,7 +1,5 @@
 namespace FlowR.Core.Tags
 {
-
-
     /// <summary>
     ///     Defines a hyperlink.
     /// </summary>
@@ -10,7 +8,6 @@ namespace FlowR.Core.Tags
         /// <inherited />
         protected override string TagName => "a";
     }
-
 
     /// <summary>
     ///     Defines an abbreviated form of a longer word or phrase.
@@ -679,27 +676,6 @@ namespace FlowR.Core.Tags
         protected override string TagName => "ol";
     }
 
-
-    /// <summary>
-    ///     Defines a group of related options in a selection list.
-    /// </summary>
-    public class Optgroup : NodeComponent
-    {
-        /// <inherited />
-        protected override string TagName => "optgroup";
-    }
-
-
-    /// <summary>
-    ///     Defines an option in a selection list.
-    /// </summary>
-    public class Option : NodeComponent
-    {
-        /// <inherited />
-        protected override string TagName => "option";
-    }
-
-
     /// <summary>
     ///     Represents the result of a calculation.
     /// </summary>
@@ -838,17 +814,6 @@ namespace FlowR.Core.Tags
         /// <inherited />
         protected override string TagName => "section";
     }
-
-
-    /// <summary>
-    ///     Defines a selection list within a form.
-    /// </summary>
-    public class Select : NodeComponent
-    {
-        /// <inherited />
-        protected override string TagName => "select";
-    }
-
 
     /// <summary>
     ///     Displays text in a smaller size.
