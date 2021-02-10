@@ -89,7 +89,7 @@ namespace FlowR.Core
         /// <param name="uuid"></param>
         /// <returns></returns>
         private INode GetRegisterComponent(string uuid)
-        {
+        { 
             return _registry.Get(uuid);
         }
 

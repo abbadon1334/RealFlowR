@@ -115,20 +115,20 @@ namespace FlowR
                 columnResult.RemoveAllChildren();
 
                 var row1 = columnResult.Add<Row>();
-                row1.AddCol().SetText("fldDry");
-                row1.AddCol().SetText(await fldDry.CollectValueAsync());
+                    row1.AddCol().SetText("fldDry");
+                    row1.AddCol().SetText(await fldDry.CollectValueAsync());
 
                 var row2 = columnResult.Add<Row>();
-                row2.AddCol().SetText("fieldInput");
-                row2.AddCol().SetText(await fldInput.CollectValueAsync());
+                    row2.AddCol().SetText("fieldInput");
+                    row2.AddCol().SetText(await fldInput.CollectValueAsync());
 
                 var row3 = columnResult.Add<Row>();
-                row3.AddCol().SetText("fieldCheckbox");
-                row3.AddCol().SetText(await fldCheckbox.CollectValueAsync());
+                    row3.AddCol().SetText("fieldCheckbox");
+                    row3.AddCol().SetText(await fldCheckbox.CollectValueAsync());
 
                 var row4 = columnResult.Add<Row>();
-                row4.AddCol().SetText("fldSelect");
-                row4.AddCol().SetText(await fldSelect.CollectValueAsync());
+                    row4.AddCol().SetText("fldSelect");
+                    row4.AddCol().SetText(await fldSelect.CollectValueAsync());
             });
         }
     }

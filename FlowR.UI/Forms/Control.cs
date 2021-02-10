@@ -34,10 +34,7 @@ namespace FlowR.UI.Forms
             return this;
         }
 
-        public Label GetLabel()
-        {
-            return _label;
-        }
+        public Label GetLabel() => _label;
 
         /// <summary>
         ///     Set Field for the control
