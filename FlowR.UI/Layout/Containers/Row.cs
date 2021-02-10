@@ -6,7 +6,7 @@ namespace FlowR.UI.Layout.Containers
     /// <summary>
     ///     Row of container
     /// </summary>
-    public class Row : NodeComponent
+    public class Row : NodeElement
     {
         /// <inheritdoc />
         protected override string TagName => "div";
@@ -17,7 +17,11 @@ namespace FlowR.UI.Layout.Containers
             { "class", "row" },
         };
 
-        private Column AddCol()
+        /// <summary>
+        ///     Add a column
+        /// </summary>
+        /// <returns></returns>
+        public Column AddCol()
         {
             return Add<Column>();
         }

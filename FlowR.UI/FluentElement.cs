@@ -8,7 +8,7 @@ namespace FlowR.UI
     ///     Fluent Component
     /// </summary>
     /// <typeparam name="TComponent"></typeparam>
-    public class FluentComponent<TComponent> : NodeComponent where TComponent : INodeComponent
+    public class FluentElement<TComponent> : NodeElement where TComponent : INodeElement
     {
         /// <summary>
         ///     Fluent NodeComponent SetAttribute (single)
@@ -16,7 +16,7 @@ namespace FlowR.UI
         /// <param name="name"></param>
         /// <param name="value"></param>
         /// <returns></returns>
-        public override FluentComponent<TComponent> SetAttribute(string name, string value)
+        public override FluentElement<TComponent> SetAttribute(string name, string value)
         {
             base.SetAttribute(name, value);
 
@@ -28,7 +28,7 @@ namespace FlowR.UI
         /// </summary>
         /// <param name="attrs"></param>
         /// <returns></returns>
-        public override FluentComponent<TComponent> SetAttribute(Dictionary<string, string> attrs = null)
+        public override FluentElement<TComponent> SetAttribute(Dictionary<string, string> attrs = null)
         {
             base.SetAttribute(attrs);
 
@@ -40,7 +40,7 @@ namespace FlowR.UI
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public override FluentComponent<TComponent> RemoveAttribute(string name)
+        public override FluentElement<TComponent> RemoveAttribute(string name)
         {
             base.RemoveAttribute(name);
 
@@ -52,7 +52,7 @@ namespace FlowR.UI
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
-        public override FluentComponent<TComponent> SetText(string text)
+        public override FluentElement<TComponent> SetText(string text)
         {
             base.SetText(text);
 
@@ -65,7 +65,7 @@ namespace FlowR.UI
         /// <param name="eventName"></param>
         /// <param name="handler"></param>
         /// <returns></returns>
-        public override FluentComponent<TComponent> On(string eventName, EventHandler handler)
+        public override FluentElement<TComponent> On(string eventName, EventHandler handler)
         {
             base.On(eventName, handler);
 
@@ -78,7 +78,7 @@ namespace FlowR.UI
         /// <param name="eventName"></param>
         /// <param name="handler"></param>
         /// <returns></returns>
-        public override FluentComponent<TComponent> Off(string eventName, EventHandler handler)
+        public override FluentElement<TComponent> Off(string eventName, EventHandler handler)
         {
             base.Off(eventName, handler);
 
@@ -90,7 +90,7 @@ namespace FlowR.UI
         /// </summary>
         /// <param name="eventName"></param>
         /// <returns></returns>
-        public override FluentComponent<TComponent> Off(string eventName)
+        public override FluentElement<TComponent> Off(string eventName)
         {
             base.Off(eventName);
 
@@ -102,7 +102,7 @@ namespace FlowR.UI
         /// </summary>
         /// <param name="className"></param>
         /// <returns></returns>
-        public override FluentComponent<TComponent> RemoveCssClass(string className)
+        public override FluentElement<TComponent> RemoveCssClass(string className)
         {
             base.RemoveCssClass(className);
 
@@ -114,7 +114,7 @@ namespace FlowR.UI
         /// </summary>
         /// <param name="className"></param>
         /// <returns></returns>
-        public override FluentComponent<TComponent> AddCssClass(string className)
+        public override FluentElement<TComponent> AddCssClass(string className)
         {
             base.AddCssClass(className);
 

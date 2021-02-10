@@ -151,7 +151,7 @@ namespace FlowR.Core
         /// <param name="attributes"></param>
         /// <typeparam name="TNodeComponent"></typeparam>
         /// <returns></returns>
-        public TNodeComponent Add<TNodeComponent>(Dictionary<string, string> attributes = null) where TNodeComponent : INodeComponent, new();
+        public TNodeComponent Add<TNodeComponent>(Dictionary<string, string> attributes = null) where TNodeComponent : INodeElement, new();
 
         /// <summary>
         ///     Fluid Add Element

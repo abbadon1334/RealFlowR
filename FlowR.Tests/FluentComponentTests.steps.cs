@@ -12,12 +12,12 @@ namespace FlowR.Tests
         /// <summary>
         ///     FluentComponent mock
         /// </summary>
-        public FluentComponent<Div> FluentDiv;
+        public FluentElement<Div> FluentDiv;
 
         [Given(@"I create a full Fluent div")] public void GivenCreateFluentDiv()
         {
             FluentDiv = App.GetComponentRoot()
-                    .Add<FluentComponent<Div>>()
+                    .Add<FluentElement<Div>>()
                     .SetAttribute("keyA", "valueA")
                     .SetAttribute("keyB", "valueB")
                     .SetAttribute("keyC", "valueC")

@@ -4,7 +4,7 @@ using FlowR.Core;
 namespace FlowR.UI.Layout.Containers
 {
     /// <inheritdoc />
-    public class Container : NodeComponent
+    public class Container : NodeElement
     {
         /// <inheritdoc />
         protected override string TagName => "div";

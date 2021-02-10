@@ -294,10 +294,10 @@ class FlowR {
                 // it will set it and retrieve later, can be a feature :D 
                 obj[last_path_chunk] = value;
             },
-            Get(): object {
+            Get(): string {
                 // don't check for undefined or null
-                // let it return null | undefined | "" | string @todo che if this is a correct behaviour
-                return obj[last_path_chunk];
+                // let it return null | undefined | "" | string @todo needs refactor
+                return "" + obj[last_path_chunk];
             },
             Call(args) {
                 // if undefined will throw exception better check before call

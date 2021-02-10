@@ -6,7 +6,7 @@ namespace FlowR.UI.Components
     /// <summary>
     ///     Tag div
     /// </summary>
-    public class NavbarMenu : NodeComponent
+    public class NavbarMenu : NodeElement
     {
         /// <inheritdoc />
         protected override string TagName => "ul";

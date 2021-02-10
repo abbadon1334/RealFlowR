@@ -8,7 +8,7 @@ namespace FlowR.Core.Tags
     ///     that having interactive input controls
     ///     to submit form information to a server.
     /// </summary>
-    public class Form : NodeComponent
+    public class Form : NodeElement
     {
 
         private readonly Dictionary<string, INodeControl> _controls = new();

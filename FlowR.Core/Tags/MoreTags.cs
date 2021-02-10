@@ -3,7 +3,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a hyperlink.
     /// </summary>
-    public class A : NodeComponent
+    public class A : NodeElement
     {
         /// <inherited />
         protected override string TagName => "a";
@@ -12,7 +12,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines an abbreviated form of a longer word or phrase.
     /// </summary>
-    public class Abbr : NodeComponent
+    public class Abbr : NodeElement
     {
         /// <inherited />
         protected override string TagName => "abbr";
@@ -22,7 +22,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Specifies the author's contact information.
     /// </summary>
-    public class Address : NodeComponent
+    public class Address : NodeElement
     {
         /// <inherited />
         protected override string TagName => "address";
@@ -32,7 +32,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a specific area within an image map.
     /// </summary>
-    public class Area : NodeComponent
+    public class Area : NodeElement
     {
         /// <inherited />
         protected override string TagName => "area";
@@ -42,7 +42,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines an article.
     /// </summary>
-    public class Article : NodeComponent
+    public class Article : NodeElement
     {
         /// <inherited />
         protected override string TagName => "article";
@@ -52,7 +52,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines some content loosely related to the page content.
     /// </summary>
-    public class Aside : NodeComponent
+    public class Aside : NodeElement
     {
         /// <inherited />
         protected override string TagName => "aside";
@@ -62,7 +62,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Embeds a sound, or an audio stream in an HTML document.
     /// </summary>
-    public class Audio : NodeComponent
+    public class Audio : NodeElement
     {
         /// <inherited />
         protected override string TagName => "audio";
@@ -72,7 +72,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Displays text in a bold style.
     /// </summary>
-    public class B : NodeComponent
+    public class B : NodeElement
     {
         /// <inherited />
         protected override string TagName => "b";
@@ -82,7 +82,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines the base URL for all relative URLs in a document.
     /// </summary>
-    public class Base : NodeComponent
+    public class Base : NodeElement
     {
         /// <inherited />
         protected override string TagName => "base";
@@ -92,7 +92,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents text that is isolated from its surrounding for the purposes of bidirectional text formatting.
     /// </summary>
-    public class Bdi : NodeComponent
+    public class Bdi : NodeElement
     {
         /// <inherited />
         protected override string TagName => "bdi";
@@ -102,7 +102,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Overrides the current text direction.
     /// </summary>
-    public class Bdo : NodeComponent
+    public class Bdo : NodeElement
     {
         /// <inherited />
         protected override string TagName => "bdo";
@@ -112,7 +112,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents a section that is quoted from another source.
     /// </summary>
-    public class Blockquote : NodeComponent
+    public class Blockquote : NodeElement
     {
         /// <inherited />
         protected override string TagName => "blockquote";
@@ -122,7 +122,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines the document's body.
     /// </summary>
-    public class Body : NodeComponent
+    public class Body : NodeElement
     {
         /// <inherited />
         protected override string TagName => "body";
@@ -132,7 +132,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Produces a single line break.
     /// </summary>
-    public class Br : NodeComponent
+    public class Br : NodeElement
     {
         /// <inherited />
         protected override string TagName => "br";
@@ -142,7 +142,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Creates a clickable button.
     /// </summary>
-    public class Button : NodeComponent
+    public class Button : NodeElement
     {
         /// <inherited />
         protected override string TagName => "button";
@@ -152,7 +152,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a region in the document, which can be used to draw graphics on the fly via scripting (usually JavaScript).
     /// </summary>
-    public class Canvas : NodeComponent
+    public class Canvas : NodeElement
     {
         /// <inherited />
         protected override string TagName => "canvas";
@@ -162,7 +162,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines the caption or title of the table.
     /// </summary>
-    public class Caption : NodeComponent
+    public class Caption : NodeElement
     {
         /// <inherited />
         protected override string TagName => "caption";
@@ -172,7 +172,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Indicates a citation or reference to another source.
     /// </summary>
-    public class Cite : NodeComponent
+    public class Cite : NodeElement
     {
         /// <inherited />
         protected override string TagName => "cite";
@@ -182,7 +182,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Specifies text as computer code.
     /// </summary>
-    public class Code : NodeComponent
+    public class Code : NodeElement
     {
         /// <inherited />
         protected override string TagName => "code";
@@ -192,7 +192,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines attribute values for one or more columns in a table.
     /// </summary>
-    public class Col : NodeComponent
+    public class Col : NodeElement
     {
         /// <inherited />
         protected override string TagName => "col";
@@ -202,7 +202,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Specifies attributes for multiple columns in a table.
     /// </summary>
-    public class Colgroup : NodeComponent
+    public class Colgroup : NodeElement
     {
         /// <inherited />
         protected override string TagName => "colgroup";
@@ -212,7 +212,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Links a piece of content with a machine-readable translation.
     /// </summary>
-    public class Data : NodeComponent
+    public class Data : NodeElement
     {
         /// <inherited />
         protected override string TagName => "data";
@@ -222,7 +222,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents a set of pre-defined options for an input element.
     /// </summary>
-    public class Datalist : NodeComponent
+    public class Datalist : NodeElement
     {
         /// <inherited />
         protected override string TagName => "datalist";
@@ -232,7 +232,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Specifies a description, or value for the term (dt) in a description list (dl)
     /// </summary>
-    public class Dd : NodeComponent
+    public class Dd : NodeElement
     {
         /// <inherited />
         protected override string TagName => "dd";
@@ -242,7 +242,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents text that has been deleted from the document.
     /// </summary>
-    public class Del : NodeComponent
+    public class Del : NodeElement
     {
         /// <inherited />
         protected override string TagName => "del";
@@ -252,7 +252,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents a widget from which the user can obtain additional information or controls on-demand.
     /// </summary>
-    public class Details : NodeComponent
+    public class Details : NodeElement
     {
         /// <inherited />
         protected override string TagName => "details";
@@ -262,7 +262,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Specifies a definition.
     /// </summary>
-    public class Dfn : NodeComponent
+    public class Dfn : NodeElement
     {
         /// <inherited />
         protected override string TagName => "dfn";
@@ -272,7 +272,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a dialog box or sub window.
     /// </summary>
-    public class Dialog : NodeComponent
+    public class Dialog : NodeElement
     {
         /// <inherited />
         protected override string TagName => "dialog";
@@ -281,7 +281,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a description list.
     /// </summary>
-    public class Dl : NodeComponent
+    public class Dl : NodeElement
     {
         /// <inherited />
         protected override string TagName => "dl";
@@ -291,7 +291,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a term (an item) in a description list.
     /// </summary>
-    public class Dt : NodeComponent
+    public class Dt : NodeElement
     {
         /// <inherited />
         protected override string TagName => "dt";
@@ -301,7 +301,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines emphasized text.
     /// </summary>
-    public class Em : NodeComponent
+    public class Em : NodeElement
     {
         /// <inherited />
         protected override string TagName => "em";
@@ -311,7 +311,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Embeds external application, typically multimedia content like audio or video into an HTML document.
     /// </summary>
-    public class Embed : NodeComponent
+    public class Embed : NodeElement
     {
         /// <inherited />
         protected override string TagName => "embed";
@@ -321,7 +321,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Specifies a set of related form fields.
     /// </summary>
-    public class Fieldset : NodeComponent
+    public class Fieldset : NodeElement
     {
         /// <inherited />
         protected override string TagName => "fieldset";
@@ -331,7 +331,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a caption or legend for a figure.
     /// </summary>
-    public class Figcaption : NodeComponent
+    public class Figcaption : NodeElement
     {
         /// <inherited />
         protected override string TagName => "figcaption";
@@ -341,7 +341,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents a figure illustrated as part of the document.
     /// </summary>
-    public class Figure : NodeComponent
+    public class Figure : NodeElement
     {
         /// <inherited />
         protected override string TagName => "figure";
@@ -351,7 +351,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents the footer of a document or a section.
     /// </summary>
-    public class Footer : NodeComponent
+    public class Footer : NodeElement
     {
         /// <inherited />
         protected override string TagName => "footer";
@@ -360,7 +360,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines the head portion of the document that contains information about the document such as title.
     /// </summary>
-    public class Head : NodeComponent
+    public class Head : NodeElement
     {
         /// <inherited />
         protected override string TagName => "head";
@@ -370,7 +370,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents the header of a document or a section.
     /// </summary>
-    public class Header : NodeComponent
+    public class Header : NodeElement
     {
         /// <inherited />
         protected override string TagName => "header";
@@ -380,7 +380,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a group of headings.
     /// </summary>
-    public class Hgroup : NodeComponent
+    public class Hgroup : NodeElement
     {
         /// <inherited />
         protected override string TagName => "hgroup";
@@ -389,7 +389,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines HTML headings.
     /// </summary>
-    public abstract class H : NodeComponent
+    public abstract class H : NodeElement
     {
     }
 
@@ -451,7 +451,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Produce a horizontal line.
     /// </summary>
-    public class Hr : NodeComponent
+    public class Hr : NodeElement
     {
         /// <inherited />
         protected override string TagName => "hr";
@@ -461,7 +461,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines the root of an HTML document.
     /// </summary>
-    public class Html : NodeComponent
+    public class Html : NodeElement
     {
         /// <inherited />
         protected override string TagName => "html";
@@ -471,7 +471,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Displays text in an italic style.
     /// </summary>
-    public class I : NodeComponent
+    public class I : NodeElement
     {
         /// <inherited />
         protected override string TagName => "i";
@@ -481,7 +481,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Displays a URL in an inline frame.
     /// </summary>
-    public class Iframe : NodeComponent
+    public class Iframe : NodeElement
     {
         /// <inherited />
         protected override string TagName => "iframe";
@@ -491,7 +491,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents an image.
     /// </summary>
-    public class Img : NodeComponent
+    public class Img : NodeElement
     {
         /// <inherited />
         protected override string TagName => "img";
@@ -500,7 +500,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a block of text that has been inserted into a document.
     /// </summary>
-    public class Ins : NodeComponent
+    public class Ins : NodeElement
     {
         /// <inherited />
         protected override string TagName => "ins";
@@ -510,7 +510,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Specifies text as keyboard input.
     /// </summary>
-    public class Kbd : NodeComponent
+    public class Kbd : NodeElement
     {
         /// <inherited />
         protected override string TagName => "kbd";
@@ -520,7 +520,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents a control for generating a public-private key pair.
     /// </summary>
-    public class Keygen : NodeComponent
+    public class Keygen : NodeElement
     {
         /// <inherited />
         protected override string TagName => "keygen";
@@ -530,7 +530,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a label for an input control.
     /// </summary>
-    public class Label : NodeComponent
+    public class Label : NodeElement
     {
         /// <inherited />
         protected override string TagName => "label";
@@ -540,7 +540,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a caption for a fieldset element.
     /// </summary>
-    public class Legend : NodeComponent
+    public class Legend : NodeElement
     {
         /// <inherited />
         protected override string TagName => "legend";
@@ -550,7 +550,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a list item.
     /// </summary>
-    public class Li : NodeComponent
+    public class Li : NodeElement
     {
         /// <inherited />
         protected override string TagName => "li";
@@ -560,7 +560,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines the relationship between the current document and an external resource.
     /// </summary>
-    public class Link : NodeComponent
+    public class Link : NodeElement
     {
         /// <inherited />
         protected override string TagName => "link";
@@ -570,7 +570,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents the main or dominant content of the document.
     /// </summary>
-    public class Main : NodeComponent
+    public class Main : NodeElement
     {
         /// <inherited />
         protected override string TagName => "main";
@@ -580,7 +580,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a client-side image-map.
     /// </summary>
-    public class Map : NodeComponent
+    public class Map : NodeElement
     {
         /// <inherited />
         protected override string TagName => "map";
@@ -590,7 +590,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents text highlighted for reference purposes.
     /// </summary>
-    public class Mark : NodeComponent
+    public class Mark : NodeElement
     {
         /// <inherited />
         protected override string TagName => "mark";
@@ -600,7 +600,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents a list of commands.
     /// </summary>
-    public class Menu : NodeComponent
+    public class Menu : NodeElement
     {
         /// <inherited />
         protected override string TagName => "menu";
@@ -610,7 +610,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a list (or menuitem) of commands that a user can perform.
     /// </summary>
-    public class Menuitem : NodeComponent
+    public class Menuitem : NodeElement
     {
         /// <inherited />
         protected override string TagName => "menuitem";
@@ -620,7 +620,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Provides structured metadata about the document content.
     /// </summary>
-    public class Meta : NodeComponent
+    public class Meta : NodeElement
     {
         /// <inherited />
         protected override string TagName => "meta";
@@ -630,7 +630,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents a scalar measurement within a known range.
     /// </summary>
-    public class Meter : NodeComponent
+    public class Meter : NodeElement
     {
         /// <inherited />
         protected override string TagName => "meter";
@@ -640,7 +640,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a section of navigation links.
     /// </summary>
-    public class Nav : NodeComponent
+    public class Nav : NodeElement
     {
         /// <inherited />
         protected override string TagName => "nav";
@@ -650,7 +650,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines alternative content to display when the browser doesn't support scripting.
     /// </summary>
-    public class Noscript : NodeComponent
+    public class Noscript : NodeElement
     {
         /// <inherited />
         protected override string TagName => "noscript";
@@ -660,7 +660,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines an embedded object.
     /// </summary>
-    public class Object : NodeComponent
+    public class Object : NodeElement
     {
         /// <inherited />
         protected override string TagName => "object";
@@ -670,7 +670,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines an ordered list.
     /// </summary>
-    public class Ol : NodeComponent
+    public class Ol : NodeElement
     {
         /// <inherited />
         protected override string TagName => "ol";
@@ -679,7 +679,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents the result of a calculation.
     /// </summary>
-    public class Output : NodeComponent
+    public class Output : NodeElement
     {
         /// <inherited />
         protected override string TagName => "output";
@@ -689,7 +689,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a paragraph.
     /// </summary>
-    public class P : NodeComponent
+    public class P : NodeElement
     {
         /// <inherited />
         protected override string TagName => "p";
@@ -699,7 +699,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a parameter for an object or applet element.
     /// </summary>
-    public class Param : NodeComponent
+    public class Param : NodeElement
     {
         /// <inherited />
         protected override string TagName => "param";
@@ -709,7 +709,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a container for multiple image sources.
     /// </summary>
-    public class Picture : NodeComponent
+    public class Picture : NodeElement
     {
         /// <inherited />
         protected override string TagName => "picture";
@@ -719,7 +719,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a block of preformatted text.
     /// </summary>
-    public class Pre : NodeComponent
+    public class Pre : NodeElement
     {
         /// <inherited />
         protected override string TagName => "pre";
@@ -729,7 +729,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents the completion progress of a task.
     /// </summary>
-    public class Progress : NodeComponent
+    public class Progress : NodeElement
     {
         /// <inherited />
         protected override string TagName => "progress";
@@ -739,7 +739,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a short inline quotation.
     /// </summary>
-    public class Q : NodeComponent
+    public class Q : NodeElement
     {
         /// <inherited />
         protected override string TagName => "q";
@@ -749,7 +749,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Provides fall-back parenthesis for browsers that that don't support ruby annotations.
     /// </summary>
-    public class Rp : NodeComponent
+    public class Rp : NodeElement
     {
         /// <inherited />
         protected override string TagName => "rp";
@@ -759,7 +759,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines the pronunciation of character presented in a ruby annotations.
     /// </summary>
-    public class Rt : NodeComponent
+    public class Rt : NodeElement
     {
         /// <inherited />
         protected override string TagName => "rt";
@@ -769,7 +769,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents a ruby annotation.
     /// </summary>
-    public class Ruby : NodeComponent
+    public class Ruby : NodeElement
     {
         /// <inherited />
         protected override string TagName => "ruby";
@@ -779,7 +779,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents contents that are no longer accurate or no longer relevant.
     /// </summary>
-    public class S : NodeComponent
+    public class S : NodeElement
     {
         /// <inherited />
         protected override string TagName => "s";
@@ -789,7 +789,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Specifies text as sample output from a computer program.
     /// </summary>
-    public class Samp : NodeComponent
+    public class Samp : NodeElement
     {
         /// <inherited />
         protected override string TagName => "samp";
@@ -799,7 +799,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Places script in the document for client-side processing.
     /// </summary>
-    public class Script : NodeComponent
+    public class Script : NodeElement
     {
         /// <inherited />
         protected override string TagName => "script";
@@ -809,7 +809,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a section of a document, such as header, footer etc.
     /// </summary>
-    public class Section : NodeComponent
+    public class Section : NodeElement
     {
         /// <inherited />
         protected override string TagName => "section";
@@ -818,7 +818,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Displays text in a smaller size.
     /// </summary>
-    public class Small : NodeComponent
+    public class Small : NodeElement
     {
         /// <inherited />
         protected override string TagName => "small";
@@ -828,7 +828,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines alternative media resources for the media elements like audio or video.
     /// </summary>
-    public class Source : NodeComponent
+    public class Source : NodeElement
     {
         /// <inherited />
         protected override string TagName => "source";
@@ -838,7 +838,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines an inline style-less section in a document.
     /// </summary>
-    public class Span : NodeComponent
+    public class Span : NodeElement
     {
         /// <inherited />
         protected override string TagName => "span";
@@ -848,7 +848,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Indicate strongly emphasized text.
     /// </summary>
-    public class Strong : NodeComponent
+    public class Strong : NodeElement
     {
         /// <inherited />
         protected override string TagName => "strong";
@@ -858,7 +858,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Inserts style information (commonly CSS) into the head of a document.
     /// </summary>
-    public class Style : NodeComponent
+    public class Style : NodeElement
     {
         /// <inherited />
         protected override string TagName => "style";
@@ -868,7 +868,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines sub-scripted text.
     /// </summary>
-    public class Sub : NodeComponent
+    public class Sub : NodeElement
     {
         /// <inherited />
         protected override string TagName => "sub";
@@ -878,7 +878,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a summary for the details element.
     /// </summary>
-    public class Summary : NodeComponent
+    public class Summary : NodeElement
     {
         /// <inherited />
         protected override string TagName => "summary";
@@ -888,7 +888,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines superscripted text.
     /// </summary>
-    public class Sup : NodeComponent
+    public class Sup : NodeElement
     {
         /// <inherited />
         protected override string TagName => "sup";
@@ -898,7 +898,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Embed SVG (Scalable Vector Graphics) content in an HTML document.
     /// </summary>
-    public class Svg : NodeComponent
+    public class Svg : NodeElement
     {
         /// <inherited />
         protected override string TagName => "svg";
@@ -908,7 +908,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a data table.
     /// </summary>
-    public class Table : NodeComponent
+    public class Table : NodeElement
     {
         /// <inherited />
         protected override string TagName => "table";
@@ -918,7 +918,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Groups a set of rows defining the main body of the table data.
     /// </summary>
-    public class Tbody : NodeComponent
+    public class Tbody : NodeElement
     {
         /// <inherited />
         protected override string TagName => "tbody";
@@ -928,7 +928,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a cell in a table.
     /// </summary>
-    public class Td : NodeComponent
+    public class Td : NodeElement
     {
         /// <inherited />
         protected override string TagName => "td";
@@ -940,7 +940,7 @@ namespace FlowR.Core.Tags
     ///     be hidden when the page is loaded, but can be
     ///     cloned and inserted in the document by JavaScript.
     /// </summary>
-    public class Template : NodeComponent
+    public class Template : NodeElement
     {
         /// <inherited />
         protected override string TagName => "template";
@@ -950,7 +950,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a multi-line text input control (text area).
     /// </summary>
-    public class Textarea : NodeComponent
+    public class Textarea : NodeElement
     {
         /// <inherited />
         protected override string TagName => "textarea";
@@ -960,7 +960,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Groups a set of rows summarizing the columns of the table.
     /// </summary>
-    public class Tfoot : NodeComponent
+    public class Tfoot : NodeElement
     {
         /// <inherited />
         protected override string TagName => "tfoot";
@@ -970,7 +970,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a header cell in a table.
     /// </summary>
-    public class Th : NodeComponent
+    public class Th : NodeElement
     {
         /// <inherited />
         protected override string TagName => "th";
@@ -980,7 +980,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Groups a set of rows that describes the column labels of a table.
     /// </summary>
-    public class Thead : NodeComponent
+    public class Thead : NodeElement
     {
         /// <inherited />
         protected override string TagName => "thead";
@@ -990,7 +990,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents a time and/or date.
     /// </summary>
-    public class Time : NodeComponent
+    public class Time : NodeElement
     {
         /// <inherited />
         protected override string TagName => "time";
@@ -1000,7 +1000,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a title for the document.
     /// </summary>
-    public class Title : NodeComponent
+    public class Title : NodeElement
     {
         /// <inherited />
         protected override string TagName => "title";
@@ -1010,7 +1010,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a row of cells in a table.
     /// </summary>
-    public class Tr : NodeComponent
+    public class Tr : NodeElement
     {
         /// <inherited />
         protected override string TagName => "tr";
@@ -1020,7 +1020,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines text tracks for the media elements like audio or video.
     /// </summary>
-    public class Track : NodeComponent
+    public class Track : NodeElement
     {
         /// <inherited />
         protected override string TagName => "track";
@@ -1030,7 +1030,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Displays text with an underline.
     /// </summary>
-    public class U : NodeComponent
+    public class U : NodeElement
     {
         /// <inherited />
         protected override string TagName => "u";
@@ -1040,7 +1040,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines an unordered list.
     /// </summary>
-    public class Ul : NodeComponent
+    public class Ul : NodeElement
     {
         /// <inherited />
         protected override string TagName => "ul";
@@ -1050,7 +1050,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Defines a variable.
     /// </summary>
-    public class Var : NodeComponent
+    public class Var : NodeElement
     {
         /// <inherited />
         protected override string TagName => "var";
@@ -1060,7 +1060,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Embeds video content in an HTML document.
     /// </summary>
-    public class Video : NodeComponent
+    public class Video : NodeElement
     {
         /// <inherited />
         protected override string TagName => "video";
@@ -1070,7 +1070,7 @@ namespace FlowR.Core.Tags
     /// <summary>
     ///     Represents a line break opportunity.
     /// </summary>
-    public class Wbr : NodeComponent
+    public class Wbr : NodeElement
     {
         /// <inherited />
         protected override string TagName => "wbr";

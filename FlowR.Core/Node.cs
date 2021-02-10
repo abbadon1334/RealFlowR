@@ -4,6 +4,7 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Threading.Tasks;
 using FlowR.Core.Messages;
+using Microsoft.AspNetCore.Authorization.Policy;
 using Microsoft.Extensions.Logging;
 
 namespace FlowR.Core
@@ -144,15 +145,6 @@ namespace FlowR.Core
         /// <inheritdoc />
         public virtual INode SetAttribute(string name, string value)
         {
-            value = (value ?? "").Trim();
-
-            switch (name)
-            {
-                case "class":
-                    value = string.Join(" ", GetCssClassesFromStringAsList(value).Distinct()).Trim();
-                    break;
-            }
-
             GetAttributes()[name] = value;
 
             return this;
@@ -178,10 +170,8 @@ namespace FlowR.Core
         ///     Short hand to set multiple attributes
         /// </summary>
         /// <param name="attributes"></param>
-        public virtual INode SetAttribute(Dictionary<string, string> attributes = null)
+        public virtual INode SetAttribute(Dictionary<string, string> attributes)
         {
-            attributes ??= new Dictionary<string, string>();
-
             foreach (var (key, value) in attributes)
             {
                 SetAttribute(key, value);
@@ -225,9 +215,9 @@ namespace FlowR.Core
         }
 
         /// <inheritdoc />
-        public TNodeComponent Add<TNodeComponent>(Dictionary<string, string> attributes = null) where TNodeComponent : INodeComponent, new()
+        public TNodeElement Add<TNodeElement>(Dictionary<string, string> attributes = null) where TNodeElement : INodeElement, new()
         {
-            TNodeComponent el = new();
+            TNodeElement el = new();
 
             Add(el, attributes);
 
@@ -253,6 +243,7 @@ namespace FlowR.Core
         /// <inheritdoc />
         public void Remove(INode child)
         {
+            // @todo when empty raise exception, try/catch silent?  
             GetChildren().Remove(child.GetUuid());
         }
 
@@ -261,12 +252,8 @@ namespace FlowR.Core
         {
             GetEventHandlers().TryGetValue(eventName, out var handlers);
 
-            if (handlers == null)
-            {
-                handlers = new List<EventHandler>();
-                GetEventHandlers().Add(eventName, handlers);
-            }
-
+            handlers ??= new List<EventHandler>();
+            GetEventHandlers().Add(eventName, handlers);
 
             handlers.Add(handler);
 
@@ -351,7 +338,7 @@ namespace FlowR.Core
 
             while (true)
             {
-                if (owner == null || owner.GetType() == typeof(NodeComponentRoot))
+                if (owner == null || owner.GetType() == typeof(NodeElementRoot))
                 {
                     return default;
                 }
@@ -382,13 +369,7 @@ namespace FlowR.Core
         /// <inheritdoc />
         public virtual INode AddCssClass(string className)
         {
-            var css = GetCssClassesFromStringAsList(GetAttribute("class") ?? "");
-            var cssAdd = GetCssClassesFromStringAsList(className.Trim());
-            foreach (var c in cssAdd)
-            {
-                css.Add(c.Trim());
-            }
-            SetAttribute("class", string.Join(" ", css).Trim());
+            SetAttribute("class", Utils.Css.MergeCss(GetAttribute("class") ?? "", className));
 
             return this;
         }
@@ -396,15 +377,7 @@ namespace FlowR.Core
         /// <inheritdoc />
         public virtual INode RemoveCssClass(string className)
         {
-            var css = GetCssClassesFromStringAsList(GetAttribute("class") ?? "");
-            var cssRemove = GetCssClassesFromStringAsList(className.Trim());
-
-            foreach (var cr in cssRemove)
-            {
-                css.Remove(cr.Trim());
-            }
-
-            SetAttribute("class", string.Join(" ", css).Trim());
+            SetAttribute("class", Utils.Css.RemoveCss(GetAttribute("class") ?? "", className));
 
             return this;
         }
@@ -450,10 +423,10 @@ namespace FlowR.Core
                     return;
                 }
 
-                switch (args.Action)
+                switch (args)
                 {
-                    case NotifyCollectionChangedAction.Add:
-                    case NotifyCollectionChangedAction.Replace:
+                    case { Action: NotifyCollectionChangedAction.Add }:
+                    case { Action: NotifyCollectionChangedAction.Replace }:
                         foreach (KeyValuePair<string, string> kvp in args.NewItems)
                         {
                             MessageElement.Factory.MessageSetAttribute(
@@ -464,7 +437,7 @@ namespace FlowR.Core
                         }
                         break;
 
-                    case NotifyCollectionChangedAction.Remove:
+                    case { Action: NotifyCollectionChangedAction.Remove }:
                         foreach (KeyValuePair<string, string> kvp in args.OldItems)
                         {
                             MessageElement.Factory.MessageRemoveAttribute(
@@ -483,9 +456,9 @@ namespace FlowR.Core
                     return;
                 }
 
-                switch (args.Action)
+                switch (args)
                 {
-                    case NotifyCollectionChangedAction.Add:
+                    case { Action: NotifyCollectionChangedAction.Add }:
                         foreach (KeyValuePair<string, INode> kvp in args.NewItems)
                         {
                             GetApplication().RegisterComponent(kvp.Value);
@@ -494,7 +467,7 @@ namespace FlowR.Core
                             ).SendMessageAsync(GetCommunication());
                         }
                         break;
-                    case NotifyCollectionChangedAction.Remove:
+                    case { Action: NotifyCollectionChangedAction.Remove }:
                         foreach (KeyValuePair<string, INode> kvp in args.OldItems)
                         {
                             GetApplication().UnregisterComponent(kvp.Value);
@@ -513,10 +486,10 @@ namespace FlowR.Core
                     return;
                 }
 
-                switch (args.Action)
+                switch (args)
                 {
-                    case NotifyCollectionChangedAction.Add:
-                    case NotifyCollectionChangedAction.Replace:
+                    case { Action: NotifyCollectionChangedAction.Add }:
+                    case { Action: NotifyCollectionChangedAction.Replace }:
                         foreach (KeyValuePair<string, string> kvp in args.NewItems)
                         {
                             MessageElement.Factory.MessageSetProperty(
@@ -536,9 +509,9 @@ namespace FlowR.Core
                     return;
                 }
 
-                switch (args.Action)
+                switch (args)
                 {
-                    case NotifyCollectionChangedAction.Add:
+                    case { Action: NotifyCollectionChangedAction.Add }:
                         foreach (KeyValuePair<string, List<EventHandler>> kvp in args.NewItems)
                         {
                             MessageElement.Factory.MessageStartListenEvent(
@@ -547,7 +520,7 @@ namespace FlowR.Core
                             ).SendMessageAsync(GetCommunication());
                         }
                         break;
-                    case NotifyCollectionChangedAction.Remove:
+                    case { Action: NotifyCollectionChangedAction.Remove }:
                         foreach (KeyValuePair<string, List<EventHandler>> kvp in args.OldItems)
                         {
                             MessageElement.Factory.MessageStopListenEvent(
@@ -568,7 +541,6 @@ namespace FlowR.Core
         {
             return _initialized;
         }
-
 
         /// <summary>
         ///     Validate Node before call init
@@ -592,15 +564,6 @@ namespace FlowR.Core
             }
         }
 
-        /// <summary>
-        ///     Get Application logger
-        /// </summary>
-        /// <returns></returns>
-        public ILogger<Application> GetLogger()
-        {
-            return GetApplication().GetLogger();
-        }
-
         private void Add(INode node, Dictionary<string, string> attributes = null)
         {
             if (!IsInitialized())
@@ -609,7 +572,7 @@ namespace FlowR.Core
             }
 
             node.SetOwner(this);
-            node.SetAttribute(attributes);
+            node.SetAttribute(attributes ?? new());
 
             GetChildren().Add(node.GetUuid(), node);
         }
@@ -617,6 +580,21 @@ namespace FlowR.Core
         private static List<string> GetCssClassesFromStringAsList(string css = "")
         {
             return css.Split(" ").Distinct().ToList();
+        }
+
+        /// <summary>
+        ///     Remove all children
+        /// </summary>
+        /// <returns></returns>
+        public INode RemoveAllChildren()
+        {
+            var children = GetChildren();
+            while (children.Any())
+            {
+                children.Remove(children.Last().Key);
+            }
+
+            return this;
         }
     }
 }

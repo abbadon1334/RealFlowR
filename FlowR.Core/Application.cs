@@ -20,7 +20,7 @@ namespace FlowR.Core
         ///     Root element of the Application.
         ///     The composition tree that draw client UI starts from here.
         /// </summary>
-        protected readonly NodeComponentRoot RootElement;
+        protected readonly NodeElementRoot RootElement;
 
         /// <summary>
         ///     Element ID of the master container for the application
@@ -41,7 +41,7 @@ namespace FlowR.Core
             Communication = new ApplicationCommunication(this, client);
 
             // Prepare the root element 
-            RootElement = new NodeComponentRoot(RootElementId, this);
+            RootElement = new NodeElementRoot(RootElementId, this);
             RootElement.Init();
 
             // register component
@@ -50,7 +50,7 @@ namespace FlowR.Core
             // send async message to client, indicating the id of the starting HTMLElement
             client.SendAsync("OnInit", RootElementId);
 
-            GetLogger().LogDebug("Application initialized");
+            GetLogger().LogInformation("Application initialized");
         }
 
         /// <summary>
@@ -89,8 +89,7 @@ namespace FlowR.Core
         /// <param name="uuid"></param>
         /// <returns></returns>
         private INode GetRegisterComponent(string uuid)
-        {
-            // @todo find a way to lower visibility of internal calls 
+        { 
             return _registry.Get(uuid);
         }
 

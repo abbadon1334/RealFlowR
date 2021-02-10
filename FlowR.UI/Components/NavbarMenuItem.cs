@@ -8,7 +8,7 @@ namespace FlowR.UI.Components
     /// <summary>
     ///     Tag div
     /// </summary>
-    public class NavbarMenuItem : NodeComponent
+    public class NavbarMenuItem : NodeElement
     {
         /// <summary>
         ///     The link of the item.
