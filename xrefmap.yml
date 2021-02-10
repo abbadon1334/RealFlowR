@@ -1095,12 +1095,6 @@ references:
   isSpec: "True"
   fullName: FlowR.Core.INode.SetText
   nameWithType: INode.SetText
-- uid: FlowR.Core.INodeComponent
-  name: INodeComponent
-  href: api/FlowR.Core.INodeComponent.html
-  commentId: T:FlowR.Core.INodeComponent
-  fullName: FlowR.Core.INodeComponent
-  nameWithType: INodeComponent
 - uid: FlowR.Core.INodeControl
   name: INodeControl
   href: api/FlowR.Core.INodeControl.html
@@ -1146,19 +1140,6 @@ references:
   isSpec: "True"
   fullName: FlowR.Core.INodeControl.GetControlName
   nameWithType: INodeControl.GetControlName
-- uid: FlowR.Core.INodeControl.GetControlType
-  name: GetControlType()
-  href: api/FlowR.Core.INodeControl.html#FlowR_Core_INodeControl_GetControlType
-  commentId: M:FlowR.Core.INodeControl.GetControlType
-  fullName: FlowR.Core.INodeControl.GetControlType()
-  nameWithType: INodeControl.GetControlType()
-- uid: FlowR.Core.INodeControl.GetControlType*
-  name: GetControlType
-  href: api/FlowR.Core.INodeControl.html#FlowR_Core_INodeControl_GetControlType_
-  commentId: Overload:FlowR.Core.INodeControl.GetControlType
-  isSpec: "True"
-  fullName: FlowR.Core.INodeControl.GetControlType
-  nameWithType: INodeControl.GetControlType
 - uid: FlowR.Core.INodeControl.SetControlName(System.String)
   name: SetControlName(String)
   href: api/FlowR.Core.INodeControl.html#FlowR_Core_INodeControl_SetControlName_System_String_
@@ -1172,6 +1153,12 @@ references:
   isSpec: "True"
   fullName: FlowR.Core.INodeControl.SetControlName
   nameWithType: INodeControl.SetControlName
+- uid: FlowR.Core.INodeElement
+  name: INodeElement
+  href: api/FlowR.Core.INodeElement.html
+  commentId: T:FlowR.Core.INodeElement
+  fullName: FlowR.Core.INodeElement
+  nameWithType: INodeElement
 - uid: FlowR.Core.Messages
   name: FlowR.Core.Messages
   href: api/FlowR.Core.Messages.html
@@ -2122,14 +2109,14 @@ references:
   fullName: FlowR.Core.Node.Add
   nameWithType: Node.Add
 - uid: FlowR.Core.Node.Add``1(System.Collections.Generic.Dictionary{System.String,System.String})
-  name: Add<TNodeComponent>(Dictionary<String, String>)
+  name: Add<TNodeElement>(Dictionary<String, String>)
   href: api/FlowR.Core.Node.html#FlowR_Core_Node_Add__1_System_Collections_Generic_Dictionary_System_String_System_String__
   commentId: M:FlowR.Core.Node.Add``1(System.Collections.Generic.Dictionary{System.String,System.String})
-  name.vb: Add(Of TNodeComponent)(Dictionary(Of String, String))
-  fullName: FlowR.Core.Node.Add<TNodeComponent>(System.Collections.Generic.Dictionary<System.String, System.String>)
-  fullName.vb: FlowR.Core.Node.Add(Of TNodeComponent)(System.Collections.Generic.Dictionary(Of System.String, System.String))
-  nameWithType: Node.Add<TNodeComponent>(Dictionary<String, String>)
-  nameWithType.vb: Node.Add(Of TNodeComponent)(Dictionary(Of String, String))
+  name.vb: Add(Of TNodeElement)(Dictionary(Of String, String))
+  fullName: FlowR.Core.Node.Add<TNodeElement>(System.Collections.Generic.Dictionary<System.String, System.String>)
+  fullName.vb: FlowR.Core.Node.Add(Of TNodeElement)(System.Collections.Generic.Dictionary(Of System.String, System.String))
+  nameWithType: Node.Add<TNodeElement>(Dictionary<String, String>)
+  nameWithType.vb: Node.Add(Of TNodeElement)(Dictionary(Of String, String))
 - uid: FlowR.Core.Node.Add``1(System.String,System.Collections.Generic.Dictionary{System.String,System.String})
   name: Add<TNodeControl>(String, Dictionary<String, String>)
   href: api/FlowR.Core.Node.html#FlowR_Core_Node_Add__1_System_String_System_Collections_Generic_Dictionary_System_String_System_String__
@@ -2320,19 +2307,6 @@ references:
   fullName.vb: FlowR.Core.Node.GetFirstOwnerOfType(Of T)()
   nameWithType: Node.GetFirstOwnerOfType<T>()
   nameWithType.vb: Node.GetFirstOwnerOfType(Of T)()
-- uid: FlowR.Core.Node.GetLogger
-  name: GetLogger()
-  href: api/FlowR.Core.Node.html#FlowR_Core_Node_GetLogger
-  commentId: M:FlowR.Core.Node.GetLogger
-  fullName: FlowR.Core.Node.GetLogger()
-  nameWithType: Node.GetLogger()
-- uid: FlowR.Core.Node.GetLogger*
-  name: GetLogger
-  href: api/FlowR.Core.Node.html#FlowR_Core_Node_GetLogger_
-  commentId: Overload:FlowR.Core.Node.GetLogger
-  isSpec: "True"
-  fullName: FlowR.Core.Node.GetLogger
-  nameWithType: Node.GetLogger
 - uid: FlowR.Core.Node.GetOwner
   name: GetOwner()
   href: api/FlowR.Core.Node.html#FlowR_Core_Node_GetOwner
@@ -2508,6 +2482,19 @@ references:
   isSpec: "True"
   fullName: FlowR.Core.Node.Remove
   nameWithType: Node.Remove
+- uid: FlowR.Core.Node.RemoveAllChildren
+  name: RemoveAllChildren()
+  href: api/FlowR.Core.Node.html#FlowR_Core_Node_RemoveAllChildren
+  commentId: M:FlowR.Core.Node.RemoveAllChildren
+  fullName: FlowR.Core.Node.RemoveAllChildren()
+  nameWithType: Node.RemoveAllChildren()
+- uid: FlowR.Core.Node.RemoveAllChildren*
+  name: RemoveAllChildren
+  href: api/FlowR.Core.Node.html#FlowR_Core_Node_RemoveAllChildren_
+  commentId: Overload:FlowR.Core.Node.RemoveAllChildren
+  isSpec: "True"
+  fullName: FlowR.Core.Node.RemoveAllChildren
+  nameWithType: Node.RemoveAllChildren
 - uid: FlowR.Core.Node.RemoveAttribute(System.String)
   name: RemoveAttribute(String)
   href: api/FlowR.Core.Node.html#FlowR_Core_Node_RemoveAttribute_System_String_
@@ -2647,57 +2634,6 @@ references:
   isSpec: "True"
   fullName: FlowR.Core.Node.ValidateNode
   nameWithType: Node.ValidateNode
-- uid: FlowR.Core.NodeComponent
-  name: NodeComponent
-  href: api/FlowR.Core.NodeComponent.html
-  commentId: T:FlowR.Core.NodeComponent
-  fullName: FlowR.Core.NodeComponent
-  nameWithType: NodeComponent
-- uid: FlowR.Core.NodeComponentRoot
-  name: NodeComponentRoot
-  href: api/FlowR.Core.NodeComponentRoot.html
-  commentId: T:FlowR.Core.NodeComponentRoot
-  fullName: FlowR.Core.NodeComponentRoot
-  nameWithType: NodeComponentRoot
-- uid: FlowR.Core.NodeComponentRoot.#ctor(System.String,FlowR.Core.Application)
-  name: NodeComponentRoot(String, Application)
-  href: api/FlowR.Core.NodeComponentRoot.html#FlowR_Core_NodeComponentRoot__ctor_System_String_FlowR_Core_Application_
-  commentId: M:FlowR.Core.NodeComponentRoot.#ctor(System.String,FlowR.Core.Application)
-  fullName: FlowR.Core.NodeComponentRoot.NodeComponentRoot(System.String, FlowR.Core.Application)
-  nameWithType: NodeComponentRoot.NodeComponentRoot(String, Application)
-- uid: FlowR.Core.NodeComponentRoot.#ctor*
-  name: NodeComponentRoot
-  href: api/FlowR.Core.NodeComponentRoot.html#FlowR_Core_NodeComponentRoot__ctor_
-  commentId: Overload:FlowR.Core.NodeComponentRoot.#ctor
-  isSpec: "True"
-  fullName: FlowR.Core.NodeComponentRoot.NodeComponentRoot
-  nameWithType: NodeComponentRoot.NodeComponentRoot
-- uid: FlowR.Core.NodeComponentRoot.TagName
-  name: TagName
-  href: api/FlowR.Core.NodeComponentRoot.html#FlowR_Core_NodeComponentRoot_TagName
-  commentId: P:FlowR.Core.NodeComponentRoot.TagName
-  fullName: FlowR.Core.NodeComponentRoot.TagName
-  nameWithType: NodeComponentRoot.TagName
-- uid: FlowR.Core.NodeComponentRoot.TagName*
-  name: TagName
-  href: api/FlowR.Core.NodeComponentRoot.html#FlowR_Core_NodeComponentRoot_TagName_
-  commentId: Overload:FlowR.Core.NodeComponentRoot.TagName
-  isSpec: "True"
-  fullName: FlowR.Core.NodeComponentRoot.TagName
-  nameWithType: NodeComponentRoot.TagName
-- uid: FlowR.Core.NodeComponentRoot.ValidateNode
-  name: ValidateNode()
-  href: api/FlowR.Core.NodeComponentRoot.html#FlowR_Core_NodeComponentRoot_ValidateNode
-  commentId: M:FlowR.Core.NodeComponentRoot.ValidateNode
-  fullName: FlowR.Core.NodeComponentRoot.ValidateNode()
-  nameWithType: NodeComponentRoot.ValidateNode()
-- uid: FlowR.Core.NodeComponentRoot.ValidateNode*
-  name: ValidateNode
-  href: api/FlowR.Core.NodeComponentRoot.html#FlowR_Core_NodeComponentRoot_ValidateNode_
-  commentId: Overload:FlowR.Core.NodeComponentRoot.ValidateNode
-  isSpec: "True"
-  fullName: FlowR.Core.NodeComponentRoot.ValidateNode
-  nameWithType: NodeComponentRoot.ValidateNode
 - uid: FlowR.Core.NodeControl
   name: NodeControl
   href: api/FlowR.Core.NodeControl.html
@@ -2717,19 +2653,19 @@ references:
   isSpec: "True"
   fullName: FlowR.Core.NodeControl.CollectValueAsync
   nameWithType: NodeControl.CollectValueAsync
-- uid: FlowR.Core.NodeControl.ControlType
-  name: ControlType
-  href: api/FlowR.Core.NodeControl.html#FlowR_Core_NodeControl_ControlType
-  commentId: P:FlowR.Core.NodeControl.ControlType
-  fullName: FlowR.Core.NodeControl.ControlType
-  nameWithType: NodeControl.ControlType
-- uid: FlowR.Core.NodeControl.ControlType*
-  name: ControlType
-  href: api/FlowR.Core.NodeControl.html#FlowR_Core_NodeControl_ControlType_
-  commentId: Overload:FlowR.Core.NodeControl.ControlType
+- uid: FlowR.Core.NodeControl.FormAutobind
+  name: FormAutobind
+  href: api/FlowR.Core.NodeControl.html#FlowR_Core_NodeControl_FormAutobind
+  commentId: P:FlowR.Core.NodeControl.FormAutobind
+  fullName: FlowR.Core.NodeControl.FormAutobind
+  nameWithType: NodeControl.FormAutobind
+- uid: FlowR.Core.NodeControl.FormAutobind*
+  name: FormAutobind
+  href: api/FlowR.Core.NodeControl.html#FlowR_Core_NodeControl_FormAutobind_
+  commentId: Overload:FlowR.Core.NodeControl.FormAutobind
   isSpec: "True"
-  fullName: FlowR.Core.NodeControl.ControlType
-  nameWithType: NodeControl.ControlType
+  fullName: FlowR.Core.NodeControl.FormAutobind
+  nameWithType: NodeControl.FormAutobind
 - uid: FlowR.Core.NodeControl.GetBindedForm
   name: GetBindedForm()
   href: api/FlowR.Core.NodeControl.html#FlowR_Core_NodeControl_GetBindedForm
@@ -2756,19 +2692,6 @@ references:
   isSpec: "True"
   fullName: FlowR.Core.NodeControl.GetControlName
   nameWithType: NodeControl.GetControlName
-- uid: FlowR.Core.NodeControl.GetControlType
-  name: GetControlType()
-  href: api/FlowR.Core.NodeControl.html#FlowR_Core_NodeControl_GetControlType
-  commentId: M:FlowR.Core.NodeControl.GetControlType
-  fullName: FlowR.Core.NodeControl.GetControlType()
-  nameWithType: NodeControl.GetControlType()
-- uid: FlowR.Core.NodeControl.GetControlType*
-  name: GetControlType
-  href: api/FlowR.Core.NodeControl.html#FlowR_Core_NodeControl_GetControlType_
-  commentId: Overload:FlowR.Core.NodeControl.GetControlType
-  isSpec: "True"
-  fullName: FlowR.Core.NodeControl.GetControlType
-  nameWithType: NodeControl.GetControlType
 - uid: FlowR.Core.NodeControl.Init
   name: Init()
   href: api/FlowR.Core.NodeControl.html#FlowR_Core_NodeControl_Init
@@ -2808,6 +2731,57 @@ references:
   isSpec: "True"
   fullName: FlowR.Core.NodeControl.ValidateNode
   nameWithType: NodeControl.ValidateNode
+- uid: FlowR.Core.NodeElement
+  name: NodeElement
+  href: api/FlowR.Core.NodeElement.html
+  commentId: T:FlowR.Core.NodeElement
+  fullName: FlowR.Core.NodeElement
+  nameWithType: NodeElement
+- uid: FlowR.Core.NodeElementRoot
+  name: NodeElementRoot
+  href: api/FlowR.Core.NodeElementRoot.html
+  commentId: T:FlowR.Core.NodeElementRoot
+  fullName: FlowR.Core.NodeElementRoot
+  nameWithType: NodeElementRoot
+- uid: FlowR.Core.NodeElementRoot.#ctor(System.String,FlowR.Core.Application)
+  name: NodeElementRoot(String, Application)
+  href: api/FlowR.Core.NodeElementRoot.html#FlowR_Core_NodeElementRoot__ctor_System_String_FlowR_Core_Application_
+  commentId: M:FlowR.Core.NodeElementRoot.#ctor(System.String,FlowR.Core.Application)
+  fullName: FlowR.Core.NodeElementRoot.NodeElementRoot(System.String, FlowR.Core.Application)
+  nameWithType: NodeElementRoot.NodeElementRoot(String, Application)
+- uid: FlowR.Core.NodeElementRoot.#ctor*
+  name: NodeElementRoot
+  href: api/FlowR.Core.NodeElementRoot.html#FlowR_Core_NodeElementRoot__ctor_
+  commentId: Overload:FlowR.Core.NodeElementRoot.#ctor
+  isSpec: "True"
+  fullName: FlowR.Core.NodeElementRoot.NodeElementRoot
+  nameWithType: NodeElementRoot.NodeElementRoot
+- uid: FlowR.Core.NodeElementRoot.TagName
+  name: TagName
+  href: api/FlowR.Core.NodeElementRoot.html#FlowR_Core_NodeElementRoot_TagName
+  commentId: P:FlowR.Core.NodeElementRoot.TagName
+  fullName: FlowR.Core.NodeElementRoot.TagName
+  nameWithType: NodeElementRoot.TagName
+- uid: FlowR.Core.NodeElementRoot.TagName*
+  name: TagName
+  href: api/FlowR.Core.NodeElementRoot.html#FlowR_Core_NodeElementRoot_TagName_
+  commentId: Overload:FlowR.Core.NodeElementRoot.TagName
+  isSpec: "True"
+  fullName: FlowR.Core.NodeElementRoot.TagName
+  nameWithType: NodeElementRoot.TagName
+- uid: FlowR.Core.NodeElementRoot.ValidateNode
+  name: ValidateNode()
+  href: api/FlowR.Core.NodeElementRoot.html#FlowR_Core_NodeElementRoot_ValidateNode
+  commentId: M:FlowR.Core.NodeElementRoot.ValidateNode
+  fullName: FlowR.Core.NodeElementRoot.ValidateNode()
+  nameWithType: NodeElementRoot.ValidateNode()
+- uid: FlowR.Core.NodeElementRoot.ValidateNode*
+  name: ValidateNode
+  href: api/FlowR.Core.NodeElementRoot.html#FlowR_Core_NodeElementRoot_ValidateNode_
+  commentId: Overload:FlowR.Core.NodeElementRoot.ValidateNode
+  isSpec: "True"
+  fullName: FlowR.Core.NodeElementRoot.ValidateNode
+  nameWithType: NodeElementRoot.ValidateNode
 - uid: FlowR.Core.ObservableDictionary`2
   name: ObservableDictionary<TKey, TValue>
   href: api/FlowR.Core.ObservableDictionary-2.html
@@ -3579,25 +3553,70 @@ references:
   commentId: N:FlowR.Core.Tags.Controls
   fullName: FlowR.Core.Tags.Controls
   nameWithType: FlowR.Core.Tags.Controls
+- uid: FlowR.Core.Tags.Controls.Checkbox
+  name: Checkbox
+  href: api/FlowR.Core.Tags.Controls.Checkbox.html
+  commentId: T:FlowR.Core.Tags.Controls.Checkbox
+  fullName: FlowR.Core.Tags.Controls.Checkbox
+  nameWithType: Checkbox
+- uid: FlowR.Core.Tags.Controls.Checkbox.CollectValueAsync(System.String)
+  name: CollectValueAsync(String)
+  href: api/FlowR.Core.Tags.Controls.Checkbox.html#FlowR_Core_Tags_Controls_Checkbox_CollectValueAsync_System_String_
+  commentId: M:FlowR.Core.Tags.Controls.Checkbox.CollectValueAsync(System.String)
+  fullName: FlowR.Core.Tags.Controls.Checkbox.CollectValueAsync(System.String)
+  nameWithType: Checkbox.CollectValueAsync(String)
+- uid: FlowR.Core.Tags.Controls.Checkbox.CollectValueAsync*
+  name: CollectValueAsync
+  href: api/FlowR.Core.Tags.Controls.Checkbox.html#FlowR_Core_Tags_Controls_Checkbox_CollectValueAsync_
+  commentId: Overload:FlowR.Core.Tags.Controls.Checkbox.CollectValueAsync
+  isSpec: "True"
+  fullName: FlowR.Core.Tags.Controls.Checkbox.CollectValueAsync
+  nameWithType: Checkbox.CollectValueAsync
+- uid: FlowR.Core.Tags.Controls.Checkbox.DefaultAttributes
+  name: DefaultAttributes
+  href: api/FlowR.Core.Tags.Controls.Checkbox.html#FlowR_Core_Tags_Controls_Checkbox_DefaultAttributes
+  commentId: P:FlowR.Core.Tags.Controls.Checkbox.DefaultAttributes
+  fullName: FlowR.Core.Tags.Controls.Checkbox.DefaultAttributes
+  nameWithType: Checkbox.DefaultAttributes
+- uid: FlowR.Core.Tags.Controls.Checkbox.DefaultAttributes*
+  name: DefaultAttributes
+  href: api/FlowR.Core.Tags.Controls.Checkbox.html#FlowR_Core_Tags_Controls_Checkbox_DefaultAttributes_
+  commentId: Overload:FlowR.Core.Tags.Controls.Checkbox.DefaultAttributes
+  isSpec: "True"
+  fullName: FlowR.Core.Tags.Controls.Checkbox.DefaultAttributes
+  nameWithType: Checkbox.DefaultAttributes
+- uid: FlowR.Core.Tags.Controls.Checkbox.IsChecked
+  name: IsChecked()
+  href: api/FlowR.Core.Tags.Controls.Checkbox.html#FlowR_Core_Tags_Controls_Checkbox_IsChecked
+  commentId: M:FlowR.Core.Tags.Controls.Checkbox.IsChecked
+  fullName: FlowR.Core.Tags.Controls.Checkbox.IsChecked()
+  nameWithType: Checkbox.IsChecked()
+- uid: FlowR.Core.Tags.Controls.Checkbox.IsChecked*
+  name: IsChecked
+  href: api/FlowR.Core.Tags.Controls.Checkbox.html#FlowR_Core_Tags_Controls_Checkbox_IsChecked_
+  commentId: Overload:FlowR.Core.Tags.Controls.Checkbox.IsChecked
+  isSpec: "True"
+  fullName: FlowR.Core.Tags.Controls.Checkbox.IsChecked
+  nameWithType: Checkbox.IsChecked
+- uid: FlowR.Core.Tags.Controls.Checkbox.SetChecked(System.Boolean)
+  name: SetChecked(Boolean)
+  href: api/FlowR.Core.Tags.Controls.Checkbox.html#FlowR_Core_Tags_Controls_Checkbox_SetChecked_System_Boolean_
+  commentId: M:FlowR.Core.Tags.Controls.Checkbox.SetChecked(System.Boolean)
+  fullName: FlowR.Core.Tags.Controls.Checkbox.SetChecked(System.Boolean)
+  nameWithType: Checkbox.SetChecked(Boolean)
+- uid: FlowR.Core.Tags.Controls.Checkbox.SetChecked*
+  name: SetChecked
+  href: api/FlowR.Core.Tags.Controls.Checkbox.html#FlowR_Core_Tags_Controls_Checkbox_SetChecked_
+  commentId: Overload:FlowR.Core.Tags.Controls.Checkbox.SetChecked
+  isSpec: "True"
+  fullName: FlowR.Core.Tags.Controls.Checkbox.SetChecked
+  nameWithType: Checkbox.SetChecked
 - uid: FlowR.Core.Tags.Controls.Input
   name: Input
   href: api/FlowR.Core.Tags.Controls.Input.html
   commentId: T:FlowR.Core.Tags.Controls.Input
   fullName: FlowR.Core.Tags.Controls.Input
   nameWithType: Input
-- uid: FlowR.Core.Tags.Controls.Input.ControlType
-  name: ControlType
-  href: api/FlowR.Core.Tags.Controls.Input.html#FlowR_Core_Tags_Controls_Input_ControlType
-  commentId: P:FlowR.Core.Tags.Controls.Input.ControlType
-  fullName: FlowR.Core.Tags.Controls.Input.ControlType
-  nameWithType: Input.ControlType
-- uid: FlowR.Core.Tags.Controls.Input.ControlType*
-  name: ControlType
-  href: api/FlowR.Core.Tags.Controls.Input.html#FlowR_Core_Tags_Controls_Input_ControlType_
-  commentId: Overload:FlowR.Core.Tags.Controls.Input.ControlType
-  isSpec: "True"
-  fullName: FlowR.Core.Tags.Controls.Input.ControlType
-  nameWithType: Input.ControlType
 - uid: FlowR.Core.Tags.Controls.Input.DefaultAttributes
   name: DefaultAttributes
   href: api/FlowR.Core.Tags.Controls.Input.html#FlowR_Core_Tags_Controls_Input_DefaultAttributes
@@ -3757,19 +3776,6 @@ references:
   isSpec: "True"
   fullName: FlowR.Core.Tags.Controls.Select.ClearOptions
   nameWithType: Select.ClearOptions
-- uid: FlowR.Core.Tags.Controls.Select.ControlType
-  name: ControlType
-  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_ControlType
-  commentId: P:FlowR.Core.Tags.Controls.Select.ControlType
-  fullName: FlowR.Core.Tags.Controls.Select.ControlType
-  nameWithType: Select.ControlType
-- uid: FlowR.Core.Tags.Controls.Select.ControlType*
-  name: ControlType
-  href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_ControlType_
-  commentId: Overload:FlowR.Core.Tags.Controls.Select.ControlType
-  isSpec: "True"
-  fullName: FlowR.Core.Tags.Controls.Select.ControlType
-  nameWithType: Select.ControlType
 - uid: FlowR.Core.Tags.Controls.Select.GetOptionGroup(System.String)
   name: GetOptionGroup(String)
   href: api/FlowR.Core.Tags.Controls.Select.html#FlowR_Core_Tags_Controls_Select_GetOptionGroup_System_String_
@@ -5548,6 +5554,73 @@ references:
   isSpec: "True"
   fullName: FlowR.Core.Tags.Wbr.TagName
   nameWithType: Wbr.TagName
+- uid: FlowR.Core.Utils
+  name: Utils
+  href: api/FlowR.Core.Utils.html
+  commentId: T:FlowR.Core.Utils
+  fullName: FlowR.Core.Utils
+  nameWithType: Utils
+- uid: FlowR.Core.Utils.Css
+  name: Utils.Css
+  href: api/FlowR.Core.Utils.Css.html
+  commentId: T:FlowR.Core.Utils.Css
+  fullName: FlowR.Core.Utils.Css
+  nameWithType: Utils.Css
+- uid: FlowR.Core.Utils.Css.GetListFromString(System.String)
+  name: GetListFromString(String)
+  href: api/FlowR.Core.Utils.Css.html#FlowR_Core_Utils_Css_GetListFromString_System_String_
+  commentId: M:FlowR.Core.Utils.Css.GetListFromString(System.String)
+  fullName: FlowR.Core.Utils.Css.GetListFromString(System.String)
+  nameWithType: Utils.Css.GetListFromString(String)
+- uid: FlowR.Core.Utils.Css.GetListFromString*
+  name: GetListFromString
+  href: api/FlowR.Core.Utils.Css.html#FlowR_Core_Utils_Css_GetListFromString_
+  commentId: Overload:FlowR.Core.Utils.Css.GetListFromString
+  isSpec: "True"
+  fullName: FlowR.Core.Utils.Css.GetListFromString
+  nameWithType: Utils.Css.GetListFromString
+- uid: FlowR.Core.Utils.Css.GetStringFromList(System.Collections.Generic.List{System.String})
+  name: GetStringFromList(List<String>)
+  href: api/FlowR.Core.Utils.Css.html#FlowR_Core_Utils_Css_GetStringFromList_System_Collections_Generic_List_System_String__
+  commentId: M:FlowR.Core.Utils.Css.GetStringFromList(System.Collections.Generic.List{System.String})
+  name.vb: GetStringFromList(List(Of String))
+  fullName: FlowR.Core.Utils.Css.GetStringFromList(System.Collections.Generic.List<System.String>)
+  fullName.vb: FlowR.Core.Utils.Css.GetStringFromList(System.Collections.Generic.List(Of System.String))
+  nameWithType: Utils.Css.GetStringFromList(List<String>)
+  nameWithType.vb: Utils.Css.GetStringFromList(List(Of String))
+- uid: FlowR.Core.Utils.Css.GetStringFromList*
+  name: GetStringFromList
+  href: api/FlowR.Core.Utils.Css.html#FlowR_Core_Utils_Css_GetStringFromList_
+  commentId: Overload:FlowR.Core.Utils.Css.GetStringFromList
+  isSpec: "True"
+  fullName: FlowR.Core.Utils.Css.GetStringFromList
+  nameWithType: Utils.Css.GetStringFromList
+- uid: FlowR.Core.Utils.Css.MergeCss(System.String,System.String)
+  name: MergeCss(String, String)
+  href: api/FlowR.Core.Utils.Css.html#FlowR_Core_Utils_Css_MergeCss_System_String_System_String_
+  commentId: M:FlowR.Core.Utils.Css.MergeCss(System.String,System.String)
+  fullName: FlowR.Core.Utils.Css.MergeCss(System.String, System.String)
+  nameWithType: Utils.Css.MergeCss(String, String)
+- uid: FlowR.Core.Utils.Css.MergeCss*
+  name: MergeCss
+  href: api/FlowR.Core.Utils.Css.html#FlowR_Core_Utils_Css_MergeCss_
+  commentId: Overload:FlowR.Core.Utils.Css.MergeCss
+  isSpec: "True"
+  fullName: FlowR.Core.Utils.Css.MergeCss
+  nameWithType: Utils.Css.MergeCss
+- uid: FlowR.Core.Utils.Css.RemoveCss(System.String,System.String)
+  name: RemoveCss(String, String)
+  href: api/FlowR.Core.Utils.Css.html#FlowR_Core_Utils_Css_RemoveCss_System_String_System_String_
+  commentId: M:FlowR.Core.Utils.Css.RemoveCss(System.String,System.String)
+  fullName: FlowR.Core.Utils.Css.RemoveCss(System.String, System.String)
+  nameWithType: Utils.Css.RemoveCss(String, String)
+- uid: FlowR.Core.Utils.Css.RemoveCss*
+  name: RemoveCss
+  href: api/FlowR.Core.Utils.Css.html#FlowR_Core_Utils_Css_RemoveCss_
+  commentId: Overload:FlowR.Core.Utils.Css.RemoveCss
+  isSpec: "True"
+  fullName: FlowR.Core.Utils.Css.RemoveCss
+  nameWithType: Utils.Css.RemoveCss
 - uid: FlowR.UI
   name: FlowR.UI
   href: api/FlowR.UI.html
@@ -6157,151 +6230,339 @@ references:
   commentId: F:FlowR.UI.Enums.TextColorEnum.White
   fullName: FlowR.UI.Enums.TextColorEnum.White
   nameWithType: Enums.TextColorEnum.White
-- uid: FlowR.UI.FluentComponent`1
-  name: FluentComponent<TComponent>
-  href: api/FlowR.UI.FluentComponent-1.html
-  commentId: T:FlowR.UI.FluentComponent`1
-  name.vb: FluentComponent(Of TComponent)
-  fullName: FlowR.UI.FluentComponent<TComponent>
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent)
-  nameWithType: FluentComponent<TComponent>
-  nameWithType.vb: FluentComponent(Of TComponent)
-- uid: FlowR.UI.FluentComponent`1.AddCssClass(System.String)
+- uid: FlowR.UI.FluentElement`1
+  name: FluentElement<TComponent>
+  href: api/FlowR.UI.FluentElement-1.html
+  commentId: T:FlowR.UI.FluentElement`1
+  name.vb: FluentElement(Of TComponent)
+  fullName: FlowR.UI.FluentElement<TComponent>
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent)
+  nameWithType: FluentElement<TComponent>
+  nameWithType.vb: FluentElement(Of TComponent)
+- uid: FlowR.UI.FluentElement`1.AddCssClass(System.String)
   name: AddCssClass(String)
-  href: api/FlowR.UI.FluentComponent-1.html#FlowR_UI_FluentComponent_1_AddCssClass_System_String_
-  commentId: M:FlowR.UI.FluentComponent`1.AddCssClass(System.String)
-  fullName: FlowR.UI.FluentComponent<TComponent>.AddCssClass(System.String)
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent).AddCssClass(System.String)
-  nameWithType: FluentComponent<TComponent>.AddCssClass(String)
-  nameWithType.vb: FluentComponent(Of TComponent).AddCssClass(String)
-- uid: FlowR.UI.FluentComponent`1.AddCssClass*
+  href: api/FlowR.UI.FluentElement-1.html#FlowR_UI_FluentElement_1_AddCssClass_System_String_
+  commentId: M:FlowR.UI.FluentElement`1.AddCssClass(System.String)
+  fullName: FlowR.UI.FluentElement<TComponent>.AddCssClass(System.String)
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent).AddCssClass(System.String)
+  nameWithType: FluentElement<TComponent>.AddCssClass(String)
+  nameWithType.vb: FluentElement(Of TComponent).AddCssClass(String)
+- uid: FlowR.UI.FluentElement`1.AddCssClass*
   name: AddCssClass
-  href: api/FlowR.UI.FluentComponent-1.html#FlowR_UI_FluentComponent_1_AddCssClass_
-  commentId: Overload:FlowR.UI.FluentComponent`1.AddCssClass
+  href: api/FlowR.UI.FluentElement-1.html#FlowR_UI_FluentElement_1_AddCssClass_
+  commentId: Overload:FlowR.UI.FluentElement`1.AddCssClass
   isSpec: "True"
-  fullName: FlowR.UI.FluentComponent<TComponent>.AddCssClass
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent).AddCssClass
-  nameWithType: FluentComponent<TComponent>.AddCssClass
-  nameWithType.vb: FluentComponent(Of TComponent).AddCssClass
-- uid: FlowR.UI.FluentComponent`1.Off(System.String)
+  fullName: FlowR.UI.FluentElement<TComponent>.AddCssClass
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent).AddCssClass
+  nameWithType: FluentElement<TComponent>.AddCssClass
+  nameWithType.vb: FluentElement(Of TComponent).AddCssClass
+- uid: FlowR.UI.FluentElement`1.Off(System.String)
   name: Off(String)
-  href: api/FlowR.UI.FluentComponent-1.html#FlowR_UI_FluentComponent_1_Off_System_String_
-  commentId: M:FlowR.UI.FluentComponent`1.Off(System.String)
-  fullName: FlowR.UI.FluentComponent<TComponent>.Off(System.String)
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent).Off(System.String)
-  nameWithType: FluentComponent<TComponent>.Off(String)
-  nameWithType.vb: FluentComponent(Of TComponent).Off(String)
-- uid: FlowR.UI.FluentComponent`1.Off(System.String,System.EventHandler)
+  href: api/FlowR.UI.FluentElement-1.html#FlowR_UI_FluentElement_1_Off_System_String_
+  commentId: M:FlowR.UI.FluentElement`1.Off(System.String)
+  fullName: FlowR.UI.FluentElement<TComponent>.Off(System.String)
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent).Off(System.String)
+  nameWithType: FluentElement<TComponent>.Off(String)
+  nameWithType.vb: FluentElement(Of TComponent).Off(String)
+- uid: FlowR.UI.FluentElement`1.Off(System.String,System.EventHandler)
   name: Off(String, EventHandler)
-  href: api/FlowR.UI.FluentComponent-1.html#FlowR_UI_FluentComponent_1_Off_System_String_System_EventHandler_
-  commentId: M:FlowR.UI.FluentComponent`1.Off(System.String,System.EventHandler)
-  fullName: FlowR.UI.FluentComponent<TComponent>.Off(System.String, System.EventHandler)
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent).Off(System.String, System.EventHandler)
-  nameWithType: FluentComponent<TComponent>.Off(String, EventHandler)
-  nameWithType.vb: FluentComponent(Of TComponent).Off(String, EventHandler)
-- uid: FlowR.UI.FluentComponent`1.Off*
+  href: api/FlowR.UI.FluentElement-1.html#FlowR_UI_FluentElement_1_Off_System_String_System_EventHandler_
+  commentId: M:FlowR.UI.FluentElement`1.Off(System.String,System.EventHandler)
+  fullName: FlowR.UI.FluentElement<TComponent>.Off(System.String, System.EventHandler)
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent).Off(System.String, System.EventHandler)
+  nameWithType: FluentElement<TComponent>.Off(String, EventHandler)
+  nameWithType.vb: FluentElement(Of TComponent).Off(String, EventHandler)
+- uid: FlowR.UI.FluentElement`1.Off*
   name: Off
-  href: api/FlowR.UI.FluentComponent-1.html#FlowR_UI_FluentComponent_1_Off_
-  commentId: Overload:FlowR.UI.FluentComponent`1.Off
+  href: api/FlowR.UI.FluentElement-1.html#FlowR_UI_FluentElement_1_Off_
+  commentId: Overload:FlowR.UI.FluentElement`1.Off
   isSpec: "True"
-  fullName: FlowR.UI.FluentComponent<TComponent>.Off
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent).Off
-  nameWithType: FluentComponent<TComponent>.Off
-  nameWithType.vb: FluentComponent(Of TComponent).Off
-- uid: FlowR.UI.FluentComponent`1.On(System.String,System.EventHandler)
+  fullName: FlowR.UI.FluentElement<TComponent>.Off
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent).Off
+  nameWithType: FluentElement<TComponent>.Off
+  nameWithType.vb: FluentElement(Of TComponent).Off
+- uid: FlowR.UI.FluentElement`1.On(System.String,System.EventHandler)
   name: On(String, EventHandler)
-  href: api/FlowR.UI.FluentComponent-1.html#FlowR_UI_FluentComponent_1_On_System_String_System_EventHandler_
-  commentId: M:FlowR.UI.FluentComponent`1.On(System.String,System.EventHandler)
-  fullName: FlowR.UI.FluentComponent<TComponent>.On(System.String, System.EventHandler)
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent).On(System.String, System.EventHandler)
-  nameWithType: FluentComponent<TComponent>.On(String, EventHandler)
-  nameWithType.vb: FluentComponent(Of TComponent).On(String, EventHandler)
-- uid: FlowR.UI.FluentComponent`1.On*
+  href: api/FlowR.UI.FluentElement-1.html#FlowR_UI_FluentElement_1_On_System_String_System_EventHandler_
+  commentId: M:FlowR.UI.FluentElement`1.On(System.String,System.EventHandler)
+  fullName: FlowR.UI.FluentElement<TComponent>.On(System.String, System.EventHandler)
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent).On(System.String, System.EventHandler)
+  nameWithType: FluentElement<TComponent>.On(String, EventHandler)
+  nameWithType.vb: FluentElement(Of TComponent).On(String, EventHandler)
+- uid: FlowR.UI.FluentElement`1.On*
   name: On
-  href: api/FlowR.UI.FluentComponent-1.html#FlowR_UI_FluentComponent_1_On_
-  commentId: Overload:FlowR.UI.FluentComponent`1.On
+  href: api/FlowR.UI.FluentElement-1.html#FlowR_UI_FluentElement_1_On_
+  commentId: Overload:FlowR.UI.FluentElement`1.On
   isSpec: "True"
-  fullName: FlowR.UI.FluentComponent<TComponent>.On
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent).On
-  nameWithType: FluentComponent<TComponent>.On
-  nameWithType.vb: FluentComponent(Of TComponent).On
-- uid: FlowR.UI.FluentComponent`1.RemoveAttribute(System.String)
+  fullName: FlowR.UI.FluentElement<TComponent>.On
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent).On
+  nameWithType: FluentElement<TComponent>.On
+  nameWithType.vb: FluentElement(Of TComponent).On
+- uid: FlowR.UI.FluentElement`1.RemoveAttribute(System.String)
   name: RemoveAttribute(String)
-  href: api/FlowR.UI.FluentComponent-1.html#FlowR_UI_FluentComponent_1_RemoveAttribute_System_String_
-  commentId: M:FlowR.UI.FluentComponent`1.RemoveAttribute(System.String)
-  fullName: FlowR.UI.FluentComponent<TComponent>.RemoveAttribute(System.String)
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent).RemoveAttribute(System.String)
-  nameWithType: FluentComponent<TComponent>.RemoveAttribute(String)
-  nameWithType.vb: FluentComponent(Of TComponent).RemoveAttribute(String)
-- uid: FlowR.UI.FluentComponent`1.RemoveAttribute*
+  href: api/FlowR.UI.FluentElement-1.html#FlowR_UI_FluentElement_1_RemoveAttribute_System_String_
+  commentId: M:FlowR.UI.FluentElement`1.RemoveAttribute(System.String)
+  fullName: FlowR.UI.FluentElement<TComponent>.RemoveAttribute(System.String)
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent).RemoveAttribute(System.String)
+  nameWithType: FluentElement<TComponent>.RemoveAttribute(String)
+  nameWithType.vb: FluentElement(Of TComponent).RemoveAttribute(String)
+- uid: FlowR.UI.FluentElement`1.RemoveAttribute*
   name: RemoveAttribute
-  href: api/FlowR.UI.FluentComponent-1.html#FlowR_UI_FluentComponent_1_RemoveAttribute_
-  commentId: Overload:FlowR.UI.FluentComponent`1.RemoveAttribute
+  href: api/FlowR.UI.FluentElement-1.html#FlowR_UI_FluentElement_1_RemoveAttribute_
+  commentId: Overload:FlowR.UI.FluentElement`1.RemoveAttribute
   isSpec: "True"
-  fullName: FlowR.UI.FluentComponent<TComponent>.RemoveAttribute
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent).RemoveAttribute
-  nameWithType: FluentComponent<TComponent>.RemoveAttribute
-  nameWithType.vb: FluentComponent(Of TComponent).RemoveAttribute
-- uid: FlowR.UI.FluentComponent`1.RemoveCssClass(System.String)
+  fullName: FlowR.UI.FluentElement<TComponent>.RemoveAttribute
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent).RemoveAttribute
+  nameWithType: FluentElement<TComponent>.RemoveAttribute
+  nameWithType.vb: FluentElement(Of TComponent).RemoveAttribute
+- uid: FlowR.UI.FluentElement`1.RemoveCssClass(System.String)
   name: RemoveCssClass(String)
-  href: api/FlowR.UI.FluentComponent-1.html#FlowR_UI_FluentComponent_1_RemoveCssClass_System_String_
-  commentId: M:FlowR.UI.FluentComponent`1.RemoveCssClass(System.String)
-  fullName: FlowR.UI.FluentComponent<TComponent>.RemoveCssClass(System.String)
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent).RemoveCssClass(System.String)
-  nameWithType: FluentComponent<TComponent>.RemoveCssClass(String)
-  nameWithType.vb: FluentComponent(Of TComponent).RemoveCssClass(String)
-- uid: FlowR.UI.FluentComponent`1.RemoveCssClass*
+  href: api/FlowR.UI.FluentElement-1.html#FlowR_UI_FluentElement_1_RemoveCssClass_System_String_
+  commentId: M:FlowR.UI.FluentElement`1.RemoveCssClass(System.String)
+  fullName: FlowR.UI.FluentElement<TComponent>.RemoveCssClass(System.String)
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent).RemoveCssClass(System.String)
+  nameWithType: FluentElement<TComponent>.RemoveCssClass(String)
+  nameWithType.vb: FluentElement(Of TComponent).RemoveCssClass(String)
+- uid: FlowR.UI.FluentElement`1.RemoveCssClass*
   name: RemoveCssClass
-  href: api/FlowR.UI.FluentComponent-1.html#FlowR_UI_FluentComponent_1_RemoveCssClass_
-  commentId: Overload:FlowR.UI.FluentComponent`1.RemoveCssClass
+  href: api/FlowR.UI.FluentElement-1.html#FlowR_UI_FluentElement_1_RemoveCssClass_
+  commentId: Overload:FlowR.UI.FluentElement`1.RemoveCssClass
   isSpec: "True"
-  fullName: FlowR.UI.FluentComponent<TComponent>.RemoveCssClass
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent).RemoveCssClass
-  nameWithType: FluentComponent<TComponent>.RemoveCssClass
-  nameWithType.vb: FluentComponent(Of TComponent).RemoveCssClass
-- uid: FlowR.UI.FluentComponent`1.SetAttribute(System.Collections.Generic.Dictionary{System.String,System.String})
+  fullName: FlowR.UI.FluentElement<TComponent>.RemoveCssClass
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent).RemoveCssClass
+  nameWithType: FluentElement<TComponent>.RemoveCssClass
+  nameWithType.vb: FluentElement(Of TComponent).RemoveCssClass
+- uid: FlowR.UI.FluentElement`1.SetAttribute(System.Collections.Generic.Dictionary{System.String,System.String})
   name: SetAttribute(Dictionary<String, String>)
-  href: api/FlowR.UI.FluentComponent-1.html#FlowR_UI_FluentComponent_1_SetAttribute_System_Collections_Generic_Dictionary_System_String_System_String__
-  commentId: M:FlowR.UI.FluentComponent`1.SetAttribute(System.Collections.Generic.Dictionary{System.String,System.String})
+  href: api/FlowR.UI.FluentElement-1.html#FlowR_UI_FluentElement_1_SetAttribute_System_Collections_Generic_Dictionary_System_String_System_String__
+  commentId: M:FlowR.UI.FluentElement`1.SetAttribute(System.Collections.Generic.Dictionary{System.String,System.String})
   name.vb: SetAttribute(Dictionary(Of String, String))
-  fullName: FlowR.UI.FluentComponent<TComponent>.SetAttribute(System.Collections.Generic.Dictionary<System.String, System.String>)
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent).SetAttribute(System.Collections.Generic.Dictionary(Of System.String, System.String))
-  nameWithType: FluentComponent<TComponent>.SetAttribute(Dictionary<String, String>)
-  nameWithType.vb: FluentComponent(Of TComponent).SetAttribute(Dictionary(Of String, String))
-- uid: FlowR.UI.FluentComponent`1.SetAttribute(System.String,System.String)
+  fullName: FlowR.UI.FluentElement<TComponent>.SetAttribute(System.Collections.Generic.Dictionary<System.String, System.String>)
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent).SetAttribute(System.Collections.Generic.Dictionary(Of System.String, System.String))
+  nameWithType: FluentElement<TComponent>.SetAttribute(Dictionary<String, String>)
+  nameWithType.vb: FluentElement(Of TComponent).SetAttribute(Dictionary(Of String, String))
+- uid: FlowR.UI.FluentElement`1.SetAttribute(System.String,System.String)
   name: SetAttribute(String, String)
-  href: api/FlowR.UI.FluentComponent-1.html#FlowR_UI_FluentComponent_1_SetAttribute_System_String_System_String_
-  commentId: M:FlowR.UI.FluentComponent`1.SetAttribute(System.String,System.String)
-  fullName: FlowR.UI.FluentComponent<TComponent>.SetAttribute(System.String, System.String)
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent).SetAttribute(System.String, System.String)
-  nameWithType: FluentComponent<TComponent>.SetAttribute(String, String)
-  nameWithType.vb: FluentComponent(Of TComponent).SetAttribute(String, String)
-- uid: FlowR.UI.FluentComponent`1.SetAttribute*
+  href: api/FlowR.UI.FluentElement-1.html#FlowR_UI_FluentElement_1_SetAttribute_System_String_System_String_
+  commentId: M:FlowR.UI.FluentElement`1.SetAttribute(System.String,System.String)
+  fullName: FlowR.UI.FluentElement<TComponent>.SetAttribute(System.String, System.String)
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent).SetAttribute(System.String, System.String)
+  nameWithType: FluentElement<TComponent>.SetAttribute(String, String)
+  nameWithType.vb: FluentElement(Of TComponent).SetAttribute(String, String)
+- uid: FlowR.UI.FluentElement`1.SetAttribute*
   name: SetAttribute
-  href: api/FlowR.UI.FluentComponent-1.html#FlowR_UI_FluentComponent_1_SetAttribute_
-  commentId: Overload:FlowR.UI.FluentComponent`1.SetAttribute
+  href: api/FlowR.UI.FluentElement-1.html#FlowR_UI_FluentElement_1_SetAttribute_
+  commentId: Overload:FlowR.UI.FluentElement`1.SetAttribute
   isSpec: "True"
-  fullName: FlowR.UI.FluentComponent<TComponent>.SetAttribute
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent).SetAttribute
-  nameWithType: FluentComponent<TComponent>.SetAttribute
-  nameWithType.vb: FluentComponent(Of TComponent).SetAttribute
-- uid: FlowR.UI.FluentComponent`1.SetText(System.String)
+  fullName: FlowR.UI.FluentElement<TComponent>.SetAttribute
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent).SetAttribute
+  nameWithType: FluentElement<TComponent>.SetAttribute
+  nameWithType.vb: FluentElement(Of TComponent).SetAttribute
+- uid: FlowR.UI.FluentElement`1.SetText(System.String)
   name: SetText(String)
-  href: api/FlowR.UI.FluentComponent-1.html#FlowR_UI_FluentComponent_1_SetText_System_String_
-  commentId: M:FlowR.UI.FluentComponent`1.SetText(System.String)
-  fullName: FlowR.UI.FluentComponent<TComponent>.SetText(System.String)
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent).SetText(System.String)
-  nameWithType: FluentComponent<TComponent>.SetText(String)
-  nameWithType.vb: FluentComponent(Of TComponent).SetText(String)
-- uid: FlowR.UI.FluentComponent`1.SetText*
+  href: api/FlowR.UI.FluentElement-1.html#FlowR_UI_FluentElement_1_SetText_System_String_
+  commentId: M:FlowR.UI.FluentElement`1.SetText(System.String)
+  fullName: FlowR.UI.FluentElement<TComponent>.SetText(System.String)
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent).SetText(System.String)
+  nameWithType: FluentElement<TComponent>.SetText(String)
+  nameWithType.vb: FluentElement(Of TComponent).SetText(String)
+- uid: FlowR.UI.FluentElement`1.SetText*
   name: SetText
-  href: api/FlowR.UI.FluentComponent-1.html#FlowR_UI_FluentComponent_1_SetText_
-  commentId: Overload:FlowR.UI.FluentComponent`1.SetText
+  href: api/FlowR.UI.FluentElement-1.html#FlowR_UI_FluentElement_1_SetText_
+  commentId: Overload:FlowR.UI.FluentElement`1.SetText
   isSpec: "True"
-  fullName: FlowR.UI.FluentComponent<TComponent>.SetText
-  fullName.vb: FlowR.UI.FluentComponent(Of TComponent).SetText
-  nameWithType: FluentComponent<TComponent>.SetText
-  nameWithType.vb: FluentComponent(Of TComponent).SetText
+  fullName: FlowR.UI.FluentElement<TComponent>.SetText
+  fullName.vb: FlowR.UI.FluentElement(Of TComponent).SetText
+  nameWithType: FluentElement<TComponent>.SetText
+  nameWithType.vb: FluentElement(Of TComponent).SetText
+- uid: FlowR.UI.Forms
+  name: FlowR.UI.Forms
+  href: api/FlowR.UI.Forms.html
+  commentId: N:FlowR.UI.Forms
+  fullName: FlowR.UI.Forms
+  nameWithType: FlowR.UI.Forms
+- uid: FlowR.UI.Forms.Control
+  name: Control
+  href: api/FlowR.UI.Forms.Control.html
+  commentId: T:FlowR.UI.Forms.Control
+  fullName: FlowR.UI.Forms.Control
+  nameWithType: Control
+- uid: FlowR.UI.Forms.Control.CollectValueAsync(System.String)
+  name: CollectValueAsync(String)
+  href: api/FlowR.UI.Forms.Control.html#FlowR_UI_Forms_Control_CollectValueAsync_System_String_
+  commentId: M:FlowR.UI.Forms.Control.CollectValueAsync(System.String)
+  fullName: FlowR.UI.Forms.Control.CollectValueAsync(System.String)
+  nameWithType: Control.CollectValueAsync(String)
+- uid: FlowR.UI.Forms.Control.CollectValueAsync*
+  name: CollectValueAsync
+  href: api/FlowR.UI.Forms.Control.html#FlowR_UI_Forms_Control_CollectValueAsync_
+  commentId: Overload:FlowR.UI.Forms.Control.CollectValueAsync
+  isSpec: "True"
+  fullName: FlowR.UI.Forms.Control.CollectValueAsync
+  nameWithType: Control.CollectValueAsync
+- uid: FlowR.UI.Forms.Control.FormAutobind
+  name: FormAutobind
+  href: api/FlowR.UI.Forms.Control.html#FlowR_UI_Forms_Control_FormAutobind
+  commentId: P:FlowR.UI.Forms.Control.FormAutobind
+  fullName: FlowR.UI.Forms.Control.FormAutobind
+  nameWithType: Control.FormAutobind
+- uid: FlowR.UI.Forms.Control.FormAutobind*
+  name: FormAutobind
+  href: api/FlowR.UI.Forms.Control.html#FlowR_UI_Forms_Control_FormAutobind_
+  commentId: Overload:FlowR.UI.Forms.Control.FormAutobind
+  isSpec: "True"
+  fullName: FlowR.UI.Forms.Control.FormAutobind
+  nameWithType: Control.FormAutobind
+- uid: FlowR.UI.Forms.Control.GetControlName
+  name: GetControlName()
+  href: api/FlowR.UI.Forms.Control.html#FlowR_UI_Forms_Control_GetControlName
+  commentId: M:FlowR.UI.Forms.Control.GetControlName
+  fullName: FlowR.UI.Forms.Control.GetControlName()
+  nameWithType: Control.GetControlName()
+- uid: FlowR.UI.Forms.Control.GetControlName*
+  name: GetControlName
+  href: api/FlowR.UI.Forms.Control.html#FlowR_UI_Forms_Control_GetControlName_
+  commentId: Overload:FlowR.UI.Forms.Control.GetControlName
+  isSpec: "True"
+  fullName: FlowR.UI.Forms.Control.GetControlName
+  nameWithType: Control.GetControlName
+- uid: FlowR.UI.Forms.Control.GetLabel
+  name: GetLabel()
+  href: api/FlowR.UI.Forms.Control.html#FlowR_UI_Forms_Control_GetLabel
+  commentId: M:FlowR.UI.Forms.Control.GetLabel
+  fullName: FlowR.UI.Forms.Control.GetLabel()
+  nameWithType: Control.GetLabel()
+- uid: FlowR.UI.Forms.Control.GetLabel*
+  name: GetLabel
+  href: api/FlowR.UI.Forms.Control.html#FlowR_UI_Forms_Control_GetLabel_
+  commentId: Overload:FlowR.UI.Forms.Control.GetLabel
+  isSpec: "True"
+  fullName: FlowR.UI.Forms.Control.GetLabel
+  nameWithType: Control.GetLabel
+- uid: FlowR.UI.Forms.Control.SetControl*
+  name: SetControl
+  href: api/FlowR.UI.Forms.Control.html#FlowR_UI_Forms_Control_SetControl_
+  commentId: Overload:FlowR.UI.Forms.Control.SetControl
+  isSpec: "True"
+  fullName: FlowR.UI.Forms.Control.SetControl
+  nameWithType: Control.SetControl
+- uid: FlowR.UI.Forms.Control.SetControl``1
+  name: SetControl<T>()
+  href: api/FlowR.UI.Forms.Control.html#FlowR_UI_Forms_Control_SetControl__1
+  commentId: M:FlowR.UI.Forms.Control.SetControl``1
+  name.vb: SetControl(Of T)()
+  fullName: FlowR.UI.Forms.Control.SetControl<T>()
+  fullName.vb: FlowR.UI.Forms.Control.SetControl(Of T)()
+  nameWithType: Control.SetControl<T>()
+  nameWithType.vb: Control.SetControl(Of T)()
+- uid: FlowR.UI.Forms.Control.SetControlName(System.String)
+  name: SetControlName(String)
+  href: api/FlowR.UI.Forms.Control.html#FlowR_UI_Forms_Control_SetControlName_System_String_
+  commentId: M:FlowR.UI.Forms.Control.SetControlName(System.String)
+  fullName: FlowR.UI.Forms.Control.SetControlName(System.String)
+  nameWithType: Control.SetControlName(String)
+- uid: FlowR.UI.Forms.Control.SetControlName*
+  name: SetControlName
+  href: api/FlowR.UI.Forms.Control.html#FlowR_UI_Forms_Control_SetControlName_
+  commentId: Overload:FlowR.UI.Forms.Control.SetControlName
+  isSpec: "True"
+  fullName: FlowR.UI.Forms.Control.SetControlName
+  nameWithType: Control.SetControlName
+- uid: FlowR.UI.Forms.Control.SetLabel(System.String)
+  name: SetLabel(String)
+  href: api/FlowR.UI.Forms.Control.html#FlowR_UI_Forms_Control_SetLabel_System_String_
+  commentId: M:FlowR.UI.Forms.Control.SetLabel(System.String)
+  fullName: FlowR.UI.Forms.Control.SetLabel(System.String)
+  nameWithType: Control.SetLabel(String)
+- uid: FlowR.UI.Forms.Control.SetLabel*
+  name: SetLabel
+  href: api/FlowR.UI.Forms.Control.html#FlowR_UI_Forms_Control_SetLabel_
+  commentId: Overload:FlowR.UI.Forms.Control.SetLabel
+  isSpec: "True"
+  fullName: FlowR.UI.Forms.Control.SetLabel
+  nameWithType: Control.SetLabel
+- uid: FlowR.UI.Forms.Control.TagName
+  name: TagName
+  href: api/FlowR.UI.Forms.Control.html#FlowR_UI_Forms_Control_TagName
+  commentId: P:FlowR.UI.Forms.Control.TagName
+  fullName: FlowR.UI.Forms.Control.TagName
+  nameWithType: Control.TagName
+- uid: FlowR.UI.Forms.Control.TagName*
+  name: TagName
+  href: api/FlowR.UI.Forms.Control.html#FlowR_UI_Forms_Control_TagName_
+  commentId: Overload:FlowR.UI.Forms.Control.TagName
+  isSpec: "True"
+  fullName: FlowR.UI.Forms.Control.TagName
+  nameWithType: Control.TagName
+- uid: FlowR.UI.Forms.Controls
+  name: FlowR.UI.Forms.Controls
+  href: api/FlowR.UI.Forms.Controls.html
+  commentId: N:FlowR.UI.Forms.Controls
+  fullName: FlowR.UI.Forms.Controls
+  nameWithType: FlowR.UI.Forms.Controls
+- uid: FlowR.UI.Forms.Controls.Checkbox
+  name: Checkbox
+  href: api/FlowR.UI.Forms.Controls.Checkbox.html
+  commentId: T:FlowR.UI.Forms.Controls.Checkbox
+  fullName: FlowR.UI.Forms.Controls.Checkbox
+  nameWithType: Checkbox
+- uid: FlowR.UI.Forms.Controls.Checkbox.Init
+  name: Init()
+  href: api/FlowR.UI.Forms.Controls.Checkbox.html#FlowR_UI_Forms_Controls_Checkbox_Init
+  commentId: M:FlowR.UI.Forms.Controls.Checkbox.Init
+  fullName: FlowR.UI.Forms.Controls.Checkbox.Init()
+  nameWithType: Checkbox.Init()
+- uid: FlowR.UI.Forms.Controls.Checkbox.Init*
+  name: Init
+  href: api/FlowR.UI.Forms.Controls.Checkbox.html#FlowR_UI_Forms_Controls_Checkbox_Init_
+  commentId: Overload:FlowR.UI.Forms.Controls.Checkbox.Init
+  isSpec: "True"
+  fullName: FlowR.UI.Forms.Controls.Checkbox.Init
+  nameWithType: Checkbox.Init
+- uid: FlowR.UI.Forms.Controls.IBootstrapControl
+  name: IBootstrapControl
+  href: api/FlowR.UI.Forms.Controls.IBootstrapControl.html
+  commentId: T:FlowR.UI.Forms.Controls.IBootstrapControl
+  fullName: FlowR.UI.Forms.Controls.IBootstrapControl
+  nameWithType: IBootstrapControl
+- uid: FlowR.UI.Forms.Controls.Input
+  name: Input
+  href: api/FlowR.UI.Forms.Controls.Input.html
+  commentId: T:FlowR.UI.Forms.Controls.Input
+  fullName: FlowR.UI.Forms.Controls.Input
+  nameWithType: Input
+- uid: FlowR.UI.Forms.Controls.Input.Init
+  name: Init()
+  href: api/FlowR.UI.Forms.Controls.Input.html#FlowR_UI_Forms_Controls_Input_Init
+  commentId: M:FlowR.UI.Forms.Controls.Input.Init
+  fullName: FlowR.UI.Forms.Controls.Input.Init()
+  nameWithType: Input.Init()
+- uid: FlowR.UI.Forms.Controls.Input.Init*
+  name: Init
+  href: api/FlowR.UI.Forms.Controls.Input.html#FlowR_UI_Forms_Controls_Input_Init_
+  commentId: Overload:FlowR.UI.Forms.Controls.Input.Init
+  isSpec: "True"
+  fullName: FlowR.UI.Forms.Controls.Input.Init
+  nameWithType: Input.Init
+- uid: FlowR.UI.Forms.Controls.Select
+  name: Select
+  href: api/FlowR.UI.Forms.Controls.Select.html
+  commentId: T:FlowR.UI.Forms.Controls.Select
+  fullName: FlowR.UI.Forms.Controls.Select
+  nameWithType: Select
+- uid: FlowR.UI.Forms.Controls.Select.Init
+  name: Init()
+  href: api/FlowR.UI.Forms.Controls.Select.html#FlowR_UI_Forms_Controls_Select_Init
+  commentId: M:FlowR.UI.Forms.Controls.Select.Init
+  fullName: FlowR.UI.Forms.Controls.Select.Init()
+  nameWithType: Select.Init()
+- uid: FlowR.UI.Forms.Controls.Select.Init*
+  name: Init
+  href: api/FlowR.UI.Forms.Controls.Select.html#FlowR_UI_Forms_Controls_Select_Init_
+  commentId: Overload:FlowR.UI.Forms.Controls.Select.Init
+  isSpec: "True"
+  fullName: FlowR.UI.Forms.Controls.Select.Init
+  nameWithType: Select.Init
 - uid: FlowR.UI.Layout.Containers
   name: FlowR.UI.Layout.Containers
   href: api/FlowR.UI.Layout.Containers.html
@@ -6404,6 +6665,19 @@ references:
   commentId: T:FlowR.UI.Layout.Containers.Row
   fullName: FlowR.UI.Layout.Containers.Row
   nameWithType: Row
+- uid: FlowR.UI.Layout.Containers.Row.AddCol
+  name: AddCol()
+  href: api/FlowR.UI.Layout.Containers.Row.html#FlowR_UI_Layout_Containers_Row_AddCol
+  commentId: M:FlowR.UI.Layout.Containers.Row.AddCol
+  fullName: FlowR.UI.Layout.Containers.Row.AddCol()
+  nameWithType: Row.AddCol()
+- uid: FlowR.UI.Layout.Containers.Row.AddCol*
+  name: AddCol
+  href: api/FlowR.UI.Layout.Containers.Row.html#FlowR_UI_Layout_Containers_Row_AddCol_
+  commentId: Overload:FlowR.UI.Layout.Containers.Row.AddCol
+  isSpec: "True"
+  fullName: FlowR.UI.Layout.Containers.Row.AddCol
+  nameWithType: Row.AddCol
 - uid: FlowR.UI.Layout.Containers.Row.DefaultAttributes
   name: DefaultAttributes
   href: api/FlowR.UI.Layout.Containers.Row.html#FlowR_UI_Layout_Containers_Row_DefaultAttributes

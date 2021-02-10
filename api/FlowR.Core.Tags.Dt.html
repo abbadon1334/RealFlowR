@@ -79,12 +79,12 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="FlowR.Core.Node.html">Node</a></div>
-    <div class="level2"><a class="xref" href="FlowR.Core.NodeComponent.html">NodeComponent</a></div>
+    <div class="level2"><a class="xref" href="FlowR.Core.NodeElement.html">NodeElement</a></div>
     <div class="level3"><span class="xref">Dt</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="FlowR.Core.INodeComponent.html">INodeComponent</a></div>
+    <div><a class="xref" href="FlowR.Core.INodeElement.html">INodeElement</a></div>
     <div><a class="xref" href="FlowR.Core.INode.html">INode</a></div>
   </div>
   <div class="inheritedMembers">
@@ -156,7 +156,7 @@
       <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_GetPropertyAsync_System_String_">Node.GetPropertyAsync(String)</a>
     </div>
     <div>
-      <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_Add__1_System_Collections_Generic_Dictionary_System_String_System_String__">Node.Add&lt;TNodeComponent&gt;(Dictionary&lt;String, String&gt;)</a>
+      <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_Add__1_System_Collections_Generic_Dictionary_System_String_System_String__">Node.Add&lt;TNodeElement&gt;(Dictionary&lt;String, String&gt;)</a>
     </div>
     <div>
       <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_Add__1_System_String_System_Collections_Generic_Dictionary_System_String_System_String__">Node.Add&lt;TNodeControl&gt;(String, Dictionary&lt;String, String&gt;)</a>
@@ -207,7 +207,7 @@
       <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_ValidateNode">Node.ValidateNode()</a>
     </div>
     <div>
-      <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_GetLogger">Node.GetLogger()</a>
+      <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_RemoveAllChildren">Node.RemoveAllChildren()</a>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
@@ -235,7 +235,7 @@
   <h6><strong>Assembly</strong>: FlowR.Core.dll</h6>
   <h5 id="FlowR_Core_Tags_Dt_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Dt : NodeComponent, INodeComponent, INode</code></pre>
+    <pre><code class="lang-csharp hljs">public class Dt : NodeElement, INodeElement, INode</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -273,7 +273,7 @@
   <div><a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_TagName">Node.TagName</a></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="FlowR.Core.INodeComponent.html">INodeComponent</a>
+      <a class="xref" href="FlowR.Core.INodeElement.html">INodeElement</a>
   </div>
   <div>
       <a class="xref" href="FlowR.Core.INode.html">INode</a>

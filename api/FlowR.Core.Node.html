@@ -79,8 +79,8 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Node</span></div>
-      <div class="level2"><a class="xref" href="FlowR.Core.NodeComponent.html">NodeComponent</a></div>
       <div class="level2"><a class="xref" href="FlowR.Core.NodeControl.html">NodeControl</a></div>
+      <div class="level2"><a class="xref" href="FlowR.Core.NodeElement.html">NodeElement</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -123,7 +123,7 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node__ctor.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L37">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L38">View Source</a>
   </span>
   <a id="FlowR_Core_Node__ctor_" data-uid="FlowR.Core.Node.#ctor*"></a>
   <h4 id="FlowR_Core_Node__ctor" data-uid="FlowR.Core.Node.#ctor">Node()</h4>
@@ -141,7 +141,7 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_DefaultAttributes.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.DefaultAttributes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L46">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L47">View Source</a>
   </span>
   <a id="FlowR_Core_Node_DefaultAttributes_" data-uid="FlowR.Core.Node.DefaultAttributes*"></a>
   <h4 id="FlowR_Core_Node_DefaultAttributes" data-uid="FlowR.Core.Node.DefaultAttributes">DefaultAttributes</h4>
@@ -172,7 +172,7 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_TagName.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.TagName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L51">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L52">View Source</a>
   </span>
   <a id="FlowR_Core_Node_TagName_" data-uid="FlowR.Core.Node.TagName*"></a>
   <h4 id="FlowR_Core_Node_TagName" data-uid="FlowR.Core.Node.TagName">TagName</h4>
@@ -205,17 +205,17 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Add__1_System_Collections_Generic_Dictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Add%60%601(System.Collections.Generic.Dictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L228">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L218">View Source</a>
   </span>
   <a id="FlowR_Core_Node_Add_" data-uid="FlowR.Core.Node.Add*"></a>
-  <h4 id="FlowR_Core_Node_Add__1_System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="FlowR.Core.Node.Add``1(System.Collections.Generic.Dictionary{System.String,System.String})">Add&lt;TNodeComponent&gt;(Dictionary&lt;String, String&gt;)</h4>
+  <h4 id="FlowR_Core_Node_Add__1_System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="FlowR.Core.Node.Add``1(System.Collections.Generic.Dictionary{System.String,System.String})">Add&lt;TNodeElement&gt;(Dictionary&lt;String, String&gt;)</h4>
   <div class="markdown level1 summary"><p>Fluid Add Element</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TNodeComponent Add&lt;TNodeComponent&gt;(Dictionary&lt;string, string&gt; attributes = null)
-    where TNodeComponent : INodeComponent, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public TNodeElement Add&lt;TNodeElement&gt;(Dictionary&lt;string, string&gt; attributes = null)
+    where TNodeElement : INodeElement, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -244,7 +244,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TNodeComponent</span></td>
+        <td><span class="xref">TNodeElement</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -259,7 +259,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TNodeComponent</span></td>
+        <td><span class="parametername">TNodeElement</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -269,7 +269,7 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Add__1_System_String_System_Collections_Generic_Dictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Add%60%601(System.String%2CSystem.Collections.Generic.Dictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L240">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L230">View Source</a>
   </span>
   <a id="FlowR_Core_Node_Add_" data-uid="FlowR.Core.Node.Add*"></a>
   <h4 id="FlowR_Core_Node_Add__1_System_String_System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="FlowR.Core.Node.Add``1(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">Add&lt;TNodeControl&gt;(String, Dictionary&lt;String, String&gt;)</h4>
@@ -338,7 +338,7 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_AddCssClass_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.AddCssClass(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L383">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L370">View Source</a>
   </span>
   <a id="FlowR_Core_Node_AddCssClass_" data-uid="FlowR.Core.Node.AddCssClass*"></a>
   <h4 id="FlowR_Core_Node_AddCssClass_System_String_" data-uid="FlowR.Core.Node.AddCssClass(System.String)">AddCssClass(String)</h4>
@@ -386,7 +386,7 @@
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_AddJavascriptMethod_System_String_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.AddJavascriptMethod(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L313">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L300">View Source</a>
   </span>
   <a id="FlowR_Core_Node_AddJavascriptMethod_" data-uid="FlowR.Core.Node.AddJavascriptMethod*"></a>
   <h4 id="FlowR_Core_Node_AddJavascriptMethod_System_String_System_String_" data-uid="FlowR.Core.Node.AddJavascriptMethod(System.String,System.String)">AddJavascriptMethod(String, String)</h4>
@@ -440,7 +440,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_CallClientMethod_System_String_System_String___.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.CallClientMethod(System.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L325">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L312">View Source</a>
   </span>
   <a id="FlowR_Core_Node_CallClientMethod_" data-uid="FlowR.Core.Node.CallClientMethod*"></a>
   <h4 id="FlowR_Core_Node_CallClientMethod_System_String_System_String___" data-uid="FlowR.Core.Node.CallClientMethod(System.String,System.String[])">CallClientMethod(String, String[])</h4>
@@ -493,7 +493,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_CallClientMethodAsync_System_String_System_String___.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.CallClientMethodAsync(System.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L337">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L324">View Source</a>
   </span>
   <a id="FlowR_Core_Node_CallClientMethodAsync_" data-uid="FlowR.Core.Node.CallClientMethodAsync*"></a>
   <h4 id="FlowR_Core_Node_CallClientMethodAsync_System_String_System_String___" data-uid="FlowR.Core.Node.CallClientMethodAsync(System.String,System.String[])">CallClientMethodAsync(String, String[])</h4>
@@ -546,7 +546,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetApplication.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetApplication%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L99">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L100">View Source</a>
   </span>
   <a id="FlowR_Core_Node_GetApplication_" data-uid="FlowR.Core.Node.GetApplication*"></a>
   <h4 id="FlowR_Core_Node_GetApplication" data-uid="FlowR.Core.Node.GetApplication">GetApplication()</h4>
@@ -577,7 +577,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetAttribute_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetAttribute(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L162">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L154">View Source</a>
   </span>
   <a id="FlowR_Core_Node_GetAttribute_" data-uid="FlowR.Core.Node.GetAttribute*"></a>
   <h4 id="FlowR_Core_Node_GetAttribute_System_String_" data-uid="FlowR.Core.Node.GetAttribute(System.String)">GetAttribute(String)</h4>
@@ -625,7 +625,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetAttributes.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetAttributes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L81">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L82">View Source</a>
   </span>
   <a id="FlowR_Core_Node_GetAttributes_" data-uid="FlowR.Core.Node.GetAttributes*"></a>
   <h4 id="FlowR_Core_Node_GetAttributes" data-uid="FlowR.Core.Node.GetAttributes">GetAttributes()</h4>
@@ -656,7 +656,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetChildren.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetChildren%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L111">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L112">View Source</a>
   </span>
   <a id="FlowR_Core_Node_GetChildren_" data-uid="FlowR.Core.Node.GetChildren*"></a>
   <h4 id="FlowR_Core_Node_GetChildren" data-uid="FlowR.Core.Node.GetChildren">GetChildren()</h4>
@@ -687,7 +687,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetChildrenOfType__1.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetChildrenOfType%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L371">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L358">View Source</a>
   </span>
   <a id="FlowR_Core_Node_GetChildrenOfType_" data-uid="FlowR.Core.Node.GetChildrenOfType*"></a>
   <h4 id="FlowR_Core_Node_GetChildrenOfType__1" data-uid="FlowR.Core.Node.GetChildrenOfType``1">GetChildrenOfType&lt;T&gt;()</h4>
@@ -734,7 +734,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetCommunication.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetCommunication%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L105">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L106">View Source</a>
   </span>
   <a id="FlowR_Core_Node_GetCommunication_" data-uid="FlowR.Core.Node.GetCommunication*"></a>
   <h4 id="FlowR_Core_Node_GetCommunication" data-uid="FlowR.Core.Node.GetCommunication">GetCommunication()</h4>
@@ -765,7 +765,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetEventHandlers.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetEventHandlers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L93">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L94">View Source</a>
   </span>
   <a id="FlowR_Core_Node_GetEventHandlers_" data-uid="FlowR.Core.Node.GetEventHandlers*"></a>
   <h4 id="FlowR_Core_Node_GetEventHandlers" data-uid="FlowR.Core.Node.GetEventHandlers">GetEventHandlers()</h4>
@@ -796,7 +796,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetFirstOwnerOfType__1.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetFirstOwnerOfType%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L348">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L335">View Source</a>
   </span>
   <a id="FlowR_Core_Node_GetFirstOwnerOfType_" data-uid="FlowR.Core.Node.GetFirstOwnerOfType*"></a>
   <h4 id="FlowR_Core_Node_GetFirstOwnerOfType__1" data-uid="FlowR.Core.Node.GetFirstOwnerOfType``1">GetFirstOwnerOfType&lt;T&gt;()</h4>
@@ -841,41 +841,10 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetLogger.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetLogger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L599">View Source</a>
-  </span>
-  <a id="FlowR_Core_Node_GetLogger_" data-uid="FlowR.Core.Node.GetLogger*"></a>
-  <h4 id="FlowR_Core_Node_GetLogger" data-uid="FlowR.Core.Node.GetLogger">GetLogger()</h4>
-  <div class="markdown level1 summary"><p>Get Application logger</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ILogger&lt;Application&gt; GetLogger()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span>&lt;<a class="xref" href="FlowR.Core.Application.html">Application</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetOwner.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetOwner%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L60">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L61">View Source</a>
   </span>
   <a id="FlowR_Core_Node_GetOwner_" data-uid="FlowR.Core.Node.GetOwner*"></a>
   <h4 id="FlowR_Core_Node_GetOwner" data-uid="FlowR.Core.Node.GetOwner">GetOwner()</h4>
@@ -906,7 +875,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetProperties.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetProperties%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L87">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L88">View Source</a>
   </span>
   <a id="FlowR_Core_Node_GetProperties_" data-uid="FlowR.Core.Node.GetProperties*"></a>
   <h4 id="FlowR_Core_Node_GetProperties" data-uid="FlowR.Core.Node.GetProperties">GetProperties()</h4>
@@ -937,7 +906,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetProperty_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetProperty(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L208">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L198">View Source</a>
   </span>
   <a id="FlowR_Core_Node_GetProperty_" data-uid="FlowR.Core.Node.GetProperty*"></a>
   <h4 id="FlowR_Core_Node_GetProperty_System_String_" data-uid="FlowR.Core.Node.GetProperty(System.String)">GetProperty(String)</h4>
@@ -985,7 +954,7 @@ Later can be called via CallClientMethod and CallClientMethodWaitResponse</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetPropertyAsync_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetPropertyAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L216">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L206">View Source</a>
   </span>
   <a id="FlowR_Core_Node_GetPropertyAsync_" data-uid="FlowR.Core.Node.GetPropertyAsync*"></a>
   <h4 id="FlowR_Core_Node_GetPropertyAsync_System_String_" data-uid="FlowR.Core.Node.GetPropertyAsync(System.String)">GetPropertyAsync(String)</h4>
@@ -1034,7 +1003,7 @@ Wait for response, update in memory and return result.</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetTagName.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetTagName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L54">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L55">View Source</a>
   </span>
   <a id="FlowR_Core_Node_GetTagName_" data-uid="FlowR.Core.Node.GetTagName*"></a>
   <h4 id="FlowR_Core_Node_GetTagName" data-uid="FlowR.Core.Node.GetTagName">GetTagName()</h4>
@@ -1065,7 +1034,7 @@ Wait for response, update in memory and return result.</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetText.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetText%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L117">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L118">View Source</a>
   </span>
   <a id="FlowR_Core_Node_GetText_" data-uid="FlowR.Core.Node.GetText*"></a>
   <h4 id="FlowR_Core_Node_GetText" data-uid="FlowR.Core.Node.GetText">GetText()</h4>
@@ -1096,7 +1065,7 @@ Wait for response, update in memory and return result.</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_GetUuid.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.GetUuid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L71">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L72">View Source</a>
   </span>
   <a id="FlowR_Core_Node_GetUuid_" data-uid="FlowR.Core.Node.GetUuid*"></a>
   <h4 id="FlowR_Core_Node_GetUuid" data-uid="FlowR.Core.Node.GetUuid">GetUuid()</h4>
@@ -1127,7 +1096,7 @@ Wait for response, update in memory and return result.</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_HasAttribute_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.HasAttribute(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L194">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L184">View Source</a>
   </span>
   <a id="FlowR_Core_Node_HasAttribute_" data-uid="FlowR.Core.Node.HasAttribute*"></a>
   <h4 id="FlowR_Core_Node_HasAttribute_System_String_" data-uid="FlowR.Core.Node.HasAttribute(System.String)">HasAttribute(String)</h4>
@@ -1175,7 +1144,7 @@ Wait for response, update in memory and return result.</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Init.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Init%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L136">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L137">View Source</a>
   </span>
   <a id="FlowR_Core_Node_Init_" data-uid="FlowR.Core.Node.Init*"></a>
   <h4 id="FlowR_Core_Node_Init" data-uid="FlowR.Core.Node.Init">Init()</h4>
@@ -1193,7 +1162,7 @@ This is the method you are looking for if you want to make a new component</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Off_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Off(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L297">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L284">View Source</a>
   </span>
   <a id="FlowR_Core_Node_Off_" data-uid="FlowR.Core.Node.Off*"></a>
   <h4 id="FlowR_Core_Node_Off_System_String_" data-uid="FlowR.Core.Node.Off(System.String)">Off(String)</h4>
@@ -1241,7 +1210,7 @@ This is the method you are looking for if you want to make a new component</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Off_System_String_System_EventHandler_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Off(System.String%2CSystem.EventHandler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L279">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L266">View Source</a>
   </span>
   <a id="FlowR_Core_Node_Off_" data-uid="FlowR.Core.Node.Off*"></a>
   <h4 id="FlowR_Core_Node_Off_System_String_System_EventHandler_" data-uid="FlowR.Core.Node.Off(System.String,System.EventHandler)">Off(String, EventHandler)</h4>
@@ -1294,7 +1263,7 @@ This is the method you are looking for if you want to make a new component</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_On_System_String_System_EventHandler_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.On(System.String%2CSystem.EventHandler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L260">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L251">View Source</a>
   </span>
   <a id="FlowR_Core_Node_On_" data-uid="FlowR.Core.Node.On*"></a>
   <h4 id="FlowR_Core_Node_On_System_String_System_EventHandler_" data-uid="FlowR.Core.Node.On(System.String,System.EventHandler)">On(String, EventHandler)</h4>
@@ -1347,7 +1316,7 @@ This is the method you are looking for if you want to make a new component</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_OnClientEventTriggered_System_String_System_EventArgs_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.OnClientEventTriggered(System.String%2CSystem.EventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L305">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L292">View Source</a>
   </span>
   <a id="FlowR_Core_Node_OnClientEventTriggered_" data-uid="FlowR.Core.Node.OnClientEventTriggered*"></a>
   <h4 id="FlowR_Core_Node_OnClientEventTriggered_System_String_System_EventArgs_" data-uid="FlowR.Core.Node.OnClientEventTriggered(System.String,System.EventArgs)">OnClientEventTriggered(String, EventArgs)</h4>
@@ -1388,7 +1357,7 @@ This is the method you are looking for if you want to make a new component</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_Remove_FlowR_Core_INode_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.Remove(FlowR.Core.INode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L254">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L244">View Source</a>
   </span>
   <a id="FlowR_Core_Node_Remove_" data-uid="FlowR.Core.Node.Remove*"></a>
   <h4 id="FlowR_Core_Node_Remove_FlowR_Core_INode_" data-uid="FlowR.Core.Node.Remove(FlowR.Core.INode)">Remove(INode)</h4>
@@ -1418,10 +1387,41 @@ This is the method you are looking for if you want to make a new component</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_RemoveAllChildren.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.RemoveAllChildren%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L589">View Source</a>
+  </span>
+  <a id="FlowR_Core_Node_RemoveAllChildren_" data-uid="FlowR.Core.Node.RemoveAllChildren*"></a>
+  <h4 id="FlowR_Core_Node_RemoveAllChildren" data-uid="FlowR.Core.Node.RemoveAllChildren">RemoveAllChildren()</h4>
+  <div class="markdown level1 summary"><p>Remove all children</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public INode RemoveAllChildren()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlowR.Core.INode.html">INode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_RemoveAttribute_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.RemoveAttribute(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L170">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L162">View Source</a>
   </span>
   <a id="FlowR_Core_Node_RemoveAttribute_" data-uid="FlowR.Core.Node.RemoveAttribute*"></a>
   <h4 id="FlowR_Core_Node_RemoveAttribute_System_String_" data-uid="FlowR.Core.Node.RemoveAttribute(System.String)">RemoveAttribute(String)</h4>
@@ -1469,7 +1469,7 @@ This is the method you are looking for if you want to make a new component</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_RemoveCssClass_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.RemoveCssClass(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L397">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L378">View Source</a>
   </span>
   <a id="FlowR_Core_Node_RemoveCssClass_" data-uid="FlowR.Core.Node.RemoveCssClass*"></a>
   <h4 id="FlowR_Core_Node_RemoveCssClass_System_String_" data-uid="FlowR.Core.Node.RemoveCssClass(System.String)">RemoveCssClass(String)</h4>
@@ -1517,7 +1517,7 @@ This is the method you are looking for if you want to make a new component</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_SetApplication_FlowR_Core_Application_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.SetApplication(FlowR.Core.Application)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L434">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L407">View Source</a>
   </span>
   <a id="FlowR_Core_Node_SetApplication_" data-uid="FlowR.Core.Node.SetApplication*"></a>
   <h4 id="FlowR_Core_Node_SetApplication_FlowR_Core_Application_" data-uid="FlowR.Core.Node.SetApplication(FlowR.Core.Application)">SetApplication(Application)</h4>
@@ -1550,7 +1550,7 @@ This is the method you are looking for if you want to make a new component</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_SetAttribute_System_Collections_Generic_Dictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.SetAttribute(System.Collections.Generic.Dictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L181">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L173">View Source</a>
   </span>
   <a id="FlowR_Core_Node_SetAttribute_" data-uid="FlowR.Core.Node.SetAttribute*"></a>
   <h4 id="FlowR_Core_Node_SetAttribute_System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="FlowR.Core.Node.SetAttribute(System.Collections.Generic.Dictionary{System.String,System.String})">SetAttribute(Dictionary&lt;String, String&gt;)</h4>
@@ -1559,7 +1559,7 @@ This is the method you are looking for if you want to make a new component</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual INode SetAttribute(Dictionary&lt;string, string&gt; attributes = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual INode SetAttribute(Dictionary&lt;string, string&gt; attributes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1598,7 +1598,7 @@ This is the method you are looking for if you want to make a new component</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_SetAttribute_System_String_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.SetAttribute(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L145">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L146">View Source</a>
   </span>
   <a id="FlowR_Core_Node_SetAttribute_" data-uid="FlowR.Core.Node.SetAttribute*"></a>
   <h4 id="FlowR_Core_Node_SetAttribute_System_String_System_String_" data-uid="FlowR.Core.Node.SetAttribute(System.String,System.String)">SetAttribute(String, String)</h4>
@@ -1651,7 +1651,7 @@ This is the method you are looking for if you want to make a new component</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_SetOwner_FlowR_Core_INode_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.SetOwner(FlowR.Core.INode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L66">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L67">View Source</a>
   </span>
   <a id="FlowR_Core_Node_SetOwner_" data-uid="FlowR.Core.Node.SetOwner*"></a>
   <h4 id="FlowR_Core_Node_SetOwner_FlowR_Core_INode_" data-uid="FlowR.Core.Node.SetOwner(FlowR.Core.INode)">SetOwner(INode)</h4>
@@ -1684,7 +1684,7 @@ This is the method you are looking for if you want to make a new component</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_SetProperty_System_String_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.SetProperty(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L200">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L190">View Source</a>
   </span>
   <a id="FlowR_Core_Node_SetProperty_" data-uid="FlowR.Core.Node.SetProperty*"></a>
   <h4 id="FlowR_Core_Node_SetProperty_System_String_System_String_" data-uid="FlowR.Core.Node.SetProperty(System.String,System.String)">SetProperty(String, String)</h4>
@@ -1737,7 +1737,7 @@ This is the method you are looking for if you want to make a new component</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_SetText_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.SetText(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L123">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L124">View Source</a>
   </span>
   <a id="FlowR_Core_Node_SetText_" data-uid="FlowR.Core.Node.SetText*"></a>
   <h4 id="FlowR_Core_Node_SetText_System_String_" data-uid="FlowR.Core.Node.SetText(System.String)">SetText(String)</h4>
@@ -1785,7 +1785,7 @@ This is the method you are looking for if you want to make a new component</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_SetUuid_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.SetUuid(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L417">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L390">View Source</a>
   </span>
   <a id="FlowR_Core_Node_SetUuid_" data-uid="FlowR.Core.Node.SetUuid*"></a>
   <h4 id="FlowR_Core_Node_SetUuid_System_String_" data-uid="FlowR.Core.Node.SetUuid(System.String)">SetUuid(String)</h4>
@@ -1818,7 +1818,7 @@ This is the method you are looking for if you want to make a new component</p>
     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node_ValidateNode.md&amp;value=---%0Auid%3A%20FlowR.Core.Node.ValidateNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L577">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L549">View Source</a>
   </span>
   <a id="FlowR_Core_Node_ValidateNode_" data-uid="FlowR.Core.Node.ValidateNode*"></a>
   <h4 id="FlowR_Core_Node_ValidateNode" data-uid="FlowR.Core.Node.ValidateNode">ValidateNode()</h4>
@@ -1844,7 +1844,7 @@ This is the method you are looking for if you want to make a new component</p>
                     <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Node.md&amp;value=---%0Auid%3A%20FlowR.Core.Node%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Node.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

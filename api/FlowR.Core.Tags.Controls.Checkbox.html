@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class NodeComponentRoot
+    <title>Class Checkbox
    | FlowR - Low Code UI over SignalR </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class NodeComponentRoot
+    <meta name="title" content="Class Checkbox
    | FlowR - Low Code UI over SignalR ">
     <meta name="generator" content="docfx 2.56.6.0">
     
@@ -67,30 +67,50 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="FlowR.Core.NodeComponentRoot">
+            <article class="content wrap" id="_content" data-uid="FlowR.Core.Tags.Controls.Checkbox">
   
   
-  <h1 id="FlowR_Core_NodeComponentRoot" data-uid="FlowR.Core.NodeComponentRoot" class="text-break">Class NodeComponentRoot
+  <h1 id="FlowR_Core_Tags_Controls_Checkbox" data-uid="FlowR.Core.Tags.Controls.Checkbox" class="text-break">Class Checkbox
   </h1>
-  <div class="markdown level0 summary"><p>Special internal Node as root of the composite tree</p>
+  <div class="markdown level0 summary"><p>Defines an checkbox control.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="FlowR.Core.Node.html">Node</a></div>
-    <div class="level2"><a class="xref" href="FlowR.Core.NodeComponent.html">NodeComponent</a></div>
-    <div class="level3"><span class="xref">NodeComponentRoot</span></div>
+    <div class="level2"><a class="xref" href="FlowR.Core.NodeControl.html">NodeControl</a></div>
+    <div class="level3"><a class="xref" href="FlowR.Core.Tags.Controls.Input.html">Input</a></div>
+    <div class="level4"><span class="xref">Checkbox</span></div>
+      <div class="level5"><a class="xref" href="FlowR.UI.Forms.Controls.Checkbox.html">Checkbox</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="FlowR.Core.INodeComponent.html">INodeComponent</a></div>
+    <div><a class="xref" href="FlowR.Core.INodeControl.html">INodeControl</a></div>
     <div><a class="xref" href="FlowR.Core.INode.html">INode</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_DefaultAttributes">Node.DefaultAttributes</a>
+      <a class="xref" href="FlowR.Core.Tags.Controls.Input.html#FlowR_Core_Tags_Controls_Input_TagName">Input.TagName</a>
+    </div>
+    <div>
+      <a class="xref" href="FlowR.Core.NodeControl.html#FlowR_Core_NodeControl_FormAutobind">NodeControl.FormAutobind</a>
+    </div>
+    <div>
+      <a class="xref" href="FlowR.Core.NodeControl.html#FlowR_Core_NodeControl_GetControlName">NodeControl.GetControlName()</a>
+    </div>
+    <div>
+      <a class="xref" href="FlowR.Core.NodeControl.html#FlowR_Core_NodeControl_SetControlName_System_String_">NodeControl.SetControlName(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="FlowR.Core.NodeControl.html#FlowR_Core_NodeControl_GetBindedForm">NodeControl.GetBindedForm()</a>
+    </div>
+    <div>
+      <a class="xref" href="FlowR.Core.NodeControl.html#FlowR_Core_NodeControl_Init">NodeControl.Init()</a>
+    </div>
+    <div>
+      <a class="xref" href="FlowR.Core.NodeControl.html#FlowR_Core_NodeControl_ValidateNode">NodeControl.ValidateNode()</a>
     </div>
     <div>
       <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_GetTagName">Node.GetTagName()</a>
@@ -129,9 +149,6 @@
       <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_SetText_System_String_">Node.SetText(String)</a>
     </div>
     <div>
-      <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_Init">Node.Init()</a>
-    </div>
-    <div>
       <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_SetAttribute_System_String_System_String_">Node.SetAttribute(String, String)</a>
     </div>
     <div>
@@ -156,7 +173,7 @@
       <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_GetPropertyAsync_System_String_">Node.GetPropertyAsync(String)</a>
     </div>
     <div>
-      <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_Add__1_System_Collections_Generic_Dictionary_System_String_System_String__">Node.Add&lt;TNodeComponent&gt;(Dictionary&lt;String, String&gt;)</a>
+      <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_Add__1_System_Collections_Generic_Dictionary_System_String_System_String__">Node.Add&lt;TNodeElement&gt;(Dictionary&lt;String, String&gt;)</a>
     </div>
     <div>
       <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_Add__1_System_String_System_Collections_Generic_Dictionary_System_String_System_String__">Node.Add&lt;TNodeControl&gt;(String, Dictionary&lt;String, String&gt;)</a>
@@ -204,7 +221,7 @@
       <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_SetApplication_FlowR_Core_Application_">Node.SetApplication(Application)</a>
     </div>
     <div>
-      <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_GetLogger">Node.GetLogger()</a>
+      <a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_RemoveAllChildren">Node.RemoveAllChildren()</a>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
@@ -228,29 +245,64 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="FlowR.Core.html">FlowR.Core</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="FlowR.Core.Tags.Controls.html">FlowR.Core.Tags.Controls</a></h6>
   <h6><strong>Assembly</strong>: FlowR.Core.dll</h6>
-  <h5 id="FlowR_Core_NodeComponentRoot_syntax">Syntax</h5>
+  <h5 id="FlowR_Core_Tags_Controls_Checkbox_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class NodeComponentRoot : NodeComponent, INodeComponent, INode</code></pre>
+    <pre><code class="lang-csharp hljs">public class Checkbox : Input, INodeControl, INode</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_NodeComponentRoot__ctor_System_String_FlowR_Core_Application_.md&amp;value=---%0Auid%3A%20FlowR.Core.NodeComponentRoot.%23ctor(System.String%2CFlowR.Core.Application)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Tags_Controls_Checkbox_DefaultAttributes.md&amp;value=---%0Auid%3A%20FlowR.Core.Tags.Controls.Checkbox.DefaultAttributes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/NodeComponentRoot.cs/#L13">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Tags/Controls/Checkbox.cs/#L12">View Source</a>
   </span>
-  <a id="FlowR_Core_NodeComponentRoot__ctor_" data-uid="FlowR.Core.NodeComponentRoot.#ctor*"></a>
-  <h4 id="FlowR_Core_NodeComponentRoot__ctor_System_String_FlowR_Core_Application_" data-uid="FlowR.Core.NodeComponentRoot.#ctor(System.String,FlowR.Core.Application)">NodeComponentRoot(String, Application)</h4>
-  <div class="markdown level1 summary"><p>[internal use]</p>
+  <a id="FlowR_Core_Tags_Controls_Checkbox_DefaultAttributes_" data-uid="FlowR.Core.Tags.Controls.Checkbox.DefaultAttributes*"></a>
+  <h4 id="FlowR_Core_Tags_Controls_Checkbox_DefaultAttributes" data-uid="FlowR.Core.Tags.Controls.Checkbox.DefaultAttributes">DefaultAttributes</h4>
+  <div class="markdown level1 summary"><p>Setup default Component attributes</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NodeComponentRoot(string rootId, Application app)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override Dictionary&lt;string, string&gt; DefaultAttributes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="FlowR.Core.Tags.Controls.Input.html#FlowR_Core_Tags_Controls_Input_DefaultAttributes">Input.DefaultAttributes</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Tags_Controls_Checkbox_CollectValueAsync_System_String_.md&amp;value=---%0Auid%3A%20FlowR.Core.Tags.Controls.Checkbox.CollectValueAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Tags/Controls/Checkbox.cs/#L18">View Source</a>
+  </span>
+  <a id="FlowR_Core_Tags_Controls_Checkbox_CollectValueAsync_" data-uid="FlowR.Core.Tags.Controls.Checkbox.CollectValueAsync*"></a>
+  <h4 id="FlowR_Core_Tags_Controls_Checkbox_CollectValueAsync_System_String_" data-uid="FlowR.Core.Tags.Controls.Checkbox.CollectValueAsync(System.String)">CollectValueAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Called when needs to collect the actual value from client</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;string&gt; CollectValueAsync(string path = &quot;value&quot;)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,35 +316,12 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">rootId</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="FlowR.Core.Application.html">Application</a></td>
-        <td><span class="parametername">app</span></td>
+        <td><span class="parametername">path</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_NodeComponentRoot_TagName.md&amp;value=---%0Auid%3A%20FlowR.Core.NodeComponentRoot.TagName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/NodeComponentRoot.cs/#L19">View Source</a>
-  </span>
-  <a id="FlowR_Core_NodeComponentRoot_TagName_" data-uid="FlowR.Core.NodeComponentRoot.TagName*"></a>
-  <h4 id="FlowR_Core_NodeComponentRoot_TagName" data-uid="FlowR.Core.NodeComponentRoot.TagName">TagName</h4>
-  <div class="markdown level1 summary"><p>Stored HTML Tag name.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override string TagName { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -302,36 +331,80 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_TagName">Node.TagName</a></div>
-  <h3 id="methods">Methods
-  </h3>
+  <div><a class="xref" href="FlowR.Core.NodeControl.html#FlowR_Core_NodeControl_CollectValueAsync_System_String_">NodeControl.CollectValueAsync(String)</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_NodeComponentRoot_ValidateNode.md&amp;value=---%0Auid%3A%20FlowR.Core.NodeComponentRoot.ValidateNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Tags_Controls_Checkbox_IsChecked.md&amp;value=---%0Auid%3A%20FlowR.Core.Tags.Controls.Checkbox.IsChecked%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/NodeComponentRoot.cs/#L22">View Source</a>
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Tags/Controls/Checkbox.cs/#L32">View Source</a>
   </span>
-  <a id="FlowR_Core_NodeComponentRoot_ValidateNode_" data-uid="FlowR.Core.NodeComponentRoot.ValidateNode*"></a>
-  <h4 id="FlowR_Core_NodeComponentRoot_ValidateNode" data-uid="FlowR.Core.NodeComponentRoot.ValidateNode">ValidateNode()</h4>
-  <div class="markdown level1 summary"><p>Validate Node before call init</p>
+  <a id="FlowR_Core_Tags_Controls_Checkbox_IsChecked_" data-uid="FlowR.Core.Tags.Controls.Checkbox.IsChecked*"></a>
+  <h4 id="FlowR_Core_Tags_Controls_Checkbox_IsChecked" data-uid="FlowR.Core.Tags.Controls.Checkbox.IsChecked">IsChecked()</h4>
+  <div class="markdown level1 summary"><p>Return if is control is checked</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void ValidateNode()</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; IsChecked()</code></pre>
   </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="FlowR.Core.Node.html#FlowR_Core_Node_ValidateNode">Node.ValidateNode()</a></div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Tags_Controls_Checkbox_SetChecked_System_Boolean_.md&amp;value=---%0Auid%3A%20FlowR.Core.Tags.Controls.Checkbox.SetChecked(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Tags/Controls/Checkbox.cs/#L41">View Source</a>
+  </span>
+  <a id="FlowR_Core_Tags_Controls_Checkbox_SetChecked_" data-uid="FlowR.Core.Tags.Controls.Checkbox.SetChecked*"></a>
+  <h4 id="FlowR_Core_Tags_Controls_Checkbox_SetChecked_System_Boolean_" data-uid="FlowR.Core.Tags.Controls.Checkbox.SetChecked(System.Boolean)">SetChecked(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Set checked state</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetChecked(bool isChecked = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isChecked</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="FlowR.Core.INodeComponent.html">INodeComponent</a>
+      <a class="xref" href="FlowR.Core.INodeControl.html">INodeControl</a>
   </div>
   <div>
       <a class="xref" href="FlowR.Core.INode.html">INode</a>
@@ -344,10 +417,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_NodeComponentRoot.md&amp;value=---%0Auid%3A%20FlowR.Core.NodeComponentRoot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/abbadon1334/RealFlowR/new/master/apiSpec/new?filename=FlowR_Core_Tags_Controls_Checkbox.md&amp;value=---%0Auid%3A%20FlowR.Core.Tags.Controls.Checkbox%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/NodeComponentRoot.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/abbadon1334/RealFlowR/blob/master/FlowR.Core/Tags/Controls/Checkbox.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
