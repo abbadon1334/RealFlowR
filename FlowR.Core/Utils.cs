@@ -15,12 +15,12 @@ namespace FlowR.Core
         public static class Css
         {
             /// <summary>
-            ///     Return List from a given full string css 
+            ///     Return List from a given full string css
             /// </summary>
             /// <param name="css"></param>
             /// <returns></returns>
             public static List<string> GetListFromString(string css)
-            { 
+            {
                 return css.Trim().Split(" ").ToList().Select(x => x.Trim()).Distinct().ToList();
             }
 
@@ -32,24 +32,24 @@ namespace FlowR.Core
             /// <returns></returns>
             public static string MergeCss(string a, string b)
             {
-                List<string> main = GetListFromString(a); 
+                var main = GetListFromString(a);
                 main.AddRange(GetListFromString(b));
 
                 return GetStringFromList(main);
-            } 
-            
+            }
+
             /// <summary>
-            ///     Return a first css string purged from second css string   
+            ///     Return a first css string purged from second css string
             /// </summary>
             /// <param name="a"></param>
             /// <param name="b"></param>
             /// <returns></returns>
             public static string RemoveCss(string a, string b)
-            {                
-                List<string> main = GetListFromString(a);
-                List<string> toRemove = GetListFromString(b);
-                
-                foreach(var str in toRemove)
+            {
+                var main = GetListFromString(a);
+                var toRemove = GetListFromString(b);
+
+                foreach (var str in toRemove)
                 {
                     main.RemoveAll(s => s == str);
                 }
@@ -58,14 +58,14 @@ namespace FlowR.Core
             }
 
             /// <summary>
-            ///     Return string separated with speces from a list of css string 
+            ///     Return string separated with speces from a list of css string
             /// </summary>
             /// <param name="cssList"></param>
             /// <returns></returns>
             public static string GetStringFromList(List<string> cssList)
             {
                 return string.Join(" ", cssList.Distinct()).Trim();
-            } 
+            }
         }
     }
 }

@@ -1,0 +1,12 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/FlowR.js"></script>
+
+<script type="application/javascript">
+(new FlowR(signalR, "/flowr")).TryConnect();
+</script>

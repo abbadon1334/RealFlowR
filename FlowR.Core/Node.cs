@@ -4,8 +4,6 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Threading.Tasks;
 using FlowR.Core.Messages;
-using Microsoft.AspNetCore.Authorization.Policy;
-using Microsoft.Extensions.Logging;
 
 namespace FlowR.Core
 {
@@ -572,7 +570,7 @@ namespace FlowR.Core
             }
 
             node.SetOwner(this);
-            node.SetAttribute(attributes ?? new());
+            node.SetAttribute(attributes ?? new Dictionary<string, string>());
 
             GetChildren().Add(node.GetUuid(), node);
         }

@@ -1,6 +1,3 @@
-using System.Linq;
-using FlowR.Core.Tags;
-
 namespace FlowR.UI.Forms.Controls
 {
     public class Checkbox : Core.Tags.Controls.Checkbox, IBootstrapControl
