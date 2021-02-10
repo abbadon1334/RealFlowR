@@ -3,14 +3,14 @@ namespace FlowR.Core
     /// <summary>
     ///     Special internal Node as root of the composite tree
     /// </summary>
-    public class NodeComponentRoot : NodeComponent
+    public class NodeElementRoot : NodeElement
     {
         /// <summary>
         ///     [internal use]
         /// </summary>
         /// <param name="rootId"></param>
         /// <param name="app"></param>
-        public NodeComponentRoot(string rootId, Application app)
+        public NodeElementRoot(string rootId, Application app)
         {
             SetUuid(rootId);
             SetApplication(app);

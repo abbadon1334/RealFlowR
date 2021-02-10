@@ -6,7 +6,7 @@ namespace FlowR.UI.Layout.Containers
     /// <summary>
     ///     Column of row container
     /// </summary>
-    public class Column : NodeComponent
+    public class Column : NodeElement
     {
         /// <inheritdoc />
         protected override string TagName => "div";

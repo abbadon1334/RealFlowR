@@ -10,7 +10,7 @@ namespace FlowR.Tests.Mock
         {
         }
 
-        public NodeComponentRoot GetComponentRoot()
+        public NodeElementRoot GetComponentRoot()
         {
             return RootElement;
         }

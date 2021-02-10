@@ -12,18 +12,18 @@ namespace FlowR.Core
         private Form _form;
 
         /// <summary>
-        ///     Store Control Type
+        ///     On Init will search for a parent form to attach the control
         /// </summary>
-        protected abstract string ControlType { get; }
+        protected virtual bool FormAutobind { get; set; } = true;
 
         /// <inheritdoc />
-        public string GetControlName()
+        public virtual string GetControlName()
         {
             return GetAttribute("name");
         }
 
         /// <inheritdoc />
-        public void SetControlName(string name)
+        public virtual void SetControlName(string name)
         {
             SetAttribute("name", name);
         }
@@ -45,14 +45,11 @@ namespace FlowR.Core
         {
             base.Init();
 
-            _form = GetFirstOwnerOfType<Form>();
-            _form?.Bind(this);
-        }
-
-        /// <inheritdoc />
-        public string GetControlType()
-        {
-            return GetAttribute("type");
+            if (FormAutobind)
+            {
+                _form = GetFirstOwnerOfType<Form>();
+                _form?.Bind(this);
+            }
         }
 
         /// <inheritdoc />

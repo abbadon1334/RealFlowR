@@ -1,8 +1,10 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using FlowR.Core.Tags;
-using FlowR.Core.Tags.Controls;
 using FlowR.UI.Components;
+using FlowR.UI.Forms;
+using FlowR.UI.Forms.Controls;
 using FlowR.UI.Layout.Containers;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
@@ -76,15 +78,57 @@ namespace FlowR
 
             var formRow = container.AddRow();
 
-            var form = formRow.Add<Form>();
-            form.SetAttribute("onsubmit", "return false;");
+            var columnForm = formRow.AddCol();
+            var columnResult = formRow.AddCol();
 
-            var fldInput = form.Add<Input>("fldTest");
-            form.Add<Button>().SetText("Submit").SetAttribute("type", "submit");
+            var form = columnForm.Add<Form>().SetAttribute("onsubmit", "return false;"); // @todo include inside Form
+
+            // dry input
+            var fldDry = form.Add<Input>("fldDry");
+
+            // input control
+            var fldInput = form.Add<Control>("fieldInput")
+                .SetLabel("Field Input")
+                .SetControl<Input>();
+
+            // checkbox control
+            var fldCheckbox = form.Add<Control>("fieldCheckbox")
+                .SetLabel("Field Checkbox")
+                .SetControl<Checkbox>();
+
+            // Select control
+            var fldSelect = form.Add<Control>("fieldSelect")
+                .SetLabel("Field Select")
+                .SetControl<Select>()
+                .AddOption(new Dictionary<string, string>
+                {
+                    { "option1", "value1" },
+                    { "option2", "value2" },
+                    { "option3", "value3" },
+                });
+
+            // Submit button
+            form.Add<Button>().SetText("Submit");
+
             form.On("submit", async (sender, args) =>
             {
-                var value = await fldInput.CollectValueAsync();
-                form.GetApplication().CallGlobalMethod("alert", value);
+                columnResult.RemoveAllChildren();
+
+                var row1 = columnResult.Add<Row>();
+                    row1.AddCol().SetText("fldDry");
+                    row1.AddCol().SetText(await fldDry.CollectValueAsync());
+
+                var row2 = columnResult.Add<Row>();
+                    row2.AddCol().SetText("fieldInput");
+                    row2.AddCol().SetText(await fldInput.CollectValueAsync());
+
+                var row3 = columnResult.Add<Row>();
+                    row3.AddCol().SetText("fieldCheckbox");
+                    row3.AddCol().SetText(await fldCheckbox.CollectValueAsync());
+
+                var row4 = columnResult.Add<Row>();
+                    row4.AddCol().SetText("fldSelect");
+                    row4.AddCol().SetText(await fldSelect.CollectValueAsync());
             });
         }
     }

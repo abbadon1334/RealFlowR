@@ -8,7 +8,7 @@ namespace FlowR.UI.Components
     /// <summary>
     ///     Navbar Bootstrap element
     /// </summary>
-    public class Navbar : NodeComponent
+    public class Navbar : NodeElement
     {
         /// <summary>
         ///     Internal container

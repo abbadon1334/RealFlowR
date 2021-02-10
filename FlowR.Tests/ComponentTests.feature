@@ -10,7 +10,7 @@ Feature: Component tests
     Then Check attribute class has value btn success
 
     Given I SetAttribute class with btn btn success success
-    Then Check attribute class has value btn success
+    Then Check attribute class has value btn btn success success
 
     Given I add class success
     Then Check attribute class has value btn success

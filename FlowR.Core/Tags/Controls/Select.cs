@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace FlowR.Core.Tags.Controls
@@ -12,23 +11,19 @@ namespace FlowR.Core.Tags.Controls
         /// <inherited />
         protected override string TagName => "select";
 
-        /// <inheritdoc />
-        protected override string ControlType { get; } = "select";
-
         /// <summary>
         ///     Add an option to the select
         /// </summary>
         /// <param name="label"></param>
         /// <param name="value"></param>
-        /// <param name="groupIdentifier"></param>
         /// <returns></returns>
         public Select AddOption(string label, string value)
         {
-            Add<Option>(new Dictionary<string, string>{{"value", value}}).SetText(label);
-            
+            Add<Option>(new Dictionary<string, string> { { "value", value } }).SetText(label);
+
             return this;
         }
-        
+
         /// <summary>
         ///     Add an option to the select
         /// </summary>
@@ -39,16 +34,16 @@ namespace FlowR.Core.Tags.Controls
         public Select AddOption(string label, string value, string groupIdentifier)
         {
             GetOptionGroup(groupIdentifier).AddOption(label, value);
-            
+
             return this;
         }
-        
+
         /// <summary>
         ///     Add options to the select
         /// </summary>
         /// <param name="options"></param>
         /// <returns></returns>
-        public Select AddOption(Dictionary<string,string> options)
+        public Select AddOption(Dictionary<string, string> options)
         {
             foreach (var kvp in options)
             {
@@ -63,7 +58,7 @@ namespace FlowR.Core.Tags.Controls
         /// <param name="options"></param>
         /// <param name="groupIdentifier"></param>
         /// <returns></returns>
-        public Select AddOption(Dictionary<string,string> options, string groupIdentifier)
+        public Select AddOption(Dictionary<string, string> options, string groupIdentifier)
         {
             var group = GetOptionGroup(groupIdentifier);
             foreach (var kvp in options)
@@ -73,7 +68,7 @@ namespace FlowR.Core.Tags.Controls
 
             return this;
         }
-        
+
         /// <summary>
         ///     Add an option to the select
         /// </summary>
@@ -84,8 +79,8 @@ namespace FlowR.Core.Tags.Controls
         {
             Add<OptionGroup>(new Dictionary<string, string>
             {
-                {"label", label},
-                {"group-identifier", identifier}
+                { "label", label },
+                { "group-identifier", identifier },
             });
 
             return this;
@@ -114,20 +109,20 @@ namespace FlowR.Core.Tags.Controls
 
             return this;
         }
-        
+
         /// <summary>
-        ///     Short way to clear and add a new option list 
+        ///     Short way to clear and add a new option list
         /// </summary>
         /// <param name="options"></param>
         /// <returns></returns>
-        public Select ReplaceOption(Dictionary<string,string> options)
+        public Select ReplaceOption(Dictionary<string, string> options)
         {
             ClearOptions();
             AddOption(options);
 
             return this;
         }
-        
+
         /// <summary>
         ///     Set Option with specific value as selected=true
         /// </summary>
@@ -139,7 +134,7 @@ namespace FlowR.Core.Tags.Controls
             {
                 if (option.GetAttribute("value") == value)
                 {
-                    option.SetSelected(true);
+                    option.SetSelected();
                     return;
                 }
 
@@ -149,15 +144,15 @@ namespace FlowR.Core.Tags.Controls
             return this;
         }
     }
-    
+
     /// <summary>
     ///     Defines a group of related options in a selection list.
     /// </summary>
-    public class OptionGroup : NodeComponent
+    public class OptionGroup : NodeElement
     {
         /// <inherited />
         protected override string TagName => "optgroup";
-        
+
         /// <summary>
         ///     Add an option to the select
         /// </summary>
@@ -166,8 +161,8 @@ namespace FlowR.Core.Tags.Controls
         /// <returns></returns>
         public OptionGroup AddOption(string label, string value)
         {
-            Add<Option>(new Dictionary<string, string>{{"value", value}}).SetText(label);
-            
+            Add<Option>(new Dictionary<string, string> { { "value", value } }).SetText(label);
+
             return this;
         }
     }
@@ -175,7 +170,7 @@ namespace FlowR.Core.Tags.Controls
     /// <summary>
     ///     Defines an option in a selection list.
     /// </summary>
-    public class Option : NodeComponent
+    public class Option : NodeElement
     {
         /// <inherited />
         protected override string TagName => "option";
@@ -187,9 +182,9 @@ namespace FlowR.Core.Tags.Controls
         public Option SetSelected(bool selected = true)
         {
             return selected
-                ? SetAttribute("selected", "true") as Option
-                : RemoveAttribute("selected") as Option
-            ;
+                    ? SetAttribute("selected", "true") as Option
+                    : RemoveAttribute("selected") as Option
+                ;
         }
     }
 }
