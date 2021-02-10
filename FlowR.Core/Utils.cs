@@ -20,8 +20,8 @@ namespace FlowR.Core
             /// <param name="css"></param>
             /// <returns></returns>
             public static List<string> GetListFromString(string css)
-            {
-                return css.Trim().Split(" ").Distinct().ToList();
+            { 
+                return css.Trim().Split(" ").ToList().Select(x => x.Trim()).Distinct().ToList();
             }
 
             /// <summary>
@@ -51,7 +51,7 @@ namespace FlowR.Core
                 
                 foreach(var str in toRemove)
                 {
-                    main.Remove(str);
+                    main.RemoveAll(s => s == str);
                 }
 
                 return GetStringFromList(main);
@@ -64,7 +64,7 @@ namespace FlowR.Core
             /// <returns></returns>
             public static string GetStringFromList(List<string> cssList)
             {
-                return string.Join(" ", cssList.Distinct());
+                return string.Join(" ", cssList.Distinct()).Trim();
             } 
         }
     }

@@ -7,7 +7,7 @@ using Xunit;
 namespace FlowR.Tests
 {
     [Binding]
-    [Scope(Feature = "Controls tests")]
+    [Scope(Feature = "Component Controls tests")]
     public class ComponentControlTests : BaseTest
     {
         private Form _componentForm;

@@ -45,7 +45,7 @@ namespace FlowR.Core
         {
             base.Init();
 
-            if (!FormAutobind)
+            if (FormAutobind)
             {
                 _form = GetFirstOwnerOfType<Form>();
                 _form?.Bind(this);
