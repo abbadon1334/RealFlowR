@@ -1,4 +1,9 @@
 version: "2"
+checks:
+  similar-code:
+    enabled: true
+    config:
+      threshold: 80
 exclude_patterns:
   - "**/wwwroot/lib/"
   - "**/wwwroot/js/signalr/"
