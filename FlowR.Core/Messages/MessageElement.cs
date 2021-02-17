@@ -104,7 +104,7 @@ namespace FlowR.Core.Messages
                     MessageActions.CreateElement,
                     node.GetOwner().GetUuid(),
                     node.GetTagName(),
-                    node.GetAttributes() as object,
+                    node.GetAttributes(),
                     node.GetText()
                 );
             }

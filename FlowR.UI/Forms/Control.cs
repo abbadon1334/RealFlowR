@@ -34,6 +34,10 @@ namespace FlowR.UI.Forms
             return this;
         }
 
+        /// <summary>
+        ///     Get the control label.
+        /// </summary>
+        /// <returns></returns>
         public Label GetLabel() => _label;
 
         /// <summary>
