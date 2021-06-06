@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
         <PackageReference Include="SpecFlow" Version="3.6.23" />
         <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.6.23" />
         <PackageReference Include="SpecFlow.xUnit" Version="3.6.23" />
